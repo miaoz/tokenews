@@ -1,0 +1,102 @@
+name: Sync upstream data
+
+# Once a day, pull the data Tokenews is built from (and only the data) from
+# upstream Real API Pricing. Unchanged data: nothing happens. Changed data
+# that builds, tests and checks cleanly: commit it to main and deploy.
+# Anything else: open (or update) an issue and leave the live site as it is.
+on:
+  schedule:
+    - cron: "17 2 * * *" # 10:17 Beijing time
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: Upstream branch, tag or commit
+        default: main
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: sync-upstream
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    outputs:
+      pushed: ${{ steps.push.outputs.pushed }}
+      sha: ${{ steps.push.outputs.sha }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .node-version
+          cache: npm
+          cache-dependency-path: |
+            package-lock.json
+            web/package-lock.json
+      - run: npm ci
+
+      - name: Sync data from upstream
+        id: sync
+        run: node scripts/sync-upstream.mjs "${{ inputs.ref || 'main' }}"
+
+      - name: Build, test and check with the new data
+        id: verify
+        if: steps.sync.outputs.changed == 'true'
+        run: |
+          npm run build
+          npm test
+          npm run check
+
+      - name: Commit the new data
+        id: push
+        if: steps.sync.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add upstream upstream.lock.json
+          git commit -m "Sync data from upstream ${COMMIT::12}" -m "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          git push origin HEAD:main
+          echo "pushed=true" >> "$GITHUB_OUTPUT"
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+        env:
+          COMMIT: ${{ steps.sync.outputs.commit }}
+
+      - name: Report a changed upstream adapter
+        if: steps.sync.outputs.adapter_changed == 'true'
+        run: |
+          gh label create upstream-sync --color FBCA04 --force >/dev/null
+          title="Upstream changed its site-data adapter"
+          body="Upstream ${COMMIT} changed scripts/lib/build-site-data.mjs. The data format may have moved: compare it with our scripts/lib/build-site-data.mjs, then update adapterBaseline in upstream.lock.json. Run: ${RUN}"
+          existing=$(gh issue list --label upstream-sync --state open --search "in:title \"$title\"" --json number -q '.[0].number')
+          if [ -n "$existing" ]; then gh issue comment "$existing" --body "$body"; else gh issue create --label upstream-sync --title "$title" --body "$body"; fi
+        env:
+          GH_TOKEN: ${{ github.token }}
+          COMMIT: ${{ steps.sync.outputs.commit }}
+          RUN: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+      - name: Report a failed sync
+        if: failure()
+        run: |
+          gh label create upstream-sync --color FBCA04 --force >/dev/null
+          title="Upstream data sync failed"
+          body="Syncing upstream ${COMMIT:-?} failed; the live site keeps the previous data. Logs: ${RUN}"
+          existing=$(gh issue list --label upstream-sync --state open --search "in:title \"$title\"" --json number -q '.[0].number')
+          if [ -n "$existing" ]; then gh issue comment "$existing" --body "$body"; else gh issue create --label upstream-sync --title "$title" --body "$body"; fi
+        env:
+          GH_TOKEN: ${{ github.token }}
+          COMMIT: ${{ steps.sync.outputs.commit }}
+          RUN: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+  # A push made with GITHUB_TOKEN does not trigger other workflows, so the
+  # deploy is called directly for the commit just pushed.
+  deploy:
+    needs: sync
+    if: needs.sync.outputs.pushed == 'true'
+    uses: ./.github/workflows/deploy.yml
+    with:
+      ref: ${{ needs.sync.outputs.sha }}
+    secrets: inherit

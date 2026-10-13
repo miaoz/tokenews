@@ -1,0 +1,19 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "tokenews",
+  "compatibility_date": "2026-09-30",
+  "workers_dev": true,
+  "previews": {},
+  // The primary domain; `wrangler deploy` creates its DNS record and
+  // certificate. www.tokenews.xyz redirects here (www-redirect/).
+  "routes": [{ "pattern": "tokenews.xyz", "custom_domain": true }],
+  // Static assets only, no Worker script. Build web/dist first (`npm run build`).
+  "assets": {
+    "directory": "./web/dist",
+    // /models/x and /models/x/ both reach models/x/index.html; the bare form
+    // redirects to the trailing slash used by every canonical URL.
+    "html_handling": "auto-trailing-slash",
+    // Unknown paths get the nearest 404.html (zh/404.html under /zh/) with status 404.
+    "not_found_handling": "404-page"
+  }
+}

@@ -1,0 +1,16 @@
+/data/*
+  Cache-Control: public, max-age=0, must-revalidate
+
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/og/*
+  Cache-Control: public, max-age=86400
+
+/pages.css
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Keep every workers.dev address (production and preview) out of search
+# results; only tokenews.xyz is indexed.
+https://:worker.:account.workers.dev/*
+  X-Robots-Tag: noindex

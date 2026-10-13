@@ -1,0 +1,367 @@
+/* Content of the static provider and model pages (scripts/build-pages.mjs).
+   They load the explorer's stylesheet first — tokens, fonts, header and
+   footer come from there — so this file only styles the page body, scoped
+   to .static-page and adjusting the explorer's app-oriented defaults. */
+/* Keep the footer at the bottom of short pages. Only static pages load this file. */
+body {
+  display: flex;
+  flex-direction: column;
+}
+.static-page {
+  flex: 1 0 auto;
+  width: 100%;
+  padding-bottom: 64px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+.static-page a {
+  color: var(--accent);
+  text-underline-offset: 2px;
+}
+.static-page small {
+  display: inline;
+}
+.static-page code {
+  font-size: 0.92em;
+  padding: 1px 5px;
+  border-radius: 5px;
+  background: var(--accent-soft);
+}
+.crumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 28px 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 13px;
+  color: var(--muted);
+}
+.crumbs li + li::before {
+  content: "/";
+  margin-right: 6px;
+}
+.static-page .crumbs a {
+  color: var(--muted);
+}
+.static-page h1 {
+  font-size: clamp(28px, 4vw, 40px);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 12px 0;
+}
+.static-page h2 {
+  font-size: 22px;
+  letter-spacing: -0.01em;
+  margin: 48px 0 8px;
+}
+.static-page p {
+  margin: 0 0 12px;
+}
+.lead {
+  font-size: 18px;
+  color: var(--ink-2);
+  max-width: 820px;
+}
+.updated {
+  font-size: 13px;
+  color: var(--muted);
+}
+.answer {
+  max-width: 880px;
+  padding: 16px 20px;
+  border: 1px solid var(--accent-line);
+  border-radius: var(--radius-m);
+  background: var(--accent-soft);
+}
+/* Overview: one panel — four headline numbers in a fixed row, then a
+   key/value list whose length varies by page. */
+.overview {
+  margin: 24px 0;
+  border: 1px solid var(--line-2);
+  border-radius: var(--radius-m);
+  background: var(--surface);
+  box-shadow: var(--shadow-1);
+  overflow: hidden;
+}
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.stats > div {
+  padding: 18px 20px;
+  border-left: 1px solid var(--line-2);
+}
+.stats > div:first-child {
+  border-left: 0;
+}
+.stats dt,
+.meta dt {
+  color: var(--muted);
+  font-size: 12.5px;
+}
+.stats dd {
+  margin-top: 6px;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  font-variant-numeric: tabular-nums;
+}
+.stats .unit {
+  margin-left: 3px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+.static-page .stats small {
+  display: block;
+  margin-top: 4px;
+  font-size: 12.5px;
+  font-weight: 400;
+  letter-spacing: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.meta {
+  border-top: 1px solid var(--line-2);
+  background: var(--surface-2);
+}
+.meta:empty {
+  display: none;
+}
+.meta > div {
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
+  gap: 16px;
+  padding: 10px 20px;
+  border-top: 1px solid var(--line-2);
+}
+.meta > div:first-child {
+  border-top: 0;
+}
+.meta dt {
+  line-height: 1.6;
+}
+.meta dd {
+  font-size: 14px;
+}
+@media (max-width: 700px) {
+  .stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .stats > div:nth-child(odd) {
+    border-left: 0;
+  }
+  .stats > div:nth-child(n + 3) {
+    border-top: 1px solid var(--line-2);
+  }
+  .stats dd {
+    font-size: 20px;
+  }
+  .meta > div {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+}
+.static-page .button {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: var(--radius-s);
+  background: var(--primary-bg);
+  color: var(--primary-ink);
+  font-weight: 600;
+}
+.static-page .button:hover {
+  background: var(--primary-hover);
+  text-decoration: none;
+}
+.table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--line-2);
+  border-radius: var(--radius-m);
+  background: var(--surface);
+  box-shadow: var(--shadow-1);
+}
+.static-page table {
+  font-size: 14px;
+  white-space: normal;
+}
+.static-page caption {
+  text-align: left;
+  padding: 12px 14px;
+  font-weight: 600;
+  color: var(--ink-2);
+}
+.static-page th,
+.static-page td {
+  padding: 9px 14px;
+  border-bottom: 1px solid var(--line-2);
+  vertical-align: top;
+}
+.static-page thead th {
+  position: static;
+  height: auto;
+  white-space: nowrap;
+}
+.static-page tbody th {
+  font-weight: 600;
+  text-align: left;
+}
+.static-page tbody tr {
+  cursor: default;
+}
+.static-page tbody tr:last-child > * {
+  border-bottom: 0;
+}
+.static-page tbody tr:hover {
+  background: var(--surface-2);
+}
+.static-page details {
+  max-width: 880px;
+  border-bottom: 1px solid var(--line);
+  padding: 4px 0;
+}
+.static-page summary {
+  cursor: pointer;
+  padding: 6px 0;
+}
+.static-page summary h3 {
+  display: inline;
+  font-size: 16px;
+}
+.static-page details p {
+  margin: 4px 0 10px;
+  color: var(--ink-2);
+}
+.nw {
+  white-space: nowrap;
+}
+/* Row headers stack their secondary line (pool name, board label, note). */
+.static-page tbody th small {
+  display: block;
+  margin-top: 2px;
+  font-weight: 400;
+}
+.static-page h3 {
+  font-size: 17px;
+  margin: 28px 0 10px;
+}
+.note {
+  color: var(--muted);
+  font-size: 13px;
+  max-width: 880px;
+  margin-top: 14px;
+}
+/* Provider plan tiers. */
+.plan {
+  scroll-margin-top: 16px;
+}
+.plan-fee {
+  margin-left: 8px;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 500;
+}
+.plan:target h3 {
+  color: var(--accent);
+}
+/* "Behind each number": one collapsible block per plan × model point. */
+.static-page details.evidence,
+.static-page details.configs {
+  max-width: none;
+  margin-top: 8px;
+  padding: 0;
+  border: 1px solid var(--line-2);
+  border-radius: var(--radius-m);
+  background: var(--surface);
+  scroll-margin-top: 16px;
+}
+.static-page details.evidence > summary,
+.static-page details.configs > summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 14px;
+  padding: 12px 16px;
+  font-weight: 600;
+}
+.static-page details.evidence[open] > summary,
+.static-page details.configs[open] > summary {
+  border-bottom: 1px solid var(--line-2);
+}
+.ev-plan {
+  flex: 1 1 auto;
+}
+.ev-channel {
+  color: var(--muted);
+  font-weight: 400;
+}
+.ev-price {
+  font-variant-numeric: tabular-nums;
+}
+.ev-price small {
+  margin-left: 2px;
+}
+.ev-body {
+  padding: 4px 16px 16px;
+}
+.ev-body h4 {
+  margin: 16px 0 6px;
+  font-size: 14px;
+}
+.static-page details.configs .table-wrap {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+.kv > div {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 16px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--line-2);
+}
+.kv dt {
+  color: var(--muted);
+  font-size: 13px;
+}
+.kv dd p {
+  margin: 0 0 4px;
+}
+.formula-inline {
+  font-variant-numeric: tabular-nums;
+}
+.original-text {
+  white-space: pre-wrap;
+  color: var(--ink-2);
+}
+.static-page p.original-text {
+  padding: 10px 12px;
+  border-left: 3px solid var(--line-strong);
+  background: var(--surface-2);
+  font-size: 14px;
+}
+.source-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  font-size: 13px;
+  word-break: break-all;
+}
+@media (max-width: 700px) {
+  .kv > div {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+}
+.static-page small.block {
+  display: block;
+  margin-top: 4px;
+}
+ul.note {
+  padding-left: 18px;
+  margin-top: 4px;
+}

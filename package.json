@@ -1,0 +1,16 @@
+{
+  "name": "tokenews",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "sync": "node scripts/sync-upstream.mjs",
+    "build": "npm --prefix web ci && npm --prefix web run build",
+    "test": "npm --prefix web test",
+    "check": "node web/scripts/check-pages.mjs",
+    "cf:dev": "wrangler dev",
+    "cf:deploy": "wrangler deploy && wrangler deploy -c www-redirect/wrangler.jsonc"
+  },
+  "devDependencies": {
+    "wrangler": "4.145.0"
+  }
+}
