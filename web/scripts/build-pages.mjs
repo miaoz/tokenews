@@ -19,6 +19,7 @@ import {
   providerPagePath,
 } from "../src/pageLinks.ts";
 import { REPO, SITE_NAME, SiteFooter, SiteHeader, TAGLINE } from "../src/SiteChrome.tsx";
+import { loadNews } from "./news.mjs";
 import {
   dataDateLine,
   effortLabel,
@@ -323,6 +324,21 @@ const makerList = [...makers.values()].sort(
 const providerList = [...providers.values()].sort((a, b) => b.points.length - a.points.length || a.name.localeCompare(b.name));
 const modelList = [...models.values()].sort((a, b) => a.maker.localeCompare(b.maker) || a.name.localeCompare(b.name));
 const makerLabel = (v, lang) => (v.name !== "Other" ? v.name : lang === "zh" ? "其他厂商" : "Other makers");
+
+// News (content/news/*.md, English only). NEWS_DRAFTS=1 includes drafts for a local preview.
+const news = await loadNews({
+  dir: path.resolve(root, "../content/news"),
+  models,
+  makers,
+  providers,
+  drafts: process.env.NEWS_DRAFTS === "1",
+});
+const newsFor = {
+  model: (m) => news.filter((a) => a.models.includes(m.id)),
+  // A maker's news includes articles about any of its models.
+  maker: (v) => news.filter((a) => a.makers.includes(v.name) || a.models.some((id) => models.get(id).maker === v.name)),
+  provider: (pr) => news.filter((a) => a.providers.includes(pr.name)),
+};
 const kindLabel = (pr, lang) =>
   ({
     official: ["Official (own models only)", "官方（仅自家模型）"],
@@ -344,6 +360,9 @@ const U = {
   models: (lang) => `${prefix(lang)}/models/`,
   model: (m, lang) => modelPagePath(m.id, lang),
   evidence: (p, lang) => `${modelPagePath(p.model, lang)}#${evidenceId(p)}`,
+  news: () => "/news/",
+  article: (a) => `/news/${a.slug}/`,
+  feed: () => "/news/feed.xml",
   explorer: (lang, extra = "") => `/#lang=${lang}${extra}`,
   method: (lang) => `/#lang=${lang}&view=method`,
 };
@@ -396,7 +415,10 @@ const faqLd = (faq) => ({
   })),
 });
 
-function page({ lang, section, path: urlPath, alt, title, description, keywords, h1, lead, body, crumbs, graph, ogType = "website" }) {
+// `alt` is the same page in the other language, or null for English-only
+// pages (news). `byline` replaces the data-updated line under the lead;
+// `published` and `tags` add article metadata.
+function page({ lang, section, path: urlPath, alt, title, description, keywords, h1, lead, body, crumbs, graph, ogType = "website", byline, published, tags = [] }) {
   const zh = lang === "zh";
   const t = (en, cn) => (zh ? cn : en);
   const url = abs(urlPath);
@@ -417,7 +439,7 @@ function page({ lang, section, path: urlPath, alt, title, description, keywords,
         inLanguage: zh ? "zh-CN" : "en",
         isPartOf: { "@id": `${SITE}/#website` },
         publisher: { "@id": `${SITE}/#organization` },
-        dateModified: updated,
+        dateModified: graph.modified ?? updated,
         primaryImageOfPage: { "@type": "ImageObject", url: abs(og.path), width: 2880, height: 1928 },
         breadcrumb: { "@id": `${url}#breadcrumb` },
         speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", ".lead", ".answer"] },
@@ -442,9 +464,15 @@ function page({ lang, section, path: urlPath, alt, title, description, keywords,
 <meta name="theme-color" content="#f5f3ed" media="(prefers-color-scheme: light)" />
 <meta name="theme-color" content="#0f1113" media="(prefers-color-scheme: dark)" />
 <link rel="canonical" href="${url}" />
-<link rel="alternate" hreflang="${zh ? "zh-CN" : "en"}" href="${url}" />
+${
+  alt
+    ? `<link rel="alternate" hreflang="${zh ? "zh-CN" : "en"}" href="${url}" />
 <link rel="alternate" hreflang="${zh ? "en" : "zh-CN"}" href="${abs(alt)}" />
-<link rel="alternate" hreflang="x-default" href="${abs(zh ? alt : urlPath)}" />
+<link rel="alternate" hreflang="x-default" href="${abs(zh ? alt : urlPath)}" />`
+    : `<link rel="alternate" hreflang="${zh ? "zh-CN" : "en"}" href="${url}" />
+<link rel="alternate" hreflang="x-default" href="${url}" />`
+}
+${news.length ? `<link rel="alternate" type="application/rss+xml" title="${SITE_NAME} news" href="${abs(U.feed())}" />\n` : ""}
 <link rel="alternate" type="text/plain" title="llms.txt" href="${SITE}/llms.txt" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="stylesheet" href="${appCss}" />
@@ -455,13 +483,13 @@ function page({ lang, section, path: urlPath, alt, title, description, keywords,
 <meta property="og:description" content="${esc(description)}" />
 <meta property="og:url" content="${url}" />
 <meta property="og:locale" content="${zh ? "zh_CN" : "en_US"}" />
-<meta property="og:locale:alternate" content="${zh ? "en_US" : "zh_CN"}" />
+${alt ? `<meta property="og:locale:alternate" content="${zh ? "en_US" : "zh_CN"}" />\n` : ""}
 <meta property="og:image" content="${abs(og.path)}" />
 <meta property="og:image:type" content="image/png" />
 <meta property="og:image:width" content="2880" />
 <meta property="og:image:height" content="1928" />
 <meta property="og:image:alt" content="${esc(t("Price–capability Pareto chart of AI subscriptions", "AI 订阅价格–能力帕累托图"))}" />
-${ogType === "article" ? `<meta property="article:modified_time" content="${updated}" />\n` : ""}<meta name="twitter:card" content="summary_large_image" />
+${published ? `<meta property="article:published_time" content="${published}" />\n` : ""}${ogType === "article" ? `<meta property="article:modified_time" content="${graph.modified ?? updated}" />\n` : ""}${tags.map((x) => `<meta property="article:tag" content="${esc(x)}" />\n`).join("")}<meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="${esc(title)}" />
 <meta name="twitter:description" content="${esc(description)}" />
 <meta name="twitter:image" content="${abs(og.path)}" />
@@ -471,14 +499,14 @@ ${jsonLd(ld)}
 </head>
 <body>
 <a class="skip-link" href="#main">${t("Skip to content", "跳到正文")}</a>
-${renderToStaticMarkup(createElement(SiteHeader, { lang, current: section, languageHref: alt }))}
+${renderToStaticMarkup(createElement(SiteHeader, { lang, current: section, languageHref: alt ?? U.home(zh ? "en" : "zh") }))}
 <main id="main" class="page static-page">
 <nav class="crumbs" aria-label="${t("Breadcrumb", "面包屑")}"><ol>${crumbs
     .map(([n, h], i) => (i === crumbs.length - 1 ? `<li aria-current="page">${esc(n)}</li>` : `<li><a href="${h}">${esc(n)}</a></li>`))
     .join("")}</ol></nav>
 <h1>${esc(h1)}</h1>
 <p class="lead">${lead}</p>
-<p class="updated">${t("Data updated", "数据更新于")} <time datetime="${updated}">${updated}</time> · <a href="${U.method(lang)}">${t("How real prices are computed", "真实单价的计算方法")}</a></p>
+<p class="updated">${byline ?? `${t("Data updated", "数据更新于")} <time datetime="${updated}">${updated}</time> · <a href="${U.method(lang)}">${t("How real prices are computed", "真实单价的计算方法")}</a>`}</p>
 ${body}
 </main>
 ${renderToStaticMarkup(createElement(SiteFooter, { lang }))}
@@ -632,6 +660,23 @@ ${table(
   rows,
 )}</details>`;
 }
+
+// News lists: the newest articles first, with date, title and summary.
+const formatDay = (d, lang) =>
+  new Intl.DateTimeFormat(lang === "zh" ? "zh-CN" : "en-US", { year: "numeric", month: "short", day: "numeric", timeZone: "UTC" }).format(new Date(`${d}T00:00:00Z`));
+const newsItems = (articles, lang) =>
+  `<ul class="news-list">${articles
+    .map(
+      (a) =>
+        `<li><time datetime="${a.date}">${formatDay(a.date, lang)}</time><a href="${U.article(a)}" hreflang="en" lang="en">${esc(a.title)}</a><p lang="en">${esc(a.summary)}</p></li>`,
+    )
+    .join("")}</ul>`;
+const relatedNews = (articles, lang) =>
+  articles.length
+    ? `<section aria-labelledby="news"><h2 id="news">${lang === "zh" ? "相关资讯" : "Related news"}</h2>${lang === "zh" ? '<p class="note">资讯目前只有英文版。</p>' : ""}${newsItems(articles.slice(0, 8), lang)}${
+        articles.length > 8 ? `<p><a href="${U.news()}">${lang === "zh" ? "全部资讯" : "All news"} →</a></p>` : ""
+      }</section>`
+    : "";
 
 // ---------------------------------------------------------------------------
 // Model page.
@@ -840,6 +885,7 @@ ${
 ${table(t("List price per million tokens", "每百万 token 标价"), [t("Cached input", "缓存读"), t("Input", "输入"), t("Output", "输出")], [[lp.cached, lp.input, lp.output]])}</section>`
     : ""
 }
+${relatedNews(newsFor.model(m), lang)}
 ${faqHtml(faq, lang)}
 ${
   siblings.length
@@ -993,6 +1039,7 @@ ${table(
 </section>
 <section aria-labelledby="plans"><h2 id="plans">${t(`Plans that include ${isOther ? "these" : v.name} models`, `包含 ${vName} 模型的套餐`)}</h2>
 ${table(t("Subscriptions and APIs, by monthly fee", "订阅与 API，按月费排序"), [t("Plan", "套餐"), t("Provider", "供应商"), t("Billing", "计费"), t("Monthly fee", "月费"), t("Models", "模型")], planRows)}</section>
+${relatedNews(newsFor.maker(v), lang)}
 ${faqHtml(faq, lang)}
 <p><a class="button" href="${
   // The explorer filters by the raw vendor field, which lumps some makers under "other".
@@ -1141,6 +1188,7 @@ ${table(t("Plans by monthly fee", "套餐，按月费排序"), [t("Plan", "套�
 <p>${t("Real price = monthly fee ÷ tokens you can actually use in a month, per model. Allowances of different models in one plan are alternatives and must not be added up.", "真实单价 = 月费 ÷ 该模型每月实际可用 token。同一套餐内不同模型的额度为替代关系，不可相加。")}</p>
 ${tierSections}
 </section>
+${relatedNews(newsFor.provider(pr), lang)}
 ${faqHtml(faq, lang)}
 <p><a class="button" href="${U.explorer(lang, `&channels=${encodeURIComponent(pr.name)}`)}">${t("Open in the interactive explorer", "在交互式图表中查看")} →</a></p>`;
   return page({
@@ -1166,6 +1214,156 @@ ${faqHtml(faq, lang)}
     graph: { about: { "@id": org["@id"] }, mainEntity: { "@id": org["@id"] }, extra: [org, faqLd(faq)] },
   });
 }
+
+// ---------------------------------------------------------------------------
+// News: the list, one page per article (English only) and the RSS feed.
+// ---------------------------------------------------------------------------
+const chips = (items) => (items.length ? `<ul class="chips">${items.map((x) => `<li>${x}</li>`).join("")}</ul>` : "");
+const articleChips = (a) =>
+  chips([
+    ...a.makers.map((n) => makerLink(makers.get(n), "en")),
+    ...a.models.map((id) => modelLink(models.get(id), "en")),
+    ...a.providers.map((n) => providerLink(n, "en")),
+  ]);
+
+function newsIndex() {
+  const lang = "en";
+  const list = {
+    "@type": "ItemList",
+    "@id": `${abs(U.news())}#list`,
+    numberOfItems: news.length,
+    itemListElement: news.map((a, i) => ({ "@type": "ListItem", position: i + 1, url: abs(U.article(a)), name: a.title })),
+  };
+  return page({
+    lang,
+    section: "news",
+    path: U.news(),
+    alt: null,
+    title: "AI News: Models, Makers and Products",
+    description: `News on AI models, makers and products from ${SITE_NAME}: releases, price and plan changes, and leaderboard moves, linked to real per-token prices.`,
+    keywords: ["AI news", "LLM news", "AI model releases", "AI pricing news", "coding plan news", SITE_NAME],
+    h1: "AI news",
+    lead: esc("Releases, price and plan changes, and leaderboard moves across AI models, makers and products — each linked to the model, maker and provider pages it concerns."),
+    byline: `<a href="${U.feed()}">RSS feed</a> · ${news.length ? `${plural(news.length, "article")}, latest ${formatDay(news[0].date, lang)}` : "No articles yet"}`,
+    body: news.length
+      ? `<div class="news-index">${news
+          .map(
+            (a) => `<article><time datetime="${a.date}">${formatDay(a.date, lang)}</time><h2><a href="${U.article(a)}">${esc(a.title)}</a></h2><p>${esc(a.summary)}</p>${articleChips(a)}</article>`,
+          )
+          .join("")}</div>`
+      : `<p>No articles yet. New ones appear here and in the <a href="${U.feed()}">RSS feed</a>.</p>`,
+    crumbs: [
+      [NAME[lang], U.home(lang)],
+      ["News", U.news()],
+    ],
+    graph: { mainEntity: { "@id": list["@id"] }, extra: [list] },
+  });
+}
+
+function newsArticle(a) {
+  const lang = "en";
+  const url = abs(U.article(a));
+  const mentioned = a.models.map((id) => models.get(id));
+  const others = news.filter((x) => x !== a).slice(0, 5);
+  const body = `
+${articleChips(a)}
+<div class="prose">${a.html}</div>
+${
+  a.sources.length
+    ? `<section aria-labelledby="sources"><h2 id="sources">Sources</h2><ul class="source-list">${a.sources.map((s) => `<li>${ext(s.url, s.title)}</li>`).join("")}</ul></section>`
+    : ""
+}
+${
+  mentioned.length
+    ? `<section aria-labelledby="mentioned"><h2 id="mentioned">Models in this article</h2>
+${table(
+  `Current real prices (data updated ${updated})`,
+  ["Model", "Maker", "Lowest real $/MTok", "Cheapest plan", "API list (std. mix)"],
+  mentioned.map((m) => [
+    modelLink(m, lang),
+    makerLink(makers.get(m.maker), lang),
+    m.cheapest ? `<strong>${usd(m.cheapest.real_usd_per_mtok)}</strong>` : "≈$0",
+    m.cheapest ? planLink(m.cheapest, lang) : "—",
+    m.listBlended ? usd(m.listBlended) : "—",
+  ]),
+)}</section>`
+    : ""
+}
+${others.length ? `<section aria-labelledby="more"><h2 id="more">More news</h2>${newsItems(others, lang)}<p><a href="${U.news()}">All news →</a></p></section>` : ""}`;
+  const article = {
+    "@type": "NewsArticle",
+    "@id": `${url}#article`,
+    headline: a.title,
+    description: a.summary,
+    datePublished: a.date,
+    dateModified: a.updated,
+    inLanguage: "en",
+    url,
+    mainEntityOfPage: { "@id": `${url}#webpage` },
+    author: a.author ? { "@type": "Person", name: a.author } : { "@id": `${SITE}/#organization` },
+    publisher: { "@id": `${SITE}/#organization` },
+    image: abs(OG.en.path),
+    ...(a.tags.length ? { keywords: a.tags } : {}),
+    ...(a.sources.length ? { citation: a.sources.map((s) => s.url) } : {}),
+    about: [
+      ...a.makers.map((n) => ({ "@id": `${abs(U.maker(makers.get(n), "en"))}#org` })),
+      ...a.models.map((id) => ({ "@id": `${abs(U.model(models.get(id), "en"))}#model` })),
+      ...a.providers.map((n) => ({ "@id": `${abs(providerPagePath(n, "en"))}#org` })),
+    ],
+  };
+  return page({
+    lang,
+    section: "news",
+    path: U.article(a),
+    alt: null,
+    title: a.title,
+    description: a.summary,
+    keywords: [...a.tags, ...a.makers, ...a.models.map((id) => models.get(id).name), ...a.providers, "AI news"],
+    h1: a.title,
+    lead: esc(a.summary),
+    byline: `<time datetime="${a.date}">${formatDay(a.date, lang)}</time>${a.updated !== a.date ? ` · updated <time datetime="${a.updated}">${formatDay(a.updated, lang)}</time>` : ""}${a.author ? ` · ${esc(a.author)}` : ""}${a.tags.length ? ` · ${a.tags.map(esc).join(", ")}` : ""}`,
+    body,
+    ogType: "article",
+    published: a.date,
+    tags: a.tags,
+    crumbs: [
+      [NAME[lang], U.home(lang)],
+      ["News", U.news()],
+      [a.title, U.article(a)],
+    ],
+    graph: { modified: a.updated, about: { "@id": article["@id"] }, mainEntity: { "@id": article["@id"] }, extra: [article] },
+  });
+}
+
+// RSS 2.0 with the full article in content:encoded.
+// Feed readers resolve nothing against the site, so site-relative links become absolute.
+const absolutize = (html) => html.replace(/(href|src)="\/(?!\/)/g, `$1="${SITE}/`);
+const rfc822 = (d) => new Date(`${d}T00:00:00Z`).toUTCString();
+const cdata = (s) => `<![CDATA[${s.replaceAll("]]>", "]]]]><![CDATA[>")}]]>`;
+const newsFeed = () => `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<channel>
+<title>${esc(SITE_NAME)} news</title>
+<link>${abs(U.news())}</link>
+<atom:link href="${abs(U.feed())}" rel="self" type="application/rss+xml" />
+<description>${esc(TAGLINE.en)}</description>
+<language>en</language>
+${news.length ? `<lastBuildDate>${rfc822(news.map((a) => a.updated).sort().at(-1))}</lastBuildDate>\n` : ""}${news
+  .map(
+    (a) => `<item>
+<title>${esc(a.title)}</title>
+<link>${abs(U.article(a))}</link>
+<guid isPermaLink="true">${abs(U.article(a))}</guid>
+<pubDate>${rfc822(a.date)}</pubDate>
+<description>${esc(a.summary)}</description>
+${a.tags.map((x) => `<category>${esc(x)}</category>`).join("")}
+<content:encoded>${cdata(absolutize(a.html))}</content:encoded>
+</item>`,
+  )
+  .join("\n")}
+</channel>
+</rss>
+`;
 
 // ---------------------------------------------------------------------------
 // Index pages.
@@ -1302,6 +1500,9 @@ for (const lang of ["en", "zh"]) {
   for (const pr of providerList) await out(U.provider(pr, lang), providerPage(pr, lang));
   for (const m of modelList) await out(U.model(m, lang), modelPage(m, lang));
 }
+await out(U.news(), newsIndex());
+for (const a of news) await out(U.article(a), newsArticle(a));
+await writeFile(path.join(dist, "news/feed.xml"), newsFeed());
 const pairs = [
   [U.makers, "0.8"],
   [U.providers, "0.8"],
@@ -1329,6 +1530,8 @@ ${pairs
     ),
   )
   .join("\n")}
+<url><loc>${abs(U.news())}</loc><lastmod>${news[0]?.updated ?? updated}</lastmod><priority>0.8</priority></url>
+${news.map((a) => `<url><loc>${abs(U.article(a))}</loc><lastmod>${a.updated}</lastmod><priority>0.6</priority></url>`).join("\n")}
 </urlset>
 `,
 );
@@ -1359,6 +1562,7 @@ await writeFile(
 - [All makers](${abs(U.makers("en"))}): ${makerList.length} model makers
 - [All providers](${abs(U.providers("en"))}): ${providerList.length} providers and their plan tiers
 - [All models](${abs(U.models("en"))}): ${modelList.length} models ranked by lowest real price
+- [News](${abs(U.news())}): AI model, maker and product news (RSS: ${abs(U.feed())})
 - [Interactive explorer](${SITE}/): price–capability Pareto charts, rankings and allowance comparisons
 - [Methodology](${REPO}/blob/main/CONVENTIONS.md)
 
@@ -1373,6 +1577,7 @@ ${providerList.map((pr) => `- [${pr.name}](${abs(U.provider(pr, "en"))}): ${pr.t
 ## Models
 
 ${modelList.map(modelLine).join("\n")}
+${news.length ? `\n## Latest news\n\n${news.slice(0, 20).map((a) => `- [${a.title}](${abs(U.article(a))}) (${a.date}): ${a.summary}`).join("\n")}\n` : ""}
 
 ## Data
 
@@ -1480,7 +1685,10 @@ const homeLd = {
 };
 const homeList = (heading, items) =>
   `<h2>${heading}</h2><ul>${items.map(([name, url]) => `<li><a href="${url}">${esc(name)}</a></li>`).join("")}</ul>`;
-const homeNav = `<nav class="seo-index" aria-label="Makers, providers and models">${homeList(
+const homeNav = `<nav class="seo-index" aria-label="News, makers, providers and models">${homeList(
+  "News",
+  [["All news", U.news()], ...news.slice(0, 10).map((a) => [a.title, U.article(a)])],
+)}${homeList(
   "Makers",
   makerList.map((v) => [makerLabel(v, "en"), U.maker(v, "en")]),
 )}${homeList(
@@ -1540,7 +1748,7 @@ if (SITE !== DEFAULT_SITE)
     await writeFile(target, (await readFile(target, "utf8")).replaceAll(DEFAULT_SITE, SITE));
   }
 
-const pageCount = 2 * (3 + makerList.length + providerList.length + modelList.length);
+const pageCount = 2 * (3 + makerList.length + providerList.length + modelList.length) + 1 + news.length;
 console.log(
-  `SEO pages for ${SITE}: ${makerList.length} makers, ${providerList.length} providers, ${modelList.length} models × 2 languages (${pageCount} pages), sitemap with ${pageCount + 1} URLs, llms.txt.`,
+  `SEO pages for ${SITE}: ${makerList.length} makers, ${providerList.length} providers, ${modelList.length} models × 2 languages, ${news.length} news (${pageCount} pages), sitemap with ${pageCount + 1} URLs, llms.txt.`,
 );

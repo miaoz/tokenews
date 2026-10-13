@@ -9,6 +9,7 @@ Every AI model, maker (厂商) and provider (供应商) has its own page: what e
 ## How it is built
 
 ```
+content/news/        news articles, one Markdown file each (see content/news/README.md)
 upstream/            data snapshot synced from Real API Pricing — never edited by hand
 upstream.lock.json   which upstream commit the snapshot comes from
 scripts/
@@ -18,6 +19,8 @@ web/                 the site: React explorer + static page generator (see web/R
 www-redirect/        Worker that 301s www.tokenews.xyz to tokenews.xyz
 .github/workflows/   CI, deploy, daily upstream sync
 ```
+
+**News** is English-only Markdown in `content/news/`, written by us. Each article names the makers, models and providers it concerns; the build checks those against the dataset, lists the article under "Related news" on their pages, and publishes `/news/`, one page per article, `/news/feed.xml` (RSS), sitemap and `llms.txt` entries. Commit an article to `main` to publish it.
 
 **Upstream supplies data only.** The pricing, allowance and leaderboard data comes from [Real API Pricing](https://github.com/Fei2411/real-api-pricing) (MIT). `scripts/sync-upstream.mjs` fetches just the paths listed in it — `config/`, `derived/`, `data/adopted.csv`, `data/conventions.json`, `data/i18n/`, `data/research/`, two Pareto PNGs and the licence — into `upstream/`. No upstream code is merged: the site, its design and the adapter are ours and evolve independently. If upstream changes its own copy of the adapter, the sync flags it, because that usually means the data format moved.
 

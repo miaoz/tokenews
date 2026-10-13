@@ -14,7 +14,7 @@ export const TAGLINE = {
 /** The open-source project this site's data and methodology come from (MIT). */
 export const REPO = "https://github.com/Fei2411/real-api-pricing";
 
-export type NavKey = "explore" | "makers" | "providers" | "models" | null;
+export type NavKey = "explore" | "makers" | "providers" | "models" | "news" | null;
 
 /** In-app navigation handler: the explorer swaps views without a page load;
     static pages leave it out and follow the href. */
@@ -54,6 +54,8 @@ export function SiteHeader({
     ["makers", `${prefix}/makers/`, t("Makers", "厂商"), undefined],
     ["providers", `${prefix}/providers/`, t("Providers", "供应商"), undefined],
     ["models", `${prefix}/models/`, t("Models", "模型"), undefined],
+    // News is English-only, so both languages link to /news/.
+    ["news", "/news/", t("News", "资讯"), undefined],
   ];
   const other = zh ? "en" : "zh-CN";
   return (
