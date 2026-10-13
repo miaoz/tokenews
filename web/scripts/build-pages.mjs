@@ -10,6 +10,7 @@ import path from "node:path";
 import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import {
+  explorerPath,
   makerPagePath,
   modelPagePath,
   pageMaker,
@@ -351,7 +352,7 @@ const kindLabel = (pr, lang) =>
 // ---------------------------------------------------------------------------
 const prefix = (lang) => (lang === "zh" ? "/zh" : "");
 const U = {
-  home: (lang) => (lang === "zh" ? "/#lang=zh" : "/"),
+  home: (lang) => explorerPath(lang),
   makers: (lang) => `${prefix(lang)}/makers/`,
   maker: (v, lang) => makerPagePath(v.name, lang),
   providers: (lang) => `${prefix(lang)}/providers/`,
@@ -363,8 +364,8 @@ const U = {
   news: () => "/news/",
   article: (a) => `/news/${a.slug}/`,
   feed: () => "/news/feed.xml",
-  explorer: (lang, extra = "") => `/#lang=${lang}${extra}`,
-  method: (lang) => `/#lang=${lang}&view=method`,
+  explorer: (lang, extra = "") => explorerPath(lang, extra.replace(/^&/, "")),
+  method: (lang) => explorerPath(lang, "view=method"),
 };
 const abs = (p) => SITE + p;
 const link = (href, text) => `<a href="${href}">${esc(text)}</a>`;

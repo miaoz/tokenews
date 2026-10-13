@@ -3,6 +3,7 @@
 // pages, so every page shares one navigation and one footer.
 import type { MouseEvent } from "react";
 import { ArrowUpRight, ChartScatter, Moon, Sun } from "@phosphor-icons/react";
+import { explorerPath } from "./pageLinks";
 import type { Lang } from "./types";
 
 /** Site name and positioning, shared by the explorer, static pages and exports. */
@@ -27,7 +28,7 @@ const follow = (go: Go) =>
       }
     : undefined;
 
-const homePath = (lang: Lang) => (lang === "zh" ? "/#lang=zh" : "/#lang=en");
+const homePath = (lang: Lang) => explorerPath(lang);
 
 export function SiteHeader({
   lang,
@@ -126,7 +127,7 @@ export function SiteFooter({
         </span>
         <p>{TAGLINE[lang]}</p>
         <nav aria-label={t("Footer", "页脚")}>
-          <a href={`/#lang=${lang}&view=method`} onClick={follow(onMethod)}>
+          <a href={explorerPath(lang, "view=method")} onClick={follow(onMethod)}>
             {t("Methodology", "方法与来源")}
           </a>
           <a href={`${REPO}/blob/main/SOURCES.md`} target="_blank" rel="noreferrer">

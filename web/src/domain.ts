@@ -510,9 +510,9 @@ export function searchCandidates(
 export function serialize(s: State): string {
   const d = defaultState();
   const p = new URLSearchParams();
-  // The URL language always wins over the stored preference, so it is written
-  // even when it matches the default.
-  p.set("lang", s.lang);
+  // English is the default and stays out of the URL; Chinese is written so a
+  // shared link opens in Chinese. With no lang, the stored preference applies.
+  if (s.lang !== d.lang) p.set("lang", s.lang);
   if (s.view !== d.view) p.set("view", s.view);
   if (s.board !== d.board) p.set("board", s.board);
   if (s.configuration !== d.configuration) p.set("config", s.configuration);
@@ -535,7 +535,8 @@ export function serialize(s: State): string {
     else p.set("sel", "");
   }
   for (const k of filterKeys) for (const v of s[k]) p.append(k, v);
-  return "#" + p.toString();
+  const query = p.toString();
+  return query ? "#" + query : "";
 }
 export function restore(
   hash: string,

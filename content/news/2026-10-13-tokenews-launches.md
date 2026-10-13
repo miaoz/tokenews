@@ -19,7 +19,7 @@ Tokenews is a directory of the AI era: the models, the makers that build them an
 
 ## How a real price is computed
 
-A plan's real price is its monthly fee divided by the tokens you can actually use in a month, quoted in US dollars per million tokens. That turns subscriptions, coding plans and metered APIs into one comparable number, set against each model's official API list price. The [methodology](/#lang=en&view=method) explains the workloads, conversions and confidence levels, and every figure links to its sources.
+A plan's real price is its monthly fee divided by the tokens you can actually use in a month, quoted in US dollars per million tokens. That turns subscriptions, coding plans and metered APIs into one comparable number, set against each model's official API list price. The [methodology](/#view=method) explains the workloads, conversions and confidence levels, and every figure links to its sources.
 
 ## Where the data comes from
 

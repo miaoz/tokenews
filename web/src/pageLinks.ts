@@ -29,6 +29,12 @@ export const pageSlug = (s: string): string =>
 
 const prefix = (lang: Lang) => (lang === "zh" ? "/zh" : "");
 
+/** The explorer with optional hash state; English, the default, adds no lang. */
+export const explorerPath = (lang: Lang, params = ""): string => {
+  const hash = [lang === "zh" ? "lang=zh" : "", params].filter(Boolean).join("&");
+  return hash ? `/#${hash}` : "/";
+};
+
 export const makerPagePath = (maker: string, lang: Lang): string =>
   `${prefix(lang)}/makers/${pageSlug(maker)}/`;
 

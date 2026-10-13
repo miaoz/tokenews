@@ -418,7 +418,7 @@ test("Compare slots round-trip through the hash, including a plan-only and an em
   assert.deepEqual(empty.state.compare, ["", "", ""]);
 });
 test("Default state serializes to a minimal hash and selection states stay distinct", () => {
-  assert.equal(serialize(defaultState()), "#lang=en");
+  assert.equal(serialize(defaultState()), "");
   const ids = [data.points[0].id, data.points[1].id];
   assert.deepEqual(
     restore(serialize({ ...defaultState(), selected: ids }), data).state
@@ -466,7 +466,7 @@ test("The full-table view round-trips and keeps the chart's per-configuration ro
   const restored = restore("#lang=en&view=table", data);
   assert.equal(restored.warning, false);
   assert.equal(restored.state.view, "table");
-  assert.equal(serialize(restored.state), "#lang=en&view=table");
+  assert.equal(serialize(restored.state), "#view=table");
   const all = { ...defaultState(), configuration: "all" as const };
   assert.deepEqual(
     rowsFor(data, { ...all, view: "table" }).map((r) => r.key),
@@ -481,7 +481,7 @@ test("Unknown enum values in a short link warn and fall back to defaults", () =>
   assert.equal(restore("#board=__proto__", data).warning, true);
   assert.equal(restore("#board=__proto__", data).state.board, "aa_intelligence_index");
 });
-test("Invalid saved values are ignored with notice; explicit language overrides local preference", () => {
+test("Invalid saved values are ignored with notice; an explicit URL language overrides the local preference", () => {
   const s = {
     ...defaultState(),
     selected: [data.points[0].id, "removed-id"],
@@ -490,7 +490,11 @@ test("Invalid saved values are ignored with notice; explicit language overrides 
   };
   const result = restore(serialize(s), data, "zh");
   assert.equal(result.warning, true);
-  assert.equal(result.state.lang, "en");
+  // English is the default and is not written, so the stored preference applies…
+  assert.equal(result.state.lang, "zh");
+  // …while an explicit lang in the URL (older share links included) still wins.
+  assert.equal(restore("#lang=en", data, "zh").state.lang, "en");
+  assert.equal(restore(serialize({ ...defaultState(), lang: "zh" }), data, "en").state.lang, "zh");
   assert.equal(result.state.board, "aa_intelligence_index");
   assert.deepEqual(result.state.selected, [data.points[0].id]);
   assert.deepEqual(result.state.channels, []);
