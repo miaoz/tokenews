@@ -13,6 +13,36 @@ const read = async (p) =>
 const { data, evidenceToCopy } = await buildSiteData({ repo, parseCsv: parse });
 await mkdir(path.join(out, "evidence"), { recursive: true });
 await writeFile(path.join(out, "site.json"), JSON.stringify(data));
+// The explorer's first download leaves out the long-form notes it only shows in
+// the "Behind the number" dialog; they load afterwards from explorer-notes.json.
+// Field lists match PointNotes / ConfigurationNotes in src/types.ts.
+const POINT_NOTES = ["note", "decision_note", "note_en", "decision_note_en", "evidence"];
+const CONFIGURATION_NOTES = ["record_note_zh", "record_note_en", "archive", "archive_url"];
+const split = (records, key, fields) => {
+  const notes = {};
+  const core = records.map((record) => {
+    const rest = { ...record };
+    const picked = {};
+    for (const f of fields)
+      if (f in rest) {
+        picked[f] = rest[f];
+        delete rest[f];
+      }
+    if (Object.keys(picked).length) notes[record[key]] = picked;
+    return rest;
+  });
+  return { core, notes };
+};
+const points = split(data.points, "id", POINT_NOTES);
+const configurations = split(data.configurations, "configuration_id", CONFIGURATION_NOTES);
+await writeFile(
+  path.join(out, "explorer.json"),
+  JSON.stringify({ ...data, points: points.core, configurations: configurations.core }),
+);
+await writeFile(
+  path.join(out, "explorer-notes.json"),
+  JSON.stringify({ points: points.notes, configurations: configurations.notes }),
+);
 for (const f of [
   "data/adopted.csv",
   "derived/points.json",

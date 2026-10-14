@@ -41,13 +41,15 @@ export interface Point {
   /** Official metered API list prices per MTok in the vendor's own currency. */
   list_price?: { cached: number; input: number; output: number; currency: string } | null;
   source: string;
-  note: string;
-  decision_note: string;
-  /** English translations of the Chinese source/note fields (data/i18n). */
+  /** English translation of the Chinese source field (data/i18n). */
   source_en?: string;
+  // Notes and evidence: in site.json, but not in the explorer's explorer.json
+  // (see PointNotes).
+  note?: string;
+  decision_note?: string;
   note_en?: string;
   decision_note_en?: string;
-  evidence: { label: string; url: string }[];
+  evidence?: { label: string; url: string }[];
 }
 export interface Configuration {
   configuration_id: string;
@@ -83,6 +85,21 @@ export interface Mapping extends Omit<Configuration, "model"> {
   mapping_confidence: string;
   mapping_note: string;
   quota_effort_matched: boolean | null;
+}
+/** Long-form provenance the explorer's first download (explorer.json) leaves
+    out; it loads them from explorer-notes.json for the "Behind the number"
+    dialog (loadData.ts). site.json keeps every field. */
+export type PointNotes = Pick<
+  Point,
+  "note" | "decision_note" | "note_en" | "decision_note_en" | "evidence"
+>;
+export type ConfigurationNotes = Pick<
+  Configuration,
+  "record_note_zh" | "record_note_en" | "archive" | "archive_url"
+>;
+export interface SiteNotes {
+  points: Record<string, PointNotes>;
+  configurations: Record<string, ConfigurationNotes>;
 }
 export interface SiteData {
   version: number;

@@ -2193,14 +2193,14 @@ tbody tr.sentinel-row {
   align-items: center;
   gap: 16px;
 }
-.skeleton-header {
-  height: 61px;
-  border-bottom: 1px solid var(--line);
-}
+/* Mirrors .intro (two-line title, two-line lede) so the card doesn't jump. */
 .skeleton-hero {
   display: grid;
-  gap: 14px;
-  padding: 52px 0 32px;
+  gap: 8px;
+  padding: 28px 0 22px;
+}
+.skeleton-hero span:nth-child(3) {
+  margin-top: 10px;
 }
 .skeleton-hero span,
 .skeleton-card {
@@ -2214,6 +2214,32 @@ tbody tr.sentinel-row {
 .skeleton-card {
   height: 640px;
   border-radius: var(--radius-l);
+}
+/* Crawler links that dist/index.html carries below the boot skeleton until
+   React mounts (build-pages.mjs). */
+.seo-index {
+  max-width: var(--page-max);
+  margin: 0 auto;
+  padding: 40px var(--page-pad);
+  color: var(--muted);
+  font-size: 13px;
+}
+.seo-index h2 {
+  margin: 18px 0 8px;
+  color: var(--ink-2);
+  font-size: 14px;
+  font-weight: 600;
+}
+.seo-index ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.seo-index a {
+  color: inherit;
 }
 @keyframes shimmer {
   from {

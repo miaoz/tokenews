@@ -4,7 +4,7 @@
 // and writes into dist/. It reads the same validated public/data/site.json the
 // explorer loads and formats it with the explorer's own helpers, so the pages
 // never disagree with the "Behind the number" dialog.
-import { readFile, writeFile, mkdir, copyFile } from "node:fs/promises";
+import { readFile, readdir, writeFile, mkdir, copyFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
 import { createElement } from "react";
@@ -19,6 +19,7 @@ import {
   planPagePath,
   providerPagePath,
 } from "../src/pageLinks.ts";
+import { BootSkeleton } from "../src/BootSkeleton.tsx";
 import { REPO, SITE_NAME, SiteFooter, SiteHeader, TAGLINE } from "../src/SiteChrome.tsx";
 import { loadNews } from "./news.mjs";
 import {
@@ -63,6 +64,13 @@ const appCss = (await readFile(path.join(dist, "index.html"), "utf8")).match(
   /<link rel="stylesheet"[^>]*href="(\/assets\/[^"]+\.css)"/,
 )?.[1];
 if (!appCss) throw new Error("Explorer stylesheet not found in dist/index.html");
+// Preload the Latin DM Sans file the stylesheet references, so text renders in
+// the right font on first paint instead of swapping in later.
+const latinFont = (await readdir(path.join(dist, "assets"))).find((f) =>
+  /^dm-sans-latin-wght-normal-[\w-]+\.woff2$/.test(f),
+);
+if (!latinFont) throw new Error("DM Sans Latin font not found in dist/assets");
+const FONT_PRELOAD = `<link rel="preload" href="/assets/${latinFont}" as="font" type="font/woff2" crossorigin />`;
 // Static pages have no React. One inline script drives the shared theme
 // toggle and opens a collapsed evidence block when a link targets it.
 const PAGE_SCRIPT = `<script>document.querySelector(".theme-toggle").addEventListener("click",function(){var d=document.documentElement,t=d.dataset.theme==="dark"?"light":"dark";d.dataset.theme=t;try{localStorage.setItem("pricing-theme",t)}catch(e){}});function openTarget(){var e=location.hash&&document.getElementById(decodeURIComponent(location.hash.slice(1)));if(e&&e.tagName==="DETAILS"){e.open=true;e.scrollIntoView()}}addEventListener("hashchange",openTarget);openTarget()</script>`;
@@ -476,6 +484,7 @@ ${
 ${news.length ? `<link rel="alternate" type="application/rss+xml" title="${SITE_NAME} news" href="${abs(U.feed())}" />\n` : ""}
 <link rel="alternate" type="text/plain" title="llms.txt" href="${SITE}/llms.txt" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+${FONT_PRELOAD}
 <link rel="stylesheet" href="${appCss}" />
 <link rel="stylesheet" href="/pages.css" />
 <meta property="og:type" content="${ogType}" />
@@ -1699,13 +1708,19 @@ const homeNav = `<nav class="seo-index" aria-label="News, makers, providers and 
   "Models",
   modelList.map((m) => [m.name, U.model(m, "en")]),
 )}<p>中文：<a href="${U.makers("zh")}">全部厂商</a> · <a href="${U.providers("zh")}">全部供应商</a> · <a href="${U.models("zh")}">全部模型</a></p></nav>`;
-if (!home.includes("<!--seo:jsonld-->") || !home.includes("<!--seo:index-->"))
-  throw new Error("index.html is missing the <!--seo:jsonld--> / <!--seo:index--> markers");
+for (const marker of ["<!--seo:preload-->", "<!--seo:jsonld-->", "<!--seo:index-->"])
+  if (!home.includes(marker)) throw new Error(`index.html is missing the ${marker} marker`);
+// The first paint is the explorer's own boot skeleton (header included), not
+// an unstyled list; the crawler links follow it below the fold.
 await writeFile(
   indexFile,
   home
+    .replace("<!--seo:preload-->", FONT_PRELOAD)
     .replace("<!--seo:jsonld-->", jsonLd(homeLd))
-    .replace("<!--seo:index-->", homeNav),
+    .replace(
+      "<!--seo:index-->",
+      renderToStaticMarkup(createElement(BootSkeleton, { lang: "en" })) + homeNav,
+    ),
 );
 
 // 404 pages: Cloudflare serves the nearest 404.html (wrangler.jsonc), so
@@ -1722,6 +1737,7 @@ const notFound = (lang) => {
 <meta name="robots" content="noindex" />
 <meta name="color-scheme" content="light dark" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+${FONT_PRELOAD}
 <link rel="stylesheet" href="${appCss}" />
 <link rel="stylesheet" href="/pages.css" />
 <script>try{var t=localStorage.getItem("pricing-theme");if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.dataset.theme=t}catch(e){}</script>

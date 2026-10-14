@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
+import { lazy, Suspense, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import {
   ArrowDown,
   ArrowUp,
@@ -23,19 +23,16 @@ import {
 } from "@phosphor-icons/react";
 import { ThemeContext, type Theme } from "./theme";
 import Chart from "./Chart";
-import { unpackData } from "./loadData";
-import Ranking from "./Ranking";
-import AllowanceCards from "./AllowanceCards";
-import AllowanceCompare from "./AllowanceCompare";
+import { loadNotes, unpackData } from "./loadData";
 import ResizeHandle from "./ResizeHandle";
 import { useIncremental } from "./useIncremental";
+import { BootSkeleton } from "./BootSkeleton";
 import { REPO, SITE_NAME, SiteFooter, SiteHeader, TAGLINE } from "./SiteChrome";
 import { makerPagePath, modelPagePath, pageMaker, planPagePath, providerPagePath } from "./pageLinks";
 import ProviderLogo, { BrandMarks } from "./ProviderLogo";
 import { feeBands } from "./domain";
 import type { ChartHandle } from "./Chart";
 import Modal from "./Modal";
-import CustomProvidersPanel from "./ProviderManager";
 import {
   loadCustomProviders,
   mergeCustomProviders,
@@ -46,8 +43,10 @@ import type {
   FilterKey,
   Lang,
   Point,
+  PointNotes,
   Row,
   SiteData,
+  SiteNotes,
   State,
   View,
 } from "./types";
@@ -118,6 +117,22 @@ const filterLabels: Record<FilterKey, [string, string]> = {
   effort: ["Reasoning effort", "推理强度"],
   modes: ["Service mode", "服务模式"],
 };
+// Views and panels the first paint doesn't show load as separate chunks; the
+// explorer prefetches them once it is idle so switching stays instant.
+const loadRanking = () => import("./Ranking");
+const loadAllowanceCards = () => import("./AllowanceCards");
+const loadAllowanceCompare = () => import("./AllowanceCompare");
+const loadProviderManager = () => import("./ProviderManager");
+const Ranking = lazy(loadRanking);
+const AllowanceCards = lazy(loadAllowanceCards);
+const AllowanceCompare = lazy(loadAllowanceCompare);
+const CustomProvidersPanel = lazy(loadProviderManager);
+function prefetchLater() {
+  void loadNotes().catch(() => {});
+  for (const load of [loadRanking, loadAllowanceCards, loadAllowanceCompare, loadProviderManager])
+    void load().catch(() => {});
+}
+
 function localLanguage() {
   try {
     return localStorage.getItem("pricing-language");
@@ -270,12 +285,18 @@ export default function App() {
     let cancelled = false;
     // index.html starts this request before the bundle arrives; reuse it.
     const early = (window as { __siteData?: Promise<unknown> }).__siteData;
-    (early ?? fetch("/data/site.json").then((r) => {
+    (early ?? fetch("/data/explorer.json").then((r) => {
       if (!r.ok) throw new Error(`HTTP ${r.status}`);
       return r.json();
     }))
       .then((raw) => unpackData(raw as Parameters<typeof unpackData>[0]))
-      .then((d) => !cancelled && setData(d))
+      .then((d) => {
+        if (cancelled) return;
+        setData(d);
+        // Fetch the dialog notes and the other views once the explorer has painted.
+        const idle = window.requestIdleCallback ?? ((f: () => void) => setTimeout(f, 200));
+        idle(prefetchLater);
+      })
       .catch((e) => !cancelled && setLoadError(String(e)));
     return () => {
       cancelled = true;
@@ -302,7 +323,7 @@ export default function App() {
         </div>
       </main>
     );
-  if (!merged) return <BootSkeleton />;
+  if (!merged) return <BootSkeleton lang={zhBoot ? "zh" : "en"} />;
   return (
     <ThemeContext.Provider value={theme}>
       <Explorer
@@ -317,21 +338,6 @@ export default function App() {
         }}
       />
     </ThemeContext.Provider>
-  );
-}
-/** Layout-shaped placeholder while site.json loads (no spinner, no layout jump). */
-function BootSkeleton() {
-  return (
-    <div className="skeleton" aria-busy="true" aria-label="Loading">
-      <div className="skeleton-header" />
-      <div className="page">
-        <div className="skeleton-hero">
-          <span style={{ width: "46%" }} />
-          <span style={{ width: "62%", height: 14 }} />
-        </div>
-        <div className="skeleton-card" />
-      </div>
-    </div>
   );
 }
 function Explorer({
@@ -1010,33 +1016,39 @@ function Explorer({
                 </div>
               ) : state.view === "table" ? null : state.view === "allowance" &&
                 state.layout === "cards" ? (
-                <AllowanceCards
-                  points={allowancePoints}
-                  rows={rows}
-                  state={state}
-                  axis={axis}
-                  highlight={highlight}
-                  onChange={(cards) => patch({ cards })}
-                  onSelect={setDetail}
-                />
+                <Suspense fallback={null}>
+                  <AllowanceCards
+                    points={allowancePoints}
+                    rows={rows}
+                    state={state}
+                    axis={axis}
+                    highlight={highlight}
+                    onChange={(cards) => patch({ cards })}
+                    onSelect={setDetail}
+                  />
+                </Suspense>
               ) : state.view === "allowance" && state.layout === "compare" ? (
-                <AllowanceCompare
-                  points={allowancePoints}
-                  rows={rows}
-                  state={state}
-                  onChange={(compare) => patch({ compare })}
-                  onSelect={setDetail}
-                />
+                <Suspense fallback={null}>
+                  <AllowanceCompare
+                    points={allowancePoints}
+                    rows={rows}
+                    state={state}
+                    onChange={(compare) => patch({ compare })}
+                    onSelect={setDetail}
+                  />
+                </Suspense>
               ) : state.view !== "pareto" ? (
-                <Ranking
-                  rows={rows}
-                  state={state}
-                  axis={axis}
-                  highlight={highlight}
-                  onSelect={setDetail}
-                  handle={chart}
-                  onQuery={(query) => patch({ query })}
-                />
+                <Suspense fallback={null}>
+                  <Ranking
+                    rows={rows}
+                    state={state}
+                    axis={axis}
+                    highlight={highlight}
+                    onSelect={setDetail}
+                    handle={chart}
+                    onQuery={(query) => patch({ query })}
+                  />
+                </Suspense>
               ) : (
                 <Chart
                   rows={rows}
@@ -1235,12 +1247,14 @@ function Explorer({
           closeLabel={t("Close", "关闭")}
         >
           {panel === "providers" && (
-            <CustomProvidersPanel
-              data={data}
-              providers={customProviders}
-              onChange={onCustomProvidersChange}
-              lang={state.lang}
-            />
+            <Suspense fallback={null}>
+              <CustomProvidersPanel
+                data={data}
+                providers={customProviders}
+                onChange={onCustomProvidersChange}
+                lang={state.lang}
+              />
+            </Suspense>
           )}
           {panel === "models" && (
             <>
@@ -1580,6 +1594,24 @@ function Details({
   const zh = lang === "zh";
   const t = (en: string, cn: string) => (zh ? cn : en);
   const points = [...new Map(rows.map((r) => [r.point.id, r.point])).values()];
+  const [notes, setNotes] = useState<SiteNotes | null>(null);
+  const [notesError, setNotesError] = useState(false);
+  useEffect(() => {
+    let cancelled = false;
+    loadNotes()
+      .then((n) => !cancelled && setNotes(n))
+      .catch(() => !cancelled && setNotesError(true));
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+  // Custom-provider points carry their own notes; published ones come from
+  // explorer-notes.json.
+  const pointNotes = (p: Point): PointNotes | undefined =>
+    p.evidence ? p : notes?.points[p.id];
+  const notesPending = notesError
+    ? t("Notes are unavailable right now.", "备注暂时无法加载。")
+    : t("Loading notes…", "正在加载备注…");
   // Static pages exist only for published data, never for local custom providers.
   const pages = useMemo(() => {
     const published = data.points.filter((p) => !p.id.startsWith("custom::"));
@@ -1723,18 +1755,24 @@ function Details({
             <p className="original-text">
               {zh ? p.source : (p.source_en ?? p.source)}
             </p>
-            {p.decision_note && (
-              <p className="original-text">
-                {zh ? p.decision_note : (p.decision_note_en ?? p.decision_note)}
-              </p>
-            )}
-            {p.note && p.note !== p.decision_note && (
-              <p className="original-text">
-                {zh ? p.note : (p.note_en ?? p.note)}
-              </p>
-            )}
+            {(() => {
+              const n = pointNotes(p);
+              if (!n) return <p className="original-text">{notesPending}</p>;
+              return (
+                <>
+                  {n.decision_note && (
+                    <p className="original-text">
+                      {zh ? n.decision_note : (n.decision_note_en ?? n.decision_note)}
+                    </p>
+                  )}
+                  {n.note && n.note !== n.decision_note && (
+                    <p className="original-text">{zh ? n.note : (n.note_en ?? n.note)}</p>
+                  )}
+                </>
+              );
+            })()}
             <div className="source-links">
-              {p.evidence.map((e, i) => (
+              {(pointNotes(p)?.evidence ?? []).map((e, i) => (
                 <a key={i} href={safeUrl(e.url)} target="_blank" rel="noreferrer">
                   {e.label}
                   <ArrowUpRight size={13} />
@@ -1760,7 +1798,8 @@ function Details({
               const srcAnnotation = srcUrl
                 ? (srcText ?? "").split(srcUrl).slice(1).join("").trim()
                 : srcText;
-              const recordNote = zh ? m.record_note_zh : m.record_note_en;
+              const cn = notes?.configurations[m.configuration_id];
+              const recordNote = zh ? cn?.record_note_zh : cn?.record_note_en;
               return (
                 <section className="configuration-detail" key={r.key}>
                   <strong>{variantLabel(m.variant, lang)}</strong>
@@ -1833,10 +1872,16 @@ function Details({
                       <dd>{m.board_label}</dd>
                       <dt>{t("Archived snapshot", "存档快照")}</dt>
                       <dd>
-                        <a href={m.archive_url} target="_blank" rel="noreferrer">
-                          {m.archive}
-                          <ArrowUpRight size={12} />
-                        </a>
+                        {cn?.archive_url ? (
+                          <a href={cn.archive_url} target="_blank" rel="noreferrer">
+                            {cn.archive}
+                            <ArrowUpRight size={12} />
+                          </a>
+                        ) : notes ? (
+                          "—"
+                        ) : (
+                          notesPending
+                        )}
                       </dd>
                       {recordNote ? (
                         <>
