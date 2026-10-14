@@ -5,7 +5,7 @@
   "workers_dev": true,
   "previews": {},
   // The primary domain; `wrangler deploy` creates its DNS record and
-  // certificate. www.tokenews.xyz redirects here (www-redirect/).
+  // certificate. www.tokenews.xyz redirects here via a zone Redirect Rule.
   "routes": [{ "pattern": "tokenews.xyz", "custom_domain": true }],
   // Static assets only, no Worker script. Build web/dist first (`npm run build`).
   "assets": {

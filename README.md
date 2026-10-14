@@ -16,7 +16,6 @@ scripts/
   sync-upstream.mjs  pulls only the data paths into upstream/
   lib/build-site-data.mjs   our adapter: upstream/ → web/public/data/site.json
 web/                 the site: React explorer + static page generator (see web/README.md)
-www-redirect/        Worker that 301s www.tokenews.xyz to tokenews.xyz
 .github/workflows/   CI, deploy, daily upstream sync
 ```
 
@@ -33,16 +32,29 @@ npm run build          # web/dist: explorer + every maker, provider and model pa
 npm test               # explorer domain tests against the synced data
 npm run check          # links, anchors, metadata and sitemap of the built pages
 npm run cf:dev         # serve web/dist locally with Cloudflare routing and headers
-npm run cf:deploy      # deploy both Workers (needs `npx wrangler login` or an API token)
+npm run cf:deploy      # deploy static assets (needs `npx wrangler login` or an API token)
 ```
 
 ## Automation
 
 - **CI** (`ci.yml`): pull requests build, test and check.
-- **Deploy** (`deploy.yml`): every push to `main` builds, tests, checks and deploys `tokenews` and `tokenews-www` to Cloudflare.
+- **Deploy** (`deploy.yml`): every push to `main` builds, tests, checks and deploys the static-assets site `tokenews` to Cloudflare.
 - **Upstream sync** (`sync-upstream.yml`): daily at 10:17 Beijing time, or by hand with an optional upstream ref. Unchanged data does nothing. Changed data that passes build, tests and checks is committed to `main` and deployed. A failure opens or updates an issue labelled `upstream-sync`, and the live site keeps the previous data.
 
 Repository secrets needed by the deploy: `CLOUDFLARE_API_TOKEN` (a token from the "Edit Cloudflare Workers" template, scoped to this account and the `tokenews.xyz` zone) and `CLOUDFLARE_ACCOUNT_ID`.
+
+## Cloudflare routing and billing
+
+Keep the account on **Workers Free**. The site uses Workers Static Assets without a Worker script; ordinary static asset requests are free and unlimited. Do not enable Workers Cache or add a dynamic Worker without reviewing billing and alerts first.
+
+`www.tokenews.xyz` uses a zone **Single Redirect** instead of Worker code:
+
+- Match: `(http.host eq "www.tokenews.xyz")`
+- Dynamic target: `concat("https://tokenews.xyz", http.request.uri.path)`
+- Status: `301`; preserve query string: enabled
+- DNS: keep `www` proxied so Cloudflare evaluates the redirect before reaching the origin.
+
+Manage this rule in Cloudflare → tokenews.xyz → Rules. It is not redeployed by the site workflow. The retired `tokenews-www` Worker must remain unbound from the domain; do not recreate it in CI.
 
 ## Licence and attribution
 

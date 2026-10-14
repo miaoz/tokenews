@@ -8,7 +8,7 @@
     "test": "npm --prefix web test",
     "check": "node web/scripts/check-pages.mjs",
     "cf:dev": "wrangler dev",
-    "cf:deploy": "wrangler deploy && wrangler deploy -c www-redirect/wrangler.jsonc"
+    "cf:deploy": "wrangler deploy"
   },
   "devDependencies": {
     "wrangler": "4.145.0"

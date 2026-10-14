@@ -1,7 +1,8 @@
 name: Deploy
 
 # Builds, tests and checks the site, then deploys it to Cloudflare:
-# the Worker `tokenews` (tokenews.xyz) and `tokenews-www` (www redirect).
+# the static-assets deployment `tokenews` (tokenews.xyz).
+# www redirects through a Cloudflare zone Redirect Rule, outside this deployment.
 # Needs repository secrets CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID.
 on:
   push:
