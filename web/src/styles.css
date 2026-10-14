@@ -6,6 +6,8 @@
 :root {
   --font-sans: "DM Sans Variable", "DM Sans", -apple-system, BlinkMacSystemFont,
     "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  /* Figures, IDs, dates and small labels: the system's monospace, no extra download. */
+  --font-mono: ui-monospace, "SF Mono", "JetBrains Mono", "Cascadia Mono", Menlo, Consolas, monospace;
 
   --bg: #f5f3ed;
   --surface: #ffffff;

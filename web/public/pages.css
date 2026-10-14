@@ -1,4 +1,4 @@
-/* Content of the static provider and model pages (scripts/build-pages.mjs).
+/* Content of the static pages (scripts/build-pages.mjs); design rules in DESIGN.md.
    They load the explorer's stylesheet first — tokens, fonts, header and
    footer come from there — so this file only styles the page body, scoped
    to .static-page and adjusting the explorer's app-oriented defaults. */
@@ -22,10 +22,13 @@ body {
   display: inline;
 }
 .static-page code {
-  font-size: 0.92em;
+  font-family: var(--font-mono);
+  font-size: 0.86em;
   padding: 1px 5px;
-  border-radius: 5px;
-  background: var(--accent-soft);
+  border: 1px solid var(--line-2);
+  border-radius: var(--radius-xs);
+  background: var(--surface-3);
+  color: var(--ink-2);
 }
 .crumbs ol {
   display: flex;
@@ -54,6 +57,12 @@ body {
   font-size: 22px;
   letter-spacing: -0.01em;
   margin: 48px 0 8px;
+}
+/* Sections open on a hairline rule: the page reads as a run of chapters. */
+.static-page section > h2:first-child {
+  margin-top: 56px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
 }
 .static-page p {
   margin: 0 0 12px;
@@ -167,16 +176,75 @@ body {
   }
 }
 .static-page .button {
-  display: inline-block;
-  padding: 10px 16px;
-  border-radius: var(--radius-s);
+  display: inline-flex;
+  align-items: center;
+  padding: 11px 18px;
+  border-radius: 999px;
   background: var(--primary-bg);
   color: var(--primary-ink);
   font-weight: 600;
+  transition: background 0.15s var(--ease);
 }
 .static-page .button:hover {
   background: var(--primary-hover);
   text-decoration: none;
+}
+/* Arrows on buttons and "see all" links nudge forward on hover. */
+.arrow {
+  display: inline-block;
+  margin-left: 8px;
+  transition: transform 0.2s var(--ease);
+}
+a:hover > .arrow {
+  transform: translateX(3px);
+}
+.static-page p.more {
+  margin: 24px 0 0;
+}
+.static-page .more-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 14px 7px 16px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  box-shadow: var(--shadow-1);
+  color: var(--ink);
+  font-size: 13.5px;
+  font-weight: 500;
+  transition:
+    border-color 0.15s var(--ease),
+    color 0.15s var(--ease);
+}
+.static-page .more-link:hover {
+  border-color: var(--accent-line);
+  color: var(--accent);
+  text-decoration: none;
+}
+/* Small monospace label above a heading or in a byline: section, date, reading time. */
+.kicker {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.static-page .kicker a {
+  color: var(--accent);
+}
+.static-page p.kicker {
+  margin: 0;
+}
+.static-page > p.kicker {
+  margin-top: 24px;
+}
+.static-page > .kicker + h1 {
+  margin-top: 8px;
+}
+.tag {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--muted);
 }
 .table-wrap {
   overflow-x: auto;
@@ -224,12 +292,38 @@ body {
   border-bottom: 1px solid var(--line);
   padding: 4px 0;
 }
+/* Disclosure rows end in a chevron instead of the browser's triangle. */
 .static-page summary {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   cursor: pointer;
-  padding: 6px 0;
+  padding: 8px 0;
+  list-style: none;
+}
+.static-page summary::-webkit-details-marker {
+  display: none;
+}
+.static-page summary::after {
+  content: "";
+  flex: none;
+  width: 7px;
+  height: 7px;
+  margin: 0 4px 3px auto;
+  border-right: 1.5px solid var(--muted);
+  border-bottom: 1.5px solid var(--muted);
+  transform: rotate(45deg);
+  transition: transform 0.2s var(--ease);
+}
+.static-page details[open] > summary::after {
+  margin-bottom: -3px;
+  transform: rotate(-135deg);
+}
+.static-page summary:hover h3 {
+  color: var(--accent);
 }
 .static-page summary h3 {
-  display: inline;
+  margin: 0;
   font-size: 16px;
 }
 .static-page details p {
@@ -287,6 +381,10 @@ body {
   gap: 4px 14px;
   padding: 12px 16px;
   font-weight: 600;
+}
+.static-page details.evidence > summary::after,
+.static-page details.configs > summary::after {
+  align-self: center;
 }
 .static-page details.evidence[open] > summary,
 .static-page details.configs[open] > summary {
@@ -365,46 +463,196 @@ ul.note {
   padding-left: 18px;
   margin-top: 4px;
 }
-/* News: lists on entity pages and the article index. */
+/* News rows on entity pages and under an article: date column, then title and summary. */
 .news-list {
   list-style: none;
   padding: 0;
-  margin: 12px 0 0;
+  margin: 8px 0 0;
   max-width: 880px;
 }
 .news-list li {
-  padding: 12px 0;
+  display: grid;
+  grid-template-columns: 116px minmax(0, 1fr);
+  gap: 20px;
+  padding: 16px 0;
   border-bottom: 1px solid var(--line-2);
 }
-.news-list time,
-.news-index time {
-  display: block;
+.news-list time {
+  padding-top: 3px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
   color: var(--muted);
-  font-size: 13px;
 }
-.news-list a {
+.static-page .news-title {
+  color: var(--ink);
+  font-size: 16px;
   font-weight: 600;
+  line-height: 1.4;
+}
+.static-page .news-title:hover {
+  color: var(--accent);
+  text-decoration: none;
 }
 .static-page .news-list p {
   margin: 4px 0 0;
   color: var(--ink-2);
+  font-size: 14px;
 }
+@media (max-width: 700px) {
+  .news-list li {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+}
+/* News index: the latest article as a wide card, the rest in a grid. Each
+   card is one link (the title's ::after covers it); chips stay clickable. */
 .news-index {
-  max-width: 880px;
+  display: grid;
+  gap: 20px;
+  max-width: 1120px;
+  margin-top: 32px;
 }
-.news-index article {
-  padding: 20px 0;
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+.news-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--line-2);
+  border-radius: var(--radius-l);
+  background: var(--surface);
+  box-shadow: var(--shadow-1);
+  transition:
+    box-shadow 0.2s var(--ease),
+    transform 0.2s var(--ease),
+    border-color 0.2s var(--ease);
+}
+.news-card:hover {
+  border-color: var(--line-strong);
+  box-shadow: var(--shadow-2);
+  transform: translateY(-2px);
+}
+.news-cover {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
   border-bottom: 1px solid var(--line-2);
+  background: var(--surface-3);
 }
-.static-page .news-index h2 {
-  margin: 4px 0 6px;
-  font-size: 20px;
+.news-cover img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s var(--ease);
 }
-.static-page .news-index h2 a {
+.news-card:hover .news-cover img {
+  transform: scale(1.02);
+}
+/* No cover image: a quiet dotted panel carrying the article's first tag. */
+.news-cover.placeholder {
+  display: flex;
+  align-items: flex-end;
+  padding: 18px 22px;
+  background-color: var(--surface-3);
+  background-image: radial-gradient(var(--line-strong) 1px, transparent 1.2px);
+  background-size: 14px 14px;
+}
+.news-cover.placeholder span {
+  padding: 3px 8px;
+  border-radius: var(--radius-xs);
+  background: var(--surface);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--muted);
+}
+.news-card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 18px 22px 22px;
+}
+.static-page .news-card h2 {
+  margin: 8px 0 8px;
+  font-size: 19px;
+  line-height: 1.3;
+}
+.static-page .news-card h2 a {
   color: var(--ink);
 }
-.static-page .news-index h2 a:hover {
+.static-page .news-card h2 a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+.static-page .news-card h2 a:hover {
+  text-decoration: none;
+}
+.news-card:hover h2 a {
   color: var(--accent);
+}
+.static-page .news-card-body > p:not(.kicker) {
+  margin: 0;
+  color: var(--ink-2);
+  font-size: 14.5px;
+}
+.news-card .chips {
+  position: relative;
+  z-index: 1;
+  margin-top: auto;
+  padding-top: 14px;
+}
+.news-card.featured {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+}
+.news-card.featured.no-cover {
+  grid-template-columns: 1fr;
+}
+.news-card.featured .news-cover {
+  aspect-ratio: auto;
+  min-height: 300px;
+  border-right: 1px solid var(--line-2);
+  border-bottom: 0;
+}
+.news-card.featured .news-card-body {
+  justify-content: center;
+  padding: 32px 36px;
+}
+.static-page .news-card.featured h2 {
+  font-size: clamp(22px, 2.4vw, 28px);
+  letter-spacing: -0.015em;
+}
+.static-page .news-card.featured .news-card-body > p:not(.kicker) {
+  font-size: 15.5px;
+}
+.news-card.featured .chips {
+  margin-top: 0;
+  padding-top: 18px;
+}
+@media (max-width: 900px) {
+  .news-card.featured {
+    grid-template-columns: 1fr;
+  }
+  .news-card.featured .news-cover {
+    aspect-ratio: 16 / 9;
+    min-height: 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--line-2);
+  }
+  .news-card.featured .news-card-body {
+    padding: 20px 22px 24px;
+  }
+}
+@media (max-width: 400px) {
+  .news-grid {
+    grid-template-columns: 1fr;
+  }
 }
 .chips {
   display: flex;
@@ -412,28 +660,87 @@ ul.note {
   gap: 6px;
   list-style: none;
   padding: 0;
-  margin: 10px 0 0;
+  margin: 12px 0 0;
 }
 .static-page .chips a {
   display: inline-block;
-  padding: 2px 10px;
-  border: 1px solid var(--line-2);
+  padding: 3px 11px;
+  border: 1px solid var(--line);
   border-radius: 999px;
   background: var(--surface);
   color: var(--ink-2);
-  font-size: 13px;
+  font-size: 12.5px;
+  font-weight: 500;
 }
 .static-page .chips a:hover {
-  border-color: var(--accent);
+  border-color: var(--accent-line);
   color: var(--accent);
   text-decoration: none;
 }
-/* Article body. */
+/* Article page: the reading column, with its contents list beside it on wide screens. */
+.article-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 720px);
+  gap: 64px;
+}
+@media (min-width: 1100px) {
+  .article-layout {
+    grid-template-columns: minmax(0, 720px) 240px;
+  }
+}
+@media (max-width: 1099px) {
+  .article-aside {
+    display: none;
+  }
+}
+.article-aside {
+  padding-top: 28px;
+}
+.toc {
+  position: sticky;
+  top: 24px;
+}
+.toc ol {
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0;
+  border-left: 1px solid var(--line);
+}
+.toc li a {
+  display: block;
+  margin-left: -1px;
+  padding: 5px 0 5px 14px;
+  border-left: 1px solid transparent;
+  font-size: 13px;
+  line-height: 1.4;
+}
+.static-page .toc a {
+  color: var(--muted);
+}
+.static-page .toc a[aria-current="true"] {
+  border-left-color: var(--accent);
+  color: var(--ink);
+}
+.static-page .toc a:hover {
+  border-left-color: var(--ink);
+  color: var(--ink);
+  text-decoration: none;
+}
 .prose {
-  max-width: 720px;
-  margin-top: 24px;
+  margin-top: 28px;
   font-size: 16.5px;
   line-height: 1.75;
+}
+.static-page .prose a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--accent-line);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
+}
+.static-page .prose a:hover {
+  color: var(--accent);
+  text-decoration-color: currentColor;
 }
 .static-page .prose p,
 .prose ul,
@@ -441,62 +748,130 @@ ul.note {
 .prose blockquote,
 .prose pre,
 .prose table {
-  margin: 0 0 18px;
+  margin: 0 0 20px;
 }
 .static-page .prose h2 {
-  margin: 36px 0 10px;
+  margin: 48px 0 12px;
+  font-size: 24px;
+  line-height: 1.25;
+  scroll-margin-top: 16px;
 }
 .static-page .prose h3 {
-  margin: 28px 0 8px;
+  margin: 32px 0 8px;
+  font-size: 18.5px;
+  scroll-margin-top: 16px;
 }
 .prose ul,
 .prose ol {
   padding-left: 22px;
 }
 .prose li + li {
-  margin-top: 4px;
+  margin-top: 6px;
+}
+.prose li::marker {
+  color: var(--faint);
+}
+.prose hr {
+  height: 1px;
+  margin: 40px 0;
+  border: 0;
+  background: var(--line);
 }
 .prose blockquote {
-  padding: 4px 16px;
-  border-left: 3px solid var(--line-strong);
+  padding: 14px 20px;
+  border: 1px solid var(--line-2);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 var(--radius-m) var(--radius-m) 0;
+  background: var(--surface);
   color: var(--ink-2);
+  font-size: 15.5px;
+}
+.static-page .prose blockquote p:last-child {
+  margin-bottom: 0;
 }
 .prose img {
   max-width: 100%;
   height: auto;
-  border-radius: var(--radius-m);
 }
 .prose figure {
-  margin: 24px 0;
+  margin: 32px 0;
 }
 .prose figure img {
   display: block;
+  border: 1px solid var(--line-2);
+  border-radius: var(--radius-m);
 }
 .prose figcaption {
-  margin-top: 8px;
-  color: var(--ink-2);
-  font-size: 14px;
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 13.5px;
   line-height: 1.5;
   text-align: center;
 }
 .prose pre {
-  padding: 12px 14px;
+  padding: 14px 16px;
   overflow-x: auto;
-  border-radius: var(--radius-s);
+  border: 1px solid var(--line-2);
+  border-radius: var(--radius-m);
   background: var(--surface-2);
-  font-size: 14px;
+  font-size: 13.5px;
+  line-height: 1.6;
 }
 .static-page .prose pre code {
   padding: 0;
+  border: 0;
   background: none;
+  font-size: inherit;
 }
 .prose table {
   display: block;
   overflow-x: auto;
-  font-size: 14px;
+  border: 1px solid var(--line-2);
+  border-radius: var(--radius-m);
+  background: var(--surface);
+  font-size: 13.5px;
+  line-height: 1.5;
 }
+.prose thead th {
+  background: var(--surface-2);
+  text-align: left;
+}
+/* Sources: numbered rows, the title and then the site it is on. */
 .source-list {
-  padding-left: 18px;
-  font-size: 14px;
-  word-break: break-word;
+  counter-reset: source;
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+}
+.source-list li {
+  counter-increment: source;
+  display: grid;
+  grid-template-columns: 32px minmax(0, 1fr);
+  border-bottom: 1px solid var(--line-2);
+}
+.source-list li::before {
+  content: counter(source, decimal-leading-zero);
+  padding-top: 13px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--faint);
+}
+.static-page .source-list a {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2px 16px;
+  padding: 11px 0;
+  color: var(--ink);
+  font-size: 14.5px;
+}
+.static-page .source-list a:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+.source-host {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--muted);
+  word-break: break-all;
 }

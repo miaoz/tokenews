@@ -72,8 +72,9 @@ const latinFont = (await readdir(path.join(dist, "assets"))).find((f) =>
 if (!latinFont) throw new Error("DM Sans Latin font not found in dist/assets");
 const FONT_PRELOAD = `<link rel="preload" href="/assets/${latinFont}" as="font" type="font/woff2" crossorigin />`;
 // Static pages have no React. One inline script drives the shared theme
-// toggle and opens a collapsed evidence block when a link targets it.
-const PAGE_SCRIPT = `<script>document.querySelector(".theme-toggle").addEventListener("click",function(){var d=document.documentElement,t=d.dataset.theme==="dark"?"light":"dark";d.dataset.theme=t;try{localStorage.setItem("pricing-theme",t)}catch(e){}});function openTarget(){var e=location.hash&&document.getElementById(decodeURIComponent(location.hash.slice(1)));if(e&&e.tagName==="DETAILS"){e.open=true;e.scrollIntoView()}}addEventListener("hashchange",openTarget);openTarget()</script>`;
+// toggle, opens a collapsed evidence block when a link targets it, and marks
+// the section in view in an article's contents list.
+const PAGE_SCRIPT = `<script>document.querySelector(".theme-toggle").addEventListener("click",function(){var d=document.documentElement,t=d.dataset.theme==="dark"?"light":"dark";d.dataset.theme=t;try{localStorage.setItem("pricing-theme",t)}catch(e){}});function openTarget(){var e=location.hash&&document.getElementById(decodeURIComponent(location.hash.slice(1)));if(e&&e.tagName==="DETAILS"){e.open=true;e.scrollIntoView()}}addEventListener("hashchange",openTarget);openTarget();var toc=document.querySelectorAll(".toc a");if(toc.length){var hs=[].map.call(toc,function(a){return document.getElementById(a.hash.slice(1))}),spy=function(){var c=null;hs.forEach(function(h){if(h&&h.getBoundingClientRect().top<innerHeight*0.3)c=h});toc.forEach(function(a,i){a.setAttribute("aria-current",hs[i]===c)})};addEventListener("scroll",spy,{passive:true});spy()}</script>`;
 const configById = new Map(data.configurations.map((c) => [c.configuration_id, c]));
 
 // ---------------------------------------------------------------------------
@@ -378,6 +379,15 @@ const U = {
 const abs = (p) => SITE + p;
 const link = (href, text) => `<a href="${href}">${esc(text)}</a>`;
 const ext = (href, text) => `<a href="${esc(href)}" rel="nofollow noopener" target="_blank">${esc(text)}</a>`;
+// "See all" links that close a section: a quiet pill with a moving arrow.
+const moreLink = (href, text) => `<p class="more"><a class="more-link" href="${href}">${esc(text)}<span class="arrow" aria-hidden="true">→</span></a></p>`;
+const hostOf = (url) => {
+  try {
+    return new URL(url).hostname.replace(/^www\./, "");
+  } catch {
+    return url;
+  }
+};
 const makerLink = (v, lang) => link(U.maker(v, lang), makerLabel(v, lang));
 const providerLink = (name, lang) => link(providerPagePath(name, lang), name);
 const modelLink = (m, lang) => link(U.model(m, lang), m.name);
@@ -428,7 +438,7 @@ const faqLd = (faq) => ({
 // pages (news). `byline` replaces the data-updated line under the lead;
 // `published` and `tags` add article metadata; `image` ({url, width, height,
 // type, alt}) replaces the default Pareto chart as the social image.
-function page({ lang, section, path: urlPath, alt, title, description, keywords, h1, lead, body, crumbs, graph, ogType = "website", byline, published, tags = [], image }) {
+function page({ lang, section, path: urlPath, alt, title, description, keywords, h1, kicker, lead, body, crumbs, graph, ogType = "website", byline, published, tags = [], image }) {
   const zh = lang === "zh";
   const t = (en, cn) => (zh ? cn : en);
   const url = abs(urlPath);
@@ -518,7 +528,7 @@ ${renderToStaticMarkup(createElement(SiteHeader, { lang, current: section, langu
 <nav class="crumbs" aria-label="${t("Breadcrumb", "面包屑")}"><ol>${crumbs
     .map(([n, h], i) => (i === crumbs.length - 1 ? `<li aria-current="page">${esc(n)}</li>` : `<li><a href="${h}">${esc(n)}</a></li>`))
     .join("")}</ol></nav>
-<h1>${esc(h1)}</h1>
+${kicker ? `<p class="kicker">${kicker}</p>\n` : ""}<h1>${esc(h1)}</h1>
 <p class="lead">${lead}</p>
 <p class="updated">${byline ?? `${t("Data updated", "数据更新于")} <time datetime="${updated}">${updated}</time> · <a href="${U.method(lang)}">${t("How real prices are computed", "真实单价的计算方法")}</a>`}</p>
 ${body}
@@ -682,13 +692,13 @@ const newsItems = (articles, lang) =>
   `<ul class="news-list">${articles
     .map(
       (a) =>
-        `<li><time datetime="${a.date}">${formatDay(a.date, lang)}</time><a href="${U.article(a)}" hreflang="en" lang="en">${esc(a.title)}</a><p lang="en">${esc(a.summary)}</p></li>`,
+        `<li><time datetime="${a.date}">${formatDay(a.date, lang)}</time><div><a class="news-title" href="${U.article(a)}" hreflang="en" lang="en">${esc(a.title)}</a><p lang="en">${esc(a.summary)}</p></div></li>`,
     )
     .join("")}</ul>`;
 const relatedNews = (articles, lang) =>
   articles.length
     ? `<section aria-labelledby="news"><h2 id="news">${lang === "zh" ? "相关资讯" : "Related news"}</h2>${lang === "zh" ? '<p class="note">资讯目前只有英文版。</p>' : ""}${newsItems(articles.slice(0, 8), lang)}${
-        articles.length > 8 ? `<p><a href="${U.news()}">${lang === "zh" ? "全部资讯" : "All news"} →</a></p>` : ""
+        articles.length > 8 ? moreLink(U.news(), lang === "zh" ? "全部资讯" : "All news") : ""
       }</section>`
     : "";
 
@@ -862,7 +872,7 @@ ${overview(
     [t("Leaderboards", "榜单"), m.benchmarks.length ? `<a href="#bench">${join(m.benchmarks.map((b) => esc(boardName(b.board, lang))), lang)}</a>` : null],
   ],
 )}
-<p><a class="button" href="${lockLink(m, lang)}">${t(`Plot ${m.name} on the price–capability chart`, `在价格–能力图中查看 ${m.name}`)} →</a></p>
+<p><a class="button" href="${lockLink(m, lang)}">${t(`Plot ${m.name} on the price–capability chart`, `在价格–能力图中查看 ${m.name}`)}<span class="arrow" aria-hidden="true">→</span></a></p>
 <section aria-labelledby="plans"><h2 id="plans">${t(`${m.name} plans and real prices`, `${m.name} 套餐与真实单价`)}</h2>
 <p>${t("Real price = monthly fee ÷ tokens you can actually use in a month. “vs API” shows how many times cheaper than the official API list price (standard workload mix) the plan is. “Evidence” opens the full calculation and sources for that row.", "真实单价 = 月费 ÷ 每月实际可用 token。「对比 API」表示该套餐比官方 API 标价（标准负载）便宜多少倍。「依据」展开该行的完整计算与来源。")}</p>
 ${table(
@@ -1060,7 +1070,7 @@ ${faqHtml(faq, lang)}
   v.models.length === 1 || new Set(v.points.map((p) => p.vendor)).has("other")
     ? lockLink(v.models[0], lang)
     : U.explorer(lang, `&vendors=${encodeURIComponent(v.points[0].vendor)}`)
-}">${t("Open in the interactive explorer", "在交互式图表中查看")} →</a></p>`;
+}">${t("Open in the interactive explorer", "在交互式图表中查看")}<span class="arrow" aria-hidden="true">→</span></a></p>`;
   return page({
     section: "makers",
     lang,
@@ -1204,7 +1214,7 @@ ${tierSections}
 </section>
 ${relatedNews(newsFor.provider(pr), lang)}
 ${faqHtml(faq, lang)}
-<p><a class="button" href="${U.explorer(lang, `&channels=${encodeURIComponent(pr.name)}`)}">${t("Open in the interactive explorer", "在交互式图表中查看")} →</a></p>`;
+<p><a class="button" href="${U.explorer(lang, `&channels=${encodeURIComponent(pr.name)}`)}">${t("Open in the interactive explorer", "在交互式图表中查看")}<span class="arrow" aria-hidden="true">→</span></a></p>`;
   return page({
     section: "providers",
     lang,
@@ -1240,6 +1250,23 @@ const articleChips = (a) =>
     ...a.providers.map((n) => providerLink(n, "en")),
   ]);
 
+// An article's cover for cards: the WebP in its widths, sized to `sizes`.
+const coverImg = (a, sizes, eager = false) =>
+  a.cover
+    ? `<img src="${esc(a.cover.url)}"${
+        a.cover.sizes.length ? ` srcset="${[...a.cover.sizes.map((v) => `${esc(v.url)} ${v.width}w`), `${esc(a.cover.url)} ${a.cover.width}w`].join(", ")}" sizes="${sizes}"` : ""
+      } alt=""${a.cover.width ? ` width="${a.cover.width}" height="${a.cover.height}"` : ""}${eager ? "" : ' loading="lazy"'} decoding="async">`
+    : "";
+const readMeta = (a, lang) => `<time datetime="${a.date}">${formatDay(a.date, lang)}</time> · ${a.minutes} min read`;
+// One article on the news index; the whole card is the title's link.
+const newsCard = (a, featured) => `<article class="news-card${featured ? " featured" : ""}${a.cover ? "" : " no-cover"}">${
+  a.cover
+    ? `<div class="news-cover">${coverImg(a, featured ? "(min-width: 900px) 640px, 100vw" : "(min-width: 900px) 420px, 100vw", featured)}</div>`
+    : featured
+      ? ""
+      : `<div class="news-cover placeholder" aria-hidden="true"><span>#${esc(a.tags[0] ?? "news")}</span></div>`
+}<div class="news-card-body"><p class="kicker">${readMeta(a, "en")}</p><h2><a href="${U.article(a)}">${esc(a.title)}</a></h2><p>${esc(a.summary)}</p>${articleChips(a)}</div></article>`;
+
 function newsIndex() {
   const lang = "en";
   const list = {
@@ -1260,11 +1287,7 @@ function newsIndex() {
     lead: esc("Releases, price and plan changes, and leaderboard moves across AI models, makers and products — each linked to the model, maker and provider pages it concerns."),
     byline: `<a href="${U.feed()}">RSS feed</a> · ${news.length ? `${plural(news.length, "article")}, latest ${formatDay(news[0].date, lang)}` : "No articles yet"}`,
     body: news.length
-      ? `<div class="news-index">${news
-          .map(
-            (a) => `<article><time datetime="${a.date}">${formatDay(a.date, lang)}</time><h2><a href="${U.article(a)}">${esc(a.title)}</a></h2><p>${esc(a.summary)}</p>${articleChips(a)}</article>`,
-          )
-          .join("")}</div>`
+      ? `<div class="news-index">${newsCard(news[0], true)}${news.length > 1 ? `<div class="news-grid">${news.slice(1).map((a) => newsCard(a, false)).join("")}</div>` : ""}</div>`
       : `<p>No articles yet. New ones appear here and in the <a href="${U.feed()}">RSS feed</a>.</p>`,
     crumbs: [
       [NAME[lang], U.home(lang)],
@@ -1281,12 +1304,25 @@ function newsArticle(a) {
   const others = news.filter((x) => x !== a).slice(0, 5);
   const body = `
 ${articleChips(a)}
+<div class="article-layout">
+<div class="article-main">
 <div class="prose">${a.html}</div>
 ${
   a.sources.length
-    ? `<section aria-labelledby="sources"><h2 id="sources">Sources</h2><ul class="source-list">${a.sources.map((s) => `<li>${ext(s.url, s.title)}</li>`).join("")}</ul></section>`
+    ? `<section aria-labelledby="sources"><h2 id="sources">Sources</h2><ol class="source-list">${a.sources
+        .map((s) => `<li><a href="${esc(s.url)}" rel="nofollow noopener" target="_blank"><span>${esc(s.title)}</span><span class="source-host">${esc(hostOf(s.url))} ↗</span></a></li>`)
+        .join("")}</ol></section>`
     : ""
 }
+</div>
+${
+  a.toc.length >= 3
+    ? `<aside class="article-aside"><nav class="toc" aria-labelledby="contents"><p class="kicker" id="contents">On this page</p><ol>${a.toc
+        .map((h) => `<li><a href="#${h.id}">${esc(h.text)}</a></li>`)
+        .join("")}${a.sources.length ? `<li><a href="#sources">Sources</a></li>` : ""}</ol></nav></aside>`
+    : ""
+}
+</div>
 ${
   mentioned.length
     ? `<section aria-labelledby="mentioned"><h2 id="mentioned">Models in this article</h2>
@@ -1303,7 +1339,7 @@ ${table(
 )}</section>`
     : ""
 }
-${others.length ? `<section aria-labelledby="more"><h2 id="more">More news</h2>${newsItems(others, lang)}<p><a href="${U.news()}">All news →</a></p></section>` : ""}`;
+${others.length ? `<section aria-labelledby="more"><h2 id="more">More news</h2>${newsItems(others, lang)}${moreLink(U.news(), "All news")}</section>` : ""}`;
   const article = {
     "@type": "NewsArticle",
     "@id": `${url}#article`,
@@ -1333,9 +1369,10 @@ ${others.length ? `<section aria-labelledby="more"><h2 id="more">More news</h2>$
     title: a.title,
     description: a.summary,
     keywords: [...a.tags, ...a.makers, ...a.models.map((id) => models.get(id).name), ...a.providers, "AI news"],
+    kicker: `<a href="${U.news()}">News</a> · ${readMeta(a, lang)}`,
     h1: a.title,
     lead: esc(a.summary),
-    byline: `<time datetime="${a.date}">${formatDay(a.date, lang)}</time>${a.updated !== a.date ? ` · updated <time datetime="${a.updated}">${formatDay(a.updated, lang)}</time>` : ""}${a.author ? ` · ${esc(a.author)}` : ""}${a.tags.length ? ` · ${a.tags.map(esc).join(", ")}` : ""}`,
+    byline: `By ${esc(a.author ?? SITE_NAME)}${a.updated !== a.date ? ` · updated <time datetime="${a.updated}">${formatDay(a.updated, lang)}</time>` : ""}${a.tags.map((x) => ` <span class="tag">#${esc(x)}</span>`).join("")}`,
     body,
     ogType: "article",
     published: a.date,

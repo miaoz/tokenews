@@ -44,6 +44,8 @@ GitHub Actions: `ci.yml` (PRs: build/test/check), `deploy.yml` (push to `main` �
 
 ## Conventions
 
+- UI follows `DESIGN.md` (tokens, type, components). Reuse its components, such as `moreLink()` and `.button` for arrow links, and keep colours in the tokens.
+
 - Makers and providers are labelled by one name everywhere (no bilingual tags like "深度求索 DeepSeek"); a maker's Chinese name (`zhName` in `build-pages.mjs`) appears only on its own Chinese page and in metadata.
 - Overview panels on static pages always have exactly four stats (enforced in `overview()`); variable-length details go in the key/value list below.
 - The footer credit to Real API Pricing and both copyright lines in `LICENSE` are required by the upstream MIT licence.

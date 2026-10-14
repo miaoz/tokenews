@@ -15,6 +15,10 @@ sources:
     url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/guides/gemini-4-argon
   - title: Gemini 4 Argon launch post (Google)
     url: https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/
+  - title: Gemini 4 Argon available on Google Cloud (Google Cloud Blog)
+    url: https://cloud.google.com/blog/products/ai-machine-learning/gemini-4-argon-available-on-google-cloud
+  - title: "Gemini 4 Argon pricing, benchmarks and rollout analysis (MIXED)"
+    url: https://mixed-news.com/en/gemini-4-argon-price-2-10-per-million-tokens-not-on-sale/
 ---
 
 > **Executive Summary**: In Fall 2026, Google DeepMind unveiled **Gemini 4 Argon** (model ID: `gemini-4-argon`), the inaugural flagship model of the **Gemini 4** series. Engineered specifically for deep, long-horizon work across complex real-world domains, Gemini 4 Argon unifies **input, thinking, and output tokens within a single shared 1,048,576-token (1M) context window** and shatters the traditional 64K output bottleneck via its breakthrough **Long Decode** architecture—enabling up to **1 million generated tokens** in a single continuous trajectory. Setting new state-of-the-art (SOTA) records across long-horizon software engineering (**DeepSWE v1.1: 77.9%**), enterprise knowledge work (**Vals Index: 68.9, #1 overall**), long-video multimodal understanding (**LVBench: 91.7%**), and autonomous vulnerability remediation (**CWE-bench v1: 68.0%**), Gemini 4 Argon redefines what autonomous AI agents can accomplish in production.
@@ -238,14 +242,3 @@ print(full_text)
 ## 6. Conclusion
 
 **Google Gemini 4 Argon** marks a pivotal transition in frontier AI—moving the industry from passive **1M-token reading comprehension** to active **1M-token deep reasoning and long-horizon generation**. By combining a **unified 1,048,576-token window**, **multi-hop Long Decode**, **native three-tier reasoning control (`LOW` / `MEDIUM` / `HIGH`)**, and **95%-off durable implicit caching**, Gemini 4 Argon provides the foundational engine for autonomous software engineering, scientific discovery, enterprise knowledge automation, and proactive cyber defense.
-
----
-
-## References & Official Sources
-
-1. [Gemini 4 Argon | Gemini API Model Documentation (Google AI for Developers)](https://ai.google.dev/gemini-api/docs/models/gemini-4-argon)
-2. [Long Decode Guide | Gemini API Documentation (Google AI for Developers)](https://ai.google.dev/gemini-api/docs/long-decode)
-3. [Gemini 4 Argon Developer Guide | Gemini Enterprise Agent Platform (Google Cloud Documentation)](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/guides/gemini-4-argon)
-4. [Gemini 4 Argon: Built to solve your hardest problems (Google Official Blog)](https://blog.google/intl/en-mena/product-updates/explore-get-answers/gemini-4-argon-built-to-solve-your-hardest-problems/)
-5. [Gemini 4 Argon available on Google Cloud (Google Cloud Blog)](https://cloud.google.com/blog/products/ai-machine-learning/gemini-4-argon-available-on-google-cloud?e=48754805)
-6. [Gemini 4 Argon API Pricing, Benchmarks & Rollout Analysis (MIXED)](https://mixed-news.com/en/gemini-4-argon-price-2-10-per-million-tokens-not-on-sale/)

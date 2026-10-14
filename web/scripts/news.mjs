@@ -20,8 +20,19 @@ const attr = (s) => String(s).replaceAll("&", "&amp;").replaceAll('"', "&quot;")
 // referrer or ranking. Images must be uploaded to the media bucket (or be other
 // http(s) URLs); `image(url)` resolves one to its size and reports problems.
 // An image alone in its paragraph becomes a <figure>, its title the caption.
+// `##` headings get ids for the article's contents list (`toc`).
+const RESERVED_IDS = new Set(["main", "sources", "mentioned", "more", "news", "contents"]);
 function render(markdown, image) {
   let first = true;
+  const toc = [];
+  const ids = new Set(RESERVED_IDS);
+  const headingId = (text) => {
+    const base = text.toLowerCase().replace(/<[^>]+>/g, "").replace(/&[a-z#0-9]+;/g, "").replace(/^[\d.\s]+/, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "section";
+    let id = base;
+    for (let n = 2; ids.has(id); n++) id = `${base}-${n}`;
+    ids.add(id);
+    return id;
+  };
   const img = (href, text) => {
     const found = image(href);
     // Uploaded images come in several widths; the article column is at most 720px wide.
@@ -41,6 +52,13 @@ function render(markdown, image) {
       image({ href, text }) {
         return img(href, text);
       },
+      heading({ tokens, depth }) {
+        const html = this.parser.parseInline(tokens);
+        if (depth > 3) return false;
+        const id = headingId(html);
+        if (depth === 2) toc.push({ id, text: this.parser.parseInline(tokens, this.parser.textRenderer) });
+        return `<h${depth} id="${id}">${html}</h${depth}>\n`;
+      },
       paragraph({ tokens }) {
         const content = tokens.filter((t) => !(t.type === "text" && !t.raw.trim()));
         if (content.length !== 1 || content[0].type !== "image") return false;
@@ -49,7 +67,7 @@ function render(markdown, image) {
       },
     },
   });
-  return marked.parse(markdown);
+  return { html: marked.parse(markdown), toc };
 }
 
 const list = (value) => (value == null ? [] : Array.isArray(value) ? value : [value]);
@@ -112,7 +130,7 @@ export async function loadNews({ dir, models, makers, providers, drafts = false 
       images.push({ url });
       return { url };
     };
-    const html = render(match[2], (url) => image(url));
+    const { html, toc } = render(match[2], (url) => image(url));
     const cover = meta.image ? image(String(meta.image), "image field") : images[0];
 
     const refs = (field, known, hint) =>
@@ -141,8 +159,12 @@ export async function loadNews({ dir, models, makers, providers, drafts = false 
         : cover?.url
           ? { url: cover.url, width: cover.width ?? null, height: cover.height ?? null, type: cover.type ?? null }
           : null,
+      // The cover as shown on the news index: the WebP with its srcset.
+      cover: cover?.url ? { url: cover.url, width: cover.width ?? null, height: cover.height ?? null, sizes: (cover.sizes ?? []).map((v) => ({ url: mediaUrl(v.key), width: v.width })) } : null,
+      minutes: Math.max(1, Math.round(match[2].replace(/```[\s\S]*?```/g, "").split(/\s+/).length / 230)),
       draft: meta.draft === true,
       html,
+      toc,
     };
     for (const s of article.sources) if (!/^https?:\/\//.test(s.url)) fail(`sources: "${s.url}" is not an http(s) URL`);
     if (article.draft && !drafts) continue;
