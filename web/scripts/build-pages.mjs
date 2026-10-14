@@ -543,12 +543,19 @@ ${PAGE_SCRIPT}
 // ---------------------------------------------------------------------------
 // Shared fragments.
 // ---------------------------------------------------------------------------
-const table = (caption, head, rows) =>
-  `<div class="table-wrap"><table><caption>${caption}</caption><thead><tr>${head
-    .map((h) => `<th scope="col">${h}</th>`)
+// A column whose cells are all bare figures ($0.0012, 31.5B, 13.3×, #1 / 60,
+// $20/mo, —) is right-aligned so the numbers line up.
+const FIGURE = /^(?:—|(?:≈|#)?[$¥€]?\d[\d.,]*(?:\s*[%×KMBT亿万])?(?:\/\S+)?(?:\s*\/\s*\d+)?)$/;
+const isFigure = (cell) => FIGURE.test(String(cell).replace(/<[^>]+>/g, "").trim());
+const table = (caption, head, rows) => {
+  const num = head.map((_, i) => i > 0 && rows.length > 0 && rows.every((r) => isFigure(r[i])) && rows.some((r) => String(r[i]).replace(/<[^>]+>/g, "").trim() !== "—"));
+  const cls = (i) => (num[i] ? ' class="num"' : "");
+  return `<div class="table-wrap"><table><caption>${caption}</caption><thead><tr>${head
+    .map((h, i) => `<th scope="col"${cls(i)}>${h}</th>`)
     .join("")}</tr></thead><tbody>${rows
-    .map((r) => `<tr>${r.map((c, i) => (i === 0 ? `<th scope="row">${c}</th>` : `<td>${c}</td>`)).join("")}</tr>`)
+    .map((r) => `<tr>${r.map((c, i) => (i === 0 ? `<th scope="row">${c}</th>` : `<td${cls(i)}>${c}</td>`)).join("")}</tr>`)
     .join("")}</tbody></table></div>`;
+};
 // Page overview: a fixed row of four headline numbers (always four, "—" when
 // missing, so the row never breaks unevenly) above a key/value list for the
 // details whose count varies by page.
@@ -934,6 +941,7 @@ ${table(
     title,
     description,
     keywords: [m.name, m.id, `${m.name} ${t("pricing", "价格")}`, `${m.name} API ${t("price", "价格")}`, `${m.name} ${t("subscription", "订阅")}`, vName, ...m.channels, t("cost per million tokens", "每百万 token 价格"), t("AI coding plan", "AI 编程套餐")],
+    kicker: `${t("Model", "模型")} · ${makerLink(v, lang)}`,
     h1: zh ? `${m.name} 真实价格与额度` : `${m.name} pricing: real cost per million tokens`,
     lead: esc(
       zh
@@ -1079,6 +1087,7 @@ ${faqHtml(faq, lang)}
     title,
     description,
     keywords: [vName, ...(v.zhName ? [v.zhName] : []), ...(v.alt ?? []), `${vName} ${t("pricing", "价格")}`, `${vName} API ${t("price", "价格")}`, ...modelNames, t("AI subscription", "AI 订阅"), t("cost per million tokens", "每百万 token 价格")],
+    kicker: `${t("Maker", "厂商")} · ${zh ? `${n} 个模型` : plural(n, "model")}`,
     h1: isOther ? t("Other model makers: models & real pricing", "其他厂商：模型与真实价格") : zh ? `${vName}：模型与真实价格` : `${v.name} models & real pricing`,
     lead: esc(
       zh
@@ -1142,7 +1151,7 @@ function providerPage(pr, lang) {
           vsList(p),
           conf(p.confidence, lang),
           p.data_date ? `<time>${esc(p.data_date)}</time>` : "—",
-          `<a href="${U.evidence(p, lang)}">${t("Evidence", "依据")} →</a>`,
+          `<a class="action" href="${U.evidence(p, lang)}">${t("Evidence", "依据")}<span class="arrow" aria-hidden="true">→</span></a>`,
         ];
       });
       return `<section class="plan" id="${planAnchor(tier.id)}" aria-labelledby="${planAnchor(tier.id)}-h"><h3 id="${planAnchor(tier.id)}-h">${esc(name)} <span class="plan-fee">${tier.feePoint.price_usd != null ? `${esc(fee(tier.feePoint))}${t("/mo", "/月")}` : billingLabel(tier.feePoint, lang)}</span></h3>
@@ -1223,6 +1232,7 @@ ${faqHtml(faq, lang)}
     title,
     description,
     keywords: [pr.name, `${pr.name} ${t("pricing", "价格")}`, `${pr.name} ${t("plans", "套餐")}`, ...subs.map((x) => x.name(lang)), ...pr.models.slice(0, 10).map((m) => m.name), t("AI coding plan", "AI 编程套餐"), t("cost per million tokens", "每百万 token 价格")],
+    kicker: `${t("Provider", "供应商")} · ${zh ? `${nTiers} 个套餐` : plural(nTiers, "plan")}`,
     h1: zh ? `${pr.name}：套餐与包含的模型` : `${pr.name} plans & included models`,
     lead: esc(
       zh
@@ -1283,6 +1293,7 @@ function newsIndex() {
     title: "AI News: Models, Makers and Products",
     description: `News on AI models, makers and products from ${SITE_NAME}: releases, price and plan changes, and leaderboard moves, linked to real per-token prices.`,
     keywords: ["AI news", "LLM news", "AI model releases", "AI pricing news", "coding plan news", SITE_NAME],
+    kicker: "Directory · news",
     h1: "AI news",
     lead: esc("Releases, price and plan changes, and leaderboard moves across AI models, makers and products — each linked to the model, maker and provider pages it concerns."),
     byline: `<a href="${U.feed()}">RSS feed</a> · ${news.length ? `${plural(news.length, "article")}, latest ${formatDay(news[0].date, lang)}` : "No articles yet"}`,
@@ -1420,7 +1431,7 @@ ${a.tags.map((x) => `<category>${esc(x)}</category>`).join("")}
 // ---------------------------------------------------------------------------
 // Index pages.
 // ---------------------------------------------------------------------------
-function indexPage({ lang, section, path: [en, zh], title, description, keywords, h1, lead, caption, head, rows, items }) {
+function indexPage({ lang, section, path: [en, zh], title, description, keywords, kicker, h1, lead, caption, head, rows, items }) {
   const isZh = lang === "zh";
   const t = (a, b) => (isZh ? b : a);
   const urlPath = isZh ? zh : en;
@@ -1438,6 +1449,7 @@ function indexPage({ lang, section, path: [en, zh], title, description, keywords
     title,
     description,
     keywords,
+    kicker: `${t("Directory", "目录")} · ${esc(kicker)}`,
     h1,
     lead: esc(lead),
     body: table(caption, head, rows),
@@ -1461,6 +1473,7 @@ const makersIndex = (lang) => {
       `对比 OpenAI、Anthropic、Google、DeepSeek、通义千问、Kimi、智谱等 ${makerList.length} 家 AI 厂商，覆盖 ${data.points.length} 个订阅与 API 的真实每百万 token 价格。`,
     ),
     keywords: [t("AI model makers", "AI 模型厂商"), t("LLM pricing comparison", "大模型价格对比"), ...makerList.map((v) => makerLabel(v, lang))],
+    kicker: t(plural(makers.size, "maker"), `${makers.size} 家厂商`),
     h1: t("AI model makers", "AI 模型厂商"),
     lead: t(`${makerList.length} model makers, ${modelList.length} models and ${data.points.length} plan/model combinations, each priced as monthly fee ÷ tokens you can actually use.`, `${makerList.length} 家厂商、${modelList.length} 个模型、${data.points.length} 个套餐/模型组合，均按「月费 ÷ 实际可用 token」计算真实单价。`),
     caption: t("Makers by number of plans", "厂商，按套餐数排序"),
@@ -1491,6 +1504,7 @@ const providersIndex = (lang) => {
       `对比 OpenCode、Command Code、Cursor、Claude、ChatGPT、GLM 等 ${providerList.length} 家供应商的 AI 订阅：套餐月费、包含的模型与真实每百万 token 价格。`,
     ),
     keywords: [t("AI coding plan", "AI 编程套餐"), t("AI subscription comparison", "AI 订阅对比"), ...providerList.map((p) => p.name)],
+    kicker: t(plural(providers.size, "provider"), `${providers.size} 个供应商`),
     h1: t("AI providers & plans", "AI 供应商与套餐"),
     lead: t(`${providerList.length} providers sell access to these models through ${[...providers.values()].reduce((n, p) => n + p.tierList.length, 0)} plans and APIs. Each provider page lists its plan tiers and the models every tier includes.`, `${providerList.length} 家供应商通过 ${[...providers.values()].reduce((n, p) => n + p.tierList.length, 0)} 个套餐与 API 提供这些模型。每个供应商页面列出其各档套餐及每档包含的模型。`),
     caption: t("Providers by number of plan × model combinations", "供应商，按套餐 × 模型组合数排序"),
@@ -1520,6 +1534,7 @@ const modelsIndex = (lang) => {
       `GPT、Claude、Gemini、Grok、DeepSeek、通义千问、Kimi、GLM 等 ${sorted.length} 个 AI 模型在订阅与 API 中的真实每百万 token 单价，从低到高排序。`,
     ),
     keywords: [t("AI model prices", "AI 模型价格"), t("LLM price per million tokens", "大模型每百万 token 价格"), ...sorted.slice(0, 20).map((m) => m.name)],
+    kicker: t(plural(models.size, "model"), `${models.size} 个模型`),
     h1: t("AI model prices", "AI 模型价格"),
     lead: t(`All ${sorted.length} models, ranked by the lowest real price we found across every subscription and API that serves them.`, `全部 ${sorted.length} 个模型，按其在所有订阅与 API 中的最低真实单价排序。`),
     caption: t("Models by lowest real price", "模型，按最低真实单价排序"),
@@ -1787,9 +1802,17 @@ ${FONT_PRELOAD}
 <body>
 ${renderToStaticMarkup(createElement(SiteHeader, { lang, current: null, languageHref: zh ? "/404.html" : "/zh/404.html" }))}
 <main id="main" class="page static-page">
+<p class="kicker">${t("Error 404", "错误 404")}</p>
 <h1>${t("Page not found", "页面不存在")}</h1>
 <p class="lead">${t("This page does not exist or has moved. Every maker, provider and model has its own page:", "该页面不存在或已移动。每个厂商、供应商和模型都有自己的页面：")}</p>
-<p><a href="${U.makers(lang)}">${t("All makers", "全部厂商")}</a> · <a href="${U.providers(lang)}">${t("All providers", "全部供应商")}</a> · <a href="${U.models(lang)}">${t("All models", "全部模型")}</a> · <a href="${U.home(lang)}">${t("Interactive explorer", "交互式图表")}</a></p>
+<p class="more pills">${[
+    [U.makers(lang), t("All makers", "全部厂商")],
+    [U.providers(lang), t("All providers", "全部供应商")],
+    [U.models(lang), t("All models", "全部模型")],
+    [U.news(), t("News", "资讯")],
+  ]
+    .map(([href, text]) => `<a class="more-link" href="${href}">${esc(text)}<span class="arrow" aria-hidden="true">→</span></a>`)
+    .join("")}<a class="button" href="${U.home(lang)}">${t("Interactive explorer", "交互式图表")}<span class="arrow" aria-hidden="true">→</span></a></p>
 </main>
 ${renderToStaticMarkup(createElement(SiteFooter, { lang }))}
 ${PAGE_SCRIPT}

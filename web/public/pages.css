@@ -18,6 +18,39 @@ body {
   color: var(--accent);
   text-underline-offset: 2px;
 }
+/* Links inside data (tables, key/value lists, answers) are ink with a quiet
+   underline, so a column of names reads as text; green means hover. Row
+   headers are bold ink. Small "go" links (.action) stay green. */
+.static-page td a,
+.static-page .meta a,
+.static-page .answer a,
+.static-page .kv a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--line-strong);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+.static-page tbody th a {
+  color: var(--ink);
+}
+.static-page td a:hover,
+.static-page tbody th a:hover,
+.static-page .meta a:hover,
+.static-page .answer a:hover,
+.static-page .kv a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-color: currentColor;
+}
+.static-page td a.action {
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.static-page td a.action:hover {
+  text-decoration: none;
+}
 .static-page small {
   display: inline;
 }
@@ -76,12 +109,49 @@ body {
   font-size: 13px;
   color: var(--muted);
 }
+.updated time {
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+/* The direct answer: a callout like an article's quote, white with a green bar. */
 .answer {
   max-width: 880px;
   padding: 16px 20px;
-  border: 1px solid var(--accent-line);
-  border-radius: var(--radius-m);
-  background: var(--accent-soft);
+  border: 1px solid var(--line-2);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 var(--radius-m) var(--radius-m) 0;
+  background: var(--surface);
+  box-shadow: var(--shadow-1);
+}
+/* Labels of data (column heads, captions, stat and key names) share the kicker's monospace. */
+.static-page thead th,
+.static-page caption,
+.stats dt,
+.meta dt,
+.kv dt {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+/* Chinese pages: the system monospace has no CJK glyphs, so labels mix two
+   faces. Set them in the sans, and keep names like Anthropic in their own case. */
+html[lang="zh-CN"] .kicker,
+html[lang="zh-CN"] .static-page thead th,
+html[lang="zh-CN"] .static-page caption,
+html[lang="zh-CN"] .stats dt,
+html[lang="zh-CN"] .meta dt,
+html[lang="zh-CN"] .kv dt {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+.static-page .num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
 }
 /* Overview: one panel — four headline numbers in a fixed row, then a
    key/value list whose length varies by page. */
@@ -104,11 +174,7 @@ body {
 .stats > div:first-child {
   border-left: 0;
 }
-.stats dt,
-.meta dt {
-  color: var(--muted);
-  font-size: 12.5px;
-}
+
 .stats dd {
   margin-top: 6px;
   font-size: 24px;
@@ -216,6 +282,12 @@ a:hover > .arrow {
     border-color 0.15s var(--ease),
     color 0.15s var(--ease);
 }
+.static-page p.pills {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
 .static-page .more-link:hover {
   border-color: var(--accent-line);
   color: var(--accent);
@@ -236,7 +308,10 @@ a:hover > .arrow {
   margin: 0;
 }
 .static-page > p.kicker {
-  margin-top: 24px;
+  margin-top: 16px;
+}
+.static-page > p.kicker:first-child {
+  margin-top: 32px;
 }
 .static-page > .kicker + h1 {
   margin-top: 8px;
@@ -260,8 +335,6 @@ a:hover > .arrow {
 .static-page caption {
   text-align: left;
   padding: 12px 14px;
-  font-weight: 600;
-  color: var(--ink-2);
 }
 .static-page th,
 .static-page td {
@@ -275,6 +348,7 @@ a:hover > .arrow {
   white-space: nowrap;
 }
 .static-page tbody th {
+  min-width: 9em;
   font-weight: 600;
   text-align: left;
 }
@@ -423,8 +497,7 @@ a:hover > .arrow {
   border-bottom: 1px solid var(--line-2);
 }
 .kv dt {
-  color: var(--muted);
-  font-size: 13px;
+  padding-top: 2px;
 }
 .kv dd p {
   margin: 0 0 4px;
