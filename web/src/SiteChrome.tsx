@@ -2,7 +2,8 @@
 // renders the same components to static HTML for the provider and model
 // pages, so every page shares one navigation and one footer.
 import type { MouseEvent } from "react";
-import { ArrowUpRight, ChartScatter, Moon, Sun } from "@phosphor-icons/react";
+import { ArrowUpRight, Moon, Sun } from "@phosphor-icons/react";
+import BrandIcon from "./BrandIcon";
 import { explorerPath } from "./pageLinks";
 import type { Lang } from "./types";
 
@@ -63,7 +64,7 @@ export function SiteHeader({
     <header className="site-header">
       <div className="header-inner">
         <a className="brand" href={homePath(lang)} onClick={follow(onExplore)}>
-          <ChartScatter size={24} weight="bold" />
+          <BrandIcon size={24} />
           <span>{SITE_NAME}</span>
         </a>
         <nav aria-label={t("Main navigation", "主导航")}>
@@ -122,7 +123,7 @@ export function SiteFooter({
     <footer className="site-footer">
       <div className="footer-inner">
         <span className="footer-brand">
-          <ChartScatter size={18} weight="bold" />
+          <BrandIcon size={18} />
           {SITE_NAME}
         </span>
         <p>{TAGLINE[lang]}</p>

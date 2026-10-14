@@ -1,5 +1,5 @@
 import { Component, type ErrorInfo, type ReactNode } from "react";
-import { ChartScatter } from "@phosphor-icons/react";
+import BrandIcon from "./BrandIcon";
 
 const REPO = "https://github.com/FeiZhuLulu/real-api-pricing";
 
@@ -32,7 +32,7 @@ export default class ErrorBoundary extends Component<
 
     return (
       <main className="boot" role="alert">
-        <ChartScatter size={32} />
+        <BrandIcon size={32} />
         <h1>{zh ? "页面出错了" : "Something went wrong"}</h1>
         <p>
           {zh

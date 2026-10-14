@@ -22,6 +22,7 @@ import {
   X,
 } from "@phosphor-icons/react";
 import { ThemeContext, type Theme } from "./theme";
+import BrandIcon from "./BrandIcon";
 import Chart from "./Chart";
 import { loadNotes, unpackData } from "./loadData";
 import ResizeHandle from "./ResizeHandle";
@@ -312,7 +313,7 @@ export default function App() {
   if (loadError)
     return (
       <main className="boot" role="alert">
-        <ChartScatter size={32} />
+        <BrandIcon size={32} />
         <h1>{zhBoot ? "数据暂时无法加载" : "Data is unavailable"}</h1>
         <p>{loadError}</p>
         <div className="boot-actions">
