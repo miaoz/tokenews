@@ -35,6 +35,9 @@ export const explorerPath = (lang: Lang, params = ""): string => {
   return hash ? `/#${hash}` : "/";
 };
 
+// The methodology as a static page; the explorer also shows it in place.
+export const methodologyPath = (lang: Lang): string => `${prefix(lang)}/methodology/`;
+
 export const makerPagePath = (maker: string, lang: Lang): string =>
   `${prefix(lang)}/makers/${pageSlug(maker)}/`;
 

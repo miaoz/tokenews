@@ -163,6 +163,8 @@ export async function loadNews({ dir, models, makers, providers, drafts = false 
       cover: cover?.url ? { url: cover.url, width: cover.width ?? null, height: cover.height ?? null, sizes: (cover.sizes ?? []).map((v) => ({ url: mediaUrl(v.key), width: v.width })) } : null,
       minutes: Math.max(1, Math.round(match[2].replace(/```[\s\S]*?```/g, "").split(/\s+/).length / 230)),
       draft: meta.draft === true,
+      // The body as written, served as the article's index.md.
+      markdown: match[2].trim(),
       html,
       toc,
     };

@@ -10,6 +10,12 @@
 /pages.css
   Cache-Control: public, max-age=0, must-revalidate
 
+# Markdown copies of pages (build-pages.mjs): served as Markdown, pointing
+# search engines at the HTML page as the canonical one.
+/*/index.md
+  Content-Type: text/markdown; charset=utf-8
+  Link: <https://tokenews.xyz/:splat/>; rel="canonical"
+
 # Keep every workers.dev address (production and preview) out of search
 # results; only tokenews.xyz is indexed.
 https://:worker.:account.workers.dev/*

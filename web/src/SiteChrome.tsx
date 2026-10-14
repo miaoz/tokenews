@@ -4,7 +4,7 @@
 import type { MouseEvent } from "react";
 import { ArrowUpRight, Moon, Sun } from "@phosphor-icons/react";
 import BrandIcon from "./BrandIcon";
-import { explorerPath } from "./pageLinks";
+import { explorerPath, methodologyPath } from "./pageLinks";
 import type { Lang } from "./types";
 
 /** Site name and positioning, shared by the explorer, static pages and exports. */
@@ -128,7 +128,7 @@ export function SiteFooter({
         </span>
         <p>{TAGLINE[lang]}</p>
         <nav aria-label={t("Footer", "页脚")}>
-          <a href={explorerPath(lang, "view=method")} onClick={follow(onMethod)}>
+          <a href={methodologyPath(lang)} onClick={follow(onMethod)}>
             {t("Methodology", "方法与来源")}
           </a>
           <a href={`${REPO}/blob/main/SOURCES.md`} target="_blank" rel="noreferrer">

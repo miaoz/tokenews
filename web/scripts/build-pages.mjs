@@ -12,6 +12,7 @@ import { renderToStaticMarkup } from "react-dom/server";
 import {
   explorerPath,
   makerPagePath,
+  methodologyPath,
   modelPagePath,
   pageMaker,
   pageSlug as slug,
@@ -21,7 +22,10 @@ import {
 } from "../src/pageLinks.ts";
 import { BootSkeleton } from "../src/BootSkeleton.tsx";
 import { REPO, SITE_NAME, SiteFooter, SiteHeader, TAGLINE } from "../src/SiteChrome.tsx";
+import Method from "../src/Method.tsx";
 import { loadNews } from "./news.mjs";
+import TurndownService from "turndown";
+import { gfm } from "turndown-plugin-gfm";
 import {
   dataDateLine,
   effortLabel,
@@ -374,7 +378,7 @@ const U = {
   article: (a) => `/news/${a.slug}/`,
   feed: () => "/news/feed.xml",
   explorer: (lang, extra = "") => explorerPath(lang, extra.replace(/^&/, "")),
-  method: (lang) => explorerPath(lang, "view=method"),
+  method: (lang) => methodologyPath(lang),
 };
 const abs = (p) => SITE + p;
 const link = (href, text) => `<a href="${href}">${esc(text)}</a>`;
@@ -425,20 +429,12 @@ const breadcrumbs = (items) => ({
     item: abs(url),
   })),
 });
-const faqLd = (faq) => ({
-  "@type": "FAQPage",
-  mainEntity: faq.map(([q, a]) => ({
-    "@type": "Question",
-    name: q,
-    acceptedAnswer: { "@type": "Answer", text: a },
-  })),
-});
-
 // `alt` is the same page in the other language, or null for English-only
 // pages (news). `byline` replaces the data-updated line under the lead;
 // `published` and `tags` add article metadata; `image` ({url, width, height,
 // type, alt}) replaces the default Pareto chart as the social image.
-function page({ lang, section, path: urlPath, alt, title, description, keywords, h1, kicker, lead, body, crumbs, graph, ogType = "website", byline, published, tags = [], image }) {
+// `bare` pages render their own heading block after the breadcrumb.
+function page({ lang, section, path: urlPath, alt, title, description, keywords, h1, kicker, lead, body, crumbs, graph, ogType = "website", byline, published, tags = [], image, bare = false }) {
   const zh = lang === "zh";
   const t = (en, cn) => (zh ? cn : en);
   const url = abs(urlPath);
@@ -490,6 +486,7 @@ function page({ lang, section, path: urlPath, alt, title, description, keywords,
 <meta name="theme-color" content="#f5f3ed" media="(prefers-color-scheme: light)" />
 <meta name="theme-color" content="#0f1113" media="(prefers-color-scheme: dark)" />
 <link rel="canonical" href="${url}" />
+<link rel="alternate" type="text/markdown" href="${urlPath}index.md" title="Markdown" />
 ${
   alt
     ? `<link rel="alternate" hreflang="${zh ? "zh-CN" : "en"}" href="${url}" />
@@ -528,10 +525,14 @@ ${renderToStaticMarkup(createElement(SiteHeader, { lang, current: section, langu
 <nav class="crumbs" aria-label="${t("Breadcrumb", "面包屑")}"><ol>${crumbs
     .map(([n, h], i) => (i === crumbs.length - 1 ? `<li aria-current="page">${esc(n)}</li>` : `<li><a href="${h}">${esc(n)}</a></li>`))
     .join("")}</ol></nav>
-${kicker ? `<p class="kicker">${kicker}</p>\n` : ""}<h1>${esc(h1)}</h1>
+${
+    bare
+      ? ""
+      : `${kicker ? `<p class="kicker">${kicker}</p>\n` : ""}<h1>${esc(h1)}</h1>
 <p class="lead">${lead}</p>
 <p class="updated">${byline ?? `${t("Data updated", "数据更新于")} <time datetime="${updated}">${updated}</time> · <a href="${U.method(lang)}">${t("How real prices are computed", "真实单价的计算方法")}</a>`}</p>
-${body}
+`
+  }${body}
 </main>
 ${renderToStaticMarkup(createElement(SiteFooter, { lang }))}
 ${PAGE_SCRIPT}
@@ -573,10 +574,6 @@ const kv = (rows) =>
     .filter(([, v]) => v)
     .map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`)
     .join("")}</dl>`;
-const faqHtml = (faq, lang) =>
-  `<section aria-labelledby="faq"><h2 id="faq">${lang === "zh" ? "常见问题" : "Frequently asked questions"}</h2>${faq
-    .map(([q, a]) => `<details open><summary><h3>${esc(q)}</h3></summary><p>${esc(a)}</p></details>`)
-    .join("")}</section>`;
 const realCell = (p, lang) =>
   unmetered(p)
     ? `≈$0 <small>${esc(unmeteredNote(p, lang))}</small>`
@@ -721,6 +718,12 @@ function modelPage(m, lang) {
   const c = m.cheapest;
   const nPlans = m.subs.length;
   const topBench = m.benchmarks.slice().sort((a, b) => a.rank / a.of - b.rank / b.of)[0];
+  // The strongest leaderboard placement, as one citable sentence in the answer.
+  const benchSentence = topBench
+    ? zh
+      ? `${m.name} 收录了 ${m.benchmarks.length} 个榜单的成绩，最好的一项是 ${boardName(topBench.board, lang)} 上的 ${fmt(topBench.best.score, lang, 2)}（${metricName(topBench.board, lang)}），在本站收录的 ${topBench.of} 个模型中排第 ${topBench.rank}。`
+      : `On independent leaderboards, ${m.name}'s strongest placement is ${fmt(topBench.best.score, lang, 2)} (${metricName(topBench.board, lang)}) on ${boardName(topBench.board, lang)}, #${topBench.rank} of ${topBench.of} models tracked.`
+    : "";
 
   const answer = c
     ? zh
@@ -773,36 +776,6 @@ function modelPage(m, lang) {
     esc(data.boards[board].snapshot),
   ]);
   const siblings = v.models.filter((x) => x !== m);
-
-  const faq = [];
-  if (c)
-    faq.push([
-      t(`How much does ${m.name} really cost per million tokens?`, `${m.name} 每百万 token 实际多少钱？`),
-      zh
-        ? `按「订阅月费 ÷ 实际可用 token」计算，${m.name} 的真实单价从 ${usd(c.real_usd_per_mtok)}（${planName(c, lang)}）到 ${usd(m.priced.at(-1).real_usd_per_mtok)}（${planName(m.priced.at(-1), lang)}）不等。`
-        : `Measured as monthly fee ÷ tokens you can actually use, ${m.name} ranges from ${usd(c.real_usd_per_mtok)} (${planName(c, lang)}) to ${usd(m.priced.at(-1).real_usd_per_mtok)} (${planName(m.priced.at(-1), lang)}) per million tokens.`,
-    ]);
-  if (m.mostTokens)
-    faq.push([
-      t(`Which subscription gives the most ${m.name} usage?`, `哪个订阅的 ${m.name} 额度最多？`),
-      zh
-        ? `「${planName(m.mostTokens, lang)}」每月约 ${tokens(m.mostTokens, lang)} token，月费 ${fee(m.mostTokens) ?? "—"}。`
-        : `${planName(m.mostTokens, lang)} allows roughly ${tokens(m.mostTokens, lang)} tokens of ${m.name} per month for ${fee(m.mostTokens) ?? "—"}.`,
-    ]);
-  if (lp) faq.push([t(`What is the official API price of ${m.name}?`, `${m.name} 的官方 API 价格是多少？`), listSentence]);
-  if (topBench)
-    faq.push([
-      t(`How does ${m.name} score on independent leaderboards?`, `${m.name} 在独立榜单上的成绩如何？`),
-      zh
-        ? `${m.name} 收录了 ${m.benchmarks.length} 个榜单的成绩，其中在 ${boardName(topBench.board, lang)} 上为 ${fmt(topBench.best.score, lang, 2)}（${metricName(topBench.board, lang)}），在本站收录的 ${topBench.of} 个模型中排第 ${topBench.rank}。`
-        : `${m.name} has scores on ${plural(m.benchmarks.length, "leaderboard")}; its strongest placement is ${fmt(topBench.best.score, lang, 2)} (${metricName(topBench.board, lang)}) on ${boardName(topBench.board, lang)}, #${topBench.rank} of ${topBench.of} models tracked.`,
-    ]);
-  faq.push([
-    t(`Who makes ${m.name}, and where can I use it?`, `${m.name} 是哪家公司的模型？在哪里可以使用？`),
-    zh
-      ? `${m.name}（模型 ID：${m.id}）由 ${vName} 开发，可通过 ${m.channels.join("、")} 使用。`
-      : `${m.name} (model ID ${m.id}) is made by ${vName} and is available through ${m.channels.join(", ")}.`,
-  ]);
 
   const offers = m.points.filter((p) => p.price_usd != null);
   const product = {
@@ -863,7 +836,7 @@ function modelPage(m, lang) {
   };
 
   const body = `
-<p class="answer">${esc(answer)}${listSentence ? " " + esc(listSentence) : ""}</p>
+<p class="answer">${esc(answer)}${listSentence ? " " + esc(listSentence) : ""}${benchSentence ? " " + esc(benchSentence) : ""}</p>
 ${overview(
   t("Overview", "概览"),
   [
@@ -917,7 +890,6 @@ ${table(t("List price per million tokens", "每百万 token 标价"), [t("Cached
     : ""
 }
 ${relatedNews(newsFor.model(m), lang)}
-${faqHtml(faq, lang)}
 ${
   siblings.length
     ? `<section aria-labelledby="more"><h2 id="more">${t(`More ${vName} models`, `${vName} 的其他模型`)}</h2>
@@ -956,7 +928,7 @@ ${table(
       [vName, U.maker(v, lang)],
       [m.name, U.model(m, lang)],
     ],
-    graph: { about: { "@id": product["@id"] }, mainEntity: { "@id": product["@id"] }, extra: [product, faqLd(faq), dataset] },
+    graph: { about: { "@id": product["@id"] }, mainEntity: { "@id": product["@id"] }, extra: [product, dataset] },
   });
 }
 
@@ -1009,20 +981,6 @@ function makerPage(v, lang) {
       const ms = [...new Set(v.points.filter((x) => x.plan_id === p.plan_id).map((x) => x.model))].map((id) => models.get(id));
       return [planLink(p, lang), providerLink(p.channel, lang), billingLabel(p, lang), feeCell(p, lang), join(ms.map((x) => modelLink(x, lang)), lang)];
     });
-  const faq = [];
-  if (best)
-    faq.push([
-      t(`What is the cheapest ${isOther ? "" : v.name + " "}model per token?`, `${vName} 哪个模型每 token 最便宜？`),
-      answer,
-    ]);
-  faq.push([
-    t(`Which ${isOther ? "" : v.name + " "}models are covered?`, `本站收录了 ${vName} 的哪些模型？`),
-    zh ? `共 ${n} 个：${modelNames.join("、")}。` : `${n} model${n === 1 ? "" : "s"}: ${modelNames.join(", ")}.`,
-  ]);
-  faq.push([
-    t(`Where can I use ${isOther ? "these" : v.name} models?`, `可以通过哪些供应商使用 ${vName} 的模型？`),
-    zh ? `${v.channels.join("、")}，共 ${v.plans.length} 个套餐或 API。` : `Through ${v.channels.join(", ")} — ${v.plans.length} plans or APIs in total.`,
-  ]);
   const org = {
     "@type": "Organization",
     "@id": `${abs(U.maker(v, "en"))}#org`,
@@ -1072,7 +1030,6 @@ ${table(
 <section aria-labelledby="plans"><h2 id="plans">${t(`Plans that include ${isOther ? "these" : v.name} models`, `包含 ${vName} 模型的套餐`)}</h2>
 ${table(t("Subscriptions and APIs, by monthly fee", "订阅与 API，按月费排序"), [t("Plan", "套餐"), t("Provider", "供应商"), t("Billing", "计费"), t("Monthly fee", "月费"), t("Models", "模型")], planRows)}</section>
 ${relatedNews(newsFor.maker(v), lang)}
-${faqHtml(faq, lang)}
 <p><a class="button" href="${
   // The explorer filters by the raw vendor field, which lumps some makers under "other".
   v.models.length === 1 || new Set(v.points.map((p) => p.vendor)).has("other")
@@ -1100,7 +1057,7 @@ ${faqHtml(faq, lang)}
       [t("Makers", "厂商"), U.makers(lang)],
       [vName, U.maker(v, lang)],
     ],
-    graph: { about: { "@id": org["@id"] }, mainEntity: { "@id": list["@id"] }, extra: [org, list, faqLd(faq)] },
+    graph: { about: { "@id": org["@id"] }, mainEntity: { "@id": list["@id"] }, extra: [org, list] },
   });
 }
 
@@ -1162,25 +1119,6 @@ ${table(
 )}</section>`;
     })
     .join("\n");
-  const faq = [];
-  if (c)
-    faq.push([
-      t(`Which ${pr.name} plan is cheapest per token?`, `${pr.name} 哪个套餐每 token 最便宜？`),
-      zh
-        ? `「${planName(c, lang)}」中的 ${models.get(c.model).name} 真实单价最低，约 ${usd(c.real_usd_per_mtok)} / 百万 token${c.price_usd != null ? `（月费 ${fee(c)}，每月约 ${tokens(c, lang)} token）` : ""}。`
-        : `${models.get(c.model).name} on ${planName(c, lang)} has the lowest real price, about ${usd(c.real_usd_per_mtok)} per million tokens${c.price_usd != null ? ` (${fee(c)}/month for roughly ${tokens(c, lang)} tokens)` : ""}.`,
-    ]);
-  faq.push([
-    t(`Which models does ${pr.name} include?`, `${pr.name} 包含哪些模型？`),
-    zh
-      ? `共 ${nModels} 个模型，来自 ${pr.makers.map((v) => makerLabel(v, lang)).join("、")}：${pr.models.map((m) => m.name).join("、")}。`
-      : `${plural(nModels, "model")} from ${pr.makers.map((v) => makerLabel(v, lang)).join(", ")}: ${pr.models.map((m) => m.name).join(", ")}.`,
-  ]);
-  if (subs.length)
-    faq.push([
-      t(`How much do ${pr.name} plans cost?`, `${pr.name} 的套餐多少钱？`),
-      join(subs.map((x) => `${x.name(lang)} ${fee(x.feePoint)}${t("/mo", "/月")}`), lang) + (zh ? "。" : "."),
-    ]);
   const org = {
     "@type": "Organization",
     "@id": `${abs(U.provider(pr, "en"))}#org`,
@@ -1222,7 +1160,6 @@ ${table(t("Plans by monthly fee", "套餐，按月费排序"), [t("Plan", "套�
 ${tierSections}
 </section>
 ${relatedNews(newsFor.provider(pr), lang)}
-${faqHtml(faq, lang)}
 <p><a class="button" href="${U.explorer(lang, `&channels=${encodeURIComponent(pr.name)}`)}">${t("Open in the interactive explorer", "在交互式图表中查看")}<span class="arrow" aria-hidden="true">→</span></a></p>`;
   return page({
     section: "providers",
@@ -1245,7 +1182,7 @@ ${faqHtml(faq, lang)}
       [t("Providers", "供应商"), U.providers(lang)],
       [pr.name, U.provider(pr, lang)],
     ],
-    graph: { about: { "@id": org["@id"] }, mainEntity: { "@id": org["@id"] }, extra: [org, faqLd(faq)] },
+    graph: { about: { "@id": org["@id"] }, mainEntity: { "@id": org["@id"] }, extra: [org] },
   });
 }
 
@@ -1551,26 +1488,131 @@ const modelsIndex = (lang) => {
   });
 };
 
+// The methodology, the same React component the explorer shows in place.
+function methodologyPage(lang) {
+  const zh = lang === "zh";
+  const t = (en, cn) => (zh ? cn : en);
+  return page({
+    lang,
+    section: null,
+    path: U.method(lang),
+    alt: U.method(zh ? "en" : "zh"),
+    title: t("Methodology: how real AI prices per token are computed", "方法论：AI 模型真实单价如何计算"),
+    description: t(
+      "How Tokenews computes a real price per million tokens (monthly fee ÷ usable monthly tokens), the standard workload mix, how leaderboard scores keep their context, and how evidence is graded.",
+      "Tokenews 如何计算每百万 token 的真实单价（月费 ÷ 每月可用 token）、统一比较负载、榜单分数如何保留语境，以及证据如何分级。",
+    ),
+    keywords: [t("real price per token", "真实单价"), t("LLM pricing methodology", "大模型价格计算方法"), t("cost per million tokens", "每百万 token 价格"), t("AI subscription allowance", "AI 订阅额度"), SITE_NAME],
+    h1: t("Every number has a story.", "每个数字，都有依据。"),
+    body: renderToStaticMarkup(createElement(Method, { data, zh })),
+    bare: true,
+    ogType: "article",
+    crumbs: [
+      [NAME[lang], U.home(lang)],
+      [t("Methodology", "方法论"), U.method(lang)],
+    ],
+    graph: {},
+  });
+}
+
 // ---------------------------------------------------------------------------
 // Write everything.
 // ---------------------------------------------------------------------------
-const out = async (urlPath, html) => {
+// Every page also as Markdown (index.md beside index.html, announced by
+// <link rel="alternate" type="text/markdown">): the page's main content with
+// absolute links, for AI tools that read Markdown better than HTML.
+const turndown = new TurndownService({ headingStyle: "atx", codeBlockStyle: "fenced", bulletListMarker: "-", emDelimiter: "*" });
+turndown.use(gfm);
+turndown.remove(["script", "style", "nav", "aside", "button", "svg"]);
+const hasClass = (node, name) => (node.getAttribute?.("class") ?? "").split(/\s+/).includes(name);
+const elements = (node) => Array.from(node.childNodes).filter((n) => n.nodeType === 1);
+turndown.remove((node) => hasClass(node, "arrow"));
+// Definition lists (overview stats, key/value rows) as "- **name**: value — note".
+turndown.addRule("definitions", {
+  filter: "dl",
+  replacement: (_, node) =>
+    `\n\n${Array.from(node.getElementsByTagName("dt"))
+      .map((dt) => {
+        let dd = dt.nextSibling;
+        while (dd && dd.nodeName !== "DD") dd = dd.nextSibling;
+        return `- **${dt.textContent.trim()}**: ${turndown.turndown((dd?.innerHTML ?? "").replace(/<small[^>]*>/g, " — <small>")).replace(/\n+/g, " ")}`;
+      })
+      .join("\n")}\n\n`,
+});
+// The methodology's formula card and workload figures: one labelled line each.
+turndown.addRule("formula", {
+  filter: (node) => hasClass(node, "big-formula"),
+  replacement: (_, node) => {
+    const [label, formula, unit] = elements(node).map((n) => n.textContent.trim());
+    return `\n\n**${label}** = ${formula} (${unit})\n\n`;
+  },
+});
+turndown.addRule("mix", {
+  filter: (node) => hasClass(node, "mix-values"),
+  replacement: (_, node) =>
+    `\n\n${elements(node)
+      .map((span) => {
+        const [b] = elements(span);
+        return `- **${b.textContent.trim()}** ${span.textContent.replace(b.textContent, "").trim()}`;
+      })
+      .join("\n")}\n\n`,
+});
+const toMarkdown = (urlPath, html) => {
+  const main = html.match(/<main[^>]*>([\s\S]*)<\/main>/)[1];
+  const description = html.match(/<meta name="description" content="([^"]*)"/)?.[1] ?? "";
+  const unescape = (x) => x.replaceAll("&quot;", '"').replaceAll("&lt;", "<").replaceAll("&gt;", ">").replaceAll("&amp;", "&");
+  return `---
+title: ${JSON.stringify(unescape(html.match(/<title>([^<]*)<\/title>/)[1]))}
+description: ${JSON.stringify(unescape(description))}
+url: ${abs(urlPath)}
+updated: ${html.match(/"dateModified":"([^"]+)"/)?.[1] ?? updated}
+source: ${SITE_NAME} (${SITE}), data from Real API Pricing (${REPO}, MIT)
+---
+
+${turndown
+  .turndown(absolutize(main).replace(/href="#/g, `href="${abs(urlPath)}#`))
+  // A table's caption line needs a blank line before the table.
+  .replace(/^([^|\n].*)\n(\|)/gm, "$1\n\n$2")
+  .replace(/\n{3,}/g, "\n\n")
+  .trim()}
+`;
+};
+// A news article's Markdown is its source file, with site-relative links made absolute.
+const articleMarkdown = (a) => `---
+title: ${JSON.stringify(a.title)}
+description: ${JSON.stringify(a.summary)}
+url: ${abs(U.article(a))}
+published: ${a.date}
+updated: ${a.updated}
+author: ${JSON.stringify(a.author ?? SITE_NAME)}
+${a.tags.length ? `tags: [${a.tags.join(", ")}]\n` : ""}---
+
+# ${a.title}
+
+${a.summary}
+
+${a.markdown.replace(/\]\(\/(?!\/)/g, `](${SITE}/`)}
+${a.sources.length ? `\n## Sources\n\n${a.sources.map((s) => `- [${s.title}](${s.url})`).join("\n")}\n` : ""}`;
+const out = async (urlPath, html, markdown = toMarkdown(urlPath, html)) => {
   const file = path.join(dist, urlPath, "index.html");
   await mkdir(path.dirname(file), { recursive: true });
   await writeFile(file, html);
+  await writeFile(path.join(dist, urlPath, "index.md"), markdown);
 };
 for (const lang of ["en", "zh"]) {
   await out(U.makers(lang), makersIndex(lang));
   await out(U.providers(lang), providersIndex(lang));
   await out(U.models(lang), modelsIndex(lang));
+  await out(U.method(lang), methodologyPage(lang));
   for (const v of makerList) await out(U.maker(v, lang), makerPage(v, lang));
   for (const pr of providerList) await out(U.provider(pr, lang), providerPage(pr, lang));
   for (const m of modelList) await out(U.model(m, lang), modelPage(m, lang));
 }
 await out(U.news(), newsIndex());
-for (const a of news) await out(U.article(a), newsArticle(a));
+for (const a of news) await out(U.article(a), newsArticle(a), articleMarkdown(a));
 await writeFile(path.join(dist, "news/feed.xml"), newsFeed());
 const pairs = [
+  [U.method, "0.8"],
   [U.makers, "0.8"],
   [U.providers, "0.8"],
   [U.models, "0.8"],
@@ -1619,7 +1661,7 @@ Key definitions:
 - Standard workload mix used to compare against list prices: ${+(data.conventions.standardTokenMix.cache * 100).toFixed(2)}% cached input, ${+(data.conventions.standardTokenMix.input * 100).toFixed(2)}% input, ${+(data.conventions.standardTokenMix.output * 100).toFixed(2)}% output.
 - Benchmark scores are never mixed across leaderboards.
 
-Chinese versions of every page live under ${SITE}/zh/.
+Chinese versions of every page live under ${SITE}/zh/. Every page is also available as Markdown: add \`index.md\` to its URL (e.g. ${abs(U.model(modelList[0], "en"))}index.md).
 `;
 await writeFile(
   path.join(dist, "llms.txt"),
@@ -1631,7 +1673,7 @@ await writeFile(
 - [All models](${abs(U.models("en"))}): ${modelList.length} models ranked by lowest real price
 - [News](${abs(U.news())}): AI model, maker and product news (RSS: ${abs(U.feed())})
 - [Interactive explorer](${SITE}/): price–capability Pareto charts, rankings and allowance comparisons
-- [Methodology](${REPO}/blob/main/CONVENTIONS.md)
+- [Methodology](${abs(U.method("en"))}): how real prices, the comparison workload, leaderboard context and evidence grades work
 
 ## Makers
 
@@ -1652,6 +1694,10 @@ ${news.length ? `\n## Latest news\n\n${news.slice(0, 20).map((a) => `- [${a.titl
 - [points.json](${SITE}/data/points.json)
 - [benchmark-configurations.csv](${SITE}/data/benchmark-configurations.csv): archived leaderboard scores
 - [Source repository](${REPO})
+
+## About
+
+${SITE_NAME} is a directory of AI models, makers and providers built on the open Real API Pricing dataset (${REPO}, MIT licence), which it checks for updates every day; pages are rebuilt whenever the data changes. Each plan × model figure carries its data date, a confidence level (high: measured or official tables; medium: usage logs or official ratios; low: single reports) and links to the original evidence. Prices are a floor at saturated use, not a promise. When citing a number, cite the page it appears on and its data date.
 `,
 );
 await writeFile(
@@ -1823,14 +1869,14 @@ ${PAGE_SCRIPT}
 await writeFile(path.join(dist, "404.html"), notFound("en"));
 await writeFile(path.join(dist, "zh/404.html"), notFound("zh"));
 
-// index.html and robots.txt are hand-written with the default domain.
+// index.html, robots.txt and _headers are hand-written with the default domain.
 if (SITE !== DEFAULT_SITE)
-  for (const file of ["index.html", "robots.txt"]) {
+  for (const file of ["index.html", "robots.txt", "_headers"]) {
     const target = path.join(dist, file);
     await writeFile(target, (await readFile(target, "utf8")).replaceAll(DEFAULT_SITE, SITE));
   }
 
-const pageCount = 2 * (3 + makerList.length + providerList.length + modelList.length) + 1 + news.length;
+const pageCount = 2 * (4 + makerList.length + providerList.length + modelList.length) + 1 + news.length;
 console.log(
   `SEO pages for ${SITE}: ${makerList.length} makers, ${providerList.length} providers, ${modelList.length} models × 2 languages, ${news.length} news (${pageCount} pages), sitemap with ${pageCount + 1} URLs, llms.txt.`,
 );

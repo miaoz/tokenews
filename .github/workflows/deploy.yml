@@ -1,7 +1,8 @@
 name: Deploy
 
 # Builds, tests and checks the site, then deploys it to Cloudflare:
-# the static-assets deployment `tokenews` (tokenews.xyz).
+# the static-assets deployment `tokenews` (tokenews.xyz), and tells IndexNow
+# which pages changed (scripts/indexnow.mjs).
 # www redirects through a Cloudflare zone Redirect Rule, outside this deployment.
 # Needs repository secrets CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID.
 on:
@@ -50,8 +51,15 @@ jobs:
       - run: npm run build
       - run: npm test
       - run: npm run check
+      # Compare with the live sitemap before it is replaced.
+      - name: Find changed pages for IndexNow
+        continue-on-error: true
+        run: node scripts/indexnow.mjs diff > "$RUNNER_TEMP/indexnow.txt"
       - name: Deploy to Cloudflare
         run: npm run cf:deploy
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      - name: Notify IndexNow
+        continue-on-error: true
+        run: node scripts/indexnow.mjs submit "$RUNNER_TEMP/indexnow.txt"
