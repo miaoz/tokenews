@@ -255,15 +255,6 @@ html[lang="zh-CN"] .kv dt {
   background: var(--primary-hover);
   text-decoration: none;
 }
-/* Arrows on buttons and "see all" links nudge forward on hover. */
-.arrow {
-  display: inline-block;
-  margin-left: 8px;
-  transition: transform 0.2s var(--ease);
-}
-a:hover > .arrow {
-  transform: translateX(3px);
-}
 .static-page p.more {
   margin: 24px 0 0;
 }
@@ -293,17 +284,7 @@ a:hover > .arrow {
   color: var(--accent);
   text-decoration: none;
 }
-/* Small monospace label above a heading or in a byline: section, date, reading time. */
-.kicker {
-  font-family: var(--font-mono);
-  font-size: 12px;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-.static-page .kicker a {
-  color: var(--accent);
-}
+/* Kickers (styles.css) above headings and in bylines. */
 .static-page p.kicker {
   margin: 0;
 }
@@ -348,7 +329,7 @@ a:hover > .arrow {
   white-space: nowrap;
 }
 .static-page tbody th {
-  min-width: 9em;
+  min-width: 12em;
   font-weight: 600;
   text-align: left;
 }

@@ -427,11 +427,61 @@ a.language:hover {
   gap: 32px;
   padding: 28px 0 22px;
 }
-.eyebrow {
-  margin-bottom: 12px;
-  color: var(--muted);
-  font-size: 13px;
+/* Labels (DESIGN.md): the kicker above a title, and the names of data —
+   column heads, stat names. Small uppercase monospace; on Chinese pages the
+   sans, since the system monospace has no CJK glyphs. */
+.kicker,
+.intro-stats dt,
+thead th,
+th button,
+.ranking-columns,
+.big-formula > span,
+.mix-values span {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
   font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.kicker {
+  font-size: 12px;
+}
+/* Column heads sit in dense tables: tighter tracking keeps them as narrow as the sans. */
+thead th,
+th button,
+.ranking-columns {
+  font-size: 11px;
+  letter-spacing: 0;
+}
+:lang(zh) .kicker,
+:lang(zh) .intro-stats dt,
+:lang(zh) thead th,
+:lang(zh) th button,
+:lang(zh) .ranking-columns,
+:lang(zh) .big-formula > span,
+:lang(zh) .mix-values span {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+.kicker a {
+  color: var(--accent);
+}
+.intro .kicker,
+.method-page .kicker {
+  margin-bottom: 10px;
+}
+/* Arrows on buttons and "go" links nudge forward on hover. */
+.arrow {
+  display: inline-block;
+  margin-left: 8px;
+  transition: transform 0.2s var(--ease);
+}
+a:hover > .arrow,
+button:hover > .arrow {
+  transform: translateX(3px);
 }
 .intro h1,
 .method-page h1 {
@@ -466,11 +516,10 @@ a.language:hover {
   gap: 2px;
 }
 .intro-stats dt {
-  color: var(--muted);
-  font-size: 12.5px;
   white-space: nowrap;
 }
 .intro-stats dd {
+  white-space: nowrap;
   font-size: 20px;
   font-weight: 600;
   letter-spacing: -0.02em;
@@ -1272,9 +1321,6 @@ a.language:hover {
   padding: 10px 14px;
   border-bottom: 1px solid var(--line-2);
   background: var(--surface-2);
-  color: var(--muted);
-  font-size: 12px;
-  font-weight: 500;
 }
 .ranking-columns > :nth-child(4) {
   text-align: right;
@@ -1975,9 +2021,6 @@ thead th {
   padding: 0 14px;
   border-bottom: 1px solid var(--line-2);
   background: var(--surface-2);
-  color: var(--muted);
-  font-size: 12px;
-  font-weight: 500;
 }
 th button {
   min-height: 0;
@@ -1985,8 +2028,6 @@ th button {
   border: 0;
   background: none;
   color: inherit;
-  font-size: 12px;
-  font-weight: 500;
   gap: 5px;
 }
 th button:hover {
@@ -2951,12 +2992,14 @@ tbody tr.sentinel-row {
   gap: 12px;
   margin-bottom: 12px;
   color: var(--faint);
-  font-size: 13px;
+  font-family: var(--font-mono);
+  font-size: 12px;
   font-weight: 500;
   font-variant-numeric: tabular-nums;
 }
 .method-grid h2 span {
   color: var(--ink);
+  font-family: var(--font-sans);
   font-size: 19px;
   font-weight: 600;
   letter-spacing: -0.015em;
@@ -2976,6 +3019,9 @@ tbody tr.sentinel-row {
 }
 .mix-values b {
   display: block;
+  font-family: var(--font-sans);
+  letter-spacing: -0.01em;
+  text-transform: none;
   margin-bottom: 2px;
   color: var(--ink);
   font-size: 22px;
@@ -3100,9 +3146,8 @@ tbody tr.sentinel-row {
   .mobile-break {
     display: block;
   }
-  .eyebrow {
+  .method-page .kicker {
     margin-bottom: 8px;
-    font-size: 12px;
   }
   .intro h1 {
     font-size: 30px;
@@ -3111,7 +3156,14 @@ tbody tr.sentinel-row {
     font-size: 14.5px;
   }
   .intro-stats {
-    gap: 22px;
+    gap: 18px;
+  }
+  /* Monospace labels are wide: let them wrap so the three stats fit a phone. */
+  .intro-stats div {
+    justify-content: flex-end;
+  }
+  .intro-stats dt {
+    white-space: normal;
   }
   .intro-stats dd {
     font-size: 19px;

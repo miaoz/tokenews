@@ -10,6 +10,7 @@ export function BootSkeleton({ lang }: { lang: Lang }) {
       <SiteHeader lang={lang} current="explore" />
       <div className="page" aria-busy="true" aria-label={lang === "zh" ? "正在加载" : "Loading"}>
         <div className="skeleton-hero">
+          <span style={{ width: "22%", height: 12 }} />
           <span style={{ width: "46%", height: 34 }} />
           <span style={{ width: "40%", height: 34 }} />
           <span style={{ width: "48%", height: 14 }} />

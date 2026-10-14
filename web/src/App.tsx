@@ -653,6 +653,7 @@ function Explorer({
           <>
             <section className="intro">
               <div className="intro-copy">
+                <p className="kicker">{t("Explorer · real price × capability", "数据探索 · 真实单价 × 能力")}</p>
                 <h1>{TAGLINE[state.lang]}</h1>
                 <p className="lede">
                   {t(
@@ -1214,7 +1215,7 @@ function Explorer({
                 )}{" "}
                 <button onClick={() => patch({ view: "method" })}>
                   {t("Read the methodology", "查看完整口径")}
-                  <ArrowUpRight size={13} />
+                  <span className="arrow" aria-hidden="true">→</span>
                 </button>
               </p>
             </aside>
@@ -1921,7 +1922,7 @@ function Method({
   const mix = data.conventions.standardTokenMix;
   return (
     <section className="method-page">
-      <p className="eyebrow">{t("How to read the data", "如何理解这些数据")}</p>
+      <p className="kicker">{t("Methodology · how to read the data", "方法论 · 如何理解这些数据")}</p>
       <h1>{t("Every number has a story.", "每个数字，都有依据。")}</h1>
       <p className="method-lead">
         {t(

@@ -35,7 +35,7 @@ Defined once in `web/src/styles.css` (`:root` and `:root[data-theme="dark"]`).
 | Lead | 18px, `--ink-2` |
 | Body | 15px on data pages, 16.5px / 1.75 in articles, max 720px wide |
 | Kicker (`.kicker`) | mono 12px, uppercase, +0.04em, `--muted`, e.g. `NEWS · OCT 14, 2026 · 10 MIN READ` |
-| Labels | mono 11.5px, uppercase, +0.04em, `--muted`: table captions and column heads, overview stat names, key names |
+| Labels | mono 11.5px, uppercase, +0.04em, `--muted`: table captions and column heads, overview stat names, key names. Column heads of the explorer's dense tables use 11px with no extra tracking. Shared rules live in `styles.css` (`.kicker` and friends) |
 | Figures | `font-variant-numeric: tabular-nums`; units small and muted after the number; figure columns right-aligned (`.num`) |
 
 ## Components
@@ -46,7 +46,7 @@ Defined once in `web/src/styles.css` (`:root` and `:root[data-theme="dark"]`).
 | "See all" link | `.more-link` (`moreLink()`) | Closes a list section ("All news"). White pill, hairline border, arrow nudges on hover. Never a bare `text →` link. |
 | Chips | `.chips` | Entities an item is about (makers, models, providers). Pill, hairline, 12.5px. |
 | Tags | `.tag` | Free topics: mono, `#release`. Not links. |
-| Kicker | `page({ kicker })` | Every page: what it is and its size, e.g. `MAKER · 8 MODELS`, `PROVIDER · 7 PLANS`, `MODEL · ANTHROPIC`, `DIRECTORY · 75 MODELS`, `ERROR 404`. |
+| Kicker | `.kicker`, `page({ kicker })` | Every page: what it is and its size, e.g. `EXPLORER · REAL PRICE × CAPABILITY`, `MAKER · 8 MODELS`, `PROVIDER · 7 PLANS`, `MODEL · ANTHROPIC`, `DIRECTORY · 75 MODELS`, `METHODOLOGY · HOW TO READ THE DATA`, `ERROR 404`. |
 | Overview panel | `.overview` | Exactly four stats, then a key/value list. |
 | Answer panel | `.answer` | The one-paragraph direct answer at the top of an entity page: the same callout as an article quote. |
 | Table | `table()` → `.table-wrap` | Data. Caption first, first column is the row header (bold ink). Columns of bare figures are detected and right-aligned. Links in cells are ink with a hairline underline; an action link in a row (`a.action`, "Evidence →") stays green. |
