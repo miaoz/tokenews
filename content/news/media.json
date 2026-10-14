@@ -1,0 +1,64 @@
+{
+  "news/gemini-4-argon-deep-dive/gemini-4-argon-benchmarks-980342425d-1600.webp": {
+    "width": 1600,
+    "height": 980,
+    "bytes": 107332,
+    "type": "image/webp",
+    "sizes": [
+      {
+        "key": "news/gemini-4-argon-deep-dive/gemini-4-argon-benchmarks-980342425d-800.webp",
+        "width": 800,
+        "height": 490,
+        "bytes": 41134
+      }
+    ]
+  },
+  "news/gemini-4-argon-deep-dive/gemini-4-argon-hero-9bb284965d-1600.webp": {
+    "width": 1600,
+    "height": 960,
+    "bytes": 113796,
+    "type": "image/webp",
+    "sizes": [
+      {
+        "key": "news/gemini-4-argon-deep-dive/gemini-4-argon-hero-9bb284965d-800.webp",
+        "width": 800,
+        "height": 480,
+        "bytes": 46882
+      }
+    ],
+    "og": {
+      "key": "news/gemini-4-argon-deep-dive/gemini-4-argon-hero-9bb284965d-og.jpg",
+      "width": 1200,
+      "height": 720,
+      "bytes": 114195
+    }
+  },
+  "news/gemini-4-argon-deep-dive/gemini-4-argon-long-decode-4df2c9d97e-1600.webp": {
+    "width": 1600,
+    "height": 880,
+    "bytes": 95484,
+    "type": "image/webp",
+    "sizes": [
+      {
+        "key": "news/gemini-4-argon-deep-dive/gemini-4-argon-long-decode-4df2c9d97e-800.webp",
+        "width": 800,
+        "height": 440,
+        "bytes": 37818
+      }
+    ]
+  },
+  "news/gemini-4-argon-deep-dive/gemini-4-argon-pricing-rollout-609033adf7-1600.webp": {
+    "width": 1600,
+    "height": 860,
+    "bytes": 91290,
+    "type": "image/webp",
+    "sizes": [
+      {
+        "key": "news/gemini-4-argon-deep-dive/gemini-4-argon-pricing-rollout-609033adf7-800.webp",
+        "width": 800,
+        "height": 430,
+        "bytes": 35216
+      }
+    ]
+  }
+}

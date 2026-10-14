@@ -5,3 +5,6 @@ node_modules/
 !.env.example
 .DS_Store
 Thumbs.db
+
+# Article drafts with local images; publish with npm run news:publish
+/article/

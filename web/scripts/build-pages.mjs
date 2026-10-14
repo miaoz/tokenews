@@ -426,12 +426,19 @@ const faqLd = (faq) => ({
 
 // `alt` is the same page in the other language, or null for English-only
 // pages (news). `byline` replaces the data-updated line under the lead;
-// `published` and `tags` add article metadata.
-function page({ lang, section, path: urlPath, alt, title, description, keywords, h1, lead, body, crumbs, graph, ogType = "website", byline, published, tags = [] }) {
+// `published` and `tags` add article metadata; `image` ({url, width, height,
+// type, alt}) replaces the default Pareto chart as the social image.
+function page({ lang, section, path: urlPath, alt, title, description, keywords, h1, lead, body, crumbs, graph, ogType = "website", byline, published, tags = [], image }) {
   const zh = lang === "zh";
   const t = (en, cn) => (zh ? cn : en);
   const url = abs(urlPath);
-  const og = OG[lang];
+  const og = image ?? {
+    url: abs(OG[lang].path),
+    width: 2880,
+    height: 1928,
+    type: "image/png",
+    alt: t("Price–capability Pareto chart of AI subscriptions", "AI 订阅价格–能力帕累托图"),
+  };
   const fullTitle = `${title} | ${NAME[lang]}`;
   const ld = {
     "@context": "https://schema.org",
@@ -449,7 +456,7 @@ function page({ lang, section, path: urlPath, alt, title, description, keywords,
         isPartOf: { "@id": `${SITE}/#website` },
         publisher: { "@id": `${SITE}/#organization` },
         dateModified: graph.modified ?? updated,
-        primaryImageOfPage: { "@type": "ImageObject", url: abs(og.path), width: 2880, height: 1928 },
+        primaryImageOfPage: { "@type": "ImageObject", url: og.url, ...(og.width ? { width: og.width, height: og.height } : {}) },
         breadcrumb: { "@id": `${url}#breadcrumb` },
         speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", ".lead", ".answer"] },
         ...(graph.about ? { about: graph.about } : {}),
@@ -494,16 +501,13 @@ ${FONT_PRELOAD}
 <meta property="og:url" content="${url}" />
 <meta property="og:locale" content="${zh ? "zh_CN" : "en_US"}" />
 ${alt ? `<meta property="og:locale:alternate" content="${zh ? "en_US" : "zh_CN"}" />\n` : ""}
-<meta property="og:image" content="${abs(og.path)}" />
-<meta property="og:image:type" content="image/png" />
-<meta property="og:image:width" content="2880" />
-<meta property="og:image:height" content="1928" />
-<meta property="og:image:alt" content="${esc(t("Price–capability Pareto chart of AI subscriptions", "AI 订阅价格–能力帕累托图"))}" />
+<meta property="og:image" content="${esc(og.url)}" />
+${og.type ? `<meta property="og:image:type" content="${og.type}" />\n` : ""}${og.width ? `<meta property="og:image:width" content="${og.width}" />\n<meta property="og:image:height" content="${og.height}" />\n` : ""}<meta property="og:image:alt" content="${esc(og.alt)}" />
 ${published ? `<meta property="article:published_time" content="${published}" />\n` : ""}${ogType === "article" ? `<meta property="article:modified_time" content="${graph.modified ?? updated}" />\n` : ""}${tags.map((x) => `<meta property="article:tag" content="${esc(x)}" />\n`).join("")}<meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="${esc(title)}" />
 <meta name="twitter:description" content="${esc(description)}" />
-<meta name="twitter:image" content="${abs(og.path)}" />
-<meta name="twitter:image:alt" content="${esc(t("Price–capability Pareto chart of AI subscriptions", "AI 订阅价格–能力帕累托图"))}" />
+<meta name="twitter:image" content="${esc(og.url)}" />
+<meta name="twitter:image:alt" content="${esc(og.alt)}" />
 <script>try{var t=localStorage.getItem("pricing-theme");if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.dataset.theme=t}catch(e){}</script>
 ${jsonLd(ld)}
 </head>
@@ -1312,7 +1316,7 @@ ${others.length ? `<section aria-labelledby="more"><h2 id="more">More news</h2>$
     mainEntityOfPage: { "@id": `${url}#webpage` },
     author: a.author ? { "@type": "Person", name: a.author } : { "@id": `${SITE}/#organization` },
     publisher: { "@id": `${SITE}/#organization` },
-    image: abs(OG.en.path),
+    image: a.image ? a.image.url : abs(OG.en.path),
     ...(a.tags.length ? { keywords: a.tags } : {}),
     ...(a.sources.length ? { citation: a.sources.map((s) => s.url) } : {}),
     about: [
@@ -1336,6 +1340,7 @@ ${others.length ? `<section aria-labelledby="more"><h2 id="more">More news</h2>$
     ogType: "article",
     published: a.date,
     tags: a.tags,
+    image: a.image ? { ...a.image, alt: a.title } : undefined,
     crumbs: [
       [NAME[lang], U.home(lang)],
       ["News", U.news()],
