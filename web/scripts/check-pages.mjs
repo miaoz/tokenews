@@ -29,7 +29,15 @@ const descriptions = new Map();
 for (const [url, { file, html }] of pages) {
   for (const m of html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g))
     try {
-      JSON.parse(m[1]);
+      // Google rejects a Dataset whose description is outside 50–5000 characters.
+      const visit = (o) => {
+        if (Array.isArray(o)) return o.forEach(visit);
+        if (!o || typeof o !== "object") return;
+        if (o["@type"] === "Dataset" && !(o.description?.length >= 50 && o.description.length <= 5000))
+          fail(file, `Dataset description is ${o.description?.length ?? 0} characters (needs 50–5000)`);
+        Object.values(o).forEach(visit);
+      };
+      visit(JSON.parse(m[1]));
     } catch (e) {
       fail(file, `invalid JSON-LD: ${e.message}`);
     }

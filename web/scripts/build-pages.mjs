@@ -822,7 +822,9 @@ function modelPage(m, lang) {
   const dataset = {
     "@type": "Dataset",
     name: zh ? `${m.name} 真实定价数据` : `${m.name} real pricing data`,
-    description,
+    // Google requires 50–5000 characters for a Dataset description; the meta
+    // description alone can be shorter (short Chinese names), so add the answer.
+    description: [description, answer, listSentence, benchSentence].filter(Boolean).join(" "),
     license: "https://opensource.org/licenses/MIT",
     creator: { "@id": `${SITE}/#organization` },
     dateModified: updated,
