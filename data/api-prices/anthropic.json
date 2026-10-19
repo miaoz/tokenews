@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "provider": "Anthropic",
+  "unit": "per_million_tokens",
+  "models": [
+    {
+      "id": "claude-fable-5.1",
+      "source": "https://platform.claude.com/docs/en/models/fable-5-1/whats-new-fable-5-1",
+      "checkedAt": "2026-10-19",
+      "defaultVariant": "standard-5m",
+      "variants": [
+        {
+          "id": "standard-5m",
+          "label": {
+            "en": "Standard · 5m cache",
+            "zh": "标准档 · 5 分钟缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 10,
+            "cachedInput": 0.25,
+            "cacheWrite": 12.5,
+            "output": 50
+          }
+        },
+        {
+          "id": "standard-1h",
+          "label": {
+            "en": "Standard · 1h cache",
+            "zh": "标准档 · 1 小时缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 10,
+            "cachedInput": 0.25,
+            "cacheWrite": 20,
+            "output": 50
+          }
+        },
+        {
+          "id": "batch",
+          "label": {
+            "en": "Batch",
+            "zh": "批处理"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "batch",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 5,
+            "cachedInput": null,
+            "output": 25
+          },
+          "notes": {
+            "en": "Batch input/output rates; cache charges are not included in this row.",
+            "zh": "本档为批处理输入／输出价，未计入缓存费用。"
+          }
+        }
+      ],
+      "notes": {
+        "en": "Claude API ID: claude-fable-5-1. No long-context premium across the 1M window; US-only inference adds 10% to every token category. Tools are charged separately.",
+        "zh": "Claude API 调用 ID：claude-fable-5-1。1M 上下文范围内无长上下文加价；仅限美国推理时各类 token 加收 10%。工具调用另计。"
+      },
+      "additionalSources": [
+        "https://platform.claude.com/docs/en/about-claude/pricing"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "provider": "Meituan",
+  "unit": "per_million_tokens",
+  "models": [
+    {
+      "id": "longcat-2.0",
+      "source": "https://longcat.chat/platform/docs/Pricing/LongCat-2.0.html",
+      "checkedAt": "2026-10-19",
+      "defaultVariant": "usd-list",
+      "variants": [
+        {
+          "id": "usd-list",
+          "label": {
+            "en": "LongCat API · USD list",
+            "zh": "LongCat API · 美元常规标价"
+          },
+          "currency": "USD",
+          "region": "LongCat API",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 0.75,
+            "cachedInput": 0.015,
+            "output": 2.95
+          }
+        },
+        {
+          "id": "usd-promotion",
+          "label": {
+            "en": "LongCat API · USD temporary discount",
+            "zh": "LongCat API · 美元限时优惠"
+          },
+          "currency": "USD",
+          "region": "LongCat API",
+          "serviceTier": "promotion",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 0.3,
+            "cachedInput": 0.006,
+            "output": 1.2
+          }
+        },
+        {
+          "id": "cny-list",
+          "label": {
+            "en": "LongCat API · CNY list",
+            "zh": "LongCat API · 人民币常规标价"
+          },
+          "currency": "CNY",
+          "region": "LongCat API",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 5,
+            "cachedInput": 0.1,
+            "output": 20
+          }
+        },
+        {
+          "id": "cny-promotion",
+          "label": {
+            "en": "LongCat API · CNY temporary discount",
+            "zh": "LongCat API · 人民币限时优惠"
+          },
+          "currency": "CNY",
+          "region": "LongCat API",
+          "serviceTier": "promotion",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 2,
+            "cachedInput": 0.04,
+            "output": 8
+          }
+        }
+      ],
+      "notes": {
+        "en": "Default uses the published regular USD list. The official page also lists a temporary discount without an end date; console prices and billing records prevail.",
+        "zh": "默认采用官方美元常规标价。官方同时列有未注明截止日的限时优惠；实际以控制台及账单为准。"
+      }
+    }
+  ]
+}

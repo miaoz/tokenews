@@ -1,0 +1,309 @@
+{
+  "schemaVersion": 1,
+  "provider": "Google",
+  "unit": "per_million_tokens",
+  "models": [
+    {
+      "id": "gemini-3.6-flash",
+      "source": "https://ai.google.dev/gemini-api/docs/pricing",
+      "checkedAt": "2026-10-19",
+      "defaultVariant": "standard",
+      "variants": [
+        {
+          "id": "standard",
+          "label": {
+            "en": "Paid · standard · through 2026-12-31",
+            "zh": "付费标准档 · 至 2026-12-31"
+          },
+          "currency": "USD",
+          "region": "Gemini Developer API",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 0.75,
+            "cachedInput": 0.075,
+            "output": 3.75
+          }
+        },
+        {
+          "id": "batch",
+          "label": {
+            "en": "Paid · Batch · through 2026-12-31",
+            "zh": "付费 Batch · 至 2026-12-31"
+          },
+          "currency": "USD",
+          "region": "Gemini Developer API",
+          "serviceTier": "batch",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 0.375,
+            "cachedInput": 0.0375,
+            "output": 1.875
+          }
+        },
+        {
+          "id": "flex",
+          "label": {
+            "en": "Paid · Flex · through 2026-12-31",
+            "zh": "付费 Flex · 至 2026-12-31"
+          },
+          "currency": "USD",
+          "region": "Gemini Developer API",
+          "serviceTier": "flex",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 0.375,
+            "cachedInput": 0.0375,
+            "output": 1.875
+          }
+        },
+        {
+          "id": "priority",
+          "label": {
+            "en": "Paid · Priority · through 2026-12-31",
+            "zh": "付费 Priority · 至 2026-12-31"
+          },
+          "currency": "USD",
+          "region": "Gemini Developer API",
+          "serviceTier": "priority",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 1.35,
+            "cachedInput": 0.135,
+            "output": 6.75
+          }
+        }
+      ],
+      "notes": {
+        "en": "Paid Gemini Developer API rates through 2026-12-31; input/cache/output double from 2027-01-01. Output includes thinking tokens. Explicit cache storage is an additional $0.50 per million tokens per hour ($1.00 from 2027-01-01). Grounding tools cost extra; free-tier limits are excluded.",
+        "zh": "Gemini Developer API 付费档价格截至 2026-12-31；2027-01-01 起输入／缓存／输出价均翻倍。输出含思考 tokens。显式缓存存储另收 $0.50／百万 tokens／小时（2027-01-01 起 $1.00）。联网工具另计；未纳入免费档额度。"
+      }
+    },
+    {
+      "id": "gemini-3.8-flash",
+      "source": "https://ai.google.dev/gemini-api/docs/pricing",
+      "checkedAt": "2026-10-19",
+      "defaultVariant": "standard",
+      "variants": [
+        {
+          "id": "standard",
+          "label": {
+            "en": "Paid · standard · through 2026-12-31",
+            "zh": "付费标准档 · 至 2026-12-31"
+          },
+          "currency": "USD",
+          "region": "Gemini Developer API",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 0.75,
+            "cachedInput": 0.075,
+            "output": 3.75
+          }
+        },
+        {
+          "id": "batch",
+          "label": {
+            "en": "Paid · Batch · through 2026-12-31",
+            "zh": "付费 Batch · 至 2026-12-31"
+          },
+          "currency": "USD",
+          "region": "Gemini Developer API",
+          "serviceTier": "batch",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 0.375,
+            "cachedInput": 0.0375,
+            "output": 1.875
+          }
+        },
+        {
+          "id": "flex",
+          "label": {
+            "en": "Paid · Flex · through 2026-12-31",
+            "zh": "付费 Flex · 至 2026-12-31"
+          },
+          "currency": "USD",
+          "region": "Gemini Developer API",
+          "serviceTier": "flex",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 0.375,
+            "cachedInput": 0.0375,
+            "output": 1.875
+          }
+        },
+        {
+          "id": "priority",
+          "label": {
+            "en": "Paid · Priority · through 2026-12-31",
+            "zh": "付费 Priority · 至 2026-12-31"
+          },
+          "currency": "USD",
+          "region": "Gemini Developer API",
+          "serviceTier": "priority",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 1.35,
+            "cachedInput": 0.135,
+            "output": 6.75
+          }
+        }
+      ],
+      "notes": {
+        "en": "Paid Gemini Developer API rates through 2026-12-31; input/cache/output double from 2027-01-01. Output includes thinking tokens. Explicit cache storage is an additional $0.50 per million tokens per hour ($1.00 from 2027-01-01). Grounding tools cost extra; free-tier limits are excluded.",
+        "zh": "Gemini Developer API 付费档价格截至 2026-12-31；2027-01-01 起输入／缓存／输出价均翻倍。输出含思考 tokens。显式缓存存储另收 $0.50／百万 tokens／小时（2027-01-01 起 $1.00）。联网工具另计；未纳入免费档额度。"
+      }
+    },
+    {
+      "id": "gemini-4-argon",
+      "source": "https://ai.google.dev/gemini-api/docs/pricing",
+      "checkedAt": "2026-10-19",
+      "defaultVariant": "standard",
+      "variants": [
+        {
+          "id": "standard",
+          "label": {
+            "en": "Paid · standard · through 2026-11-30",
+            "zh": "付费标准档 · 至 2026-11-30"
+          },
+          "currency": "USD",
+          "region": "Gemini Developer API",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 2,
+            "cachedInput": 0.1,
+            "output": 10
+          }
+        },
+        {
+          "id": "batch",
+          "label": {
+            "en": "Paid · Batch · through 2026-11-30",
+            "zh": "付费 Batch · 至 2026-11-30"
+          },
+          "currency": "USD",
+          "region": "Gemini Developer API",
+          "serviceTier": "batch",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 1,
+            "cachedInput": 0.05,
+            "output": 5
+          }
+        },
+        {
+          "id": "flex",
+          "label": {
+            "en": "Paid · Flex · through 2026-11-30",
+            "zh": "付费 Flex · 至 2026-11-30"
+          },
+          "currency": "USD",
+          "region": "Gemini Developer API",
+          "serviceTier": "flex",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 1,
+            "cachedInput": 0.05,
+            "output": 5
+          }
+        },
+        {
+          "id": "priority",
+          "label": {
+            "en": "Paid · Priority · through 2026-11-30",
+            "zh": "付费 Priority · 至 2026-11-30"
+          },
+          "currency": "USD",
+          "region": "Gemini Developer API",
+          "serviceTier": "priority",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 3.6,
+            "cachedInput": 0.18,
+            "output": 18
+          }
+        }
+      ],
+      "notes": {
+        "en": "Introductory rates through 2026-11-30; input/cache/output double from 2026-12-01. Output includes thinking tokens. Only implicit caching is supported; no explicit cache storage. Grounding costs extra.",
+        "zh": "引入价截至 2026-11-30；2026-12-01 起输入／缓存／输出价均翻倍。输出含思考 tokens。仅支持隐式缓存，不支持显式缓存存储。联网工具另计。"
+      },
+      "additionalSources": [
+        "https://ai.google.dev/gemini-api/docs/latest-model"
+      ]
+    },
+    {
+      "id": "gemini-4-argon-contributor",
+      "source": "https://ai.google.dev/gemini-api/docs/pricing",
+      "checkedAt": "2026-10-19",
+      "defaultVariant": "contributor",
+      "variants": [
+        {
+          "id": "contributor",
+          "label": {
+            "en": "Contributor preview · through 2026-11-30",
+            "zh": "Contributor 邀请预览 · 至 2026-11-30"
+          },
+          "currency": "USD",
+          "region": "Gemini Developer API",
+          "serviceTier": "contributor",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 1,
+            "cachedInput": 0.05,
+            "output": 5
+          },
+          "notes": {
+            "en": "Invite-only private preview. Content is used to improve Google products; access and data terms differ from Standard.",
+            "zh": "仅限受邀用户的私有预览。内容用于改进 Google 产品；准入条件及数据条款与标准档不同。"
+          }
+        }
+      ],
+      "notes": {
+        "en": "This catalog ID distinguishes Gemini 4 Argon's Contributor billing tier, not separate model weights. Introductory rates through 2026-11-30; input/cache/output double from 2026-12-01. Output includes thinking tokens. Only implicit caching is supported; no explicit cache storage. Grounding costs extra.",
+        "zh": "本站此 ID 用于区分 Gemini 4 Argon 的 Contributor 计费档，不代表独立的模型权重。引入价截至 2026-11-30；2026-12-01 起输入／缓存／输出价均翻倍。输出含思考 tokens。仅支持隐式缓存，不支持显式缓存存储。联网工具另计。"
+      }
+    }
+  ]
+}

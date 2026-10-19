@@ -55,6 +55,8 @@ for (const [url, { file, html }] of pages) {
   }
   if (url === "/") continue;
   for (const r of REQUIRED) if (!html.includes(r)) fail(file, `missing ${r}`);
+  const canonical = html.match(/rel="canonical" href="([^"]*)"/)?.[1];
+  if (canonical && new URL(canonical).pathname !== url) fail(file, `canonical points at a different page: ${canonical}`);
   if (!html.includes('hreflang="x-default"')) fail(file, "missing hreflang alternates");
   const title = html.match(/<title>([\s\S]*?)<\/title>/)?.[1];
   const description = html.match(/name="description" content="([^"]*)"/)?.[1];
@@ -67,8 +69,44 @@ for (const [url, { file, html }] of pages) {
 const sitemap = await readFile(path.join(dist, "sitemap.xml"), "utf8");
 const locs = [...sitemap.matchAll(/<loc>https?:\/\/[^/]+(\/[^<]*)<\/loc>/g)].map((m) => m[1]);
 for (const loc of locs) if (!pages.has(loc)) fail("sitemap.xml", `lists missing page ${loc}`);
-for (const f of ["404.html", "zh/404.html", "robots.txt", "llms.txt", "llms-full.txt", "_headers"])
+const sitemapUrls = new Set(locs);
+if (sitemapUrls.size !== locs.length) fail("sitemap.xml", "duplicate URLs");
+for (const [url, { file }] of pages) if (!sitemapUrls.has(url)) fail(file, "missing from sitemap");
+for (const f of ["404.html", "zh/404.html", "robots.txt", "llms.txt", "llms-full.txt", "_headers", "_redirects"])
   if (!existsSync(path.join(dist, f))) fail(f, "missing");
+
+// A reverse pair is an HTTP redirect, never a second indexable comparison.
+const redirects = new Map();
+if (existsSync(path.join(dist, "_redirects"))) {
+  for (const line of (await readFile(path.join(dist, "_redirects"), "utf8")).split("\n")) {
+    if (!line.trim() || line.startsWith("#")) continue;
+    const [from, to, status] = line.trim().split(/\s+/);
+    if (redirects.has(from)) fail("_redirects", `duplicate source ${from}`);
+    redirects.set(from, to);
+    if (status !== "301" || !pages.has(to) || from === to || pages.has(from))
+      fail("_redirects", `invalid comparison redirect ${line}`);
+  }
+}
+for (const [url, { file, html }] of pages) {
+  if (!/^(\/zh)?\/compare\/[^/]+\/$/.test(url)) continue;
+  const [a, b] = url.split("/").at(-2).split("-vs-");
+  const reverse = url.replace(`${a}-vs-${b}/`, `${b}-vs-${a}/`);
+  for (const alias of [reverse, reverse.slice(0, -1)])
+    if (redirects.get(alias) !== url) fail(file, `missing reverse redirect ${alias}`);
+  if (!existsSync(path.join(dist, file.replace(/\.html$/, ".md")))) fail(file, "missing Markdown copy");
+  if (!html.includes('id="basis"')) fail(file, "missing comparison methodology");
+  try {
+    const graph = JSON.parse(html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1])["@graph"];
+    const about = graph.find((o) => o["@type"] === "WebPage")?.about;
+    const expected = new Set([`/models/${a}/#model`, `/models/${b}/#model`]);
+    if (!Array.isArray(about) || about.length !== 2 || about.some((o) => {
+      const entity = new URL(o["@id"]);
+      return !expected.delete(entity.pathname + entity.hash);
+    }) || expected.size !== 0) fail(file, "comparison must identify both model entities");
+  } catch (e) {
+    fail(file, `invalid comparison structured data: ${e.message}`);
+  }
+}
 
 if (problems.length) {
   console.error(`${problems.length} problem(s):\n` + problems.slice(0, 50).join("\n"));

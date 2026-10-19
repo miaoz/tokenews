@@ -52,3 +52,9 @@ export const planPagePath = (channel: string, planId: string, lang: Lang): strin
 
 export const modelPagePath = (model: string, lang: Lang): string =>
   `${prefix(lang)}/models/${pageSlug(model)}/`;
+
+export const compareIndexPath = (lang: Lang): string => `${prefix(lang)}/compare/`;
+
+/** Stable for both naming orders, including after the curated list is edited. */
+export const comparePagePath = (a: string, b: string, lang: Lang): string =>
+  `${compareIndexPath(lang)}${[pageSlug(a), pageSlug(b)].sort().join("-vs-")}/`;

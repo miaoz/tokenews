@@ -4,7 +4,7 @@
 import type { MouseEvent } from "react";
 import { ArrowUpRight, Moon, Sun } from "@phosphor-icons/react";
 import BrandIcon from "./BrandIcon";
-import { explorerPath, methodologyPath } from "./pageLinks";
+import { compareIndexPath, explorerPath, methodologyPath } from "./pageLinks";
 import type { Lang } from "./types";
 
 /** Site name and positioning, shared by the explorer, static pages and exports. */
@@ -16,7 +16,7 @@ export const TAGLINE = {
 /** The open-source project this site's data and methodology come from (MIT). */
 export const REPO = "https://github.com/Fei2411/real-api-pricing";
 
-export type NavKey = "explore" | "makers" | "providers" | "models" | "news" | null;
+export type NavKey = "explore" | "makers" | "providers" | "models" | "compare" | "news" | null;
 
 /** In-app navigation handler: the explorer swaps views without a page load;
     static pages leave it out and follow the href. */
@@ -56,6 +56,7 @@ export function SiteHeader({
     ["makers", `${prefix}/makers/`, t("Makers", "厂商"), undefined],
     ["providers", `${prefix}/providers/`, t("Providers", "供应商"), undefined],
     ["models", `${prefix}/models/`, t("Models", "模型"), undefined],
+    ["compare", compareIndexPath(lang), t("Compare", "对比"), undefined],
     // News is English-only, so both languages link to /news/.
     ["news", "/news/", t("News", "资讯"), undefined],
   ];
