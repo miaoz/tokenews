@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "provider": "Baseten",
+  "unit": "per_million_tokens",
+  "models": [
+    {
+      "id": "glm-5.2-fast",
+      "source": "https://www.baseten.co/library/glm-52-fast/",
+      "additionalSources": [
+        "https://www.baseten.co/pricing/",
+        "https://docs.baseten.co/inference/model-apis/overview",
+        "https://docs.baseten.co/inference/model-apis/pricing-and-limits"
+      ],
+      "checkedAt": "2026-10-19",
+      "defaultVariant": "hosted-fast",
+      "variants": [
+        {
+          "id": "hosted-fast",
+          "label": {
+            "en": "Baseten Model API · Fast",
+            "zh": "Baseten 托管 API · Fast"
+          },
+          "currency": "USD",
+          "region": "Baseten Model APIs",
+          "serviceTier": "fast",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 2.1,
+            "cachedInput": 0.21,
+            "output": 6.6
+          }
+        }
+      ],
+      "notes": {
+        "en": "Baseten-hosted Fast deployment, model slug zai-org/GLM-5.2-Fast. This is Baseten pricing, not a direct API quote from the model developer or a subscription allowance conversion. Fast uses separate capacity and falls back to base-model capacity when unavailable.",
+        "zh": "Baseten 托管 Fast 端点，调用 slug：zai-org/GLM-5.2-Fast。此为 Baseten 费率，不是模型厂商直连报价或订阅额度换算。Fast 采用独立容量，不可用时回退到基础型号容量。"
+      }
+    },
+    {
+      "id": "deepseek-v4.1-flash-fast",
+      "source": "https://www.baseten.co/library/deepseek-v41-flash-fast/",
+      "additionalSources": [
+        "https://www.baseten.co/pricing/",
+        "https://docs.baseten.co/inference/model-apis/overview",
+        "https://docs.baseten.co/inference/model-apis/pricing-and-limits",
+        "https://www.baseten.co/resources/changelog/deepseek-v41-flash-fast-available-on-baseten/"
+      ],
+      "checkedAt": "2026-10-19",
+      "defaultVariant": "hosted-fast",
+      "variants": [
+        {
+          "id": "hosted-fast",
+          "label": {
+            "en": "Baseten Model API · Fast",
+            "zh": "Baseten 托管 API · Fast"
+          },
+          "currency": "USD",
+          "region": "Baseten Model APIs",
+          "serviceTier": "fast",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 0.6,
+            "cachedInput": 0.014,
+            "output": 2.4
+          }
+        }
+      ],
+      "notes": {
+        "en": "Baseten-hosted Fast deployment, model slug deepseek-ai/DeepSeek-V4.1-Flash-Fast. This is Baseten pricing, not a direct API quote from the model developer or a subscription allowance conversion. Fast uses separate capacity and falls back to base-model capacity when unavailable.",
+        "zh": "Baseten 托管 Fast 端点，调用 slug：deepseek-ai/DeepSeek-V4.1-Flash-Fast。此为 Baseten 费率，不是模型厂商直连报价或订阅额度换算。Fast 采用独立容量，不可用时回退到基础型号容量。"
+      }
+    }
+  ]
+}

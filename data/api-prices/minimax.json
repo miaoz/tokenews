@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "provider": "MiniMax",
+  "unit": "per_million_tokens",
+  "models": [
+    {
+      "id": "minimax-m2.5",
+      "source": "https://platform.minimax.io/docs/pricing/overview",
+      "checkedAt": "2026-10-19",
+      "defaultVariant": "standard",
+      "variants": [
+        {
+          "id": "standard",
+          "label": {
+            "en": "MiniMax API · standard",
+            "zh": "MiniMax API · 标准档"
+          },
+          "currency": "USD",
+          "region": "MiniMax international API",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 0.3,
+            "cachedInput": 0.03,
+            "cacheWrite": 0.375,
+            "output": 1.2
+          }
+        }
+      ],
+      "notes": {
+        "en": "Exact API ID: MiniMax-M2.5 (Legacy Models table); the highspeed variant has different rates.",
+        "zh": "准确调用 ID：MiniMax-M2.5（Legacy Models 价表）；highspeed 变体另行计价。"
+      }
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "provider": "DigitalOcean",
+  "unit": "per_million_tokens",
+  "models": [
+    {
+      "id": "nemotron-3-ultra",
+      "source": "https://docs.digitalocean.com/products/inference/details/pricing/",
+      "additionalSources": [
+        "https://build.nvidia.com/nvidia/nemotron-3-ultra-550b-a55b",
+        "https://docs.digitalocean.com/products/inference/details/model-support-policy/"
+      ],
+      "checkedAt": "2026-10-19",
+      "defaultVariant": "serverless-standard",
+      "variants": [
+        {
+          "id": "serverless-standard",
+          "label": {
+            "en": "DigitalOcean hosted · serverless",
+            "zh": "DigitalOcean 托管 · 无服务器推理"
+          },
+          "currency": "USD",
+          "region": "DigitalOcean Inference",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 0.9,
+            "cachedInput": 0.18,
+            "output": 1.7
+          }
+        }
+      ],
+      "notes": {
+        "en": "DigitalOcean-hosted Nemotron 3 Ultra (model ID nemotron-3-ultra-550b), billed by DigitalOcean. This is not a paid NVIDIA direct API quote: NVIDIA provides a limited free prototype endpoint and links to paid deployment partners.",
+        "zh": "DigitalOcean 托管的 Nemotron 3 Ultra（调用 ID：nemotron-3-ultra-550b），由 DigitalOcean 计费。此为托管价；NVIDIA 直连页面提供受限免费原型端点，并引导用户到合作商付费部署。"
+      }
+    }
+  ]
+}

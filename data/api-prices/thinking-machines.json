@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "provider": "Thinking Machines Lab",
+  "unit": "per_million_tokens",
+  "models": [
+    {
+      "id": "inkling",
+      "source": "https://thinkingmachines.ai/tinker/pricing/",
+      "checkedAt": "2026-10-19",
+      "defaultVariant": "serverless-beta",
+      "variants": [
+        {
+          "id": "serverless-beta",
+          "label": {
+            "en": "Tinker serverless inference · beta",
+            "zh": "Tinker 无服务器推理 · Beta"
+          },
+          "currency": "USD",
+          "region": "Tinker API",
+          "serviceTier": "serverless-beta",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 1,
+            "cachedInput": 0.17,
+            "output": 4.05
+          }
+        }
+      ],
+      "notes": {
+        "en": "Inference endpoint: thinkingmachines/Inkling:peft:262144:sampling-nvfp4. The serverless beta supports a 256K context and is not yet recommended by the provider for intensive production use. Training and training-client sampling prices are separate.",
+        "zh": "推理端点：thinkingmachines/Inkling:peft:262144:sampling-nvfp4。无服务器推理仍为 Beta，支持 256K 上下文；厂商暂不建议用于高强度生产负载。训练及训练客户端采样另行计价。"
+      },
+      "additionalSources": [
+        "https://tinker-docs.thinkingmachines.ai/tinker/models/models_and_pricing/"
+      ]
+    },
+    {
+      "id": "inkling-small",
+      "source": "https://thinkingmachines.ai/tinker/pricing/",
+      "checkedAt": "2026-10-19",
+      "defaultVariant": "serverless-beta",
+      "variants": [
+        {
+          "id": "serverless-beta",
+          "label": {
+            "en": "Tinker serverless inference · beta",
+            "zh": "Tinker 无服务器推理 · Beta"
+          },
+          "currency": "USD",
+          "region": "Tinker API",
+          "serviceTier": "serverless-beta",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 0.3,
+            "cachedInput": 0.06,
+            "output": 1.2
+          }
+        }
+      ],
+      "notes": {
+        "en": "Inference endpoint: thinkingmachines/Inkling-Small:peft:262144:sampling-nvfp4. The serverless beta supports a 256K context and is not yet recommended by the provider for intensive production use. Training and training-client sampling prices are separate.",
+        "zh": "推理端点：thinkingmachines/Inkling-Small:peft:262144:sampling-nvfp4。无服务器推理仍为 Beta，支持 256K 上下文；厂商暂不建议用于高强度生产负载。训练及训练客户端采样另行计价。"
+      },
+      "additionalSources": [
+        "https://tinker-docs.thinkingmachines.ai/tinker/models/models_and_pricing/"
+      ]
+    }
+  ]
+}

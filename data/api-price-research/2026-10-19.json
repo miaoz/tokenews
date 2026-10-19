@@ -1,0 +1,576 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-19",
+  "scope": "仅维护当前官方仍提供并公开维护价格的型号／推理端点；原厂优先，托管端点明确标记实际计费方。已退役、兼容路由或移出原厂当前价表的旧型号不要求补齐历史价。",
+  "baseline": {
+    "commit": "73580950d4651ab7ed1caeb7e4bea7e7853ab415",
+    "totalModels": 78,
+    "independentlyMaintainedModels": 6,
+    "missingModels": 37,
+    "missingRecords": 73
+  },
+  "result": {
+    "added_owner_api": 27,
+    "unverified_variant": 1,
+    "skipped_legacy": 4,
+    "added_hosted_api": 3,
+    "no_published_api_rate": 2,
+    "addedModels": 30,
+    "remainingWithoutCurrentReference": 7,
+    "independentlyMaintainedModels": 36,
+    "variants": 98
+  },
+  "maintenanceNotes": [
+    "同一币种、地区和服务档内的全部已记录输入长度阶梯均显式保存；缓存未知项保留 null。",
+    "Gemini 当前引入价有明确截止日，需按各行 reviewAfter 人工复核并更新价表。",
+    "Ling 和 LongCat 的无明确截止日限时优惠另列为 promotion；默认比较档采用常规标价。",
+    "原始上游快照、套餐额度和历史价格口径不变。",
+    "核实只读官方页面与公开文档；未付费调用模型 API。"
+  ],
+  "rows": [
+    {
+      "model": "claude-fable-5.1",
+      "maker": "Anthropic",
+      "upstreamRecords": 4,
+      "checkedAt": "2026-10-19",
+      "status": "added_owner_api",
+      "pricingProvider": "Anthropic",
+      "priceFile": "data/api-prices/anthropic.json",
+      "defaultVariant": "standard-5m",
+      "variants": 3,
+      "sources": [
+        "https://platform.claude.com/docs/en/models/fable-5-1/whats-new-fable-5-1",
+        "https://platform.claude.com/docs/en/about-claude/pricing"
+      ]
+    },
+    {
+      "model": "deepseek-v4-flash-fast",
+      "maker": "DeepSeek",
+      "upstreamRecords": 1,
+      "checkedAt": "2026-10-19",
+      "status": "unverified_variant",
+      "reason": "Command Code 公布此渠道变体的客户端 token 扣费价，但未核实到可独立调用的按量 API 价；DeepSeek 自营当前型号及价表不列此 Fast ID。不能套用 V4 Flash、V4.1 Flash Fast 或其他提供方同名部署的价格。",
+      "sources": [
+        "https://commandcode.ai/models/deepseek-v4-flash-fast",
+        "https://api-docs.deepseek.com/quick_start/pricing/"
+      ]
+    },
+    {
+      "model": "deepseek-v4-flash-vision-exp",
+      "maker": "DeepSeek",
+      "upstreamRecords": 2,
+      "checkedAt": "2026-10-19",
+      "status": "skipped_legacy",
+      "reason": "DeepSeek 官方确认原模型退役，旧 ID 当前路由至 V4.1-Flash-1017；按维护范围跳过，不将新型号费率写成旧模型价格。",
+      "sources": [
+        "https://api-docs.deepseek.com/quick_start/pricing/",
+        "https://api-docs.deepseek.com/updates/"
+      ]
+    },
+    {
+      "model": "deepseek-v4.1-flash-fast",
+      "maker": "DeepSeek",
+      "upstreamRecords": 1,
+      "checkedAt": "2026-10-19",
+      "status": "added_hosted_api",
+      "pricingProvider": "Baseten",
+      "priceFile": "data/api-prices/baseten.json",
+      "defaultVariant": "hosted-fast",
+      "variants": 1,
+      "sources": [
+        "https://www.baseten.co/library/deepseek-v41-flash-fast/",
+        "https://www.baseten.co/pricing/",
+        "https://docs.baseten.co/inference/model-apis/overview",
+        "https://docs.baseten.co/inference/model-apis/pricing-and-limits",
+        "https://www.baseten.co/resources/changelog/deepseek-v41-flash-fast-available-on-baseten/"
+      ]
+    },
+    {
+      "model": "gemini-3.6-flash",
+      "maker": "Google",
+      "upstreamRecords": 1,
+      "checkedAt": "2026-10-19",
+      "status": "added_owner_api",
+      "pricingProvider": "Google",
+      "priceFile": "data/api-prices/google.json",
+      "defaultVariant": "standard",
+      "variants": 4,
+      "sources": [
+        "https://ai.google.dev/gemini-api/docs/pricing"
+      ],
+      "reviewAfter": "2027-01-01"
+    },
+    {
+      "model": "gemini-3.8-flash",
+      "maker": "Google",
+      "upstreamRecords": 5,
+      "checkedAt": "2026-10-19",
+      "status": "added_owner_api",
+      "pricingProvider": "Google",
+      "priceFile": "data/api-prices/google.json",
+      "defaultVariant": "standard",
+      "variants": 4,
+      "sources": [
+        "https://ai.google.dev/gemini-api/docs/pricing"
+      ],
+      "reviewAfter": "2027-01-01"
+    },
+    {
+      "model": "gemini-4-argon",
+      "maker": "Google",
+      "upstreamRecords": 1,
+      "checkedAt": "2026-10-19",
+      "status": "added_owner_api",
+      "pricingProvider": "Google",
+      "priceFile": "data/api-prices/google.json",
+      "defaultVariant": "standard",
+      "variants": 4,
+      "sources": [
+        "https://ai.google.dev/gemini-api/docs/pricing",
+        "https://ai.google.dev/gemini-api/docs/latest-model"
+      ],
+      "reviewAfter": "2026-12-01"
+    },
+    {
+      "model": "gemini-4-argon-contributor",
+      "maker": "Google",
+      "upstreamRecords": 1,
+      "checkedAt": "2026-10-19",
+      "status": "added_owner_api",
+      "pricingProvider": "Google",
+      "priceFile": "data/api-prices/google.json",
+      "defaultVariant": "contributor",
+      "variants": 1,
+      "sources": [
+        "https://ai.google.dev/gemini-api/docs/pricing"
+      ],
+      "reviewAfter": "2026-12-01"
+    },
+    {
+      "model": "glm-5",
+      "maker": "Zhipu",
+      "upstreamRecords": 1,
+      "checkedAt": "2026-10-19",
+      "status": "added_owner_api",
+      "pricingProvider": "Z.AI",
+      "priceFile": "data/api-prices/zhipu.json",
+      "defaultVariant": "standard",
+      "variants": 1,
+      "sources": [
+        "https://docs.z.ai/guides/overview/pricing"
+      ]
+    },
+    {
+      "model": "glm-5.1",
+      "maker": "Zhipu",
+      "upstreamRecords": 3,
+      "checkedAt": "2026-10-19",
+      "status": "added_owner_api",
+      "pricingProvider": "Z.AI",
+      "priceFile": "data/api-prices/zhipu.json",
+      "defaultVariant": "standard",
+      "variants": 1,
+      "sources": [
+        "https://docs.z.ai/guides/overview/pricing"
+      ]
+    },
+    {
+      "model": "glm-5.2",
+      "maker": "Zhipu",
+      "upstreamRecords": 5,
+      "checkedAt": "2026-10-19",
+      "status": "added_owner_api",
+      "pricingProvider": "Z.AI",
+      "priceFile": "data/api-prices/zhipu.json",
+      "defaultVariant": "standard",
+      "variants": 1,
+      "sources": [
+        "https://docs.z.ai/guides/overview/pricing"
+      ]
+    },
+    {
+      "model": "glm-5.2-fast",
+      "maker": "Zhipu",
+      "upstreamRecords": 2,
+      "checkedAt": "2026-10-19",
+      "status": "added_hosted_api",
+      "pricingProvider": "Baseten",
+      "priceFile": "data/api-prices/baseten.json",
+      "defaultVariant": "hosted-fast",
+      "variants": 1,
+      "sources": [
+        "https://www.baseten.co/library/glm-52-fast/",
+        "https://www.baseten.co/pricing/",
+        "https://docs.baseten.co/inference/model-apis/overview",
+        "https://docs.baseten.co/inference/model-apis/pricing-and-limits"
+      ]
+    },
+    {
+      "model": "glm-5.3-flashx",
+      "maker": "Zhipu",
+      "upstreamRecords": 1,
+      "checkedAt": "2026-10-19",
+      "status": "added_owner_api",
+      "pricingProvider": "Z.AI",
+      "priceFile": "data/api-prices/zhipu.json",
+      "defaultVariant": "standard",
+      "variants": 1,
+      "sources": [
+        "https://docs.z.ai/guides/overview/pricing"
+      ]
+    },
+    {
+      "model": "inkling",
+      "maker": "other",
+      "upstreamRecords": 2,
+      "checkedAt": "2026-10-19",
+      "status": "added_owner_api",
+      "pricingProvider": "Thinking Machines Lab",
+      "priceFile": "data/api-prices/thinking-machines.json",
+      "defaultVariant": "serverless-beta",
+      "variants": 1,
+      "sources": [
+        "https://thinkingmachines.ai/tinker/pricing/",
+        "https://tinker-docs.thinkingmachines.ai/tinker/models/models_and_pricing/"
+      ]
+    },
+    {
+      "model": "inkling-small",
+      "maker": "other",
+      "upstreamRecords": 1,
+      "checkedAt": "2026-10-19",
+      "status": "added_owner_api",
+      "pricingProvider": "Thinking Machines Lab",
+      "priceFile": "data/api-prices/thinking-machines.json",
+      "defaultVariant": "serverless-beta",
+      "variants": 1,
+      "sources": [
+        "https://thinkingmachines.ai/tinker/pricing/",
+        "https://tinker-docs.thinkingmachines.ai/tinker/models/models_and_pricing/"
+      ]
+    },
+    {
+      "model": "kimi-k2.5",
+      "maker": "Kimi",
+      "upstreamRecords": 1,
+      "checkedAt": "2026-10-19",
+      "status": "skipped_legacy",
+      "reason": "原厂当前国内／国际价格表及模型目录不再列出 K2.5。本轮按用户维护范围跳过；阿里云仍有托管价，不将其代替原厂旧型号的当前维护记录。此结论不宣称所有第三方端点均已下线。",
+      "sources": [
+        "https://platform.kimi.ai/docs/pricing/chat",
+        "https://platform.kimi.com/docs/pricing/chat",
+        "https://platform.kimi.ai/docs/models",
+        "https://www.alibabacloud.com/help/en/model-studio/kimi-k2-5"
+      ]
+    },
+    {
+      "model": "kimi-k2.6",
+      "maker": "Kimi",
+      "upstreamRecords": 2,
+      "checkedAt": "2026-10-19",
+      "status": "added_owner_api",
+      "pricingProvider": "Moonshot AI",
+      "priceFile": "data/api-prices/kimi.json",
+      "defaultVariant": "international-standard",
+      "variants": 2,
+      "sources": [
+        "https://platform.kimi.ai/docs/pricing/chat",
+        "https://platform.kimi.com/docs/pricing/chat"
+      ]
+    },
+    {
+      "model": "kimi-k2.7-code-highspeed",
+      "maker": "Kimi",
+      "upstreamRecords": 1,
+      "checkedAt": "2026-10-19",
+      "status": "added_owner_api",
+      "pricingProvider": "Moonshot AI",
+      "priceFile": "data/api-prices/kimi.json",
+      "defaultVariant": "international-standard",
+      "variants": 2,
+      "sources": [
+        "https://platform.kimi.ai/docs/pricing/chat",
+        "https://platform.kimi.com/docs/pricing/chat"
+      ]
+    },
+    {
+      "model": "ling-3.1-flash",
+      "maker": "inclusionAI",
+      "upstreamRecords": 1,
+      "checkedAt": "2026-10-19",
+      "status": "added_owner_api",
+      "pricingProvider": "inclusionAI",
+      "priceFile": "data/api-prices/inclusionai.json",
+      "defaultVariant": "list",
+      "variants": 2,
+      "sources": [
+        "https://developer.ant-ling.com/en/docs/models/price"
+      ]
+    },
+    {
+      "model": "longcat-2.0",
+      "maker": "Meituan",
+      "upstreamRecords": 2,
+      "checkedAt": "2026-10-19",
+      "status": "added_owner_api",
+      "pricingProvider": "Meituan",
+      "priceFile": "data/api-prices/meituan.json",
+      "defaultVariant": "usd-list",
+      "variants": 4,
+      "sources": [
+        "https://longcat.chat/platform/docs/Pricing/LongCat-2.0.html"
+      ]
+    },
+    {
+      "model": "mimo-v2.5",
+      "maker": "Xiaomi",
+      "upstreamRecords": 10,
+      "checkedAt": "2026-10-19",
+      "status": "skipped_legacy",
+      "reason": "官方公告自 2026-10-14 18:00（UTC+8）起路由至 V2.6 Flash，旧 ID 将于 2026-10-21 10:00（UTC+8）失效；按维护范围跳过。",
+      "sources": [
+        "https://mimo.mi.com/docs/en-US/price/pay-as-you-go",
+        "https://mimo.mi.com/docs/zh-CN/updates/deprecate"
+      ]
+    },
+    {
+      "model": "minimax-m2.5",
+      "maker": "MiniMax",
+      "upstreamRecords": 1,
+      "checkedAt": "2026-10-19",
+      "status": "added_owner_api",
+      "pricingProvider": "MiniMax",
+      "priceFile": "data/api-prices/minimax.json",
+      "defaultVariant": "standard",
+      "variants": 1,
+      "sources": [
+        "https://platform.minimax.io/docs/pricing/overview"
+      ]
+    },
+    {
+      "model": "minimax-m3.1-flash-preview",
+      "maker": "MiniMax",
+      "upstreamRecords": 6,
+      "checkedAt": "2026-10-19",
+      "status": "no_published_api_rate",
+      "reason": "官方 M Plan FAQ 列为订阅／Credits 可用型号；公开按量价表列出 M3、M2.7、M2.5，未单列此准确 Preview 型号的 token 价。不能沿用 M3 或无 Preview 后缀 M3.1 的价格。",
+      "sources": [
+        "https://platform.minimax.io/docs/m-plan/faq",
+        "https://platform.minimax.io/docs/pricing/overview",
+        "https://platform.minimax.io/docs/guides/text-m3-function-call"
+      ]
+    },
+    {
+      "model": "mistral-medium-3.5",
+      "maker": "Mistral",
+      "upstreamRecords": 1,
+      "checkedAt": "2026-10-19",
+      "status": "added_owner_api",
+      "pricingProvider": "Mistral AI",
+      "priceFile": "data/api-prices/mistral.json",
+      "defaultVariant": "standard",
+      "variants": 12,
+      "sources": [
+        "https://docs.mistral.ai/inference/pricing",
+        "https://docs.mistral.ai/models/mistral-medium-3-5-26-04"
+      ]
+    },
+    {
+      "model": "muse-spark-1.2",
+      "maker": "Muse",
+      "upstreamRecords": 1,
+      "checkedAt": "2026-10-19",
+      "status": "added_owner_api",
+      "pricingProvider": "Meta",
+      "priceFile": "data/api-prices/meta.json",
+      "defaultVariant": "standard",
+      "variants": 1,
+      "sources": [
+        "https://dev.meta.ai/docs/pricing-rate-limits",
+        "https://dev.meta.ai/docs/overview"
+      ]
+    },
+    {
+      "model": "muse-spark-1.2-contributor",
+      "maker": "Muse",
+      "upstreamRecords": 2,
+      "checkedAt": "2026-10-19",
+      "status": "added_owner_api",
+      "pricingProvider": "Meta",
+      "priceFile": "data/api-prices/meta.json",
+      "defaultVariant": "contributor",
+      "variants": 1,
+      "sources": [
+        "https://dev.meta.ai/docs/pricing-rate-limits",
+        "https://dev.meta.ai/docs/overview"
+      ]
+    },
+    {
+      "model": "muse-spark-1.3",
+      "maker": "Muse",
+      "upstreamRecords": 1,
+      "checkedAt": "2026-10-19",
+      "status": "added_owner_api",
+      "pricingProvider": "Meta",
+      "priceFile": "data/api-prices/meta.json",
+      "defaultVariant": "standard",
+      "variants": 1,
+      "sources": [
+        "https://dev.meta.ai/docs/pricing-rate-limits",
+        "https://dev.meta.ai/docs/overview"
+      ]
+    },
+    {
+      "model": "muse-spark-1.3-contributor",
+      "maker": "Muse",
+      "upstreamRecords": 2,
+      "checkedAt": "2026-10-19",
+      "status": "added_owner_api",
+      "pricingProvider": "Meta",
+      "priceFile": "data/api-prices/meta.json",
+      "defaultVariant": "contributor",
+      "variants": 1,
+      "sources": [
+        "https://dev.meta.ai/docs/pricing-rate-limits",
+        "https://dev.meta.ai/docs/overview"
+      ]
+    },
+    {
+      "model": "nemotron-3-ultra",
+      "maker": "other",
+      "upstreamRecords": 2,
+      "checkedAt": "2026-10-19",
+      "status": "added_hosted_api",
+      "pricingProvider": "DigitalOcean",
+      "priceFile": "data/api-prices/digitalocean.json",
+      "defaultVariant": "serverless-standard",
+      "variants": 1,
+      "sources": [
+        "https://docs.digitalocean.com/products/inference/details/pricing/",
+        "https://build.nvidia.com/nvidia/nemotron-3-ultra-550b-a55b",
+        "https://docs.digitalocean.com/products/inference/details/model-support-policy/"
+      ]
+    },
+    {
+      "model": "qwen3.6-max-preview",
+      "maker": "Alibaba",
+      "upstreamRecords": 1,
+      "checkedAt": "2026-10-19",
+      "status": "skipped_legacy",
+      "reason": "官方 2026-07-06 公告明确列入 2026-10-10 停服名单；当前价表不再列出，旧模型文档重定向至模型总览。搜索索引中的旧价格不收录为当前价。",
+      "sources": [
+        "https://www.alibabacloud.com/en/notice/model_studio_notice_on_the_postponed_retirement_of_selected_legacy_models_7d0?_p_lc=1",
+        "https://www.alibabacloud.com/help/en/model-studio/model-depreciation",
+        "https://www.alibabacloud.com/help/en/model-studio/model-pricing"
+      ]
+    },
+    {
+      "model": "qwen3.6-plus",
+      "maker": "Alibaba",
+      "upstreamRecords": 1,
+      "checkedAt": "2026-10-19",
+      "status": "added_owner_api",
+      "pricingProvider": "Alibaba",
+      "priceFile": "data/api-prices/alibaba.json",
+      "defaultVariant": "singapore-short-explicit",
+      "variants": 4,
+      "sources": [
+        "https://www.alibabacloud.com/help/en/model-studio/qwen3-6-plus",
+        "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+        "https://www.alibabacloud.com/help/en/model-studio/context-cache"
+      ]
+    },
+    {
+      "model": "qwen3.7-flash",
+      "maker": "Alibaba",
+      "upstreamRecords": 1,
+      "checkedAt": "2026-10-19",
+      "status": "added_owner_api",
+      "pricingProvider": "Alibaba",
+      "priceFile": "data/api-prices/alibaba.json",
+      "defaultVariant": "singapore-short-implicit",
+      "variants": 12,
+      "sources": [
+        "https://www.alibabacloud.com/help/en/model-studio/qwen3-7-flash",
+        "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+        "https://www.alibabacloud.com/help/en/model-studio/context-cache"
+      ]
+    },
+    {
+      "model": "qwen3.7-max",
+      "maker": "Alibaba",
+      "upstreamRecords": 1,
+      "checkedAt": "2026-10-19",
+      "status": "added_owner_api",
+      "pricingProvider": "Alibaba",
+      "priceFile": "data/api-prices/alibaba.json",
+      "defaultVariant": "singapore-implicit",
+      "variants": 4,
+      "sources": [
+        "https://www.alibabacloud.com/help/en/model-studio/qwen3-7-max",
+        "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+        "https://www.alibabacloud.com/help/en/model-studio/context-cache"
+      ]
+    },
+    {
+      "model": "qwen3.8-27b",
+      "maker": "Alibaba",
+      "upstreamRecords": 1,
+      "checkedAt": "2026-10-19",
+      "status": "added_owner_api",
+      "pricingProvider": "Alibaba",
+      "priceFile": "data/api-prices/alibaba.json",
+      "defaultVariant": "singapore-implicit",
+      "variants": 4,
+      "sources": [
+        "https://www.alibabacloud.com/help/en/model-studio/qwen3-8-27b",
+        "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+        "https://www.alibabacloud.com/help/en/model-studio/context-cache"
+      ]
+    },
+    {
+      "model": "qwen3.8-flash",
+      "maker": "Alibaba",
+      "upstreamRecords": 2,
+      "checkedAt": "2026-10-19",
+      "status": "added_owner_api",
+      "pricingProvider": "Alibaba",
+      "priceFile": "data/api-prices/alibaba.json",
+      "defaultVariant": "singapore-implicit",
+      "variants": 4,
+      "sources": [
+        "https://www.alibabacloud.com/help/en/model-studio/qwen3-8-flash",
+        "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+        "https://www.alibabacloud.com/help/en/model-studio/context-cache"
+      ]
+    },
+    {
+      "model": "qwen3.8-omni-flash",
+      "maker": "Alibaba",
+      "upstreamRecords": 1,
+      "checkedAt": "2026-10-19",
+      "status": "added_owner_api",
+      "pricingProvider": "Alibaba",
+      "priceFile": "data/api-prices/alibaba.json",
+      "defaultVariant": "singapore-implicit",
+      "variants": 2,
+      "sources": [
+        "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+        "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+        "https://www.alibabacloud.com/help/en/model-studio/context-cache"
+      ]
+    },
+    {
+      "model": "swe-2",
+      "maker": "Cognition",
+      "upstreamRecords": 1,
+      "checkedAt": "2026-10-19",
+      "status": "no_published_api_rate",
+      "reason": "Cognition 发布文章将 SWE-2 提供在 Devin 产品中；当前 Usage 文档按套餐额度／ACU 说明计费。未核实到独立公开的按量 API token 价，不从成本节省百分比、客户端促销或订阅倍率反推。",
+      "sources": [
+        "https://cognition.com/blog/swe-2",
+        "https://docs.devin.ai/admin/billing/usage"
+      ]
+    }
+  ]
+}

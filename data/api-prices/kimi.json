@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "provider": "Moonshot AI",
+  "unit": "per_million_tokens",
+  "models": [
+    {
+      "id": "kimi-k2.6",
+      "source": "https://platform.kimi.ai/docs/pricing/chat",
+      "checkedAt": "2026-10-19",
+      "defaultVariant": "international-standard",
+      "variants": [
+        {
+          "id": "international-standard",
+          "label": {
+            "en": "Kimi API · international",
+            "zh": "Kimi API · 国际站"
+          },
+          "currency": "USD",
+          "region": "Kimi international API",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 0.95,
+            "cachedInput": 0.16,
+            "output": 4
+          }
+        },
+        {
+          "id": "china-standard",
+          "label": {
+            "en": "Kimi API · China",
+            "zh": "Kimi API · 国内站"
+          },
+          "currency": "CNY",
+          "region": "CN",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 6.5,
+            "cachedInput": 1.1,
+            "output": 27
+          }
+        }
+      ],
+      "notes": {
+        "en": "USD prices exclude applicable taxes. The K2 API supports a 262,144-token context; K3 cache-write TTL pricing is not applied to K2 models.",
+        "zh": "国际站美元价，未含适用税费。K2 API 上下文为 262,144 tokens；不套用 K3 按 TTL 计价的缓存写入规则。"
+      },
+      "additionalSources": [
+        "https://platform.kimi.com/docs/pricing/chat"
+      ]
+    },
+    {
+      "id": "kimi-k2.7-code-highspeed",
+      "source": "https://platform.kimi.ai/docs/pricing/chat",
+      "checkedAt": "2026-10-19",
+      "defaultVariant": "international-standard",
+      "variants": [
+        {
+          "id": "international-standard",
+          "label": {
+            "en": "Kimi API · international",
+            "zh": "Kimi API · 国际站"
+          },
+          "currency": "USD",
+          "region": "Kimi international API",
+          "serviceTier": "highspeed",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 1.9,
+            "cachedInput": 0.38,
+            "output": 8
+          }
+        },
+        {
+          "id": "china-standard",
+          "label": {
+            "en": "Kimi API · China",
+            "zh": "Kimi API · 国内站"
+          },
+          "currency": "CNY",
+          "region": "CN",
+          "serviceTier": "highspeed",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 13,
+            "cachedInput": 2.6,
+            "output": 54
+          }
+        }
+      ],
+      "notes": {
+        "en": "USD prices exclude applicable taxes. The K2 API supports a 262,144-token context; K3 cache-write TTL pricing is not applied to K2 models.",
+        "zh": "国际站美元价，未含适用税费。K2 API 上下文为 262,144 tokens；不套用 K3 按 TTL 计价的缓存写入规则。"
+      },
+      "additionalSources": [
+        "https://platform.kimi.com/docs/pricing/chat"
+      ]
+    }
+  ]
+}

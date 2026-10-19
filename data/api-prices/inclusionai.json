@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "provider": "inclusionAI",
+  "unit": "per_million_tokens",
+  "models": [
+    {
+      "id": "ling-3.1-flash",
+      "source": "https://developer.ant-ling.com/en/docs/models/price",
+      "checkedAt": "2026-10-19",
+      "defaultVariant": "list",
+      "variants": [
+        {
+          "id": "list",
+          "label": {
+            "en": "Direct API · published list",
+            "zh": "官方直连 API · 常规标价"
+          },
+          "currency": "CNY",
+          "region": "Ling direct API",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 2,
+            "cachedInput": 0.4,
+            "output": 6
+          }
+        },
+        {
+          "id": "promotion",
+          "label": {
+            "en": "Direct API · temporary 75% off",
+            "zh": "官方直连 API · 限时 2.5 折"
+          },
+          "currency": "CNY",
+          "region": "Ling direct API",
+          "serviceTier": "promotion",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 0.5,
+            "cachedInput": 0.1,
+            "output": 1.5
+          }
+        }
+      ],
+      "notes": {
+        "en": "Direct API model ID: Ling-3.1-flash. Default reference uses the published regular list; the temporary discount has no published end date. Third-party USD offers are separate. Requires an eligible Alipay account.",
+        "zh": "直连调用 ID：Ling-3.1-flash。默认参考采用官方常规标价；当前限时折扣未公布截止日。第三方平台美元报价另计；直连服务需具备符合要求的支付宝账户。"
+      }
+    }
+  ]
+}
