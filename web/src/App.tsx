@@ -35,6 +35,8 @@ import { feeBands } from "./domain";
 import type { ChartHandle } from "./Chart";
 import Modal from "./Modal";
 import Method from "./Method";
+import { ApiPriceDetails } from "./ApiPriceDetails";
+import { apiPriceReference } from "./apiPrices";
 import {
   loadCustomProviders,
   mergeCustomProviders,
@@ -1746,6 +1748,12 @@ function Details({
                     )}
                 </p>
               ) : null}
+            </div>
+          )}
+          {data.apiPrices && Object.hasOwn(data.apiPrices.models, p.model) && (
+            <div className="basis">
+              <small>{t("Current official API reference", "当前官方 API 参考价")}</small>
+              <ApiPriceDetails reference={apiPriceReference(data, p.model)} lang={lang} />
             </div>
           )}
           <details className="evidence-fold">

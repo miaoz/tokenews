@@ -59,6 +59,7 @@ Defined once in `web/src/styles.css` (`:root` and `:root[data-theme="dark"]`).
 | Quote / callout | `.prose blockquote` | White panel with a green bar: summaries and highlights. |
 | Figure | `.prose figure` | Image with a hairline border and radius; caption muted and centred. |
 | Sources | `.source-list` | Numbered rows (`01`), title left, domain in mono right with ↗. |
+| API references | `.api-price-table` | Shared explorer/model-page table; explicit billing tiers, independently checked source/date, horizontal scrolling for narrow dialogs. |
 
 ## Doing it right
 

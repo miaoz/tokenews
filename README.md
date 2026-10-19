@@ -14,6 +14,7 @@ Curated model comparisons at `/compare/` (Chinese: `/zh/compare/`) put shared su
 content/news/        news articles, one Markdown file each (see content/news/README.md)
 upstream/            data snapshot synced from Real API Pricing — never edited by hand
 upstream.lock.json   which upstream commit the snapshot comes from
+data/api-prices/    independently maintained official API references, one JSON file per provider
 scripts/
   sync-upstream.mjs  pulls only the data paths into upstream/
   lib/build-site-data.mjs   our adapter: upstream/ → web/public/data/site.json
@@ -25,11 +26,15 @@ web/                 the site: React explorer + static page generator (see web/R
 
 **Upstream supplies data only.** The pricing, allowance and leaderboard data comes from [Real API Pricing](https://github.com/Fei2411/real-api-pricing) (MIT). `scripts/sync-upstream.mjs` fetches just the paths listed in it — `config/`, `derived/`, `data/adopted.csv`, `data/conventions.json`, `data/i18n/`, `data/research/`, two Pareto PNGs and the licence — into `upstream/`. No upstream code is merged: the site, its design and the adapter are ours and evolve independently. If upstream changes its own copy of the adapter, the sync flags it, because that usually means the data format moved.
 
+**Current official API references are maintained by Tokenews** in [`data/api-prices/`](data/api-prices/README.md), separately from upstream quota and cost evidence. Provider files are discovered automatically; adding a model, region, processing tier or context band requires a JSON edit, not a code change. The build validates and publishes these records and uses their explicitly selected default tiers on model comparisons. Historical upstream points remain intact. Uncovered models retain upstream references where available. See the maintenance guide for the format, source policy and coverage report.
+
 ## Everyday commands
 
 ```sh
 npm ci                 # once (root: Wrangler); `npm run build` installs web/
 npm run sync           # pull the latest upstream data (or: npm run sync -- <commit>)
+npm run prices:check   # independently validate API pricing files; no upstream or web install needed
+npm run prices:report  # maintained / upstream-only / missing coverage and price differences
 npm run build          # web/dist: explorer + every maker, provider and model page
 npm test               # explorer domain tests against the synced data
 npm run check          # links, anchors, metadata and sitemap of the built pages

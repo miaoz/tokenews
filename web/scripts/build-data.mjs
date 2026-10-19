@@ -1,8 +1,9 @@
-import { readFile, writeFile, mkdir, copyFile } from "node:fs/promises";
+import { readFile, writeFile, mkdir, copyFile, rm } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
 import { parse } from "csv-parse/sync";
 import { buildSiteData } from "../../scripts/lib/build-site-data.mjs";
+import { loadApiPrices, priceCoverage } from "../../scripts/lib/api-prices.mjs";
 
 const root = fileURLToPath(new URL("../", import.meta.url));
 // The data snapshot synced from upstream (scripts/sync-upstream.mjs).
@@ -11,7 +12,18 @@ const out = path.join(root, "public/data");
 const read = async (p) =>
   JSON.parse(await readFile(path.join(repo, p), "utf8"));
 const { data, evidenceToCopy } = await buildSiteData({ repo, parseCsv: parse });
+const priceDirectory = path.resolve(root, "../data/api-prices");
+const { catalog, files: priceFiles } = await loadApiPrices(priceDirectory);
+// Keep adopted points byte-for-byte meaningful: current prices never replace
+// the historical list_price / blended reference used to explain a quota.
+data.apiPrices = catalog;
+const coverage = priceCoverage(catalog, data.points);
 await mkdir(path.join(out, "evidence"), { recursive: true });
+await rm(path.join(out, "api-prices"), { recursive: true, force: true });
+await mkdir(path.join(out, "api-prices"), { recursive: true });
+for (const file of priceFiles) await copyFile(path.join(priceDirectory, file), path.join(out, "api-prices", file));
+await writeFile(path.join(out, "api-prices.json"), JSON.stringify(catalog));
+await writeFile(path.join(out, "api-price-coverage.json"), JSON.stringify(coverage));
 await writeFile(path.join(out, "site.json"), JSON.stringify(data));
 // The explorer's first download leaves out the long-form notes it only shows in
 // the "Behind the number" dialog; they load afterwards from explorer-notes.json.
@@ -66,3 +78,6 @@ for (const f of evidenceToCopy)
 console.log(
   `Website data: ${data.points.length} points, ${data.configurations.length} configurations, ${data.mappings.length} references, ${evidenceToCopy.size} evidence files. Values verified against adopted.csv.`,
 );
+console.log(`API prices: ${coverage.maintainedModels} maintained, ${coverage.upstreamOnlyModels} upstream-only, ${coverage.missingModels} missing / ${coverage.totalModels} models.`);
+if (coverage.differences.length) console.warn(`API reference differences (review source dates and conditions): ${coverage.differences.join(", ")}. Adopted points are unchanged.`);
+if (coverage.unusedModels.length) console.warn(`API prices recorded ahead of upstream model coverage: ${coverage.unusedModels.join(", ")}.`);

@@ -1,0 +1,231 @@
+{
+  "schemaVersion": 1,
+  "provider": "Alibaba",
+  "unit": "per_million_tokens",
+  "models": [
+    {
+      "id": "qwen3.8-max",
+      "source": "https://www.alibabacloud.com/help/en/model-studio/qwen3-8-max",
+      "additionalSources": [
+        "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+        "https://www.alibabacloud.com/help/en/model-studio/context-cache"
+      ],
+      "checkedAt": "2026-10-19",
+      "defaultVariant": "singapore-implicit",
+      "variants": [
+        {
+          "id": "singapore-implicit",
+          "label": {
+            "en": "Standard · international · implicit cache",
+            "zh": "标准档 · 国际 · 隐式缓存"
+          },
+          "currency": "USD",
+          "region": "SG",
+          "serviceTier": "standard",
+          "context": {
+            "min": 1,
+            "max": 1000000
+          },
+          "rates": {
+            "input": 2,
+            "cachedInput": 0.25,
+            "cacheWrite": 2,
+            "output": 6
+          },
+          "notes": {
+            "en": "Implicit cache creation uses the ordinary input rate; cache hits are not guaranteed.",
+            "zh": "隐式缓存创建按普通输入价计费；缓存命中不保证。"
+          }
+        },
+        {
+          "id": "singapore-explicit",
+          "label": {
+            "en": "Standard · international · explicit cache",
+            "zh": "标准档 · 国际 · 显式缓存"
+          },
+          "currency": "USD",
+          "region": "SG",
+          "serviceTier": "standard",
+          "context": {
+            "min": 1,
+            "max": 1000000
+          },
+          "rates": {
+            "input": 2,
+            "cachedInput": 0.17,
+            "cacheWrite": 2.5,
+            "output": 6
+          },
+          "notes": {
+            "en": "Explicit cache lasts 5 minutes, renewed on a hit. Creation and reads use the listed separate rates.",
+            "zh": "显式缓存有效期 5 分钟，命中后续期；创建和读取分别按本档价率计费。"
+          }
+        },
+        {
+          "id": "beijing-implicit",
+          "label": {
+            "en": "Standard · Beijing · implicit cache",
+            "zh": "标准档 · 北京 · 隐式缓存"
+          },
+          "currency": "USD",
+          "region": "CN-Beijing",
+          "serviceTier": "standard",
+          "context": {
+            "min": 1,
+            "max": 1000000
+          },
+          "rates": {
+            "input": 1.65,
+            "cachedInput": 0.206,
+            "cacheWrite": 1.65,
+            "output": 4.951
+          },
+          "notes": {
+            "en": "Implicit cache creation uses the ordinary input rate; cache hits are not guaranteed.",
+            "zh": "隐式缓存创建按普通输入价计费；缓存命中不保证。"
+          }
+        },
+        {
+          "id": "beijing-explicit",
+          "label": {
+            "en": "Standard · Beijing · explicit cache",
+            "zh": "标准档 · 北京 · 显式缓存"
+          },
+          "currency": "USD",
+          "region": "CN-Beijing",
+          "serviceTier": "standard",
+          "context": {
+            "min": 1,
+            "max": 1000000
+          },
+          "rates": {
+            "input": 1.65,
+            "cachedInput": 0.137,
+            "cacheWrite": 2.063,
+            "output": 4.951
+          },
+          "notes": {
+            "en": "Explicit cache lasts 5 minutes, renewed on a hit. Creation and reads use the listed separate rates.",
+            "zh": "显式缓存有效期 5 分钟，命中后续期；创建和读取分别按本档价率计费。"
+          }
+        }
+      ],
+      "notes": {
+        "en": "Comparison default: Singapore international standard pricing with implicit caching. Beijing prices are USD list prices from the international documentation. Cache modes are mutually exclusive; cacheable prefixes require at least 1,024 tokens. Limited-time promotions are excluded.",
+        "zh": "对比默认采用新加坡国际标准档及隐式缓存价。北京档为国际文档中的美元标价。两种缓存模式互斥，可缓存前缀至少需要 1,024 tokens；不计限时促销。"
+      }
+    },
+    {
+      "id": "qwen3.8-max-0902",
+      "source": "https://www.alibabacloud.com/help/en/model-studio/qwen3-8-max",
+      "additionalSources": [
+        "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+        "https://www.alibabacloud.com/help/en/model-studio/context-cache"
+      ],
+      "checkedAt": "2026-10-19",
+      "defaultVariant": "singapore-implicit",
+      "variants": [
+        {
+          "id": "singapore-implicit",
+          "label": {
+            "en": "Standard · international · implicit cache",
+            "zh": "标准档 · 国际 · 隐式缓存"
+          },
+          "currency": "USD",
+          "region": "SG",
+          "serviceTier": "standard",
+          "context": {
+            "min": 1,
+            "max": 1000000
+          },
+          "rates": {
+            "input": 2,
+            "cachedInput": 0.25,
+            "cacheWrite": 2,
+            "output": 6
+          },
+          "notes": {
+            "en": "Implicit cache creation uses the ordinary input rate; cache hits are not guaranteed.",
+            "zh": "隐式缓存创建按普通输入价计费；缓存命中不保证。"
+          }
+        },
+        {
+          "id": "singapore-explicit",
+          "label": {
+            "en": "Standard · international · explicit cache",
+            "zh": "标准档 · 国际 · 显式缓存"
+          },
+          "currency": "USD",
+          "region": "SG",
+          "serviceTier": "standard",
+          "context": {
+            "min": 1,
+            "max": 1000000
+          },
+          "rates": {
+            "input": 2,
+            "cachedInput": 0.17,
+            "cacheWrite": 2.5,
+            "output": 6
+          },
+          "notes": {
+            "en": "Explicit cache lasts 5 minutes, renewed on a hit. Creation and reads use the listed separate rates.",
+            "zh": "显式缓存有效期 5 分钟，命中后续期；创建和读取分别按本档价率计费。"
+          }
+        },
+        {
+          "id": "beijing-implicit",
+          "label": {
+            "en": "Standard · Beijing · implicit cache",
+            "zh": "标准档 · 北京 · 隐式缓存"
+          },
+          "currency": "USD",
+          "region": "CN-Beijing",
+          "serviceTier": "standard",
+          "context": {
+            "min": 1,
+            "max": 1000000
+          },
+          "rates": {
+            "input": 1.65,
+            "cachedInput": 0.206,
+            "cacheWrite": 1.65,
+            "output": 4.951
+          },
+          "notes": {
+            "en": "Implicit cache creation uses the ordinary input rate; cache hits are not guaranteed.",
+            "zh": "隐式缓存创建按普通输入价计费；缓存命中不保证。"
+          }
+        },
+        {
+          "id": "beijing-explicit",
+          "label": {
+            "en": "Standard · Beijing · explicit cache",
+            "zh": "标准档 · 北京 · 显式缓存"
+          },
+          "currency": "USD",
+          "region": "CN-Beijing",
+          "serviceTier": "standard",
+          "context": {
+            "min": 1,
+            "max": 1000000
+          },
+          "rates": {
+            "input": 1.65,
+            "cachedInput": 0.137,
+            "cacheWrite": 2.063,
+            "output": 4.951
+          },
+          "notes": {
+            "en": "Explicit cache lasts 5 minutes, renewed on a hit. Creation and reads use the listed separate rates.",
+            "zh": "显式缓存有效期 5 分钟，命中后续期；创建和读取分别按本档价率计费。"
+          }
+        }
+      ],
+      "notes": {
+        "en": "Comparison default: Singapore international standard pricing with implicit caching. Beijing prices are USD list prices from the international documentation. Cache modes are mutually exclusive; cacheable prefixes require at least 1,024 tokens. Limited-time promotions are excluded.",
+        "zh": "对比默认采用新加坡国际标准档及隐式缓存价。北京档为国际文档中的美元标价。两种缓存模式互斥，可缓存前缀至少需要 1,024 tokens；不计限时促销。"
+      }
+    }
+  ]
+}

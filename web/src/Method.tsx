@@ -25,8 +25,8 @@ export default function Method({
       <h1>{t("Every number has a story.", "每个数字，都有依据。")}</h1>
       <p className="method-lead">
         {t(
-          "Our contribution is the real price axis. Capability scores come from independent leaderboards, with their original context preserved.",
-          "本项目的核心是可信的真实单价轴。能力分数引用独立榜单，并保留原始评测语境。",
+          "We combine subscription cost and quota evidence with independently maintained official API price references. Capability scores come from independent leaderboards, with their original context preserved.",
+          "我们结合订阅成本与额度证据、独立维护的官方 API 参考价，帮助理解模型成本。能力分数引用独立榜单，并保留原始评测语境。",
         )}
       </p>
       <div className="big-formula">
@@ -123,6 +123,18 @@ export default function Method({
           </p>
         </article>
       </div>
+      <section className="method-sources">
+        <h2>{t("Official API price references", "官方 API 价格参考")}</h2>
+        <p>{t(
+          "Current API references are checked independently against official sources and include the verification date, currency, processing tier, region and input-length conditions. Model pages show every recorded tier; comparisons use the explicitly selected default tier. Cache-write charges are listed separately. These references do not recalculate the historical allowances or real costs of subscription plans.",
+          "当前 API 参考价独立核对官方来源，记录核实日期、币种、服务档、地区及输入长度条件。模型页展示全部已收录档位，对比页采用明确指定的默认档位。缓存写入费单独展示。这些参考价不用于重算订阅套餐的历史额度或真实成本。",
+        )}</p>
+        <p>{t(
+          "Models not yet independently covered retain the API references available in the upstream snapshot, with missing conditions left unknown. An em dash indicates an unrecorded rate, not free usage. The standard-mix reference weights cached reads, fresh input and output; it does not include a separate cache-write charge.",
+          "尚未独立收录的模型沿用上游快照已有的 API 参考价，缺失的适用条件保留未知。— 表示该项价格未收录，不代表免费。标准负载参考价按缓存读、普通输入和输出加权，不另计缓存写入费。",
+        )}</p>
+        <p><a href="/data/api-prices.json">{t("Download current API references (JSON)", "下载当前 API 参考价（JSON）")}</a></p>
+      </section>
       <section className="method-sources">
         <h2>{t("Independent leaderboards", "独立榜单来源")}</h2>
         {Object.entries(data.boards).map(([id, b]) => (

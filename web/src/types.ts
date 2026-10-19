@@ -1,4 +1,5 @@
 import type { Lock } from "./domain";
+import type { ApiPriceCatalog } from "./apiPrices";
 
 export type Lang = "en" | "zh";
 export type View = "pareto" | "price" | "allowance" | "table" | "method";
@@ -104,6 +105,8 @@ export interface SiteNotes {
 export interface SiteData {
   version: number;
   generatedAt: string;
+  /** Current official API references maintained by Tokenews, separate from quota adoption. */
+  apiPrices?: ApiPriceCatalog;
   points: Point[];
   configurations: Configuration[];
   mappings: Mapping[];

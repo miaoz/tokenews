@@ -1,0 +1,215 @@
+{
+  "schemaVersion": 1,
+  "provider": "OpenAI",
+  "unit": "per_million_tokens",
+  "models": [
+    {
+      "id": "gpt-6-astra",
+      "source": "https://developers.openai.com/api/docs/models/gpt-6-astra",
+      "checkedAt": "2026-10-19",
+      "defaultVariant": "standard",
+      "variants": [
+        {
+          "id": "standard",
+          "label": {
+            "en": "Standard",
+            "zh": "标准档"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": 272000
+          },
+          "rates": {
+            "input": 10.0,
+            "cachedInput": 1.0,
+            "cacheWrite": 12.5,
+            "output": 50.0
+          }
+        },
+        {
+          "id": "standard-long-context",
+          "label": {
+            "en": "Standard · long context",
+            "zh": "标准档 · 长上下文"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": {
+            "min": 272001,
+            "max": null
+          },
+          "rates": {
+            "input": 20.0,
+            "cachedInput": 2.0,
+            "cacheWrite": 25.0,
+            "output": 75.0
+          },
+          "notes": {
+            "en": "These rates apply to the full request when its input exceeds 272K tokens.",
+            "zh": "请求输入超过 272K tokens 时，整次请求按本档计费。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6-sol",
+      "source": "https://developers.openai.com/api/docs/models/gpt-6-sol",
+      "checkedAt": "2026-10-19",
+      "defaultVariant": "standard",
+      "variants": [
+        {
+          "id": "standard",
+          "label": {
+            "en": "Standard",
+            "zh": "标准档"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": 272000
+          },
+          "rates": {
+            "input": 2.0,
+            "cachedInput": 0.2,
+            "cacheWrite": 2.5,
+            "output": 10.0
+          }
+        },
+        {
+          "id": "standard-long-context",
+          "label": {
+            "en": "Standard · long context",
+            "zh": "标准档 · 长上下文"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": {
+            "min": 272001,
+            "max": null
+          },
+          "rates": {
+            "input": 4.0,
+            "cachedInput": 0.4,
+            "cacheWrite": 5.0,
+            "output": 15.0
+          },
+          "notes": {
+            "en": "These rates apply to the full request when its input exceeds 272K tokens.",
+            "zh": "请求输入超过 272K tokens 时，整次请求按本档计费。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6-luna",
+      "source": "https://developers.openai.com/api/docs/models/gpt-6-luna",
+      "checkedAt": "2026-10-19",
+      "defaultVariant": "standard",
+      "variants": [
+        {
+          "id": "standard",
+          "label": {
+            "en": "Standard",
+            "zh": "标准档"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": 272000
+          },
+          "rates": {
+            "input": 0.1,
+            "cachedInput": 0.01,
+            "cacheWrite": 0.125,
+            "output": 0.5
+          }
+        },
+        {
+          "id": "standard-long-context",
+          "label": {
+            "en": "Standard · long context",
+            "zh": "标准档 · 长上下文"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": {
+            "min": 272001,
+            "max": null
+          },
+          "rates": {
+            "input": 0.2,
+            "cachedInput": 0.02,
+            "cacheWrite": 0.25,
+            "output": 0.75
+          },
+          "notes": {
+            "en": "These rates apply to the full request when its input exceeds 272K tokens.",
+            "zh": "请求输入超过 272K tokens 时，整次请求按本档计费。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpt-6.1-sol",
+      "source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+      "checkedAt": "2026-10-19",
+      "defaultVariant": "standard",
+      "variants": [
+        {
+          "id": "standard",
+          "label": {
+            "en": "Standard",
+            "zh": "标准档"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": 272000
+          },
+          "rates": {
+            "input": 2.0,
+            "cachedInput": 0.1,
+            "cacheWrite": 2.5,
+            "output": 10.0
+          }
+        },
+        {
+          "id": "standard-long-context",
+          "label": {
+            "en": "Standard · long context",
+            "zh": "标准档 · 长上下文"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": {
+            "min": 272001,
+            "max": null
+          },
+          "rates": {
+            "input": 4.0,
+            "cachedInput": 0.2,
+            "cacheWrite": 5.0,
+            "output": 15.0
+          },
+          "notes": {
+            "en": "These rates apply to the full request when its input exceeds 272K tokens.",
+            "zh": "请求输入超过 272K tokens 时，整次请求按本档计费。"
+          }
+        }
+      ]
+    }
+  ]
+}

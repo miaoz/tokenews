@@ -25,6 +25,8 @@ import {
 import { BootSkeleton } from "../src/BootSkeleton.tsx";
 import { REPO, SITE_NAME, SiteFooter, SiteHeader, TAGLINE } from "../src/SiteChrome.tsx";
 import Method from "../src/Method.tsx";
+import { ApiPriceDetails } from "../src/ApiPriceDetails.tsx";
+import { apiPriceReference, apiPriceScope, formatApiAmount } from "../src/apiPrices.ts";
 import { loadNews } from "./news.mjs";
 import { buildComparisons } from "../src/comparisons.ts";
 import TurndownService from "turndown";
@@ -65,6 +67,9 @@ const data = JSON.parse(
   await readFile(path.join(root, "public/data/site.json"), "utf8"),
 );
 const updated = data.conventions.updatedAt || data.generatedAt;
+const pageUpdates = new Map();
+const latest = (...dates) => dates.filter(Boolean).sort().at(-1) ?? updated;
+const siteUpdated = latest(updated, data.apiPrices?.updatedAt);
 // The explorer's hashed stylesheet carries the tokens, fonts, header and
 // footer; the static pages load it first so all pages share one design.
 const appCss = (await readFile(path.join(dist, "index.html"), "utf8")).match(
@@ -183,9 +188,7 @@ const familyName = (p) => {
 };
 const listPrice = (lp) => {
   if (!lp) return null;
-  const sym = lp.currency === "CNY" ? "¥" : "$";
-  const f = (n) =>
-    sym + new Intl.NumberFormat("en-US", { maximumSignificantDigits: 4 }).format(n);
+  const f = (n) => formatApiAmount(n, lp.currency);
   return { cached: f(lp.cached), input: f(lp.input), output: f(lp.output) };
 };
 const CONF = { high: ["High", "高"], medium: ["Medium", "中"], low: ["Low", "低"] };
@@ -263,7 +266,9 @@ for (const m of models.values()) {
   m.api = m.points.filter((p) => p.billing === "metered").sort(byPrice);
   m.subs = m.points.filter((p) => p.billing !== "metered");
   m.listPoint = m.api.find((p) => p.list_price) ?? m.points.find((p) => p.list_price) ?? null;
-  m.listBlended = m.points.find((p) => p.list_blended_usd_per_mtok)?.list_blended_usd_per_mtok ?? null;
+  m.apiReference = apiPriceReference(data, m.id);
+  m.listBlended = m.apiReference?.blended ?? null;
+  m.modified = latest(updated, m.apiReference?.checkedAt);
   m.mostTokens = [...m.subs].filter((p) => p.monthly_yi != null).sort((a, b) => b.monthly_yi - a.monthly_yi)[0] ?? null;
   m.channels = [...new Set(m.points.map((p) => p.channel))].sort();
   m.benchmarks = BOARD_ORDER.flatMap((board) => {
@@ -448,6 +453,7 @@ function page({ lang, section, path: urlPath, alt, title, description, keywords,
   const zh = lang === "zh";
   const t = (en, cn) => (zh ? cn : en);
   const url = abs(urlPath);
+  pageUpdates.set(urlPath, graph.modified ?? updated);
   const og = image ?? {
     url: abs(OG[lang].path),
     width: 2880,
@@ -540,7 +546,7 @@ ${
       ? ""
       : `${kicker ? `<p class="kicker">${kicker}</p>\n` : ""}<h1>${esc(h1)}</h1>
 <p class="lead">${lead}</p>
-<p class="updated">${byline ?? `${t("Data updated", "数据更新于")} <time datetime="${updated}">${updated}</time> · <a href="${U.method(lang)}">${t("How real prices are computed", "真实单价的计算方法")}</a>`}</p>
+<p class="updated">${byline ?? `${t("Plan & benchmark data snapshot", "套餐与榜单数据快照")} <time datetime="${updated}">${updated}</time> · <a href="${U.method(lang)}">${t("How real prices are computed", "真实单价的计算方法")}</a>`}</p>
 `
   }${body}
 </main>
@@ -724,7 +730,7 @@ function modelPage(m, lang) {
   const t = (en, cn) => (zh ? cn : en);
   const v = makers.get(m.maker);
   const vName = makerLabel(v, lang);
-  const lp = listPrice(m.listPoint?.list_price);
+  const lp = listPrice(m.apiReference?.prices);
   const c = m.cheapest;
   const nPlans = m.subs.length;
   const topBench = m.benchmarks.slice().sort((a, b) => a.rank / a.of - b.rank / b.of)[0];
@@ -744,8 +750,8 @@ function modelPage(m, lang) {
       : `As of ${updated}, ${m.name} is unmetered on every channel we track (real cost ≈$0).`;
   const listSentence = lp
     ? zh
-      ? `官方 API 标价（每百万 token）：缓存读 ${lp.cached} / 输入 ${lp.input} / 输出 ${lp.output}${m.listBlended ? `；按标准负载折合约 ${usd(m.listBlended)} / 百万 token` : ""}。`
-      : `Official API list price per million tokens: ${lp.cached} cached input, ${lp.input} input, ${lp.output} output${m.listBlended ? ` — about ${usd(m.listBlended)} per million tokens on a standard workload mix` : ""}.`
+      ? `官方 API 标价（每百万 token）：缓存读 ${lp.cached} / 输入 ${lp.input} / 输出 ${lp.output}${m.listBlended != null ? `；按标准负载折合约 ${usd(m.listBlended)} / 百万 token` : ""}。${m.apiReference.checkedAt ? `适用：${apiPriceScope(m.apiReference.variant, lang)}；价格核实于 ${m.apiReference.checkedAt}。` : ""}`
+      : `Official API list price per million tokens: ${lp.cached} cached input, ${lp.input} input, ${lp.output} output${m.listBlended != null ? ` — about ${usd(m.listBlended)} per million tokens on a standard workload mix` : ""}.${m.apiReference.checkedAt ? ` ${apiPriceScope(m.apiReference.variant, lang)}; prices checked ${m.apiReference.checkedAt}.` : ""}`
     : "";
 
   const title = zh
@@ -825,7 +831,7 @@ function modelPage(m, lang) {
       : {}),
     additionalProperty: [
       ...(c ? [{ "@type": "PropertyValue", name: "Lowest real price (USD per million tokens)", value: c.real_usd_per_mtok, unitText: "USD/MTok" }] : []),
-      ...(m.listBlended ? [{ "@type": "PropertyValue", name: "API list price, standard mix (USD per million tokens)", value: m.listBlended, unitText: "USD/MTok" }] : []),
+      ...(m.listBlended != null ? [{ "@type": "PropertyValue", name: "API list price, standard mix (USD per million tokens)", value: m.listBlended, unitText: "USD/MTok" }] : []),
       ...m.benchmarks.map(({ board, best }) => ({ "@type": "PropertyValue", name: `${data.boards[board].name} — ${data.boards[board].metric}`, value: +best.score.toFixed(3) })),
     ],
   };
@@ -853,7 +859,7 @@ ${overview(
   t("Overview", "概览"),
   [
     [t("Lowest real price", "最低真实单价"), c ? `${usd(c.real_usd_per_mtok)}<span class="unit">/MTok</span>` : m.free.length ? "≈$0" : null, c ? esc(planName(c, lang)) : t("unmetered on every channel", "所有渠道均不计额度")],
-    [t("API list price", "API 标价"), m.listBlended ? `${usd(m.listBlended)}<span class="unit">/MTok</span>` : null, t("standard workload mix", "标准负载")],
+    [t("API list price", "API 标价"), m.listBlended != null ? `${usd(m.listBlended)}<span class="unit">/MTok</span>` : null, t("standard workload mix", "标准负载")],
     [t("Most monthly tokens", "最多月额度"), m.mostTokens ? tokens(m.mostTokens, lang) : null, m.mostTokens && esc(planName(m.mostTokens, lang))],
     [t("Plans & APIs", "套餐与 API"), String(m.points.length), zh ? `${nPlans} 个订阅 · ${m.api.length} 个按量 API` : `${plural(nPlans, "subscription")} · ${plural(m.api.length, "metered API")}`],
   ],
@@ -898,7 +904,7 @@ ${m.benchmarks.map((b) => configTable(b, lang)).join("\n")}
 ${
   lp
     ? `<section aria-labelledby="list"><h2 id="list">${t(`${m.name} official API pricing`, `${m.name} 官方 API 定价`)}</h2>
-${table(t("List price per million tokens", "每百万 token 标价"), [t("Cached input", "缓存读"), t("Input", "输入"), t("Output", "输出")], [[lp.cached, lp.input, lp.output]])}</section>`
+${renderToStaticMarkup(createElement(ApiPriceDetails, { reference: m.apiReference, lang }))}</section>`
     : ""
 }
 ${
@@ -959,7 +965,7 @@ ${table(
       [vName, U.maker(v, lang)],
       [m.name, U.model(m, lang)],
     ],
-    graph: { about: { "@id": product["@id"] }, mainEntity: { "@id": product["@id"] }, extra: [product, dataset] },
+    graph: { modified: m.modified, about: { "@id": product["@id"] }, mainEntity: { "@id": product["@id"] }, extra: [product, dataset] },
   });
 }
 
@@ -992,13 +998,13 @@ function makerPage(v, lang) {
       : `As of ${updated}, we track ${n} ${isOther ? "" : `${v.name} `}model${n === 1 ? "" : "s"} across ${v.points.length} plan/channel combinations. The lowest real price is ${best.name} via ${planName(best.cheapest, lang)} at about ${usd(best.cheapest.real_usd_per_mtok)} per million tokens.`
     : "";
   const rows = v.models.map((m) => {
-    const lp = listPrice(m.listPoint?.list_price);
+    const lp = listPrice(m.apiReference?.prices);
     const top = m.benchmarks.find((b) => b.board === "aa_intelligence_index") ?? m.benchmarks[0];
     return [
       modelLink(m, lang),
       m.cheapest ? `<strong>${usd(m.cheapest.real_usd_per_mtok)}</strong>` : "≈$0",
       m.cheapest ? planLink(m.cheapest, lang) : "—",
-      m.listBlended ? usd(m.listBlended) : "—",
+      m.listBlended != null ? usd(m.listBlended) : "—",
       lp ? `${lp.input} / ${lp.output}` : "—",
       m.mostTokens ? `${tokens(m.mostTokens, lang)}` : "—",
       String(m.points.length),
@@ -1088,7 +1094,7 @@ ${relatedNews(newsFor.maker(v), lang)}
       [t("Makers", "厂商"), U.makers(lang)],
       [vName, U.maker(v, lang)],
     ],
-    graph: { about: { "@id": org["@id"] }, mainEntity: { "@id": list["@id"] }, extra: [org, list] },
+    graph: { modified: latest(updated, ...v.models.map((m) => m.modified)), about: { "@id": org["@id"] }, mainEntity: { "@id": list["@id"] }, extra: [org, list] },
   });
 }
 
@@ -1298,7 +1304,7 @@ ${v.score_low != null && v.score_high != null ? `<small class="block">${t("Repor
     r.win.side ? `${esc(side(r.win.side).name)}<small class="block">${r.win.diff < 0.01 ? "&lt;0.01" : `+${fmt(r.win.diff, lang, 2)}`}</small>` : t("Equal score", "分数相同"),
   ]);
   const lists = [a, b];
-  const pricedModels = lists.filter((m) => m.listPoint?.list_price).length;
+  const pricedModels = lists.filter((m) => m.apiReference).length;
   const others = comparisons.filter((x) => x !== c && (x.a === a || x.b === a || x.a === b || x.b === b));
 
   const body = `
@@ -1340,16 +1346,18 @@ ${table(
   boardRows,
 )}</section>
 <section aria-labelledby="list"><h2 id="list">${t("Official API pricing", "官方 API 定价")}</h2>
-<p>${t("An em dash means the current dataset does not include an official API list price.", "— 表示当前数据未收录官方 API 标价。")}</p>
+<p>${t("Each row uses its listed pricing conditions. Cache writes are shown separately; subscription costs above retain their recorded quota basis. An em dash means that rate is not recorded.", "各行价格适用于该行列明的条件。缓存写入费单独展示；上方订阅成本沿用其记录的额度口径。— 表示该项价格尚未收录。")}</p>
 ${table(
   t("List price per million tokens", "每百万 token 标价"),
-  [t("Model", "模型"), t("Cached input", "缓存读"), t("Input", "输入"), t("Output", "输出")],
+  [t("Model / pricing conditions", "模型 / 定价条件"), t("Cached input", "缓存读"), t("Input", "输入"), t("Cache write", "缓存写"), t("Output", "输出")],
   lists.map((m) => {
-    const lp = listPrice(m.listPoint?.list_price);
-    const evidence = lp
-      ? link(U.evidence(m.listPoint, lang), t("Price evidence", "定价依据"))
-      : t("Official API list price not recorded", "当前数据未收录官方 API 标价");
-    return [`${modelLink(m, lang)}<small class="block">${evidence}</small>`, lp?.cached ?? "—", lp?.input ?? "—", lp?.output ?? "—"];
+    const ref = m.apiReference;
+    const lp = listPrice(ref?.prices);
+    const evidence = ref?.source
+      ? `${ext(ref.source, t("Official source", "官方来源"))} · ${t("Checked", "核实于")} <time class="nw" datetime="${esc(ref.checkedAt)}">${esc(ref.checkedAt)}</time>`
+      : lp ? link(U.evidence(m.listPoint, lang), t("Upstream price reference", "上游价格参考"))
+        : t("Official API list price not recorded", "当前数据未收录官方 API 标价");
+    return [`${modelLink(m, lang)}${ref ? `<small class="block">${esc(apiPriceScope(ref.variant, lang))}</small>` : ""}<small class="block">${evidence}</small>${ref?.origin === "maintained" ? `<small class="block">${link(`${U.model(m, lang)}#list`, t("All pricing tiers", "全部价格档位"))}</small>` : ""}`, lp?.cached ?? "—", lp?.input ?? "—", ref ? formatApiAmount(ref.variant.rates.cacheWrite, ref.variant.currency) : "—", lp?.output ?? "—"];
   }),
 )}</section>
 <section aria-labelledby="basis"><h2 id="basis">${t("How to read this comparison", "如何理解这些对比")}</h2>
@@ -1386,7 +1394,7 @@ ${
       [t("Comparisons", "模型对比"), U.compares(lang)],
       [name, U.compare(c, lang)],
     ],
-    graph: { about: [a, b].map((m) => ({ "@id": `${abs(U.model(m, "en"))}#model` })) },
+    graph: { modified: latest(a.modified, b.modified), about: [a, b].map((m) => ({ "@id": `${abs(U.model(m, "en"))}#model` })) },
   });
 }
 
@@ -1486,7 +1494,7 @@ ${table(
     makerLink(makers.get(m.maker), lang),
     m.cheapest ? `<strong>${usd(m.cheapest.real_usd_per_mtok)}</strong>` : "≈$0",
     m.cheapest ? planLink(m.cheapest, lang) : "—",
-    m.listBlended ? usd(m.listBlended) : "—",
+    m.listBlended != null ? usd(m.listBlended) : "—",
   ]),
 )}</section>`
     : ""
@@ -1598,7 +1606,7 @@ function indexPage({ lang, section, path: [en, zh], title, description, keywords
       [NAME[lang], U.home(lang)],
       [h1, urlPath],
     ],
-    graph: { mainEntity: { "@id": list["@id"] }, extra: [list] },
+    graph: { modified: section === "models" ? siteUpdated : updated, mainEntity: { "@id": list["@id"] }, extra: [list] },
   });
 }
 
@@ -1685,7 +1693,7 @@ const modelsIndex = (lang) => {
       makerLink(makers.get(m.maker), lang),
       m.cheapest ? `<strong>${usd(m.cheapest.real_usd_per_mtok)}</strong>` : "≈$0",
       m.cheapest ? planLink(m.cheapest, lang) : "—",
-      m.listBlended ? usd(m.listBlended) : "—",
+      m.listBlended != null ? usd(m.listBlended) : "—",
       String(m.points.length),
     ]),
     items: sorted.map((m) => [m.name, U.model(m, lang)]),
@@ -1877,11 +1885,11 @@ await writeFile(
   path.join(dist, "sitemap.xml"),
   `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-<url><loc>${SITE}/</loc><lastmod>${updated}</lastmod><priority>1.0</priority></url>
+<url><loc>${SITE}/</loc><lastmod>${siteUpdated}</lastmod><priority>1.0</priority></url>
 ${pairs
   .flatMap(([url, priority]) =>
     [url("en"), url("zh")].map(
-      (u) => `<url><loc>${abs(u)}</loc><lastmod>${updated}</lastmod><priority>${priority}</priority>${alternates(url("en"), url("zh"))}</url>`,
+      (u) => `<url><loc>${abs(u)}</loc><lastmod>${pageUpdates.get(u) ?? updated}</lastmod><priority>${priority}</priority>${alternates(url("en"), url("zh"))}</url>`,
     ),
   )
   .join("\n")}
@@ -1895,12 +1903,12 @@ ${news.map((a) => `<url><loc>${abs(U.article(a))}</loc><lastmod>${a.updated}</la
 // llms-full.txt with the key numbers of every model and plan inline.
 const modelLine = (m) => {
   const c = m.cheapest;
-  return `- [${m.name}](${abs(U.model(m, "en"))}): ${c ? `from ${usd(c.real_usd_per_mtok)}/MTok real price via ${planName(c, "en")}` : "unmetered (≈$0)"}${m.listBlended ? `; API list ${usd(m.listBlended)}/MTok (standard mix)` : ""}; ${plural(m.points.length, "plan")}`;
+  return `- [${m.name}](${abs(U.model(m, "en"))}): ${c ? `from ${usd(c.real_usd_per_mtok)}/MTok real price via ${planName(c, "en")}` : "unmetered (≈$0)"}${m.listBlended != null ? `; API list ${usd(m.listBlended)}/MTok (standard mix)` : ""}; ${plural(m.points.length, "plan")}`;
 };
 const comparisonLine = (c) => `- [${compareName(c)}](${abs(U.compare(c, "en"))}): ${c.comparablePlans.length} of ${c.plans.length} shared subscriptions have matching normalized workloads; ${c.boards.length} shared leaderboard snapshots with configuration details and evidence. Raw totals and different workloads are excluded from price ratios.`;
 const intro = `# ${NAME.en}
 
-> ${SITE_NAME} — ${TAGLINE.en} (${TAGLINE.zh}). Every AI model, maker and provider has a page: what each product includes and what each model actually costs — a subscription's monthly fee divided by the tokens you can really use — set against official API list prices and independent leaderboards (Artificial Analysis, Terminal-Bench, Arena, DeepSWE, OpenDesign). Data and methodology come from the open-source Real API Pricing project (${REPO}, MIT licence); every number links to its source. Data updated ${updated}.
+> ${SITE_NAME} — ${TAGLINE.en} (${TAGLINE.zh}). Every AI model, maker and provider has a page: what each product includes and what each model actually costs — a subscription's monthly fee divided by the tokens you can really use — set against official API list prices and independent leaderboards (Artificial Analysis, Terminal-Bench, Arena, DeepSWE, OpenDesign). Plan data and methodology come from the open-source Real API Pricing project (${REPO}, MIT licence). Tokenews independently maintains current official API references with source URLs, verification dates and billing conditions; uncovered models retain upstream references. Plan data snapshot: ${updated}. API catalog latest verification: ${data.apiPrices?.updatedAt ?? "not recorded"}.
 
 Key definitions:
 - Maker: the company that builds a model. Provider: who sells access to it (official or third-party), through plan tiers that each include a set of models.
@@ -1968,7 +1976,7 @@ ${v.models
     (m) => `### ${m.name} (\`${m.id}\`)
 
 Page: ${abs(U.model(m, "en"))}
-${m.listPoint?.list_price ? `Official API list price per MTok: ${(({ cached, input, output }) => `${cached} cached / ${input} input / ${output} output`)(listPrice(m.listPoint.list_price))}${m.listBlended ? ` (${usd(m.listBlended)} standard mix)` : ""}\n` : ""}
+${m.apiReference ? `Official API list price per MTok: ${(({ cached, input, output }) => `${cached} cached / ${input} input / ${output} output`)(listPrice(m.apiReference.prices))}${m.listBlended != null ? ` (${usd(m.listBlended)} standard mix)` : ""}\n${apiPriceScope(m.apiReference.variant, "en")}${m.apiReference.source ? `; checked ${m.apiReference.checkedAt}; source: ${m.apiReference.source}` : "; upstream reference"}\n` : ""}
 | Plan | Provider | Billing | Monthly fee (USD) | Monthly tokens | Real USD/MTok | Data date |
 |---|---|---|---|---|---|---|
 ${m.points.map((p) => `| ${planName(p, "en")} | ${p.channel} | ${p.billing} | ${fee(p) ?? "—"} | ${p.monthly_tokens ?? "—"} | ${unmetered(p) ? "≈0 (unmetered)" : priceExact(p.real_usd_per_mtok)} | ${p.data_date ?? "—"} |`).join("\n")}

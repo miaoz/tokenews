@@ -2868,6 +2868,53 @@ tbody tr.sentinel-row {
 .basis p {
   margin-top: 4px;
 }
+.api-price-table {
+  max-width: 100%;
+  overflow-x: auto;
+  margin: 12px 0;
+}
+.api-price-table table {
+  width: 100%;
+  min-width: 520px;
+  table-layout: fixed;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+}
+.api-price-table caption {
+  text-align: left;
+  color: var(--muted);
+  font: 11px var(--font-mono);
+  padding-bottom: 8px;
+}
+.api-price-table th,
+.api-price-table td {
+  text-align: left;
+  padding: 10px;
+  border-bottom: 1px solid var(--line-2);
+}
+.api-price-table td {
+  white-space: nowrap;
+}
+.api-price-table tr > :first-child {
+  width: 45%;
+  white-space: normal;
+}
+.api-price-scroll-hint {
+  display: none;
+}
+@media (max-width: 600px) {
+  .api-price-scroll-hint {
+    display: block;
+    color: var(--muted);
+    font-size: 12px;
+  }
+}
+.api-price-table .block {
+  display: block;
+  margin-top: 4px;
+  font-weight: 400;
+  color: var(--muted);
+}
 .evidence-fold {
   margin-top: 14px;
   padding: 10px 14px;

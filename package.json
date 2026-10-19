@@ -4,8 +4,10 @@
   "license": "MIT",
   "scripts": {
     "sync": "node scripts/sync-upstream.mjs",
+    "prices:check": "node scripts/api-prices.mjs check",
+    "prices:report": "node scripts/api-prices.mjs report",
     "build": "npm --prefix web ci && npm --prefix web run build",
-    "test": "npm --prefix web test",
+    "test": "node --test scripts/lib/api-prices.test.mjs && npm --prefix web test",
     "check": "node web/scripts/check-pages.mjs",
     "news:publish": "node web/scripts/publish-news.mjs",
     "cf:dev": "wrangler dev",
