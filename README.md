@@ -6,6 +6,8 @@
 
 Every AI model, maker (厂商) and provider (供应商) has its own page: what each product includes, what each model really costs — a subscription's monthly fee divided by the tokens you can actually use — set against official API list prices and independent leaderboards. An interactive explorer plots price against capability.
 
+Curated model comparisons at `/compare/` (Chinese: `/zh/compare/`) put shared subscriptions, token costs and archived benchmark configurations side by side. Price ratios require matching normalized workloads; raw measurements retain their dates and evidence without contributing to the price comparison counts.
+
 ## How it is built
 
 ```
