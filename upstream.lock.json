@@ -1,8 +1,8 @@
 {
   "repository": "https://github.com/Fei2411/real-api-pricing",
   "ref": "main",
-  "commit": "89480751e6b13b71f5d2b1d7b67ab6bbf72a37f8",
-  "committedAt": "2026-10-16T16:31:46+08:00",
+  "commit": "0be92b7ce3edf7690672ce5217607032a4bc7c45",
+  "committedAt": "2026-10-19T10:41:28+08:00",
   "paths": [
     "LICENSE",
     "config",
@@ -14,7 +14,7 @@
     "charts/en/pareto/pareto-aa-intelligence.png",
     "charts/zh/pareto/帕累托_AA智力榜.png"
   ],
-  "dataSha256": "798ca2f3275678ae98d5b17981163e36b03467ac2489d4abe3f322cef79c0b87",
+  "dataSha256": "86d07dd08408212dbaec15055e44b60ce0baaa7c3e2b312c21a6002d04367d36",
   "upstreamAdapter": {
     "path": "scripts/lib/build-site-data.mjs",
     "sha256": "b6dd06442a3132350d84edba1bf72d53275be520f569f7cb5f9a74d2d28ab0d4"
