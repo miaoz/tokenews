@@ -1297,7 +1297,8 @@ ${v.score_low != null && v.score_high != null ? `<small class="block">${t("Repor
     scoreCell(r.b),
     r.win.side ? `${esc(side(r.win.side).name)}<small class="block">${r.win.diff < 0.01 ? "&lt;0.01" : `+${fmt(r.win.diff, lang, 2)}`}</small>` : t("Equal score", "分数相同"),
   ]);
-  const lists = [a, b].filter((m) => m.listPoint?.list_price);
+  const lists = [a, b];
+  const pricedModels = lists.filter((m) => m.listPoint?.list_price).length;
   const others = comparisons.filter((x) => x !== c && (x.a === a || x.b === a || x.a === b || x.b === b));
 
   const body = `
@@ -1308,7 +1309,7 @@ ${overview(
     [t("Shared subscriptions", "共同订阅套餐"), String(n), t("Both models available", "两者均可使用")],
     [t("Comparable workloads", "同口径套餐"), String(q), t("Used for price ratios", "仅这些记录计算单价比")],
     [t("Shared leaderboards", "共同榜单"), String(k), t("Highest archived configurations", "各取最高存档配置")],
-    [t("Official API prices", "官方 API 标价"), `${lists.length}<span class="unit">/ 2</span>`, t("Models with list prices", "有标价的模型数")],
+    [t("Official API prices", "官方 API 标价"), `${pricedModels}<span class="unit">/ 2</span>`, t("Models with list prices", "有标价的模型数")],
   ],
   [
     [t("Makers", "厂商"), va === vb ? makerLink(va, lang) : `${makerLink(va, lang)} · ${makerLink(vb, lang)}`],
@@ -1338,19 +1339,19 @@ ${table(
   [t("Leaderboard", "榜单"), t("Metric", "指标"), esc(a.name), esc(b.name), t("Higher archived score", "较高存档成绩")],
   boardRows,
 )}</section>
-${
-  lists.length
-    ? `<section aria-labelledby="list"><h2 id="list">${t("Official API pricing", "官方 API 定价")}</h2>
+<section aria-labelledby="list"><h2 id="list">${t("Official API pricing", "官方 API 定价")}</h2>
+<p>${t("An em dash means the current dataset does not include an official API list price.", "— 表示当前数据未收录官方 API 标价。")}</p>
 ${table(
   t("List price per million tokens", "每百万 token 标价"),
   [t("Model", "模型"), t("Cached input", "缓存读"), t("Input", "输入"), t("Output", "输出")],
   lists.map((m) => {
-    const lp = listPrice(m.listPoint.list_price);
-    return [`${modelLink(m, lang)}<small class="block">${link(U.evidence(m.listPoint, lang), t("Price evidence", "定价依据"))}</small>`, lp.cached, lp.input, lp.output];
+    const lp = listPrice(m.listPoint?.list_price);
+    const evidence = lp
+      ? link(U.evidence(m.listPoint, lang), t("Price evidence", "定价依据"))
+      : t("Official API list price not recorded", "当前数据未收录官方 API 标价");
+    return [`${modelLink(m, lang)}<small class="block">${evidence}</small>`, lp?.cached ?? "—", lp?.input ?? "—", lp?.output ?? "—"];
   }),
-)}</section>`
-    : ""
-}
+)}</section>
 <section aria-labelledby="basis"><h2 id="basis">${t("How to read this comparison", "如何理解这些对比")}</h2>
 <p>${t(
   "Price ratios compare recorded USD/MTok under the same known workload. Raw measured totals, different workloads and unmetered access remain visible but are excluded from the lower-cost counts. Recorded allowances assume using the quota; your effective cost depends on utilization, cache mix, output mix and plan limits. Qualitative confidence is not an error bar.",
