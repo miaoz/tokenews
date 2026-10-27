@@ -170,6 +170,7 @@ test("All source point values and stable IDs survive the adapter, including null
     assert.ok(p);
     assert.equal(p.real_usd_per_mtok, Number(a.real_usd_per_mtok));
     assert.equal(p.price_usd, a.price_usd === "" ? null : Number(a.price_usd));
+    assert.equal(p.monthly_yi, a.monthly_yi === "" ? null : Number(a.monthly_yi));
     assert.equal(
       p.monthly_tokens,
       a.monthly_tokens === "" ? null : Number(a.monthly_tokens),
@@ -230,12 +231,21 @@ test("DeepSWE keeps effort levels and vendor provenance through the adapter", ()
   assert.equal(deepseek.mapping?.score_is_self_reported, true);
   assert.equal(deepseek.mapping?.agent_harness, "mini-SWE");
 });
-test("Command Code GOAT DeepSeek V4.1 Flash uses $60 monthly credits", () => {
+test("Command Code GOAT DeepSeek V4.1 Flash preserves adopted quota and fee-per-token precision", () => {
   const p = data.points.find((p) => p.id === "command_code_goat::deepseek-v4.1-flash")!;
-  // $60 allowance ÷ off-peak (97/2.5/0.5 × $0.003/$0.15/$0.60 = $0.00966/MTok).
-  assert.equal(p.monthly_yi, 62.112);
-  assert.equal(p.real_usd_per_mtok, 0.0016099948);
-  assert.equal(price(p.real_usd_per_mtok), "$0.00161");
+  const a = adopted.find((a) => `${a.plan_id}::${a.served_model}` === p.id)!;
+  // Quota adoption belongs to upstream. Our adapter must preserve its current
+  // value, including the 2026-10-20 change from $60 to min($70 shared, $80 model).
+  assert.equal(p.monthly_yi, Number(a.monthly_yi));
+  assert.equal(p.monthly_tokens, Number(a.monthly_tokens));
+  assert.equal(p.monthly_tokens, Math.round(p.monthly_yi! * 1e8));
+  assert.equal(
+    p.real_usd_per_mtok,
+    Number((Number(a.price_usd) / Number(a.monthly_tokens) * 1e6).toPrecision(8)),
+  );
+  // Keep exact display regressions for both the previous and current quota.
+  assert.equal(price(0.0016099948), "$0.00161");
+  assert.equal(price(0.0013799956), "$0.00138");
 });
 test("Default selection includes every adopted point, including unscored models", () => {
   const rows = rowsFor(data, defaultState());
@@ -666,14 +676,23 @@ test("Chart search AND-matches plan, channel and model fields and dedupes points
   // Multi-token AND is order-independent: the plan tier and vendor must both hit.
   const forward = searchMatches(gs, "kimi 199", "en");
   const backward = searchMatches(gs, "199 kimi", "en");
+  // Every adopted ¥199 Kimi tier must match, including legacy Allegretto and
+  // the new Pro tier. Future additions must not be mistaken for search errors.
+  const expected = adopted
+    .filter((a) => a.plan_id.startsWith("kimi_") && a.currency === "CNY" && Number(a.price) === 199)
+    .map((a) => `${a.plan_id}::${a.served_model}`)
+    .sort();
+  assert.ok(expected.length);
   assert.deepEqual(
     forward.map((r) => r.point.id).sort(),
-    ["kimi_allegretto_cn::kimi-k2.7-code", "kimi_allegretto_cn::kimi-k3"],
+    expected,
   );
   assert.deepEqual(
     backward.map((r) => r.point.id).sort(),
     forward.map((r) => r.point.id).sort(),
   );
+  assert.deepEqual(searchMatches(gs, "kimi 199", "zh").map((r) => r.point.id).sort(), expected);
+  assert.deepEqual(searchMatches(gs, "kimi 199 not-a-plan", "en"), []);
   // Cross-field hits: localized plan name, channel and model slug.
   const allegretto = searchMatches(gs, "Allegretto", "en");
   assert.ok(allegretto.length);
