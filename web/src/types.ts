@@ -133,6 +133,9 @@ export interface SiteData {
   supersededPoints?: Point[];
   codingPlanUpdatedAt?: string;
   codingPlanReviews?: {channel:string;models:string[];relatedModels?:string[];status:string;checkedAt:string;note:{en:string;zh:string};source:string}[];
+  codingPlanWatch?: {checkedAt:string;intervalHours:number;failedSources:number;
+    sources:{id:string;channel:string;url:string;status:string;lastSuccessAt?:string}[];
+    pending:{id:string;channel:string;kind:string;url:string;detectedAt:string;after?:{label?:string}|null}[]};
   configurations: Configuration[];
   mappings: Mapping[];
   boards: Record<

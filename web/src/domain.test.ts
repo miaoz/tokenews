@@ -556,6 +556,9 @@ test("Third-party access lines put the reseller before the model manufacturer", 
   assert.equal(accessLine(step), "Command Code | StepFun");
 });
 test("Language conversion only changes display units and labels", () => {
+  assert.equal(displayPlan("OpenCode Go Off-peak", "zh"), "OpenCode Go 非高峰时段");
+  assert.equal(displayPlan("OpenCode Go Peak", "zh"), "OpenCode Go 高峰时段");
+  assert.equal(displayPlan("OpenCode Go Off-peak", "en"), "OpenCode Go Off-peak");
   const p = { ...data.points[0], monthly_yi: 77.37 };
   assert.equal(allowance(p, "en"), "7.737 B");
   assert.equal(allowance(p, "zh"), "77.37 亿");

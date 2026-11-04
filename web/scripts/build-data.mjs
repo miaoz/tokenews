@@ -29,6 +29,7 @@ const data = attachRefreshStatus(mergeCurrentLeaderboards(pricedData, current), 
 // Keep adopted points byte-for-byte meaningful: current prices never replace
 // the historical list_price / blended reference used to explain a quota.
 data.apiPrices = catalog;
+data.codingPlanWatch = JSON.parse(await readFile(path.resolve(root, '../data/coding-plans/watch-report.json'), 'utf8'));
 const coverage = priceCoverage(catalog, data.points, data.models);
 await mkdir(path.join(out, "evidence"), { recursive: true });
 await rm(path.join(out, "api-prices"), { recursive: true, force: true });
@@ -42,6 +43,7 @@ await writeFile(path.join(out, "current-leaderboards.json"), JSON.stringify(curr
 await writeFile(path.join(out, "leaderboard-coverage.json"), JSON.stringify(data.leaderboardCoverage));
 await writeFile(path.join(out, "leaderboard-refresh.json"), JSON.stringify(refresh));
 await writeFile(path.join(out, "coding-plans.json"), JSON.stringify(codingPlans));
+await writeFile(path.join(out, "coding-plan-watch.json"), JSON.stringify(data.codingPlanWatch));
 await writeFile(path.join(out, "superseded-points.json"), JSON.stringify(data.supersededPoints));
 for (const file of codingPlans.evidenceFiles) {
   await copyFile(path.resolve(root, '../data/coding-plans', file), path.join(out, 'evidence', `coding-plans-${file}`));

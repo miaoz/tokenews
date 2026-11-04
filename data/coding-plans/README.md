@@ -61,3 +61,51 @@ have a price table while remaining off the plot until a compatible score exists.
 Update official announcements, release notes, plan tables and identity evidence
 together, then run `npm test`, `npm --prefix web run build`, and `npm run check`.
 The daily leaderboard workflow does not independently refresh plan credits.
+
+## Scheduled announcement and plan watch
+
+`.github/workflows/watch-coding-plans.yml` checks the configured sources every six
+hours (`23 */6 * * *`, UTC) and can be run manually. GitHub schedules may be delayed.
+It publishes the last check, failed sources and persistent pending changes on
+the explorer, methodology and provider pages, with the full report at
+`/data/coding-plan-watch.json`. Status older than 18 hours is flagged as stale.
+
+`npm run coding-plans:watch` checks the source registry in `watch-sources.json`:
+public release notes, official announcements, model/endpoint lists, plan tables,
+rolling limits, discounts and promotion expiry. Direct HTTP retrieval falls back
+to Chromium for rendered pages. Install it with `npx playwright install chromium
+--only-shell`. `--allow-partial` publishes successful observations plus explicit
+failure statuses; the default exits nonzero on a source failure.
+
+Social discovery first tries official X syndication; a mirror may supply post
+IDs when discovery is unavailable. Only the configured official account's X
+oEmbed response can establish announcement content. Unverifiable posts fail the
+source check and preserve its last successful snapshot. A failure is never an
+assertion that there were no announcements.
+
+The first successful fetch establishes a comparison baseline, not retrospective
+verification. Subsequent observations identify added/removed rows, changed
+prices and credit limits, relevant release/terms changes, and expiring promotions.
+Whitespace, scripts and navigation are ignored. Empty/bot pages and large losses
+of table coverage fail structural guards. Source failures preserve the last good
+snapshot. Records store table facts, hashes and model mentions rather than
+copies of complete announcements. Snapshots and unresolved events are retained
+in `watch-state.json`; workflow artifacts also retain each run for 30 days.
+
+Discovery never silently upgrades a model alias or copies quotas to another
+model. To process a pending event:
+
+1. Follow its official URL and inspect `before`/`after` in `watch-report.json`.
+2. Check exact model identity, eligible tiers, context/time bands, shared caps,
+   cache billing and any expiry. Update `current.json`, catalog and evidence as
+   needed. Existing approved promotion fallbacks still apply automatically.
+3. Add an object to `watch-resolutions.json` with the event's full `id`,
+   `status: "accepted"` or `"dismissed"`, `reviewedAt` (ISO date/time), and a
+   nonempty `reason` describing the evidence and resulting action.
+4. Run the watch, build, tests and page checks. Pending events persist until an
+   explicit resolution; they are not cleared by an unchanged or failed fetch.
+
+The three data workflows share one concurrency group and check out current
+`main` after waiting, preventing scheduled updates from racing each other.
+A successful watch publishes its report through the existing validated deploy
+workflow. Reviewed price data stays available when one source is unreachable.

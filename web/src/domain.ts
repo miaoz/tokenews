@@ -868,7 +868,7 @@ export const accessLine = (p: Point) =>
 export function displayPlan(plan: string, lang: string): string {
   if (plan.startsWith("GLM "))
     plan = plan.replaceAll("老客", "v2").replaceAll("新客", "v3");
-  if (lang === "zh") return plan;
+  if (lang === "zh") return plan.replace(/\bOff-peak\b/gi, '非高峰时段').replace(/\bPeak\b/g, '高峰时段');
   const words: Record<string, string> = {
     // Same-name CN/global tiers are merged into one point priced at the
     // international USD list; English shows the international tier name.

@@ -1,0 +1,237 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": "opencode-go",
+      "channel": "OpenCode",
+      "kind": "tables",
+      "url": "https://opencode.ai/v2/docs/console/go/",
+      "required": [
+        "Go Plus",
+        "Monthly limit"
+      ],
+      "minRecords": 60
+    },
+    {
+      "id": "opencode-releases",
+      "channel": "OpenCode",
+      "kind": "document",
+      "url": "https://opencode.ai/changelog",
+      "required": [
+        "Changelog"
+      ],
+      "minRecords": 5
+    },
+    {
+      "id": "command-code-go",
+      "channel": "Command Code",
+      "kind": "tables",
+      "url": "https://commandcode.ai/docs/plans/go",
+      "required": [
+        "credits",
+        "Model"
+      ],
+      "minRecords": 30
+    },
+    {
+      "id": "command-code-goat",
+      "channel": "Command Code",
+      "kind": "tables",
+      "url": "https://commandcode.ai/docs/plans/goat",
+      "required": [
+        "credits",
+        "Model"
+      ],
+      "minRecords": 30
+    },
+    {
+      "id": "command-code-pro",
+      "channel": "Command Code",
+      "kind": "tables",
+      "url": "https://commandcode.ai/docs/plans/pro",
+      "required": [
+        "credits",
+        "Model"
+      ],
+      "minRecords": 30
+    },
+    {
+      "id": "command-code-max",
+      "channel": "Command Code",
+      "kind": "tables",
+      "url": "https://commandcode.ai/docs/plans/max",
+      "required": [
+        "credits",
+        "Model"
+      ],
+      "minRecords": 30
+    },
+    {
+      "id": "command-code-models",
+      "channel": "Command Code",
+      "kind": "tables",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "required": [
+        "Available models",
+        "Model ID"
+      ],
+      "minRecords": 40
+    },
+    {
+      "id": "command-code-terms",
+      "channel": "Command Code",
+      "kind": "tables",
+      "url": "https://commandcode.ai/docs/resources/pricing-limits",
+      "required": [
+        "Pricing",
+        "Credits"
+      ],
+      "minRecords": 40
+    },
+    {
+      "id": "command-code-releases",
+      "channel": "Command Code",
+      "kind": "document",
+      "url": "https://commandcode.ai/changelog",
+      "required": [
+        "Changelog"
+      ],
+      "minRecords": 10
+    },
+    {
+      "id": "ollama-pricing",
+      "channel": "Ollama",
+      "kind": "tables",
+      "url": "https://ollama.com/pricing",
+      "required": [
+        "Pricing",
+        "Model"
+      ],
+      "minRecords": 10
+    },
+    {
+      "id": "ollama-announcements",
+      "channel": "Ollama",
+      "kind": "document",
+      "url": "https://ollama.com/blog",
+      "required": [
+        "Ollama"
+      ],
+      "minRecords": 4
+    },
+    {
+      "id": "factory-models",
+      "channel": "Factory",
+      "kind": "tables",
+      "url": "https://docs.factory.com/models.md",
+      "required": [
+        "Models",
+        "Multiplier"
+      ],
+      "minRecords": 15
+    },
+    {
+      "id": "factory-plans",
+      "channel": "Factory",
+      "kind": "document",
+      "url": "https://docs.factory.com/pricing/individuals.md",
+      "required": [
+        "Individual",
+        "Rate Limits"
+      ],
+      "minRecords": 5
+    },
+    {
+      "id": "factory-releases",
+      "channel": "Factory",
+      "kind": "document",
+      "url": "https://docs.factory.com/changelog/release-notes.md",
+      "required": [
+        "CLI",
+        "Desktop"
+      ],
+      "minRecords": 10
+    },
+    {
+      "id": "cursor-pricing",
+      "channel": "Cursor",
+      "kind": "tables",
+      "url": "https://cursor.com/docs/models-and-pricing",
+      "required": [
+        "Models",
+        "Pricing"
+      ],
+      "minRecords": 8
+    },
+    {
+      "id": "cursor-releases",
+      "channel": "Cursor",
+      "kind": "document",
+      "url": "https://cursor.com/changelog",
+      "required": [
+        "Changelog"
+      ],
+      "minRecords": 5
+    },
+    {
+      "id": "devin-releases",
+      "channel": "Devin",
+      "kind": "document",
+      "url": "https://docs.devin.ai/release-notes/overview",
+      "required": [
+        "Recent Updates",
+        "Devin"
+      ],
+      "minRecords": 5
+    },
+    {
+      "id": "alibaba-coding-global",
+      "channel": "Alibaba",
+      "kind": "tables",
+      "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan",
+      "required": [
+        "Coding Plan"
+      ],
+      "minRecords": 2
+    },
+    {
+      "id": "alibaba-coding-cn",
+      "channel": "Alibaba",
+      "kind": "tables",
+      "url": "https://help.aliyun.com/zh/model-studio/coding-plan",
+      "required": [
+        "Coding Plan"
+      ],
+      "minRecords": 2
+    },
+    {
+      "id": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "tables",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "required": [
+        "Credits",
+        "个人版"
+      ],
+      "minRecords": 8
+    },
+    {
+      "id": "opencode-social",
+      "channel": "OpenCode",
+      "kind": "social",
+      "url": "https://x.com/opencode",
+      "account": "opencode",
+      "discoveryUrl": "https://teapawt.net/opencode",
+      "note": "Mirror discovers post IDs only; accept content only after official X oEmbed author and URL verification. Retrieval failures remain visible."
+    },
+    {
+      "id": "command-code-social",
+      "channel": "Command Code",
+      "kind": "social",
+      "url": "https://x.com/CommandCodeAI",
+      "account": "CommandCodeAI",
+      "discoveryUrl": "https://teapawt.net/CommandCodeAI",
+      "note": "Mirror discovers post IDs only; accept content only after official X oEmbed author and URL verification. Retrieval failures remain visible."
+    }
+  ]
+}

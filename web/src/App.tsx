@@ -25,6 +25,7 @@ import { ThemeContext, type Theme } from "./theme";
 import BrandIcon from "./BrandIcon";
 import Chart from "./Chart";
 import LeaderboardCoverage from "./LeaderboardCoverage";
+import CodingPlanWatch from "./CodingPlanWatch";
 import { loadNotes, unpackData } from "./loadData";
 import ResizeHandle from "./ResizeHandle";
 import { useIncremental } from "./useIncremental";
@@ -1085,6 +1086,7 @@ function Explorer({
                 />
               )}
               {state.view === "pareto" && <LeaderboardCoverage data={data} board={state.board} lang={state.lang} />}
+              {state.view === "pareto" && <CodingPlanWatch data={data} lang={state.lang} />}
               {state.view === "pareto" && (
                 <div className="chart-foot">
                   {noScore.length > 0 ? (

@@ -18,7 +18,7 @@ permissions:
   issues: write
 
 concurrency:
-  group: sync-upstream
+  group: tokenews-data-updates
   cancel-in-progress: false
 
 jobs:
@@ -30,6 +30,8 @@ jobs:
       sha: ${{ steps.push.outputs.sha }}
     steps:
       - uses: actions/checkout@v7
+        with:
+          ref: main
       - uses: actions/setup-node@v7
         with:
           node-version-file: .node-version

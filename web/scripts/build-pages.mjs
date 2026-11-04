@@ -25,6 +25,7 @@ import {
 import { BootSkeleton } from "../src/BootSkeleton.tsx";
 import { REPO, SITE_NAME, SiteFooter, SiteHeader, TAGLINE } from "../src/SiteChrome.tsx";
 import Method from "../src/Method.tsx";
+import CodingPlanWatch from "../src/CodingPlanWatch.tsx";
 import { ApiPriceDetails } from "../src/ApiPriceDetails.tsx";
 import { apiPriceReference, apiPriceScope, formatApiAmount } from "../src/apiPrices.ts";
 import { loadNews } from "./news.mjs";
@@ -33,6 +34,7 @@ import TurndownService from "turndown";
 import { gfm } from "turndown-plugin-gfm";
 import {
   dataDateLine,
+  displayPlan,
   effortLabel,
   firstUrl,
   listPriceLine,
@@ -163,7 +165,7 @@ const planName = (p, lang) => {
   let plan = p.plan;
   if (plan.startsWith("GLM "))
     plan = plan.replaceAll("老客", "v2").replaceAll("新客", "v3");
-  if (lang === "zh") return plan;
+  if (lang === "zh") return displayPlan(plan, lang);
   if (p.plan_en) return p.plan_en;
   const words = {
     "Kimi 会员 49": "Kimi Andante (CN)",
@@ -1218,6 +1220,7 @@ ${table(t("Plans by monthly fee", "套餐，按月费排序"), [t("Plan", "套�
 ${tierSections}
 </section>
 ${codingPlanReviews((data.codingPlanReviews ?? []).filter(r=>r.channel===pr.name), lang)}
+${renderToStaticMarkup(createElement(CodingPlanWatch, {data,lang,channel:pr.name}))}
 ${relatedNews(newsFor.provider(pr), lang)}
 <p><a class="button" href="${U.explorer(lang, `&channels=${encodeURIComponent(pr.name)}`)}">${t("Open in the interactive explorer", "在交互式图表中查看")}<span class="arrow" aria-hidden="true">→</span></a></p>`;
   return page({
