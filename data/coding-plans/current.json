@@ -147,14 +147,14 @@
     },
     {
       "plan": "opencode_go",
-      "model": "deepseek-v4.1-flash",
+      "model": "deepseek-v4.1-flash-1017",
       "endpoint": "deepseek-v4.1-flash",
       "checkedAt": "2026-11-04",
       "source": "https://opencode.ai/v2/docs/console/go/",
-      "identitySource": "https://models.dev/api.json",
+      "identitySource": "https://x.com/opencode/status/2112220734768779441",
       "identityNote": {
-        "zh": "官方目录仍为不带日期的 deepseek-v4.1-flash，未确认等同于 1017，因此仅连接原通用型号。高峰为周一至周五 UTC 01–04、06–10。需启用 Global 区域。",
-        "en": "The catalog still uses undated deepseek-v4.1-flash, not a verified 1017 alias; only the generic model is joined. Peak: weekdays 01-04 and 06-10 UTC. Enable the Global region."
+        "zh": "OpenCode 官方 2026-10-19 公告确认 Go 已升级为 1017，调用别名保持 deepseek-v4.1-flash。需启用 Global 区域。仅连接 1017 的评测；高峰为周一至周五 UTC 01–04、06–10。",
+        "en": "OpenCode confirmed Go upgraded to 1017 on 2026-10-19 without changing the deepseek-v4.1-flash alias. Enable Global region. Join only 1017 benchmarks. Peak: weekdays 01-04 and 06-10 UTC."
       },
       "rates": {
         "input": 0.15,
@@ -170,14 +170,14 @@
     },
     {
       "plan": "opencode_go",
-      "model": "deepseek-v4.1-flash",
+      "model": "deepseek-v4.1-flash-1017",
       "endpoint": "deepseek-v4.1-flash",
       "checkedAt": "2026-11-04",
       "source": "https://opencode.ai/v2/docs/console/go/",
-      "identitySource": "https://models.dev/api.json",
+      "identitySource": "https://x.com/opencode/status/2112220734768779441",
       "identityNote": {
-        "zh": "官方目录仍为不带日期的 deepseek-v4.1-flash，未确认等同于 1017，因此仅连接原通用型号。高峰为周一至周五 UTC 01–04、06–10。需启用 Global 区域。",
-        "en": "The catalog still uses undated deepseek-v4.1-flash, not a verified 1017 alias; only the generic model is joined. Peak: weekdays 01-04 and 06-10 UTC. Enable the Global region."
+        "zh": "OpenCode 官方 2026-10-19 公告确认 Go 已升级为 1017，调用别名保持 deepseek-v4.1-flash。需启用 Global 区域。仅连接 1017 的评测；高峰为周一至周五 UTC 01–04、06–10。",
+        "en": "OpenCode confirmed Go upgraded to 1017 on 2026-10-19 without changing the deepseek-v4.1-flash alias. Enable Global region. Join only 1017 benchmarks. Peak: weekdays 01-04 and 06-10 UTC."
       },
       "rates": {
         "input": 0.3,
@@ -251,14 +251,14 @@
     },
     {
       "plan": "opencode_go_plus",
-      "model": "deepseek-v4.1-flash",
+      "model": "deepseek-v4.1-flash-1017",
       "endpoint": "deepseek-v4.1-flash",
       "checkedAt": "2026-11-04",
       "source": "https://opencode.ai/v2/docs/console/go/",
-      "identitySource": "https://models.dev/api.json",
+      "identitySource": "https://x.com/opencode/status/2112220734768779441",
       "identityNote": {
-        "zh": "官方目录仍为不带日期的 deepseek-v4.1-flash，未确认等同于 1017，因此仅连接原通用型号。高峰为周一至周五 UTC 01–04、06–10。需启用 Global 区域。",
-        "en": "The catalog still uses undated deepseek-v4.1-flash, not a verified 1017 alias; only the generic model is joined. Peak: weekdays 01-04 and 06-10 UTC. Enable the Global region."
+        "zh": "OpenCode 官方 2026-10-19 公告确认 Go 已升级为 1017，调用别名保持 deepseek-v4.1-flash。需启用 Global 区域。仅连接 1017 的评测；高峰为周一至周五 UTC 01–04、06–10。",
+        "en": "OpenCode confirmed Go upgraded to 1017 on 2026-10-19 without changing the deepseek-v4.1-flash alias. Enable Global region. Join only 1017 benchmarks. Peak: weekdays 01-04 and 06-10 UTC."
       },
       "rates": {
         "input": 0.15,
@@ -274,14 +274,14 @@
     },
     {
       "plan": "opencode_go_plus",
-      "model": "deepseek-v4.1-flash",
+      "model": "deepseek-v4.1-flash-1017",
       "endpoint": "deepseek-v4.1-flash",
       "checkedAt": "2026-11-04",
       "source": "https://opencode.ai/v2/docs/console/go/",
-      "identitySource": "https://models.dev/api.json",
+      "identitySource": "https://x.com/opencode/status/2112220734768779441",
       "identityNote": {
-        "zh": "官方目录仍为不带日期的 deepseek-v4.1-flash，未确认等同于 1017，因此仅连接原通用型号。高峰为周一至周五 UTC 01–04、06–10。需启用 Global 区域。",
-        "en": "The catalog still uses undated deepseek-v4.1-flash, not a verified 1017 alias; only the generic model is joined. Peak: weekdays 01-04 and 06-10 UTC. Enable the Global region."
+        "zh": "OpenCode 官方 2026-10-19 公告确认 Go 已升级为 1017，调用别名保持 deepseek-v4.1-flash。需启用 Global 区域。仅连接 1017 的评测；高峰为周一至周五 UTC 01–04、06–10。",
+        "en": "OpenCode confirmed Go upgraded to 1017 on 2026-10-19 without changing the deepseek-v4.1-flash alias. Enable Global region. Join only 1017 benchmarks. Peak: weekdays 01-04 and 06-10 UTC."
       },
       "rates": {
         "input": 0.3,
@@ -352,14 +352,14 @@
     },
     {
       "plan": "opencode_go_teams",
-      "model": "deepseek-v4.1-flash",
+      "model": "deepseek-v4.1-flash-1017",
       "endpoint": "deepseek-v4.1-flash",
       "checkedAt": "2026-11-04",
       "source": "https://opencode.ai/v2/docs/console/go/",
-      "identitySource": "https://models.dev/api.json",
+      "identitySource": "https://x.com/opencode/status/2112220734768779441",
       "identityNote": {
-        "zh": "官方目录仍为不带日期的 deepseek-v4.1-flash，未确认等同于 1017，因此仅连接原通用型号。高峰为周一至周五 UTC 01–04、06–10。需启用 Global 区域。",
-        "en": "The catalog still uses undated deepseek-v4.1-flash, not a verified 1017 alias; only the generic model is joined. Peak: weekdays 01-04 and 06-10 UTC. Enable the Global region."
+        "zh": "OpenCode 官方 2026-10-19 公告确认 Go 已升级为 1017，调用别名保持 deepseek-v4.1-flash。需启用 Global 区域。仅连接 1017 的评测；高峰为周一至周五 UTC 01–04、06–10。",
+        "en": "OpenCode confirmed Go upgraded to 1017 on 2026-10-19 without changing the deepseek-v4.1-flash alias. Enable Global region. Join only 1017 benchmarks. Peak: weekdays 01-04 and 06-10 UTC."
       },
       "rates": {
         "input": 0.15,
@@ -375,14 +375,14 @@
     },
     {
       "plan": "opencode_go_teams",
-      "model": "deepseek-v4.1-flash",
+      "model": "deepseek-v4.1-flash-1017",
       "endpoint": "deepseek-v4.1-flash",
       "checkedAt": "2026-11-04",
       "source": "https://opencode.ai/v2/docs/console/go/",
-      "identitySource": "https://models.dev/api.json",
+      "identitySource": "https://x.com/opencode/status/2112220734768779441",
       "identityNote": {
-        "zh": "官方目录仍为不带日期的 deepseek-v4.1-flash，未确认等同于 1017，因此仅连接原通用型号。高峰为周一至周五 UTC 01–04、06–10。需启用 Global 区域。",
-        "en": "The catalog still uses undated deepseek-v4.1-flash, not a verified 1017 alias; only the generic model is joined. Peak: weekdays 01-04 and 06-10 UTC. Enable the Global region."
+        "zh": "OpenCode 官方 2026-10-19 公告确认 Go 已升级为 1017，调用别名保持 deepseek-v4.1-flash。需启用 Global 区域。仅连接 1017 的评测；高峰为周一至周五 UTC 01–04、06–10。",
+        "en": "OpenCode confirmed Go upgraded to 1017 on 2026-10-19 without changing the deepseek-v4.1-flash alias. Enable Global region. Join only 1017 benchmarks. Peak: weekdays 01-04 and 06-10 UTC."
       },
       "rates": {
         "input": 0.3,
@@ -398,14 +398,14 @@
     },
     {
       "plan": "command_code_goat",
-      "model": "deepseek-v4.1-flash",
+      "model": "deepseek-v4.1-flash-1017",
       "endpoint": "deepseek-v4.1-flash",
       "checkedAt": "2026-11-04",
       "source": "https://commandcode.ai/docs/plans/goat",
-      "identitySource": "https://commandcode.ai/models/deepseek-v4-1-flash",
+      "identitySource": "https://x.com/CommandCodeAI/status/2116329543921475861",
       "identityNote": {
-        "zh": "渠道标注 latest，但发布日期仍为 9 月 10 日，无法核实 1017 对应关系；保留通用型号。高峰为周一至周五 UTC 01–04、06–10。",
-        "en": "The channel says latest but still lists September 10; no verified 1017 mapping. Keep the generic identity. Peak: weekdays 01-04 and 06-10 UTC."
+        "zh": "Command Code 官方公告确认 GOAT 提供 DeepSeek V4.1 Flash 1017，渠道仍使用不带日期的别名。仅连接 1017 的评测；高峰为周一至周五 UTC 01–04、06–10。",
+        "en": "Command Code officially identifies the GOAT model as DeepSeek V4.1 Flash 1017 under the existing undated alias. Join only 1017 benchmarks. Peak: weekdays 01-04 and 06-10 UTC."
       },
       "rates": {
         "input": 0.15,
@@ -421,14 +421,14 @@
     },
     {
       "plan": "command_code_goat",
-      "model": "deepseek-v4.1-flash",
+      "model": "deepseek-v4.1-flash-1017",
       "endpoint": "deepseek-v4.1-flash",
       "checkedAt": "2026-11-04",
       "source": "https://commandcode.ai/docs/plans/goat",
-      "identitySource": "https://commandcode.ai/models/deepseek-v4-1-flash",
+      "identitySource": "https://x.com/CommandCodeAI/status/2116329543921475861",
       "identityNote": {
-        "zh": "渠道标注 latest，但发布日期仍为 9 月 10 日，无法核实 1017 对应关系；保留通用型号。高峰为周一至周五 UTC 01–04、06–10。",
-        "en": "The channel says latest but still lists September 10; no verified 1017 mapping. Keep the generic identity. Peak: weekdays 01-04 and 06-10 UTC."
+        "zh": "Command Code 官方公告确认 GOAT 提供 DeepSeek V4.1 Flash 1017，渠道仍使用不带日期的别名。仅连接 1017 的评测；高峰为周一至周五 UTC 01–04、06–10。",
+        "en": "Command Code officially identifies the GOAT model as DeepSeek V4.1 Flash 1017 under the existing undated alias. Join only 1017 benchmarks. Peak: weekdays 01-04 and 06-10 UTC."
       },
       "rates": {
         "input": 0.3,
@@ -785,38 +785,6 @@
   ],
   "reviews": [
     {
-      "channel": "OpenCode",
-      "models": [
-        "deepseek-v4.1-flash-1017"
-      ],
-      "status": "version-unverified",
-      "checkedAt": "2026-11-04",
-      "note": {
-        "zh": "Go 已提供 DeepSeek V4.1 Flash；Go / Plus / Teams 月额度为 $100 / $200 / $105。不带日期的渠道别名尚未确认对应 1017。可在通用型号页查看套餐。",
-        "en": "Go offers DeepSeek V4.1 Flash with $100 / $200 / $105 credits on Go / Plus / Teams. The undated alias is not verified as 1017. See the generic model page for plans."
-      },
-      "source": "https://opencode.ai/v2/docs/console/go/",
-      "relatedModels": [
-        "deepseek-v4.1-flash"
-      ]
-    },
-    {
-      "channel": "Command Code",
-      "models": [
-        "deepseek-v4.1-flash-1017"
-      ],
-      "status": "version-unverified",
-      "checkedAt": "2026-11-04",
-      "note": {
-        "zh": "GOAT 已提供 DeepSeek V4.1 Flash latest，月额度 $100；公开型号页未明确对应 1017。",
-        "en": "GOAT offers DeepSeek V4.1 Flash latest with $100 monthly credits, but the public model page does not identify it as 1017."
-      },
-      "source": "https://commandcode.ai/docs/plans/goat",
-      "relatedModels": [
-        "deepseek-v4.1-flash"
-      ]
-    },
-    {
       "channel": "Command Code",
       "models": [
         "mistral-large-4"
@@ -911,6 +879,7 @@
     }
   ],
   "evidenceFiles": [
-    "evidence-2026-11-04.json"
+    "evidence-2026-11-04.json",
+    "evidence-2026-11-04-1017.json"
   ]
 }

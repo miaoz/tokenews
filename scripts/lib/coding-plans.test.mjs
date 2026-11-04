@@ -37,12 +37,19 @@ test('New Ollama credits are separate from legacy samples; original source value
   assert.ok(Math.abs(p.real_usd_per_mtok-.00644)<1e-12);
   assert.ok(Math.abs(p.monthly_tokens-60/.01932*1e6)<1e-6);
 });
-test('New third-party points join current benchmarks by exact identity; undated aliases do not become 1017',()=>{
+test('New third-party points join current benchmarks by exact identity; officially upgraded aliases join only 1017',()=>{
   const d=mergeCurrentLeaderboards(result,read('data/leaderboards/current.json'));
   for(const id of ['opencode_go::kimi-k3.1-pro','opencode_go_plus::minimax-m3.1-flash','command_code_goat::ling-3.1-flash-1019','command_code_goat::muse-spark-open','ollama_pro_credits::deepseek-v4.1-flash-1017']) assert.ok(d.mappings.some(m=>m.point_id===id),id);
-  for(const p of result.points.filter(p=>p.price_origin==='maintained-plan'&&p.model==='deepseek-v4.1-flash')){
+  const upgraded=result.points.filter(p=>p.price_origin==='maintained-plan'&&['OpenCode','Command Code'].includes(p.channel)&&p.id.includes('::deepseek-v4.1-flash'));
+  assert.equal(upgraded.length,8);
+  for(const p of upgraded){
+    assert.equal(p.model,'deepseek-v4.1-flash-1017');
+    assert.ok(p.evidence.some(e=>e.url.startsWith('https://x.com/')));
     const configIds=new Set(d.mappings.filter(m=>m.point_id===p.id).map(m=>m.configuration_id));
-    assert.ok(d.configurations.filter(c=>configIds.has(c.configuration_id)).every(c=>c.model!=='deepseek-v4.1-flash-1017'));
+    assert.ok(configIds.size>0);
+    assert.ok(d.configurations.filter(c=>configIds.has(c.configuration_id)).every(c=>c.model==='deepseek-v4.1-flash-1017'));
+    const expected=d.configurations.filter(c=>c.model==='deepseek-v4.1-flash-1017'&&!c.price_mapping_exclusion);
+    assert.equal(configIds.size,expected.length);
   }
   assert.ok(!result.points.some(p=>p.price_origin==='maintained-plan'&&p.model==='mistral-large-4'));
 });
@@ -54,4 +61,18 @@ test('Missing rates, identity evidence, unreviewed collisions and newer upstream
   assert.throws(()=>mergeCodingPlans(newer,manifest),/Newer upstream/);
   const collision=structuredClone(manifest);collision.entries.find(e=>e.replaces?.includes('opencode_go::deepseek-v4.1-flash')).replaces=[];
   assert.throws(()=>mergeCodingPlans(base,collision),/overwrite/);
+});
+
+test('Checkpoint upgrades remove stale mappings while preserving unrelated and original evidence',()=>{
+  const history=read('upstream/derived/benchmark-configurations.json');
+  const originalMappings=read('upstream/derived/benchmark-points.json');
+  const source={...base,configurations:history,mappings:originalMappings};
+  const merged=mergeCodingPlans(source,manifest);
+  const changed=new Set(['opencode_go::deepseek-v4.1-flash','command_code_goat::deepseek-v4.1-flash']);
+  assert.ok(originalMappings.some(m=>changed.has(m.point_id)));
+  assert.ok(!merged.mappings.some(m=>changed.has(m.point_id)));
+  assert.deepEqual(merged.mappings,originalMappings.filter(m=>!changed.has(m.point_id)));
+  assert.equal(source.mappings,originalMappings);
+  assert.ok(source.points.find(p=>p.id==='opencode_go::deepseek-v4.1-flash').model==='deepseek-v4.1-flash');
+  assert.ok(merged.points.find(p=>p.id==='command_code_goat::deepseek-v4.1-flash-fast').model==='deepseek-v4.1-flash-fast');
 });

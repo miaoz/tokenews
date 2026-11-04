@@ -26,12 +26,23 @@ Time bands are separate alternatives using the same monthly credit pool.
 OpenCode Teams is per member; Ollama Team is one fee and pool for the entire
 team. No model allowances or bands within one plan may be added together.
 
-OpenCode Go's undated DeepSeek alias and Command Code's `latest` label do not
-prove the October 17 checkpoint. Their current credits are updated on the
-generic model only. Ollama explicitly offers `deepseek-v4.1-flash:1017-cloud`, so
-its current plan prices can join that identity. The Ollama pricing page's peak
-window differs from DeepSeek direct/OpenCode: preserve each provider's terms.
+OpenCode's October 19 official announcement confirms Go upgraded to 1017 while
+keeping its API alias. Command Code's official GOAT announcement also names
+DeepSeek V4.1 Flash 1017. These channel-specific records therefore join the
+1017 identity, without changing the global undated model identity or historical
+quota samples. Stable point IDs are retained for saved links; a changed served
+identity drops incompatible historical score mappings. Original benchmark
+mappings remain in the upstream download, never reassigned to the new model.
+Ollama explicitly offers `deepseek-v4.1-flash:1017-cloud`. Its peak window differs
+from DeepSeek direct/OpenCode: preserve each provider's billing terms.
 Benchmark mappings remain model references, not channel benchmark claims.
+
+The correction evidence is `evidence-2026-11-04-1017.json`, retrieved through
+X's official public oEmbed endpoint. When a provider rolls a checkpoint forward
+under an unchanged alias, check official rollout announcements as well as model
+metadata. An unchanged display ID or original release date does not overrule an
+explicit provider announcement. Fast and other unreviewed service variants do
+not inherit this decision automatically.
 
 Evidence: `evidence-2026-11-04.json` records official table observations and source
 hashes. Availability reviews are published on model/provider pages; they never

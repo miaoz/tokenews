@@ -81,8 +81,10 @@ const data: SiteData = unpackData(JSON.parse(
   readFileSync(new URL("../public/data/site.json", import.meta.url), "utf8"),
 ));
 
-test("Packed website mappings restore every original field without data loss", () => {
+test("Packed mappings preserve original fields except superseded model identities", () => {
   const raw = JSON.parse(readFileSync(new URL("../../upstream/derived/benchmark-points.json", import.meta.url), "utf8"));
+  const originalPoints = JSON.parse(readFileSync(new URL("../../upstream/derived/points.json", import.meta.url), "utf8")).points as Point[];
+  const changedIds = new Set(originalPoints.filter(p=>data.points.find(q=>q.id===p.id)?.model!==p.model).map(p=>p.id));
   // Website-only display fields (translations, provenance inherited from the
   // shared configuration) are added on top of the original mapping records.
   assert.deepEqual(
@@ -98,7 +100,7 @@ test("Packed website mappings restore every original field without data loss", (
         ...m
       }) => m,
     ),
-    raw,
+    raw.filter((m: {point_id:string})=>!changedIds.has(m.point_id)),
   );
 });
 test("Anthropic workload line prices the input share as cache writes", () => {
@@ -229,7 +231,7 @@ test("DeepSWE keeps effort levels and vendor provenance through the adapter", ()
   assert.equal(astra.reduce((best, r) => r.score! > best.score! ? r : best).mapping?.reasoning_effort, "xhigh");
   const low = rowsFor(data, { ...state, effort: ["low"] });
   assert.equal(low.filter((r) => r.point.id === "chatgpt_plus::gpt-6-astra").length, 1);
-  const deepseek = rows.find((r) => r.point.id === "opencode_go::deepseek-v4.1-flash")!;
+  const deepseek = rows.find((r) => r.point.id === "ollama_pro::deepseek-v4.1-flash")!;
   assert.equal(deepseek.score, 74.2);
   assert.equal(deepseek.mapping?.score_is_self_reported, true);
   assert.equal(deepseek.mapping?.agent_harness, "mini-SWE");

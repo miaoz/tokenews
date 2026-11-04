@@ -1,0 +1,26 @@
+{
+  "checkedAt": "2026-11-04",
+  "supersedes": "The prior version-unverified decision based only on directory metadata. Display IDs and launch dates are not checkpoint evidence when official rollout announcements confirm an in-place upgrade.",
+  "sources": [
+    {
+      "source": "https://x.com/opencode/status/2112220734768779441",
+      "retrievedVia": "https://publish.twitter.com/oembed",
+      "author": "OpenCode",
+      "authorUrl": "https://x.com/opencode",
+      "excerpt": "DeepSeek V4.1 Flash updated to 1017 in OpenCode Go and Free",
+      "responseSha256": "a8059612ba223c18f538ead1bea1cae48ba4844ac3adc0aee5792e0af31b7ad3",
+      "publishedAtUtc": "2026-10-19T16:34:00Z",
+      "decision": "Official provider announcement confirms the unchanged channel alias serves DeepSeek V4.1 Flash 1017."
+    },
+    {
+      "source": "https://x.com/CommandCodeAI/status/2116329543921475861",
+      "retrievedVia": "https://publish.twitter.com/oembed",
+      "author": "Command Code",
+      "authorUrl": "https://x.com/CommandCodeAI",
+      "excerpt": "DeepSeek V4.1 Flash 1017: $100 usage",
+      "responseSha256": "e7cc113027c9f02a1c9287cd9564ac0d69a6911af3f690a651f684fe0098ca5e",
+      "publishedAtUtc": "2026-10-31T00:40:00Z",
+      "decision": "Official provider announcement confirms the unchanged channel alias serves DeepSeek V4.1 Flash 1017."
+    }
+  ]
+}

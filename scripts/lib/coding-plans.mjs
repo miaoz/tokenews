@@ -71,6 +71,15 @@ export function mergeCodingPlans(data, manifest) {
     supersededPoints.push(p);
     return {...p,plan:`${p.plan} (Legacy)`,plan_en:`${p.plan_en ?? p.plan} (Legacy)`,plan_gen:'legacy'};
   });
-  return {...data,points:[...active,...generated],supersededPoints,
+  const currentPoints = [...active,...generated];
+  const pointModels = new Map(currentPoints.map(p=>[p.id,p.model]));
+  const configModels = new Map(data.configurations.map(c=>[c.configuration_id,c.model]));
+  const changedModels = new Set(data.points.filter(p=>pointModels.has(p.id) && pointModels.get(p.id)!==p.model).map(p=>p.id));
+  // Stable point URLs may survive an announced checkpoint upgrade. Old scores
+  // cannot follow that ID onto the new served model. The original mappings
+  // remain in the unmodified upstream benchmark download.
+  const mappings = data.mappings.filter(m=>!changedModels.has(m.point_id) ||
+    pointModels.get(m.point_id) === configModels.get(m.configuration_id));
+  return {...data,points:currentPoints,mappings,supersededPoints,
     codingPlanUpdatedAt:manifest.entries.map(e=>e.checkedAt).sort().at(-1),codingPlanReviews:manifest.reviews ?? []};
 }
