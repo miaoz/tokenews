@@ -170,7 +170,8 @@ export function mergeCustomProviders(
   for (const provider of providers) {
     for (const mod of provider.models) {
       const ref = knownModel.get(mod.model);
-      const display = mod.displayName || ref?.model_display || mod.model;
+      const catalogModel = data.models?.find(m=>m.id===mod.model);
+      const display = mod.displayName || catalogModel?.name || ref?.model_display || mod.model;
       const id = `custom::${provider.id}::${mod.model}`;
       const url = safeHttpUrl(provider.url);
       const sourceZh = url
@@ -189,7 +190,7 @@ export function mergeCustomProviders(
         local_price: null,
         model: mod.model,
         model_display: display,
-        vendor: ref?.vendor ?? provider.name,
+        vendor: ref?.vendor ?? catalogModel?.maker ?? provider.name,
         channel: provider.name,
         label: `${display} ${provider.name}`,
         billing: "metered",
@@ -231,6 +232,12 @@ export function mergeCustomProviders(
           if (seen.has(key)) continue;
           seen.add(key);
           mappings.push({ ...m, point_id: id });
+        }
+      } else if (catalogModel) {
+        for (const {model, ...configuration} of data.configurations) {
+          if (model !== mod.model || configuration.price_mapping_exclusion) continue;
+          mappings.push({...configuration,point_id:id,mapping_kind:'model_configuration_reference',mapping_confidence:'medium',quota_effort_matched:null,
+            mapping_note:'Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.'});
         }
       }
     }

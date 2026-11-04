@@ -26,6 +26,8 @@ Inside `web/`: `npm run dev` (Vite dev server), `npm run data` (regenerate `web/
 
 **Build pipeline (`web/package.json` build):** `scripts/build-data.mjs` (adapter → `public/data/`) → `tsc -b` → `vite build` (the explorer SPA, `src/App.tsx`) → `scripts/build-pages.mjs` (run via `tsx` so it can import `.ts`/`.tsx`). `build-pages.mjs` is the static site generator: it reads `public/data/site.json`, imports the explorer's own helpers from `src/domain.ts` so page wording matches the explorer's "Behind the number" dialog, and writes into `dist/` every maker/provider/model page (en + `/zh/`), index pages, the `/methodology/` page (rendering `src/Method.tsx`, the same component as the explorer's method view), news pages, RSS, `sitemap.xml`, `llms.txt`/`llms-full.txt`, 404 pages, and injects the font preload, JSON-LD, the prerendered boot skeleton (`src/BootSkeleton.tsx`, so the first paint is the styled app shell) and crawler links into `dist/index.html` (markers `<!--seo:preload-->`, `<!--seo:jsonld-->`, `<!--seo:index-->`).
 
+**Model identity and direct leaderboard snapshots are independent of price coverage.** `data/models.json` owns model names, makers and sources. `scripts/lib/model-catalog.mjs` merges that catalog with upstream compatibility entries and validated `data/leaderboards/snapshots.json`; `sources.json` configures reviewed Artificial Analysis / Crusader Bench evaluations. `npm run leaderboards:update` refreshes those sources and writes `discovery.json` for identity review. Keep versions in separate board IDs, preserve observation history, and never synthesize subscription points from benchmark-only models. Model pages, directory/maker listings, news and sitemap include catalog-only models; missing prices are not free. The explorer publishes only boards with actual point mappings. See `data/leaderboards/README.md` for source scope and the daily workflow.
+
 **API references are maintained independently** in `data/api-prices/*.json` (guide: `data/api-prices/README.md`). `scripts/lib/api-prices.mjs` automatically discovers and validates provider files; `npm run prices:check` works without upstream data or web dependencies, and `npm run prices:report` reports coverage/differences. `web/scripts/build-data.mjs` publishes the catalog separately and attaches it as `SiteData.apiPrices`; never overwrite point `list_price`, real costs, quotas or workload conventions with current references. `src/apiPrices.ts` selects an explicitly configured local default, with upstream metadata as fallback, and `ApiPriceDetails.tsx` renders the same source/date/conditions/tier table in the explorer and model pages. New models and tiers belong in JSON, never in a code manifest.
 
 **Shared between explorer and static pages** (keep them the single source):
@@ -49,6 +51,14 @@ Cloudflare Workers Static Assets, no Worker script: `wrangler.jsonc` (Worker `to
 GitHub Actions: `ci.yml` (PRs: build/test/check), `deploy.yml` (push to `main` → build/test/check → `npm run cf:deploy`, then `scripts/indexnow.mjs` submits pages whose sitemap `lastmod` changed to IndexNow, key file `web/public/<key>.txt`; secrets `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`), `sync-upstream.yml` (daily 02:17 UTC: sync; if data changed and checks pass, commit to `main` and call the deploy workflow; on failure or adapter change, open/comment an `upstream-sync` issue).
 
 ## Conventions
+
+**Current Pareto publication:** `npm run pareto:update` maintains all eight boards
+in `data/leaderboards/current.json`; `current-leaderboards.mjs` joins exact model
+IDs to existing prices. `identities.json` records reviewed source identities.
+Never borrow an older version's score/price or map router/fallback runs to one
+base model. `site.json` keeps upstream history; `explorer.json` contains only the
+eight current boards. Unknown source versions/identities fail refresh and retain
+the prior checked date. See `data/leaderboards/PARETO.md` for source limitations.
 
 - GEO: add content only when it tells the reader something the page does not already say (no FAQ sections that restate the answer panel, no unofficial AI meta tags); facts belong in visible text, with JSON-LD as a supplement.
 - UI follows `DESIGN.md` (tokens, type, components). Reuse its components, such as `moreLink()` and `.button` for arrow links, and keep colours in the tokens.

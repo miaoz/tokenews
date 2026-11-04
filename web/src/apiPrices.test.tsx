@@ -12,7 +12,7 @@ const original = JSON.parse(readFileSync(new URL("../../upstream/derived/points.
 
 test("Current references leave all adopted points, historical list prices and snapshot dates intact", () => {
   const before = structuredClone(data.points);
-  for (const point of data.points) {
+  for (const point of data.points.filter(p=>p.price_origin!=='maintained-api')) {
     const adopted = original.points.find((p: { id: string }) => p.id === point.id)!;
     for (const key of ["list_price", "list_blended_usd_per_mtok", "real_usd_per_mtok", "price_usd", "monthly_yi", "workload", "confidence", "data_date"] as const)
       assert.deepEqual(point[key], adopted[key], `${point.id}: ${key}`);

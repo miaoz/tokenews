@@ -1,0 +1,8 @@
+{
+  "url": "https://platform.kimi.ai/docs/pricing/chat",
+  "capturedAt": "2026-11-04T10:26:20.273Z",
+  "tables": [
+    "Model\tBase tokens\tPrompt caching\nName\tInput\tOutput\tCached Input\t5m writes\t1h writes\nkimi-k3.1-pro\t$2.00 / MTok\t$10.00 / MTok\t$0.20 / MTok\t$2.00 / MTok\t$4.00 / MTok\nkimi-k3.1-pro-highspeed\t$4.00 / MTok\t$20.00 / MTok\t$0.20 / MTok\t$4.00 / MTok\t$8.00 / MTok\nkimi-k3\t$3.00 / MTok\t$15.00 / MTok\t$0.30 / MTok\t$3.00 / MTok\t$6.00 / MTok",
+    "Model\tBase tokens\tPrompt caching\nName\tInput\tOutput\tCached Input\nkimi-k2.7-code\t$0.95 / MTok\t$4.00 / MTok\t$0.19 / MTok\nkimi-k2.7-code-highspeed\t$1.90 / MTok\t$8.00 / MTok\t$0.38 / MTok\nkimi-k2.6\t$0.95 / MTok\t$4.00 / MTok\t$0.16 / MTok"
+  ]
+}

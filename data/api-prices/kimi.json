@@ -108,6 +108,205 @@
       "additionalSources": [
         "https://platform.kimi.com/docs/pricing/chat"
       ]
+    },
+    {
+      "id": "kimi-k3.1-pro",
+      "source": "https://platform.kimi.ai/docs/pricing/chat",
+      "checkedAt": "2026-11-04",
+      "defaultVariant": "international-5m",
+      "variants": [
+        {
+          "id": "international-5m",
+          "label": {
+            "en": "Kimi API · international · 5m cache TTL",
+            "zh": "Kimi API · 国际站 · 缓存 TTL 5m"
+          },
+          "currency": "USD",
+          "region": "Kimi international API",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 2,
+            "cachedInput": 0.2,
+            "output": 10,
+            "cacheWrite": 2
+          }
+        },
+        {
+          "id": "international-1h",
+          "label": {
+            "en": "Kimi API · international · 1h cache TTL",
+            "zh": "Kimi API · 国际站 · 缓存 TTL 1h"
+          },
+          "currency": "USD",
+          "region": "Kimi international API",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 2,
+            "cachedInput": 0.2,
+            "output": 10,
+            "cacheWrite": 4
+          }
+        }
+      ],
+      "additionalSources": [
+        "https://platform.kimi.ai/docs/guide/context-caching"
+      ],
+      "notes": {
+        "en": "USD prices exclude taxes. Context: 1,048,576 tokens. Default cache TTL is 5m. Cache reads, writes and uncached input are mutually exclusive billing categories, not additive charges on the same token. At 5m, writes cost the same as input; 1h writes cost twice as much.",
+        "zh": "美元价未含税，上下文 1,048,576 tokens，默认缓存 TTL 为 5 分钟。缓存读取、写入与普通输入是互斥的 token 计费类别，同一 token 不重复收取输入与写入费。5 分钟写入价等于输入价，1 小时写入价为其两倍。"
+      }
+    },
+    {
+      "id": "kimi-k3.1-pro-highspeed",
+      "source": "https://platform.kimi.ai/docs/pricing/chat",
+      "checkedAt": "2026-11-04",
+      "defaultVariant": "international-5m",
+      "variants": [
+        {
+          "id": "international-5m",
+          "label": {
+            "en": "Kimi API · international · 5m cache TTL",
+            "zh": "Kimi API · 国际站 · 缓存 TTL 5m"
+          },
+          "currency": "USD",
+          "region": "Kimi international API",
+          "serviceTier": "highspeed",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 4,
+            "cachedInput": 0.2,
+            "output": 20,
+            "cacheWrite": 4
+          }
+        },
+        {
+          "id": "international-1h",
+          "label": {
+            "en": "Kimi API · international · 1h cache TTL",
+            "zh": "Kimi API · 国际站 · 缓存 TTL 1h"
+          },
+          "currency": "USD",
+          "region": "Kimi international API",
+          "serviceTier": "highspeed",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 4,
+            "cachedInput": 0.2,
+            "output": 20,
+            "cacheWrite": 8
+          }
+        }
+      ],
+      "additionalSources": [
+        "https://platform.kimi.ai/docs/guide/context-caching"
+      ],
+      "notes": {
+        "en": "USD prices exclude taxes. Context: 1,048,576 tokens. Default cache TTL is 5m. Cache reads, writes and uncached input are mutually exclusive billing categories, not additive charges on the same token. At 5m, writes cost the same as input; 1h writes cost twice as much.",
+        "zh": "美元价未含税，上下文 1,048,576 tokens，默认缓存 TTL 为 5 分钟。缓存读取、写入与普通输入是互斥的 token 计费类别，同一 token 不重复收取输入与写入费。5 分钟写入价等于输入价，1 小时写入价为其两倍。"
+      }
+    },
+    {
+      "id": "kimi-k3",
+      "source": "https://platform.kimi.ai/docs/pricing/chat",
+      "checkedAt": "2026-11-04",
+      "defaultVariant": "international-5m",
+      "variants": [
+        {
+          "id": "international-5m",
+          "label": {
+            "en": "Kimi API · international · 5m cache TTL",
+            "zh": "Kimi API · 国际站 · 缓存 TTL 5m"
+          },
+          "currency": "USD",
+          "region": "Kimi international API",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 3,
+            "cachedInput": 0.3,
+            "output": 15,
+            "cacheWrite": 3
+          }
+        },
+        {
+          "id": "international-1h",
+          "label": {
+            "en": "Kimi API · international · 1h cache TTL",
+            "zh": "Kimi API · 国际站 · 缓存 TTL 1h"
+          },
+          "currency": "USD",
+          "region": "Kimi international API",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 3,
+            "cachedInput": 0.3,
+            "output": 15,
+            "cacheWrite": 6
+          }
+        }
+      ],
+      "additionalSources": [
+        "https://platform.kimi.ai/docs/guide/context-caching"
+      ],
+      "notes": {
+        "en": "USD prices exclude taxes. Context: 1,048,576 tokens. Default cache TTL is 5m. Cache reads, writes and uncached input are mutually exclusive billing categories, not additive charges on the same token. At 5m, writes cost the same as input; 1h writes cost twice as much.",
+        "zh": "美元价未含税，上下文 1,048,576 tokens，默认缓存 TTL 为 5 分钟。缓存读取、写入与普通输入是互斥的 token 计费类别，同一 token 不重复收取输入与写入费。5 分钟写入价等于输入价，1 小时写入价为其两倍。"
+      }
+    },
+    {
+      "id": "kimi-k2.7-code",
+      "source": "https://platform.kimi.ai/docs/pricing/chat",
+      "checkedAt": "2026-11-04",
+      "defaultVariant": "international-standard",
+      "variants": [
+        {
+          "id": "international-standard",
+          "label": {
+            "en": "Kimi API · international",
+            "zh": "Kimi API · 国际站"
+          },
+          "currency": "USD",
+          "region": "Kimi international API",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 0.95,
+            "cachedInput": 0.19,
+            "output": 4
+          }
+        }
+      ],
+      "additionalSources": [
+        "https://platform.kimi.ai/docs/guide/kimi-k2-7-code-quickstart"
+      ],
+      "notes": {
+        "en": "USD prices exclude taxes. Context: 262,144 tokens. K2 is unavailable to newly registered users from 2026-10-31; existing users retain access, with retirement planned by the end of December 2026.",
+        "zh": "美元价未含税，上下文 262,144 tokens。2026-10-31 起 K2 不再向新注册用户开放，已有用户仍可使用，计划于 2026 年 12 月底退役。"
+      }
     }
   ]
 }

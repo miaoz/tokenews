@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "entries": [
+    {"model":"kimi-k3.1-pro","variant":"international-5m","inputBilling":"input-or-cache-write-same-rate"},
+    {"model":"kimi-k3.1-pro-highspeed","variant":"international-5m","inputBilling":"input-or-cache-write-same-rate"},
+    {"model":"kimi-k3","variant":"international-5m","inputBilling":"input-or-cache-write-same-rate"},
+    {"model":"kimi-k2.7-code","variant":"international-standard","inputBilling":"input-only"}
+  ]
+}

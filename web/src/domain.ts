@@ -36,7 +36,7 @@ export const defaultState = (): State => ({
   cards: [],
   lang: "en",
   view: "pareto",
-  board: "aa_intelligence_index",
+  board: "aa_intelligence_index_v5_0_1",
   selected: null,
   vendors: [],
   channels: [],
@@ -568,7 +568,8 @@ export function restore(
   }
   const board = params.get("board");
   if (board !== null) {
-    if (Object.hasOwn(data.boards, board)) state.board = board;
+    const resolved = data.boardAliases?.[board] ?? board;
+    if (Object.hasOwn(data.boards, resolved)) state.board = resolved;
     else warning = true;
   }
   const frontier = params.get("frontier");
@@ -655,8 +656,9 @@ function restoreLegacy(
       if (values.includes(raw[key])) Object.assign(state, { [key]: raw[key] });
       else if (raw[key] !== undefined) warning = true;
     }
-    if (typeof raw.board === "string" && Object.hasOwn(data.boards, raw.board))
-      state.board = raw.board;
+    const resolvedBoard = typeof raw.board === "string" ? data.boardAliases?.[raw.board] ?? raw.board : null;
+    if (resolvedBoard && Object.hasOwn(data.boards, resolvedBoard))
+      state.board = resolvedBoard;
     else if (raw.board !== undefined) warning = true;
     if (typeof raw.frontier === "boolean") state.frontier = raw.frontier;
     if (typeof raw.query === "string") state.query = raw.query;
@@ -799,6 +801,11 @@ const EFFORT: Record<string, [string, string]> = {
   xhigh: ["xhigh", "超高"],
   max: ["Max", "最高"],
   thinking: ["Thinking", "思考"],
+  reasoning: ["Reasoning", "推理"],
+  "non-reasoning": ["Non-reasoning", "非推理"],
+  instant: ["Instant", "即时"],
+  minimal: ["Minimal", "最低"],
+  "non-thinking": ["Non-thinking", "非思考"],
 };
 /** Reasoning-effort level in the reader's language; unknown levels stay as published. */
 export const effortLabel = (effort: string | null, lang: string) =>
@@ -898,6 +905,7 @@ export function csv(rows: Row[], lang: string): string {
           "分数",
           "AA 估计值",
           "厂商自报",
+          "初步成绩",
           "Harness",
           "Effort",
           "分数来源",
@@ -919,6 +927,7 @@ export function csv(rows: Row[], lang: string): string {
           "Score",
           "AA estimated score",
           "Vendor self-reported",
+          "Preliminary score",
           "Harness",
           "Effort",
           "Score source",
@@ -949,6 +958,7 @@ export function csv(rows: Row[], lang: string): string {
         r.score,
         r.mapping?.score_is_estimated,
         r.mapping?.score_is_self_reported,
+        r.mapping?.score_is_preliminary,
         r.mapping?.agent_harness,
         r.mapping?.reasoning_effort,
         lang === "zh" ? r.mapping?.source : (r.mapping?.source_en ?? r.mapping?.source),

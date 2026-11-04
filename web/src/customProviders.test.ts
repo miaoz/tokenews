@@ -114,6 +114,19 @@ test("merge with no providers returns the data unchanged", () => {
   assert.equal(mergeCustomProviders(site, []), site);
 });
 
+test("catalog-only models accept local prices without borrowing excluded or differently versioned evaluations", () => {
+  const config = {...configuration,model:'new-model'};
+  const data: SiteData = {...site,points:[],mappings:[],
+    models:[{id:'new-model',name:'New Model',maker:'Maker',source:'https://example.com',checkedAt:'2026-11-04'}],
+    configurations:[config,{...config,configuration_id:'fallback',price_mapping_exclusion:'multi-model-fallback'},
+      {...config,configuration_id:'preview',model:'new-model-preview'}]};
+  const result=mergeCustomProviders(data,[{...provider,models:[{...provider.models[0],model:'new-model',displayName:''}]}]);
+  assert.equal(result.points[0].model_display,'New Model');
+  assert.equal(result.points[0].vendor,'Maker');
+  assert.deepEqual(result.mappings.map(m=>m.configuration_id),[configuration.configuration_id]);
+  assert.equal(result.mappings[0].quota_effort_matched,null);
+});
+
 test("realPriceUsd weights the standard mix and defaults cached to input", () => {
   // 0.97×0.3 + 0.025×0.3 + 0.005×1.2
   assert.equal(

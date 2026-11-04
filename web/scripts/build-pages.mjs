@@ -69,7 +69,7 @@ const data = JSON.parse(
 const updated = data.conventions.updatedAt || data.generatedAt;
 const pageUpdates = new Map();
 const latest = (...dates) => dates.filter(Boolean).sort().at(-1) ?? updated;
-const siteUpdated = latest(updated, data.apiPrices?.updatedAt);
+const siteUpdated = latest(updated, data.apiPrices?.updatedAt, data.catalogUpdatedAt, data.leaderboardUpdatedAt);
 // The explorer's hashed stylesheet carries the tokens, fonts, header and
 // footer; the static pages load it first so all pages share one design.
 const appCss = (await readFile(path.join(dist, "index.html"), "utf8")).match(
@@ -213,7 +213,7 @@ const METRIC_ZH = {
   "Pass@1 %": "Pass@1 %",
 };
 const boardName = (b, lang) =>
-  lang === "zh" ? BOARD_ZH[b] ?? data.boards[b].name : data.boards[b].name;
+  lang === "zh" && BOARD_ZH[b] ? BOARD_ZH[b] + (data.boards[b].current === false ? `（历史快照 ${data.boards[b].snapshot}）` : "") : data.boards[b].name;
 const metricName = (b, lang) => {
   const m = data.boards[b].metric;
   return lang === "zh" ? METRIC_ZH[m] ?? m : m;
@@ -235,14 +235,14 @@ for (const m of data.mappings) {
 const byPrice = (a, b) =>
   a.real_usd_per_mtok - b.real_usd_per_mtok || (a.price_usd ?? 0) - (b.price_usd ?? 0);
 
-const models = new Map();
+const models = new Map(data.models.map(m => [m.id, { ...m, slug: slug(m.id), points: [], configs: new Map() }]));
 for (const p of data.points) {
   let m = models.get(p.model);
   if (!m) {
     m = { id: p.model, slug: slug(p.model), name: familyName(p), maker: pageMaker(p), points: [], configs: new Map() };
     models.set(p.model, m);
   }
-  if (!p.plan_gen) m.name = familyName(p);
+  // Names and maker identity come from the independent model catalog.
   m.points.push(p);
   for (const map of mappingsByPoint.get(p.id) ?? [])
     m.configs.set(map.configuration_id, configById.get(map.configuration_id));
@@ -268,7 +268,7 @@ for (const m of models.values()) {
   m.listPoint = m.api.find((p) => p.list_price) ?? m.points.find((p) => p.list_price) ?? null;
   m.apiReference = apiPriceReference(data, m.id);
   m.listBlended = m.apiReference?.blended ?? null;
-  m.modified = latest(updated, m.apiReference?.checkedAt);
+  m.modified = latest(updated, m.checkedAt, m.apiReference?.checkedAt, ...[...m.configs.values()].map(c => c.checked_at));
   m.mostTokens = [...m.subs].filter((p) => p.monthly_yi != null).sort((a, b) => b.monthly_yi - a.monthly_yi)[0] ?? null;
   m.channels = [...new Set(m.points.map((p) => p.channel))].sort();
   m.benchmarks = BOARD_ORDER.flatMap((board) => {
@@ -277,7 +277,7 @@ for (const m of models.values()) {
     const best = configs[0];
     const ranking = [...boardBest.get(board).entries()].sort((a, b) => b[1] - a[1]);
     const rank = ranking.findIndex(([, s]) => s <= best.score) + 1;
-    return [{ board, best, configs, rank, of: ranking.length }];
+    return [{ board, best, configs, rank: best.source_rank ?? rank, of: best.source_total ?? ranking.length, sourceRank: best.source_rank != null }];
   });
   m.mappingNotes = [...new Set(m.points.flatMap((p) => (mappingsByPoint.get(p.id) ?? []).map((x) => x.mapping_note)))];
 }
@@ -680,6 +680,8 @@ ${texts.map((x) => `<p class="original-text">${esc(x)}</p>`).join("")}
 }
 
 // One leaderboard's archived configurations for a model, as the dialog shows them.
+const currentScoreFlags = (c, lang) =>
+  (c.score_is_preliminary ? `<small>${lang === 'zh' ? '初步成绩' : 'Preliminary'}</small>` : '');
 function configTable(b, lang) {
   const zh = lang === "zh";
   const t = (en, cn) => (zh ? cn : en);
@@ -689,7 +691,7 @@ function configTable(b, lang) {
     const note = zh ? c.record_note_zh : c.record_note_en;
     return [
       `${esc(variantLabel(c.variant, lang))}${c.board_label && c.board_label !== c.variant ? `<small>${esc(c.board_label)}</small>` : ""}${note ? `<small class="original-text">${esc(note)}</small>` : ""}`,
-      `<strong>${fmt(c.score, lang, 4)}</strong>${c.score_is_estimated ? ` <small>${t("AA estimate", "AA 估计值")}</small>` : ""}${c.score_is_self_reported ? ` <small>${t("vendor self-report", "厂商自报")}</small>` : ""}`,
+      `<strong>${fmt(c.score, lang, 4)}</strong>${c.score_is_estimated ? ` <small>${t("AA estimate", "AA 估计值")}</small>` : ""}${c.score_is_self_reported ? ` <small>${t("vendor self-report", "厂商自报")}</small>` : ""}${currentScoreFlags(c, lang)}`,
       c.score_low == null && c.score_high == null ? "—" : `${fmt(c.score_low, lang)} – ${fmt(c.score_high, lang)}`,
       `${esc(c.agent_harness ?? "—")} / ${esc(effortLabel(c.reasoning_effort, lang) ?? "—")} / ${esc(c.service_mode ?? "—")}`,
       `${c.mean_cost_usd_per_task == null ? "—" : price(c.mean_cost_usd_per_task)} / ${median == null ? "—" : price(median)}`,
@@ -733,15 +735,18 @@ function modelPage(m, lang) {
   const lp = listPrice(m.apiReference?.prices);
   const c = m.cheapest;
   const nPlans = m.subs.length;
-  const topBench = m.benchmarks.slice().sort((a, b) => a.rank / a.of - b.rank / b.of)[0];
+  const currentBenchmarks = m.benchmarks.filter(b=>data.boards[b.board].current !== false);
+  const topBench = (currentBenchmarks.length ? currentBenchmarks : m.benchmarks).slice().sort((a, b) => a.rank / a.of - b.rank / b.of)[0];
   // The strongest leaderboard placement, as one citable sentence in the answer.
   const benchSentence = topBench
     ? zh
-      ? `${m.name} 收录了 ${m.benchmarks.length} 个榜单的成绩，最好的一项是 ${boardName(topBench.board, lang)} 上的 ${fmt(topBench.best.score, lang, 2)}（${metricName(topBench.board, lang)}），在本站收录的 ${topBench.of} 个模型中排第 ${topBench.rank}。`
-      : `On independent leaderboards, ${m.name}'s strongest placement is ${fmt(topBench.best.score, lang, 2)} (${metricName(topBench.board, lang)}) on ${boardName(topBench.board, lang)}, #${topBench.rank} of ${topBench.of} models tracked.`
+      ? `${m.name} 收录了 ${m.benchmarks.length} 个榜单快照的成绩，最好的一项是 ${boardName(topBench.board, lang)} 上的 ${fmt(topBench.best.score, lang, 2)}（${metricName(topBench.board, lang)}），在${topBench.best.source_rank_scope === "comparison-group" ? "来源对比组" : topBench.sourceRank ? "来源榜单" : "本站收录"}的 ${topBench.of} 个${topBench.sourceRank ? "条目" : "模型"}中排第 ${topBench.rank}。`
+      : `On independent leaderboards, ${m.name}'s strongest placement is ${fmt(topBench.best.score, lang, 2)} (${metricName(topBench.board, lang)}) on ${boardName(topBench.board, lang)}, #${topBench.rank} of ${topBench.of} ${topBench.sourceRank ? "entries" : "models"} ${topBench.best.source_rank_scope === "comparison-group" ? "in the source comparison group" : topBench.sourceRank ? "on the source leaderboard" : "tracked"}.`
     : "";
 
-  const answer = c
+  const answer = !m.points.length
+    ? t(`As of ${m.modified}, ${m.name} is listed in our model directory. Subscription allowances and real token costs have not yet been recorded.`, `截至 ${m.modified}，${m.name} 已收录到模型目录；订阅额度与真实 token 成本尚未收录。`)
+    : c
     ? zh
       ? `截至 ${updated}，使用 ${m.name} 最便宜的方式是「${planName(c, lang)}」，真实单价约 ${usd(c.real_usd_per_mtok)} / 百万 token${c.price_usd != null ? `（月费 ${fee(c)}，每月约 ${tokens(c, lang)} token）` : ""}。本站共收录 ${m.points.length} 个可使用 ${m.name} 的套餐或 API 渠道。`
       : `As of ${updated}, the cheapest way to use ${m.name} is ${planName(c, lang)} at a real cost of about ${usd(c.real_usd_per_mtok)} per million tokens${c.price_usd != null ? ` (${fee(c)}/month for roughly ${tokens(c, lang)} tokens a month)` : ""}. We track ${plural(m.points.length, "plan")} and API channels that serve ${m.name}.`
@@ -754,7 +759,7 @@ function modelPage(m, lang) {
       : `Official API list price per million tokens: ${lp.cached} cached input, ${lp.input} input, ${lp.output} output${m.listBlended != null ? ` — about ${usd(m.listBlended)} per million tokens on a standard workload mix` : ""}.${m.apiReference.checkedAt ? ` ${apiPriceScope(m.apiReference.variant, lang)}; prices checked ${m.apiReference.checkedAt}.` : ""}`
     : "";
 
-  const title = zh
+  const title = !m.points.length ? t(`${m.name}: Benchmarks & Model Information`, `${m.name}：榜单成绩与模型资料`) : zh
     ? `${m.name} 价格：真实 API 单价与订阅额度（${vName}）`
     : `${m.name} Pricing: Real Cost per Million Tokens & Subscription Limits`;
   const description = clip(
@@ -780,16 +785,16 @@ function modelPage(m, lang) {
     p.data_date ? `<time>${esc(p.data_date)}</time>` : "—",
     `<a href="#${evidenceId(p)}">${t("Evidence", "依据")} ↓</a>`,
   ]);
-  const benchRows = m.benchmarks.map(({ board, best, configs, rank, of }) => [
+  const benchRows = m.benchmarks.map(({ board, best, configs, rank, of, sourceRank }) => [
     ext(data.boards[board].url, boardName(board, lang)),
     esc(metricName(board, lang)),
-    `<strong>${fmt(best.score, lang, 2)}</strong>${best.score_is_self_reported ? ` <small>${t("self-reported", "厂商自报")}</small>` : ""}${best.score_is_estimated ? ` <small>${t("estimate", "估计值")}</small>` : ""}`,
-    `#${rank} / ${of}`,
+    `<strong>${fmt(best.score, lang, 2)}</strong>${best.score_is_self_reported ? ` <small>${t("self-reported", "厂商自报")}</small>` : ""}${best.score_is_estimated ? ` <small>${t("estimate", "估计值")}</small>` : ""}${currentScoreFlags(best, lang)}`,
+    `#${rank} / ${of} <small>${best.source_rank_scope === "comparison-group" ? t("source group", "来源对比组") : sourceRank ? t("source", "来源榜单") : t("tracked", "本站收录")}</small>`,
     esc(variantLabel(best.board_label ?? best.variant, lang)),
     esc(effortLabel(best.reasoning_effort, lang) ?? "—"),
     esc(best.agent_harness ?? "—"),
     String(configs.length),
-    esc(data.boards[board].snapshot),
+    esc(best.checked_at ?? data.boards[board].snapshot),
   ]);
   const siblings = v.models.filter((x) => x !== m);
 
@@ -837,19 +842,19 @@ function modelPage(m, lang) {
   };
   const dataset = {
     "@type": "Dataset",
-    name: zh ? `${m.name} 真实定价数据` : `${m.name} real pricing data`,
+    name: zh ? `${m.name} 模型与评测数据` : `${m.name} model and benchmark data`,
     // Google requires 50–5000 characters for a Dataset description; the meta
     // description alone can be shorter (short Chinese names), so add the answer.
     description: [description, answer, listSentence, benchSentence].filter(Boolean).join(" "),
     license: "https://opensource.org/licenses/MIT",
     creator: { "@id": `${SITE}/#organization` },
-    dateModified: updated,
+    dateModified: m.modified,
     isAccessibleForFree: true,
     url: abs(U.model(m, lang)),
-    variableMeasured: ["monthly fee (USD)", "monthly tokens", "real USD per million tokens", "leaderboard score"],
+    variableMeasured: [...(m.points.length ? ["monthly fee (USD)", "monthly tokens", "real USD per million tokens"] : []), ...(m.benchmarks.length ? ["leaderboard score"] : [])],
     distribution: [
-      { "@type": "DataDownload", encodingFormat: "text/csv", contentUrl: `${SITE}/data/points.csv` },
-      { "@type": "DataDownload", encodingFormat: "application/json", contentUrl: `${SITE}/data/points.json` },
+      ...(m.points.length ? [{ "@type": "DataDownload", encodingFormat: "text/csv", contentUrl: `${SITE}/data/points.csv` }] : []),
+      { "@type": "DataDownload", encodingFormat: "application/json", contentUrl: `${SITE}/data/site.json` },
     ],
   };
 
@@ -857,8 +862,13 @@ function modelPage(m, lang) {
 <p class="answer">${esc(answer)}${listSentence ? " " + esc(listSentence) : ""}${benchSentence ? " " + esc(benchSentence) : ""}</p>
 ${overview(
   t("Overview", "概览"),
-  [
-    [t("Lowest real price", "最低真实单价"), c ? `${usd(c.real_usd_per_mtok)}<span class="unit">/MTok</span>` : m.free.length ? "≈$0" : null, c ? esc(planName(c, lang)) : t("unmetered on every channel", "所有渠道均不计额度")],
+  !m.points.length ? [
+    [t("Benchmark score", "榜单成绩"), topBench ? fmt(topBench.best.score, lang, 2) : null, topBench ? esc(boardName(topBench.board, lang)) : t("Not yet recorded", "尚未收录")],
+    [t("Leaderboard rank", "榜单名次"), topBench ? `#${topBench.rank} / ${topBench.of}` : null, topBench?.best.source_rank_scope === "comparison-group" ? t("source comparison group", "来源对比组") : topBench?.sourceRank ? t("source leaderboard", "来源榜单") : t("tracked models", "本站收录模型")],
+    [t("Leaderboards", "榜单数"), String(m.benchmarks.length), t("independent evaluations", "独立评测")],
+    [t("API list price", "API 标价"), m.listBlended != null ? `${usd(m.listBlended)}<span class="unit">/MTok</span>` : null, m.listBlended != null ? t("standard workload mix", "标准负载") : t("Not yet recorded", "尚未收录")],
+  ] : [
+    [t("Lowest real price", "最低真实单价"), c ? `${usd(c.real_usd_per_mtok)}<span class="unit">/MTok</span>` : m.free.length ? "≈$0" : null, c ? esc(planName(c, lang)) : m.free.length ? t("unmetered on every channel", "所有渠道均不计额度") : t("Not yet recorded", "尚未收录")],
     [t("API list price", "API 标价"), m.listBlended != null ? `${usd(m.listBlended)}<span class="unit">/MTok</span>` : null, t("standard workload mix", "标准负载")],
     [t("Most monthly tokens", "最多月额度"), m.mostTokens ? tokens(m.mostTokens, lang) : null, m.mostTokens && esc(planName(m.mostTokens, lang))],
     [t("Plans & APIs", "套餐与 API"), String(m.points.length), zh ? `${nPlans} 个订阅 · ${m.api.length} 个按量 API` : `${plural(nPlans, "subscription")} · ${plural(m.api.length, "metered API")}`],
@@ -866,11 +876,12 @@ ${overview(
   [
     [t("Maker", "厂商"), makerLink(v, lang)],
     [t("Model ID", "模型 ID"), `<code>${esc(m.id)}</code>`],
+    [t("Model source", "模型来源"), m.source ? ext(m.source, t("Source", "来源")) : null],
     [t("Providers", "供应商"), join(m.channels.map((ch) => providerLink(ch, lang)), lang)],
     [t("Leaderboards", "榜单"), m.benchmarks.length ? `<a href="#bench">${join(m.benchmarks.map((b) => esc(boardName(b.board, lang))), lang)}</a>` : null],
   ],
 )}
-<p><a class="button" href="${lockLink(m, lang)}">${t(`Plot ${m.name} on the price–capability chart`, `在价格–能力图中查看 ${m.name}`)}<span class="arrow" aria-hidden="true">→</span></a></p>
+${m.points.length ? `<p><a class="button" href="${lockLink(m, lang)}">${t(`Plot ${m.name} on the price–capability chart`, `在价格–能力图中查看 ${m.name}`)}<span class="arrow" aria-hidden="true">→</span></a></p>
 <section aria-labelledby="plans"><h2 id="plans">${t(`${m.name} plans and real prices`, `${m.name} 套餐与真实单价`)}</h2>
 <p>${t("Real price = monthly fee ÷ tokens you can actually use in a month. “vs API” shows how many times cheaper than the official API list price (standard workload mix) the plan is. “Evidence” opens the full calculation and sources for that row.", "真实单价 = 月费 ÷ 每月实际可用 token。「对比 API」表示该套餐比官方 API 标价（标准负载）便宜多少倍。「依据」展开该行的完整计算与来源。")}</p>
 ${table(
@@ -881,11 +892,11 @@ ${table(
 <section aria-labelledby="evidence"><h2 id="evidence">${t("Behind each number", "每个数字背后的依据")}</h2>
 <p>${t("For every plan: the data date, the exact calculation, the quota basis, how leaderboard scores were mapped, and the original adoption evidence with its sources.", "每个套餐的数据日期、精确计算、额度口径、榜单分数的映射方式，以及原始采用依据与来源。")}</p>
 ${m.points.map((p) => evidenceBlock(p, lang)).join("\n")}
-</section>
+</section>` : `<p class="note">${t("Pricing has not yet been recorded. This model is not included in the price–capability chart.", "价格尚未收录，暂不参与价格–能力图比较。")}</p>`}
 ${
   m.benchmarks.length
     ? `<section aria-labelledby="bench"><h2 id="bench">${t(`${m.name} benchmark scores`, `${m.name} 榜单成绩`)}</h2>
-<p>${t("Highest archived configuration per leaderboard; ranks are among all models each board archives in this dataset. Scores are never mixed across boards.", "每个榜单取已归档的最高配置；排名为该榜单在本数据集中收录的全部模型内的名次。不同榜单的分数不混算。")}</p>
+<p>${t("Highest archived configuration per leaderboard; ranks marked “source” are reported by that leaderboard; “tracked” ranks cover models archived in this dataset. AA model-page ranks refer to its comparison group, not the global leaderboard. Scores are never mixed across boards.", "每个榜单取已归档的最高配置；标注「来源榜单」的是来源公布的排名；「本站收录」是本数据集所收录模型内的名次。AA 模型页名次属于其来源对比组，并非全榜排名。不同榜单的分数不混算。")}</p>
 ${table(
   t(`${m.name} on independent leaderboards`, `${m.name} 在独立榜单上的成绩`),
   [t("Leaderboard", "榜单"), t("Metric", "指标"), t("Score", "分数"), t("Rank", "排名"), t("Configuration", "配置"), t("Effort", "推理强度"), t("Harness", "框架"), t("Configs", "配置数"), t("Snapshot", "快照")],
@@ -935,7 +946,7 @@ ${table(
   [t("Model", "模型"), t("Lowest real $/MTok", "最低真实单价 $/MTok"), t("Cheapest plan", "最便宜的套餐"), t("Plans", "套餐数")],
   siblings.map((s) => [
     modelLink(s, lang),
-    s.cheapest ? `<strong>${usd(s.cheapest.real_usd_per_mtok)}</strong>` : "≈$0",
+    s.cheapest ? `<strong>${usd(s.cheapest.real_usd_per_mtok)}</strong>` : s.free.length ? "≈$0" : "—",
     s.cheapest ? planLink(s.cheapest, lang) : "—",
     String(s.points.length),
   ]),
@@ -951,9 +962,9 @@ ${table(
     description,
     keywords: [m.name, m.id, `${m.name} ${t("pricing", "价格")}`, `${m.name} API ${t("price", "价格")}`, `${m.name} ${t("subscription", "订阅")}`, vName, ...m.channels, t("cost per million tokens", "每百万 token 价格"), t("AI coding plan", "AI 编程套餐")],
     kicker: `${t("Model", "模型")} · ${makerLink(v, lang)}`,
-    h1: zh ? `${m.name} 真实价格与额度` : `${m.name} pricing: real cost per million tokens`,
+    h1: !m.points.length ? t(`${m.name}: benchmarks and model information`, `${m.name} 榜单成绩与模型资料`) : zh ? `${m.name} 真实价格与额度` : `${m.name} pricing: real cost per million tokens`,
     lead: esc(
-      zh
+      !m.points.length ? t(`${m.name} by ${vName}: independently sourced benchmark results and model information.`, `${vName} 的 ${m.name}：来自独立来源的榜单成绩与模型资料。`) : zh
         ? `${vName} 的 ${m.name} 在 ${m.channels.length} 个供应商、${m.points.length} 个套餐中的月费、实际可用额度与真实单价，并对照官方 API 标价和独立榜单成绩。`
         : `What ${vName}'s ${m.name} really costs across ${plural(m.points.length, "plan")} from ${plural(m.channels.length, "provider")}: monthly fees, usable allowances and real per-token prices, against the official API list price and independent leaderboards.`,
     ),
@@ -965,6 +976,7 @@ ${table(
       [vName, U.maker(v, lang)],
       [m.name, U.model(m, lang)],
     ],
+    byline: `${t("Model data updated", "模型资料更新")} <time datetime="${m.modified}">${m.modified}</time>${m.points.length ? ` · ${t("Plan snapshot", "套餐快照")} <time datetime="${updated}">${updated}</time>` : ""}`,
     graph: { modified: m.modified, about: { "@id": product["@id"] }, mainEntity: { "@id": product["@id"] }, extra: [product, dataset] },
   });
 }
@@ -999,10 +1011,10 @@ function makerPage(v, lang) {
     : "";
   const rows = v.models.map((m) => {
     const lp = listPrice(m.apiReference?.prices);
-    const top = m.benchmarks.find((b) => b.board === "aa_intelligence_index") ?? m.benchmarks[0];
+    const top = m.benchmarks.find((b) => b.board === "aa_intelligence_index_v5_0_1") ?? m.benchmarks[0];
     return [
       modelLink(m, lang),
-      m.cheapest ? `<strong>${usd(m.cheapest.real_usd_per_mtok)}</strong>` : "≈$0",
+      m.cheapest ? `<strong>${usd(m.cheapest.real_usd_per_mtok)}</strong>` : m.free.length ? "≈$0" : "—",
       m.cheapest ? planLink(m.cheapest, lang) : "—",
       m.listBlended != null ? usd(m.listBlended) : "—",
       lp ? `${lp.input} / ${lp.output}` : "—",
@@ -1036,7 +1048,7 @@ function makerPage(v, lang) {
   const subs = v.plans.filter((p) => p.billing !== "metered").length;
   const official = v.points.some(firstParty);
   const resellers = v.channels.length - (official ? 1 : 0);
-  const channelNote = !resellers
+  const channelNote = !v.points.length ? t("Not yet recorded", "尚未收录") : !resellers
     ? t("official only", "仅官方")
     : zh
       ? `${official ? "官方 + " : ""}${resellers} 个第三方`
@@ -1046,7 +1058,7 @@ ${answer ? `<p class="answer">${esc(answer)}</p>` : ""}
 ${overview(
   t("Overview", "概览"),
   [
-    [t("Lowest real price", "最低真实单价"), best ? `${usd(best.cheapest.real_usd_per_mtok)}<span class="unit">/MTok</span>` : v.points.some(unmetered) ? "≈$0" : null, best ? esc(best.name) : t("unmetered", "不计额度")],
+    [t("Lowest real price", "最低真实单价"), best ? `${usd(best.cheapest.real_usd_per_mtok)}<span class="unit">/MTok</span>` : v.points.some(unmetered) ? "≈$0" : null, best ? esc(best.name) : v.points.some(unmetered) ? t("unmetered", "不计额度") : t("Not yet recorded", "尚未收录")],
     [t("Models", "模型数"), String(n), zh ? `${scored} 个有榜单成绩` : `${scored} with leaderboard scores`],
     [t("Plans & APIs", "套餐与 API"), String(v.plans.length), zh ? `${subs} 个订阅 · ${v.plans.length - subs} 个按量 API` : `${plural(subs, "subscription")} · ${plural(v.plans.length - subs, "metered API")}`],
     [t("Providers", "供应商数"), String(v.channels.length), channelNote],
@@ -1064,15 +1076,15 @@ ${table(
   rows,
 )}
 </section>
-<section aria-labelledby="plans"><h2 id="plans">${t(`Plans that include ${isOther ? "these" : v.name} models`, `包含 ${vName} 模型的套餐`)}</h2>
-${table(t("Subscriptions and APIs, by monthly fee", "订阅与 API，按月费排序"), [t("Plan", "套餐"), t("Provider", "供应商"), t("Billing", "计费"), t("Monthly fee", "月费"), t("Models", "模型")], planRows)}</section>
+${v.points.length ? `<section aria-labelledby="plans"><h2 id="plans">${t(`Plans that include ${isOther ? "these" : v.name} models`, `包含 ${vName} 模型的套餐`)}</h2>
+${table(t("Subscriptions and APIs, by monthly fee", "订阅与 API，按月费排序"), [t("Plan", "套餐"), t("Provider", "供应商"), t("Billing", "计费"), t("Monthly fee", "月费"), t("Models", "模型")], planRows)}</section>` : `<p class="note">${t("Subscription pricing has not yet been recorded.", "订阅价格尚未收录。")}</p>`}
 ${relatedNews(newsFor.maker(v), lang)}
-<p><a class="button" href="${
+${v.points.length ? `<p><a class="button" href="${
   // The explorer filters by the raw vendor field, which lumps some makers under "other".
   v.models.length === 1 || new Set(v.points.map((p) => p.vendor)).has("other")
     ? lockLink(v.models[0], lang)
     : U.explorer(lang, `&vendors=${encodeURIComponent(v.points[0].vendor)}`)
-}">${t("Open in the interactive explorer", "在交互式图表中查看")}<span class="arrow" aria-hidden="true">→</span></a></p>`;
+}">${t("Open in the interactive explorer", "在交互式图表中查看")}<span class="arrow" aria-hidden="true">→</span></a></p>` : ""}`;
   return page({
     section: "makers",
     lang,
@@ -1252,7 +1264,7 @@ function comparePage(c, lang) {
     ? `截至 ${updated}，${n} 个共同订阅套餐中有 ${q} 个使用相同的已归一化负载：${a.name} 的记录单价在 ${c.plansWon.a} 个中较低，${b.name} 在 ${c.plansWon.b} 个中较低，${ties} 个持平。`
     : `As of ${updated}, ${q} of ${n} shared subscriptions use matching normalized workloads: ${a.name} has a lower recorded token cost on ${c.plansWon.a}, ${b.name} on ${c.plansWon.b}, with ${ties} tied.`;
   // The broadest leaderboard both are on, as one citable head-to-head figure.
-  const lead = boards.find((r) => r.board === "aa_intelligence_index") ?? boards[0];
+  const lead = boards.find((r) => r.board === "aa_intelligence_index_v5_0_1") ?? boards[0];
   const boardSentence = zh
     ? `${boardName(lead.board, lang)}上两者最高存档配置的成绩分别为 ${fmt(lead.a.best.score, lang, 2)} 和 ${fmt(lead.b.best.score, lang, 2)}；下表保留全部 ${k} 个共同榜单的配置与来源。`
     : `Their highest archived configurations score ${fmt(lead.a.best.score, lang, 2)} and ${fmt(lead.b.best.score, lang, 2)} on ${boardName(lead.board, lang)}; all ${k} shared leaderboard snapshots, configurations and sources appear below.`;
@@ -1290,7 +1302,7 @@ function comparePage(c, lang) {
   const scoreCell = (x) => {
     const v = x.best;
     const source = safeUrl(v.archive_url ?? "") ?? safeUrl(firstUrl(v.source) ?? "");
-    return `<strong>${fmt(v.score, lang, 2)}</strong>${v.score_is_self_reported ? ` <small>${t("self-reported", "厂商自报")}</small>` : ""}${v.score_is_estimated ? ` <small>${t("estimate", "估计值")}</small>` : ""}
+    return `<strong>${fmt(v.score, lang, 2)}</strong>${v.score_is_self_reported ? ` <small>${t("self-reported", "厂商自报")}</small>` : ""}${v.score_is_estimated ? ` <small>${t("estimate", "估计值")}</small>` : ""}${currentScoreFlags(v, lang)}
 <small class="block">#${x.rank} / ${x.of} · ${esc(variantLabel(v.board_label ?? v.variant, lang))}</small>
 <small class="block">${esc([v.agent_harness, effortLabel(v.reasoning_effort, lang), v.service_mode].filter(Boolean).join(" · ")) || t("Configuration details unavailable", "配置细节未提供")}</small>
 ${v.score_low != null && v.score_high != null ? `<small class="block">${t("Reported interval", "来源分数区间")} ${fmt(v.score_low, lang, 2)}–${fmt(v.score_high, lang, 2)}</small>` : ""}
@@ -1492,7 +1504,7 @@ ${table(
   mentioned.map((m) => [
     modelLink(m, lang),
     makerLink(makers.get(m.maker), lang),
-    m.cheapest ? `<strong>${usd(m.cheapest.real_usd_per_mtok)}</strong>` : "≈$0",
+    m.cheapest ? `<strong>${usd(m.cheapest.real_usd_per_mtok)}</strong>` : m.free.length ? "≈$0" : "—",
     m.cheapest ? planLink(m.cheapest, lang) : "—",
     m.listBlended != null ? usd(m.listBlended) : "—",
   ]),
@@ -1633,7 +1645,7 @@ const makersIndex = (lang) => {
         makerLink(v, lang),
         String(v.models.length),
         join(v.models.map((m) => modelLink(m, lang)), lang),
-        best ? `${usd(best.cheapest.real_usd_per_mtok)} <small>${esc(best.name)}</small>` : "≈$0",
+        best ? `${usd(best.cheapest.real_usd_per_mtok)} <small>${esc(best.name)}</small>` : v.points.some(unmetered) ? "≈$0" : "—",
         String(v.plans.length),
       ];
     }),
@@ -1672,26 +1684,26 @@ const providersIndex = (lang) => {
 
 const modelsIndex = (lang) => {
   const t = (en, cn) => (lang === "zh" ? cn : en);
-  const sorted = [...modelList].sort((a, b) => (a.cheapest?.real_usd_per_mtok ?? 0) - (b.cheapest?.real_usd_per_mtok ?? 0));
+  const sorted = [...modelList].sort((a, b) => (a.cheapest?.real_usd_per_mtok ?? (a.free.length ? 0 : Infinity)) - (b.cheapest?.real_usd_per_mtok ?? (b.free.length ? 0 : Infinity)) || a.name.localeCompare(b.name));
   return indexPage({
     lang,
     section: "models",
     path: [U.models("en"), U.models("zh")],
-    title: t(`AI Model Prices: Real Cost per Million Tokens for ${sorted.length} Models`, `AI 模型价格表：${sorted.length} 个模型的真实每百万 token 单价`),
+    title: t(`AI Model Directory: ${sorted.length} Models, Benchmarks & Prices`, `AI 模型目录：${sorted.length} 个模型、榜单与价格`),
     description: t(
       `Real price per million tokens for ${sorted.length} AI models — GPT, Claude, Gemini, Grok, DeepSeek, Qwen, Kimi, GLM and more — across subscriptions and APIs, cheapest first.`,
       `GPT、Claude、Gemini、Grok、DeepSeek、通义千问、Kimi、GLM 等 ${sorted.length} 个 AI 模型在订阅与 API 中的真实每百万 token 单价，从低到高排序。`,
     ),
     keywords: [t("AI model prices", "AI 模型价格"), t("LLM price per million tokens", "大模型每百万 token 价格"), ...sorted.slice(0, 20).map((m) => m.name)],
     kicker: t(plural(models.size, "model"), `${models.size} 个模型`),
-    h1: t("AI model prices", "AI 模型价格"),
-    lead: t(`All ${sorted.length} models, ranked by the lowest real price we found across every subscription and API that serves them.`, `全部 ${sorted.length} 个模型，按其在所有订阅与 API 中的最低真实单价排序。`),
+    h1: t("AI model directory", "AI 模型目录"),
+    lead: t(`All ${sorted.length} models, including models with benchmark results whose pricing has not yet been recorded. Available real prices are sorted lowest first.`, `全部 ${sorted.length} 个模型，包括已有榜单成绩、价格尚未收录的模型。已收录真实价格的模型按单价从低到高排序。`),
     caption: t("Models by lowest real price", "模型，按最低真实单价排序"),
     head: [t("Model", "模型"), t("Maker", "厂商"), t("Lowest real $/MTok", "最低真实单价 $/MTok"), t("Cheapest plan", "最便宜的套餐"), t("API list (std. mix)", "API 标价（标准负载）"), t("Plans", "套餐数")],
     rows: sorted.map((m) => [
       modelLink(m, lang),
       makerLink(makers.get(m.maker), lang),
-      m.cheapest ? `<strong>${usd(m.cheapest.real_usd_per_mtok)}</strong>` : "≈$0",
+      m.cheapest ? `<strong>${usd(m.cheapest.real_usd_per_mtok)}</strong>` : m.free.length ? "≈$0" : "—",
       m.cheapest ? planLink(m.cheapest, lang) : "—",
       m.listBlended != null ? usd(m.listBlended) : "—",
       String(m.points.length),
@@ -1903,7 +1915,7 @@ ${news.map((a) => `<url><loc>${abs(U.article(a))}</loc><lastmod>${a.updated}</la
 // llms-full.txt with the key numbers of every model and plan inline.
 const modelLine = (m) => {
   const c = m.cheapest;
-  return `- [${m.name}](${abs(U.model(m, "en"))}): ${c ? `from ${usd(c.real_usd_per_mtok)}/MTok real price via ${planName(c, "en")}` : "unmetered (≈$0)"}${m.listBlended != null ? `; API list ${usd(m.listBlended)}/MTok (standard mix)` : ""}; ${plural(m.points.length, "plan")}`;
+  return `- [${m.name}](${abs(U.model(m, "en"))}): ${c ? `from ${usd(c.real_usd_per_mtok)}/MTok real price via ${planName(c, "en")}` : m.free.length ? "unmetered (≈$0)" : "pricing not yet recorded"}${m.listBlended != null ? `; API list ${usd(m.listBlended)}/MTok (standard mix)` : ""}; ${plural(m.points.length, "plan")}`;
 };
 const comparisonLine = (c) => `- [${compareName(c)}](${abs(U.compare(c, "en"))}): ${c.comparablePlans.length} of ${c.plans.length} shared subscriptions have matching normalized workloads; ${c.boards.length} shared leaderboard snapshots with configuration details and evidence. Raw totals and different workloads are excluded from price ratios.`;
 const intro = `# ${NAME.en}

@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "board": "aa_intelligence_index",
+      "adapter": "aa-models",
+      "baselineVersion": "4.3",
+      "url": "https://artificialanalysis.ai/leaderboards/models"
+    },
+    {
+      "board": "terminal_bench_4",
+      "adapter": "terminal",
+      "baselineVersion": "4.0",
+      "url": "https://www.tbench.ai/"
+    },
+    {
+      "board": "aa_terminal_bench_4",
+      "adapter": "aa-terminal",
+      "baselineVersion": "4.0",
+      "url": "https://artificialanalysis.ai/leaderboards/models"
+    },
+    {
+      "board": "arena_code",
+      "adapter": "arena",
+      "baselineVersion": null,
+      "url": "https://arena.ai/leaderboard/code/webdev"
+    },
+    {
+      "board": "arena_agent_mode",
+      "adapter": "arena",
+      "baselineVersion": null,
+      "url": "https://arena.ai/leaderboard/agent"
+    },
+    {
+      "board": "aa_coding_agent_index",
+      "adapter": "aa-agents",
+      "baselineVersion": "1.5",
+      "url": "https://artificialanalysis.ai/agents/coding-agents"
+    },
+    {
+      "board": "open_design_arena",
+      "adapter": "design",
+      "baselineVersion": null,
+      "url": "https://open-design.ai/zh/llm-arena-for-design/"
+    },
+    {
+      "board": "deepswe_1_1",
+      "adapter": "deepswe",
+      "baselineVersion": "1.1",
+      "url": "https://deepswe.datacurve.ai/artifacts/v1.1/leaderboard-live.json",
+      "versionCheckUrl": "https://deepswe.datacurve.ai/"
+    }
+  ],
+  "aliases": {
+    "MiMo 2.6 Flash": "mimo-v2.6-flash",
+    "Hunyuan H4 Preview": "hy4-preview",
+    "GLM-5.3 Flash-X": "glm-5.3-flashx"
+  }
+}

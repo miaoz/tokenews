@@ -1103,6 +1103,20 @@ button:hover > .arrow {
 .unscored p {
   padding: 10px 0;
 }
+.unscored table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  color: var(--ink);
+}
+.unscored th, .unscored td {
+  padding: 8px;
+  border-bottom: 1px solid var(--line-2);
+  text-align: left;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+.unscored th:nth-child(2), .unscored td:nth-child(2) { width: 70px; }
 .unscored > div {
   display: flex;
   flex-wrap: wrap;

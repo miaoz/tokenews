@@ -24,6 +24,7 @@ import {
 import { ThemeContext, type Theme } from "./theme";
 import BrandIcon from "./BrandIcon";
 import Chart from "./Chart";
+import LeaderboardCoverage from "./LeaderboardCoverage";
 import { loadNotes, unpackData } from "./loadData";
 import ResizeHandle from "./ResizeHandle";
 import { useIncremental } from "./useIncremental";
@@ -92,6 +93,14 @@ import {
 } from "./domain";
 
 const boardLabels: Record<string, string> = {
+  aa_intelligence_index_v5_0_1: "AA Intelligence v5.0.1",
+  aa_coding_agent_index_v2_0: "AA Coding Agent v2.0",
+  terminal_bench_v4_0: "Terminal-Bench 4.0",
+  aa_terminal_bench_v4_0: "Terminal-Bench 4.0 (AA)",
+  arena_code_current: "Code Arena",
+  arena_agent_mode_current: "Agent Arena",
+  open_design_arena_current: "OpenDesign Arena",
+  deepswe_v1_1: "DeepSWE v1.1",
   arena_code: "Code Arena",
   arena_agent_mode: "Agent Arena",
   aa_intelligence_index: "AA Intelligence",
@@ -102,6 +111,14 @@ const boardLabels: Record<string, string> = {
   deepswe_1_1: "DeepSWE v1.1",
 };
 const boardZh: Record<string, string> = {
+  aa_intelligence_index_v5_0_1: "AA 智力榜 v5.0.1",
+  aa_coding_agent_index_v2_0: "AA 编程 Agent v2.0",
+  terminal_bench_v4_0: "Terminal-Bench 4.0 终端榜",
+  aa_terminal_bench_v4_0: "TB4（AA 实测）",
+  arena_code_current: "Code Arena · 网页开发",
+  arena_agent_mode_current: "Agent Arena",
+  open_design_arena_current: "OpenDesign 设计榜",
+  deepswe_v1_1: "DeepSWE v1.1",
   arena_code: "Code Arena · 网页开发",
   arena_agent_mode: "Agent Arena",
   aa_intelligence_index: "AA 智力榜",
@@ -675,7 +692,7 @@ function Explorer({
                   <dd>{Object.keys(data.boards).length}</dd>
                 </div>
                 <div>
-                  <dt>{t("Snapshot", "数据快照")}</dt>
+                  <dt>{t("Upstream price snapshot", "上游价格快照")}</dt>
                   <dd>{String(data.generatedAt).slice(0, 10)}</dd>
                 </div>
               </dl>
@@ -761,7 +778,7 @@ function Explorer({
                     <span>
                       {metricLabel(boardInfo.metric, state.lang)}
                       {boardVersion ? ` ${boardVersion}` : ""}
-                      {state.board === "arena_code" ? t(" · WebDev Overall", " · 网页开发 Overall") : ""}
+                      {state.board === "arena_code_current" ? t(" · WebDev Overall", " · 网页开发 Overall") : ""}
                     </span>
                     <span>
                       {t("Snapshot", "快照")} {boardInfo.snapshot}
@@ -1067,6 +1084,7 @@ function Explorer({
                   toolsSlot={chartSlot}
                 />
               )}
+              {state.view === "pareto" && <LeaderboardCoverage data={data} board={state.board} lang={state.lang} />}
               {state.view === "pareto" && (
                 <div className="chart-foot">
                   {noScore.length > 0 ? (
@@ -1173,6 +1191,7 @@ function Explorer({
                               <td className="numeric">
                                 {number(r.score, state.lang, 2)}
                                 {r.mapping?.score_is_estimated && <small>{t("AA estimate", "AA 估计值")}</small>}
+                                {r.mapping?.score_is_preliminary && <small>{t("Preliminary", "初步成绩")}</small>}
                                 {r.mapping?.score_is_self_reported && <small>{t("vendor self-report", "厂商自报")}</small>}
                               </td>
                               <td>
@@ -1816,7 +1835,7 @@ function Details({
                   <strong>{variantLabel(m.variant, lang)}</strong>
                   <dl>
                     <dt>{t("Score", "分数")}</dt>
-                    <dd>{number(m.score, lang, 4)}{m.score_is_estimated ? t(" · AA estimate; independent evaluation pending", " · AA 估计值，独立评测待完成") : ""}{m.score_is_self_reported ? t(" · vendor self-report, not an official leaderboard run", " · 厂商自报成绩，非官方榜单数据") : ""}</dd>
+                    <dd>{number(m.score, lang, 4)}{m.score_is_estimated ? t(" · AA estimate; independent evaluation pending", " · AA 估计值，独立评测待完成") : ""}{m.score_is_self_reported ? t(" · vendor self-report, not an official leaderboard run", " · 厂商自报成绩，非官方榜单数据") : ""}{m.score_is_preliminary ? t(" · preliminary", " · 初步成绩") : ""}</dd>
                     <dt>{t("Score interval", "分数区间")}</dt>
                     <dd>
                       {m.score_low == null && m.score_high == null

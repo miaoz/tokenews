@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "checkedAt": "2026-11-04",
+  "method": "Public source pages read through web search retrieval after direct HTTP requests returned 403. These observations do not override automated failures and are not a full import.",
+  "sources": [
+    {
+      "board": "arena_code",
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "sourceDate": "2026-10-27",
+      "reportedModels": 153,
+      "version": null,
+      "notes": "The former /leaderboard/code URL is now a category landing page; WebDev Overall is at /leaderboard/code/webdev. No semantic benchmark version is declared on the page. Preliminary entries must retain that status.",
+      "verifiedExamples": [
+        {"model":"gemini-4-carbon","configuration":"High","score":1768,"preliminary":true},
+        {"model":"kimi-k3.1-pro","configuration":"Max","score":1695,"preliminary":true},
+        {"model":"gpt-6.1-terra","configuration":"Max","score":1673},
+        {"model":"muse-wonder-full","configuration":"Max","score":1725},
+        {"model":"muse-wonder","configuration":"Max","score":1652},
+        {"model":"deepseek-v4.1-flash-1017","configuration":"Max","score":1665}
+      ]
+    },
+    {
+      "board": "arena_agent_mode",
+      "source": "https://arena.ai/leaderboard/agent",
+      "sourceDate": "2026-11-03",
+      "reportedModels": 59,
+      "version": null,
+      "notes": "Overall Net Improvement, percentage points. No semantic benchmark version is declared on the page. These examples establish changes, not exhaustive coverage.",
+      "verifiedExamples": [
+        {"model":"gemini-4-carbon","configuration":"High","score":16.54,"preliminary":true},
+        {"model":"kimi-k3.1-pro","configuration":"Max","score":5.09,"preliminary":true},
+        {"model":"gpt-6.1-terra","configuration":"Max","score":10.91},
+        {"model":"muse-wonder-full","configuration":"Max","score":9.59},
+        {"model":"muse-wonder","configuration":"Max","score":2.52},
+        {"model":"deepseek-v4.1-flash-1017","configuration":"Max","score":2.25}
+      ]
+    }
+  ]
+}

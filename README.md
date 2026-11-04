@@ -14,6 +14,8 @@ Curated model comparisons at `/compare/` (Chinese: `/zh/compare/`) put shared su
 content/news/        news articles, one Markdown file each (see content/news/README.md)
 upstream/            data snapshot synced from Real API Pricing — never edited by hand
 upstream.lock.json   which upstream commit the snapshot comes from
+data/models.json    independent model identity catalog, including models without prices
+data/leaderboards/  direct-source snapshots, reviewed mappings and discovery queue
 data/api-prices/    independently maintained official API references, one JSON file per provider
 scripts/
   sync-upstream.mjs  pulls only the data paths into upstream/
@@ -28,11 +30,16 @@ web/                 the site: React explorer + static page generator (see web/R
 
 **Current official API references are maintained by Tokenews** in [`data/api-prices/`](data/api-prices/README.md), separately from upstream quota and cost evidence. Provider files are discovered automatically; adding a model, region, processing tier or context band requires a JSON edit, not a code change. The build validates and publishes these records and uses their explicitly selected default tiers on model comparisons. Historical upstream points remain intact. Uncovered models retain upstream references where available. See the maintenance guide for the format, source policy and coverage report.
 
+**Model identity and leaderboard updates are also maintained independently.** The model catalog includes models without subscription prices. Direct Artificial Analysis and Crusader Bench adapters update reviewed configurations and produce a discovery queue; benchmark versions are isolated and historical observations retained. See [the maintenance guide](data/leaderboards/README.md).
+
 ## Everyday commands
 
 ```sh
 npm ci                 # once (root: Wrangler); `npm run build` installs web/
 npm run sync           # pull the latest upstream data (or: npm run sync -- <commit>)
+npm run leaderboards:audit  # audit all Pareto sources; unverified sources cause nonzero exit
+npm run pareto:update       # refresh all eight current boards; failed sources retain their previous snapshot
+npm run leaderboards:update # refresh reviewed direct sources and the discovery queue
 npm run prices:check   # independently validate API pricing files; no upstream or web install needed
 npm run prices:report  # maintained / upstream-only / missing coverage and price differences
 npm run build          # web/dist: explorer + every maker, provider and model page
@@ -49,6 +56,11 @@ npm run cf:deploy      # deploy static assets (needs `npx wrangler login` or an 
 - **Upstream sync** (`sync-upstream.yml`): daily at 10:17 Beijing time, or by hand with an optional upstream ref. Unchanged data does nothing. Changed data that passes build, tests and checks is committed to `main` and deployed. A failure opens or updates an issue labelled `upstream-sync`, and the live site keeps the previous data.
 
 Repository secrets needed by the deploy: `CLOUDFLARE_API_TOKEN` (a token from the "Edit Cloudflare Workers" template, scoped to this account and the `tokenews.xyz` zone) and `CLOUDFLARE_ACCOUNT_ID`.
+
+The independent leaderboard workflow (`update-leaderboards.yml`) runs daily at
+02:47 UTC: audit, current Pareto refresh, individual-source refresh, build, tests
+and page checks, then commit and deploy. See [current Pareto data](data/leaderboards/PARETO.md)
+for version isolation, price correspondence and Arena retrieval limitations.
 
 ## Cloudflare routing and billing
 

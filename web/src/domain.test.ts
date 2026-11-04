@@ -86,7 +86,7 @@ test("Packed website mappings restore every original field without data loss", (
   // Website-only display fields (translations, provenance inherited from the
   // shared configuration) are added on top of the original mapping records.
   assert.deepEqual(
-    data.mappings.map(
+    data.mappings.filter(m=>!m.configuration_id.startsWith('current:')).map(
       ({
         source_en: _se,
         archive: _a,
@@ -161,8 +161,9 @@ const adopted = parse(
   { columns: true, skip_empty_lines: true, bom: true },
 ) as Record<string, string>[];
 test("All source point values and stable IDs survive the adapter, including null API fees", () => {
-  assert.equal(data.points.length, adopted.length);
-  assert.equal(new Set(data.points.map((p) => p.id)).size, adopted.length);
+  const adoptedPoints=data.points.filter(p=>p.price_origin!=='maintained-api');
+  assert.equal(adoptedPoints.length, adopted.length);
+  assert.equal(new Set(adoptedPoints.map((p) => p.id)).size, adopted.length);
   for (const a of adopted) {
     const p = data.points.find(
       (p) => p.id === `${a.plan_id}::${a.served_model}`,
@@ -385,7 +386,7 @@ test("Share links round-trip language, board, exact empty selection and all view
     lang: "zh" as const,
     view: "allowance" as const,
     selected: [],
-    board: "aa_coding_agent_index",
+    board: "aa_coding_agent_index_v2_0",
     channels: ["Cursor", "OpenAI"],
     labels: "none" as const,
     frontier: false,
@@ -479,7 +480,7 @@ test("Unknown enum values in a short link warn and fall back to defaults", () =>
   assert.equal(restored.state.view, "pareto");
   assert.equal(restored.state.lang, "zh");
   assert.equal(restore("#board=__proto__", data).warning, true);
-  assert.equal(restore("#board=__proto__", data).state.board, "aa_intelligence_index");
+  assert.equal(restore("#board=__proto__", data).state.board, "aa_intelligence_index_v5_0_1");
 });
 test("Invalid saved values are ignored with notice; an explicit URL language overrides the local preference", () => {
   const s = {
@@ -495,7 +496,7 @@ test("Invalid saved values are ignored with notice; an explicit URL language ove
   // …while an explicit lang in the URL (older share links included) still wins.
   assert.equal(restore("#lang=en", data, "zh").state.lang, "en");
   assert.equal(restore(serialize({ ...defaultState(), lang: "zh" }), data, "en").state.lang, "zh");
-  assert.equal(result.state.board, "aa_intelligence_index");
+  assert.equal(result.state.board, "aa_intelligence_index_v5_0_1");
   assert.deepEqual(result.state.selected, [data.points[0].id]);
   assert.deepEqual(result.state.channels, []);
   assert.equal(restore("#s=%notjson", data).warning, true);
@@ -661,7 +662,7 @@ test("Third-party labels reserve room for the maker mini-logo", () => {
 });
 test("Chart search AND-matches plan, channel and model fields and dedupes points", () => {
   const gs = groups(
-    rowsFor(data, { ...defaultState(), configuration: "all" }),
+    rowsFor(data, { ...defaultState(), board: "aa_intelligence_index", configuration: "all" }),
   );
   // Multi-token AND is order-independent: the plan tier and vendor must both hit.
   const forward = searchMatches(gs, "kimi 199", "en");
@@ -690,7 +691,7 @@ test("Chart search AND-matches plan, channel and model fields and dedupes points
 });
 test("Chart search lock overrides the live match set and reports a missing lock", () => {
   const gs = groups(
-    rowsFor(data, { ...defaultState(), configuration: "all" }),
+    rowsFor(data, { ...defaultState(), board: "aa_intelligence_index", configuration: "all" }),
   );
   const lockId = "kimi_allegretto_cn::kimi-k3";
   // A point id can map to several configurations, hence several groups.
@@ -827,7 +828,7 @@ test("Model lock labels and coverage are generation-independent", () => {
 });
 test("Point-level candidates and locks keep the generation tag", () => {
   const gs = groups(
-    rowsFor(data, { ...defaultState(), configuration: "all" }),
+    rowsFor(data, { ...defaultState(), board: "aa_intelligence_index", configuration: "all" }),
   );
   const pointHits = searchHits(
     gs,
@@ -1158,6 +1159,7 @@ test("English CSV export has no Chinese in the Plan or source columns", () => {
 });
 
 test("Every mapping exposes score provenance: checked date, archive file, board label, localized record note", () => {
+  const current = JSON.parse(readFileSync(new URL('../public/data/current-leaderboards.json',import.meta.url),'utf8'));
   const evidenceDir = new Set(
     readdirSync(new URL("../public/data/evidence", import.meta.url)),
   );
@@ -1167,12 +1169,14 @@ test("Every mapping exposes score provenance: checked date, archive file, board 
   for (const m of data.mappings) {
     assert.ok(m.checked_at, `${m.point_id}/${m.board}`);
     assert.ok(m.board_label, `${m.point_id}/${m.board}`);
-    assert.ok(m.archive, `${m.point_id}/${m.board}`);
-    assert.equal(m.archive_url, `/data/evidence/${m.archive}`);
-    assert.ok(
-      evidenceDir.has(m.archive!) || researchDir.has(m.archive!),
-      `archive not shipped: ${m.archive}`,
-    );
+    if (m.configuration_id.startsWith('current:')) {
+      assert.equal(m.archive_url, '/data/current-leaderboards.json');
+      assert.ok(current.sources.some((s: {id:string})=>s.id===m.board));
+    } else {
+      assert.ok(m.archive, `${m.point_id}/${m.board}`);
+      assert.equal(m.archive_url, `/data/evidence/${m.archive}`);
+      assert.ok(evidenceDir.has(m.archive!) || researchDir.has(m.archive!), `archive not shipped: ${m.archive}`);
+    }
     if (m.record_note_en != null || m.record_note_zh != null) {
       assert.ok(
         m.record_note_en && !CJK_CHAR.test(m.record_note_en),

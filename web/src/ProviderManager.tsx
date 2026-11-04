@@ -150,7 +150,7 @@ export default function CustomProvidersPanel({
 
   /** Known served models: slug → display name (for the picker and score badge). */
   const knownModels = useMemo(() => {
-    const map = new Map<string, string>();
+    const map = new Map<string, string>(data.models?.map(m=>[m.id,m.name]));
     for (const p of data.points)
       if (!p.id.startsWith("custom::") && !map.has(p.model))
         map.set(p.model, p.model_display);

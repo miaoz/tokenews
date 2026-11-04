@@ -1087,6 +1087,7 @@ export default function Chart({
             {hoverGroup.rows[0]?.mapping?.variant && (
               <div className="hover-variant">
                 {variantLabel(hoverGroup.rows[0].mapping.variant, state.lang)}
+                {hoverGroup.rows[0].mapping.score_is_preliminary ? (zh ? " · 初步成绩" : " · Preliminary") : ""}
               </div>
             )}
             <div className="hover-stats">

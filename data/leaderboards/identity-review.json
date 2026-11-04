@@ -1,0 +1,4612 @@
+{
+  "version": 1,
+  "checkedAt": "2026-11-04",
+  "note": "Identity verification against explicit AA release/creator metadata and Arena source configuration labels; model identity does not establish subscription availability or quota.",
+  "addedModels": [
+    "a.x-k2",
+    "agnes-2.5-pro-beta",
+    "apertus-70b-instruct",
+    "apertus-8b-instruct",
+    "apodex-1.1",
+    "apriel-v1.6-15b-thinker",
+    "celeris-1",
+    "claude-haiku-4.5-20251001",
+    "claude-opus-4.1-20250805",
+    "claude-opus-4.5-20251101",
+    "claude-opus-4.6",
+    "claude-opus-4.7",
+    "claude-sonnet-4.5-20250929",
+    "claude-sonnet-4.6",
+    "cogito-v2.1",
+    "command-a",
+    "command-a-plus",
+    "deephermes-3-llama-3.1-8b-preview",
+    "deephermes-3-mistral-24b-preview",
+    "deepseek-v3.2",
+    "deepseek-v3.2-exp",
+    "deepseek-v4-flash-preview",
+    "deepseek-v4-flash-vision",
+    "deepseek-v4-pro-0813",
+    "deepseek-v4-pro-preview",
+    "devstral-2",
+    "devstral-medium-2507",
+    "diffusiongemma-26b-a4b",
+    "doubao-seed-code",
+    "ernie-4.5-300b-a47b",
+    "ernie-5.0-thinking-preview",
+    "exaone-4.0-1.2b",
+    "exaone-4.0-32b",
+    "exaone-4.5-33b",
+    "falcon-h1r-7b",
+    "g9v3-39a5b",
+    "g9v3-3b",
+    "gemini-2.5-pro",
+    "gemini-3-deep-think",
+    "gemini-3-flash",
+    "gemini-3-pro",
+    "gemini-3.1-flash-lite-preview",
+    "gemini-3.1-pro-preview",
+    "gemini-3.5-flash",
+    "gemini-3.5-flash-lite",
+    "gemma-3-270m",
+    "gemma-4-12b",
+    "gemma-4-26b-a4b",
+    "gemma-4-31b",
+    "gemma-4-e2b",
+    "gemma-4-e4b",
+    "glm-4.6",
+    "glm-4.7",
+    "glm-5v-turbo",
+    "gpt-5",
+    "gpt-5.1",
+    "gpt-5.1-codex",
+    "gpt-5.1-codex-mini",
+    "gpt-5.2",
+    "gpt-5.2-codex",
+    "gpt-5.3-codex",
+    "gpt-5.4",
+    "gpt-5.4-mini",
+    "gpt-5.5-instant-june-2026",
+    "gpt-5.5-pro",
+    "gpt-oss-120b",
+    "gpt-oss-20b",
+    "granite-4.0-350m",
+    "granite-4.0-h-1b",
+    "granite-4.0-h-350m",
+    "granite-4.0-h-small",
+    "granite-4.0-micro",
+    "granite-4.1-8b",
+    "granite-4.2-30b",
+    "granite-4.2-3b",
+    "granite-4.2-8b",
+    "grok-4-fast",
+    "grok-4.1",
+    "grok-4.1-fast",
+    "grok-4.20-beta-0309",
+    "grok-4.3",
+    "grok-code-fast-1",
+    "hermes-4-llama-3.1-405b",
+    "hermes-4-llama-3.1-70b",
+    "hy3-preview",
+    "hy4",
+    "hyperclova-x-seed-think-32b",
+    "hypernova-60b-2605",
+    "intellect-3",
+    "jamba-1.7-large",
+    "jamba-1.7-mini",
+    "jamba-reasoning-3b",
+    "jt-35b-flash",
+    "jt-4.1-flash-236b-a21b",
+    "jt-mini",
+    "k-exaone-2.0",
+    "k2-horizon-0.9b",
+    "k2-horizon-3.7b",
+    "k2-horizon-375b-a23b",
+    "k2-horizon-7b",
+    "k2-horizon-mova-36b-a4b",
+    "k2-think-v2",
+    "k2-v2",
+    "kat-coder-pro-v1",
+    "kat-coder-pro-v2",
+    "kimi-k2-thinking-turbo",
+    "kimi-linear-48b-a3b-instruct",
+    "laguna-m.1",
+    "laguna-xs.2",
+    "lfm2-24b-a2b",
+    "lfm2.5-1.2b-instruct",
+    "lfm2.5-1.2b-thinking",
+    "lfm2.5-2.6b",
+    "lfm2.5-8b-a1b",
+    "lfm2.5-vl-1.6b",
+    "ling-3.0-flash-fin",
+    "ling-3.0-flash-vl",
+    "ling-3.0-tiny",
+    "llama-3.1-instruct-405b",
+    "llama-3.1-nemotron-ultra-253b-v1",
+    "llama-3.2-instruct-11b-vision",
+    "llama-3.2-instruct-90b-vision",
+    "llama-3.3-instruct-70b",
+    "llama-4-maverick",
+    "llama-4-scout",
+    "longcat-flash-lite",
+    "magistral-medium-1.2",
+    "magistral-small-1.2",
+    "mercury-2",
+    "mercury-2.5",
+    "mi-dm-k-2.5-pro",
+    "mimo-v2-flash",
+    "mimo-v2-pro",
+    "minicpm-v-4.6-1.3b",
+    "minicpm5-1b",
+    "minicpm5-2b",
+    "minimax-m2",
+    "minimax-m2.1-preview",
+    "ministral-3-14b",
+    "ministral-3-3b",
+    "ministral-3-8b",
+    "mistral-large-3",
+    "mistral-small-4",
+    "molmo-7b-d",
+    "molmo2-8b",
+    "motif-2-12.7b-reasoning",
+    "motif-3",
+    "muse-glimmer",
+    "muse-spark-1.1",
+    "nanbeige4.1-3b",
+    "nemotron-3-nano-omni-30b-a3b-reasoning",
+    "nemotron-3.5-lightning",
+    "nemotron-3.5-super-vl-nvfp4",
+    "nemotron-cascade-2-30b-a3b",
+    "nex-n2-pro",
+    "north-mini-code",
+    "nova-2.0-lite",
+    "nova-2.0-omni",
+    "nova-2.0-pro-preview",
+    "nova-micro",
+    "nova-premier",
+    "nvidia-nemotron-3-nano-30b-a3b",
+    "nvidia-nemotron-3-nano-4b",
+    "nvidia-nemotron-nano-12b-v2-vl",
+    "nvidia-nemotron-nano-9b-v2",
+    "o3",
+    "olmo-3-7b-instruct",
+    "olmo-3-7b-think",
+    "olmo-3.1-32b-instruct",
+    "olmo-3.1-32b-think",
+    "phi-4",
+    "phi-4-mini-instruct",
+    "phi-4-multimodal-instruct",
+    "quasar-438b",
+    "qwen3-coder-480b-a35b-instruct",
+    "qwen3-coder-next",
+    "qwen3-next-80b-a3b-instruct",
+    "qwen3-next-80b-a3b-reasoning",
+    "qwen3-omni-30b-a3b-instruct",
+    "qwen3-omni-30b-a3b-reasoning",
+    "qwen3.5-0.8b",
+    "qwen3.5-122b-a10b",
+    "qwen3.5-27b",
+    "qwen3.5-2b",
+    "qwen3.5-35b-a3b",
+    "qwen3.5-397b-a17b",
+    "qwen3.5-4b",
+    "qwen3.5-9b",
+    "qwen3.5-flash",
+    "qwen3.5-omni-flash",
+    "qwen3.5-omni-plus",
+    "qwen3.6-35b-a3b",
+    "qwen3.7-max-20260517",
+    "qwen3.8-2.4t-a95b",
+    "qwen3.8-flash-next",
+    "r1-1776",
+    "reka-flash-3",
+    "ring-2.6-1t",
+    "ring-flash-2.0",
+    "sarvam-105b",
+    "sarvam-30b",
+    "seed2.1-pro-preview",
+    "solar-mini-4",
+    "solar-open-100b",
+    "solar-open2-250b",
+    "solar-pro-4",
+    "spark-x2.6",
+    "step3-vl-10b",
+    "tiny-aya-global",
+    "tri-21b-think",
+    "trinity-large-thinking",
+    "gpt-5.3-codex-20260305"
+  ],
+  "originalDiscovery": [
+    {
+      "url": "https://artificialanalysis.ai/models/a-x-k2",
+      "release": "a-x-k2",
+      "model": "a.x-k2",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/agnes-2-5-pro-beta",
+      "release": "agnes-2-5-pro-beta",
+      "model": "agnes-2.5-pro-beta",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/apertus-70b-instruct",
+      "release": "apertus-70b-instruct",
+      "model": "apertus-70b-instruct",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/apertus-8b-instruct",
+      "release": "apertus-8b-instruct",
+      "model": "apertus-8b-instruct",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/apodex-1-1",
+      "release": "apodex-1-1",
+      "model": "apodex-1.1",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/apriel-v1-6-15b-thinker",
+      "release": "apriel-v1-6-15b-thinker",
+      "model": "apriel-v1.6-15b-thinker",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/celeris-1",
+      "release": "celeris-1",
+      "model": "celeris-1",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/cogito-v2-1-reasoning",
+      "release": "cogito-v2-1",
+      "model": "cogito-v2.1",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/command-a",
+      "release": "command-a",
+      "model": "command-a",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/command-a-plus",
+      "release": "command-a-plus",
+      "model": "command-a-plus",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/deephermes-3-llama-3-1-8b-preview",
+      "release": "deephermes-3-llama-3-1-8b-preview",
+      "model": "deephermes-3-llama-3.1-8b-preview",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/deephermes-3-mistral-24b-preview",
+      "release": "deephermes-3-mistral-24b-preview",
+      "model": "deephermes-3-mistral-24b-preview",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/deepseek-v4-flash-vision",
+      "release": "deepseek-v4-flash-vision",
+      "model": "deepseek-v4-flash-vision",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/diffusiongemma-26b-a4b",
+      "release": "diffusiongemma-26b-a4b",
+      "model": "diffusiongemma-26b-a4b",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/doubao-seed-code",
+      "release": "doubao-seed-code",
+      "model": "doubao-seed-code",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/ernie-4-5-300b-a47b",
+      "release": "ernie-4-5-300b-a47b",
+      "model": "ernie-4.5-300b-a47b",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/ernie-5-0-thinking-preview",
+      "release": "ernie-5-0-thinking-preview",
+      "model": "ernie-5.0-thinking-preview",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/falcon-h1r-7b",
+      "release": "falcon-h1r-7b",
+      "model": "falcon-h1r-7b",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/g9v3-39a5b",
+      "release": "g9v3-39a5b",
+      "model": "g9v3-39a5b",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/g9v3-3b",
+      "release": "g9v3-3b",
+      "model": "g9v3-3b",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/gemini-3-1-pro-preview",
+      "release": "gemini-3-1-pro-preview",
+      "model": "gemini-3.1-pro-preview",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/gemini-3-5-flash-lite",
+      "release": "gemini-3-5-flash-lite",
+      "model": "gemini-3.5-flash-lite",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/gemini-3-deep-think",
+      "release": "gemini-3-deep-think",
+      "model": "gemini-3-deep-think",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/gemini-4-argon",
+      "release": "gemini-4-argon",
+      "model": "gemini-4-argon",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/gemma-3-270m",
+      "release": "gemma-3-270m",
+      "model": "gemma-3-270m",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/glm-5-3-flash",
+      "release": "glm-5-3-flash",
+      "model": "glm-5.3-flash",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/gpt-5-3-codex",
+      "release": "gpt-5-3-codex",
+      "model": "gpt-5.3-codex",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/gpt-5-5-instant-06-26",
+      "release": "gpt-5-5-instant-06-26",
+      "model": "gpt-5.5-instant-june-2026",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/gpt-5-5-pro",
+      "release": "gpt-5-5-pro",
+      "model": "gpt-5.5-pro",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/gpt-6-sol-daybreak-blue",
+      "release": "gpt-6-sol-daybreak-blue",
+      "model": "gpt-6-sol",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/granite-4-0-350m",
+      "release": "granite-4-0-350m",
+      "model": "granite-4.0-350m",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/granite-4-0-h-350m",
+      "release": "granite-4-0-h-350m",
+      "model": "granite-4.0-h-350m",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/granite-4-0-h-nano-1b",
+      "release": "granite-4-0-h-nano-1b",
+      "model": "granite-4.0-h-1b",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/granite-4-0-h-small",
+      "release": "granite-4-0-h-small",
+      "model": "granite-4.0-h-small",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/granite-4-0-micro",
+      "release": "granite-4-0-micro",
+      "model": "granite-4.0-micro",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/granite-4-2-30b",
+      "release": "granite-4-2-30b",
+      "model": "granite-4.2-30b",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/granite-4-2-3b",
+      "release": "granite-4-2-3b",
+      "model": "granite-4.2-3b",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/granite-4-2-8b",
+      "release": "granite-4-2-8b",
+      "model": "granite-4.2-8b",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/hy3",
+      "release": "hy3",
+      "model": "hy3",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/hyperclova-x-seed-think-32b",
+      "release": "hyperclova-x-seed-think-32b",
+      "model": "hyperclova-x-seed-think-32b",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/hypernova-60b",
+      "release": "hypernova-60b",
+      "model": "hypernova-60b-2605",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/inkling",
+      "release": "inkling",
+      "model": "inkling",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/inkling-small",
+      "release": "inkling-small",
+      "model": "inkling-small",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/intellect-3",
+      "release": "intellect-3",
+      "model": "intellect-3",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/jamba-1-7-large",
+      "release": "jamba-1-7-large",
+      "model": "jamba-1.7-large",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/jamba-1-7-mini",
+      "release": "jamba-1-7-mini",
+      "model": "jamba-1.7-mini",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/jamba-reasoning-3b",
+      "release": "jamba-reasoning-3b",
+      "model": "jamba-reasoning-3b",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/jt-35b-flash",
+      "release": "jt-35b-flash",
+      "model": "jt-35b-flash",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/jt-mini",
+      "release": "jt-mini",
+      "model": "jt-mini",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/k-exaone-2-0-0803",
+      "release": "k-exaone-2-0-0803",
+      "model": "k-exaone-2.0",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/k2-horizon-0-9b",
+      "release": "k2-horizon-0-9b",
+      "model": "k2-horizon-0.9b",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/k2-horizon-3-7b",
+      "release": "k2-horizon-3-7b",
+      "model": "k2-horizon-3.7b",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/k2-horizon-375b-a23b",
+      "release": "k2-horizon-375b-a23b",
+      "model": "k2-horizon-375b-a23b",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/k2-horizon-7b",
+      "release": "k2-horizon-7b",
+      "model": "k2-horizon-7b",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/k2-horizon-mova-36b-a4b",
+      "release": "k2-horizon-mova-36b-a4b",
+      "model": "k2-horizon-mova-36b-a4b",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/k2-think-v2",
+      "release": "k2-think-v2",
+      "model": "k2-think-v2",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/kat-coder-pro-v2",
+      "release": "kat-coder-pro-v2",
+      "model": "kat-coder-pro-v2",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/kimi-k2-7-code",
+      "release": "kimi-k2-7-code",
+      "model": "kimi-k2.7-code",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/kimi-linear-48b-a3b-instruct",
+      "release": "kimi-linear-48b-a3b-instruct",
+      "model": "kimi-linear-48b-a3b-instruct",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/lfm2-24b-a2b",
+      "release": "lfm2-24b-a2b",
+      "model": "lfm2-24b-a2b",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/lfm2-5-1-2b-instruct",
+      "release": "lfm2-5-1-2b-instruct",
+      "model": "lfm2.5-1.2b-instruct",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/lfm2-5-1-2b-thinking",
+      "release": "lfm2-5-1-2b-thinking",
+      "model": "lfm2.5-1.2b-thinking",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/lfm2-5-2-6b",
+      "release": "lfm2-5-2-6b",
+      "model": "lfm2.5-2.6b",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/lfm2-5-8b-a1b",
+      "release": "lfm2-5-8b-a1b",
+      "model": "lfm2.5-8b-a1b",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/lfm2-5-vl-1-6b",
+      "release": "lfm2-5-vl-1-6b",
+      "model": "lfm2.5-vl-1.6b",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/ling-3-0-flash-fin",
+      "release": "ling-3-0-flash-fin",
+      "model": "ling-3.0-flash-fin",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/ling-3-0-flash-vl",
+      "release": "ling-3-0-flash-vl",
+      "model": "ling-3.0-flash-vl",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/ling-3-0-tiny",
+      "release": "ling-3-0-tiny",
+      "model": "ling-3.0-tiny",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/ling-3-1-flash",
+      "release": "ling-3-1-flash",
+      "model": "ling-3.1-flash",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/llama-3-1-instruct-405b",
+      "release": "llama-3-1-instruct-405b",
+      "model": "llama-3.1-instruct-405b",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/llama-3-1-nemotron-ultra-253b-v1-reasoning",
+      "release": "llama-3-1-nemotron-ultra-253b-v1",
+      "model": "llama-3.1-nemotron-ultra-253b-v1",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/llama-3-2-instruct-11b-vision",
+      "release": "llama-3-2-instruct-11b-vision",
+      "model": "llama-3.2-instruct-11b-vision",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/llama-3-2-instruct-90b-vision",
+      "release": "llama-3-2-instruct-90b-vision",
+      "model": "llama-3.2-instruct-90b-vision",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/llama-3-3-instruct-70b",
+      "release": "llama-3-3-instruct-70b",
+      "model": "llama-3.3-instruct-70b",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/llama-4-maverick",
+      "release": "llama-4-maverick",
+      "model": "llama-4-maverick",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/llama-4-scout",
+      "release": "llama-4-scout",
+      "model": "llama-4-scout",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/longcat-2-0",
+      "release": "longcat-2-0",
+      "model": "longcat-2.0",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/longcat-flash-lite",
+      "release": "longcat-flash-lite",
+      "model": "longcat-flash-lite",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/magistral-medium-2509",
+      "release": "magistral-medium-2509",
+      "model": "magistral-medium-1.2",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/magistral-small-2509",
+      "release": "magistral-small-2509",
+      "model": "magistral-small-1.2",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/mercury-2-5",
+      "release": "mercury-2-5",
+      "model": "mercury-2.5",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/mi-dm-k-2-5-pro-dec28",
+      "release": "mi-dm-k-2-5-pro-dec28",
+      "model": "mi-dm-k-2.5-pro",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/mimo-v2-6-flash",
+      "release": "mimo-v2-6-flash",
+      "model": "mimo-v2.6-flash",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/mimo-v2-6-pro",
+      "release": "mimo-v2-6-pro",
+      "model": "mimo-v2.6-pro",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/minicpm-v4-6-1-3b",
+      "release": "minicpm-v-4-6-1-3b",
+      "model": "minicpm-v-4.6-1.3b",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/minicpm5-2b",
+      "release": "minicpm5-2b",
+      "model": "minicpm5-2b",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/minimax-m3",
+      "release": "minimax-m3",
+      "model": "minimax-m3",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/ministral-3-14b",
+      "release": "ministral-3-14b",
+      "model": "ministral-3-14b",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/ministral-3-3b",
+      "release": "ministral-3-3b",
+      "model": "ministral-3-3b",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/ministral-3-8b",
+      "release": "ministral-3-8b",
+      "model": "ministral-3-8b",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/mistral-medium-3-5",
+      "release": "mistral-medium-3-5",
+      "model": "mistral-medium-3.5",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/molmo-7b-d",
+      "release": "molmo-7b-d",
+      "model": "molmo-7b-d",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/molmo2-8b",
+      "release": "molmo2-8b",
+      "model": "molmo2-8b",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/motif-2-12-7b",
+      "release": "motif-2-12-7b-reasoning",
+      "model": "motif-2-12.7b-reasoning",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/motif-3",
+      "release": "motif-3",
+      "model": "motif-3",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/muse-glimmer",
+      "release": "muse-glimmer",
+      "model": "muse-glimmer",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/nanbeige4-1-3b",
+      "release": "nanbeige4-1-3b",
+      "model": "nanbeige4.1-3b",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/nemotron-3-5-bolt-74b-a9b",
+      "release": "nemotron-3-5-bolt-74b-a9b",
+      "model": "nemotron-3.5-bolt-74b-a9b",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/nemotron-3-5-bolt-e4b-4gb",
+      "release": "nemotron-3-5-bolt-e4b-4gb",
+      "model": "nemotron-3.5-bolt-e4b-4gb",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/nemotron-3-5-lightning",
+      "release": "nemotron-3-5-lightning",
+      "model": "nemotron-3.5-lightning",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/nemotron-3-nano-omni-30b-a3b",
+      "release": "nemotron-3-nano-omni-30b-a3b",
+      "model": "nemotron-3-nano-omni-30b-a3b-reasoning",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/nemotron-cascade-2-30b-a3b",
+      "release": "nemotron-cascade-2-30b-a3b",
+      "model": "nemotron-cascade-2-30b-a3b",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/nex-n2-pro",
+      "release": "nex-n2-pro",
+      "model": "nex-n2-pro",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/north-mini-code",
+      "release": "north-mini-code",
+      "model": "north-mini-code",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/nova-micro",
+      "release": "nova-micro",
+      "model": "nova-micro",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/nova-premier",
+      "release": "nova-premier",
+      "model": "nova-premier",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/nvidia-nemotron-3-nano-4b",
+      "release": "nvidia-nemotron-3-nano-4b",
+      "model": "nvidia-nemotron-3-nano-4b",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/nvidia-nemotron-3-ultra-550b-a55b",
+      "release": "nemotron-3-ultra-550b-a55b",
+      "model": "nemotron-3-ultra",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/o3",
+      "release": "o3",
+      "model": "o3",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/olmo-3-1-32b-instruct",
+      "release": "olmo-3-1-32b-instruct",
+      "model": "olmo-3.1-32b-instruct",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/olmo-3-1-32b-think",
+      "release": "olmo-3-1-32b-think",
+      "model": "olmo-3.1-32b-think",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/olmo-3-7b-instruct",
+      "release": "olmo-3-7b-instruct",
+      "model": "olmo-3-7b-instruct",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/olmo-3-7b-think",
+      "release": "olmo-3-7b-think",
+      "model": "olmo-3-7b-think",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/phi-4",
+      "release": "phi-4",
+      "model": "phi-4",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/phi-4-mini",
+      "release": "phi-4-mini",
+      "model": "phi-4-mini-instruct",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/phi-4-multimodal",
+      "release": "phi-4-multimodal",
+      "model": "phi-4-multimodal-instruct",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/quasar-438b",
+      "release": "quasar-438b",
+      "model": "quasar-438b",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/qwen3-5-omni-flash",
+      "release": "qwen3-5-omni-flash",
+      "model": "qwen3.5-omni-flash",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/qwen3-5-omni-plus",
+      "release": "qwen3-5-omni-plus",
+      "model": "qwen3.5-omni-plus",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/qwen3-7-plus",
+      "release": "qwen3-7-plus",
+      "model": "qwen3.7-plus",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/qwen3-8-2-4t-a95b",
+      "release": "qwen3-8-2-4t-a95b",
+      "model": "qwen3.8-2.4t-a95b",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/qwen3-8-flash-next",
+      "release": "qwen3-8-flash-next",
+      "model": "qwen3.8-flash-next",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/qwen3-8-max",
+      "release": "qwen3-8-max",
+      "model": "qwen3.8-max",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/qwen3-coder-next",
+      "release": "qwen3-coder-next",
+      "model": "qwen3-coder-next",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/qwen3-next-80b-a3b-instruct",
+      "release": "qwen3-next-80b-a3b-instruct",
+      "model": "qwen3-next-80b-a3b-instruct",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/qwen3-next-80b-a3b-reasoning",
+      "release": "qwen3-next-80b-a3b",
+      "model": "qwen3-next-80b-a3b-reasoning",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/qwen3-omni-30b-a3b-instruct",
+      "release": "qwen3-omni-30b-a3b-instruct",
+      "model": "qwen3-omni-30b-a3b-instruct",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/qwen3-omni-30b-a3b-reasoning",
+      "release": "qwen3-omni-30b-a3b",
+      "model": "qwen3-omni-30b-a3b-reasoning",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/r1-1776",
+      "release": "r1-1776",
+      "model": "r1-1776",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/recommend",
+      "status": "excluded-navigation",
+      "reason": "Model recommender page, not a model release"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/reka-flash-3",
+      "release": "reka-flash-3",
+      "model": "reka-flash-3",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/releases/claude-fable-5-1",
+      "release": "claude-fable-5-1",
+      "model": "claude-fable-5.1",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/releases/claude-haiku-5-5",
+      "release": "claude-haiku-5-5",
+      "model": "claude-haiku-5.5",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/releases/claude-opus-5-5",
+      "release": "claude-opus-5-5",
+      "model": "claude-opus-5.5",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/releases/claude-sonnet-5-5",
+      "release": "claude-sonnet-5-5",
+      "model": "claude-sonnet-5.5",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/releases/deepseek-v4-pro",
+      "release": "deepseek-v4-pro",
+      "model": "deepseek-v4-pro-0813",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/releases/exaone-4-0-1-2b",
+      "release": "exaone-4-0-1-2b",
+      "model": "exaone-4.0-1.2b",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/releases/exaone-4-0-32b",
+      "release": "exaone-4-0-32b",
+      "model": "exaone-4.0-32b",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/releases/exaone-4-5-33b",
+      "release": "exaone-4-5-33b",
+      "model": "exaone-4.5-33b",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/releases/gemini-3-8-flash",
+      "release": "gemini-3-8-flash",
+      "model": "gemini-3.8-flash",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/releases/gemma-4-12b",
+      "release": "gemma-4-12b",
+      "model": "gemma-4-12b",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/releases/gemma-4-26b-a4b",
+      "release": "gemma-4-26b-a4b",
+      "model": "gemma-4-26b-a4b",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/releases/gemma-4-31b",
+      "release": "gemma-4-31b",
+      "model": "gemma-4-31b",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/releases/gemma-4-e2b",
+      "release": "gemma-4-e2b",
+      "model": "gemma-4-e2b",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/releases/gemma-4-e4b",
+      "release": "gemma-4-e4b",
+      "model": "gemma-4-e4b",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/releases/glm-5-3",
+      "release": "glm-5-3",
+      "model": "glm-5.3",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/releases/gpt-6-1-sol",
+      "release": "gpt-6-1-sol",
+      "model": "gpt-6.1-sol",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/releases/gpt-6-astra",
+      "release": "gpt-6-astra",
+      "model": "gpt-6-astra",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/releases/gpt-6-luna",
+      "release": "gpt-6-luna",
+      "model": "gpt-6-luna",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/releases/gpt-oss-120b",
+      "release": "gpt-oss-120b",
+      "model": "gpt-oss-120b",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/releases/gpt-oss-20b",
+      "release": "gpt-oss-20b",
+      "model": "gpt-oss-20b",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/releases/grok-4-7",
+      "release": "grok-4-7",
+      "model": "grok-4.7",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/releases/hermes-4-llama-3-1-405b",
+      "release": "hermes-4-llama-3-1-405b",
+      "model": "hermes-4-llama-3.1-405b",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/releases/hermes-4-llama-3-1-70b",
+      "release": "hermes-4-llama-3-1-70b",
+      "model": "hermes-4-llama-3.1-70b",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/releases/jt-4-1-flash-236b-a21b",
+      "release": "jt-4-1-flash-236b-a21b",
+      "model": "jt-4.1-flash-236b-a21b",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/releases/k2-v2",
+      "release": "k2-v2",
+      "model": "k2-v2",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/releases/minicpm5-1b",
+      "release": "minicpm5-1b",
+      "model": "minicpm5-1b",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/releases/mistral-small-4",
+      "release": "mistral-small-4",
+      "model": "mistral-small-4",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/releases/nova-2-0-lite",
+      "release": "nova-2-0-lite",
+      "model": "nova-2.0-lite",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/releases/nova-2-0-omni",
+      "release": "nova-2-0-omni",
+      "model": "nova-2.0-omni",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/releases/nova-2-0-pro-preview",
+      "release": "nova-2-0-pro-preview",
+      "model": "nova-2.0-pro-preview",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/releases/nvidia-nemotron-3-nano-30b-a3b",
+      "release": "nvidia-nemotron-3-nano-30b-a3b",
+      "model": "nvidia-nemotron-3-nano-30b-a3b",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/releases/nvidia-nemotron-nano-12b-v2-vl",
+      "release": "nvidia-nemotron-nano-12b-v2-vl",
+      "model": "nvidia-nemotron-nano-12b-v2-vl",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/releases/nvidia-nemotron-nano-9b-v2",
+      "release": "nvidia-nemotron-nano-9b-v2",
+      "model": "nvidia-nemotron-nano-9b-v2",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/releases/qwen3-5-0-8b",
+      "release": "qwen3-5-0-8b",
+      "model": "qwen3.5-0.8b",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/releases/qwen3-5-122b-a10b",
+      "release": "qwen3-5-122b-a10b",
+      "model": "qwen3.5-122b-a10b",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/releases/qwen3-5-2b",
+      "release": "qwen3-5-2b",
+      "model": "qwen3.5-2b",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/releases/qwen3-5-397b-a17b",
+      "release": "qwen3-5-397b-a17b",
+      "model": "qwen3.5-397b-a17b",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/releases/qwen3-5-4b",
+      "release": "qwen3-5-4b",
+      "model": "qwen3.5-4b",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/releases/qwen3-5-9b",
+      "release": "qwen3-5-9b",
+      "model": "qwen3.5-9b",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/releases/qwen3-6-35b-a3b",
+      "release": "qwen3-6-35b-a3b",
+      "model": "qwen3.6-35b-a3b",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/releases/qwen3-8-27b",
+      "release": "qwen3-8-27b",
+      "model": "qwen3.8-27b",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/ring-2-6-1t",
+      "release": "ring-2-6-1t",
+      "model": "ring-2.6-1t",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/ring-flash-2-0",
+      "release": "ring-flash-2-0",
+      "model": "ring-flash-2.0",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/sarvam-105b",
+      "release": "sarvam-105b",
+      "model": "sarvam-105b",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/sarvam-30b",
+      "release": "sarvam-30b",
+      "model": "sarvam-30b",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/solar-mini4",
+      "release": "solar-mini4",
+      "model": "solar-mini-4",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/solar-open-100b-reasoning",
+      "release": "solar-open-100b",
+      "model": "solar-open-100b",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/solar-open2-250b",
+      "release": "solar-open2-250b",
+      "model": "solar-open2-250b",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/solar-pro4",
+      "release": "solar-pro-4-2026-09-18",
+      "model": "solar-pro-4",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/step-3-vl-10b",
+      "release": "step3-vl-10b",
+      "model": "step3-vl-10b",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/step-5",
+      "release": "step-5-preview",
+      "model": "step-5-preview",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/tiny-aya-global",
+      "release": "tiny-aya-global",
+      "model": "tiny-aya-global",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/tri-21b-think-v0-5",
+      "release": "tri-21b-think-v0-5",
+      "model": "tri-21b-think",
+      "status": "resolved"
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/trinity-large-thinking",
+      "release": "trinity-large-thinking",
+      "model": "trinity-large-thinking",
+      "status": "resolved"
+    }
+  ],
+  "decisions": [
+    {
+      "source": "https://artificialanalysis.ai/models/releases/gemini-4-carbon",
+      "name": "Gemini 4 Carbon",
+      "model": "gemini-4-carbon",
+      "status": "existing-identity",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-10-28"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/gemini-4-argon",
+      "name": "Gemini 4 Argon",
+      "model": "gemini-4-argon",
+      "status": "existing-identity",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-09-30"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/gemini-3-8-flash",
+      "name": "Gemini 3.8 Flash",
+      "model": "gemini-3.8-flash",
+      "status": "existing-identity",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-09-02"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/gemini-3-5-flash-lite",
+      "name": "Gemini 3.5 Flash-Lite",
+      "model": "gemini-3.5-flash-lite",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-07-21"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/gemma-4-12b",
+      "name": "Gemma 4 12B",
+      "model": "gemma-4-12b",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-06-03"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/gemma-3-270m",
+      "name": "Gemma 3 270M",
+      "model": "gemma-3-270m",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2025-08-14"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/gemma-4-e4b",
+      "name": "Gemma 4 E4B",
+      "model": "gemma-4-e4b",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-04-03"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/gemma-4-26b-a4b",
+      "name": "Gemma 4 26B A4B",
+      "model": "gemma-4-26b-a4b",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-04-02"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/gemma-4-e2b",
+      "name": "Gemma 4 E2B",
+      "model": "gemma-4-e2b",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-04-02"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/gemini-3-deep-think",
+      "name": "Gemini 3 Deep Think",
+      "model": "gemini-3-deep-think",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-02-05"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/gemini-3-1-pro-preview",
+      "name": "Gemini 3.1 Pro Preview",
+      "model": "gemini-3.1-pro-preview",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-02-19"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/diffusiongemma-26b-a4b",
+      "name": "DiffusionGemma 26B A4B",
+      "model": "diffusiongemma-26b-a4b",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-06-10"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/gemma-4-31b",
+      "name": "Gemma 4 31B",
+      "model": "gemma-4-31b",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-04-02"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/claude-opus-5-5",
+      "name": "Claude Opus 5.5",
+      "model": "claude-opus-5.5",
+      "status": "existing-identity",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-09-22"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/claude-sonnet-5-5",
+      "name": "Claude Sonnet 5.5",
+      "model": "claude-sonnet-5.5",
+      "status": "existing-identity",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-09-28"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/claude-fable-5-1",
+      "name": "Claude Fable 5.1",
+      "model": "claude-fable-5.1",
+      "status": "existing-identity",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-09-01"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/claude-haiku-5-5",
+      "name": "Claude Haiku 5.5",
+      "model": "claude-haiku-5.5",
+      "status": "existing-identity",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-10-07"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/gpt-6-astra",
+      "name": "GPT-6 Astra",
+      "model": "gpt-6-astra",
+      "status": "existing-identity",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-09-03"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/gpt-6-1-sol",
+      "name": "GPT-6.1 Sol",
+      "model": "gpt-6.1-sol",
+      "status": "existing-identity",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-09-29"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/gpt-6-1-terra",
+      "name": "GPT-6.1 Terra",
+      "model": "gpt-6.1-terra",
+      "status": "existing-identity",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-10-26"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/gpt-6-luna",
+      "name": "GPT-6 Luna",
+      "model": "gpt-6-luna",
+      "status": "existing-identity",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-09-22"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/gpt-oss-20b",
+      "name": "gpt-oss-20b",
+      "model": "gpt-oss-20b",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2025-08-05"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/o3",
+      "name": "o3",
+      "model": "o3",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2025-04-16"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/gpt-5-3-codex",
+      "name": "GPT-5.3 Codex",
+      "model": "gpt-5.3-codex",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-02-05"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/gpt-6-sol-daybreak-blue",
+      "name": "GPT-6 Sol",
+      "model": "gpt-6-sol",
+      "status": "existing-identity",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-09-22"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/gpt-5-5-instant-06-26",
+      "name": "GPT-5.5 Instant (June 2026)",
+      "model": "gpt-5.5-instant-june-2026",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-06-25"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/gpt-oss-120b",
+      "name": "gpt-oss-120b",
+      "model": "gpt-oss-120b",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2025-08-05"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/gpt-5-5-pro",
+      "name": "GPT-5.5 Pro",
+      "model": "gpt-5.5-pro",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-04-23"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/muse-wonder-full",
+      "name": "Muse Wonder Full",
+      "model": "muse-wonder-full",
+      "status": "existing-identity",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-10-12"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/muse-wonder",
+      "name": "Muse Wonder",
+      "model": "muse-wonder",
+      "status": "existing-identity",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-10-12"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/muse-spark-open",
+      "name": "Muse Spark Open",
+      "model": "muse-spark-open",
+      "status": "existing-identity",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-10-15"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/muse-glimmer",
+      "name": "Muse Glimmer",
+      "model": "muse-glimmer",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-08-10"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/llama-3-1-instruct-405b",
+      "name": "Llama 3.1 Instruct 405B",
+      "model": "llama-3.1-instruct-405b",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2024-07-23"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/llama-3-2-instruct-11b-vision",
+      "name": "Llama 3.2 Instruct 11B (Vision)",
+      "model": "llama-3.2-instruct-11b-vision",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2024-09-25"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/llama-4-maverick",
+      "name": "Llama 4 Maverick",
+      "model": "llama-4-maverick",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2025-04-05"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/llama-3-3-instruct-70b",
+      "name": "Llama 3.3 Instruct 70B",
+      "model": "llama-3.3-instruct-70b",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2024-12-06"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/llama-3-2-instruct-90b-vision",
+      "name": "Llama 3.2 Instruct 90B (Vision)",
+      "model": "llama-3.2-instruct-90b-vision",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2024-09-25"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/llama-4-scout",
+      "name": "Llama 4 Scout",
+      "model": "llama-4-scout",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2025-04-05"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/kimi-k3-1-pro",
+      "name": "Kimi K3.1 Pro",
+      "model": "kimi-k3.1-pro",
+      "status": "existing-identity",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-10-23"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/kimi-linear-48b-a3b-instruct",
+      "name": "Kimi Linear 48B A3B Instruct",
+      "model": "kimi-linear-48b-a3b-instruct",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2025-10-30"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/kimi-k2-7-code",
+      "name": "Kimi K2.7 Code",
+      "model": "kimi-k2.7-code",
+      "status": "existing-identity",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-06-12"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/grok-4-7",
+      "name": "Grok 4.7",
+      "model": "grok-4.7",
+      "status": "existing-identity",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-09-21"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/qwen3-8-max-0902",
+      "name": "Qwen3.8 Max (0902)",
+      "model": "qwen3.8-max-0902",
+      "status": "existing-identity",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-09-02"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/qwen3-8-27b",
+      "name": "Qwen3.8 27B",
+      "model": "qwen3.8-27b",
+      "status": "existing-identity",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-08-14"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/qwen3-5-omni-plus",
+      "name": "Qwen3.5 Omni Plus",
+      "model": "qwen3.5-omni-plus",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-03-30"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/qwen3-5-122b-a10b",
+      "name": "Qwen3.5 122B A10B",
+      "model": "qwen3.5-122b-a10b",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-02-24"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/qwen3-5-2b",
+      "name": "Qwen3.5 2B",
+      "model": "qwen3.5-2b",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-03-02"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/qwen3-omni-30b-a3b-instruct",
+      "name": "Qwen3 Omni 30B A3B Instruct",
+      "model": "qwen3-omni-30b-a3b-instruct",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2025-09-22"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/qwen3-5-397b-a17b",
+      "name": "Qwen3.5 397B A17B",
+      "model": "qwen3.5-397b-a17b",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-02-16"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/qwen3-5-9b",
+      "name": "Qwen3.5 9B",
+      "model": "qwen3.5-9b",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-03-02"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/qwen3-next-80b-a3b-instruct",
+      "name": "Qwen3 Next 80B A3B Instruct",
+      "model": "qwen3-next-80b-a3b-instruct",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2025-09-11"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/qwen3-5-4b",
+      "name": "Qwen3.5 4B",
+      "model": "qwen3.5-4b",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-03-02"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/qwen3-5-0-8b",
+      "name": "Qwen3.5 0.8B",
+      "model": "qwen3.5-0.8b",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-03-02"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/qwen3-8-max",
+      "name": "Qwen3.8 Max",
+      "model": "qwen3.8-max",
+      "status": "existing-identity",
+      "deprecatedAtSource": true,
+      "releaseDate": "2026-08-03"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/qwen3-6-35b-a3b",
+      "name": "Qwen3.6 35B A3B",
+      "model": "qwen3.6-35b-a3b",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-04-16"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/qwen3-5-omni-flash",
+      "name": "Qwen3.5 Omni Flash",
+      "model": "qwen3.5-omni-flash",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-03-30"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/qwen3-8-2-4t-a95b",
+      "name": "Qwen3.8 2.4T A95B",
+      "model": "qwen3.8-2.4t-a95b",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-08-12"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/qwen3-8-flash-next",
+      "name": "Qwen3.8-Flash-Next",
+      "model": "qwen3.8-flash-next",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-08-26"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/qwen3-7-plus",
+      "name": "Qwen3.7 Plus",
+      "model": "qwen3.7-plus",
+      "status": "existing-identity",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-06-01"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/qwen3-omni-30b-a3b",
+      "name": "Qwen3 Omni 30B A3B (Reasoning)",
+      "model": "qwen3-omni-30b-a3b-reasoning",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2025-09-22"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/qwen3-next-80b-a3b",
+      "name": "Qwen3 Next 80B A3B (Reasoning)",
+      "model": "qwen3-next-80b-a3b-reasoning",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2025-09-11"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/qwen3-coder-next",
+      "name": "Qwen3 Coder Next",
+      "model": "qwen3-coder-next",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-02-03"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/deepseek-v4-1-flash-1017",
+      "name": "DeepSeek V4.1 Flash 1017",
+      "model": "deepseek-v4.1-flash-1017",
+      "status": "existing-identity",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-10-17"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/deepseek-v4-pro",
+      "name": "DeepSeek V4 Pro 0813",
+      "model": "deepseek-v4-pro-0813",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-08-13"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/deepseek-v4-flash-vision",
+      "name": "DeepSeek V4 Flash Vision",
+      "model": "deepseek-v4-flash-vision",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-08-21"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/glm-5-3",
+      "name": "GLM-5.3",
+      "model": "glm-5.3",
+      "status": "existing-identity",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-08-18"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/glm-5-3-flash",
+      "name": "GLM-5.3-Flash",
+      "model": "glm-5.3-flash",
+      "status": "existing-identity",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-08-26"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/mimo-v2-6-pro",
+      "name": "MiMo-V2.6-Pro",
+      "model": "mimo-v2.6-pro",
+      "status": "existing-identity",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-09-21"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/mimo-v2-6-flash",
+      "name": "MiMo-V2.6-Flash",
+      "model": "mimo-v2.6-flash",
+      "status": "existing-identity",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-09-21"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/ling-3-1-flash-rc5",
+      "name": "Ling 3.1 Flash 1019",
+      "model": "ling-3.1-flash-1019",
+      "status": "existing-identity",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-10-22"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/ling-3-0-flash-vl",
+      "name": "Ling-3.0-flash-VL",
+      "model": "ling-3.0-flash-vl",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-09-10"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/ring-flash-2-0",
+      "name": "Ring-flash-2.0",
+      "model": "ring-flash-2.0",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2025-09-19"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/ling-3-0-flash-fin",
+      "name": "Ling-3.0-flash-Fin",
+      "model": "ling-3.0-flash-fin",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-09-11"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/ling-3-0-tiny",
+      "name": "Ling 3.0 Tiny",
+      "model": "ling-3.0-tiny",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-08-06"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/ling-3-1-flash",
+      "name": "Ling 3.1 Flash",
+      "model": "ling-3.1-flash",
+      "status": "existing-identity",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-10-01"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/ring-2-6-1t",
+      "name": "Ring-2.6-1T",
+      "model": "ring-2.6-1t",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-05-08"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/minimax-m3-1-flash",
+      "name": "MiniMax-M3.1-Flash",
+      "model": "minimax-m3.1-flash",
+      "status": "existing-identity",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-10-19"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/minimax-m3",
+      "name": "MiniMax-M3",
+      "model": "minimax-m3",
+      "status": "existing-identity",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-06-01"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/step-5-preview",
+      "name": "Step 5 Preview",
+      "model": "step-5-preview",
+      "status": "existing-identity",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-09-18"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/step3-vl-10b",
+      "name": "Step3 VL 10B",
+      "model": "step3-vl-10b",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-01-20"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/mistral-large-4",
+      "name": "Mistral Large 4",
+      "model": "mistral-large-4",
+      "status": "existing-identity",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-10-29"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/mistral-small-4",
+      "name": "Mistral Small 4",
+      "model": "mistral-small-4",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-03-16"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/ministral-3-3b",
+      "name": "Ministral 3 3B",
+      "model": "ministral-3-3b",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2025-12-02"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/magistral-small-2509",
+      "name": "Magistral Small 1.2",
+      "model": "magistral-small-1.2",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2025-09-17"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/ministral-3-14b",
+      "name": "Ministral 3 14B",
+      "model": "ministral-3-14b",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2025-12-02"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/magistral-medium-2509",
+      "name": "Magistral Medium 1.2",
+      "model": "magistral-medium-1.2",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2025-09-18"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/ministral-3-8b",
+      "name": "Ministral 3 8B",
+      "model": "ministral-3-8b",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2025-12-02"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/mistral-medium-3-5",
+      "name": "Mistral Medium 3.5",
+      "model": "mistral-medium-3.5",
+      "status": "existing-identity",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-04-29"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/nanbeige4-3-33b",
+      "name": "Nanbeige4.3-33B",
+      "model": "nanbeige4.3-33b",
+      "status": "existing-identity",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-10-25"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/nanbeige4-1-3b",
+      "name": "Nanbeige4.1-3B",
+      "model": "nanbeige4.1-3b",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-02-11"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/k2-horizon-375b-a23b",
+      "name": "K2 Horizon 375B A23B",
+      "model": "k2-horizon-375b-a23b",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-09-03"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/k2-horizon-7b",
+      "name": "K2 Horizon 7B",
+      "model": "k2-horizon-7b",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-09-03"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/k2-horizon-3-7b",
+      "name": "K2 Horizon 3.7B",
+      "model": "k2-horizon-3.7b",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-09-03"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/k2-horizon-mova-36b-a4b",
+      "name": "K2 Horizon MoVA 36B A4B",
+      "model": "k2-horizon-mova-36b-a4b",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-09-03"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/k2-think-v2",
+      "name": "K2 Think V2",
+      "model": "k2-think-v2",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2025-12-15"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/k2-horizon-0-9b",
+      "name": "K2 Horizon 0.9B",
+      "model": "k2-horizon-0.9b",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-09-03"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/k2-v2",
+      "name": "K2-V2",
+      "model": "k2-v2",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2025-12-05"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/reflection-beam",
+      "name": "Beam 1.0",
+      "model": "beam-1.0",
+      "status": "existing-identity",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-10-16"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/nemotron-3-5-super-vl",
+      "name": "Nemotron 3.5 Super VL",
+      "model": "nemotron-3.5-super-vl",
+      "status": "existing-identity",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-10-15"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/nemotron-3-ultra-550b-a55b",
+      "name": "Nemotron 3 Ultra 550B A55B",
+      "model": "nemotron-3-ultra",
+      "status": "existing-identity",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-06-04"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/nemotron-3-5-lightning",
+      "name": "Nemotron 3.5 Lightning",
+      "model": "nemotron-3.5-lightning",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-08-11"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/nvidia-nemotron-3-nano-4b",
+      "name": "NVIDIA Nemotron 3 Nano 4B",
+      "model": "nvidia-nemotron-3-nano-4b",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-03-16"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/nvidia-nemotron-3-nano-30b-a3b",
+      "name": "NVIDIA Nemotron 3 Nano 30B A3B",
+      "model": "nvidia-nemotron-3-nano-30b-a3b",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2025-12-15"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/nvidia-nemotron-nano-9b-v2",
+      "name": "NVIDIA Nemotron Nano 9B V2",
+      "model": "nvidia-nemotron-nano-9b-v2",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2025-08-18"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/nemotron-3-5-bolt-e4b-4gb",
+      "name": "Nemotron 3.5 Bolt E4B 4GB",
+      "model": "nemotron-3.5-bolt-e4b-4gb",
+      "status": "existing-identity",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-10-23"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/nvidia-nemotron-nano-12b-v2-vl",
+      "name": "NVIDIA Nemotron Nano 12B v2 VL",
+      "model": "nvidia-nemotron-nano-12b-v2-vl",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2025-10-28"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/nemotron-3-5-bolt-74b-a9b",
+      "name": "Nemotron 3.5 Bolt 74B-A9B",
+      "model": "nemotron-3.5-bolt-74b-a9b",
+      "status": "existing-identity",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-10-15"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/nemotron-3-nano-omni-30b-a3b",
+      "name": "Nemotron 3 Nano Omni 30B A3B Reasoning",
+      "model": "nemotron-3-nano-omni-30b-a3b-reasoning",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-04-29"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/nemotron-cascade-2-30b-a3b",
+      "name": "Nemotron Cascade 2 30B A3B",
+      "model": "nemotron-cascade-2-30b-a3b",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-03-19"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/llama-3-1-nemotron-ultra-253b-v1",
+      "name": "Llama 3.1 Nemotron Ultra 253B v1",
+      "model": "llama-3.1-nemotron-ultra-253b-v1",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2025-04-07"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/inkling-small",
+      "name": "Inkling Small",
+      "model": "inkling-small",
+      "status": "existing-identity",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-07-30"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/inkling",
+      "name": "Inkling",
+      "model": "inkling",
+      "status": "existing-identity",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-07-15"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/command-a-plus",
+      "name": "Command A+",
+      "model": "command-a-plus",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-05-20"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/north-mini-code",
+      "name": "North Mini Code",
+      "model": "north-mini-code",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-06-09"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/command-a",
+      "name": "Command A",
+      "model": "command-a",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2025-03-13"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/tiny-aya-global",
+      "name": "Tiny Aya Global",
+      "model": "tiny-aya-global",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-02-17"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/granite-4-2-8b",
+      "name": "Granite 4.2 8B",
+      "model": "granite-4.2-8b",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-08-25"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/granite-4-2-3b",
+      "name": "Granite 4.2 3B",
+      "model": "granite-4.2-3b",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-08-25"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/granite-4-2-30b",
+      "name": "Granite 4.2 30B",
+      "model": "granite-4.2-30b",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-08-25"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/granite-4-0-micro",
+      "name": "Granite 4.0 Micro",
+      "model": "granite-4.0-micro",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2025-09-22"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/granite-4-0-350m",
+      "name": "Granite 4.0 350M",
+      "model": "granite-4.0-350m",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2025-10-28"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/granite-4-0-h-small",
+      "name": "Granite 4.0 H Small",
+      "model": "granite-4.0-h-small",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2025-09-22"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/granite-4-0-h-350m",
+      "name": "Granite 4.0 H 350M",
+      "model": "granite-4.0-h-350m",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2025-10-28"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/granite-4-0-h-nano-1b",
+      "name": "Granite 4.0 H 1B",
+      "model": "granite-4.0-h-1b",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2025-10-28"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/jt-35b-flash",
+      "name": "JT-35B-Flash",
+      "model": "jt-35b-flash",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-05-14"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/jt-mini",
+      "name": "JT-MINI",
+      "model": "jt-mini",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-04-15"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/jt-4-1-flash-236b-a21b",
+      "name": "JT-4.1 Flash 236B A21B",
+      "model": "jt-4.1-flash-236b-a21b",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-07-09"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/mercury-2-5",
+      "name": "Mercury 2.5",
+      "model": "mercury-2.5",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-09-08"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/nova-2-0-omni",
+      "name": "Nova 2.0 Omni",
+      "model": "nova-2.0-omni",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2025-11-26"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/nova-2-0-pro-preview",
+      "name": "Nova 2.0 Pro Preview",
+      "model": "nova-2.0-pro-preview",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2025-11-27"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/nova-micro",
+      "name": "Nova Micro",
+      "model": "nova-micro",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2024-12-03"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/nova-2-0-lite",
+      "name": "Nova 2.0 Lite",
+      "model": "nova-2.0-lite",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2025-10-29"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/nova-premier",
+      "name": "Nova Premier",
+      "model": "nova-premier",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2025-04-30"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/r1-1776",
+      "name": "R1 1776",
+      "model": "r1-1776",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2025-02-18"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/apodex-1-1",
+      "name": "Apodex 1.1",
+      "model": "apodex-1.1",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-08-30"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/lfm2-5-vl-1-6b",
+      "name": "LFM2.5-VL-1.6B",
+      "model": "lfm2.5-vl-1.6b",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-01-05"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/lfm2-5-1-2b-instruct",
+      "name": "LFM2.5-1.2B-Instruct",
+      "model": "lfm2.5-1.2b-instruct",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-01-05"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/lfm2-5-1-2b-thinking",
+      "name": "LFM2.5-1.2B-Thinking",
+      "model": "lfm2.5-1.2b-thinking",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-01-20"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/lfm2-5-2-6b",
+      "name": "LFM2.5-2.6B",
+      "model": "lfm2.5-2.6b",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-08-04"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/lfm2-5-8b-a1b",
+      "name": "LFM2.5-8B-A1B",
+      "model": "lfm2.5-8b-a1b",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-05-28"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/lfm2-24b-a2b",
+      "name": "LFM2 24B A2B",
+      "model": "lfm2-24b-a2b",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-02-25"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/solar-pro-4-2026-09-18",
+      "name": "Solar Pro 4",
+      "model": "solar-pro-4",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-08-06"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/solar-open-100b",
+      "name": "Solar Open 100B",
+      "model": "solar-open-100b",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2025-12-17"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/solar-mini4",
+      "name": "Solar Mini 4",
+      "model": "solar-mini-4",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-09-22"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/solar-open2-250b",
+      "name": "Solar Open2 250B",
+      "model": "solar-open2-250b",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-08-12"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/k-exaone-2-0-0803",
+      "name": "K-EXAONE 2.0",
+      "model": "k-exaone-2.0",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-08-12"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/exaone-4-0-32b",
+      "name": "EXAONE 4.0 32B",
+      "model": "exaone-4.0-32b",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2025-07-15"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/exaone-4-5-33b",
+      "name": "EXAONE 4.5 33B",
+      "model": "exaone-4.5-33b",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-04-09"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/exaone-4-0-1-2b",
+      "name": "Exaone 4.0 1.2B",
+      "model": "exaone-4.0-1.2b",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2025-07-15"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/hermes-4-llama-3-1-70b",
+      "name": "Hermes 4 - Llama-3.1 70B",
+      "model": "hermes-4-llama-3.1-70b",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2025-08-27"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/hermes-4-llama-3-1-405b",
+      "name": "Hermes 4 - Llama-3.1 405B",
+      "model": "hermes-4-llama-3.1-405b",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2025-08-27"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/deephermes-3-mistral-24b-preview",
+      "name": "DeepHermes 3 - Mistral 24B Preview",
+      "model": "deephermes-3-mistral-24b-preview",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2025-03-13"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/deephermes-3-llama-3-1-8b-preview",
+      "name": "DeepHermes 3 - Llama-3.1 8B Preview",
+      "model": "deephermes-3-llama-3.1-8b-preview",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2025-02-13"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/phi-4-multimodal",
+      "name": "Phi-4 Multimodal Instruct",
+      "model": "phi-4-multimodal-instruct",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2025-02-26"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/phi-4-mini",
+      "name": "Phi-4 Mini Instruct",
+      "model": "phi-4-mini-instruct",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2025-02-26"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/phi-4",
+      "name": "Phi-4",
+      "model": "phi-4",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2024-12-12"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/g9v3-3b",
+      "name": "G9v3-3B",
+      "model": "g9v3-3b",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-07-23"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/g9v3-39a5b",
+      "name": "G9v3-39A5B",
+      "model": "g9v3-39a5b",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-08-20"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/olmo-3-7b-think",
+      "name": "Olmo 3 7B Think",
+      "model": "olmo-3-7b-think",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2025-11-20"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/olmo-3-1-32b-think",
+      "name": "Olmo 3.1 32B Think",
+      "model": "olmo-3.1-32b-think",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2025-12-12"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/molmo2-8b",
+      "name": "Molmo2-8B",
+      "model": "molmo2-8b",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2025-12-11"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/olmo-3-7b-instruct",
+      "name": "Olmo 3 7B Instruct",
+      "model": "olmo-3-7b-instruct",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2025-11-20"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/olmo-3-1-32b-instruct",
+      "name": "Olmo 3.1 32B Instruct",
+      "model": "olmo-3.1-32b-instruct",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-01-13"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/molmo-7b-d",
+      "name": "Molmo 7B-D",
+      "model": "molmo-7b-d",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2024-09-25"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/hyperclova-x-seed-think-32b",
+      "name": "HyperCLOVA X SEED Think (32B)",
+      "model": "hyperclova-x-seed-think-32b",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2025-12-26"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/hypernova-60b",
+      "name": "HyperNova 60B 2605",
+      "model": "hypernova-60b-2605",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-05-26"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/quasar-438b",
+      "name": "Quasar 438B",
+      "model": "quasar-438b",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-08-10"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/sarvam-105b",
+      "name": "Sarvam 105B",
+      "model": "sarvam-105b",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-03-06"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/sarvam-30b",
+      "name": "Sarvam 30B",
+      "model": "sarvam-30b",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-03-06"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/intellect-3",
+      "name": "INTELLECT-3",
+      "model": "intellect-3",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2025-11-27"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/nex-n2-pro",
+      "name": "Nex-N2-Pro",
+      "model": "nex-n2-pro",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-06-02"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/minicpm-v-4-6-1-3b",
+      "name": "MiniCPM-V 4.6 1.3B",
+      "model": "minicpm-v-4.6-1.3b",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-05-11"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/minicpm5-2b",
+      "name": "MiniCPM5-2B",
+      "model": "minicpm5-2b",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-09-07"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/minicpm5-1b",
+      "name": "MiniCPM5-1B",
+      "model": "minicpm5-1b",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-05-25"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/apertus-70b-instruct",
+      "name": "Apertus 70B Instruct",
+      "model": "apertus-70b-instruct",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2025-09-02"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/apertus-8b-instruct",
+      "name": "Apertus 8B Instruct",
+      "model": "apertus-8b-instruct",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2025-09-02"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/doubao-seed-code",
+      "name": "Doubao Seed Code",
+      "model": "doubao-seed-code",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2025-11-11"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/jamba-1-7-large",
+      "name": "Jamba 1.7 Large",
+      "model": "jamba-1.7-large",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2025-07-07"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/jamba-1-7-mini",
+      "name": "Jamba 1.7 Mini",
+      "model": "jamba-1.7-mini",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2025-07-07"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/jamba-reasoning-3b",
+      "name": "Jamba Reasoning 3B",
+      "model": "jamba-reasoning-3b",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2025-10-08"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/longcat-2-0",
+      "name": "LongCat 2.0",
+      "model": "longcat-2.0",
+      "status": "existing-identity",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-06-29"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/longcat-flash-lite",
+      "name": "LongCat Flash Lite",
+      "model": "longcat-flash-lite",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-01-28"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/tri-21b-think-v0-5",
+      "name": "Tri-21B-Think",
+      "model": "tri-21b-think",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-02-10"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/motif-2-12-7b-reasoning",
+      "name": "Motif-2-12.7B-Reasoning",
+      "model": "motif-2-12.7b-reasoning",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2025-12-04"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/motif-3",
+      "name": "Motif 3",
+      "model": "motif-3",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-08-12"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/celeris-1",
+      "name": "Celeris-1",
+      "model": "celeris-1",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-07-24"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/a-x-k2",
+      "name": "A.X-K2",
+      "model": "a.x-k2",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-08-12"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/hy3",
+      "name": "Hy3",
+      "model": "hy3",
+      "status": "existing-identity",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-07-06"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/ernie-5-0-thinking-preview",
+      "name": "ERNIE 5.0 Thinking Preview",
+      "model": "ernie-5.0-thinking-preview",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2025-11-13"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/ernie-4-5-300b-a47b",
+      "name": "ERNIE 4.5 300B A47B",
+      "model": "ernie-4.5-300b-a47b",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2025-06-30"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/apriel-v1-6-15b-thinker",
+      "name": "Apriel-v1.6-15B-Thinker",
+      "model": "apriel-v1.6-15b-thinker",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2025-11-25"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/reka-flash-3",
+      "name": "Reka Flash 3",
+      "model": "reka-flash-3",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2025-03-10"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/trinity-large-thinking",
+      "name": "Trinity Large Thinking",
+      "model": "trinity-large-thinking",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-04-01"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/falcon-h1r-7b",
+      "name": "Falcon-H1R-7B",
+      "model": "falcon-h1r-7b",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-01-04"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/mi-dm-k-2-5-pro-dec28",
+      "name": "Mi:dm K 2.5 Pro",
+      "model": "mi-dm-k-2.5-pro",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2025-12-11"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/cogito-v2-1",
+      "name": "Cogito v2.1",
+      "model": "cogito-v2.1",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2025-11-18"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/agnes-2-5-pro-beta",
+      "name": "Agnes 2.5 Pro Beta",
+      "model": "agnes-2.5-pro-beta",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-08-26"
+    },
+    {
+      "source": "https://artificialanalysis.ai/models/releases/kat-coder-pro-v2",
+      "name": "KAT Coder Pro V2",
+      "model": "kat-coder-pro-v2",
+      "status": "added",
+      "deprecatedAtSource": false,
+      "releaseDate": "2026-03-27"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/agent",
+      "name": "Claude Opus 5.5 (Max)",
+      "sourceId": "contenders/claude-opus-5.5-max-vertex-agent",
+      "model": "claude-opus-5.5",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/agent",
+      "name": "Gemini 4 Carbon (High)",
+      "sourceId": "contenders/carbon-g-c6jt",
+      "model": "gemini-4-carbon",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/agent",
+      "name": "Claude Sonnet 5.5 (Max)",
+      "sourceId": "contenders/claude-sonnet-5-5-max-agent",
+      "model": "claude-sonnet-5.5",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/agent",
+      "name": "GPT-6 Astra (Max)",
+      "sourceId": "contenders/gpt-6-astra-max-agent",
+      "model": "gpt-6-astra",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/agent",
+      "name": "Claude Fable 5.1 (Max)",
+      "sourceId": "contenders/claude-fable-5.1-max-agent",
+      "model": "claude-fable-5.1",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/agent",
+      "name": "GPT-6.1 Sol (Max)",
+      "sourceId": "contenders/gpt-6.1-sol-max-agent",
+      "model": "gpt-6.1-sol",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/agent",
+      "name": "GPT-6.1 Terra (Max)",
+      "sourceId": "contenders/gpt-6.1-terra-max",
+      "model": "gpt-6.1-terra",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/agent",
+      "name": "Gemini 4 Argon (High)",
+      "sourceId": "contenders/barium-bb-v2-4xts-agent",
+      "model": "gemini-4-argon",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/agent",
+      "name": "Muse Wonder Full (Max)",
+      "sourceId": "contenders/straw-110_evals_ext-v2",
+      "model": "muse-wonder-full",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/agent",
+      "name": "Claude Fable 5 (High)",
+      "sourceId": "contenders/claude-fable-5-agent",
+      "model": "claude-fable-5",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/agent",
+      "name": "Claude Opus 5 (Max)",
+      "sourceId": "contenders/claude-opus-5-max-agent",
+      "model": "claude-opus-5",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/agent",
+      "name": "GPT-6 Sol (Max)",
+      "sourceId": "contenders/gpt-6-sol-max-agent",
+      "model": "gpt-6-sol",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/agent",
+      "name": "Kimi K3.1 Pro (Max)",
+      "sourceId": "contenders/kibitz-wpia",
+      "model": "kimi-k3.1-pro",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/agent",
+      "name": "Hy4",
+      "sourceId": "contenders/aiden-1101-9uzv",
+      "model": "hy4",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/agent",
+      "name": "GPT-5.6 Sol (xHigh)",
+      "sourceId": "contenders/gpt-5.6-sol-xhigh-agent",
+      "model": "gpt-5.6-sol",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/agent",
+      "name": "MiMo-V2.6-Pro",
+      "sourceId": "contenders/mimo-v2-6-pro-public-agent",
+      "model": "mimo-v2.6-pro",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/agent",
+      "name": "Grok 4.7 (xHigh)",
+      "sourceId": "contenders/grok-4.7-xhigh-public-agent",
+      "model": "grok-4.7",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/agent",
+      "name": "Gemini 3.8 Flash (High)",
+      "sourceId": "contenders/skimaki-kwc6-agent",
+      "model": "gemini-3.8-flash",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/agent",
+      "name": "Claude Sonnet 5 (High)",
+      "sourceId": "contenders/claude-sonnet-5-agent",
+      "model": "claude-sonnet-5",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/agent",
+      "name": "Muse Wonder (Max)",
+      "sourceId": "contenders/muse-wonder-agent",
+      "model": "muse-wonder",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/agent",
+      "name": "Muse Spark 1.3 (Max)",
+      "sourceId": "contenders/muse-spark-1-3-max-agent",
+      "model": "muse-spark-1.3",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/agent",
+      "name": "DeepSeek-V4.1-Flash-20261017 (Max)",
+      "sourceId": "contenders/deepseek-v4.1-flash-max-20261017",
+      "model": "deepseek-v4.1-flash-1017",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/agent",
+      "name": "GPT-6 Luna (Max)",
+      "sourceId": "contenders/gpt-6-luna-max-agent",
+      "model": "gpt-6-luna",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/agent",
+      "name": "GLM-5.3 (Max)",
+      "sourceId": "contenders/glm-5.3-agent",
+      "model": "glm-5.3",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/agent",
+      "name": "Hy4 preview",
+      "sourceId": "contenders/phoenix-qcs2-agent",
+      "model": "hy4-preview",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/agent",
+      "name": "Kimi K3 (Max)",
+      "sourceId": "contenders/kivine-wxzc-agent",
+      "model": "kimi-k3",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/agent",
+      "name": "GLM-5.2 (Max)",
+      "sourceId": "contenders/glm-5.2-agent",
+      "model": "glm-5.2",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/agent",
+      "name": "MiMo-V2.6-Flash",
+      "sourceId": "contenders/mimo-v2-6-flash-agent",
+      "model": "mimo-v2.6-flash",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/agent",
+      "name": "Qwen3.8-Max",
+      "sourceId": "contenders/paisley-n9x0",
+      "model": "qwen3.8-max",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/agent",
+      "name": "Claude Haiku 5.5 (High)",
+      "sourceId": "contenders/claude-haiku-5.5-high-vertex-agent",
+      "model": "claude-haiku-5.5",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/agent",
+      "name": "Grok 4.6 (xHigh)",
+      "sourceId": "contenders/grok-4.6-xhigh-public-agent",
+      "model": "grok-4.6",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/agent",
+      "name": "DeepSeek-V4-Pro (High, 20260813)",
+      "sourceId": "contenders/deepseek-v4-pro-high-fireworks",
+      "model": "deepseek-v4-pro-0813",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/agent",
+      "name": "GPT-5.6 Terra (xHigh)",
+      "sourceId": "contenders/gpt-5.6-terra-xhigh-agent",
+      "model": "gpt-5.6-terra",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/agent",
+      "name": "Gemini 3.7 Flash (High)",
+      "sourceId": "contenders/andwise-evfd-agent",
+      "model": "gemini-3.7-flash",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/agent",
+      "name": "GPT-6 Luna (Medium)",
+      "sourceId": "contenders/gpt-6-luna-medium",
+      "model": "gpt-6-luna",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/agent",
+      "name": "GLM-5.3-Flash",
+      "sourceId": "contenders/glm-5.3-flash-agent",
+      "model": "glm-5.3-flash",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/agent",
+      "name": "Step 5 Preview",
+      "sourceId": "contenders/step-5-preview-agent",
+      "model": "step-5-preview",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/agent",
+      "name": "MiniMax-M3.1-Flash",
+      "sourceId": "contenders/minimax-m3-1-flash",
+      "model": "minimax-m3.1-flash",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/agent",
+      "name": "Qwen3.8-27B",
+      "sourceId": "contenders/qwen3.8-27b-code-agent",
+      "model": "qwen3.8-27b",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/agent",
+      "name": "Gemini 3.1 Pro Preview",
+      "sourceId": "contenders/gemini-3.1-pro-preview-agent",
+      "model": "gemini-3.1-pro-preview",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/agent",
+      "name": "Qwen3.8-Flash-Next",
+      "sourceId": "contenders/farris-ees5-agent",
+      "model": "qwen3.8-flash-next",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/agent",
+      "name": "Beam 1.0 501B A23B",
+      "sourceId": "contenders/caveman-agent",
+      "model": "beam-1.0",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/agent",
+      "name": "GPT-6 Luna (Low)",
+      "sourceId": "contenders/gpt-6-luna-low-agent",
+      "model": "gpt-6-luna",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/agent",
+      "name": "Qwen3.7-Max",
+      "sourceId": "contenders/qwen3.7-max-agent",
+      "model": "qwen3.7-max",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/agent",
+      "name": "Mistral Large 4",
+      "sourceId": "contenders/mistral-large-4-agent",
+      "model": "mistral-large-4",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/agent",
+      "name": "Qwen3.7-Plus",
+      "sourceId": "contenders/qwen3.7-plus-agent",
+      "model": "qwen3.7-plus",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/agent",
+      "name": "Mistral Large 4",
+      "sourceId": "contenders/mistral-large-4-text",
+      "model": "mistral-large-4",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/agent",
+      "name": "Hy3",
+      "sourceId": "contenders/hy3-tencent-cloud-agent",
+      "model": "hy3",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/agent",
+      "name": "Muse Spark 1.1",
+      "sourceId": "contenders/super-nova-ext-3tam-agent",
+      "model": "muse-spark-1.1",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/agent",
+      "name": "Muse Spark 1.2 (xHigh)",
+      "sourceId": "contenders/muse-spark-1.2-xhigh-agent",
+      "model": "muse-spark-1.2",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/agent",
+      "name": "MiMo-V2.5-Pro",
+      "sourceId": "contenders/mimo-v2.5-pro-agent",
+      "model": "mimo-v2.5-pro",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/agent",
+      "name": "Spark-X2.6",
+      "sourceId": "contenders/horizon-6.2",
+      "model": "spark-x2.6",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/agent",
+      "name": "MiniMax-M3",
+      "sourceId": "contenders/minimax-m3-first-party",
+      "model": "minimax-m3",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/agent",
+      "name": "Mistral Medium 3.5",
+      "sourceId": "contenders/mistral-medium-3.5-v2-agent",
+      "model": "mistral-medium-3.5",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/agent",
+      "name": "Nemotron 3 Ultra",
+      "sourceId": "contenders/may26-chatbot4-public-agent",
+      "model": "nemotron-3-ultra",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/agent",
+      "name": "NVIDIA-Nemotron-3.5-Super-VL-120B-A12B (NVFP4)",
+      "sourceId": "contenders/nvidia-nemotron-3.5-super-vl-120b-a12b-nvfp4-agent",
+      "model": "nemotron-3.5-super-vl-nvfp4",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/agent",
+      "name": "Inkling",
+      "sourceId": "contenders/inkling-agent",
+      "model": "inkling",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/agent",
+      "name": "Inkling-Small",
+      "sourceId": "contenders/inkling-small",
+      "model": "inkling-small",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/agent",
+      "name": "Solar Pro 4",
+      "sourceId": "contenders/solar-pro4-agent",
+      "model": "solar-pro-4",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Claude Opus 5.5 (Max)",
+      "sourceId": "claude-opus-5.5-max-vertex-webdev",
+      "model": "claude-opus-5.5",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "GPT-6 Astra (Max)",
+      "sourceId": "gpt-6-astra-max-code-codex-harness",
+      "model": "gpt-6-astra",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Claude Sonnet 5.5 (xHigh)",
+      "sourceId": "claude-sonnet-5-5-xhigh",
+      "model": "claude-sonnet-5.5",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Gemini 4 Carbon (High)",
+      "sourceId": "carbon-g-c6jt",
+      "model": "gemini-4-carbon",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "GPT-6.1 Sol (Max)",
+      "sourceId": "gpt-6.1-sol-max-code-codex-harness",
+      "model": "gpt-6.1-sol",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Claude Fable 5.1 (Max)",
+      "sourceId": "claude-fable-5.1-max-webdev",
+      "model": "claude-fable-5.1",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Muse Wonder Full (Max)",
+      "sourceId": "straw-110_evals_ext-v2",
+      "model": "muse-wonder-full",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Claude Sonnet 5.5 (High)",
+      "sourceId": "claude-sonnet-5-5-high",
+      "model": "claude-sonnet-5.5",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Kimi K3.1 Pro (Max)",
+      "sourceId": "kibitz-wpia",
+      "model": "kimi-k3.1-pro",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Claude Opus 5 (Max)",
+      "sourceId": "claude-opus-5-max-webdev",
+      "model": "claude-opus-5",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Gemini 4 Argon (High)",
+      "sourceId": "barium-bb-v2-4xts-webdev",
+      "model": "gemini-4-argon",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "GPT-6 Sol (Max)",
+      "sourceId": "gpt-6-sol-max-code-codex-harness",
+      "model": "gpt-6-sol",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Qwen3.8-Max (0902)",
+      "sourceId": "kiana-8mgg",
+      "model": "qwen3.8-max-0902",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "GPT-6.1 Terra (Max)",
+      "sourceId": "gpt-6.1-terra-max-code-codex-harness",
+      "model": "gpt-6.1-terra",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Qwen3.8-Max",
+      "sourceId": "kinsley-5jmg",
+      "model": "qwen3.8-max",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "DeepSeek-V4.1-Flash-20261017 (Max)",
+      "sourceId": "deepseek-v4.1-flash-max-20261017",
+      "model": "deepseek-v4.1-flash-1017",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Claude Opus 5 (High)",
+      "sourceId": "claude-opus-5-high-webdev",
+      "model": "claude-opus-5",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Kimi K3 (Max)",
+      "sourceId": "kivine-wxzc",
+      "model": "kimi-k3",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Muse Spark 1.3 (Max)",
+      "sourceId": "muse-spark-1-3-max-bhma-webdev",
+      "model": "muse-spark-1.3",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Muse Wonder (Max)",
+      "sourceId": "muse-wonder",
+      "model": "muse-wonder",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Grok 4.7 (xHigh)",
+      "sourceId": "grok-4.7-xhigh-public",
+      "model": "grok-4.7",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "MiMo-V2.6-Flash",
+      "sourceId": "mimo-v2-6-flash-webdev",
+      "model": "mimo-v2.6-flash",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Hy4 preview",
+      "sourceId": "phoenix-qcs2-webdev",
+      "model": "hy4-preview",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Qwen3.8-Flash-Next",
+      "sourceId": "farris-ees5-webdev",
+      "model": "qwen3.8-flash-next",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "MiMo-V2.6-Pro",
+      "sourceId": "mimo-v2-6-pro-public-webdev",
+      "model": "mimo-v2.6-pro",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Claude Fable 5 (High)",
+      "sourceId": "claude-fable-5-webdev",
+      "model": "claude-fable-5",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "GLM-5.3 (Max)",
+      "sourceId": "glm-5.3",
+      "model": "glm-5.3",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Muse Spark 1.3 (xHigh)",
+      "sourceId": "muse-spark-1.3-xhigh-webdev",
+      "model": "muse-spark-1.3",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "DeepSeek-V4.1-Flash-20260910 (Max)",
+      "sourceId": "deepseek-v4.1-flash-max-20260910-webdev",
+      "model": "deepseek-v4.1-flash",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Grok 4.6 (High)",
+      "sourceId": "grok-4.6-high-public-webdev",
+      "model": "grok-4.6",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "GPT-5.6 Sol (xHigh, Codex Harness)",
+      "sourceId": "gpt-5.6-sol-xhigh-code-codex-harness-webdev",
+      "model": "gpt-5.6-sol",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "GLM-5.3-Flash",
+      "sourceId": "glm-5.3-flash-webdev",
+      "model": "glm-5.3-flash",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "GLM-5.2 (Max)",
+      "sourceId": "glm-5.2-code",
+      "model": "glm-5.2",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Qwen3.8-27B",
+      "sourceId": "qwen3.8-27b-code-webdev",
+      "model": "qwen3.8-27b",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Gemini 3.7 Flash (High)",
+      "sourceId": "andwise-evfd",
+      "model": "gemini-3.7-flash",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Claude Haiku 5.5 (High)",
+      "sourceId": "claude-haiku-5.5-high-vertex",
+      "model": "claude-haiku-5.5",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Gemini 3.8 Flash (High)",
+      "sourceId": "skimaki-kwc6",
+      "model": "gemini-3.8-flash",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "MiniMax-M3.1-Flash",
+      "sourceId": "minimax-m3-1-flash",
+      "model": "minimax-m3.1-flash",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "DeepSeek-V4-Pro (High, 20260813)",
+      "sourceId": "deepseek-v4-pro-high-20260813-webdev",
+      "model": "deepseek-v4-pro-0813",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "DeepSeek-V4-Flash (High)",
+      "sourceId": "deepseek-v4-flash-high-20260730-webdev",
+      "model": "deepseek-v4-flash",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "GPT-6 Luna (Max)",
+      "sourceId": "gpt-6-luna-max-code-codex-harness",
+      "model": "gpt-6-luna",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Step 5 Preview (High)",
+      "sourceId": "step-5-preview-webdev",
+      "model": "step-5-preview",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Claude Opus 4.7 (High)",
+      "sourceId": "claude-opus-4-7-thinking-webdev",
+      "model": "claude-opus-4.7",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Claude Opus 4.8 (High)",
+      "sourceId": "claude-opus-4-8-thinking-webdev",
+      "model": "claude-opus-4.8",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Claude Opus 4.7",
+      "sourceId": "claude-opus-4-7-webdev",
+      "model": "claude-opus-4.7",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Grok 4.5",
+      "sourceId": "grok-4.5-webdev",
+      "model": "grok-4.5",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Claude Opus 4.6 (High)",
+      "sourceId": "claude-opus-4-6-thinking-webdev",
+      "model": "claude-opus-4.6",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Mistral Large 4",
+      "sourceId": "mistral-large-4-webdev",
+      "model": "mistral-large-4",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Muse Spark 1.1",
+      "sourceId": "super-nova-ext-3tam-webdev",
+      "model": "muse-spark-1.1",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Claude Sonnet 5 (High)",
+      "sourceId": "claude-sonnet-5-webdev",
+      "model": "claude-sonnet-5",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Gemini 3.6 Flash (High)",
+      "sourceId": "gemini-3.6-flash",
+      "model": "gemini-3.6-flash",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Claude Opus 4.6",
+      "sourceId": "claude-opus-4-6",
+      "model": "claude-opus-4.6",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Claude Opus 4.8",
+      "sourceId": "claude-opus-4-8-webdev",
+      "model": "claude-opus-4.8",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Muse Spark 1.2 (xHigh)",
+      "sourceId": "muse-spark-1.2-xhigh-webdev",
+      "model": "muse-spark-1.2",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Muse Spark Open (Max)",
+      "sourceId": "muse-spark-open-max-fireworks",
+      "model": "muse-spark-open",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Claude Sonnet 4.6",
+      "sourceId": "claude-sonnet-4-6",
+      "model": "claude-sonnet-4.6",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "GPT-5.6 Terra (xHigh, Codex Harness)",
+      "sourceId": "gpt-5.6-terra-xhigh-code-codex-harness-webdev",
+      "model": "gpt-5.6-terra",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Seed2.1 Pro Preview",
+      "sourceId": "groudon-s41z",
+      "model": "seed2.1-pro-preview",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "GPT-5.6 Luna (xHigh, Codex Harness)",
+      "sourceId": "gpt-5.6-luna-xhigh-code-codex-harness-webdev",
+      "model": "gpt-5.6-luna",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Qwen3.7-Max (20260517)",
+      "sourceId": "korin-6hkw",
+      "model": "qwen3.7-max-20260517",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "GPT-5.5 (xHigh, Codex Harness)",
+      "sourceId": "gpt-5.5-xhigh-webdev",
+      "model": "gpt-5.5",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Kimi K2.6",
+      "sourceId": "kimi-k2.6-code",
+      "model": "kimi-k2.6",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "GLM-5.1",
+      "sourceId": "glm-5.1-code",
+      "model": "glm-5.1",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Hy3",
+      "sourceId": "hy3-tencent-cloud-code",
+      "model": "hy3",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "gemini-3.5-flash",
+      "sourceId": "ajax-20260517",
+      "model": "gemini-3.5-flash",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Gemini 3.5 Flash (High)",
+      "sourceId": "gemini-3.5-flash-high-public",
+      "model": "gemini-3.5-flash",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Claude Opus 4.5 (High, 32K, 20251101)",
+      "sourceId": "claude-opus-4-5-20251101-thinking-32k",
+      "model": "claude-opus-4.5-20251101",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Gemini 3.5 Flash (Medium)",
+      "sourceId": "gemini-3.5-flash-medium",
+      "model": "gemini-3.5-flash",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "GPT-5.5 (High, Codex Harness)",
+      "sourceId": "gpt-5.5-high-webdev",
+      "model": "gpt-5.5",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "MiniMax-M3",
+      "sourceId": "minimax-m3",
+      "model": "minimax-m3",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Spark-X2.6",
+      "sourceId": "horizon-6.2",
+      "model": "spark-x2.6",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Qwen3.6-Max-Preview",
+      "sourceId": "qwen3.6-max-preview-code",
+      "model": "qwen3.6-max-preview",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "MiMo-V2.5-Pro",
+      "sourceId": "mimo-v2.5-pro-webdev",
+      "model": "mimo-v2.5-pro",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Kimi K2.7 Code",
+      "sourceId": "kimi-k2.7-code",
+      "model": "kimi-k2.7-code",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Claude Opus 4.5 (20251101)",
+      "sourceId": "claude-opus-4-5-20251101",
+      "model": "claude-opus-4.5-20251101",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "DeepSeek-V4-Pro Preview (High)",
+      "sourceId": "deepseek-v4-pro-ch1-thinking-webdev",
+      "model": "deepseek-v4-pro-preview",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "GPT-5.4 (High, Codex Harness)",
+      "sourceId": "gpt-5.4-high-code-codex-harness",
+      "model": "gpt-5.4",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Qwen3.6-Plus",
+      "sourceId": "qwen3.6-plus-v1-webdev",
+      "model": "qwen3.6-plus",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "GPT-5.5 (Codex Harness)",
+      "sourceId": "gpt-5.5-webdev",
+      "model": "gpt-5.5",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "DeepSeek-V4-Pro",
+      "sourceId": "deepseek-v4-pro-ch1-webdev",
+      "model": "deepseek-v4-pro",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Gemini 3.1 Pro Preview",
+      "sourceId": "gemini-3.1-pro-preview",
+      "model": "gemini-3.1-pro-preview",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "GPT-5.4 (Medium, Codex Harness)",
+      "sourceId": "gpt-5.4-medium-code-codex-harness",
+      "model": "gpt-5.4",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Gemini 3 Flash",
+      "sourceId": "gemini-3-flash",
+      "model": "gemini-3-flash",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Gemini 3 Pro",
+      "sourceId": "gemini-3-pro",
+      "model": "gemini-3-pro",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "MiMo-V2.5",
+      "sourceId": "mimo-v2.5-webdev",
+      "model": "mimo-v2.5",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Kimi K2.5 (Thinking)",
+      "sourceId": "kimi-k2.5-webdev",
+      "model": "kimi-k2.5",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Beam 1.0 501B A23B",
+      "sourceId": "caveman-webdev",
+      "model": "beam-1.0",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "GLM-5",
+      "sourceId": "glm-5-webdev",
+      "model": "glm-5",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "GLM-4.7",
+      "sourceId": "glm-4.7",
+      "model": "glm-4.7",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "MiMo-V2-Pro",
+      "sourceId": "mimo-v2-pro",
+      "model": "mimo-v2-pro",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Gemini 3.5 Flash-Lite",
+      "sourceId": "gemini-3.5-flash-lite",
+      "model": "gemini-3.5-flash-lite",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "DeepSeek-V4-Flash Preview (High)",
+      "sourceId": "deepseek-v4-ch3-thinking-webdev",
+      "model": "deepseek-v4-flash-preview",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "GPT-5 (Medium)",
+      "sourceId": "gpt-5-medium",
+      "model": "gpt-5",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "GPT-5.2",
+      "sourceId": "gpt-5.2-code",
+      "model": "gpt-5.2",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Inkling",
+      "sourceId": "inkling-webdev",
+      "model": "inkling",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Inkling-Small",
+      "sourceId": "inkling-small",
+      "model": "inkling-small",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "GPT-5.3-Codex (Codex Harness)",
+      "sourceId": "gpt-5.3-codex",
+      "model": "gpt-5.3-codex",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Kimi K2.5 (Instant)",
+      "sourceId": "kimi-k2.5-instant",
+      "model": "kimi-k2.5",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "GPT-5.4",
+      "sourceId": "gpt-5.4-code-arena-harness",
+      "model": "gpt-5.4",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "GLM-5V-Turbo",
+      "sourceId": "glm-5v-turbo",
+      "model": "glm-5v-turbo",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Qwen3.5-397B-A17B",
+      "sourceId": "qwen3.5-397b-a17b-webdev",
+      "model": "qwen3.5-397b-a17b",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "NVIDIA-Nemotron-3.5-Super-VL-120B-A12B (NVFP4)",
+      "sourceId": "nvidia-nemotron-3.5-super-vl-120b-a12b-nvfp4-webdev",
+      "model": "nemotron-3.5-super-vl-nvfp4",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "MiniMax-M2.7",
+      "sourceId": "deep-octo",
+      "model": "minimax-m2.7",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "GPT-5.4 mini (High)",
+      "sourceId": "gpt-5.4-mini-high",
+      "model": "gpt-5.4-mini",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "GPT-5.1 (Medium)",
+      "sourceId": "gpt-5.1-medium",
+      "model": "gpt-5.1",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Claude Sonnet 4.5 (High, 32K, 20250929)",
+      "sourceId": "claude-sonnet-4-5-20250929-thinking-32k",
+      "model": "claude-sonnet-4.5-20250929",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Claude Opus 4.1 (20250805)",
+      "sourceId": "claude-opus-4-1-20250805",
+      "model": "claude-opus-4.1-20250805",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "MiniMax-M2.5",
+      "sourceId": "minimax-m2.5",
+      "model": "minimax-m2.5",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Claude Sonnet 4.5 (20250929)",
+      "sourceId": "claude-sonnet-4-5-20250929",
+      "model": "claude-sonnet-4.5-20250929",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Gemini 3 Flash (Minimal)",
+      "sourceId": "gemini-3-flash-thinking-minimal",
+      "model": "gemini-3-flash",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "MiniMax-M2.1 Preview",
+      "sourceId": "minimax-m2.1-preview",
+      "model": "minimax-m2.1-preview",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Grok 4.20 Beta (Reasoning, 0309)",
+      "sourceId": "grok-4.20-beta-0309-reasoning-code",
+      "model": "grok-4.20-beta-0309",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "GPT-5.3-Codex (Codex Harness)",
+      "sourceId": "gpt-5.3-codex-2026-03-05",
+      "model": "gpt-5.3-codex-20260305",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Solar Pro 4",
+      "sourceId": "solar-pro4-20260805",
+      "model": "solar-pro-4",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Gemma 4 31B",
+      "sourceId": "pteronura-code",
+      "model": "gemma-4-31b",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "DeepSeek-V3.2 (Thinking)",
+      "sourceId": "deepseek-v3.2-thinking",
+      "model": "deepseek-v3.2",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Qwen3.5-122B-A10B",
+      "sourceId": "qwen3.5-122b-a10b-code",
+      "model": "qwen3.5-122b-a10b",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Gemma 4 26B A4B",
+      "sourceId": "significant-otter-code",
+      "model": "gemma-4-26b-a4b",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Qwen3.5-27B",
+      "sourceId": "qwen3.5-27b-code",
+      "model": "qwen3.5-27b",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Grok 4.3",
+      "sourceId": "grok-4.3-webdev",
+      "model": "grok-4.3",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Hy3 preview",
+      "sourceId": "hunyuan-hy3-preview-code",
+      "model": "hy3-preview",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Muse Glimmer",
+      "sourceId": "onyx-v1-4-33s7",
+      "model": "muse-glimmer",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Laguna M.1",
+      "sourceId": "laguna-m.1-v2",
+      "model": "laguna-m.1",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "GPT-5.1",
+      "sourceId": "gpt-5.1",
+      "model": "gpt-5.1",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "GLM-4.6",
+      "sourceId": "glm-4.6",
+      "model": "glm-4.6",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "GPT-5.2-Codex",
+      "sourceId": "gpt-5.2-codex",
+      "model": "gpt-5.2-codex",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "GPT-5.1-Codex",
+      "sourceId": "gpt-5.1-codex",
+      "model": "gpt-5.1-codex",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "MiMo-V2-Flash (Non-Thinking)",
+      "sourceId": "mimo-v2-flash",
+      "model": "mimo-v2-flash",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Claude Haiku 4.5 (20251001)",
+      "sourceId": "claude-haiku-4-5-20251001",
+      "model": "claude-haiku-4.5-20251001",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "DeepSeek-V3.2",
+      "sourceId": "deepseek-v3.2",
+      "model": "deepseek-v3.2",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Kimi K2 Thinking Turbo",
+      "sourceId": "kimi-k2-thinking-turbo",
+      "model": "kimi-k2-thinking-turbo",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Laguna XS.2",
+      "sourceId": "laguna-xs.2-v2",
+      "model": "laguna-xs.2",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "MiniMax-M2",
+      "sourceId": "minimax-m2",
+      "model": "minimax-m2",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "MiMo-V2-Flash (Thinking)",
+      "sourceId": "mimo-v2-flash-thinking-v2",
+      "model": "mimo-v2-flash",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Qwen3-Coder-480B-A35B-Instruct",
+      "sourceId": "qwen3-coder-480b-a35b-instruct",
+      "model": "qwen3-coder-480b-a35b-instruct",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "DeepSeek-V3.2-Exp",
+      "sourceId": "deepseek-v3.2-exp",
+      "model": "deepseek-v3.2-exp",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Mistral Medium 3.5",
+      "sourceId": "mistral-medium-3.5-webdev",
+      "model": "mistral-medium-3.5",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Gemini 3.1 Flash-Lite Preview",
+      "sourceId": "gemini-3.1-flash-lite-preview",
+      "model": "gemini-3.1-flash-lite-preview",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "KAT-Coder-Pro V1",
+      "sourceId": "KAT-Coder-Pro-V1",
+      "model": "kat-coder-pro-v1",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Qwen3.5-35B-A3B",
+      "sourceId": "qwen3.5-35b-a3b-code",
+      "model": "qwen3.5-35b-a3b",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Qwen3.5-Flash",
+      "sourceId": "qwen3.5-flash",
+      "model": "qwen3.5-flash",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "GPT-5.1-Codex-Mini",
+      "sourceId": "gpt-5.1-codex-mini",
+      "model": "gpt-5.1-codex-mini",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Grok 4.1 Fast (Reasoning)",
+      "sourceId": "grok-4-1-fast-reasoning",
+      "model": "grok-4.1-fast",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Trinity Large Thinking",
+      "sourceId": "trinity-large-thinking",
+      "model": "trinity-large-thinking",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Mistral Large 3",
+      "sourceId": "mistral-large-3",
+      "model": "mistral-large-3",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Gemini 2.5 Pro",
+      "sourceId": "gemini-2.5-pro",
+      "model": "gemini-2.5-pro",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Grok 4.1 (Thinking)",
+      "sourceId": "grok-4.1-thinking",
+      "model": "grok-4.1",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Devstral 2",
+      "sourceId": "devstral-2",
+      "model": "devstral-2",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Granite 4.1 8B",
+      "sourceId": "granite-4.1-8b",
+      "model": "granite-4.1-8b",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Mercury 2",
+      "sourceId": "mercury-2",
+      "model": "mercury-2",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Grok Code Fast 1",
+      "sourceId": "grok-code-fast-1",
+      "model": "grok-code-fast-1",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Grok 4 Fast (Reasoning)",
+      "sourceId": "grok-4-fast-reasoning",
+      "model": "grok-4-fast",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    },
+    {
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "name": "Devstral Medium (2507)",
+      "sourceId": "devstral-medium-2507",
+      "model": "devstral-medium-2507",
+      "status": "verified-structured-source",
+      "identityBasis": "Stable source configuration ID and source model label; signed numeric data read from hydrated public page"
+    }
+  ]
+}

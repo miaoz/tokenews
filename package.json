@@ -7,11 +7,14 @@
     "prices:check": "node scripts/api-prices.mjs check",
     "prices:report": "node scripts/api-prices.mjs report",
     "build": "npm --prefix web ci && npm --prefix web run build",
-    "test": "node --test scripts/lib/api-prices.test.mjs && npm --prefix web test",
+    "test": "node --test scripts/lib/*.test.mjs && npm --prefix web test",
     "check": "node web/scripts/check-pages.mjs",
     "news:publish": "node web/scripts/publish-news.mjs",
     "cf:dev": "wrangler dev",
-    "cf:deploy": "wrangler deploy"
+    "cf:deploy": "wrangler deploy",
+    "leaderboards:update": "node scripts/update-leaderboards.mjs",
+    "leaderboards:audit": "node scripts/audit-leaderboards.mjs",
+    "pareto:update": "node scripts/update-pareto.mjs"
   },
   "devDependencies": {
     "wrangler": "4.145.0"

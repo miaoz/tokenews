@@ -1,0 +1,125 @@
+{
+  "version": 1,
+  "targets": [
+    {
+      "adapter": "artificial-analysis",
+      "model": "gemini-4-carbon",
+      "url": "https://artificialanalysis.ai/models/gemini-4-carbon",
+      "label": "Gemini 4 Carbon (High)",
+      "version": "5.0.1",
+      "variant": "high",
+      "effort": "high"
+    },
+    {
+      "adapter": "artificial-analysis",
+      "model": "kimi-k3.1-pro",
+      "url": "https://artificialanalysis.ai/models/kimi-k3-1-pro",
+      "label": "Kimi K3.1 Pro",
+      "version": "5.0.1",
+      "variant": "default"
+    },
+    {
+      "adapter": "crusader-bench",
+      "model": "kimi-k3.1-pro",
+      "url": "https://crusbench.com/models/kimi-1021-preview/",
+      "label": "Kimi K3.1 Pro",
+      "version": "1.7",
+      "variant": "high",
+      "effort": "high"
+    },
+    {
+      "adapter": "artificial-analysis",
+      "model": "gpt-6.1-terra",
+      "url": "https://artificialanalysis.ai/models/gpt-6-1-terra",
+      "label": "GPT-6.1 Terra (Max)",
+      "version": "5.0.1",
+      "variant": "max",
+      "effort": "max"
+    },
+    {
+      "adapter": "artificial-analysis",
+      "model": "muse-wonder",
+      "url": "https://artificialanalysis.ai/models/muse-wonder",
+      "label": "Muse Wonder (Max)",
+      "version": "5.0.1",
+      "variant": "max",
+      "effort": "max"
+    },
+    {
+      "adapter": "artificial-analysis",
+      "model": "muse-wonder-full",
+      "url": "https://artificialanalysis.ai/models/muse-wonder-full",
+      "label": "Muse Wonder Full (Max)",
+      "version": "5.0.1",
+      "variant": "max",
+      "effort": "max"
+    },
+    {
+      "adapter": "artificial-analysis",
+      "model": "muse-spark-open",
+      "url": "https://artificialanalysis.ai/models/muse-spark-open",
+      "label": "Muse Spark Open (Xhigh)",
+      "version": "5.0.1",
+      "variant": "xhigh",
+      "effort": "xhigh"
+    },
+    {
+      "adapter": "artificial-analysis",
+      "model": "deepseek-v4.1-flash-1017",
+      "url": "https://artificialanalysis.ai/models/deepseek-v4-1-flash-1017",
+      "label": "DeepSeek V4.1 Flash 1017 (Max)",
+      "version": "5.0.1",
+      "variant": "max",
+      "effort": "max"
+    },
+    {
+      "adapter": "artificial-analysis",
+      "model": "ling-3.1-flash-1019",
+      "url": "https://artificialanalysis.ai/models/ling-3-1-flash-1019",
+      "label": "Ling 3.1 Flash 1019",
+      "version": "5.0.1",
+      "variant": "default"
+    },
+    {
+      "adapter": "artificial-analysis",
+      "model": "minimax-m3.1-flash",
+      "url": "https://artificialanalysis.ai/models/minimax-m3-1-flash",
+      "label": "MiniMax-M3.1-Flash",
+      "version": "5.0.1",
+      "variant": "default"
+    },
+    {
+      "adapter": "artificial-analysis",
+      "model": "mistral-large-4",
+      "url": "https://artificialanalysis.ai/models/mistral-large-4",
+      "label": "Mistral Large 4 (High)",
+      "version": "5.0.1",
+      "variant": "high",
+      "effort": "high"
+    },
+    {
+      "adapter": "artificial-analysis",
+      "model": "nanbeige4.3-33b",
+      "url": "https://artificialanalysis.ai/models/nanbeige4-3-33b",
+      "label": "Nanbeige4.3-33B",
+      "version": "5.0.1",
+      "variant": "default"
+    },
+    {
+      "adapter": "artificial-analysis",
+      "model": "beam-1.0",
+      "url": "https://artificialanalysis.ai/models/reflection-beam",
+      "label": "Beam 1.0",
+      "version": "5.0.1",
+      "variant": "default"
+    },
+    {
+      "adapter": "artificial-analysis",
+      "model": "nemotron-3.5-super-vl",
+      "url": "https://artificialanalysis.ai/models/nemotron-3-5-super-vl",
+      "label": "Nemotron 3.5 Super VL",
+      "version": "5.0.1",
+      "variant": "default"
+    }
+  ]
+}

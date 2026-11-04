@@ -12,12 +12,13 @@ if (command === "check") {
   console.log(flags.includes("--json") ? JSON.stringify(result, null, 2) : `API prices valid: ${result.models} models, ${result.variants} variants, ${result.files} provider files; latest check ${result.checkedAt ?? "—"}.`);
 } else {
   const { points } = JSON.parse(await readFile(new URL("upstream/derived/points.json", root), "utf8"));
-  const report = priceCoverage(catalog, points);
+  const { models } = JSON.parse(await readFile(new URL("data/models.json", root), "utf8"));
+  const report = priceCoverage(catalog, points, models);
   if (flags.includes("--json")) console.log(JSON.stringify(report, null, 2));
   else {
     console.log(`API price coverage: ${report.maintainedModels} maintained locally, ${report.upstreamOnlyModels} upstream-only, ${report.missingModels} missing / ${report.totalModels} models (${report.missingRecords} records without prices).`);
     console.table(report.rows.map(({ model, status, checkedAt, differsFromUpstream }) => ({ model, status, checkedAt: checkedAt ?? "—", reviewDifference: differsFromUpstream ? "yes" : "" })));
-    if (report.unusedModels.length) console.log(`Not in the current upstream snapshot: ${report.unusedModels.join(", ")}`);
+    if (report.unusedModels.length) console.log(`Not in the current model catalog or upstream snapshot: ${report.unusedModels.join(", ")}`);
     if (report.differences.length) console.log(`Local default and upstream references differ; compare dates and conditions: ${report.differences.join(", ")}. Upstream records are preserved.`);
   }
 }

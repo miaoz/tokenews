@@ -17,6 +17,7 @@ export interface Point {
   channel: string;
   label: string;
   billing: string;
+  price_origin?: 'maintained-api';
   confidence: string;
   price_usd: number | null;
   original_price: number | null;
@@ -58,8 +59,13 @@ export interface Configuration {
   model: string;
   variant: string;
   score: number;
+  source_rank?: number;
+  source_total?: number;
+  source_rank_scope?: "comparison-group" | "leaderboard";
   score_is_estimated?: boolean | null;
   score_is_self_reported?: boolean | null;
+  score_is_preliminary?: boolean;
+  price_mapping_exclusion?: string | null;
   agent_harness: string | null;
   reasoning_effort: string | null;
   service_mode: string | null;
@@ -107,12 +113,28 @@ export interface SiteData {
   generatedAt: string;
   /** Current official API references maintained by Tokenews, separate from quota adoption. */
   apiPrices?: ApiPriceCatalog;
+  /** Model identity is independent of subscription and API price coverage. */
+  models?: { id: string; name: string; maker: string; source: string; checkedAt: string }[];
+  catalogUpdatedAt?: string;
+  leaderboardUpdatedAt?: string | null;
+  currentBoards?: string[];
+  boardAliases?: Record<string, string>;
+  leaderboardRefresh?: Record<string, {status:'updated'|'retained-previous'|'failed';attemptedAt:string;checkedAt:string}>;
+  leaderboardCoverage?: Record<string, {
+    observed: number;
+    matchedConfigurations: number;
+    checkedAt: string;
+    sourceUpdatedAt: string | null;
+    retrievalMethod: string;
+    unpriced: {model: string | null; label: string; score: number | null; reason: string; preliminary: boolean}[];
+    excluded: {model: string | null; label: string; score: number | null; reason: string; preliminary: boolean}[];
+  }>;
   points: Point[];
   configurations: Configuration[];
   mappings: Mapping[];
   boards: Record<
     string,
-    { name: string; metric: string; url: string; snapshot: string }
+    { name: string; metric: string; url: string; snapshot: string; checkedAt?: string; current?: boolean; retrievalMethod?: string }
   >;
   conventions: {
     usdPerCny: number;

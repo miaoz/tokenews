@@ -98,8 +98,9 @@ export async function loadApiPrices(directory) {
   };
 }
 
-export function priceCoverage(catalog, points) {
-  const groups = new Map();
+export function priceCoverage(catalog, points, models = []) {
+  const groups = new Map(models.map(m => [m.id, []]));
+  const makers = new Map(models.map(m => [m.id, m.maker]));
   for (const p of points) {
     if (!groups.has(p.model)) groups.set(p.model, []);
     groups.get(p.model).push(p);
@@ -109,7 +110,7 @@ export function priceCoverage(catalog, points) {
     const variant = local?.variants.find((v) => v.id === local.defaultVariant);
     const upstream = [...new Map(records.filter((p) => p.list_price).map((p) => [JSON.stringify(p.list_price), p.list_price])).values()];
     return {
-      model, provider: local?.provider ?? records[0].vendor, records: records.length,
+      model, provider: local?.provider ?? records[0]?.vendor ?? makers.get(model) ?? null, records: records.length,
       status: local ? "maintained" : upstream.length ? "upstream-only" : "missing",
       checkedAt: local?.checkedAt ?? null,
       source: local?.source ?? null,

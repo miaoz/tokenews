@@ -108,6 +108,26 @@ for (const [url, { file, html }] of pages) {
   }
 }
 
+// Every catalog model must remain publishable even without any price points.
+const siteData = JSON.parse(await readFile(path.join(dist, "data/site.json"), "utf8"));
+for (const model of siteData.models ?? []) {
+  const slug = model.id.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+  const priced = siteData.points.some(p => p.model === model.id);
+  for (const prefix of ["", "/zh"]) {
+    const url = `${prefix}/models/${slug}/`;
+    const p = pages.get(url);
+    if (!p) { fail(url, "catalog model page missing"); continue; }
+    if (!pages.get(`${prefix}/models/`)?.html.includes(`href="${url}"`)) fail(url, "missing from model directory");
+    if (!priced) {
+      if (/unmetered on every channel|所有渠道均不计额度/.test(p.html)) fail(url, "missing price misrepresented as unmetered");
+      if (p.html.includes(`lock=${encodeURIComponent(`model:${model.id}`)}`)) fail(url, "unpriced model links to empty price chart");
+      if (!p.html.includes(prefix ? "尚未收录" : "not yet been recorded")) fail(url, "missing pricing status");
+      const graph = JSON.parse(p.html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1])["@graph"];
+      if (graph.find(o => o["@type"] === "SoftwareApplication")?.offers) fail(url, "unpriced model publishes fabricated offers");
+    }
+  }
+}
+
 if (problems.length) {
   console.error(`${problems.length} problem(s):\n` + problems.slice(0, 50).join("\n"));
   process.exit(1);
