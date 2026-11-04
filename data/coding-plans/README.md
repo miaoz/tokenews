@@ -64,11 +64,11 @@ The daily leaderboard workflow does not independently refresh plan credits.
 
 ## Scheduled announcement and plan watch
 
-`.github/workflows/watch-coding-plans.yml` checks the configured sources every six
-hours (`23 */6 * * *`, UTC) and can be run manually. GitHub schedules may be delayed.
+`.github/workflows/watch-coding-plans.yml` checks the configured sources every 24
+hours (`23 0 * * *`, UTC) and can be run manually. GitHub schedules may be delayed.
 It publishes the last check, failed sources and persistent pending changes on
 the explorer, methodology and provider pages, with the full report at
-`/data/coding-plan-watch.json`. Status older than 18 hours is flagged as stale.
+`/data/coding-plan-watch.json`. Status older than 72 hours is flagged as stale.
 
 `npm run coding-plans:watch` checks the source registry in `watch-sources.json`:
 public release notes, official announcements, model/endpoint lists, plan tables,

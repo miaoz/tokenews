@@ -137,6 +137,6 @@ export function reconcileWatch(config, previous, results, resolutions, manifest,
   }
   state.events=[...events.values()].map(e=>review.has(e.id)?{...e,status:review.get(e.id).status,resolution:review.get(e.id)}:e);
   const statuses=config.sources.map(s=>state.sources[s.id]);
-  const report={version:1,checkedAt:now,intervalHours:6,newEvents:newCount,pending:state.events.filter(e=>e.status==='pending'),resolvedCount:state.events.filter(e=>e.status!=='pending').length,sources:statuses.map(({snapshot,...s})=>({...s,recordCount:snapshot?.records.length??0})),failedSources:statuses.filter(s=>s.status==='failed').length};
+  const report={version:1,checkedAt:now,intervalHours:24,newEvents:newCount,pending:state.events.filter(e=>e.status==='pending'),resolvedCount:state.events.filter(e=>e.status!=='pending').length,sources:statuses.map(({snapshot,...s})=>({...s,recordCount:snapshot?.records.length??0})),failedSources:statuses.filter(s=>s.status==='failed').length};
   return {state,report};
 }
