@@ -81,3 +81,13 @@ test('Model-only release headings and standalone subscription prices are observe
   assert.equal(a.records.length,2);
   assert.notEqual(a.hash,b.hash);
 });
+test('A recurring price change cannot inherit the resolution of an earlier occurrence',()=>{
+  const a=reconcile(empty,result(html(20)));
+  const b=reconcile(a.state,result(html(40)));
+  const review={id:b.report.pending[0].id,status:'accepted',reason:'Verified first rate increase',reviewedAt:now};
+  const c=reconcile(b.state,result(html(20)),[review],manifest,'2026-11-05T12:00:00Z');
+  const d=reconcile(c.state,result(html(40)),[review],manifest,'2026-11-06T12:00:00Z');
+  assert.equal(d.report.newEvents,1);
+  assert.equal(d.report.pending.length,2);
+  assert.notEqual(d.report.pending.at(-1).id,review.id);
+});

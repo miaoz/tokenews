@@ -105,8 +105,8 @@ export function reconcileWatch(config, previous, results, resolutions, manifest,
   }));
   if(results.length!==config.sources.length||new Set(results.map(r=>r.id)).size!==results.length)throw Error('Incomplete watch run');
   let newCount=0;
-  const add=(source,kind,key,before,after)=>{
-    const id=digest([source.id,kind,key,after?.hash??'removed',before?.hash??null]);
+  const add=(source,kind,key,before,after,occurrence=null)=>{
+    const id=digest([source.id,kind,key,after?.hash??'removed',before?.hash??null,occurrence]);
     if(!events.has(id)){events.set(id,{id,sourceId:source.id,channel:source.channel,kind,detectedAt:now,url:after?.url??source.url,before:before??null,after:after??null,status:'pending'});newCount++;}
   };
   for(const source of config.sources){
@@ -123,9 +123,11 @@ export function reconcileWatch(config, previous, results, resolutions, manifest,
       if(oldRows>5&&newRows<oldRows*.6){state.sources[source.id]={...old,attemptedAt:now,status:'failed',error:'Table coverage dropped by more than 40%; retaining last successful snapshot',consecutiveFailures:(old.consecutiveFailures??0)+1};continue;}
       for(const [key,row] of b){const prior=a.get(key);if(prior?.hash===row.hash)continue;
         if(row.type==='announcement'&&row.relevant===false)continue;
-        add(source,row.type==='announcement'?'announcement':prior?'terms-changed':'model-or-plan-added',key,prior,row);
+        // A later recurrence of the same rate change must not inherit an old
+        // resolution. Unchanged observations never call add for source rows.
+        add(source,row.type==='announcement'?'announcement':prior?'terms-changed':'model-or-plan-added',key,prior,row,now);
       }
-      for(const [key,row] of a)if(!b.has(key)&&row.type==='table-row')add(source,'model-or-plan-removed',key,row,null);
+      for(const [key,row] of a)if(!b.has(key)&&row.type==='table-row')add(source,'model-or-plan-removed',key,row,null,now);
     }
     state.sources[source.id]={id:source.id,channel:source.channel,url:source.url,kind:source.kind,attemptedAt:now,lastSuccessAt:now,status:old?.snapshot?'checked':'baseline',consecutiveFailures:0,retrieval:result.retrieval,snapshot:obs};
   }
