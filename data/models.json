@@ -163,6 +163,13 @@
       "checkedAt": "2026-10-19"
     },
     {
+      "id": "clef",
+      "name": "Clef",
+      "maker": "Cloudflare",
+      "source": "https://ollama.com/blog/clef",
+      "checkedAt": "2026-11-04"
+    },
+    {
       "id": "cogito-v2.1",
       "name": "Cogito v2.1",
       "maker": "Deep Cogito",
@@ -189,6 +196,13 @@
       "maker": "Cursor",
       "source": "https://github.com/Fei2411/real-api-pricing/tree/0be92b7ce3edf7690672ce5217607032a4bc7c45",
       "checkedAt": "2026-10-19"
+    },
+    {
+      "id": "crouton-alpha",
+      "name": "Crouton Alpha",
+      "maker": "Stealth",
+      "source": "https://commandcode.ai/docs/resources/pricing-limits#crouton-alpha-free",
+      "checkedAt": "2026-11-04"
     },
     {
       "id": "deephermes-3-llama-3.1-8b-preview",
@@ -590,6 +604,13 @@
       "checkedAt": "2026-11-04"
     },
     {
+      "id": "glyph-cluster",
+      "name": "Glyph Cluster",
+      "maker": "Stealth",
+      "source": "https://commandcode.ai/docs/resources/pricing-limits#glyph-cluster-free",
+      "checkedAt": "2026-11-04"
+    },
+    {
       "id": "gpt-5",
       "name": "GPT-5",
       "maker": "OpenAI",
@@ -975,6 +996,20 @@
       "checkedAt": "2026-11-04"
     },
     {
+      "id": "jev",
+      "name": "Jev",
+      "maker": "TypeSafe",
+      "source": "https://commandcode.ai/changelog",
+      "checkedAt": "2026-11-04"
+    },
+    {
+      "id": "jev-1.14.0",
+      "name": "Jev 1.14.0",
+      "maker": "TypeSafe",
+      "source": "https://commandcode.ai/docs/reference/cli/models",
+      "checkedAt": "2026-11-04"
+    },
+    {
       "id": "jt-35b-flash",
       "name": "JT-35B-Flash",
       "maker": "China Mobile",
@@ -1133,6 +1168,13 @@
       "name": "Laguna M.1",
       "maker": "Poolside",
       "source": "https://arena.ai/leaderboard/code/webdev",
+      "checkedAt": "2026-11-04"
+    },
+    {
+      "id": "laguna-s-2.1",
+      "name": "Laguna S 2.1",
+      "maker": "Poolside",
+      "source": "https://commandcode.ai/docs/resources/pricing-limits#laguna-s-2.1-free",
       "checkedAt": "2026-11-04"
     },
     {
@@ -1759,6 +1801,13 @@
       "checkedAt": "2026-11-04"
     },
     {
+      "id": "ornith-1.5-122b",
+      "name": "Ornith 1.5 122B",
+      "maker": "Ornith",
+      "source": "https://commandcode.ai/changelog",
+      "checkedAt": "2026-11-04"
+    },
+    {
       "id": "phi-4",
       "name": "Phi-4",
       "maker": "Microsoft",
@@ -1995,6 +2044,13 @@
       "maker": "Alibaba",
       "source": "https://github.com/Fei2411/real-api-pricing/tree/0be92b7ce3edf7690672ce5217607032a4bc7c45",
       "checkedAt": "2026-10-19"
+    },
+    {
+      "id": "qwen3.8-max-prime",
+      "name": "Qwen3.8 Max Prime",
+      "maker": "Alibaba",
+      "source": "https://commandcode.ai/changelog",
+      "checkedAt": "2026-11-04"
     },
     {
       "id": "qwen3.8-omni-flash",

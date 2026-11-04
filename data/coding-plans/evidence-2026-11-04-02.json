@@ -1,0 +1,2912 @@
+{
+  "checkedAt": "2026-11-04",
+  "scope": "Recent model generations across all seven existing subscription channels that distribute third-party models. Historical-only gaps remain out of scope. Official releases and plan terms are both reviewed; no global alias is inferred from a channel rollout.",
+  "sources": [
+    {
+      "source": "https://commandcode.ai/docs/plans/go",
+      "retrieval": "Rendered official browser page; digest covers JSON with text and tables",
+      "responseSha256": "ade5ea729aa9b0c5b90b37361cc07fb631fc5bc2c5049d6eaa16e39f177fbc10"
+    },
+    {
+      "source": "https://commandcode.ai/docs/plans/pro",
+      "retrieval": "Rendered official browser page; digest covers JSON with text and tables",
+      "responseSha256": "659980ed939babc896d332712b09dacb8fb6614bf63d78b05e04fd19e042e8c7"
+    },
+    {
+      "source": "https://commandcode.ai/docs/plans/max",
+      "retrieval": "Rendered official browser page; digest covers JSON with text and tables",
+      "responseSha256": "374c4000c68ae900d48cb68e788d22655941ca042531f9d29ba0c3c911ace53a"
+    },
+    {
+      "source": "https://commandcode.ai/docs/reference/cli/models",
+      "retrieval": "Rendered official browser page; digest covers JSON with text and tables",
+      "responseSha256": "77574c2f6a805418355f2f435b0c8cfc32620ff2450670b70ecc85afeb0da8b1"
+    },
+    {
+      "source": "https://commandcode.ai/docs/resources/pricing-limits",
+      "retrieval": "Rendered official browser page; digest covers JSON with text and tables",
+      "responseSha256": "a0a6d5f6fd71d397203d2fbdc3dedab46bb3968bb0132ea7b0e4e2efd20e7c06"
+    },
+    {
+      "source": "https://commandcode.ai/changelog",
+      "retrieval": "Rendered official browser page; digest covers JSON with text and tables",
+      "responseSha256": "62c8728b2b0403f37bcdf1ef682fc9a5f7f52f67d85d9ef71be5bfa4ea916964"
+    },
+    {
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "retrieval": "Rendered official browser page; digest covers JSON with text and tables",
+      "responseSha256": "e3a57fac9f547b1070163258cbcc6920ad3a108591a73a0e6df1a1f4ca88f3f6"
+    },
+    {
+      "source": "https://ollama.com/pricing",
+      "retrieval": "Rendered official browser page; digest covers JSON with text and tables",
+      "responseSha256": "0516f16a12ab801f3d8f2ffc3eb9328c5a5eb78ff99ae73e40a49897b633e1ce"
+    },
+    {
+      "source": "https://docs.factory.com/changelog/release-notes.md",
+      "responseSha256": "9ba4b841266b2874e2512e5eaa3555e1da8239c6786cf6a5b75314ff8f9d7e4b"
+    },
+    {
+      "source": "https://docs.factory.com/models.md",
+      "responseSha256": "39ad1625b8953fd6ce3ba7816c3ae88215d53b8fa3ca9b6af87bb9641e0104c6"
+    },
+    {
+      "source": "https://cursor.com/docs/models-and-pricing",
+      "responseSha256": "be85afbfd617adf0d134d21fa0368f77784138951f23056b142715e17d54efb6"
+    },
+    {
+      "source": "https://x.com/CommandCodeAI/status/2117690129267695746",
+      "retrievedVia": "https://publish.twitter.com/oembed",
+      "author": "Command Code",
+      "responseSha256": "f6a0a3c3e2a74b8c4063c981682ac0d16ed2e40df27a91ea177d481847b503ee",
+      "excerpt": "Ling 3.1 Flash 1019 now gets $100 usage."
+    },
+    {
+      "source": "https://x.com/opencode/status/2113699251616412056",
+      "retrievedVia": "https://publish.twitter.com/oembed",
+      "author": "OpenCode",
+      "responseSha256": "d69c2aedc22b322e2aafd515ff112f9baaac07546d9d4145325a0f2946ae9069",
+      "excerpt": "Kimi K3.1 Pro is now available in OpenCode Go"
+    },
+    {
+      "source": "https://x.com/opencode/status/2117717721458843711",
+      "retrievedVia": "https://publish.twitter.com/oembed",
+      "author": "OpenCode",
+      "responseSha256": "2e9273600131a8a2784ee32c108e428801aec2f146ab608def16addc0a04a40d",
+      "excerpt": "Crouton Alpha (stealth model) is free for the next week"
+    }
+  ],
+  "officialReleaseEvents": [
+    {
+      "modelEvent": "GPT-6.1 Terra",
+      "release": "v0.1.59",
+      "published": "Oct 26 2026"
+    },
+    {
+      "modelEvent": "Kimi K3.1 Pro",
+      "release": "v0.1.58",
+      "published": "Oct 25 2026"
+    },
+    {
+      "modelEvent": "Ornith 1.5 122B",
+      "release": "v0.1.57",
+      "published": "Oct 20 2026"
+    },
+    {
+      "modelEvent": "the Beam 1.0",
+      "release": "v1.85.0",
+      "published": "Oct 19 2026"
+    },
+    {
+      "modelEvent": "MiniMax M3.1 Flash",
+      "release": "v1.85.0",
+      "published": "Oct 19 2026"
+    },
+    {
+      "modelEvent": "Qwen 3.8 Max Prime",
+      "release": "v0.1.55",
+      "published": "Oct 14 2026"
+    },
+    {
+      "modelEvent": "Gemini 4 Argon",
+      "release": "v0.1.54",
+      "published": "Oct 13 2026"
+    },
+    {
+      "modelEvent": "Muse Wonder",
+      "release": "v1.80.0",
+      "published": "Oct 11 2026"
+    },
+    {
+      "modelEvent": "GPT-6.1 Sol",
+      "release": "v0.1.45",
+      "published": "Sep 29 2026"
+    }
+  ],
+  "channelAudit": [
+    {
+      "channel": "OpenCode",
+      "sources": [
+        "https://opencode.ai/v2/docs/console/go/",
+        "https://x.com/opencode/status/2112220734768779441",
+        "https://stats.opencode.ai/data"
+      ],
+      "decision": "Reviewed all three Go tiers for the recent model generation. Replace Contributor with standard Argon, keep announced DeepSeek 1017 and Kimi K3.1 identities, add missing Plus/Teams relationships and conditional free availability. Muse Wonder console access is not evidence of Go inclusion."
+    },
+    {
+      "channel": "Command Code",
+      "sources": [
+        "https://commandcode.ai/changelog",
+        "https://commandcode.ai/docs/plans/go",
+        "https://commandcode.ai/docs/plans/goat",
+        "https://commandcode.ai/docs/plans/pro",
+        "https://commandcode.ai/docs/plans/max",
+        "https://commandcode.ai/docs/resources/pricing-limits"
+      ],
+      "decision": "Compared dated model rollout notes with all five individual subscription tier tables. Added eligible recent model combinations only; Terra starts at Pro, Sol and Wonder at Max. Each Max model uses its actual standard or premium cap. GLM 1017 wording in a recap is not corroborated by a distinct endpoint; Fast is still separate."
+    },
+    {
+      "channel": "Ollama",
+      "sources": [
+        "https://ollama.com/blog/transparent-pricing",
+        "https://ollama.com/blog/reflection-beam",
+        "https://ollama.com/blog/clef",
+        "https://ollama.com/pricing"
+      ],
+      "decision": "August 31 credit-plan change, October 16 Beam and October 19 Clef announcements reviewed. New monthly-credit tiers cover recent paid cloud models. Beam is temporary free; Clef is a decision model. Kimi K3 cloud is not automatically K3.1 Pro. Mistral updated weights still lack an exact benchmark-checkpoint join."
+    },
+    {
+      "channel": "Factory",
+      "sources": [
+        "https://docs.factory.com/changelog/release-notes",
+        "https://docs.factory.com/models",
+        "https://docs.factory.com/pricing/individuals"
+      ],
+      "decision": "Changelog reviewed through November 4, including migration/legacy behavior. Catalog explicitly includes Sol 6.1, DeepSeek 1017, MiniMax M3.1, Beam, Mistral. No publicly verifiable absolute standard-credit conversion; retain availability without copying old measured quotas."
+    },
+    {
+      "channel": "Cursor",
+      "sources": [
+        "https://cursor.com/changelog",
+        "https://cursor.com/docs/models-and-pricing"
+      ],
+      "decision": "Official release feed and plan-generation announcement reviewed. Original Pro/Pro+/Ultra records are Legacy. New X Subscription charges third-party Argon and Wonder against top-ups; do not treat the monthly subscription fee as buying their token quotas."
+    },
+    {
+      "channel": "Devin",
+      "sources": [
+        "https://docs.devin.ai/release-notes/overview"
+      ],
+      "decision": "Recent official release notes reviewed through November 2. SWE-2 September 21 rollout is already represented. No explicit new-model subscription/token conversion found for the other audited checkpoints; existing observations retained, not silently upgraded."
+    },
+    {
+      "channel": "Alibaba",
+      "sources": [
+        "https://www.alibabacloud.com/help/en/model-studio/coding-plan",
+        "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      ],
+      "decision": "Distinguish older Coding Plan exact-version allowlist from new Token Plan. Personal plan September 22 removal of weekly limits and explicit DeepSeek 1017 / GLM 5.3 support confirmed. Dynamic Credits cannot be treated as dollars or a fixed token pool."
+    }
+  ],
+  "decisions": [
+    {
+      "plan": "opencode_go",
+      "model": "kimi-k3.1-pro",
+      "endpoint": "kimi-k3.1-pro",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://x.com/opencode/status/2113699251616412056",
+      "monthlyCreditsUsd": 15.0,
+      "rates": {
+        "input": 2.0,
+        "output": 10.0,
+        "cache": 0.2,
+        "cacheWrite": 2.0
+      }
+    },
+    {
+      "plan": "opencode_go",
+      "model": "step-5-preview",
+      "endpoint": "step-5-preview",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://opencode.ai/v2/docs/console/go/",
+      "monthlyCreditsUsd": 15.0,
+      "rates": {
+        "input": 1.0,
+        "output": 2.7,
+        "cache": 0.1
+      }
+    },
+    {
+      "plan": "opencode_go",
+      "model": "minimax-m3.1-flash",
+      "endpoint": "minimax-m3.1-flash",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://opencode.ai/v2/docs/console/go/",
+      "monthlyCreditsUsd": 20.0,
+      "rates": {
+        "input": 0.15,
+        "output": 0.6,
+        "cache": 0.015
+      }
+    },
+    {
+      "plan": "opencode_go",
+      "model": "deepseek-v4.1-flash-1017",
+      "endpoint": "deepseek-v4.1-flash",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://x.com/opencode/status/2112220734768779441",
+      "monthlyCreditsUsd": 100.0,
+      "rates": {
+        "input": 0.15,
+        "output": 0.6,
+        "cache": 0.003
+      }
+    },
+    {
+      "plan": "opencode_go",
+      "model": "deepseek-v4.1-flash-1017",
+      "endpoint": "deepseek-v4.1-flash",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://x.com/opencode/status/2112220734768779441",
+      "monthlyCreditsUsd": 100.0,
+      "rates": {
+        "input": 0.3,
+        "output": 1.2,
+        "cache": 0.006
+      }
+    },
+    {
+      "plan": "opencode_go_plus",
+      "model": "kimi-k3.1-pro",
+      "endpoint": "kimi-k3.1-pro",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://x.com/opencode/status/2113699251616412056",
+      "monthlyCreditsUsd": 60.0,
+      "rates": {
+        "input": 2.0,
+        "output": 10.0,
+        "cache": 0.2,
+        "cacheWrite": 2.0
+      }
+    },
+    {
+      "plan": "opencode_go_plus",
+      "model": "step-5-preview",
+      "endpoint": "step-5-preview",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://opencode.ai/v2/docs/console/go/",
+      "monthlyCreditsUsd": 60.0,
+      "rates": {
+        "input": 1.0,
+        "output": 2.7,
+        "cache": 0.1
+      }
+    },
+    {
+      "plan": "opencode_go_plus",
+      "model": "minimax-m3.1-flash",
+      "endpoint": "minimax-m3.1-flash",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://opencode.ai/v2/docs/console/go/",
+      "monthlyCreditsUsd": 80.0,
+      "rates": {
+        "input": 0.15,
+        "output": 0.6,
+        "cache": 0.015
+      }
+    },
+    {
+      "plan": "opencode_go_plus",
+      "model": "deepseek-v4.1-flash-1017",
+      "endpoint": "deepseek-v4.1-flash",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://x.com/opencode/status/2112220734768779441",
+      "monthlyCreditsUsd": 200.0,
+      "rates": {
+        "input": 0.15,
+        "output": 0.6,
+        "cache": 0.003
+      }
+    },
+    {
+      "plan": "opencode_go_plus",
+      "model": "deepseek-v4.1-flash-1017",
+      "endpoint": "deepseek-v4.1-flash",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://x.com/opencode/status/2112220734768779441",
+      "monthlyCreditsUsd": 200.0,
+      "rates": {
+        "input": 0.3,
+        "output": 1.2,
+        "cache": 0.006
+      }
+    },
+    {
+      "plan": "opencode_go_teams",
+      "model": "kimi-k3.1-pro",
+      "endpoint": "kimi-k3.1-pro",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://x.com/opencode/status/2113699251616412056",
+      "monthlyCreditsUsd": 20.0,
+      "rates": {
+        "input": 2.0,
+        "output": 10.0,
+        "cache": 0.2,
+        "cacheWrite": 2.0
+      }
+    },
+    {
+      "plan": "opencode_go_teams",
+      "model": "step-5-preview",
+      "endpoint": "step-5-preview",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://opencode.ai/v2/docs/console/go/",
+      "monthlyCreditsUsd": 20.0,
+      "rates": {
+        "input": 1.0,
+        "output": 2.7,
+        "cache": 0.1
+      }
+    },
+    {
+      "plan": "opencode_go_teams",
+      "model": "minimax-m3.1-flash",
+      "endpoint": "minimax-m3.1-flash",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://opencode.ai/v2/docs/console/go/",
+      "monthlyCreditsUsd": 25.0,
+      "rates": {
+        "input": 0.15,
+        "output": 0.6,
+        "cache": 0.015
+      }
+    },
+    {
+      "plan": "opencode_go_teams",
+      "model": "deepseek-v4.1-flash-1017",
+      "endpoint": "deepseek-v4.1-flash",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://x.com/opencode/status/2112220734768779441",
+      "monthlyCreditsUsd": 105.0,
+      "rates": {
+        "input": 0.15,
+        "output": 0.6,
+        "cache": 0.003
+      }
+    },
+    {
+      "plan": "opencode_go_teams",
+      "model": "deepseek-v4.1-flash-1017",
+      "endpoint": "deepseek-v4.1-flash",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://x.com/opencode/status/2112220734768779441",
+      "monthlyCreditsUsd": 105.0,
+      "rates": {
+        "input": 0.3,
+        "output": 1.2,
+        "cache": 0.006
+      }
+    },
+    {
+      "plan": "command_code_goat",
+      "model": "deepseek-v4.1-flash-1017",
+      "endpoint": "deepseek-v4.1-flash",
+      "source": "https://commandcode.ai/docs/plans/goat",
+      "identitySource": "https://x.com/CommandCodeAI/status/2116329543921475861",
+      "monthlyCreditsUsd": 100.0,
+      "rates": {
+        "input": 0.15,
+        "output": 0.6,
+        "cache": 0.003
+      }
+    },
+    {
+      "plan": "command_code_goat",
+      "model": "deepseek-v4.1-flash-1017",
+      "endpoint": "deepseek-v4.1-flash",
+      "source": "https://commandcode.ai/docs/plans/goat",
+      "identitySource": "https://x.com/CommandCodeAI/status/2116329543921475861",
+      "monthlyCreditsUsd": 100.0,
+      "rates": {
+        "input": 0.3,
+        "output": 1.2,
+        "cache": 0.006
+      }
+    },
+    {
+      "plan": "command_code_goat",
+      "model": "ling-3.1-flash-1019",
+      "endpoint": "inclusionai/ling-3.1-flash-1019",
+      "source": "https://commandcode.ai/docs/plans/goat",
+      "identitySource": "https://x.com/CommandCodeAI/status/2117690129267695746",
+      "monthlyCreditsUsd": 100.0,
+      "rates": {
+        "input": 0.3,
+        "output": 0.9,
+        "cache": 0.06
+      }
+    },
+    {
+      "plan": "command_code_goat",
+      "model": "kimi-k3.1-pro",
+      "endpoint": "moonshotai/Kimi-K3.1-Pro",
+      "source": "https://commandcode.ai/docs/plans/goat",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 20.0,
+      "rates": {
+        "input": 2.0,
+        "output": 10.0,
+        "cache": 0.2
+      }
+    },
+    {
+      "plan": "command_code_goat",
+      "model": "minimax-m3.1-flash",
+      "endpoint": "minimax/minimax-m3.1-flash",
+      "source": "https://commandcode.ai/docs/plans/goat",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 20.0,
+      "rates": {
+        "input": 0.15,
+        "output": 0.6,
+        "cache": 0.015
+      }
+    },
+    {
+      "plan": "command_code_goat",
+      "model": "muse-spark-open",
+      "endpoint": "meta/muse-spark-open",
+      "source": "https://commandcode.ai/docs/plans/goat",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 20.0,
+      "rates": {
+        "input": 1.25,
+        "output": 4.25,
+        "cache": 0.15
+      }
+    },
+    {
+      "plan": "command_code_goat",
+      "model": "nemotron-3.5-super-vl",
+      "endpoint": "nvidia/nemotron-3.5-super-vl",
+      "source": "https://commandcode.ai/docs/plans/goat",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 20.0,
+      "rates": {
+        "input": 0.2,
+        "output": 0.5,
+        "cache": 0.04
+      }
+    },
+    {
+      "plan": "ollama_pro_credits",
+      "model": "deepseek-v4.1-flash-1017",
+      "endpoint": "deepseek-v4.1-flash:1017-cloud",
+      "source": "https://ollama.com/pricing",
+      "identitySource": "https://ollama.com/library/deepseek-v4.1-flash:1017-cloud",
+      "monthlyCreditsUsd": 60.0,
+      "rates": {
+        "input": 0.3,
+        "output": 1.2,
+        "cache": 0.006
+      }
+    },
+    {
+      "plan": "ollama_pro_credits",
+      "model": "deepseek-v4.1-flash-1017",
+      "endpoint": "deepseek-v4.1-flash:1017-cloud",
+      "source": "https://ollama.com/pricing",
+      "identitySource": "https://ollama.com/library/deepseek-v4.1-flash:1017-cloud",
+      "monthlyCreditsUsd": 60.0,
+      "rates": {
+        "input": 0.15,
+        "output": 0.6,
+        "cache": 0.003
+      }
+    },
+    {
+      "plan": "ollama_pro_credits",
+      "model": "minimax-m3.1-flash",
+      "endpoint": "minimax-m3.1-flash",
+      "source": "https://ollama.com/pricing",
+      "identitySource": "https://ollama.com/library/minimax-m3.1-flash",
+      "monthlyCreditsUsd": 60.0,
+      "rates": {
+        "input": 0.15,
+        "output": 0.6,
+        "cache": 0.015
+      }
+    },
+    {
+      "plan": "ollama_pro_credits",
+      "model": "muse-spark-open",
+      "endpoint": "muse-spark-open",
+      "source": "https://ollama.com/pricing",
+      "identitySource": "https://ollama.com/library/muse-spark-open",
+      "monthlyCreditsUsd": 60.0,
+      "rates": {
+        "input": 1.25,
+        "output": 4.25,
+        "cache": 0.15
+      }
+    },
+    {
+      "plan": "ollama_max_credits",
+      "model": "deepseek-v4.1-flash-1017",
+      "endpoint": "deepseek-v4.1-flash:1017-cloud",
+      "source": "https://ollama.com/pricing",
+      "identitySource": "https://ollama.com/library/deepseek-v4.1-flash:1017-cloud",
+      "monthlyCreditsUsd": 300.0,
+      "rates": {
+        "input": 0.3,
+        "output": 1.2,
+        "cache": 0.006
+      }
+    },
+    {
+      "plan": "ollama_max_credits",
+      "model": "deepseek-v4.1-flash-1017",
+      "endpoint": "deepseek-v4.1-flash:1017-cloud",
+      "source": "https://ollama.com/pricing",
+      "identitySource": "https://ollama.com/library/deepseek-v4.1-flash:1017-cloud",
+      "monthlyCreditsUsd": 300.0,
+      "rates": {
+        "input": 0.15,
+        "output": 0.6,
+        "cache": 0.003
+      }
+    },
+    {
+      "plan": "ollama_max_credits",
+      "model": "minimax-m3.1-flash",
+      "endpoint": "minimax-m3.1-flash",
+      "source": "https://ollama.com/pricing",
+      "identitySource": "https://ollama.com/library/minimax-m3.1-flash",
+      "monthlyCreditsUsd": 300.0,
+      "rates": {
+        "input": 0.15,
+        "output": 0.6,
+        "cache": 0.015
+      }
+    },
+    {
+      "plan": "ollama_max_credits",
+      "model": "muse-spark-open",
+      "endpoint": "muse-spark-open",
+      "source": "https://ollama.com/pricing",
+      "identitySource": "https://ollama.com/library/muse-spark-open",
+      "monthlyCreditsUsd": 300.0,
+      "rates": {
+        "input": 1.25,
+        "output": 4.25,
+        "cache": 0.15
+      }
+    },
+    {
+      "plan": "ollama_team_credits",
+      "model": "deepseek-v4.1-flash-1017",
+      "endpoint": "deepseek-v4.1-flash:1017-cloud",
+      "source": "https://ollama.com/pricing",
+      "identitySource": "https://ollama.com/library/deepseek-v4.1-flash:1017-cloud",
+      "monthlyCreditsUsd": 1000.0,
+      "rates": {
+        "input": 0.3,
+        "output": 1.2,
+        "cache": 0.006
+      }
+    },
+    {
+      "plan": "ollama_team_credits",
+      "model": "deepseek-v4.1-flash-1017",
+      "endpoint": "deepseek-v4.1-flash:1017-cloud",
+      "source": "https://ollama.com/pricing",
+      "identitySource": "https://ollama.com/library/deepseek-v4.1-flash:1017-cloud",
+      "monthlyCreditsUsd": 1000.0,
+      "rates": {
+        "input": 0.15,
+        "output": 0.6,
+        "cache": 0.003
+      }
+    },
+    {
+      "plan": "ollama_team_credits",
+      "model": "minimax-m3.1-flash",
+      "endpoint": "minimax-m3.1-flash",
+      "source": "https://ollama.com/pricing",
+      "identitySource": "https://ollama.com/library/minimax-m3.1-flash",
+      "monthlyCreditsUsd": 1000.0,
+      "rates": {
+        "input": 0.15,
+        "output": 0.6,
+        "cache": 0.015
+      }
+    },
+    {
+      "plan": "ollama_team_credits",
+      "model": "muse-spark-open",
+      "endpoint": "muse-spark-open",
+      "source": "https://ollama.com/pricing",
+      "identitySource": "https://ollama.com/library/muse-spark-open",
+      "monthlyCreditsUsd": 1000.0,
+      "rates": {
+        "input": 1.25,
+        "output": 4.25,
+        "cache": 0.15
+      }
+    },
+    {
+      "plan": "command_code_go",
+      "model": "glm-5.3-flash",
+      "endpoint": "z-ai/glm-5.3-flash",
+      "source": "https://commandcode.ai/docs/plans/go",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 10.0,
+      "rates": {
+        "input": 0.15,
+        "output": 0.5,
+        "cache": 0.03
+      }
+    },
+    {
+      "plan": "command_code_go",
+      "model": "glm-5.3",
+      "endpoint": "zai-org/GLM-5.3",
+      "source": "https://commandcode.ai/docs/plans/go",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 10.0,
+      "rates": {
+        "input": 1.4,
+        "output": 4.4,
+        "cache": 0.26
+      }
+    },
+    {
+      "plan": "command_code_go",
+      "model": "qwen3.8-max",
+      "endpoint": "Qwen/Qwen3.8-Max",
+      "source": "https://commandcode.ai/docs/plans/go",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 7.0,
+      "rates": {
+        "input": 2.0,
+        "output": 6.0,
+        "cache": 0.25,
+        "cacheWrite": 2.5
+      }
+    },
+    {
+      "plan": "command_code_go",
+      "model": "qwen3.8-max-0902",
+      "endpoint": "Qwen/Qwen3.8-Max-0902",
+      "source": "https://commandcode.ai/docs/plans/go",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 7.0,
+      "rates": {
+        "input": 2.0,
+        "output": 6.0,
+        "cache": 0.25
+      }
+    },
+    {
+      "plan": "command_code_go",
+      "model": "ling-3.1-flash-1019",
+      "endpoint": "inclusionai/ling-3.1-flash-1019",
+      "source": "https://commandcode.ai/docs/plans/go",
+      "identitySource": "https://x.com/CommandCodeAI/status/2117690129267695746",
+      "monthlyCreditsUsd": 6.0,
+      "rates": {
+        "input": 0.3,
+        "output": 0.9,
+        "cache": 0.06
+      }
+    },
+    {
+      "plan": "command_code_go",
+      "model": "kimi-k3.1-pro",
+      "endpoint": "moonshotai/Kimi-K3.1-Pro",
+      "source": "https://commandcode.ai/docs/plans/go",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 6.0,
+      "rates": {
+        "input": 2.0,
+        "output": 10.0,
+        "cache": 0.2
+      }
+    },
+    {
+      "plan": "command_code_go",
+      "model": "qwen3.8-omni-flash",
+      "endpoint": "Qwen/Qwen3.8-Omni-Flash",
+      "source": "https://commandcode.ai/docs/plans/go",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 6.0,
+      "rates": {
+        "input": 0.15,
+        "output": 0.47,
+        "cache": 0.016
+      }
+    },
+    {
+      "plan": "command_code_go",
+      "model": "hy4-preview",
+      "endpoint": "tencent/hy4-preview",
+      "source": "https://commandcode.ai/docs/plans/go",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 6.0,
+      "rates": {
+        "input": 0.834,
+        "output": 2.501,
+        "cache": 0.042
+      }
+    },
+    {
+      "plan": "command_code_go",
+      "model": "minimax-m3.1-flash",
+      "endpoint": "minimax/minimax-m3.1-flash",
+      "source": "https://commandcode.ai/docs/plans/go",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 6.0,
+      "rates": {
+        "input": 0.15,
+        "output": 0.6,
+        "cache": 0.015
+      }
+    },
+    {
+      "plan": "command_code_go",
+      "model": "ornith-1.5-122b",
+      "endpoint": "ornith/ornith-1.5-122b",
+      "source": "https://commandcode.ai/docs/plans/go",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 6.0,
+      "rates": {
+        "input": 0.16,
+        "output": 0.64,
+        "cache": 0.02
+      }
+    },
+    {
+      "plan": "command_code_go",
+      "model": "qwen3.8-flash",
+      "endpoint": "Qwen/Qwen3.8-Flash",
+      "source": "https://commandcode.ai/docs/plans/go",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 6.0,
+      "rates": {
+        "input": 0.16,
+        "output": 0.47,
+        "cache": 0.016
+      }
+    },
+    {
+      "plan": "command_code_go",
+      "model": "glm-5.3-flashx",
+      "endpoint": "z-ai/glm-5.3-flashx",
+      "source": "https://commandcode.ai/docs/plans/go",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 6.0,
+      "rates": {
+        "input": 0.37,
+        "output": 1.25,
+        "cache": 0.075
+      }
+    },
+    {
+      "plan": "command_code_go",
+      "model": "muse-spark-1.3-contributor",
+      "endpoint": "meta/muse-spark-1.3-contributor",
+      "source": "https://commandcode.ai/docs/plans/go",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 6.0,
+      "rates": {
+        "input": 0.1,
+        "output": 0.2,
+        "cache": 0.002
+      }
+    },
+    {
+      "plan": "command_code_go",
+      "model": "muse-spark-open",
+      "endpoint": "meta/muse-spark-open",
+      "source": "https://commandcode.ai/docs/plans/go",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 6.0,
+      "rates": {
+        "input": 1.25,
+        "output": 4.25,
+        "cache": 0.15
+      }
+    },
+    {
+      "plan": "command_code_go",
+      "model": "mimo-v2.6-pro",
+      "endpoint": "xiaomi/mimo-v2.6-pro",
+      "source": "https://commandcode.ai/docs/plans/go",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 6.0,
+      "rates": {
+        "input": 0.435,
+        "output": 0.87,
+        "cache": 0.0036
+      }
+    },
+    {
+      "plan": "command_code_go",
+      "model": "mimo-v2.6-flash",
+      "endpoint": "xiaomi/mimo-v2.6-flash",
+      "source": "https://commandcode.ai/docs/plans/go",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 6.0,
+      "rates": {
+        "input": 0.14,
+        "output": 0.28,
+        "cache": 0.0028
+      }
+    },
+    {
+      "plan": "command_code_go",
+      "model": "step-5-preview",
+      "endpoint": "stepfun/Step-5-Preview",
+      "source": "https://commandcode.ai/docs/plans/go",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 6.0,
+      "rates": {
+        "input": 1.0,
+        "output": 2.7,
+        "cache": 0.05
+      }
+    },
+    {
+      "plan": "command_code_go",
+      "model": "nemotron-3.5-super-vl",
+      "endpoint": "nvidia/nemotron-3.5-super-vl",
+      "source": "https://commandcode.ai/docs/plans/go",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 6.0,
+      "rates": {
+        "input": 0.2,
+        "output": 0.5,
+        "cache": 0.04
+      }
+    },
+    {
+      "plan": "command_code_go",
+      "model": "deepseek-v4.1-flash-1017",
+      "endpoint": "deepseek-v4.1-flash",
+      "source": "https://commandcode.ai/docs/plans/go",
+      "identitySource": "https://x.com/CommandCodeAI/status/2116329543921475861",
+      "monthlyCreditsUsd": 10.0,
+      "rates": {
+        "input": 0.3,
+        "output": 1.2,
+        "cache": 0.006
+      }
+    },
+    {
+      "plan": "command_code_go",
+      "model": "deepseek-v4.1-flash-1017",
+      "endpoint": "deepseek-v4.1-flash",
+      "source": "https://commandcode.ai/docs/plans/go",
+      "identitySource": "https://x.com/CommandCodeAI/status/2116329543921475861",
+      "monthlyCreditsUsd": 10.0,
+      "rates": {
+        "input": 0.15,
+        "output": 0.6,
+        "cache": 0.003
+      }
+    },
+    {
+      "plan": "command_code_goat",
+      "model": "glm-5.3-flash",
+      "endpoint": "z-ai/glm-5.3-flash",
+      "source": "https://commandcode.ai/docs/plans/goat",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 100.0,
+      "rates": {
+        "input": 0.15,
+        "output": 0.5,
+        "cache": 0.03
+      }
+    },
+    {
+      "plan": "command_code_goat",
+      "model": "qwen3.8-max",
+      "endpoint": "Qwen/Qwen3.8-Max",
+      "source": "https://commandcode.ai/docs/plans/goat",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 20.0,
+      "rates": {
+        "input": 2.0,
+        "output": 6.0,
+        "cache": 0.25,
+        "cacheWrite": 2.5
+      }
+    },
+    {
+      "plan": "command_code_goat",
+      "model": "qwen3.8-omni-flash",
+      "endpoint": "Qwen/Qwen3.8-Omni-Flash",
+      "source": "https://commandcode.ai/docs/plans/goat",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 20.0,
+      "rates": {
+        "input": 0.15,
+        "output": 0.47,
+        "cache": 0.016
+      }
+    },
+    {
+      "plan": "command_code_goat",
+      "model": "qwen3.8-max-prime",
+      "endpoint": "Qwen/Qwen3.8-Max-Prime",
+      "source": "https://commandcode.ai/docs/plans/goat",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 20.0,
+      "rates": {
+        "input": 4.0,
+        "output": 12.0,
+        "cache": 0.5,
+        "cacheWrite": 5.0
+      }
+    },
+    {
+      "plan": "command_code_goat",
+      "model": "qwen3.8-max-0902",
+      "endpoint": "Qwen/Qwen3.8-Max-0902",
+      "source": "https://commandcode.ai/docs/plans/goat",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 20.0,
+      "rates": {
+        "input": 2.0,
+        "output": 6.0,
+        "cache": 0.25
+      }
+    },
+    {
+      "plan": "command_code_goat",
+      "model": "hy4-preview",
+      "endpoint": "tencent/hy4-preview",
+      "source": "https://commandcode.ai/docs/plans/goat",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 20.0,
+      "rates": {
+        "input": 0.834,
+        "output": 2.501,
+        "cache": 0.042
+      }
+    },
+    {
+      "plan": "command_code_goat",
+      "model": "ornith-1.5-122b",
+      "endpoint": "ornith/ornith-1.5-122b",
+      "source": "https://commandcode.ai/docs/plans/goat",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 20.0,
+      "rates": {
+        "input": 0.16,
+        "output": 0.64,
+        "cache": 0.02
+      }
+    },
+    {
+      "plan": "command_code_goat",
+      "model": "qwen3.8-flash",
+      "endpoint": "Qwen/Qwen3.8-Flash",
+      "source": "https://commandcode.ai/docs/plans/goat",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 20.0,
+      "rates": {
+        "input": 0.16,
+        "output": 0.47,
+        "cache": 0.016
+      }
+    },
+    {
+      "plan": "command_code_goat",
+      "model": "glm-5.3-flashx",
+      "endpoint": "z-ai/glm-5.3-flashx",
+      "source": "https://commandcode.ai/docs/plans/goat",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 20.0,
+      "rates": {
+        "input": 0.37,
+        "output": 1.25,
+        "cache": 0.075
+      }
+    },
+    {
+      "plan": "command_code_goat",
+      "model": "glm-5.3",
+      "endpoint": "zai-org/GLM-5.3",
+      "source": "https://commandcode.ai/docs/plans/goat",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 20.0,
+      "rates": {
+        "input": 1.4,
+        "output": 4.4,
+        "cache": 0.26
+      }
+    },
+    {
+      "plan": "command_code_goat",
+      "model": "muse-spark-1.3",
+      "endpoint": "meta/muse-spark-1.3",
+      "source": "https://commandcode.ai/docs/plans/goat",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 20.0,
+      "rates": {
+        "input": 1.25,
+        "output": 4.25,
+        "cache": 0.15
+      }
+    },
+    {
+      "plan": "command_code_goat",
+      "model": "muse-spark-1.3-contributor",
+      "endpoint": "meta/muse-spark-1.3-contributor",
+      "source": "https://commandcode.ai/docs/plans/goat",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 20.0,
+      "rates": {
+        "input": 0.1,
+        "output": 0.2,
+        "cache": 0.002
+      }
+    },
+    {
+      "plan": "command_code_goat",
+      "model": "mimo-v2.6-pro",
+      "endpoint": "xiaomi/mimo-v2.6-pro",
+      "source": "https://commandcode.ai/docs/plans/goat",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 20.0,
+      "rates": {
+        "input": 0.435,
+        "output": 0.87,
+        "cache": 0.0036
+      }
+    },
+    {
+      "plan": "command_code_goat",
+      "model": "mimo-v2.6-flash",
+      "endpoint": "xiaomi/mimo-v2.6-flash",
+      "source": "https://commandcode.ai/docs/plans/goat",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 20.0,
+      "rates": {
+        "input": 0.14,
+        "output": 0.28,
+        "cache": 0.0028
+      }
+    },
+    {
+      "plan": "command_code_goat",
+      "model": "step-5-preview",
+      "endpoint": "stepfun/Step-5-Preview",
+      "source": "https://commandcode.ai/docs/plans/goat",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 20.0,
+      "rates": {
+        "input": 1.0,
+        "output": 2.7,
+        "cache": 0.05
+      }
+    },
+    {
+      "plan": "command_code_pro",
+      "model": "glm-5.3-flash",
+      "endpoint": "z-ai/glm-5.3-flash",
+      "source": "https://commandcode.ai/docs/plans/pro",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 110.0,
+      "rates": {
+        "input": 0.15,
+        "output": 0.5,
+        "cache": 0.03
+      }
+    },
+    {
+      "plan": "command_code_pro",
+      "model": "ling-3.1-flash-1019",
+      "endpoint": "inclusionai/ling-3.1-flash-1019",
+      "source": "https://commandcode.ai/docs/plans/pro",
+      "identitySource": "https://x.com/CommandCodeAI/status/2117690129267695746",
+      "monthlyCreditsUsd": 110.0,
+      "rates": {
+        "input": 0.3,
+        "output": 0.9,
+        "cache": 0.06
+      }
+    },
+    {
+      "plan": "command_code_pro",
+      "model": "qwen3.8-max",
+      "endpoint": "Qwen/Qwen3.8-Max",
+      "source": "https://commandcode.ai/docs/plans/pro",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 30.0,
+      "rates": {
+        "input": 2.0,
+        "output": 6.0,
+        "cache": 0.25,
+        "cacheWrite": 2.5
+      }
+    },
+    {
+      "plan": "command_code_pro",
+      "model": "gpt-6.1-terra",
+      "endpoint": "gpt-6.1-terra",
+      "source": "https://commandcode.ai/docs/plans/pro",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 20.0,
+      "rates": {
+        "input": 1.0,
+        "output": 5.0,
+        "cache": 0.05,
+        "cacheWrite": 1.25
+      }
+    },
+    {
+      "plan": "command_code_pro",
+      "model": "gpt-6.1-terra",
+      "endpoint": "gpt-6.1-terra",
+      "source": "https://commandcode.ai/docs/plans/pro",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 20.0,
+      "rates": {
+        "input": 2.0,
+        "output": 7.5,
+        "cache": 0.1,
+        "cacheWrite": 2.5
+      }
+    },
+    {
+      "plan": "command_code_pro",
+      "model": "gemini-4-argon",
+      "endpoint": "google/gemini-4-argon",
+      "source": "https://commandcode.ai/docs/plans/pro",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 20.0,
+      "rates": {
+        "input": 2.0,
+        "output": 10.0,
+        "cache": 0.1
+      }
+    },
+    {
+      "plan": "command_code_pro",
+      "model": "kimi-k3.1-pro",
+      "endpoint": "moonshotai/Kimi-K3.1-Pro",
+      "source": "https://commandcode.ai/docs/plans/pro",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 30.0,
+      "rates": {
+        "input": 2.0,
+        "output": 10.0,
+        "cache": 0.2
+      }
+    },
+    {
+      "plan": "command_code_pro",
+      "model": "qwen3.8-omni-flash",
+      "endpoint": "Qwen/Qwen3.8-Omni-Flash",
+      "source": "https://commandcode.ai/docs/plans/pro",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 30.0,
+      "rates": {
+        "input": 0.15,
+        "output": 0.47,
+        "cache": 0.016
+      }
+    },
+    {
+      "plan": "command_code_pro",
+      "model": "qwen3.8-max-prime",
+      "endpoint": "Qwen/Qwen3.8-Max-Prime",
+      "source": "https://commandcode.ai/docs/plans/pro",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 30.0,
+      "rates": {
+        "input": 4.0,
+        "output": 12.0,
+        "cache": 0.5,
+        "cacheWrite": 5.0
+      }
+    },
+    {
+      "plan": "command_code_pro",
+      "model": "qwen3.8-max-0902",
+      "endpoint": "Qwen/Qwen3.8-Max-0902",
+      "source": "https://commandcode.ai/docs/plans/pro",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 30.0,
+      "rates": {
+        "input": 2.0,
+        "output": 6.0,
+        "cache": 0.25
+      }
+    },
+    {
+      "plan": "command_code_pro",
+      "model": "hy4-preview",
+      "endpoint": "tencent/hy4-preview",
+      "source": "https://commandcode.ai/docs/plans/pro",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 30.0,
+      "rates": {
+        "input": 0.834,
+        "output": 2.501,
+        "cache": 0.042
+      }
+    },
+    {
+      "plan": "command_code_pro",
+      "model": "minimax-m3.1-flash",
+      "endpoint": "minimax/minimax-m3.1-flash",
+      "source": "https://commandcode.ai/docs/plans/pro",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 30.0,
+      "rates": {
+        "input": 0.15,
+        "output": 0.6,
+        "cache": 0.015
+      }
+    },
+    {
+      "plan": "command_code_pro",
+      "model": "ornith-1.5-122b",
+      "endpoint": "ornith/ornith-1.5-122b",
+      "source": "https://commandcode.ai/docs/plans/pro",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 30.0,
+      "rates": {
+        "input": 0.16,
+        "output": 0.64,
+        "cache": 0.02
+      }
+    },
+    {
+      "plan": "command_code_pro",
+      "model": "qwen3.8-flash",
+      "endpoint": "Qwen/Qwen3.8-Flash",
+      "source": "https://commandcode.ai/docs/plans/pro",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 30.0,
+      "rates": {
+        "input": 0.16,
+        "output": 0.47,
+        "cache": 0.016
+      }
+    },
+    {
+      "plan": "command_code_pro",
+      "model": "glm-5.3-flashx",
+      "endpoint": "z-ai/glm-5.3-flashx",
+      "source": "https://commandcode.ai/docs/plans/pro",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 30.0,
+      "rates": {
+        "input": 0.37,
+        "output": 1.25,
+        "cache": 0.075
+      }
+    },
+    {
+      "plan": "command_code_pro",
+      "model": "glm-5.3",
+      "endpoint": "zai-org/GLM-5.3",
+      "source": "https://commandcode.ai/docs/plans/pro",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 30.0,
+      "rates": {
+        "input": 1.4,
+        "output": 4.4,
+        "cache": 0.26
+      }
+    },
+    {
+      "plan": "command_code_pro",
+      "model": "muse-spark-1.3",
+      "endpoint": "meta/muse-spark-1.3",
+      "source": "https://commandcode.ai/docs/plans/pro",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 30.0,
+      "rates": {
+        "input": 1.25,
+        "output": 4.25,
+        "cache": 0.15
+      }
+    },
+    {
+      "plan": "command_code_pro",
+      "model": "muse-spark-1.3-contributor",
+      "endpoint": "meta/muse-spark-1.3-contributor",
+      "source": "https://commandcode.ai/docs/plans/pro",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 30.0,
+      "rates": {
+        "input": 0.1,
+        "output": 0.2,
+        "cache": 0.002
+      }
+    },
+    {
+      "plan": "command_code_pro",
+      "model": "muse-spark-open",
+      "endpoint": "meta/muse-spark-open",
+      "source": "https://commandcode.ai/docs/plans/pro",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 30.0,
+      "rates": {
+        "input": 1.25,
+        "output": 4.25,
+        "cache": 0.15
+      }
+    },
+    {
+      "plan": "command_code_pro",
+      "model": "mimo-v2.6-pro",
+      "endpoint": "xiaomi/mimo-v2.6-pro",
+      "source": "https://commandcode.ai/docs/plans/pro",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 30.0,
+      "rates": {
+        "input": 0.435,
+        "output": 0.87,
+        "cache": 0.0036
+      }
+    },
+    {
+      "plan": "command_code_pro",
+      "model": "mimo-v2.6-flash",
+      "endpoint": "xiaomi/mimo-v2.6-flash",
+      "source": "https://commandcode.ai/docs/plans/pro",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 30.0,
+      "rates": {
+        "input": 0.14,
+        "output": 0.28,
+        "cache": 0.0028
+      }
+    },
+    {
+      "plan": "command_code_pro",
+      "model": "step-5-preview",
+      "endpoint": "stepfun/Step-5-Preview",
+      "source": "https://commandcode.ai/docs/plans/pro",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 30.0,
+      "rates": {
+        "input": 1.0,
+        "output": 2.7,
+        "cache": 0.05
+      }
+    },
+    {
+      "plan": "command_code_pro",
+      "model": "nemotron-3.5-super-vl",
+      "endpoint": "nvidia/nemotron-3.5-super-vl",
+      "source": "https://commandcode.ai/docs/plans/pro",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 30.0,
+      "rates": {
+        "input": 0.2,
+        "output": 0.5,
+        "cache": 0.04
+      }
+    },
+    {
+      "plan": "command_code_pro",
+      "model": "deepseek-v4.1-flash-1017",
+      "endpoint": "deepseek-v4.1-flash",
+      "source": "https://commandcode.ai/docs/plans/pro",
+      "identitySource": "https://x.com/CommandCodeAI/status/2116329543921475861",
+      "monthlyCreditsUsd": 110.0,
+      "rates": {
+        "input": 0.3,
+        "output": 1.2,
+        "cache": 0.006
+      }
+    },
+    {
+      "plan": "command_code_pro",
+      "model": "deepseek-v4.1-flash-1017",
+      "endpoint": "deepseek-v4.1-flash",
+      "source": "https://commandcode.ai/docs/plans/pro",
+      "identitySource": "https://x.com/CommandCodeAI/status/2116329543921475861",
+      "monthlyCreditsUsd": 110.0,
+      "rates": {
+        "input": 0.15,
+        "output": 0.6,
+        "cache": 0.003
+      }
+    },
+    {
+      "plan": "command_code_max_10",
+      "model": "hy4-preview",
+      "endpoint": "tencent/hy4-preview",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 150.0,
+      "rates": {
+        "input": 0.834,
+        "output": 2.501,
+        "cache": 0.042
+      }
+    },
+    {
+      "plan": "command_code_max_10",
+      "model": "kimi-k3.1-pro",
+      "endpoint": "moonshotai/Kimi-K3.1-Pro",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 150.0,
+      "rates": {
+        "input": 2.0,
+        "output": 10.0,
+        "cache": 0.2
+      }
+    },
+    {
+      "plan": "command_code_max_10",
+      "model": "glm-5.3-flash",
+      "endpoint": "z-ai/glm-5.3-flash",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 150.0,
+      "rates": {
+        "input": 0.15,
+        "output": 0.5,
+        "cache": 0.03
+      }
+    },
+    {
+      "plan": "command_code_max_10",
+      "model": "glm-5.3-flashx",
+      "endpoint": "z-ai/glm-5.3-flashx",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 150.0,
+      "rates": {
+        "input": 0.37,
+        "output": 1.25,
+        "cache": 0.075
+      }
+    },
+    {
+      "plan": "command_code_max_10",
+      "model": "glm-5.3",
+      "endpoint": "zai-org/GLM-5.3",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 150.0,
+      "rates": {
+        "input": 1.4,
+        "output": 4.4,
+        "cache": 0.26
+      }
+    },
+    {
+      "plan": "command_code_max_10",
+      "model": "minimax-m3.1-flash",
+      "endpoint": "minimax/minimax-m3.1-flash",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 150.0,
+      "rates": {
+        "input": 0.15,
+        "output": 0.6,
+        "cache": 0.015
+      }
+    },
+    {
+      "plan": "command_code_max_10",
+      "model": "ornith-1.5-122b",
+      "endpoint": "ornith/ornith-1.5-122b",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 150.0,
+      "rates": {
+        "input": 0.16,
+        "output": 0.64,
+        "cache": 0.02
+      }
+    },
+    {
+      "plan": "command_code_max_10",
+      "model": "qwen3.8-omni-flash",
+      "endpoint": "Qwen/Qwen3.8-Omni-Flash",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 150.0,
+      "rates": {
+        "input": 0.15,
+        "output": 0.47,
+        "cache": 0.016
+      }
+    },
+    {
+      "plan": "command_code_max_10",
+      "model": "qwen3.8-max-prime",
+      "endpoint": "Qwen/Qwen3.8-Max-Prime",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 150.0,
+      "rates": {
+        "input": 4.0,
+        "output": 12.0,
+        "cache": 0.5,
+        "cacheWrite": 5.0
+      }
+    },
+    {
+      "plan": "command_code_max_10",
+      "model": "qwen3.8-max-0902",
+      "endpoint": "Qwen/Qwen3.8-Max-0902",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 150.0,
+      "rates": {
+        "input": 2.0,
+        "output": 6.0,
+        "cache": 0.25
+      }
+    },
+    {
+      "plan": "command_code_max_10",
+      "model": "qwen3.8-max",
+      "endpoint": "Qwen/Qwen3.8-Max",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 150.0,
+      "rates": {
+        "input": 2.0,
+        "output": 6.0,
+        "cache": 0.25,
+        "cacheWrite": 2.5
+      }
+    },
+    {
+      "plan": "command_code_max_10",
+      "model": "qwen3.8-flash",
+      "endpoint": "Qwen/Qwen3.8-Flash",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 150.0,
+      "rates": {
+        "input": 0.16,
+        "output": 0.47,
+        "cache": 0.016
+      }
+    },
+    {
+      "plan": "command_code_max_10",
+      "model": "ling-3.1-flash-1019",
+      "endpoint": "inclusionai/ling-3.1-flash-1019",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://x.com/CommandCodeAI/status/2117690129267695746",
+      "monthlyCreditsUsd": 150.0,
+      "rates": {
+        "input": 0.3,
+        "output": 0.9,
+        "cache": 0.06
+      }
+    },
+    {
+      "plan": "command_code_max_10",
+      "model": "step-5-preview",
+      "endpoint": "stepfun/Step-5-Preview",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 150.0,
+      "rates": {
+        "input": 1.0,
+        "output": 2.7,
+        "cache": 0.05
+      }
+    },
+    {
+      "plan": "command_code_max_10",
+      "model": "mimo-v2.6-pro",
+      "endpoint": "xiaomi/mimo-v2.6-pro",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 150.0,
+      "rates": {
+        "input": 0.435,
+        "output": 0.87,
+        "cache": 0.0036
+      }
+    },
+    {
+      "plan": "command_code_max_10",
+      "model": "mimo-v2.6-flash",
+      "endpoint": "xiaomi/mimo-v2.6-flash",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 150.0,
+      "rates": {
+        "input": 0.14,
+        "output": 0.28,
+        "cache": 0.0028
+      }
+    },
+    {
+      "plan": "command_code_max_10",
+      "model": "nemotron-3.5-super-vl",
+      "endpoint": "nvidia/nemotron-3.5-super-vl",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 150.0,
+      "rates": {
+        "input": 0.2,
+        "output": 0.5,
+        "cache": 0.04
+      }
+    },
+    {
+      "plan": "command_code_max_10",
+      "model": "gpt-6.1-sol",
+      "endpoint": "gpt-6.1-sol",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 100.0,
+      "rates": {
+        "input": 2.0,
+        "output": 10.0,
+        "cache": 0.1,
+        "cacheWrite": 2.5
+      }
+    },
+    {
+      "plan": "command_code_max_10",
+      "model": "gpt-6.1-sol",
+      "endpoint": "gpt-6.1-sol",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 100.0,
+      "rates": {
+        "input": 4.0,
+        "output": 15.0,
+        "cache": 0.2,
+        "cacheWrite": 5.0
+      }
+    },
+    {
+      "plan": "command_code_max_10",
+      "model": "gpt-6.1-terra",
+      "endpoint": "gpt-6.1-terra",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 100.0,
+      "rates": {
+        "input": 1.0,
+        "output": 5.0,
+        "cache": 0.05,
+        "cacheWrite": 1.25
+      }
+    },
+    {
+      "plan": "command_code_max_10",
+      "model": "gpt-6.1-terra",
+      "endpoint": "gpt-6.1-terra",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 100.0,
+      "rates": {
+        "input": 2.0,
+        "output": 7.5,
+        "cache": 0.1,
+        "cacheWrite": 2.5
+      }
+    },
+    {
+      "plan": "command_code_max_10",
+      "model": "gemini-4-argon",
+      "endpoint": "google/gemini-4-argon",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 100.0,
+      "rates": {
+        "input": 2.0,
+        "output": 10.0,
+        "cache": 0.1
+      }
+    },
+    {
+      "plan": "command_code_max_10",
+      "model": "muse-wonder",
+      "endpoint": "meta/muse-wonder-1.0",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 100.0,
+      "rates": {
+        "input": 4.0,
+        "output": 20.0,
+        "cache": 0.2
+      }
+    },
+    {
+      "plan": "command_code_max_10",
+      "model": "muse-spark-1.3",
+      "endpoint": "meta/muse-spark-1.3",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 150.0,
+      "rates": {
+        "input": 1.25,
+        "output": 4.25,
+        "cache": 0.15
+      }
+    },
+    {
+      "plan": "command_code_max_10",
+      "model": "muse-spark-1.3-contributor",
+      "endpoint": "meta/muse-spark-1.3-contributor",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 150.0,
+      "rates": {
+        "input": 0.1,
+        "output": 0.2,
+        "cache": 0.002
+      }
+    },
+    {
+      "plan": "command_code_max_10",
+      "model": "muse-spark-open",
+      "endpoint": "meta/muse-spark-open",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 150.0,
+      "rates": {
+        "input": 1.25,
+        "output": 4.25,
+        "cache": 0.15
+      }
+    },
+    {
+      "plan": "command_code_max_10",
+      "model": "deepseek-v4.1-flash-1017",
+      "endpoint": "deepseek-v4.1-flash",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://x.com/CommandCodeAI/status/2116329543921475861",
+      "monthlyCreditsUsd": 150.0,
+      "rates": {
+        "input": 0.3,
+        "output": 1.2,
+        "cache": 0.006
+      }
+    },
+    {
+      "plan": "command_code_max_10",
+      "model": "deepseek-v4.1-flash-1017",
+      "endpoint": "deepseek-v4.1-flash",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://x.com/CommandCodeAI/status/2116329543921475861",
+      "monthlyCreditsUsd": 150.0,
+      "rates": {
+        "input": 0.15,
+        "output": 0.6,
+        "cache": 0.003
+      }
+    },
+    {
+      "plan": "command_code_max_20",
+      "model": "hy4-preview",
+      "endpoint": "tencent/hy4-preview",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 300.0,
+      "rates": {
+        "input": 0.834,
+        "output": 2.501,
+        "cache": 0.042
+      }
+    },
+    {
+      "plan": "command_code_max_20",
+      "model": "kimi-k3.1-pro",
+      "endpoint": "moonshotai/Kimi-K3.1-Pro",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 300.0,
+      "rates": {
+        "input": 2.0,
+        "output": 10.0,
+        "cache": 0.2
+      }
+    },
+    {
+      "plan": "command_code_max_20",
+      "model": "glm-5.3-flash",
+      "endpoint": "z-ai/glm-5.3-flash",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 300.0,
+      "rates": {
+        "input": 0.15,
+        "output": 0.5,
+        "cache": 0.03
+      }
+    },
+    {
+      "plan": "command_code_max_20",
+      "model": "glm-5.3-flashx",
+      "endpoint": "z-ai/glm-5.3-flashx",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 300.0,
+      "rates": {
+        "input": 0.37,
+        "output": 1.25,
+        "cache": 0.075
+      }
+    },
+    {
+      "plan": "command_code_max_20",
+      "model": "glm-5.3",
+      "endpoint": "zai-org/GLM-5.3",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 300.0,
+      "rates": {
+        "input": 1.4,
+        "output": 4.4,
+        "cache": 0.26
+      }
+    },
+    {
+      "plan": "command_code_max_20",
+      "model": "minimax-m3.1-flash",
+      "endpoint": "minimax/minimax-m3.1-flash",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 300.0,
+      "rates": {
+        "input": 0.15,
+        "output": 0.6,
+        "cache": 0.015
+      }
+    },
+    {
+      "plan": "command_code_max_20",
+      "model": "ornith-1.5-122b",
+      "endpoint": "ornith/ornith-1.5-122b",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 300.0,
+      "rates": {
+        "input": 0.16,
+        "output": 0.64,
+        "cache": 0.02
+      }
+    },
+    {
+      "plan": "command_code_max_20",
+      "model": "qwen3.8-omni-flash",
+      "endpoint": "Qwen/Qwen3.8-Omni-Flash",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 300.0,
+      "rates": {
+        "input": 0.15,
+        "output": 0.47,
+        "cache": 0.016
+      }
+    },
+    {
+      "plan": "command_code_max_20",
+      "model": "qwen3.8-max-prime",
+      "endpoint": "Qwen/Qwen3.8-Max-Prime",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 300.0,
+      "rates": {
+        "input": 4.0,
+        "output": 12.0,
+        "cache": 0.5,
+        "cacheWrite": 5.0
+      }
+    },
+    {
+      "plan": "command_code_max_20",
+      "model": "qwen3.8-max-0902",
+      "endpoint": "Qwen/Qwen3.8-Max-0902",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 300.0,
+      "rates": {
+        "input": 2.0,
+        "output": 6.0,
+        "cache": 0.25
+      }
+    },
+    {
+      "plan": "command_code_max_20",
+      "model": "qwen3.8-max",
+      "endpoint": "Qwen/Qwen3.8-Max",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 300.0,
+      "rates": {
+        "input": 2.0,
+        "output": 6.0,
+        "cache": 0.25,
+        "cacheWrite": 2.5
+      }
+    },
+    {
+      "plan": "command_code_max_20",
+      "model": "qwen3.8-flash",
+      "endpoint": "Qwen/Qwen3.8-Flash",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 300.0,
+      "rates": {
+        "input": 0.16,
+        "output": 0.47,
+        "cache": 0.016
+      }
+    },
+    {
+      "plan": "command_code_max_20",
+      "model": "ling-3.1-flash-1019",
+      "endpoint": "inclusionai/ling-3.1-flash-1019",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://x.com/CommandCodeAI/status/2117690129267695746",
+      "monthlyCreditsUsd": 300.0,
+      "rates": {
+        "input": 0.3,
+        "output": 0.9,
+        "cache": 0.06
+      }
+    },
+    {
+      "plan": "command_code_max_20",
+      "model": "step-5-preview",
+      "endpoint": "stepfun/Step-5-Preview",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 300.0,
+      "rates": {
+        "input": 1.0,
+        "output": 2.7,
+        "cache": 0.05
+      }
+    },
+    {
+      "plan": "command_code_max_20",
+      "model": "mimo-v2.6-pro",
+      "endpoint": "xiaomi/mimo-v2.6-pro",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 300.0,
+      "rates": {
+        "input": 0.435,
+        "output": 0.87,
+        "cache": 0.0036
+      }
+    },
+    {
+      "plan": "command_code_max_20",
+      "model": "mimo-v2.6-flash",
+      "endpoint": "xiaomi/mimo-v2.6-flash",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 300.0,
+      "rates": {
+        "input": 0.14,
+        "output": 0.28,
+        "cache": 0.0028
+      }
+    },
+    {
+      "plan": "command_code_max_20",
+      "model": "nemotron-3.5-super-vl",
+      "endpoint": "nvidia/nemotron-3.5-super-vl",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 300.0,
+      "rates": {
+        "input": 0.2,
+        "output": 0.5,
+        "cache": 0.04
+      }
+    },
+    {
+      "plan": "command_code_max_20",
+      "model": "gpt-6.1-sol",
+      "endpoint": "gpt-6.1-sol",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 200.0,
+      "rates": {
+        "input": 2.0,
+        "output": 10.0,
+        "cache": 0.1,
+        "cacheWrite": 2.5
+      }
+    },
+    {
+      "plan": "command_code_max_20",
+      "model": "gpt-6.1-sol",
+      "endpoint": "gpt-6.1-sol",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 200.0,
+      "rates": {
+        "input": 4.0,
+        "output": 15.0,
+        "cache": 0.2,
+        "cacheWrite": 5.0
+      }
+    },
+    {
+      "plan": "command_code_max_20",
+      "model": "gpt-6.1-terra",
+      "endpoint": "gpt-6.1-terra",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 200.0,
+      "rates": {
+        "input": 1.0,
+        "output": 5.0,
+        "cache": 0.05,
+        "cacheWrite": 1.25
+      }
+    },
+    {
+      "plan": "command_code_max_20",
+      "model": "gpt-6.1-terra",
+      "endpoint": "gpt-6.1-terra",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 200.0,
+      "rates": {
+        "input": 2.0,
+        "output": 7.5,
+        "cache": 0.1,
+        "cacheWrite": 2.5
+      }
+    },
+    {
+      "plan": "command_code_max_20",
+      "model": "gemini-4-argon",
+      "endpoint": "google/gemini-4-argon",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 200.0,
+      "rates": {
+        "input": 2.0,
+        "output": 10.0,
+        "cache": 0.1
+      }
+    },
+    {
+      "plan": "command_code_max_20",
+      "model": "muse-wonder",
+      "endpoint": "meta/muse-wonder-1.0",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 200.0,
+      "rates": {
+        "input": 4.0,
+        "output": 20.0,
+        "cache": 0.2
+      }
+    },
+    {
+      "plan": "command_code_max_20",
+      "model": "muse-spark-1.3",
+      "endpoint": "meta/muse-spark-1.3",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 300.0,
+      "rates": {
+        "input": 1.25,
+        "output": 4.25,
+        "cache": 0.15
+      }
+    },
+    {
+      "plan": "command_code_max_20",
+      "model": "muse-spark-1.3-contributor",
+      "endpoint": "meta/muse-spark-1.3-contributor",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 300.0,
+      "rates": {
+        "input": 0.1,
+        "output": 0.2,
+        "cache": 0.002
+      }
+    },
+    {
+      "plan": "command_code_max_20",
+      "model": "muse-spark-open",
+      "endpoint": "meta/muse-spark-open",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/changelog",
+      "monthlyCreditsUsd": 300.0,
+      "rates": {
+        "input": 1.25,
+        "output": 4.25,
+        "cache": 0.15
+      }
+    },
+    {
+      "plan": "command_code_max_20",
+      "model": "deepseek-v4.1-flash-1017",
+      "endpoint": "deepseek-v4.1-flash",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://x.com/CommandCodeAI/status/2116329543921475861",
+      "monthlyCreditsUsd": 300.0,
+      "rates": {
+        "input": 0.3,
+        "output": 1.2,
+        "cache": 0.006
+      }
+    },
+    {
+      "plan": "command_code_max_20",
+      "model": "deepseek-v4.1-flash-1017",
+      "endpoint": "deepseek-v4.1-flash",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://x.com/CommandCodeAI/status/2116329543921475861",
+      "monthlyCreditsUsd": 300.0,
+      "rates": {
+        "input": 0.15,
+        "output": 0.6,
+        "cache": 0.003
+      }
+    },
+    {
+      "plan": "opencode_go",
+      "model": "glm-5.3-flash",
+      "endpoint": "glm-5.3-flash",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://opencode.ai/v2/docs/console/go/",
+      "monthlyCreditsUsd": 60.0,
+      "rates": {
+        "input": 0.15,
+        "output": 0.5,
+        "cache": 0.03
+      }
+    },
+    {
+      "plan": "opencode_go",
+      "model": "glm-5.3",
+      "endpoint": "glm-5.3",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://opencode.ai/v2/docs/console/go/",
+      "monthlyCreditsUsd": 15.0,
+      "rates": {
+        "input": 1.4,
+        "output": 4.4,
+        "cache": 0.26
+      }
+    },
+    {
+      "plan": "opencode_go",
+      "model": "mimo-v2.6-flash",
+      "endpoint": "mimo-v2.6-flash",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://opencode.ai/v2/docs/console/go/",
+      "monthlyCreditsUsd": 60.0,
+      "rates": {
+        "input": 0.14,
+        "output": 0.28,
+        "cache": 0.0028
+      }
+    },
+    {
+      "plan": "opencode_go",
+      "model": "mimo-v2.6-pro",
+      "endpoint": "mimo-v2.6-pro",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://opencode.ai/v2/docs/console/go/",
+      "monthlyCreditsUsd": 15.0,
+      "rates": {
+        "input": 0.435,
+        "output": 0.87,
+        "cache": 0.003625
+      }
+    },
+    {
+      "plan": "opencode_go",
+      "model": "muse-spark-1.3-contributor",
+      "endpoint": "muse-spark-1.3-contributor",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://opencode.ai/v2/docs/console/go/",
+      "monthlyCreditsUsd": 60.0,
+      "rates": {
+        "input": 0.1,
+        "output": 0.2,
+        "cache": 0.002
+      }
+    },
+    {
+      "plan": "opencode_go",
+      "model": "qwen3.8-max",
+      "endpoint": "qwen3.8-max",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://opencode.ai/v2/docs/console/go/",
+      "monthlyCreditsUsd": 15.0,
+      "rates": {
+        "input": 2.0,
+        "output": 6.0,
+        "cache": 0.25,
+        "cacheWrite": 2.5
+      }
+    },
+    {
+      "plan": "opencode_go",
+      "model": "qwen3.8-flash",
+      "endpoint": "qwen3.8-flash",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://opencode.ai/v2/docs/console/go/",
+      "monthlyCreditsUsd": 30.0,
+      "rates": {
+        "input": 0.15,
+        "output": 0.47,
+        "cache": 0.016,
+        "cacheWrite": 0.2
+      }
+    },
+    {
+      "plan": "opencode_go",
+      "model": "hy4-preview",
+      "endpoint": "hy4-preview",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://opencode.ai/v2/docs/console/go/",
+      "monthlyCreditsUsd": 30.0,
+      "rates": {
+        "input": 0.834,
+        "output": 2.501,
+        "cache": 0.042
+      }
+    },
+    {
+      "plan": "opencode_go",
+      "model": "gemini-4-argon",
+      "endpoint": "gemini-4-argon",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://opencode.ai/v2/docs/console/go/",
+      "monthlyCreditsUsd": 30,
+      "rates": {
+        "input": 2,
+        "output": 10,
+        "cache": 0.1
+      }
+    },
+    {
+      "plan": "opencode_go_plus",
+      "model": "glm-5.3-flash",
+      "endpoint": "glm-5.3-flash",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://opencode.ai/v2/docs/console/go/",
+      "monthlyCreditsUsd": 180.0,
+      "rates": {
+        "input": 0.15,
+        "output": 0.5,
+        "cache": 0.03
+      }
+    },
+    {
+      "plan": "opencode_go_plus",
+      "model": "glm-5.3",
+      "endpoint": "glm-5.3",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://opencode.ai/v2/docs/console/go/",
+      "monthlyCreditsUsd": 120.0,
+      "rates": {
+        "input": 1.4,
+        "output": 4.4,
+        "cache": 0.26
+      }
+    },
+    {
+      "plan": "opencode_go_plus",
+      "model": "mimo-v2.6-flash",
+      "endpoint": "mimo-v2.6-flash",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://opencode.ai/v2/docs/console/go/",
+      "monthlyCreditsUsd": 120.0,
+      "rates": {
+        "input": 0.14,
+        "output": 0.28,
+        "cache": 0.0028
+      }
+    },
+    {
+      "plan": "opencode_go_plus",
+      "model": "mimo-v2.6-pro",
+      "endpoint": "mimo-v2.6-pro",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://opencode.ai/v2/docs/console/go/",
+      "monthlyCreditsUsd": 60.0,
+      "rates": {
+        "input": 0.435,
+        "output": 0.87,
+        "cache": 0.003625
+      }
+    },
+    {
+      "plan": "opencode_go_plus",
+      "model": "muse-spark-1.3-contributor",
+      "endpoint": "muse-spark-1.3-contributor",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://opencode.ai/v2/docs/console/go/",
+      "monthlyCreditsUsd": 120.0,
+      "rates": {
+        "input": 0.1,
+        "output": 0.2,
+        "cache": 0.002
+      }
+    },
+    {
+      "plan": "opencode_go_plus",
+      "model": "qwen3.8-max",
+      "endpoint": "qwen3.8-max",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://opencode.ai/v2/docs/console/go/",
+      "monthlyCreditsUsd": 60.0,
+      "rates": {
+        "input": 2.0,
+        "output": 6.0,
+        "cache": 0.25,
+        "cacheWrite": 2.5
+      }
+    },
+    {
+      "plan": "opencode_go_plus",
+      "model": "qwen3.8-flash",
+      "endpoint": "qwen3.8-flash",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://opencode.ai/v2/docs/console/go/",
+      "monthlyCreditsUsd": 90.0,
+      "rates": {
+        "input": 0.15,
+        "output": 0.47,
+        "cache": 0.016,
+        "cacheWrite": 0.2
+      }
+    },
+    {
+      "plan": "opencode_go_plus",
+      "model": "hy4-preview",
+      "endpoint": "hy4-preview",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://opencode.ai/v2/docs/console/go/",
+      "monthlyCreditsUsd": 120.0,
+      "rates": {
+        "input": 0.834,
+        "output": 2.501,
+        "cache": 0.042
+      }
+    },
+    {
+      "plan": "opencode_go_plus",
+      "model": "gemini-4-argon",
+      "endpoint": "gemini-4-argon",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://opencode.ai/v2/docs/console/go/",
+      "monthlyCreditsUsd": 120,
+      "rates": {
+        "input": 2,
+        "output": 10,
+        "cache": 0.1
+      }
+    },
+    {
+      "plan": "opencode_go_teams",
+      "model": "glm-5.3-flash",
+      "endpoint": "glm-5.3-flash",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://opencode.ai/v2/docs/console/go/",
+      "monthlyCreditsUsd": 65.0,
+      "rates": {
+        "input": 0.15,
+        "output": 0.5,
+        "cache": 0.03
+      }
+    },
+    {
+      "plan": "opencode_go_teams",
+      "model": "glm-5.3",
+      "endpoint": "glm-5.3",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://opencode.ai/v2/docs/console/go/",
+      "monthlyCreditsUsd": 20.0,
+      "rates": {
+        "input": 1.4,
+        "output": 4.4,
+        "cache": 0.26
+      }
+    },
+    {
+      "plan": "opencode_go_teams",
+      "model": "mimo-v2.6-flash",
+      "endpoint": "mimo-v2.6-flash",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://opencode.ai/v2/docs/console/go/",
+      "monthlyCreditsUsd": 65.0,
+      "rates": {
+        "input": 0.14,
+        "output": 0.28,
+        "cache": 0.0028
+      }
+    },
+    {
+      "plan": "opencode_go_teams",
+      "model": "mimo-v2.6-pro",
+      "endpoint": "mimo-v2.6-pro",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://opencode.ai/v2/docs/console/go/",
+      "monthlyCreditsUsd": 20.0,
+      "rates": {
+        "input": 0.435,
+        "output": 0.87,
+        "cache": 0.003625
+      }
+    },
+    {
+      "plan": "opencode_go_teams",
+      "model": "muse-spark-1.3-contributor",
+      "endpoint": "muse-spark-1.3-contributor",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://opencode.ai/v2/docs/console/go/",
+      "monthlyCreditsUsd": 65.0,
+      "rates": {
+        "input": 0.1,
+        "output": 0.2,
+        "cache": 0.002
+      }
+    },
+    {
+      "plan": "opencode_go_teams",
+      "model": "qwen3.8-max",
+      "endpoint": "qwen3.8-max",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://opencode.ai/v2/docs/console/go/",
+      "monthlyCreditsUsd": 20.0,
+      "rates": {
+        "input": 2.0,
+        "output": 6.0,
+        "cache": 0.25,
+        "cacheWrite": 2.5
+      }
+    },
+    {
+      "plan": "opencode_go_teams",
+      "model": "qwen3.8-flash",
+      "endpoint": "qwen3.8-flash",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://opencode.ai/v2/docs/console/go/",
+      "monthlyCreditsUsd": 35.0,
+      "rates": {
+        "input": 0.15,
+        "output": 0.47,
+        "cache": 0.016,
+        "cacheWrite": 0.2
+      }
+    },
+    {
+      "plan": "opencode_go_teams",
+      "model": "hy4-preview",
+      "endpoint": "hy4-preview",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://opencode.ai/v2/docs/console/go/",
+      "monthlyCreditsUsd": 35.0,
+      "rates": {
+        "input": 0.834,
+        "output": 2.501,
+        "cache": 0.042
+      }
+    },
+    {
+      "plan": "opencode_go_teams",
+      "model": "gemini-4-argon",
+      "endpoint": "gemini-4-argon",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://opencode.ai/v2/docs/console/go/",
+      "monthlyCreditsUsd": 35,
+      "rates": {
+        "input": 2,
+        "output": 10,
+        "cache": 0.1
+      }
+    },
+    {
+      "plan": "ollama_pro_credits",
+      "model": "glm-5.3",
+      "endpoint": "glm-5.3:cloud",
+      "source": "https://ollama.com/pricing",
+      "identitySource": "https://ollama.com/library/glm-5.3",
+      "monthlyCreditsUsd": 60,
+      "rates": {
+        "input": 1.4,
+        "cache": 0.26,
+        "output": 4.4
+      }
+    },
+    {
+      "plan": "ollama_max_credits",
+      "model": "glm-5.3",
+      "endpoint": "glm-5.3:cloud",
+      "source": "https://ollama.com/pricing",
+      "identitySource": "https://ollama.com/library/glm-5.3",
+      "monthlyCreditsUsd": 300,
+      "rates": {
+        "input": 1.4,
+        "cache": 0.26,
+        "output": 4.4
+      }
+    },
+    {
+      "plan": "ollama_team_credits",
+      "model": "glm-5.3",
+      "endpoint": "glm-5.3:cloud",
+      "source": "https://ollama.com/pricing",
+      "identitySource": "https://ollama.com/library/glm-5.3",
+      "monthlyCreditsUsd": 1000,
+      "rates": {
+        "input": 1.4,
+        "cache": 0.26,
+        "output": 4.4
+      }
+    },
+    {
+      "plan": "ollama_pro_credits",
+      "model": "glm-5.3-flash",
+      "endpoint": "glm-5.3-flash:cloud",
+      "source": "https://ollama.com/pricing",
+      "identitySource": "https://ollama.com/library/glm-5.3-flash",
+      "monthlyCreditsUsd": 60,
+      "rates": {
+        "input": 0.15,
+        "cache": 0.03,
+        "output": 0.5
+      }
+    },
+    {
+      "plan": "ollama_max_credits",
+      "model": "glm-5.3-flash",
+      "endpoint": "glm-5.3-flash:cloud",
+      "source": "https://ollama.com/pricing",
+      "identitySource": "https://ollama.com/library/glm-5.3-flash",
+      "monthlyCreditsUsd": 300,
+      "rates": {
+        "input": 0.15,
+        "cache": 0.03,
+        "output": 0.5
+      }
+    },
+    {
+      "plan": "ollama_team_credits",
+      "model": "glm-5.3-flash",
+      "endpoint": "glm-5.3-flash:cloud",
+      "source": "https://ollama.com/pricing",
+      "identitySource": "https://ollama.com/library/glm-5.3-flash",
+      "monthlyCreditsUsd": 1000,
+      "rates": {
+        "input": 0.15,
+        "cache": 0.03,
+        "output": 0.5
+      }
+    },
+    {
+      "plan": "ollama_pro_credits",
+      "model": "kimi-k3",
+      "endpoint": "kimi-k3:cloud",
+      "source": "https://ollama.com/pricing",
+      "identitySource": "https://ollama.com/library/kimi-k3",
+      "monthlyCreditsUsd": 60,
+      "rates": {
+        "input": 3.0,
+        "cache": 0.3,
+        "output": 15.0
+      }
+    },
+    {
+      "plan": "ollama_max_credits",
+      "model": "kimi-k3",
+      "endpoint": "kimi-k3:cloud",
+      "source": "https://ollama.com/pricing",
+      "identitySource": "https://ollama.com/library/kimi-k3",
+      "monthlyCreditsUsd": 300,
+      "rates": {
+        "input": 3.0,
+        "cache": 0.3,
+        "output": 15.0
+      }
+    },
+    {
+      "plan": "ollama_team_credits",
+      "model": "kimi-k3",
+      "endpoint": "kimi-k3:cloud",
+      "source": "https://ollama.com/pricing",
+      "identitySource": "https://ollama.com/library/kimi-k3",
+      "monthlyCreditsUsd": 1000,
+      "rates": {
+        "input": 3.0,
+        "cache": 0.3,
+        "output": 15.0
+      }
+    },
+    {
+      "plan": "ollama_pro_credits",
+      "model": "mimo-v2.6-flash",
+      "endpoint": "mimo-v2.6-flash:cloud",
+      "source": "https://ollama.com/pricing",
+      "identitySource": "https://ollama.com/library/mimo-v2.6-flash",
+      "monthlyCreditsUsd": 60,
+      "rates": {
+        "input": 0.14,
+        "cache": 0.0028,
+        "output": 0.28
+      }
+    },
+    {
+      "plan": "ollama_max_credits",
+      "model": "mimo-v2.6-flash",
+      "endpoint": "mimo-v2.6-flash:cloud",
+      "source": "https://ollama.com/pricing",
+      "identitySource": "https://ollama.com/library/mimo-v2.6-flash",
+      "monthlyCreditsUsd": 300,
+      "rates": {
+        "input": 0.14,
+        "cache": 0.0028,
+        "output": 0.28
+      }
+    },
+    {
+      "plan": "ollama_team_credits",
+      "model": "mimo-v2.6-flash",
+      "endpoint": "mimo-v2.6-flash:cloud",
+      "source": "https://ollama.com/pricing",
+      "identitySource": "https://ollama.com/library/mimo-v2.6-flash",
+      "monthlyCreditsUsd": 1000,
+      "rates": {
+        "input": 0.14,
+        "cache": 0.0028,
+        "output": 0.28
+      }
+    },
+    {
+      "plan": "ollama_pro_credits",
+      "model": "mimo-v2.6-pro",
+      "endpoint": "mimo-v2.6-pro:cloud",
+      "source": "https://ollama.com/pricing",
+      "identitySource": "https://ollama.com/library/mimo-v2.6-pro",
+      "monthlyCreditsUsd": 60,
+      "rates": {
+        "input": 0.435,
+        "cache": 0.0036,
+        "output": 0.87
+      }
+    },
+    {
+      "plan": "ollama_max_credits",
+      "model": "mimo-v2.6-pro",
+      "endpoint": "mimo-v2.6-pro:cloud",
+      "source": "https://ollama.com/pricing",
+      "identitySource": "https://ollama.com/library/mimo-v2.6-pro",
+      "monthlyCreditsUsd": 300,
+      "rates": {
+        "input": 0.435,
+        "cache": 0.0036,
+        "output": 0.87
+      }
+    },
+    {
+      "plan": "ollama_team_credits",
+      "model": "mimo-v2.6-pro",
+      "endpoint": "mimo-v2.6-pro:cloud",
+      "source": "https://ollama.com/pricing",
+      "identitySource": "https://ollama.com/library/mimo-v2.6-pro",
+      "monthlyCreditsUsd": 1000,
+      "rates": {
+        "input": 0.435,
+        "cache": 0.0036,
+        "output": 0.87
+      }
+    }
+  ],
+  "remainingReviews": [
+    {
+      "channel": "Command Code",
+      "models": [
+        "mistral-large-4"
+      ],
+      "status": "version-unverified",
+      "checkedAt": "2026-11-04",
+      "note": {
+        "zh": "已上线并有 $20 月信用额度；当前权重与榜单评测版本仍待核实，暂不绘图。",
+        "en": "Available with $20 monthly credits; served weights versus benchmark version still need verification before plotting."
+      },
+      "source": "https://commandcode.ai/docs/plans/goat"
+    },
+    {
+      "channel": "Ollama",
+      "models": [
+        "mistral-large-4"
+      ],
+      "status": "version-unverified",
+      "checkedAt": "2026-11-04",
+      "note": {
+        "zh": "已在云端上线并列出费率，但新版权重对应关系尚待核实，暂不绘图。",
+        "en": "Cloud availability and rates are listed; the updated weight version still needs verification before plotting."
+      },
+      "source": "https://ollama.com/pricing"
+    },
+    {
+      "channel": "Cursor",
+      "models": [
+        "gemini-4-argon",
+        "muse-wonder"
+      ],
+      "status": "extra-usage",
+      "checkedAt": "2026-11-04",
+      "source": "https://cursor.com/docs/models-and-pricing",
+      "note": {
+        "en": "Available as third-party models. The current X Subscription requires prepaid top-ups for them; legacy plans keep separate monthly pools and are labeled Legacy.",
+        "zh": "第三方模型已上线。当前 X Subscription 需用预付充值额另付费用；原套餐保留双月池并已标记 Legacy，不能套用其额度。"
+      }
+    },
+    {
+      "channel": "Factory",
+      "models": [
+        "gpt-6.1-sol",
+        "deepseek-v4.1-flash-1017",
+        "minimax-m3.1-flash",
+        "beam-1.0",
+        "mistral-large-4"
+      ],
+      "status": "quota-unverified",
+      "checkedAt": "2026-11-04",
+      "source": "https://docs.factory.com/pricing/individuals",
+      "note": {
+        "en": "Catalog and release notes checked through November 4. Explicit named models are offered, but plan docs publish relative multipliers and rolling limits without an absolute standard-credit/token conversion. Ultra Fast is a distinct service variant.",
+        "zh": "已检查至 11 月 4 日的更新日志、型号与套餐。明确提供这些型号，但仅公布相对倍率和滚动限制，缺少基础信用额/token 换算；Ultra Fast 亦不混同普通版本。"
+      }
+    },
+    {
+      "channel": "Command Code",
+      "models": [
+        "beam-1.0"
+      ],
+      "status": "temporary-free",
+      "checkedAt": "2026-11-04",
+      "source": "https://commandcode.ai/docs/resources/pricing-limits#beam-free",
+      "note": {
+        "en": "CLI v1.85.0 announced Beam 1.0. Current promotion is free with no daily request cap while capacity lasts; this is not a guaranteed monthly token pool.",
+        "zh": "CLI v1.85.0 已官宣 Beam 1.0；当前活动免信用额、无每日请求次数上限，但受可用容量限制，不折算为保证月 token 额度。"
+      }
+    },
+    {
+      "channel": "Ollama",
+      "models": [
+        "beam-1.0"
+      ],
+      "status": "temporary-free",
+      "checkedAt": "2026-11-04",
+      "source": "https://ollama.com/blog/reflection-beam",
+      "note": {
+        "en": "October 16 launch confirms Reflection Beam on beam:cloud, temporarily free with ZDR. No guaranteed monthly token pool or fixed end date is published.",
+        "zh": "10 月 16 日上线公告确认 Reflection Beam 对应 beam:cloud，限时免费且 ZDR；未公布保证月 token 额度或固定结束日期。"
+      }
+    },
+    {
+      "channel": "OpenCode",
+      "models": [
+        "beam-1.0"
+      ],
+      "status": "temporary-free",
+      "checkedAt": "2026-11-04",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "note": {
+        "en": "Beam Free is a temporary regional offer; official usage statistics identify beam-1.0-501b-a23b. No guaranteed monthly token pool is inferred.",
+        "zh": "Beam Free 为限时、限地区活动，官方使用统计列出 beam-1.0-501b-a23b。已记录渠道对应，不推定保证月 token 额度。"
+      }
+    },
+    {
+      "channel": "Command Code",
+      "models": [
+        "crouton-alpha",
+        "glyph-cluster",
+        "laguna-s-2.1"
+      ],
+      "status": "temporary-free",
+      "checkedAt": "2026-11-04",
+      "source": "https://commandcode.ai/docs/resources/pricing-limits#deals",
+      "note": {
+        "en": "Current deals confirm stealth Crouton/Glyph (up to 1,000 requests/day) and Laguna S 2.1 (capacity limited). No benchmark identity is borrowed from other models.",
+        "zh": "当前活动确认 Crouton/Glyph 每日最多 1,000 请求及受容量限制的 Laguna S 2.1；不借用其他模型的榜单成绩。"
+      }
+    },
+    {
+      "channel": "Command Code",
+      "models": [
+        "jev",
+        "jev-1.14.0"
+      ],
+      "status": "not-comparable",
+      "checkedAt": "2026-11-04",
+      "source": "https://commandcode.ai/docs/reference/cli/models",
+      "note": {
+        "en": "Decision models are available for headless use; output is billed differently from ordinary generation and has no compatible leaderboard observation.",
+        "zh": "决策模型已支持无界面调用；输出计费与普通文本生成不同，暂无可兼容榜单成绩。"
+      }
+    },
+    {
+      "channel": "Ollama",
+      "models": [
+        "clef"
+      ],
+      "status": "not-comparable",
+      "checkedAt": "2026-11-04",
+      "source": "https://ollama.com/blog/clef",
+      "note": {
+        "en": "October 19 cloud launch confirms this decision model. Published input-only billing does not fit the standard cached-text generation workload.",
+        "zh": "10 月 19 日公告确认该决策模型云端上线；公布的仅输入计费不能套入标准缓存文本生成负载。"
+      }
+    },
+    {
+      "channel": "Alibaba",
+      "models": [
+        "deepseek-v4.1-flash-1017",
+        "glm-5.3",
+        "qwen3.8-max",
+        "qwen3.8-flash"
+      ],
+      "status": "quota-unverified",
+      "checkedAt": "2026-11-04",
+      "source": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "note": {
+        "en": "Token Plan Personal explicitly includes these models and removed weekly caps September 22. Credits depend dynamically on model, thinking and tools; published monthly credit counts are not USD or token quotas. The older Coding Plan is a different product.",
+        "zh": "Token Plan 个人版明确提供这些模型，9 月 22 日已取消周限额；Credits 随模型、思考及工具动态消耗，月 Credits 数不能视作美元或 token 额度。原 Coding Plan 为不同产品。"
+      }
+    },
+    {
+      "channel": "Command Code",
+      "models": [
+        "glm-5.3-flash"
+      ],
+      "status": "version-unverified",
+      "checkedAt": "2026-11-04",
+      "source": "https://commandcode.ai/docs/resources/pricing-limits#glm-5.3-flash-boosted-credits",
+      "note": {
+        "en": "A weekly recap said 1017, but the dedicated announcement and current endpoint name GLM-5.3 Flash without a separate checkpoint. Preserve this identity; do not invent a GLM 1017 benchmark join.",
+        "zh": "周报出现 1017 字样，但专门公告与现行端点仍为 GLM-5.3 Flash，未确认独立检查点；保留已核实身份，不虚构 GLM 1017 榜单映射。"
+      }
+    },
+    {
+      "channel": "Command Code",
+      "models": [
+        "deepseek-v4.1-flash-fast"
+      ],
+      "status": "version-unverified",
+      "checkedAt": "2026-11-04",
+      "source": "https://commandcode.ai/docs/reference/cli/models",
+      "note": {
+        "en": "Fast remains a separate service endpoint. The standard DeepSeek 1017 rollout does not explicitly establish the Fast checkpoint; no checkpoint score is reassigned.",
+        "zh": "Fast 为独立服务端点；标准版 DeepSeek 1017 上线公告没有明确 Fast 的检查点，不转移 1017 成绩。"
+      }
+    },
+    {
+      "channel": "OpenCode",
+      "models": [
+        "crouton-alpha"
+      ],
+      "status": "temporary-free",
+      "checkedAt": "2026-11-04",
+      "source": "https://x.com/opencode/status/2117717721458843711",
+      "note": {
+        "en": "Official November 3 announcement: one-week free stealth preview, regional restrictions, 1M context. No permanent free quota or identity with another scored model is assumed.",
+        "zh": "11 月 3 日官方公告：一周免费匿名预览、限地区、1M 上下文。不推定永久免费额度，也不与其他有榜单成绩的模型合并。"
+      }
+    }
+  ]
+}

@@ -8,7 +8,7 @@ const upstream = read('upstream/derived/points.json');
 const base = {...upstream, points:upstream.points.map(p=>({...p,plan_id:p.id.split('::')[0]})),
   models:read('data/models.json').models,conventions:read('upstream/data/conventions.json'),configurations:[],mappings:[]};
 const manifest = read('data/coding-plans/current.json');
-const result = mergeCodingPlans(base,manifest);
+const result = mergeCodingPlans(base,manifest,{asOf:'2026-11-04'});
 test('Current Go limits use monthly credits once, with distinct time bands and per-seat Teams fees',()=>{
   const peak=result.points.find(p=>p.id==='opencode_go::deepseek-v4.1-flash');
   const off=result.points.find(p=>p.id==='opencode_go::deepseek-v4.1-flash::off-peak');
@@ -41,7 +41,7 @@ test('New third-party points join current benchmarks by exact identity; official
   const d=mergeCurrentLeaderboards(result,read('data/leaderboards/current.json'));
   for(const id of ['opencode_go::kimi-k3.1-pro','opencode_go_plus::minimax-m3.1-flash','command_code_goat::ling-3.1-flash-1019','command_code_goat::muse-spark-open','ollama_pro_credits::deepseek-v4.1-flash-1017']) assert.ok(d.mappings.some(m=>m.point_id===id),id);
   const upgraded=result.points.filter(p=>p.price_origin==='maintained-plan'&&['OpenCode','Command Code'].includes(p.channel)&&p.id.includes('::deepseek-v4.1-flash'));
-  assert.equal(upgraded.length,8);
+  assert.equal(upgraded.length,16);
   for(const p of upgraded){
     assert.equal(p.model,'deepseek-v4.1-flash-1017');
     assert.ok(p.evidence.some(e=>e.url.startsWith('https://x.com/')));
@@ -52,6 +52,38 @@ test('New third-party points join current benchmarks by exact identity; official
     assert.equal(configIds.size,expected.length);
   }
   assert.ok(!result.points.some(p=>p.price_origin==='maintained-plan'&&p.model==='mistral-large-4'));
+});
+
+test('Announced premium releases use eligible tiers, actual caps and separately reviewed context rates',()=>{
+  const get=id=>result.points.find(p=>p.id===id);
+  assert.ok(!get('command_code_goat::gpt-6.1-terra'));
+  assert.ok(!get('command_code_pro::gpt-6.1-sol'));
+  assert.ok(!get('command_code_pro::muse-wonder'));
+  const terra=get('command_code_pro::gpt-6.1-terra');
+  assert.ok(Math.abs(terra.list_blended_usd_per_mtok-.10475)<1e-12);
+  assert.ok(Math.abs(terra.monthly_tokens-20/.10475*1e6)<1e-6);
+  const max=get('command_code_max_10::gpt-6.1-terra');
+  assert.ok(Math.abs(max.monthly_tokens/terra.monthly_tokens-5)<1e-12); // $100 premium cap, not $150
+  const long=get('command_code_pro::gpt-6.1-terra::long-context');
+  assert.ok(Math.abs(long.list_blended_usd_per_mtok-.197)<1e-12);
+  assert.ok(get('command_code_max_20::muse-wonder'));
+  assert.ok(get('command_code_go::ornith-1.5-122b'));
+  assert.ok(result.points.filter(p=>p.channel==='Cursor').every(p=>p.plan_gen==='legacy'));
+  assert.ok(!result.points.some(p=>p.price_origin==='maintained-plan'&&p.model==='crouton-alpha'));
+});
+
+test('Argon is standard, Contributor history stays archived, and expiring discounts restore reviewed regular rates',()=>{
+  const id='opencode_go::gemini-4-argon-contributor';
+  const before=mergeCodingPlans(base,manifest,{asOf:'2026-11-30'}).points.find(p=>p.id===id);
+  const after=mergeCodingPlans(base,manifest,{asOf:'2026-12-01'}).points.find(p=>p.id===id);
+  assert.equal(before.model,'gemini-4-argon');
+  assert.equal(after.real_usd_per_mtok,before.real_usd_per_mtok*2);
+  assert.equal(after.monthly_tokens,before.monthly_tokens/2);
+  assert.equal(after.promo_until,null);
+  assert.ok(!after.plan.includes('50%'));
+  assert.equal(result.supersededPoints.find(p=>p.id===id).model,'gemini-4-argon-contributor');
+  const m=structuredClone(manifest);delete m.entries.find(e=>e.promoUntil).postPromoRates;
+  assert.throws(()=>mergeCodingPlans(base,m),/fallback/);
 });
 test('Missing rates, identity evidence, unreviewed collisions and newer upstream data fail closed',()=>{
   for(const mutate of [m=>m.entries[0].rates.cache=null,m=>m.entries[0].identitySource='',m=>m.entries[0].rates.cacheWrite=999,m=>m.entries[0].monthlyCreditsUsd=0,m=>m.entries.push(m.entries[0])]){

@@ -129,7 +129,12 @@ export default function Method({
           "Current third-party model access, token rates and monthly credits are reviewed separately from API references. Monthly tokens equal the effective credit limit divided by the channel's workload-weighted rate. Shared and model limits use the smaller cap; monthly pools are not multiplied by four weeks. Time bands, per-seat Teams fees and whole-team pools are stated separately. Different model and time-band allowances cannot be added together. Legacy samples retain their dates; superseded records remain downloadable.",
           "第三方套餐的当前模型、费率与月信用额度独立核实。月 token = 有效信用额度 ÷ 渠道负载加权费率；共享池与模型上限取较小值，独立月池不乘四周。时段、按成员计费的 Teams 与整个团队共享的额度分别注明。同套餐不同模型与时段的额度不能相加。旧套餐样本保留日期，被替代的记录可下载追溯。",
         )}</p>
+        <p>{t(
+          "Rollout announcements and release notes are checked alongside plan tables: an unchanged alias may serve a newer checkpoint. Premium caps and long-context rates remain separate. Where a cache-write scenario is stated, fresh input uses the write rate instead of adding ordinary input again. Dated discounts switch to reviewed regular rates on builds after expiry. Temporary free access and unknown credit conversions remain availability records rather than guaranteed token allowances.",
+          "上线公告、更新日志与套餐表交叉核对：相同别名可能已升级检查点。高价模型上限与长上下文费率分别处理。注明缓存写入场景的记录，使用写入费率替代普通输入费率，不重复相加。有明确期限的折扣在到期后构建时恢复已核实原价。限时免费或未知 Credits 换算仅记为可用性，不推定保证 token 额度。",
+        )}</p>
         <p><a href="/data/coding-plans.json">{t("Reviewed plan records (JSON)", "套餐核实记录（JSON）")}</a>{" · "}<a href="/data/superseded-points.json">{t("Superseded source records (JSON)", "被替代的原始记录（JSON）")}</a></p>
+        <p><a href="/data/evidence/coding-plans-evidence-2026-11-04-02.json">{t("Official announcement audit · 2026-11-04", "官方公告交叉核查报告 · 2026-11-04")}</a></p>
       </section>
       <section className="method-sources">
         <h2>{t("Official API price references", "官方 API 价格参考")}</h2>

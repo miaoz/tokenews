@@ -1,6 +1,6 @@
 // Reviewed subscription credits are independent of upstream quota samples.
 // Preserve superseded samples for audit; never copy a quota to a new model.
-export function mergeCodingPlans(data, manifest) {
+export function mergeCodingPlans(data, manifest, {asOf = new Date().toISOString().slice(0,10)} = {}) {
   if (manifest.version !== 1 || !Array.isArray(manifest.entries)) throw Error('Invalid coding plan manifest');
   if (!manifest.evidenceFiles?.length || manifest.evidenceFiles.some(f=>!/^evidence-[0-9-]+\.json$/.test(f))) throw Error('Invalid plan evidence archive');
   const models = new Map(data.models.map(m => [m.id, m]));
@@ -9,12 +9,16 @@ export function mergeCodingPlans(data, manifest) {
   const validDate = s => typeof s === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(s) && !Number.isNaN(Date.parse(s)) && new Date(s).toISOString().slice(0,10) === s;
   const https = s => { try { return new URL(s).protocol === 'https:'; } catch { return false; } };
   const positive = n => typeof n === 'number' && Number.isFinite(n) && n > 0;
+  if (!validDate(asOf)) throw Error('Invalid coding plan calculation date');
   const mix = data.conventions.standardTokenMix;
   if (mix.cache !== .97 || mix.input !== .025 || mix.output !== .005) throw Error('Coding plan workload needs review');
   for (const p of plans.values()) if (!p.note?.en || !p.note?.zh || !p.name || !p.channel) throw Error('Incomplete plan metadata');
   for (const r of manifest.reviews ?? []) if (!validDate(r.checkedAt) || !https(r.source) || !r.note?.en || !r.note?.zh || !r.models?.length || [...r.models, ...(r.relatedModels ?? [])].some(id=>!models.has(id))) throw Error('Invalid plan availability review');
   const replacements = new Set(), generated = [], ids = new Set();
-  for (const e of manifest.entries) {
+  for (const record of manifest.entries) {
+    if (record.promoUntil && (!validDate(record.promoUntil) || !record.postPromoRates || !record.postPromoScope?.en || !record.postPromoScope?.zh)) throw Error('Promotion needs an expiry and reviewed fallback');
+    const expired = record.promoUntil && asOf > record.promoUntil;
+    const e = expired ? {...record,rates:record.postPromoRates,scope:record.postPromoScope,promoUntil:null} : record;
     const plan = plans.get(e.plan), model = models.get(e.model);
     if (!plan || !model || !positive(plan.monthlyUsd) || !validDate(e.checkedAt) ||
         !https(e.source) || !https(e.identitySource) || !e.endpoint || !e.identityNote?.en || !e.identityNote?.zh)
@@ -23,8 +27,10 @@ export function mergeCodingPlans(data, manifest) {
     if (plan.sharedCreditsUsd != null && !positive(plan.sharedCreditsUsd)) throw Error('Invalid shared cap');
     if (plan.pool === 'shared' && !positive(plan.sharedCreditsUsd)) throw Error('Missing shared cap');
     for (const key of ['cache', 'input', 'output']) if (!(typeof e.rates[key] === 'number' && Number.isFinite(e.rates[key]) && e.rates[key] >= 0)) throw Error('Incomplete token rates');
-    if (e.rates.cacheWrite != null && e.rates.cacheWrite !== e.rates.input) throw Error('Cache write billing needs review');
-    const cost = mix.cache * e.rates.cache + mix.input * e.rates.input + mix.output * e.rates.output;
+    if (e.rates.cacheWrite != null && (!positive(e.rates.cacheWrite) || (e.rates.cacheWrite !== e.rates.input && e.freshInputBilling !== 'cache-write'))) throw Error('Cache write billing needs review');
+    if (e.freshInputBilling != null && (e.freshInputBilling !== 'cache-write' || !positive(e.rates.cacheWrite))) throw Error('Invalid fresh input billing');
+    const inputRate = e.freshInputBilling === 'cache-write' ? e.rates.cacheWrite : e.rates.input;
+    const cost = mix.cache * e.rates.cache + mix.input * inputRate + mix.output * e.rates.output;
     if (!positive(cost)) throw Error('Free or unknown quota must not create a finite credit point');
     const credits = Math.min(e.monthlyCreditsUsd, plan.sharedCreditsUsd ?? Infinity);
     const tokens = credits / cost * 1e6;
@@ -42,7 +48,10 @@ export function mergeCodingPlans(data, manifest) {
       zh: `套餐月费 $${plan.monthlyUsd}；模型月信用额度 $${e.monthlyCreditsUsd}${plan.sharedCreditsUsd ? `，套餐共享月池上限 $${plan.sharedCreditsUsd}` : ''}。本行按全部有效额度 $${credits} 用于该模型计算：月 token = 额度 ÷ 加权费率 × 1,000,000；真实单价 = 月费 ÷ 月 token × 1,000,000。97% 缓存读、2.5% 非缓存输入、0.5% 输出。同套餐各模型及各计费时段不可相加。${plan.note.zh} ${scope.zh} ${e.identityNote.zh}`,
       en: `Monthly fee $${plan.monthlyUsd}; model credits $${e.monthlyCreditsUsd}${plan.sharedCreditsUsd ? `, capped by the $${plan.sharedCreditsUsd} shared monthly pool` : ''}. Assumes all $${credits} of effective credits go to this model. Monthly tokens = credits / weighted rate * 1,000,000; real price = fee / tokens * 1,000,000. Mix: 97% cache reads, 2.5% fresh input, 0.5% output. Models and time bands within one plan are alternatives, not additive. ${plan.note.en} ${scope.en} ${e.identityNote.en}`,
     };
-    if (e.rates.cacheWrite != null) {
+    if (e.freshInputBilling === 'cache-write') {
+      note.zh += ` 采用缓存写入场景：2.5% 新输入全部按写入费率 $${e.rates.cacheWrite}/百万 token 计算，替代普通输入费率，不重复收费。`;
+      note.en += ` Cache-write scenario: all 2.5% fresh input is billed at $${e.rates.cacheWrite}/MTok, replacing ordinary input rather than adding both rates.`;
+    } else if (e.rates.cacheWrite != null) {
       note.zh += ' 缓存写入与普通输入同价，互斥计费，不重复相加。';
       note.en += ' Cache writes and fresh input have equal rates and are mutually exclusive, not additive.';
     }
@@ -52,7 +61,7 @@ export function mergeCodingPlans(data, manifest) {
       price_origin:'maintained-plan', plan_gen:plan.generation ?? '', price_usd:plan.monthlyUsd,
       original_price:plan.monthlyUsd, currency:'USD', monthly_tokens:tokens, monthly_yi:tokens / 1e8,
       real_usd_per_mtok:plan.monthlyUsd / tokens * 1e6, list_blended_usd_per_mtok:cost,
-      list_price:{cached:e.rates.cache,input:e.rates.input,output:e.rates.output,currency:'USD'},
+      list_price:{cached:e.rates.cache,input:inputRate,output:e.rates.output,currency:'USD'},
       workload:'standard', d:plan.monthlyUsd / credits, confidence:'medium', tier:'main', unmetered:false,
       promo_until:e.promoUntil ?? null, data_date:e.checkedAt, data_date_kind:'official', source:e.source, source_en:e.source,
       note:note.zh, note_en:note.en, decision_note:note.zh, decision_note_en:note.en,
@@ -63,8 +72,8 @@ export function mergeCodingPlans(data, manifest) {
   const supersededPoints = data.points.filter(p => replacements.has(p.id));
   const points = data.points.filter(p => !replacements.has(p.id));
   if (points.some(p => ids.has(p.id))) throw Error('Coding plan point would overwrite an unreviewed record');
-  // Old Ollama session/weekly samples remain available, explicitly distinguished
-  // from the current monthly-credit plans. The originals remain in the archive.
+  // Old Ollama and Cursor samples remain available, explicitly distinguished
+  // from current plan generations. The originals remain in the archive.
   const legacyIds = new Set(manifest.legacyPlanIds ?? []);
   const active = points.map(p => {
     if (!legacyIds.has(p.plan_id)) return p;

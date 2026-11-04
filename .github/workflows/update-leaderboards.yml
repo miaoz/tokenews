@@ -51,8 +51,9 @@ jobs:
           echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
   deploy:
     needs: update
-    if: needs.update.outputs.pushed == 'true'
+    # Rebuild date-sensitive plan prices even when source snapshots are unchanged.
+    if: needs.update.result == 'success'
     uses: ./.github/workflows/deploy.yml
     with:
-      ref: ${{ needs.update.outputs.sha }}
+      ref: ${{ needs.update.outputs.sha || github.sha }}
     secrets: inherit
