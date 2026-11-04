@@ -1,0 +1,916 @@
+{
+  "version": 1,
+  "plans": [
+    {
+      "id": "opencode_go",
+      "name": "OpenCode Go",
+      "channel": "OpenCode",
+      "monthlyUsd": 10,
+      "pool": "model",
+      "note": {
+        "zh": "5 小时上限为月额度的 20%，每周为 50%；月额度为独立月池，不能再乘四周。Teams 为每成员计费及额度。",
+        "en": "The 5-hour cap is 20% and the weekly cap 50% of monthly credits. The monthly pool is not multiplied by four weeks. Teams fees and limits are per member."
+      }
+    },
+    {
+      "id": "opencode_go_plus",
+      "name": "OpenCode Go Plus",
+      "channel": "OpenCode",
+      "monthlyUsd": 40,
+      "pool": "model",
+      "note": {
+        "zh": "5 小时上限为月额度的 20%，每周为 50%；月额度为独立月池，不能再乘四周。Teams 为每成员计费及额度。",
+        "en": "The 5-hour cap is 20% and the weekly cap 50% of monthly credits. The monthly pool is not multiplied by four weeks. Teams fees and limits are per member."
+      }
+    },
+    {
+      "id": "opencode_go_teams",
+      "name": "OpenCode Go Teams",
+      "channel": "OpenCode",
+      "monthlyUsd": 20,
+      "pool": "model",
+      "note": {
+        "zh": "5 小时上限为月额度的 20%，每周为 50%；月额度为独立月池，不能再乘四周。Teams 为每成员计费及额度。",
+        "en": "The 5-hour cap is 20% and the weekly cap 50% of monthly credits. The monthly pool is not multiplied by four weeks. Teams fees and limits are per member."
+      }
+    },
+    {
+      "id": "command_code_goat",
+      "name": "Command Code GOAT",
+      "channel": "Command Code",
+      "monthlyUsd": 10,
+      "pool": "shared",
+      "sharedCreditsUsd": 100,
+      "note": {
+        "zh": "共享池上限 $100/月、$50/周、$20/5 小时；取模型上限与共享池较小值。",
+        "en": "Shared caps: $100/month, $50/week, $20/5 hours; use the lesser of model credits and shared credits."
+      }
+    },
+    {
+      "id": "ollama_pro_credits",
+      "name": "Ollama Pro (Monthly credits)",
+      "channel": "Ollama",
+      "monthlyUsd": 20,
+      "pool": "shared",
+      "sharedCreditsUsd": 60,
+      "generation": "monthly-credits",
+      "note": {
+        "zh": "新版月信用额度；旧套餐的会话和周限制不适用。Team 为全团队共享总额，非每成员额度。托管可采用加速数据格式，非该渠道的实测评测。",
+        "en": "Current monthly-credit plan; old session and weekly limits do not apply. Team credits and fee cover the whole team, not each seat. Hosting may use accelerated data formats; benchmark scores are model references, not channel measurements."
+      }
+    },
+    {
+      "id": "ollama_max_credits",
+      "name": "Ollama Max (Monthly credits)",
+      "channel": "Ollama",
+      "monthlyUsd": 100,
+      "pool": "shared",
+      "sharedCreditsUsd": 300,
+      "generation": "monthly-credits",
+      "note": {
+        "zh": "新版月信用额度；旧套餐的会话和周限制不适用。Team 为全团队共享总额，非每成员额度。托管可采用加速数据格式，非该渠道的实测评测。",
+        "en": "Current monthly-credit plan; old session and weekly limits do not apply. Team credits and fee cover the whole team, not each seat. Hosting may use accelerated data formats; benchmark scores are model references, not channel measurements."
+      }
+    },
+    {
+      "id": "ollama_team_credits",
+      "name": "Ollama Team (Monthly credits)",
+      "channel": "Ollama",
+      "monthlyUsd": 500,
+      "pool": "shared",
+      "sharedCreditsUsd": 1000,
+      "generation": "monthly-credits",
+      "note": {
+        "zh": "新版月信用额度；旧套餐的会话和周限制不适用。Team 为全团队共享总额，非每成员额度。托管可采用加速数据格式，非该渠道的实测评测。",
+        "en": "Current monthly-credit plan; old session and weekly limits do not apply. Team credits and fee cover the whole team, not each seat. Hosting may use accelerated data formats; benchmark scores are model references, not channel measurements."
+      }
+    }
+  ],
+  "entries": [
+    {
+      "plan": "opencode_go",
+      "model": "kimi-k3.1-pro",
+      "endpoint": "kimi-k3.1-pro",
+      "checkedAt": "2026-11-04",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://opencode.ai/v2/docs/console/go/",
+      "identityNote": {
+        "zh": "仅对应公开型号；不代表此渠道、框架或推理强度的实测成绩。",
+        "en": "Public model identity only; not a benchmark of this channel, harness or reasoning effort."
+      },
+      "rates": {
+        "input": 2.0,
+        "output": 10.0,
+        "cache": 0.2,
+        "cacheWrite": 2.0
+      },
+      "monthlyCreditsUsd": 15.0
+    },
+    {
+      "plan": "opencode_go",
+      "model": "step-5-preview",
+      "endpoint": "step-5-preview",
+      "checkedAt": "2026-11-04",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://opencode.ai/v2/docs/console/go/",
+      "identityNote": {
+        "zh": "仅对应公开型号；不代表此渠道、框架或推理强度的实测成绩。",
+        "en": "Public model identity only; not a benchmark of this channel, harness or reasoning effort."
+      },
+      "rates": {
+        "input": 1.0,
+        "output": 2.7,
+        "cache": 0.1
+      },
+      "monthlyCreditsUsd": 15.0,
+      "replaces": [
+        "opencode_go::step-5-preview"
+      ]
+    },
+    {
+      "plan": "opencode_go",
+      "model": "minimax-m3.1-flash",
+      "endpoint": "minimax-m3.1-flash",
+      "checkedAt": "2026-11-04",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://opencode.ai/v2/docs/console/go/",
+      "identityNote": {
+        "zh": "仅对应公开型号；不代表此渠道、框架或推理强度的实测成绩。",
+        "en": "Public model identity only; not a benchmark of this channel, harness or reasoning effort."
+      },
+      "rates": {
+        "input": 0.15,
+        "output": 0.6,
+        "cache": 0.015
+      },
+      "monthlyCreditsUsd": 20.0
+    },
+    {
+      "plan": "opencode_go",
+      "model": "deepseek-v4.1-flash",
+      "endpoint": "deepseek-v4.1-flash",
+      "checkedAt": "2026-11-04",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://models.dev/api.json",
+      "identityNote": {
+        "zh": "官方目录仍为不带日期的 deepseek-v4.1-flash，未确认等同于 1017，因此仅连接原通用型号。高峰为周一至周五 UTC 01–04、06–10。需启用 Global 区域。",
+        "en": "The catalog still uses undated deepseek-v4.1-flash, not a verified 1017 alias; only the generic model is joined. Peak: weekdays 01-04 and 06-10 UTC. Enable the Global region."
+      },
+      "rates": {
+        "input": 0.15,
+        "output": 0.6,
+        "cache": 0.003
+      },
+      "monthlyCreditsUsd": 100.0,
+      "id": "opencode_go::deepseek-v4.1-flash::off-peak",
+      "scope": {
+        "zh": "低峰",
+        "en": "Off-peak"
+      }
+    },
+    {
+      "plan": "opencode_go",
+      "model": "deepseek-v4.1-flash",
+      "endpoint": "deepseek-v4.1-flash",
+      "checkedAt": "2026-11-04",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://models.dev/api.json",
+      "identityNote": {
+        "zh": "官方目录仍为不带日期的 deepseek-v4.1-flash，未确认等同于 1017，因此仅连接原通用型号。高峰为周一至周五 UTC 01–04、06–10。需启用 Global 区域。",
+        "en": "The catalog still uses undated deepseek-v4.1-flash, not a verified 1017 alias; only the generic model is joined. Peak: weekdays 01-04 and 06-10 UTC. Enable the Global region."
+      },
+      "rates": {
+        "input": 0.3,
+        "output": 1.2,
+        "cache": 0.006
+      },
+      "monthlyCreditsUsd": 100.0,
+      "id": "opencode_go::deepseek-v4.1-flash",
+      "scope": {
+        "zh": "高峰",
+        "en": "Peak"
+      },
+      "replaces": [
+        "opencode_go::deepseek-v4.1-flash"
+      ]
+    },
+    {
+      "plan": "opencode_go_plus",
+      "model": "kimi-k3.1-pro",
+      "endpoint": "kimi-k3.1-pro",
+      "checkedAt": "2026-11-04",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://opencode.ai/v2/docs/console/go/",
+      "identityNote": {
+        "zh": "仅对应公开型号；不代表此渠道、框架或推理强度的实测成绩。",
+        "en": "Public model identity only; not a benchmark of this channel, harness or reasoning effort."
+      },
+      "rates": {
+        "input": 2.0,
+        "output": 10.0,
+        "cache": 0.2,
+        "cacheWrite": 2.0
+      },
+      "monthlyCreditsUsd": 60.0
+    },
+    {
+      "plan": "opencode_go_plus",
+      "model": "step-5-preview",
+      "endpoint": "step-5-preview",
+      "checkedAt": "2026-11-04",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://opencode.ai/v2/docs/console/go/",
+      "identityNote": {
+        "zh": "仅对应公开型号；不代表此渠道、框架或推理强度的实测成绩。",
+        "en": "Public model identity only; not a benchmark of this channel, harness or reasoning effort."
+      },
+      "rates": {
+        "input": 1.0,
+        "output": 2.7,
+        "cache": 0.1
+      },
+      "monthlyCreditsUsd": 60.0
+    },
+    {
+      "plan": "opencode_go_plus",
+      "model": "minimax-m3.1-flash",
+      "endpoint": "minimax-m3.1-flash",
+      "checkedAt": "2026-11-04",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://opencode.ai/v2/docs/console/go/",
+      "identityNote": {
+        "zh": "仅对应公开型号；不代表此渠道、框架或推理强度的实测成绩。",
+        "en": "Public model identity only; not a benchmark of this channel, harness or reasoning effort."
+      },
+      "rates": {
+        "input": 0.15,
+        "output": 0.6,
+        "cache": 0.015
+      },
+      "monthlyCreditsUsd": 80.0
+    },
+    {
+      "plan": "opencode_go_plus",
+      "model": "deepseek-v4.1-flash",
+      "endpoint": "deepseek-v4.1-flash",
+      "checkedAt": "2026-11-04",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://models.dev/api.json",
+      "identityNote": {
+        "zh": "官方目录仍为不带日期的 deepseek-v4.1-flash，未确认等同于 1017，因此仅连接原通用型号。高峰为周一至周五 UTC 01–04、06–10。需启用 Global 区域。",
+        "en": "The catalog still uses undated deepseek-v4.1-flash, not a verified 1017 alias; only the generic model is joined. Peak: weekdays 01-04 and 06-10 UTC. Enable the Global region."
+      },
+      "rates": {
+        "input": 0.15,
+        "output": 0.6,
+        "cache": 0.003
+      },
+      "monthlyCreditsUsd": 200.0,
+      "id": "opencode_go_plus::deepseek-v4.1-flash::off-peak",
+      "scope": {
+        "zh": "低峰",
+        "en": "Off-peak"
+      }
+    },
+    {
+      "plan": "opencode_go_plus",
+      "model": "deepseek-v4.1-flash",
+      "endpoint": "deepseek-v4.1-flash",
+      "checkedAt": "2026-11-04",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://models.dev/api.json",
+      "identityNote": {
+        "zh": "官方目录仍为不带日期的 deepseek-v4.1-flash，未确认等同于 1017，因此仅连接原通用型号。高峰为周一至周五 UTC 01–04、06–10。需启用 Global 区域。",
+        "en": "The catalog still uses undated deepseek-v4.1-flash, not a verified 1017 alias; only the generic model is joined. Peak: weekdays 01-04 and 06-10 UTC. Enable the Global region."
+      },
+      "rates": {
+        "input": 0.3,
+        "output": 1.2,
+        "cache": 0.006
+      },
+      "monthlyCreditsUsd": 200.0,
+      "id": "opencode_go_plus::deepseek-v4.1-flash",
+      "scope": {
+        "zh": "高峰",
+        "en": "Peak"
+      }
+    },
+    {
+      "plan": "opencode_go_teams",
+      "model": "kimi-k3.1-pro",
+      "endpoint": "kimi-k3.1-pro",
+      "checkedAt": "2026-11-04",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://opencode.ai/v2/docs/console/go/",
+      "identityNote": {
+        "zh": "仅对应公开型号；不代表此渠道、框架或推理强度的实测成绩。",
+        "en": "Public model identity only; not a benchmark of this channel, harness or reasoning effort."
+      },
+      "rates": {
+        "input": 2.0,
+        "output": 10.0,
+        "cache": 0.2,
+        "cacheWrite": 2.0
+      },
+      "monthlyCreditsUsd": 20.0
+    },
+    {
+      "plan": "opencode_go_teams",
+      "model": "step-5-preview",
+      "endpoint": "step-5-preview",
+      "checkedAt": "2026-11-04",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://opencode.ai/v2/docs/console/go/",
+      "identityNote": {
+        "zh": "仅对应公开型号；不代表此渠道、框架或推理强度的实测成绩。",
+        "en": "Public model identity only; not a benchmark of this channel, harness or reasoning effort."
+      },
+      "rates": {
+        "input": 1.0,
+        "output": 2.7,
+        "cache": 0.1
+      },
+      "monthlyCreditsUsd": 20.0
+    },
+    {
+      "plan": "opencode_go_teams",
+      "model": "minimax-m3.1-flash",
+      "endpoint": "minimax-m3.1-flash",
+      "checkedAt": "2026-11-04",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://opencode.ai/v2/docs/console/go/",
+      "identityNote": {
+        "zh": "仅对应公开型号；不代表此渠道、框架或推理强度的实测成绩。",
+        "en": "Public model identity only; not a benchmark of this channel, harness or reasoning effort."
+      },
+      "rates": {
+        "input": 0.15,
+        "output": 0.6,
+        "cache": 0.015
+      },
+      "monthlyCreditsUsd": 25.0
+    },
+    {
+      "plan": "opencode_go_teams",
+      "model": "deepseek-v4.1-flash",
+      "endpoint": "deepseek-v4.1-flash",
+      "checkedAt": "2026-11-04",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://models.dev/api.json",
+      "identityNote": {
+        "zh": "官方目录仍为不带日期的 deepseek-v4.1-flash，未确认等同于 1017，因此仅连接原通用型号。高峰为周一至周五 UTC 01–04、06–10。需启用 Global 区域。",
+        "en": "The catalog still uses undated deepseek-v4.1-flash, not a verified 1017 alias; only the generic model is joined. Peak: weekdays 01-04 and 06-10 UTC. Enable the Global region."
+      },
+      "rates": {
+        "input": 0.15,
+        "output": 0.6,
+        "cache": 0.003
+      },
+      "monthlyCreditsUsd": 105.0,
+      "id": "opencode_go_teams::deepseek-v4.1-flash::off-peak",
+      "scope": {
+        "zh": "低峰",
+        "en": "Off-peak"
+      }
+    },
+    {
+      "plan": "opencode_go_teams",
+      "model": "deepseek-v4.1-flash",
+      "endpoint": "deepseek-v4.1-flash",
+      "checkedAt": "2026-11-04",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://models.dev/api.json",
+      "identityNote": {
+        "zh": "官方目录仍为不带日期的 deepseek-v4.1-flash，未确认等同于 1017，因此仅连接原通用型号。高峰为周一至周五 UTC 01–04、06–10。需启用 Global 区域。",
+        "en": "The catalog still uses undated deepseek-v4.1-flash, not a verified 1017 alias; only the generic model is joined. Peak: weekdays 01-04 and 06-10 UTC. Enable the Global region."
+      },
+      "rates": {
+        "input": 0.3,
+        "output": 1.2,
+        "cache": 0.006
+      },
+      "monthlyCreditsUsd": 105.0,
+      "id": "opencode_go_teams::deepseek-v4.1-flash",
+      "scope": {
+        "zh": "高峰",
+        "en": "Peak"
+      }
+    },
+    {
+      "plan": "command_code_goat",
+      "model": "deepseek-v4.1-flash",
+      "endpoint": "deepseek-v4.1-flash",
+      "checkedAt": "2026-11-04",
+      "source": "https://commandcode.ai/docs/plans/goat",
+      "identitySource": "https://commandcode.ai/models/deepseek-v4-1-flash",
+      "identityNote": {
+        "zh": "渠道标注 latest，但发布日期仍为 9 月 10 日，无法核实 1017 对应关系；保留通用型号。高峰为周一至周五 UTC 01–04、06–10。",
+        "en": "The channel says latest but still lists September 10; no verified 1017 mapping. Keep the generic identity. Peak: weekdays 01-04 and 06-10 UTC."
+      },
+      "rates": {
+        "input": 0.15,
+        "output": 0.6,
+        "cache": 0.003
+      },
+      "monthlyCreditsUsd": 100.0,
+      "id": "command_code_goat::deepseek-v4.1-flash::off-peak",
+      "scope": {
+        "zh": "低峰",
+        "en": "Off-peak"
+      }
+    },
+    {
+      "plan": "command_code_goat",
+      "model": "deepseek-v4.1-flash",
+      "endpoint": "deepseek-v4.1-flash",
+      "checkedAt": "2026-11-04",
+      "source": "https://commandcode.ai/docs/plans/goat",
+      "identitySource": "https://commandcode.ai/models/deepseek-v4-1-flash",
+      "identityNote": {
+        "zh": "渠道标注 latest，但发布日期仍为 9 月 10 日，无法核实 1017 对应关系；保留通用型号。高峰为周一至周五 UTC 01–04、06–10。",
+        "en": "The channel says latest but still lists September 10; no verified 1017 mapping. Keep the generic identity. Peak: weekdays 01-04 and 06-10 UTC."
+      },
+      "rates": {
+        "input": 0.3,
+        "output": 1.2,
+        "cache": 0.006
+      },
+      "monthlyCreditsUsd": 100.0,
+      "id": "command_code_goat::deepseek-v4.1-flash",
+      "scope": {
+        "zh": "高峰",
+        "en": "Peak"
+      },
+      "replaces": [
+        "command_code_goat::deepseek-v4.1-flash"
+      ]
+    },
+    {
+      "plan": "command_code_goat",
+      "model": "ling-3.1-flash-1019",
+      "endpoint": "ling-3.1-flash-1019",
+      "checkedAt": "2026-11-04",
+      "source": "https://commandcode.ai/docs/plans/goat",
+      "identitySource": "https://commandcode.ai/docs/plans/goat",
+      "identityNote": {
+        "zh": "仅对应公开型号；不代表此渠道、框架或推理强度的实测成绩。",
+        "en": "Public model identity only; not a benchmark of this channel, harness or reasoning effort."
+      },
+      "rates": {
+        "input": 0.3,
+        "output": 0.9,
+        "cache": 0.06
+      },
+      "monthlyCreditsUsd": 100.0
+    },
+    {
+      "plan": "command_code_goat",
+      "model": "kimi-k3.1-pro",
+      "endpoint": "kimi-k3.1-pro",
+      "checkedAt": "2026-11-04",
+      "source": "https://commandcode.ai/docs/plans/goat",
+      "identitySource": "https://commandcode.ai/docs/plans/goat",
+      "identityNote": {
+        "zh": "仅对应公开型号；不代表此渠道、框架或推理强度的实测成绩。",
+        "en": "Public model identity only; not a benchmark of this channel, harness or reasoning effort."
+      },
+      "rates": {
+        "input": 2.0,
+        "output": 10.0,
+        "cache": 0.2
+      },
+      "monthlyCreditsUsd": 20.0
+    },
+    {
+      "plan": "command_code_goat",
+      "model": "minimax-m3.1-flash",
+      "endpoint": "minimax-m3.1-flash",
+      "checkedAt": "2026-11-04",
+      "source": "https://commandcode.ai/docs/plans/goat",
+      "identitySource": "https://commandcode.ai/docs/plans/goat",
+      "identityNote": {
+        "zh": "仅对应公开型号；不代表此渠道、框架或推理强度的实测成绩。",
+        "en": "Public model identity only; not a benchmark of this channel, harness or reasoning effort."
+      },
+      "rates": {
+        "input": 0.15,
+        "output": 0.6,
+        "cache": 0.015
+      },
+      "monthlyCreditsUsd": 20.0
+    },
+    {
+      "plan": "command_code_goat",
+      "model": "muse-spark-open",
+      "endpoint": "muse-spark-open",
+      "checkedAt": "2026-11-04",
+      "source": "https://commandcode.ai/docs/plans/goat",
+      "identitySource": "https://commandcode.ai/docs/plans/goat",
+      "identityNote": {
+        "zh": "仅对应公开型号；不代表此渠道、框架或推理强度的实测成绩。",
+        "en": "Public model identity only; not a benchmark of this channel, harness or reasoning effort."
+      },
+      "rates": {
+        "input": 1.25,
+        "output": 4.25,
+        "cache": 0.15
+      },
+      "monthlyCreditsUsd": 20.0
+    },
+    {
+      "plan": "command_code_goat",
+      "model": "nemotron-3.5-super-vl",
+      "endpoint": "nemotron-3.5-super-vl",
+      "checkedAt": "2026-11-04",
+      "source": "https://commandcode.ai/docs/plans/goat",
+      "identitySource": "https://commandcode.ai/docs/plans/goat",
+      "identityNote": {
+        "zh": "仅对应公开型号；不代表此渠道、框架或推理强度的实测成绩。",
+        "en": "Public model identity only; not a benchmark of this channel, harness or reasoning effort."
+      },
+      "rates": {
+        "input": 0.2,
+        "output": 0.5,
+        "cache": 0.04
+      },
+      "monthlyCreditsUsd": 20.0
+    },
+    {
+      "plan": "ollama_pro_credits",
+      "model": "deepseek-v4.1-flash-1017",
+      "endpoint": "deepseek-v4.1-flash:1017-cloud",
+      "checkedAt": "2026-11-04",
+      "source": "https://ollama.com/pricing",
+      "identitySource": "https://ollama.com/library/deepseek-v4.1-flash:1017-cloud",
+      "identityNote": {
+        "zh": "官方明确提供 1017-cloud 标签及费率。本站按套餐价格页时段：工作日 UTC 12–18 为高峰，其余为低峰；与 DeepSeek 直连时段不同。",
+        "en": "The official 1017-cloud tag states these rates. Plan pricing defines peak as weekdays 12-18 UTC; other hours are off-peak, unlike DeepSeek direct billing."
+      },
+      "rates": {
+        "input": 0.3,
+        "output": 1.2,
+        "cache": 0.006
+      },
+      "monthlyCreditsUsd": 60.0,
+      "scope": {
+        "zh": "高峰",
+        "en": "Peak"
+      }
+    },
+    {
+      "plan": "ollama_pro_credits",
+      "model": "deepseek-v4.1-flash-1017",
+      "endpoint": "deepseek-v4.1-flash:1017-cloud",
+      "checkedAt": "2026-11-04",
+      "source": "https://ollama.com/pricing",
+      "identitySource": "https://ollama.com/library/deepseek-v4.1-flash:1017-cloud",
+      "identityNote": {
+        "zh": "官方明确提供 1017-cloud 标签及费率。本站按套餐价格页时段：工作日 UTC 12–18 为高峰，其余为低峰；与 DeepSeek 直连时段不同。",
+        "en": "The official 1017-cloud tag states these rates. Plan pricing defines peak as weekdays 12-18 UTC; other hours are off-peak, unlike DeepSeek direct billing."
+      },
+      "rates": {
+        "input": 0.15,
+        "output": 0.6,
+        "cache": 0.003
+      },
+      "monthlyCreditsUsd": 60.0,
+      "scope": {
+        "zh": "低峰",
+        "en": "Off-peak"
+      },
+      "id": "ollama_pro_credits::deepseek-v4.1-flash-1017::off-peak"
+    },
+    {
+      "plan": "ollama_pro_credits",
+      "model": "minimax-m3.1-flash",
+      "endpoint": "minimax-m3.1-flash",
+      "checkedAt": "2026-11-04",
+      "source": "https://ollama.com/pricing",
+      "identitySource": "https://ollama.com/library/minimax-m3.1-flash",
+      "identityNote": {
+        "zh": "仅对应公开型号；不代表此渠道、框架或推理强度的实测成绩。",
+        "en": "Public model identity only; not a benchmark of this channel, harness or reasoning effort."
+      },
+      "rates": {
+        "input": 0.15,
+        "output": 0.6,
+        "cache": 0.015
+      },
+      "monthlyCreditsUsd": 60.0
+    },
+    {
+      "plan": "ollama_pro_credits",
+      "model": "muse-spark-open",
+      "endpoint": "muse-spark-open",
+      "checkedAt": "2026-11-04",
+      "source": "https://ollama.com/pricing",
+      "identitySource": "https://ollama.com/library/muse-spark-open",
+      "identityNote": {
+        "zh": "仅对应公开型号；不代表此渠道、框架或推理强度的实测成绩。",
+        "en": "Public model identity only; not a benchmark of this channel, harness or reasoning effort."
+      },
+      "rates": {
+        "input": 1.25,
+        "output": 4.25,
+        "cache": 0.15
+      },
+      "monthlyCreditsUsd": 60.0
+    },
+    {
+      "plan": "ollama_max_credits",
+      "model": "deepseek-v4.1-flash-1017",
+      "endpoint": "deepseek-v4.1-flash:1017-cloud",
+      "checkedAt": "2026-11-04",
+      "source": "https://ollama.com/pricing",
+      "identitySource": "https://ollama.com/library/deepseek-v4.1-flash:1017-cloud",
+      "identityNote": {
+        "zh": "官方明确提供 1017-cloud 标签及费率。本站按套餐价格页时段：工作日 UTC 12–18 为高峰，其余为低峰；与 DeepSeek 直连时段不同。",
+        "en": "The official 1017-cloud tag states these rates. Plan pricing defines peak as weekdays 12-18 UTC; other hours are off-peak, unlike DeepSeek direct billing."
+      },
+      "rates": {
+        "input": 0.3,
+        "output": 1.2,
+        "cache": 0.006
+      },
+      "monthlyCreditsUsd": 300.0,
+      "scope": {
+        "zh": "高峰",
+        "en": "Peak"
+      }
+    },
+    {
+      "plan": "ollama_max_credits",
+      "model": "deepseek-v4.1-flash-1017",
+      "endpoint": "deepseek-v4.1-flash:1017-cloud",
+      "checkedAt": "2026-11-04",
+      "source": "https://ollama.com/pricing",
+      "identitySource": "https://ollama.com/library/deepseek-v4.1-flash:1017-cloud",
+      "identityNote": {
+        "zh": "官方明确提供 1017-cloud 标签及费率。本站按套餐价格页时段：工作日 UTC 12–18 为高峰，其余为低峰；与 DeepSeek 直连时段不同。",
+        "en": "The official 1017-cloud tag states these rates. Plan pricing defines peak as weekdays 12-18 UTC; other hours are off-peak, unlike DeepSeek direct billing."
+      },
+      "rates": {
+        "input": 0.15,
+        "output": 0.6,
+        "cache": 0.003
+      },
+      "monthlyCreditsUsd": 300.0,
+      "scope": {
+        "zh": "低峰",
+        "en": "Off-peak"
+      },
+      "id": "ollama_max_credits::deepseek-v4.1-flash-1017::off-peak"
+    },
+    {
+      "plan": "ollama_max_credits",
+      "model": "minimax-m3.1-flash",
+      "endpoint": "minimax-m3.1-flash",
+      "checkedAt": "2026-11-04",
+      "source": "https://ollama.com/pricing",
+      "identitySource": "https://ollama.com/library/minimax-m3.1-flash",
+      "identityNote": {
+        "zh": "仅对应公开型号；不代表此渠道、框架或推理强度的实测成绩。",
+        "en": "Public model identity only; not a benchmark of this channel, harness or reasoning effort."
+      },
+      "rates": {
+        "input": 0.15,
+        "output": 0.6,
+        "cache": 0.015
+      },
+      "monthlyCreditsUsd": 300.0
+    },
+    {
+      "plan": "ollama_max_credits",
+      "model": "muse-spark-open",
+      "endpoint": "muse-spark-open",
+      "checkedAt": "2026-11-04",
+      "source": "https://ollama.com/pricing",
+      "identitySource": "https://ollama.com/library/muse-spark-open",
+      "identityNote": {
+        "zh": "仅对应公开型号；不代表此渠道、框架或推理强度的实测成绩。",
+        "en": "Public model identity only; not a benchmark of this channel, harness or reasoning effort."
+      },
+      "rates": {
+        "input": 1.25,
+        "output": 4.25,
+        "cache": 0.15
+      },
+      "monthlyCreditsUsd": 300.0
+    },
+    {
+      "plan": "ollama_team_credits",
+      "model": "deepseek-v4.1-flash-1017",
+      "endpoint": "deepseek-v4.1-flash:1017-cloud",
+      "checkedAt": "2026-11-04",
+      "source": "https://ollama.com/pricing",
+      "identitySource": "https://ollama.com/library/deepseek-v4.1-flash:1017-cloud",
+      "identityNote": {
+        "zh": "官方明确提供 1017-cloud 标签及费率。本站按套餐价格页时段：工作日 UTC 12–18 为高峰，其余为低峰；与 DeepSeek 直连时段不同。",
+        "en": "The official 1017-cloud tag states these rates. Plan pricing defines peak as weekdays 12-18 UTC; other hours are off-peak, unlike DeepSeek direct billing."
+      },
+      "rates": {
+        "input": 0.3,
+        "output": 1.2,
+        "cache": 0.006
+      },
+      "monthlyCreditsUsd": 1000.0,
+      "scope": {
+        "zh": "高峰",
+        "en": "Peak"
+      }
+    },
+    {
+      "plan": "ollama_team_credits",
+      "model": "deepseek-v4.1-flash-1017",
+      "endpoint": "deepseek-v4.1-flash:1017-cloud",
+      "checkedAt": "2026-11-04",
+      "source": "https://ollama.com/pricing",
+      "identitySource": "https://ollama.com/library/deepseek-v4.1-flash:1017-cloud",
+      "identityNote": {
+        "zh": "官方明确提供 1017-cloud 标签及费率。本站按套餐价格页时段：工作日 UTC 12–18 为高峰，其余为低峰；与 DeepSeek 直连时段不同。",
+        "en": "The official 1017-cloud tag states these rates. Plan pricing defines peak as weekdays 12-18 UTC; other hours are off-peak, unlike DeepSeek direct billing."
+      },
+      "rates": {
+        "input": 0.15,
+        "output": 0.6,
+        "cache": 0.003
+      },
+      "monthlyCreditsUsd": 1000.0,
+      "scope": {
+        "zh": "低峰",
+        "en": "Off-peak"
+      },
+      "id": "ollama_team_credits::deepseek-v4.1-flash-1017::off-peak"
+    },
+    {
+      "plan": "ollama_team_credits",
+      "model": "minimax-m3.1-flash",
+      "endpoint": "minimax-m3.1-flash",
+      "checkedAt": "2026-11-04",
+      "source": "https://ollama.com/pricing",
+      "identitySource": "https://ollama.com/library/minimax-m3.1-flash",
+      "identityNote": {
+        "zh": "仅对应公开型号；不代表此渠道、框架或推理强度的实测成绩。",
+        "en": "Public model identity only; not a benchmark of this channel, harness or reasoning effort."
+      },
+      "rates": {
+        "input": 0.15,
+        "output": 0.6,
+        "cache": 0.015
+      },
+      "monthlyCreditsUsd": 1000.0
+    },
+    {
+      "plan": "ollama_team_credits",
+      "model": "muse-spark-open",
+      "endpoint": "muse-spark-open",
+      "checkedAt": "2026-11-04",
+      "source": "https://ollama.com/pricing",
+      "identitySource": "https://ollama.com/library/muse-spark-open",
+      "identityNote": {
+        "zh": "仅对应公开型号；不代表此渠道、框架或推理强度的实测成绩。",
+        "en": "Public model identity only; not a benchmark of this channel, harness or reasoning effort."
+      },
+      "rates": {
+        "input": 1.25,
+        "output": 4.25,
+        "cache": 0.15
+      },
+      "monthlyCreditsUsd": 1000.0
+    }
+  ],
+  "legacyPlanIds": [
+    "ollama_pro",
+    "ollama_max"
+  ],
+  "reviews": [
+    {
+      "channel": "OpenCode",
+      "models": [
+        "deepseek-v4.1-flash-1017"
+      ],
+      "status": "version-unverified",
+      "checkedAt": "2026-11-04",
+      "note": {
+        "zh": "Go 已提供 DeepSeek V4.1 Flash；Go / Plus / Teams 月额度为 $100 / $200 / $105。不带日期的渠道别名尚未确认对应 1017。可在通用型号页查看套餐。",
+        "en": "Go offers DeepSeek V4.1 Flash with $100 / $200 / $105 credits on Go / Plus / Teams. The undated alias is not verified as 1017. See the generic model page for plans."
+      },
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "relatedModels": [
+        "deepseek-v4.1-flash"
+      ]
+    },
+    {
+      "channel": "Command Code",
+      "models": [
+        "deepseek-v4.1-flash-1017"
+      ],
+      "status": "version-unverified",
+      "checkedAt": "2026-11-04",
+      "note": {
+        "zh": "GOAT 已提供 DeepSeek V4.1 Flash latest，月额度 $100；公开型号页未明确对应 1017。",
+        "en": "GOAT offers DeepSeek V4.1 Flash latest with $100 monthly credits, but the public model page does not identify it as 1017."
+      },
+      "source": "https://commandcode.ai/docs/plans/goat",
+      "relatedModels": [
+        "deepseek-v4.1-flash"
+      ]
+    },
+    {
+      "channel": "Command Code",
+      "models": [
+        "mistral-large-4"
+      ],
+      "status": "version-unverified",
+      "checkedAt": "2026-11-04",
+      "note": {
+        "zh": "已上线并有 $20 月信用额度；当前权重与榜单评测版本仍待核实，暂不绘图。",
+        "en": "Available with $20 monthly credits; served weights versus benchmark version still need verification before plotting."
+      },
+      "source": "https://commandcode.ai/docs/plans/goat"
+    },
+    {
+      "channel": "Ollama",
+      "models": [
+        "mistral-large-4"
+      ],
+      "status": "version-unverified",
+      "checkedAt": "2026-11-04",
+      "note": {
+        "zh": "已在云端上线并列出费率，但新版权重对应关系尚待核实，暂不绘图。",
+        "en": "Cloud availability and rates are listed; the updated weight version still needs verification before plotting."
+      },
+      "source": "https://ollama.com/pricing"
+    },
+    {
+      "channel": "Cursor",
+      "models": [
+        "muse-wonder"
+      ],
+      "status": "extra-usage",
+      "checkedAt": "2026-11-04",
+      "note": {
+        "zh": "Muse Wonder 已列为第三方模型。当前新套餐需使用预付信用额另付 API 费用，不能把月费折算为该模型的包含额度。",
+        "en": "Muse Wonder is a listed third-party model. Current plans bill it separately from prepaid credits at API rates; subscription fees do not buy an included model quota."
+      },
+      "source": "https://cursor.com/docs/models-and-pricing"
+    },
+    {
+      "channel": "OpenCode",
+      "models": [
+        "beam-1.0"
+      ],
+      "status": "version-unverified",
+      "checkedAt": "2026-11-04",
+      "note": {
+        "zh": "Beam Free 为限时且限地区的服务；尚未核实免费别名与 Beam 1.0 的精确对应，暂不作为永久零价点。",
+        "en": "Beam Free is temporary and region restricted. Its precise identity versus Beam 1.0 is unverified; no permanent zero-cost point is inferred."
+      },
+      "source": "https://opencode.ai/v2/docs/console/go/"
+    },
+    {
+      "channel": "Command Code",
+      "models": [
+        "beam-1.0"
+      ],
+      "status": "temporary-free",
+      "checkedAt": "2026-11-04",
+      "note": {
+        "zh": "官方目录标注 Beam 1.0 免费；免费活动及容量条件尚未单独归档，不换算为有保证的订阅 token 额度。",
+        "en": "The catalog lists Beam 1.0 as free. Promotion and capacity terms are not separately archived; no guaranteed subscription token allowance is inferred."
+      },
+      "source": "https://commandcode.ai/docs/plans/goat"
+    },
+    {
+      "channel": "Ollama",
+      "models": [
+        "beam-1.0"
+      ],
+      "status": "temporary-free",
+      "checkedAt": "2026-11-04",
+      "note": {
+        "zh": "云目录标注 Beam 免费，未核实活动期限与容量承诺；仅保留可用性记录。",
+        "en": "The cloud catalog lists Beam as free; promotion duration and capacity are unverified. Availability is recorded without a quota estimate."
+      },
+      "source": "https://ollama.com/search?c=cloud"
+    },
+    {
+      "channel": "Factory",
+      "models": [
+        "deepseek-v4.1-flash-1017",
+        "minimax-m3.1-flash",
+        "beam-1.0"
+      ],
+      "status": "quota-unverified",
+      "checkedAt": "2026-11-04",
+      "source": "https://docs.factory.com/models",
+      "note": {
+        "zh": "官方已列出 DeepSeek V4.1 Flash 1017、MiniMax M3.1 Flash、Beam 1.0 及倍率。当前套餐文档仅给出滚动限额与相对倍数，缺少可核实的基础 token 额度；先记录可用性，不沿用旧实测量推算新模型。",
+        "en": "The official catalog lists DeepSeek V4.1 Flash 1017, MiniMax M3.1 Flash and Beam 1.0 with multipliers. Current plans document rolling limits and relative tiers without a verifiable base token quota. Availability is recorded; old measurements are not copied to new models."
+      }
+    }
+  ],
+  "evidenceFiles": [
+    "evidence-2026-11-04.json"
+  ]
+}

@@ -1,0 +1,1810 @@
+{
+  "checkedAt": "2026-11-04",
+  "sources": [
+    {
+      "url": "https://opencode.ai/v2/docs/console/go/",
+      "sha256": "7c32e88b8043d1ff218d21d23dd03733118a2a2ab1bcb8e53b1c8263abd6e514",
+      "tables": [
+        [
+          [
+            "Plan",
+            "Price",
+            "Included usage"
+          ],
+          [
+            "Go",
+            "$10/month",
+            "Lower-cost access to the models below"
+          ],
+          [
+            "Go Plus",
+            "$40/month",
+            "Higher usage limits across the models below"
+          ],
+          [
+            "Go Teams",
+            "$20/member/month",
+            "Every member gets their own limits, $5/month higher than Go on every model"
+          ]
+        ],
+        [
+          [
+            "Model",
+            "Input",
+            "Output",
+            "Cached Read",
+            "Cached Write",
+            "Monthly limit"
+          ],
+          [
+            "GLM-5.3-Flash",
+            "$0.15",
+            "$0.50",
+            "$0.03",
+            "-",
+            "$60"
+          ],
+          [
+            "GLM-5.3",
+            "$1.40",
+            "$4.40",
+            "$0.26",
+            "-",
+            "$15"
+          ],
+          [
+            "GLM-5.2",
+            "$1.40",
+            "$4.40",
+            "$0.26",
+            "-",
+            "$60"
+          ],
+          [
+            "Kimi K3.1 Pro",
+            "$2.00",
+            "$10.00",
+            "$0.20",
+            "$2.00",
+            "$15"
+          ],
+          [
+            "Kimi K3",
+            "$3.00",
+            "$15.00",
+            "$0.30",
+            "$3.00",
+            "$15"
+          ],
+          [
+            "Kimi K2.7 Code",
+            "$0.95",
+            "$4.00",
+            "$0.19",
+            "-",
+            "$60"
+          ],
+          [
+            "LongCat-2.0",
+            "$0.30",
+            "$1.20",
+            "$0.006",
+            "-",
+            "$60"
+          ],
+          [
+            "Step 5 Preview",
+            "$1.00",
+            "$2.70",
+            "$0.10",
+            "-",
+            "$15"
+          ],
+          [
+            "Beam Free",
+            "Free",
+            "Free",
+            "Free",
+            "-",
+            "Unlimitedlimited time"
+          ],
+          [
+            "Iceman Contributor Free",
+            "Free",
+            "Free",
+            "Free",
+            "-",
+            "Unlimitedlimited time"
+          ],
+          [
+            "MiMo-V2.6-Flash",
+            "$0.14",
+            "$0.28",
+            "$0.0028",
+            "-",
+            "$60"
+          ],
+          [
+            "MiMo-V2.6-Pro",
+            "$0.435",
+            "$0.87",
+            "$0.003625",
+            "-",
+            "$15"
+          ],
+          [
+            "MiMo-V2.5",
+            "$0.14",
+            "$0.28",
+            "$0.0028",
+            "-",
+            "$60"
+          ],
+          [
+            "MiMo-V2.5-Pro",
+            "$0.435",
+            "$0.87",
+            "$0.003625",
+            "-",
+            "$15"
+          ],
+          [
+            "MiniMax M3.1 Flash",
+            "$0.15",
+            "$0.60",
+            "$0.015",
+            "-",
+            "$20"
+          ],
+          [
+            "MiniMax M3 (≤ 512K tokens)",
+            "$0.30",
+            "$1.20",
+            "$0.06",
+            "-",
+            "$60"
+          ],
+          [
+            "MiniMax M3 (> 512K tokens)",
+            "$0.60",
+            "$2.40",
+            "$0.12",
+            "-",
+            "$60"
+          ],
+          [
+            "Muse Spark 1.3 Contributor",
+            "$0.10",
+            "$0.20",
+            "$0.002",
+            "-",
+            "$60"
+          ],
+          [
+            "Muse Spark 1.2 Contributor",
+            "$0.10",
+            "$0.20",
+            "$0.002",
+            "-",
+            "$60"
+          ],
+          [
+            "Qwen3.8 Max",
+            "$2.00",
+            "$6.00",
+            "$0.25",
+            "$2.50",
+            "$15"
+          ],
+          [
+            "Qwen3.8 Flash",
+            "$0.15",
+            "$0.47",
+            "$0.016",
+            "$0.20",
+            "$30"
+          ],
+          [
+            "Qwen3.7 Plus (≤ 256K tokens)",
+            "$0.40",
+            "$1.60",
+            "$0.04",
+            "$0.50",
+            "$60"
+          ],
+          [
+            "Qwen3.7 Plus (> 256K tokens)",
+            "$1.20",
+            "$4.80",
+            "$0.12",
+            "$1.50",
+            "$60"
+          ],
+          [
+            "DeepSeek V4.1 Flash (Off-Peak)",
+            "$0.15",
+            "$0.60",
+            "$0.003",
+            "-",
+            "$100"
+          ],
+          [
+            "DeepSeek V4.1 Flash (Peak)",
+            "$0.30",
+            "$1.20",
+            "$0.006",
+            "-",
+            "$100"
+          ],
+          [
+            "DeepSeek V4 Pro (Off-Peak)",
+            "$0.66",
+            "$1.98",
+            "$0.022",
+            "-",
+            "$15"
+          ],
+          [
+            "DeepSeek V4 Pro (Peak)",
+            "$1.32",
+            "$3.96",
+            "$0.044",
+            "-",
+            "$15"
+          ],
+          [
+            "Hy4 preview",
+            "$0.834",
+            "$2.501",
+            "$0.042",
+            "-",
+            "$30"
+          ],
+          [
+            "Hy3",
+            "$0.14",
+            "$0.58",
+            "$0.035",
+            "-",
+            "$60"
+          ],
+          [
+            "Grok 4.7 (≤ 200K tokens)",
+            "$2.00",
+            "$6.00",
+            "$0.50",
+            "-",
+            "$15"
+          ],
+          [
+            "Grok 4.7 (> 200K tokens)",
+            "$4.00",
+            "$12.00",
+            "$1.00",
+            "-",
+            "$15"
+          ],
+          [
+            "GPT 6 Luna (≤ 272K tokens)",
+            "$0.10",
+            "$0.50",
+            "$0.01",
+            "$0.125",
+            "$15"
+          ],
+          [
+            "GPT 6 Luna (> 272K tokens)",
+            "$0.20",
+            "$0.75",
+            "$0.02",
+            "$0.25",
+            "$15"
+          ],
+          [
+            "GPT 5.6 Luna (≤ 272K tokens)",
+            "$0.20",
+            "$1.20",
+            "$0.02",
+            "$0.25",
+            "$15"
+          ],
+          [
+            "GPT 5.6 Luna (> 272K tokens)",
+            "$0.40",
+            "$1.80",
+            "$0.04",
+            "$0.50",
+            "$15"
+          ],
+          [
+            "Claude Haiku 5.5 (≤ 100K tokens)",
+            "$0.10",
+            "$0.50",
+            "$0.01",
+            "$0.125",
+            "$15"
+          ],
+          [
+            "Claude Haiku 5.5 (> 100K tokens)",
+            "$0.50",
+            "$2.50",
+            "$0.05",
+            "$0.625",
+            "$15"
+          ],
+          [
+            "Gemini 4 Argon (50% off)",
+            "$4.00 $2.00",
+            "$20.00 $10.00",
+            "$0.20 $0.10",
+            "-",
+            "$30"
+          ]
+        ],
+        [
+          [
+            "Model",
+            "Input",
+            "Output",
+            "Cached Read",
+            "Cached Write",
+            "Monthly limit"
+          ],
+          [
+            "GLM-5.3-Flash",
+            "$0.15",
+            "$0.50",
+            "$0.03",
+            "-",
+            "$180"
+          ],
+          [
+            "GLM-5.3",
+            "$1.40",
+            "$4.40",
+            "$0.26",
+            "-",
+            "$120"
+          ],
+          [
+            "GLM-5.2",
+            "$1.40",
+            "$4.40",
+            "$0.26",
+            "-",
+            "$180"
+          ],
+          [
+            "Kimi K3.1 Pro",
+            "$2.00",
+            "$10.00",
+            "$0.20",
+            "$2.00",
+            "$60"
+          ],
+          [
+            "Kimi K3",
+            "$3.00",
+            "$15.00",
+            "$0.30",
+            "$3.00",
+            "$60"
+          ],
+          [
+            "Kimi K2.7 Code",
+            "$0.95",
+            "$4.00",
+            "$0.19",
+            "-",
+            "$180"
+          ],
+          [
+            "LongCat-2.0",
+            "$0.30",
+            "$1.20",
+            "$0.006",
+            "-",
+            "$240"
+          ],
+          [
+            "Step 5 Preview",
+            "$1.00",
+            "$2.70",
+            "$0.10",
+            "-",
+            "$60"
+          ],
+          [
+            "Beam Free",
+            "Free",
+            "Free",
+            "Free",
+            "-",
+            "Unlimitedlimited time"
+          ],
+          [
+            "Iceman Contributor Free",
+            "Free",
+            "Free",
+            "Free",
+            "-",
+            "Unlimitedlimited time"
+          ],
+          [
+            "MiMo-V2.6-Flash",
+            "$0.14",
+            "$0.28",
+            "$0.0028",
+            "-",
+            "$120"
+          ],
+          [
+            "MiMo-V2.6-Pro",
+            "$0.435",
+            "$0.87",
+            "$0.003625",
+            "-",
+            "$60"
+          ],
+          [
+            "MiMo-V2.5",
+            "$0.14",
+            "$0.28",
+            "$0.0028",
+            "-",
+            "$120"
+          ],
+          [
+            "MiMo-V2.5-Pro",
+            "$0.435",
+            "$0.87",
+            "$0.003625",
+            "-",
+            "$60"
+          ],
+          [
+            "MiniMax M3.1 Flash",
+            "$0.15",
+            "$0.60",
+            "$0.015",
+            "-",
+            "$80"
+          ],
+          [
+            "MiniMax M3 (≤ 512K tokens)",
+            "$0.30",
+            "$1.20",
+            "$0.06",
+            "-",
+            "$180"
+          ],
+          [
+            "MiniMax M3 (> 512K tokens)",
+            "$0.60",
+            "$2.40",
+            "$0.12",
+            "-",
+            "$180"
+          ],
+          [
+            "Muse Spark 1.3 Contributor",
+            "$0.10",
+            "$0.20",
+            "$0.002",
+            "-",
+            "$120"
+          ],
+          [
+            "Muse Spark 1.2 Contributor",
+            "$0.10",
+            "$0.20",
+            "$0.002",
+            "-",
+            "$120"
+          ],
+          [
+            "Qwen3.8 Max",
+            "$2.00",
+            "$6.00",
+            "$0.25",
+            "$2.50",
+            "$60"
+          ],
+          [
+            "Qwen3.8 Flash",
+            "$0.15",
+            "$0.47",
+            "$0.016",
+            "$0.20",
+            "$90"
+          ],
+          [
+            "Qwen3.7 Plus (≤ 256K tokens)",
+            "$0.40",
+            "$1.60",
+            "$0.04",
+            "$0.50",
+            "$180"
+          ],
+          [
+            "Qwen3.7 Plus (> 256K tokens)",
+            "$1.20",
+            "$4.80",
+            "$0.12",
+            "$1.50",
+            "$180"
+          ],
+          [
+            "DeepSeek V4.1 Flash (Off-Peak)",
+            "$0.15",
+            "$0.60",
+            "$0.003",
+            "-",
+            "$200"
+          ],
+          [
+            "DeepSeek V4.1 Flash (Peak)",
+            "$0.30",
+            "$1.20",
+            "$0.006",
+            "-",
+            "$200"
+          ],
+          [
+            "DeepSeek V4 Pro (Off-Peak)",
+            "$0.66",
+            "$1.98",
+            "$0.022",
+            "-",
+            "$60"
+          ],
+          [
+            "DeepSeek V4 Pro (Peak)",
+            "$1.32",
+            "$3.96",
+            "$0.044",
+            "-",
+            "$60"
+          ],
+          [
+            "Hy4 preview",
+            "$0.834",
+            "$2.501",
+            "$0.042",
+            "-",
+            "$120"
+          ],
+          [
+            "Hy3",
+            "$0.14",
+            "$0.58",
+            "$0.035",
+            "-",
+            "$240"
+          ],
+          [
+            "Grok 4.7 (≤ 200K tokens)",
+            "$2.00",
+            "$6.00",
+            "$0.50",
+            "-",
+            "$60"
+          ],
+          [
+            "Grok 4.7 (> 200K tokens)",
+            "$4.00",
+            "$12.00",
+            "$1.00",
+            "-",
+            "$60"
+          ],
+          [
+            "GPT 6 Luna (≤ 272K tokens)",
+            "$0.10",
+            "$0.50",
+            "$0.01",
+            "$0.125",
+            "$60"
+          ],
+          [
+            "GPT 6 Luna (> 272K tokens)",
+            "$0.20",
+            "$0.75",
+            "$0.02",
+            "$0.25",
+            "$60"
+          ],
+          [
+            "GPT 5.6 Luna (≤ 272K tokens)",
+            "$0.20",
+            "$1.20",
+            "$0.02",
+            "$0.25",
+            "$60"
+          ],
+          [
+            "GPT 5.6 Luna (> 272K tokens)",
+            "$0.40",
+            "$1.80",
+            "$0.04",
+            "$0.50",
+            "$60"
+          ],
+          [
+            "Claude Haiku 5.5 (≤ 100K tokens)",
+            "$0.10",
+            "$0.50",
+            "$0.01",
+            "$0.125",
+            "$60"
+          ],
+          [
+            "Claude Haiku 5.5 (> 100K tokens)",
+            "$0.50",
+            "$2.50",
+            "$0.05",
+            "$0.625",
+            "$60"
+          ],
+          [
+            "Gemini 4 Argon (50% off)",
+            "$4.00 $2.00",
+            "$20.00 $10.00",
+            "$0.20 $0.10",
+            "-",
+            "$120"
+          ]
+        ],
+        [
+          [
+            "Model",
+            "Input",
+            "Output",
+            "Cached Read",
+            "Cached Write",
+            "Monthly limit"
+          ],
+          [
+            "GLM-5.3-Flash",
+            "$0.15",
+            "$0.50",
+            "$0.03",
+            "-",
+            "$65"
+          ],
+          [
+            "GLM-5.3",
+            "$1.40",
+            "$4.40",
+            "$0.26",
+            "-",
+            "$20"
+          ],
+          [
+            "GLM-5.2",
+            "$1.40",
+            "$4.40",
+            "$0.26",
+            "-",
+            "$65"
+          ],
+          [
+            "Kimi K3.1 Pro",
+            "$2.00",
+            "$10.00",
+            "$0.20",
+            "$2.00",
+            "$20"
+          ],
+          [
+            "Kimi K3",
+            "$3.00",
+            "$15.00",
+            "$0.30",
+            "$3.00",
+            "$20"
+          ],
+          [
+            "Kimi K2.7 Code",
+            "$0.95",
+            "$4.00",
+            "$0.19",
+            "-",
+            "$65"
+          ],
+          [
+            "LongCat-2.0",
+            "$0.30",
+            "$1.20",
+            "$0.006",
+            "-",
+            "$65"
+          ],
+          [
+            "Step 5 Preview",
+            "$1.00",
+            "$2.70",
+            "$0.10",
+            "-",
+            "$20"
+          ],
+          [
+            "Beam Free",
+            "Free",
+            "Free",
+            "Free",
+            "-",
+            "Unlimitedlimited time"
+          ],
+          [
+            "Iceman Contributor Free",
+            "Free",
+            "Free",
+            "Free",
+            "-",
+            "Unlimitedlimited time"
+          ],
+          [
+            "MiMo-V2.6-Flash",
+            "$0.14",
+            "$0.28",
+            "$0.0028",
+            "-",
+            "$65"
+          ],
+          [
+            "MiMo-V2.6-Pro",
+            "$0.435",
+            "$0.87",
+            "$0.003625",
+            "-",
+            "$20"
+          ],
+          [
+            "MiMo-V2.5",
+            "$0.14",
+            "$0.28",
+            "$0.0028",
+            "-",
+            "$65"
+          ],
+          [
+            "MiMo-V2.5-Pro",
+            "$0.435",
+            "$0.87",
+            "$0.003625",
+            "-",
+            "$20"
+          ],
+          [
+            "MiniMax M3.1 Flash",
+            "$0.15",
+            "$0.60",
+            "$0.015",
+            "-",
+            "$25"
+          ],
+          [
+            "MiniMax M3 (≤ 512K tokens)",
+            "$0.30",
+            "$1.20",
+            "$0.06",
+            "-",
+            "$65"
+          ],
+          [
+            "MiniMax M3 (> 512K tokens)",
+            "$0.60",
+            "$2.40",
+            "$0.12",
+            "-",
+            "$65"
+          ],
+          [
+            "Muse Spark 1.3 Contributor",
+            "$0.10",
+            "$0.20",
+            "$0.002",
+            "-",
+            "$65"
+          ],
+          [
+            "Muse Spark 1.2 Contributor",
+            "$0.10",
+            "$0.20",
+            "$0.002",
+            "-",
+            "$65"
+          ],
+          [
+            "Qwen3.8 Max",
+            "$2.00",
+            "$6.00",
+            "$0.25",
+            "$2.50",
+            "$20"
+          ],
+          [
+            "Qwen3.8 Flash",
+            "$0.15",
+            "$0.47",
+            "$0.016",
+            "$0.20",
+            "$35"
+          ],
+          [
+            "Qwen3.7 Plus (≤ 256K tokens)",
+            "$0.40",
+            "$1.60",
+            "$0.04",
+            "$0.50",
+            "$65"
+          ],
+          [
+            "Qwen3.7 Plus (> 256K tokens)",
+            "$1.20",
+            "$4.80",
+            "$0.12",
+            "$1.50",
+            "$65"
+          ],
+          [
+            "DeepSeek V4.1 Flash (Off-Peak)",
+            "$0.15",
+            "$0.60",
+            "$0.003",
+            "-",
+            "$105"
+          ],
+          [
+            "DeepSeek V4.1 Flash (Peak)",
+            "$0.30",
+            "$1.20",
+            "$0.006",
+            "-",
+            "$105"
+          ],
+          [
+            "DeepSeek V4 Pro (Off-Peak)",
+            "$0.66",
+            "$1.98",
+            "$0.022",
+            "-",
+            "$20"
+          ],
+          [
+            "DeepSeek V4 Pro (Peak)",
+            "$1.32",
+            "$3.96",
+            "$0.044",
+            "-",
+            "$20"
+          ],
+          [
+            "Hy4 preview",
+            "$0.834",
+            "$2.501",
+            "$0.042",
+            "-",
+            "$35"
+          ],
+          [
+            "Hy3",
+            "$0.14",
+            "$0.58",
+            "$0.035",
+            "-",
+            "$65"
+          ],
+          [
+            "Grok 4.7 (≤ 200K tokens)",
+            "$2.00",
+            "$6.00",
+            "$0.50",
+            "-",
+            "$20"
+          ],
+          [
+            "Grok 4.7 (> 200K tokens)",
+            "$4.00",
+            "$12.00",
+            "$1.00",
+            "-",
+            "$20"
+          ],
+          [
+            "GPT 6 Luna (≤ 272K tokens)",
+            "$0.10",
+            "$0.50",
+            "$0.01",
+            "$0.125",
+            "$20"
+          ],
+          [
+            "GPT 6 Luna (> 272K tokens)",
+            "$0.20",
+            "$0.75",
+            "$0.02",
+            "$0.25",
+            "$20"
+          ],
+          [
+            "GPT 5.6 Luna (≤ 272K tokens)",
+            "$0.20",
+            "$1.20",
+            "$0.02",
+            "$0.25",
+            "$20"
+          ],
+          [
+            "GPT 5.6 Luna (> 272K tokens)",
+            "$0.40",
+            "$1.80",
+            "$0.04",
+            "$0.50",
+            "$20"
+          ],
+          [
+            "Claude Haiku 5.5 (≤ 100K tokens)",
+            "$0.10",
+            "$0.50",
+            "$0.01",
+            "$0.125",
+            "$20"
+          ],
+          [
+            "Claude Haiku 5.5 (> 100K tokens)",
+            "$0.50",
+            "$2.50",
+            "$0.05",
+            "$0.625",
+            "$20"
+          ],
+          [
+            "Gemini 4 Argon (50% off)",
+            "$4.00 $2.00",
+            "$20.00 $10.00",
+            "$0.20 $0.10",
+            "-",
+            "$35"
+          ]
+        ],
+        [
+          [
+            "Model",
+            "Model ID",
+            "Endpoint",
+            "AI SDK Package"
+          ],
+          [
+            "Grok 4.7",
+            "grok-4.7",
+            "https://opencode.ai/inference/go/openai/v1/responses",
+            "@ai-sdk/openai"
+          ],
+          [
+            "GPT 6 Luna",
+            "gpt-6-luna",
+            "https://opencode.ai/inference/go/openai/v1/responses",
+            "@ai-sdk/openai"
+          ],
+          [
+            "GPT 5.6 Luna",
+            "gpt-5.6-luna",
+            "https://opencode.ai/inference/go/openai/v1/responses",
+            "@ai-sdk/openai"
+          ],
+          [
+            "Claude Haiku 5.5",
+            "claude-haiku-5-5",
+            "https://opencode.ai/inference/go/anthropic/v1/messages",
+            "@ai-sdk/anthropic"
+          ],
+          [
+            "Gemini 4 Argon",
+            "gemini-4-argon",
+            "https://opencode.ai/inference/go/google/v1beta/models/gemini-4-argon",
+            "@ai-sdk/google"
+          ],
+          [
+            "GLM-5.3-Flash",
+            "glm-5.3-flash",
+            "https://opencode.ai/inference/go/openai/v1/chat/completions",
+            "@ai-sdk/openai-compatible"
+          ],
+          [
+            "GLM-5.3",
+            "glm-5.3",
+            "https://opencode.ai/inference/go/openai/v1/chat/completions",
+            "@ai-sdk/openai-compatible"
+          ],
+          [
+            "GLM-5.2",
+            "glm-5.2",
+            "https://opencode.ai/inference/go/openai/v1/chat/completions",
+            "@ai-sdk/openai-compatible"
+          ],
+          [
+            "Kimi K3.1 Pro",
+            "kimi-k3.1-pro",
+            "https://opencode.ai/inference/go/openai/v1/chat/completions",
+            "@ai-sdk/openai-compatible"
+          ],
+          [
+            "Kimi K3",
+            "kimi-k3",
+            "https://opencode.ai/inference/go/openai/v1/chat/completions",
+            "@ai-sdk/openai-compatible"
+          ],
+          [
+            "Kimi K2.7 Code",
+            "kimi-k2.7-code",
+            "https://opencode.ai/inference/go/openai/v1/chat/completions",
+            "@ai-sdk/openai-compatible"
+          ],
+          [
+            "LongCat-2.0",
+            "longcat-2.0",
+            "https://opencode.ai/inference/go/openai/v1/chat/completions",
+            "@ai-sdk/openai-compatible"
+          ],
+          [
+            "DeepSeek V4.1 Flash",
+            "deepseek-v4.1-flash",
+            "https://opencode.ai/inference/go/openai/v1/chat/completions",
+            "@ai-sdk/openai-compatible"
+          ],
+          [
+            "DeepSeek V4 Pro",
+            "deepseek-v4-pro",
+            "https://opencode.ai/inference/go/openai/v1/chat/completions",
+            "@ai-sdk/openai-compatible"
+          ],
+          [
+            "MiMo-V2.6-Flash",
+            "mimo-v2.6-flash",
+            "https://opencode.ai/inference/go/openai/v1/chat/completions",
+            "@ai-sdk/openai-compatible"
+          ],
+          [
+            "MiMo-V2.6-Pro",
+            "mimo-v2.6-pro",
+            "https://opencode.ai/inference/go/openai/v1/chat/completions",
+            "@ai-sdk/openai-compatible"
+          ],
+          [
+            "MiMo-V2.5",
+            "mimo-v2.5",
+            "https://opencode.ai/inference/go/openai/v1/chat/completions",
+            "@ai-sdk/openai-compatible"
+          ],
+          [
+            "MiMo-V2.5-Pro",
+            "mimo-v2.5-pro",
+            "https://opencode.ai/inference/go/openai/v1/chat/completions",
+            "@ai-sdk/openai-compatible"
+          ],
+          [
+            "MiniMax M3.1 Flash",
+            "minimax-m3.1-flash",
+            "https://opencode.ai/inference/go/openai/v1/chat/completions",
+            "@ai-sdk/openai-compatible"
+          ],
+          [
+            "MiniMax M3",
+            "minimax-m3",
+            "https://opencode.ai/inference/go/anthropic/v1/messages",
+            "@ai-sdk/anthropic"
+          ],
+          [
+            "Muse Spark 1.3 Contributor",
+            "muse-spark-1.3-contributor",
+            "https://opencode.ai/inference/go/openai/v1/responses",
+            "@ai-sdk/openai"
+          ],
+          [
+            "Muse Spark 1.2 Contributor",
+            "muse-spark-1.2-contributor",
+            "https://opencode.ai/inference/go/openai/v1/responses",
+            "@ai-sdk/openai"
+          ],
+          [
+            "Qwen3.8 Max",
+            "qwen3.8-max",
+            "https://opencode.ai/inference/go/anthropic/v1/messages",
+            "@ai-sdk/anthropic"
+          ],
+          [
+            "Qwen3.8 Flash",
+            "qwen3.8-flash",
+            "https://opencode.ai/inference/go/anthropic/v1/messages",
+            "@ai-sdk/anthropic"
+          ],
+          [
+            "Qwen3.7 Plus",
+            "qwen3.7-plus",
+            "https://opencode.ai/inference/go/anthropic/v1/messages",
+            "@ai-sdk/anthropic"
+          ],
+          [
+            "Hy4 preview",
+            "hy4-preview",
+            "https://opencode.ai/inference/go/openai/v1/chat/completions",
+            "@ai-sdk/openai-compatible"
+          ],
+          [
+            "Hy3",
+            "hy3",
+            "https://opencode.ai/inference/go/openai/v1/chat/completions",
+            "@ai-sdk/openai-compatible"
+          ],
+          [
+            "Step 5 Preview",
+            "step-5-preview",
+            "https://opencode.ai/inference/go/openai/v1/chat/completions",
+            "@ai-sdk/openai-compatible"
+          ],
+          [
+            "Beam Free",
+            "beam-free",
+            "https://opencode.ai/inference/go/openai/v1/chat/completions",
+            "@ai-sdk/openai-compatible"
+          ],
+          [
+            "Iceman Contributor Free",
+            "iceman-contributor-free",
+            "https://opencode.ai/inference/go/openai/v1/chat/completions",
+            "@ai-sdk/openai-compatible"
+          ]
+        ]
+      ]
+    },
+    {
+      "url": "https://commandcode.ai/docs/plans/goat",
+      "sha256": "d9d9cfa71f53554888c4a9a2f22b94bb6058b7389ada21dbe33c3f86509b7719",
+      "tables": [
+        [
+          [
+            "Model",
+            "Input",
+            "Output",
+            "Cache Read",
+            "Cache Write",
+            "Monthly credits"
+          ],
+          [
+            "DeepSeek V4.1 Flash (latest)",
+            "$0.15",
+            "$0.60",
+            "$0.003",
+            "-",
+            "$100"
+          ],
+          [
+            "GLM-5.3 Flash",
+            "$0.15",
+            "$0.50",
+            "$0.03",
+            "-",
+            "$100"
+          ],
+          [
+            "Ling 3.1 Flash",
+            "$0.30",
+            "$0.90",
+            "$0.06",
+            "-",
+            "$100"
+          ],
+          [
+            "Ling 3.1 Flash 1019",
+            "$0.30",
+            "$0.90",
+            "$0.06",
+            "-",
+            "$100"
+          ],
+          [
+            "GLM-5.2",
+            "$1.40",
+            "$4.40",
+            "$0.26",
+            "-",
+            "$70"
+          ],
+          [
+            "Tencent Hy3",
+            "$0.14",
+            "$0.58",
+            "$0.035",
+            "-",
+            "$70"
+          ],
+          [
+            "Qwen 3.8 27B",
+            "$0.40",
+            "$3.00",
+            "$0.04",
+            "-",
+            "$70"
+          ],
+          [
+            "DeepSeek V4 Flash (latest)",
+            "$0.15",
+            "$0.60",
+            "$0.003",
+            "-",
+            "$60"
+          ],
+          [
+            "DeepSeek V4.1 Flash Fast (latest)",
+            "$0.16",
+            "$0.58",
+            "$0.016",
+            "-",
+            "$60"
+          ],
+          [
+            "Kimi K2.7 Code",
+            "$0.95",
+            "$4.00",
+            "$0.19",
+            "-",
+            "$60"
+          ],
+          [
+            "LongCat 2.0",
+            "$0.30",
+            "$1.20",
+            "$0.006",
+            "-",
+            "$50"
+          ],
+          [
+            "MiniMax M3",
+            "$0.30",
+            "$1.20",
+            "$0.06",
+            "-",
+            "$47"
+          ],
+          [
+            "Gemini 3.8 Flash",
+            "$1.50",
+            "$7.50",
+            "$0.15",
+            "-",
+            "$40"
+          ],
+          [
+            "Qwen 3.7 Max",
+            "$2.50",
+            "$7.50",
+            "$0.50",
+            "$3.13",
+            "$33"
+          ],
+          [
+            "Qwen 3.7 Plus",
+            "$0.40",
+            "$1.60",
+            "$0.08",
+            "$0.50",
+            "$33"
+          ],
+          [
+            "Qwen 3.6 Plus",
+            "$0.50",
+            "$3.00",
+            "$0.10",
+            "-",
+            "$33"
+          ],
+          [
+            "GPT-5.6 Sol",
+            "$5.00",
+            "$30.00",
+            "$0.50",
+            "$6.25",
+            "$20"
+          ],
+          [
+            "GPT-5.6 Luna",
+            "$0.20",
+            "$1.20",
+            "$0.02",
+            "$0.25",
+            "$20"
+          ],
+          [
+            "Qwen 3.8 Max",
+            "$2.00",
+            "$6.00",
+            "$0.25",
+            "$2.50",
+            "$20"
+          ],
+          [
+            "DeepSeek V4 Pro (latest)",
+            "$0.66",
+            "$1.98",
+            "$0.022",
+            "-",
+            "$20"
+          ]
+        ],
+        [
+          [
+            "Model",
+            "Input",
+            "Output",
+            "Cache Read",
+            "Cache Write",
+            "Monthly credits"
+          ],
+          [
+            "Claude Sonnet 5.5",
+            "$2.00",
+            "$10.00",
+            "$0.10",
+            "$2.50",
+            "$10"
+          ],
+          [
+            "Claude Haiku 5.5",
+            "$0.10",
+            "$0.50",
+            "$0.01",
+            "$0.125",
+            "$20"
+          ]
+        ],
+        [
+          [
+            "Model",
+            "Input",
+            "Output",
+            "Cache Read",
+            "Cache Write",
+            "Monthly credits"
+          ],
+          [
+            "Kimi K3.1 Pro",
+            "$2.00",
+            "$10.00",
+            "$0.20",
+            "-",
+            "$20"
+          ],
+          [
+            "Kimi K3",
+            "$3.00",
+            "$15.00",
+            "$0.30",
+            "-",
+            "$20"
+          ],
+          [
+            "Mistral Large 4",
+            "$1.36",
+            "$4.18",
+            "$0.14",
+            "-",
+            "$20"
+          ],
+          [
+            "GPT-6 Luna",
+            "$0.10",
+            "$0.50",
+            "$0.01",
+            "$0.125",
+            "$20"
+          ],
+          [
+            "Qwen 3.8 Omni Flash",
+            "$0.15",
+            "$0.47",
+            "$0.016",
+            "-",
+            "$20"
+          ],
+          [
+            "Qwen 3.8 Max Prime",
+            "$4.00",
+            "$12.00",
+            "$0.50",
+            "$5.00",
+            "$20"
+          ],
+          [
+            "Qwen 3.8 Max 0902",
+            "$2.00",
+            "$6.00",
+            "$0.25",
+            "-",
+            "$20"
+          ],
+          [
+            "Tencent Hy4 Preview",
+            "$0.834",
+            "$2.501",
+            "$0.042",
+            "-",
+            "$20"
+          ],
+          [
+            "MiniMax M3.1 Flash",
+            "$0.15",
+            "$0.60",
+            "$0.015",
+            "-",
+            "$20"
+          ],
+          [
+            "Ornith 1.5 122B",
+            "$0.16",
+            "$0.64",
+            "$0.02",
+            "-",
+            "$20"
+          ],
+          [
+            "Qwen 3.8 Flash",
+            "$0.16",
+            "$0.47",
+            "$0.016",
+            "-",
+            "$20"
+          ],
+          [
+            "GLM-5.3 FlashX",
+            "$0.37",
+            "$1.25",
+            "$0.075",
+            "-",
+            "$20"
+          ],
+          [
+            "DeepSeek V4 Flash Vision (exp)",
+            "$0.15",
+            "$0.60",
+            "$0.003",
+            "-",
+            "$20"
+          ],
+          [
+            "DeepSeek V4 Flash Fast",
+            "$0.28",
+            "$0.56",
+            "$0.07",
+            "-",
+            "$20"
+          ],
+          [
+            "GLM-5.3",
+            "$1.40",
+            "$4.40",
+            "$0.26",
+            "-",
+            "$20"
+          ],
+          [
+            "Muse Spark 1.3",
+            "$1.25",
+            "$4.25",
+            "$0.15",
+            "-",
+            "$20"
+          ],
+          [
+            "Muse Spark 1.3 Contributor",
+            "$0.10",
+            "$0.20",
+            "$0.002",
+            "-",
+            "$20"
+          ],
+          [
+            "Muse Spark 1.2",
+            "$1.25",
+            "$4.25",
+            "$0.15",
+            "-",
+            "$20"
+          ],
+          [
+            "Muse Spark 1.2 Contributor",
+            "$0.10",
+            "$0.20",
+            "$0.002",
+            "-",
+            "$20"
+          ],
+          [
+            "Muse Spark Open",
+            "$1.25",
+            "$4.25",
+            "$0.15",
+            "-",
+            "$20"
+          ],
+          [
+            "Kimi K2.7 Code HighSpeed",
+            "$1.90",
+            "$8.00",
+            "$0.38",
+            "-",
+            "$20"
+          ],
+          [
+            "Grok 4.5",
+            "$2.00",
+            "$6.00",
+            "$0.50",
+            "-",
+            "$20"
+          ],
+          [
+            "Grok 4.6",
+            "$2.00",
+            "$6.00",
+            "$0.50",
+            "-",
+            "$20"
+          ],
+          [
+            "Grok 4.7",
+            "$2.00",
+            "$6.00",
+            "$0.50",
+            "-",
+            "$20"
+          ],
+          [
+            "Gemini 3.7 Flash",
+            "$1.50",
+            "$7.50",
+            "$0.15",
+            "$0.08334",
+            "$40"
+          ],
+          [
+            "GLM-5.2 Fast",
+            "$3.00",
+            "$10.25",
+            "$0.50",
+            "-",
+            "$20"
+          ],
+          [
+            "Inkling",
+            "$1.00",
+            "$4.05",
+            "$0.17",
+            "-",
+            "$20"
+          ],
+          [
+            "Inkling Small",
+            "$0.50",
+            "$1.20",
+            "$0.10",
+            "-",
+            "$20"
+          ],
+          [
+            "MiMo V2.6 Pro",
+            "$0.435",
+            "$0.87",
+            "$0.0036",
+            "-",
+            "$20"
+          ],
+          [
+            "MiMo V2.6 Flash",
+            "$0.14",
+            "$0.28",
+            "$0.0028",
+            "-",
+            "$20"
+          ],
+          [
+            "MiMo V2.6 Pro UltraSpeed",
+            "$4.35",
+            "$8.70",
+            "$0.036",
+            "-",
+            "$10"
+          ],
+          [
+            "Step 5 Preview",
+            "$1.00",
+            "$2.70",
+            "$0.05",
+            "-",
+            "$20"
+          ],
+          [
+            "Step 3.7 Flash",
+            "$0.20",
+            "$1.15",
+            "$0.04",
+            "-",
+            "$20"
+          ],
+          [
+            "Step 3.5 Flash",
+            "$0.09",
+            "$0.30",
+            "$0.02",
+            "-",
+            "$20"
+          ],
+          [
+            "Nemotron 3 Ultra",
+            "$0.60",
+            "$2.40",
+            "$0.12",
+            "-",
+            "$20"
+          ],
+          [
+            "Nemotron 3.5 Super VL",
+            "$0.20",
+            "$0.50",
+            "$0.04",
+            "-",
+            "$20"
+          ],
+          [
+            "Jev",
+            "$0.042",
+            "$0.00",
+            "$0.00",
+            "-",
+            "$20"
+          ],
+          [
+            "Jev 1.14.0",
+            "$0.042",
+            "$0.00",
+            "$0.00",
+            "-",
+            "$20"
+          ]
+        ]
+      ]
+    },
+    {
+      "url": "https://ollama.com/pricing",
+      "sha256": "ee8d103cb209ddf1f0d3f7467aae8cbd220e180b871fd54d9d7a079d3256e352",
+      "observations": {
+        "monthlyPlanUsd": {
+          "Pro": 20,
+          "Max": 100,
+          "Team": 500
+        },
+        "monthlyCreditsUsd": {
+          "Pro": 60,
+          "Max": 300,
+          "Team": 1000
+        },
+        "pool": "Shared across models; Team is whole organization, not per seat",
+        "peakWindow": "Weekdays 12:00-18:00 UTC according to pricing page",
+        "ratesPerMTokUsd": {
+          "deepseek-v4.1-flash": {
+            "input": 0.3,
+            "cached": 0.006,
+            "output": 1.2
+          },
+          "deepseek-v4.1-flash-offpeak": {
+            "input": 0.15,
+            "cached": 0.003,
+            "output": 0.6
+          },
+          "minimax-m3.1-flash": {
+            "input": 0.15,
+            "cached": 0.015,
+            "output": 0.6
+          },
+          "muse-spark-open": {
+            "input": 1.25,
+            "cached": 0.15,
+            "output": 4.25
+          }
+        }
+      }
+    },
+    {
+      "url": "https://ollama.com/library/deepseek-v4.1-flash:1017-cloud",
+      "sha256": "70d7056462faeaba27cb940ff5d69338763377d490cfa09b0844c671763f64ab",
+      "observations": {
+        "cliTag": "deepseek-v4.1-flash:1017-cloud",
+        "apiModel": "deepseek-v4.1-flash:1017",
+        "peakRatesPerMTokUsd": {
+          "input": 0.3,
+          "cached": 0.006,
+          "output": 1.2
+        }
+      }
+    },
+    {
+      "url": "https://docs.factory.com/models.md",
+      "sha256": "39ad1625b8953fd6ce3ba7816c3ae88215d53b8fa3ca9b6af87bb9641e0104c6",
+      "observations": {
+        "deepseek-v4.1-flash-1017": {
+          "multiplier": 0.12
+        },
+        "minimax-m3.1-flash": {
+          "multiplier": 0.06
+        },
+        "beam-1.0": {
+          "multiplier": 0.52
+        }
+      }
+    },
+    {
+      "url": "https://docs.factory.com/pricing/individuals.md",
+      "sha256": "88b1107b6f9925530b8dd591e46064c1fdd5bcfafe06e074dae4448c58b84e9f",
+      "observations": {
+        "ProUsd": 20,
+        "PlusUsd": 100,
+        "MaxUsd": 200,
+        "limits": "5h, 7-day, 30-day rolling windows; ~5x and ~10x Pro; no absolute base token quota published"
+      }
+    }
+  ],
+  "identityRegistry": {
+    "source": "https://models.dev/api.json",
+    "opencodeGoDeepSeek": {
+      "id": "deepseek-v4.1-flash",
+      "name": "DeepSeek V4.1 Flash",
+      "description": "DeepSeek V4.1 Flash model for reasoning and agentic coding",
+      "family": "deepseek-flash",
+      "attachment": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "tool_call": true,
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "structured_output": true,
+      "temperature": true,
+      "knowledge": "2025-05",
+      "release_date": "2026-09-10",
+      "last_updated": "2026-09-10",
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "open_weights": true,
+      "limit": {
+        "context": 1000000,
+        "output": 384000
+      },
+      "provider": {
+        "api": "https://opencode.ai/inference/go/openai/v1"
+      },
+      "cost": {
+        "input": 0.15,
+        "output": 0.6,
+        "cache_read": 0.003
+      },
+      "canonical_model_id": "deepseek/deepseek-v4.1-flash"
+    }
+  }
+}

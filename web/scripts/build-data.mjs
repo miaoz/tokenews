@@ -7,6 +7,7 @@ import { loadCatalog, mergeCatalog } from "../../scripts/lib/model-catalog.mjs";
 import { mergeCurrentLeaderboards } from "../../scripts/lib/current-leaderboards.mjs";
 import { attachRefreshStatus } from "../../scripts/lib/leaderboard-refresh.mjs";
 import { addApiPricePoints } from "../../scripts/lib/api-price-points.mjs";
+import { mergeCodingPlans } from "../../scripts/lib/coding-plans.mjs";
 import { loadApiPrices, priceCoverage } from "../../scripts/lib/api-prices.mjs";
 
 const root = fileURLToPath(new URL("../", import.meta.url));
@@ -22,7 +23,8 @@ const refresh = JSON.parse(await readFile(path.resolve(root, '../data/leaderboar
 const priceDirectory = path.resolve(root, "../data/api-prices");
 const { catalog, files: priceFiles } = await loadApiPrices(priceDirectory);
 const apiPointManifest = JSON.parse(await readFile(path.resolve(root, '../data/api-price-points.json'), 'utf8'));
-const pricedData = addApiPricePoints(mergeCatalog(upstreamData, models, snapshots), catalog, apiPointManifest);
+const codingPlans = JSON.parse(await readFile(path.resolve(root, '../data/coding-plans/current.json'), 'utf8'));
+const pricedData = mergeCodingPlans(addApiPricePoints(mergeCatalog(upstreamData, models, snapshots), catalog, apiPointManifest), codingPlans);
 const data = attachRefreshStatus(mergeCurrentLeaderboards(pricedData, current), refresh);
 // Keep adopted points byte-for-byte meaningful: current prices never replace
 // the historical list_price / blended reference used to explain a quota.
@@ -39,6 +41,11 @@ await writeFile(path.join(out, "leaderboard-snapshots.json"), JSON.stringify(sna
 await writeFile(path.join(out, "current-leaderboards.json"), JSON.stringify(current));
 await writeFile(path.join(out, "leaderboard-coverage.json"), JSON.stringify(data.leaderboardCoverage));
 await writeFile(path.join(out, "leaderboard-refresh.json"), JSON.stringify(refresh));
+await writeFile(path.join(out, "coding-plans.json"), JSON.stringify(codingPlans));
+await writeFile(path.join(out, "superseded-points.json"), JSON.stringify(data.supersededPoints));
+for (const file of codingPlans.evidenceFiles) {
+  await copyFile(path.resolve(root, '../data/coding-plans', file), path.join(out, 'evidence', `coding-plans-${file}`));
+}
 await writeFile(path.join(out, "site.json"), JSON.stringify(data));
 // The explorer's first download leaves out the long-form notes it only shows in
 // the "Behind the number" dialog; they load afterwards from explorer-notes.json.
@@ -67,9 +74,10 @@ const pricedBoards = new Set(data.mappings.map(m => configBoards.get(m.configura
 const explorerBoards = Object.fromEntries(Object.entries(data.boards).filter(([id]) => data.currentBoards.includes(id)));
 if (data.currentBoards.some(id => !pricedBoards.has(id))) throw new Error('A current Pareto board has no price mappings');
 const currentConfigIds = new Set(data.configurations.filter(c=>data.currentBoards.includes(c.board)).map(c=>c.configuration_id));
+const {supersededPoints: _archivedPoints, ...explorerData} = data;
 await writeFile(
   path.join(out, "explorer.json"),
-  JSON.stringify({ ...data, boards: explorerBoards, points: points.core,
+  JSON.stringify({ ...explorerData, boards: explorerBoards, points: points.core,
     configurations: configurations.core.filter(c=>currentConfigIds.has(c.configuration_id)),
     mappings:data.mappings.filter(m=>currentConfigIds.has(m.configuration_id)) }),
 );
@@ -98,8 +106,8 @@ for (const f of evidenceToCopy)
     path.join(out, "evidence", f),
   );
 console.log(
-  `Website data: ${data.points.length} points (${upstreamData.points.length} unchanged adopted points, ${data.points.length-upstreamData.points.length} reviewed API points), ${data.configurations.length} configurations, ${data.mappings.length} references, ${evidenceToCopy.size} evidence files.`,
+  `Website data: ${data.points.length} active points; ${upstreamData.points.length} upstream points preserved in original downloads, ${data.supersededPoints.length} superseded/display-labelled records archived; ${data.configurations.length} configurations, ${data.mappings.length} references.`,
 );
 console.log(`API prices: ${coverage.maintainedModels} maintained, ${coverage.upstreamOnlyModels} upstream-only, ${coverage.missingModels} missing / ${coverage.totalModels} models.`);
-if (coverage.differences.length) console.warn(`API reference differences (review source dates and conditions): ${coverage.differences.join(", ")}. Adopted points are unchanged.`);
+if (coverage.differences.length) console.warn(`API reference differences (review source dates and conditions): ${coverage.differences.join(", ")}. Original adopted points remain in upstream downloads and the superseded archive.`);
 if (coverage.unusedModels.length) console.warn(`API prices recorded ahead of upstream model coverage: ${coverage.unusedModels.join(", ")}.`);

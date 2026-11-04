@@ -17,7 +17,7 @@ export interface Point {
   channel: string;
   label: string;
   billing: string;
-  price_origin?: 'maintained-api';
+  price_origin?: 'maintained-api' | 'maintained-plan';
   confidence: string;
   price_usd: number | null;
   original_price: number | null;
@@ -130,6 +130,9 @@ export interface SiteData {
     excluded: {model: string | null; label: string; score: number | null; reason: string; preliminary: boolean}[];
   }>;
   points: Point[];
+  supersededPoints?: Point[];
+  codingPlanUpdatedAt?: string;
+  codingPlanReviews?: {channel:string;models:string[];relatedModels?:string[];status:string;checkedAt:string;note:{en:string;zh:string};source:string}[];
   configurations: Configuration[];
   mappings: Mapping[];
   boards: Record<

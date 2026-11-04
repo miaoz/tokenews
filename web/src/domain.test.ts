@@ -161,11 +161,13 @@ const adopted = parse(
   { columns: true, skip_empty_lines: true, bom: true },
 ) as Record<string, string>[];
 test("All source point values and stable IDs survive the adapter, including null API fees", () => {
-  const adoptedPoints=data.points.filter(p=>p.price_origin!=='maintained-api');
+  const archived = data.supersededPoints ?? [];
+  const archivedIds = new Set(archived.map(p=>p.id));
+  const adoptedPoints=[...archived, ...data.points.filter(p=>!p.price_origin && !archivedIds.has(p.id))];
   assert.equal(adoptedPoints.length, adopted.length);
   assert.equal(new Set(adoptedPoints.map((p) => p.id)).size, adopted.length);
   for (const a of adopted) {
-    const p = data.points.find(
+    const p = adoptedPoints.find(
       (p) => p.id === `${a.plan_id}::${a.served_model}`,
     )!;
     assert.ok(p);
@@ -233,7 +235,7 @@ test("DeepSWE keeps effort levels and vendor provenance through the adapter", ()
   assert.equal(deepseek.mapping?.agent_harness, "mini-SWE");
 });
 test("Command Code GOAT DeepSeek V4.1 Flash preserves adopted quota and fee-per-token precision", () => {
-  const p = data.points.find((p) => p.id === "command_code_goat::deepseek-v4.1-flash")!;
+  const p = data.supersededPoints!.find((p) => p.id === "command_code_goat::deepseek-v4.1-flash")!;
   const a = adopted.find((a) => `${a.plan_id}::${a.served_model}` === p.id)!;
   // Quota adoption belongs to upstream. Our adapter must preserve its current
   // value, including the 2026-10-20 change from $60 to min($70 shared, $80 model).

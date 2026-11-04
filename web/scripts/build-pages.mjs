@@ -69,7 +69,7 @@ const data = JSON.parse(
 const updated = data.conventions.updatedAt || data.generatedAt;
 const pageUpdates = new Map();
 const latest = (...dates) => dates.filter(Boolean).sort().at(-1) ?? updated;
-const siteUpdated = latest(updated, data.apiPrices?.updatedAt, data.catalogUpdatedAt, data.leaderboardUpdatedAt);
+const siteUpdated = latest(updated, data.apiPrices?.updatedAt, data.catalogUpdatedAt, data.leaderboardUpdatedAt, data.codingPlanUpdatedAt);
 // The explorer's hashed stylesheet carries the tokens, fonts, header and
 // footer; the static pages load it first so all pages share one design.
 const appCss = (await readFile(path.join(dist, "index.html"), "utf8")).match(
@@ -268,7 +268,7 @@ for (const m of models.values()) {
   m.listPoint = m.api.find((p) => p.list_price) ?? m.points.find((p) => p.list_price) ?? null;
   m.apiReference = apiPriceReference(data, m.id);
   m.listBlended = m.apiReference?.blended ?? null;
-  m.modified = latest(updated, m.checkedAt, m.apiReference?.checkedAt, ...[...m.configs.values()].map(c => c.checked_at));
+  m.modified = latest(updated, m.checkedAt, m.apiReference?.checkedAt, ...m.points.map(p=>p.data_date), ...[...m.configs.values()].map(c => c.checked_at));
   m.mostTokens = [...m.subs].filter((p) => p.monthly_yi != null).sort((a, b) => b.monthly_yi - a.monthly_yi)[0] ?? null;
   m.channels = [...new Set(m.points.map((p) => p.channel))].sort();
   m.benchmarks = BOARD_ORDER.flatMap((board) => {
@@ -724,6 +724,12 @@ const relatedNews = (articles, lang) =>
       }</section>`
     : "";
 
+function codingPlanReviews(reviews, lang) {
+  if (!reviews.length) return "";
+  const zh = lang === "zh";
+  return `<section aria-labelledby="coding-plan-reviews"><h2 id="coding-plan-reviews">${zh ? "渠道可用性与待核实项" : "Channel availability and pending verification"}</h2><p>${zh ? "已确认的型号、费率和额度会进入上方价格表；以下记录说明其他可用渠道及暂未计算价格的原因。" : "Verified model, rate and quota combinations appear in the price tables above. These records explain other channels and why a price has not been calculated."}</p>${table(zh ? "第三方套餐核实记录" : "Third-party plan review", [zh ? "供应商" : "Provider", zh ? "模型" : "Models", zh ? "核实日期" : "Checked", zh ? "状态与依据" : "Status and evidence"], reviews.map(r => [providerLink(r.channel, lang), join(r.models.map(id=>modelLink(models.get(id), lang)), lang), esc(r.checkedAt), `${esc(r.note[lang])} ${(r.relatedModels ?? []).map(id=>modelLink(models.get(id), lang)).join(" · ")} ${ext(r.source, zh ? "官方来源" : "Official source")}`]))}</section>`;
+}
+
 // ---------------------------------------------------------------------------
 // Model page.
 // ---------------------------------------------------------------------------
@@ -938,6 +944,7 @@ ${table(
 )}</section>`
     : ""
 }
+${codingPlanReviews((data.codingPlanReviews ?? []).filter(r=>r.models.includes(m.id)), lang)}
 ${relatedNews(newsFor.model(m), lang)}
 ${
   siblings.length
@@ -1116,6 +1123,7 @@ ${v.points.length ? `<p><a class="button" href="${
 // ---------------------------------------------------------------------------
 function providerPage(pr, lang) {
   const zh = lang === "zh";
+  const priceUpdated = latest(updated, ...pr.points.map(p=>p.data_date));
   const t = (en, cn) => (zh ? cn : en);
   const nTiers = pr.tierList.length;
   const nModels = pr.models.length;
@@ -1123,8 +1131,8 @@ function providerPage(pr, lang) {
   const fees = feeRange(subs.map((x) => x.feePoint));
   const c = pr.cheapest;
   const answer = zh
-    ? `截至 ${updated}，${pr.name} 共有 ${nTiers} 个套餐${fees ? `（月费 ${fees}）` : ""}，包含 ${pr.makers.length} 家厂商的 ${nModels} 个模型。${c ? `真实单价最低的是「${planName(c, lang)}」中的 ${models.get(c.model).name}，约 ${usd(c.real_usd_per_mtok)} / 百万 token。` : ""}`
-    : `As of ${updated}, ${pr.name} offers ${plural(nTiers, "plan")}${fees ? ` (${fees} a month)` : ""} covering ${plural(nModels, "model")} from ${plural(pr.makers.length, "maker")}.${c ? ` The lowest real price is ${models.get(c.model).name} on ${planName(c, lang)} at about ${usd(c.real_usd_per_mtok)} per million tokens.` : ""}`;
+    ? `截至 ${priceUpdated}，${pr.name} 共有 ${nTiers} 个套餐${fees ? `（月费 ${fees}）` : ""}，包含 ${pr.makers.length} 家厂商的 ${nModels} 个模型。${c ? `真实单价最低的是「${planName(c, lang)}」中的 ${models.get(c.model).name}，约 ${usd(c.real_usd_per_mtok)} / 百万 token。` : ""}`
+    : `As of ${priceUpdated}, ${pr.name} offers ${plural(nTiers, "plan")}${fees ? ` (${fees} a month)` : ""} covering ${plural(nModels, "model")} from ${plural(pr.makers.length, "maker")}.${c ? ` The lowest real price is ${models.get(c.model).name} on ${planName(c, lang)} at about ${usd(c.real_usd_per_mtok)} per million tokens.` : ""}`;
   const title = zh
     ? `${pr.name} 套餐对比：各档位包含的模型与真实单价`
     : `${pr.name} Plans Compared: Included Models & Real Cost per Token`;
@@ -1209,6 +1217,7 @@ ${table(t("Plans by monthly fee", "套餐，按月费排序"), [t("Plan", "套�
 <p>${t("Real price = monthly fee ÷ tokens you can actually use in a month, per model. Allowances of different models in one plan are alternatives and must not be added up.", "真实单价 = 月费 ÷ 该模型每月实际可用 token。同一套餐内不同模型的额度为替代关系，不可相加。")}</p>
 ${tierSections}
 </section>
+${codingPlanReviews((data.codingPlanReviews ?? []).filter(r=>r.channel===pr.name), lang)}
 ${relatedNews(newsFor.provider(pr), lang)}
 <p><a class="button" href="${U.explorer(lang, `&channels=${encodeURIComponent(pr.name)}`)}">${t("Open in the interactive explorer", "在交互式图表中查看")}<span class="arrow" aria-hidden="true">→</span></a></p>`;
   return page({

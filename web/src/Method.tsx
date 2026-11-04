@@ -124,6 +124,14 @@ export default function Method({
         </article>
       </div>
       <section className="method-sources">
+        <h2>{t("Reviewed coding plans", "独立核实的编程套餐")}</h2>
+        <p>{t(
+          "Current third-party model access, token rates and monthly credits are reviewed separately from API references. Monthly tokens equal the effective credit limit divided by the channel's workload-weighted rate. Shared and model limits use the smaller cap; monthly pools are not multiplied by four weeks. Time bands, per-seat Teams fees and whole-team pools are stated separately. Different model and time-band allowances cannot be added together. Legacy samples retain their dates; superseded records remain downloadable.",
+          "第三方套餐的当前模型、费率与月信用额度独立核实。月 token = 有效信用额度 ÷ 渠道负载加权费率；共享池与模型上限取较小值，独立月池不乘四周。时段、按成员计费的 Teams 与整个团队共享的额度分别注明。同套餐不同模型与时段的额度不能相加。旧套餐样本保留日期，被替代的记录可下载追溯。",
+        )}</p>
+        <p><a href="/data/coding-plans.json">{t("Reviewed plan records (JSON)", "套餐核实记录（JSON）")}</a>{" · "}<a href="/data/superseded-points.json">{t("Superseded source records (JSON)", "被替代的原始记录（JSON）")}</a></p>
+      </section>
+      <section className="method-sources">
         <h2>{t("Official API price references", "官方 API 价格参考")}</h2>
         <p>{t(
           "Current API references are checked independently against official sources and include the verification date, currency, processing tier, region and input-length conditions. Model pages show every recorded tier; comparisons use the explicitly selected default tier. Cache-write charges are listed separately. These references do not recalculate the historical allowances or real costs of subscription plans.",

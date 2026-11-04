@@ -17,6 +17,7 @@ upstream.lock.json   which upstream commit the snapshot comes from
 data/models.json    independent model identity catalog, including models without prices
 data/leaderboards/  direct-source snapshots, reviewed mappings and discovery queue
 data/api-prices/    independently maintained official API references, one JSON file per provider
+data/coding-plans/  independently reviewed third-party plan credits and model availability
 scripts/
   sync-upstream.mjs  pulls only the data paths into upstream/
   lib/build-site-data.mjs   our adapter: upstream/ → web/public/data/site.json
@@ -31,6 +32,13 @@ web/                 the site: React explorer + static page generator (see web/R
 **Current official API references are maintained by Tokenews** in [`data/api-prices/`](data/api-prices/README.md), separately from upstream quota and cost evidence. Provider files are discovered automatically; adding a model, region, processing tier or context band requires a JSON edit, not a code change. The build validates and publishes these records and uses their explicitly selected default tiers on model comparisons. Historical upstream points remain intact. Uncovered models retain upstream references where available. See the maintenance guide for the format, source policy and coverage report.
 
 **Model identity and leaderboard updates are also maintained independently.** The model catalog includes models without subscription prices. Direct Artificial Analysis and Crusader Bench adapters update reviewed configurations and produce a discovery queue; benchmark versions are isolated and historical observations retained. See [the maintenance guide](data/leaderboards/README.md).
+
+**Third-party coding plans have an independent review layer.** Reviewed current
+model access, channel token rates and monthly credit pools can supplement or
+explicitly supersede stale upstream records. Original values remain downloadable,
+and legacy plan generations are labelled. Model availability without a verified
+quota or precise version is shown separately without inventing a chart point.
+See [the coding plan guide](data/coding-plans/README.md).
 
 ## Everyday commands
 
