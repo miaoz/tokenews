@@ -52,6 +52,13 @@ test("Uncovered models retain upstream references, and genuinely missing models 
     assert.ok(apiPriceReference(data, model), `${model} in a curated comparison needs an API reference`);
 });
 
+test('Terra reference includes the reviewed cache-write fee instead of adding or omitting it',()=>{
+  const ref=apiPriceReference(data,'gpt-6.1-terra')!;
+  assert.ok(Math.abs(ref.blended!-.10475)<1e-12);
+  assert.equal(ref.variant.context?.max,272000);
+  assert.equal(ref.variant.rates.cacheWrite,1.25);
+});
+
 test("Shared API details expose every tier, conditions, write fees, source and verification date in both languages", () => {
   for (const lang of ["en", "zh"]) {
     const reference = apiPriceReference(data, "gpt-6-astra")!;

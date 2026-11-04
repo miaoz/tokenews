@@ -18,6 +18,7 @@ export interface ApiPriceModel {
   additionalSources?: string[];
   checkedAt: string;
   defaultVariant: string;
+  referenceInput?: 'cacheWrite';
   variants: ApiPriceVariant[];
   recordUrl: string;
   notes?: { en: string; zh: string };
@@ -48,14 +49,15 @@ export function apiPriceReference(data: SiteData, model: string): ApiPriceRefere
     const variant = own.variants.find((v) => v.id === own.defaultVariant);
     if (!variant) throw new Error(`Missing default API price variant: ${model}`);
     const { input, cachedInput, output } = variant.rates;
+    const freshInput = own.referenceInput === 'cacheWrite' ? variant.rates.cacheWrite : input;
     const mix = data.conventions.standardTokenMix;
     const conversion = variant.currency === "USD" ? 1 : variant.currency === "CNY" ? data.conventions.usdPerCny : null;
     return {
       origin: "maintained", variant, variants: own.variants,
       prices: { cached: cachedInput, input, output, currency: variant.currency },
       source: own.source, additionalSources: own.additionalSources, checkedAt: own.checkedAt, recordUrl: own.recordUrl, notes: own.notes,
-      blended: cachedInput !== null && conversion !== null
-        ? (mix.cache * cachedInput + mix.input * input + mix.output * output) / conversion : null,
+      blended: cachedInput !== null && conversion !== null && freshInput != null
+        ? (mix.cache * cachedInput + mix.input * freshInput + mix.output * output) / conversion : null,
     };
   }
   const points = data.points.filter((p) => p.model === model).sort((a, b) =>

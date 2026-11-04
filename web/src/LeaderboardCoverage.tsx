@@ -7,7 +7,7 @@ export default function LeaderboardCoverage({data, board, lang}: {data:SiteData;
   const zh=lang==='zh';
   const refresh=data.leaderboardRefresh?.[board];
   const reasons:Record<string,string>={
-    'no-price-evidence':zh?'尚无该型号的价格／额度证据':'No price or quota evidence for this model',
+    'no-price-evidence':zh?'尚无已核实、可匹配此版本的价格／额度点':'No reviewed price or quota point matching this version',
     'router':zh?'路由代理，不能对应单一模型价格':'Router; no single-model price',
     'multi-model-fallback':zh?'包含回退模型，不能对应单一模型价格':'Uses model fallback; no single-model price',
     'ambiguous-configuration':zh?'来源同名配置尚不能区分':'Source configurations share an ambiguous label',

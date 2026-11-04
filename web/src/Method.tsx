@@ -83,8 +83,8 @@ export default function Method({
           </div>
           <p>
             {t(
-              "This is a comparison convention, not a measured workload. Cache-write charges are modeled only in the Anthropic workload (input share at the 5-minute cache-write rate); other channels with write fees may still see overstated allowances.",
-              "这是比较基准，不代表实测负载。仅 Anthropic 档单列缓存写入（普通输入份额按 5 分钟缓存写价计），其余另收写入费的渠道仍可能高估可用额度。",
+              "This is a comparison convention, not a measured workload. Anthropic uses the 5-minute write rate for its fresh-input share. Independently reviewed API points can specify a cache-write workload and context band: fresh input is then charged once at that tier's write rate, with TTL and context limits shown in the point notes. Historical quota samples retain their original workload.",
+              "这是比较基准，不代表实测负载。Anthropic 档把普通输入份额按 5 分钟写入价计。独立核实的 API 点可明确采用缓存写入负载及上下文分档：新增输入只按对应写入费率计费一次，TTL 和上下文条件见价格点说明。历史额度样本保留原有负载。",
             )}
           </p>
         </article>

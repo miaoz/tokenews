@@ -30,7 +30,7 @@ export interface Point {
   /** ISO date when a promotional unmetered period ends, if any. */
   promo_until?: string | null;
   list_blended_usd_per_mtok: number | null;
-  /** Quota basis: which workload the capacity assumes — "standard" | "anthropic" | "lowCache" | "measured". */
+  /** Quota basis: standard | anthropic | lowCache | cacheWrite | measured. */
   workload?: string;
   /** Plan generation tag for legacy plans, e.g. "v2" on GLM existing-customer tiers. */
   plan_gen?: string;

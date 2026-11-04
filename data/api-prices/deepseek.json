@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "provider": "DeepSeek",
+  "unit": "per_million_tokens",
+  "models": [
+    {
+      "id": "deepseek-v4.1-flash-1017",
+      "source": "https://api-docs.deepseek.com/quick_start/pricing/",
+      "checkedAt": "2026-11-04",
+      "defaultVariant": "peak",
+      "variants": [
+        {
+          "id": "peak",
+          "label": {
+            "en": "DeepSeek API · Peak",
+            "zh": "DeepSeek API · Peak"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "peak",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 0.3,
+            "cachedInput": 0.006,
+            "output": 1.2
+          }
+        },
+        {
+          "id": "off-peak",
+          "label": {
+            "en": "DeepSeek API · Off-peak",
+            "zh": "DeepSeek API · Off-peak"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "off-peak",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 0.15,
+            "cachedInput": 0.003,
+            "output": 0.6
+          }
+        }
+      ],
+      "notes": {
+        "en": "deepseek-flash currently serves DeepSeek-V4.1-Flash-1017. Peak: weekdays 01:00–04:00 and 06:00–10:00 UTC, excluding Chinese public holidays; all other hours are off-peak. Search/fetch billed separately. Earlier V4.1 price points are not relabelled.",
+        "zh": "deepseek-flash 当前服务版本为 DeepSeek-V4.1-Flash-1017。忙时为周一至周五 UTC 01:00–04:00、06:00–10:00（中国法定节假日除外），其余时间为闲时。搜索／抓取另计。不改写旧 V4.1 价格点的型号。"
+      },
+      "additionalSources": []
+    }
+  ]
+}

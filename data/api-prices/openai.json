@@ -210,6 +210,343 @@
           }
         }
       ]
+    },
+    {
+      "id": "gpt-6.1-terra",
+      "source": "https://developers.openai.com/api/docs/models/gpt-6.1-terra",
+      "checkedAt": "2026-11-04",
+      "defaultVariant": "standard-short-30m",
+      "variants": [
+        {
+          "id": "standard-short-30m",
+          "label": {
+            "en": "OpenAI API · standard · ≤272K input · 30m cache",
+            "zh": "OpenAI API · standard · ≤272K input · 30m cache"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": 272000
+          },
+          "rates": {
+            "input": 1,
+            "cachedInput": 0.05,
+            "output": 5,
+            "cacheWrite": 1.25
+          }
+        },
+        {
+          "id": "standard-short-12h",
+          "label": {
+            "en": "OpenAI API · standard · ≤272K input · 12h cache",
+            "zh": "OpenAI API · standard · ≤272K input · 12h cache"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": 272000
+          },
+          "rates": {
+            "input": 1,
+            "cachedInput": 0.05,
+            "output": 5,
+            "cacheWrite": 2.5
+          }
+        },
+        {
+          "id": "standard-long-30m",
+          "label": {
+            "en": "OpenAI API · standard · >272K input · 30m cache",
+            "zh": "OpenAI API · standard · >272K input · 30m cache"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": {
+            "min": 272001,
+            "max": null
+          },
+          "rates": {
+            "input": 2,
+            "cachedInput": 0.1,
+            "output": 7.5,
+            "cacheWrite": 2.5
+          }
+        },
+        {
+          "id": "standard-long-12h",
+          "label": {
+            "en": "OpenAI API · standard · >272K input · 12h cache",
+            "zh": "OpenAI API · standard · >272K input · 12h cache"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": {
+            "min": 272001,
+            "max": null
+          },
+          "rates": {
+            "input": 2,
+            "cachedInput": 0.1,
+            "output": 7.5,
+            "cacheWrite": 5.0
+          }
+        },
+        {
+          "id": "batch-short-30m",
+          "label": {
+            "en": "OpenAI API · batch · ≤272K input · 30m cache",
+            "zh": "OpenAI API · batch · ≤272K input · 30m cache"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "batch",
+          "context": {
+            "min": 0,
+            "max": 272000
+          },
+          "rates": {
+            "input": 0.5,
+            "cachedInput": 0.025,
+            "output": 2.5,
+            "cacheWrite": 0.625
+          }
+        },
+        {
+          "id": "batch-short-12h",
+          "label": {
+            "en": "OpenAI API · batch · ≤272K input · 12h cache",
+            "zh": "OpenAI API · batch · ≤272K input · 12h cache"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "batch",
+          "context": {
+            "min": 0,
+            "max": 272000
+          },
+          "rates": {
+            "input": 0.5,
+            "cachedInput": 0.025,
+            "output": 2.5,
+            "cacheWrite": 1.25
+          }
+        },
+        {
+          "id": "batch-long-30m",
+          "label": {
+            "en": "OpenAI API · batch · >272K input · 30m cache",
+            "zh": "OpenAI API · batch · >272K input · 30m cache"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "batch",
+          "context": {
+            "min": 272001,
+            "max": null
+          },
+          "rates": {
+            "input": 1.0,
+            "cachedInput": 0.05,
+            "output": 3.75,
+            "cacheWrite": 1.25
+          }
+        },
+        {
+          "id": "batch-long-12h",
+          "label": {
+            "en": "OpenAI API · batch · >272K input · 12h cache",
+            "zh": "OpenAI API · batch · >272K input · 12h cache"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "batch",
+          "context": {
+            "min": 272001,
+            "max": null
+          },
+          "rates": {
+            "input": 1.0,
+            "cachedInput": 0.05,
+            "output": 3.75,
+            "cacheWrite": 2.5
+          }
+        },
+        {
+          "id": "flex-short-30m",
+          "label": {
+            "en": "OpenAI API · flex · ≤272K input · 30m cache",
+            "zh": "OpenAI API · flex · ≤272K input · 30m cache"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "flex",
+          "context": {
+            "min": 0,
+            "max": 272000
+          },
+          "rates": {
+            "input": 0.5,
+            "cachedInput": 0.025,
+            "output": 2.5,
+            "cacheWrite": 0.625
+          }
+        },
+        {
+          "id": "flex-short-12h",
+          "label": {
+            "en": "OpenAI API · flex · ≤272K input · 12h cache",
+            "zh": "OpenAI API · flex · ≤272K input · 12h cache"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "flex",
+          "context": {
+            "min": 0,
+            "max": 272000
+          },
+          "rates": {
+            "input": 0.5,
+            "cachedInput": 0.025,
+            "output": 2.5,
+            "cacheWrite": 1.25
+          }
+        },
+        {
+          "id": "flex-long-30m",
+          "label": {
+            "en": "OpenAI API · flex · >272K input · 30m cache",
+            "zh": "OpenAI API · flex · >272K input · 30m cache"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "flex",
+          "context": {
+            "min": 272001,
+            "max": null
+          },
+          "rates": {
+            "input": 1.0,
+            "cachedInput": 0.05,
+            "output": 3.75,
+            "cacheWrite": 1.25
+          }
+        },
+        {
+          "id": "flex-long-12h",
+          "label": {
+            "en": "OpenAI API · flex · >272K input · 12h cache",
+            "zh": "OpenAI API · flex · >272K input · 12h cache"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "flex",
+          "context": {
+            "min": 272001,
+            "max": null
+          },
+          "rates": {
+            "input": 1.0,
+            "cachedInput": 0.05,
+            "output": 3.75,
+            "cacheWrite": 2.5
+          }
+        },
+        {
+          "id": "fast-short-30m",
+          "label": {
+            "en": "OpenAI API · fast · ≤272K input · 30m cache",
+            "zh": "OpenAI API · fast · ≤272K input · 30m cache"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "fast",
+          "context": {
+            "min": 0,
+            "max": 272000
+          },
+          "rates": {
+            "input": 2,
+            "cachedInput": 0.1,
+            "output": 10,
+            "cacheWrite": 2.5
+          }
+        },
+        {
+          "id": "fast-short-12h",
+          "label": {
+            "en": "OpenAI API · fast · ≤272K input · 12h cache",
+            "zh": "OpenAI API · fast · ≤272K input · 12h cache"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "fast",
+          "context": {
+            "min": 0,
+            "max": 272000
+          },
+          "rates": {
+            "input": 2,
+            "cachedInput": 0.1,
+            "output": 10,
+            "cacheWrite": 5.0
+          }
+        },
+        {
+          "id": "fast-long-30m",
+          "label": {
+            "en": "OpenAI API · fast · >272K input · 30m cache",
+            "zh": "OpenAI API · fast · >272K input · 30m cache"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "fast",
+          "context": {
+            "min": 272001,
+            "max": null
+          },
+          "rates": {
+            "input": 4,
+            "cachedInput": 0.2,
+            "output": 15.0,
+            "cacheWrite": 5.0
+          }
+        },
+        {
+          "id": "fast-long-12h",
+          "label": {
+            "en": "OpenAI API · fast · >272K input · 12h cache",
+            "zh": "OpenAI API · fast · >272K input · 12h cache"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "fast",
+          "context": {
+            "min": 272001,
+            "max": null
+          },
+          "rates": {
+            "input": 4,
+            "cachedInput": 0.2,
+            "output": 15.0,
+            "cacheWrite": 10.0
+          }
+        }
+      ],
+      "notes": {
+        "en": "Reference workload assumes 97% cache reads, 2.5% cache writes and 0.5% output. Writes replace ordinary input billing, not an added fee. Default: Standard, ≤272K input, 30m cache. Longer prompts use long-context rates for the full request. Regional processing adds 10%; tool fees excluded.",
+        "zh": "参考负载假设 97% 缓存读取、2.5% 缓存写入、0.5% 输出。写入费替代普通输入费，不重复叠加。默认标准档、输入不超过 272K、缓存 30 分钟；超过阈值整次请求采用长上下文费率。区域处理加收 10%，工具费用另计。"
+      },
+      "additionalSources": [
+        "https://developers.openai.com/api/docs/pricing",
+        "https://developers.openai.com/api/docs/guides/prompt-caching"
+      ],
+      "referenceInput": "cacheWrite"
     }
   ]
 }

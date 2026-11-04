@@ -1,9 +1,75 @@
 {
   "version": 1,
   "entries": [
-    {"model":"kimi-k3.1-pro","variant":"international-5m","inputBilling":"input-or-cache-write-same-rate"},
-    {"model":"kimi-k3.1-pro-highspeed","variant":"international-5m","inputBilling":"input-or-cache-write-same-rate"},
-    {"model":"kimi-k3","variant":"international-5m","inputBilling":"input-or-cache-write-same-rate"},
-    {"model":"kimi-k2.7-code","variant":"international-standard","inputBilling":"input-only"}
+    {
+      "model": "kimi-k3.1-pro",
+      "variant": "international-5m",
+      "inputBilling": "input-or-cache-write-same-rate"
+    },
+    {
+      "model": "kimi-k3.1-pro-highspeed",
+      "variant": "international-5m",
+      "inputBilling": "input-or-cache-write-same-rate"
+    },
+    {
+      "model": "kimi-k3",
+      "variant": "international-5m",
+      "inputBilling": "input-or-cache-write-same-rate"
+    },
+    {
+      "model": "kimi-k2.7-code",
+      "variant": "international-standard",
+      "inputBilling": "input-only"
+    },
+    {
+      "model": "minimax-m3.1-flash",
+      "variant": "standard",
+      "inputBilling": "input-only"
+    },
+    {
+      "model": "muse-wonder",
+      "variant": "standard",
+      "inputBilling": "input-only"
+    },
+    {
+      "model": "deepseek-v4.1-flash-1017",
+      "variant": "peak",
+      "inputBilling": "input-only"
+    },
+    {
+      "model": "deepseek-v4.1-flash-1017",
+      "variant": "off-peak",
+      "inputBilling": "input-only"
+    },
+    {
+      "model": "beam-1.0",
+      "variant": "baseten-standard",
+      "inputBilling": "input-only",
+      "channel": "Baseten"
+    },
+    {
+      "model": "muse-spark-open",
+      "variant": "baseten-standard",
+      "inputBilling": "input-only",
+      "channel": "Baseten"
+    },
+    {
+      "model": "gpt-6.1-terra",
+      "variant": "standard-short-30m",
+      "inputBilling": "cache-write",
+      "context": {
+        "min": 0,
+        "max": 272000
+      }
+    },
+    {
+      "model": "gpt-6.1-terra",
+      "variant": "standard-long-30m",
+      "inputBilling": "cache-write",
+      "context": {
+        "min": 272001,
+        "max": null
+      }
+    }
   ]
 }

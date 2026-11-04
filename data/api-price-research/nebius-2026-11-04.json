@@ -1,0 +1,126 @@
+{
+  "source": "https://tokenfactory.nebius.com/api/public/models_info",
+  "checkedAt": "2026-11-04",
+  "models": [
+    {
+      "type": "image2text",
+      "name": "Muse Spark Open",
+      "created_at": 1791523446,
+      "status": "active",
+      "huggingface_url": "https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B-NVFP4",
+      "description": "Meta’s 816B-parameter mixture-of-experts model for coding and agentic workflows, with about 42B active parameters, image and video input, reasoning and tool use.",
+      "vendor": "meta",
+      "tags": [],
+      "use_cases": [
+        "dedicated-endpoint",
+        "text",
+        "image",
+        "video",
+        "code",
+        "reasoning",
+        "function_calling",
+        "responses_api"
+      ],
+      "license": {
+        "url": "https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B/blob/main/LICENSE.md",
+        "name": "Muse Model License",
+        "type": ""
+      },
+      "size_b": 0,
+      "quality": 0,
+      "flavors": [
+        {
+          "model_id": "meta-models/muse-spark-open",
+          "model_type": "image2text",
+          "model_name": "Muse Spark Open",
+          "model_description": "Meta’s 816B-parameter mixture-of-experts model for coding and agentic workflows, with about 42B active parameters, image and video input, reasoning and tool use.",
+          "label": "cheap",
+          "regions": [
+            {
+              "country_code": "US",
+              "name": "us-north1"
+            }
+          ],
+          "external_provider": false,
+          "tags": [],
+          "use_cases": [
+            "dedicated-endpoint",
+            "text",
+            "image",
+            "video",
+            "code",
+            "reasoning",
+            "function_calling",
+            "responses_api"
+          ],
+          "context_window_k": 1048,
+          "max_model_len": 1048576,
+          "tokens_per_second": 143,
+          "input_price_per_million_tokens": 1.25,
+          "input_cached_price_per_million_tokens": 0.15,
+          "output_price_per_million_tokens": 4.25,
+          "quantization": "fp4"
+        }
+      ],
+      "context_window_k": 1048
+    },
+    {
+      "type": "text2text",
+      "name": "Reflection Beam 1.0",
+      "created_at": 1792155600,
+      "status": "active",
+      "huggingface_url": "https://huggingface.co/reflection/Beam-1.0-501B-A23B",
+      "description": "Beam is Reflection’s open-weight, instruction-tuned text model for coding, reasoning and agentic tool use. Its mixture-of-experts architecture has 501.3B total parameters and 23.4B active parameters. It supports a 1M-token context window, was developed predominantly for English, and has a knowledge cutoff of June 30, 2026.",
+      "vendor": "reflection",
+      "tags": [],
+      "use_cases": [
+        "dedicated-endpoint",
+        "text",
+        "code",
+        "function_calling",
+        "reasoning",
+        "responses_api"
+      ],
+      "license": {
+        "url": "https://www.apache.org/licenses/LICENSE-2.0",
+        "name": "Apache 2.0",
+        "type": ""
+      },
+      "size_b": 0,
+      "quality": 0,
+      "flavors": [
+        {
+          "model_id": "reflection/beam",
+          "model_type": "text2text",
+          "model_name": "Reflection Beam 1.0",
+          "model_description": "Beam is Reflection’s open-weight, instruction-tuned text model for coding, reasoning and agentic tool use. Its mixture-of-experts architecture has 501.3B total parameters and 23.4B active parameters. It supports a 1M-token context window, was developed predominantly for English, and has a knowledge cutoff of June 30, 2026.",
+          "label": "cheap",
+          "regions": [
+            {
+              "country_code": "US",
+              "name": "us-north1"
+            }
+          ],
+          "external_provider": false,
+          "tags": [],
+          "use_cases": [
+            "dedicated-endpoint",
+            "text",
+            "code",
+            "function_calling",
+            "reasoning",
+            "responses_api"
+          ],
+          "context_window_k": 1048,
+          "max_model_len": 1048576,
+          "tokens_per_second": 611,
+          "input_price_per_million_tokens": 0.25,
+          "input_cached_price_per_million_tokens": 0.05,
+          "output_price_per_million_tokens": 1,
+          "quantization": "fp4"
+        }
+      ],
+      "context_window_k": 1048
+    }
+  ]
+}

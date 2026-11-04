@@ -75,6 +75,77 @@
         "en": "Baseten-hosted Fast deployment, model slug deepseek-ai/DeepSeek-V4.1-Flash-Fast. This is Baseten pricing, not a direct API quote from the model developer or a subscription allowance conversion. Fast uses separate capacity and falls back to base-model capacity when unavailable.",
         "zh": "Baseten 托管 Fast 端点，调用 slug：deepseek-ai/DeepSeek-V4.1-Flash-Fast。此为 Baseten 费率，不是模型厂商直连报价或订阅额度换算。Fast 采用独立容量，不可用时回退到基础型号容量。"
       }
+    },
+    {
+      "id": "muse-spark-open",
+      "source": "https://www.baseten.co/library/muse-spark-open/",
+      "checkedAt": "2026-11-04",
+      "defaultVariant": "baseten-standard",
+      "variants": [
+        {
+          "id": "baseten-standard",
+          "label": {
+            "en": "Baseten Model API · Standard",
+            "zh": "Baseten 托管 API · 标准档"
+          },
+          "currency": "USD",
+          "region": "Baseten Model APIs",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 1.25,
+            "cachedInput": 0.15,
+            "output": 4.25
+          }
+        }
+      ],
+      "notes": {
+        "en": "Baseten-hosted endpoint meta-models/muse-spark-open. These are hosting prices, not the model developer’s direct API prices. The public pricing page does not specify deployment precision. Scores remain model references, not measurements of this hosting endpoint.",
+        "zh": "Baseten 托管端点 meta-models/muse-spark-open。这是托管平台价格，不是模型研发方直营 API 价格。公开价格页未说明部署精度；成绩仅作模型参考，不代表该托管端点实测。"
+      },
+      "additionalSources": [
+        "https://www.baseten.co/pricing/",
+        "https://docs.baseten.co/inference/model-apis/pricing-and-limits"
+      ]
+    },
+    {
+      "id": "beam-1.0",
+      "source": "https://www.baseten.co/library/beam/",
+      "checkedAt": "2026-11-04",
+      "defaultVariant": "baseten-standard",
+      "variants": [
+        {
+          "id": "baseten-standard",
+          "label": {
+            "en": "Baseten Model API · Standard",
+            "zh": "Baseten 托管 API · 标准档"
+          },
+          "currency": "USD",
+          "region": "Baseten Model APIs",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 0.4,
+            "cachedInput": 0.04,
+            "output": 1.2
+          }
+        }
+      ],
+      "notes": {
+        "en": "Baseten-hosted endpoint reflection/Beam-1.0. These are hosting prices, not the model developer’s direct API prices. The public pricing page does not specify deployment precision. Scores remain model references, not measurements of this hosting endpoint.",
+        "zh": "Baseten 托管端点 reflection/Beam-1.0。这是托管平台价格，不是模型研发方直营 API 价格。公开价格页未说明部署精度；成绩仅作模型参考，不代表该托管端点实测。"
+      },
+      "additionalSources": [
+        "https://www.baseten.co/pricing/",
+        "https://docs.baseten.co/inference/model-apis/pricing-and-limits",
+        "https://www.baseten.co/resources/changelog/beam-10-available-on-baseten/"
+      ]
     }
   ]
 }

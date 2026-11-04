@@ -745,6 +745,12 @@ export function workloadLine(
       ? `标准负载：缓存读 ${pct(m.cache)} / 输入 ${pct(m.input)} / 输出 ${pct(m.output)}`
       : `Standard workload: ${pct(m.cache)} cache reads / ${pct(m.input)} input / ${pct(m.output)} output`;
   }
+  if (p.workload === "cacheWrite") {
+    const m=conventions.standardTokenMix;
+    return zh
+      ? `缓存写入负载：缓存读 ${pct(m.cache)} / 缓存写 ${pct(m.input)} / 输出 ${pct(m.output)}；TTL 与上下文条件见计费档位`
+      : `Cache-write workload: ${pct(m.cache)} cache reads / ${pct(m.input)} cache writes / ${pct(m.output)} output; see billing tier for TTL and context conditions`;
+  }
   return zh
     ? "未折算：样本缺 token 分项（或为官方绝对 token 表），直接采用 raw token"
     : "Not workload-normalized: sample lacks a token breakdown (or is an official absolute token table); raw tokens used as-is";

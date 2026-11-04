@@ -1,7 +1,7 @@
 {
   "version": 1,
   "checkedAt": "2026-11-04",
-  "baselineCommit": "0be92b7ce3edf7690672ce5217607032a4bc7c45",
+  "baselineCommit": "ed848df33e273806e9f15ab9d370f83f4a78ec07",
   "note": "Source audit is separate from publication. Unverified sources are never reported as unchanged. Identity-review rows may be aliases, historical models, or new releases. Scores across changed versions must not be mixed.",
   "results": [
     {
@@ -11,7 +11,7 @@
       "baselineVersion": "4.3",
       "currentVersion": "5.0.1",
       "versionChanged": true,
-      "baselineConfigurations": 146,
+      "baselineConfigurations": 152,
       "observedConfigurations": 91,
       "sourceUpdatedAt": null,
       "coverage": "Current non-deprecated configurations in the public page payload with a non-null score; not all historical releases.",
@@ -25,7 +25,6 @@
         "granite-4.2-3b",
         "gpt-6.1-terra",
         "gemini-4-carbon",
-        "claude-haiku-5.5",
         "mistral-large-4",
         "nemotron-3.5-lightning",
         "command-a-plus",
@@ -229,7 +228,7 @@
           "effort": "high",
           "source": "https://artificialanalysis.ai/models/claude-haiku-5-5-high",
           "model": "claude-haiku-5.5",
-          "status": "missing-from-board"
+          "status": "tracked-model"
         },
         {
           "identity": "Grok 4.7",
@@ -463,7 +462,7 @@
           "effort": "xhigh",
           "source": "https://artificialanalysis.ai/models/claude-haiku-5-5-xhigh",
           "model": "claude-haiku-5.5",
-          "status": "missing-from-board"
+          "status": "tracked-model"
         },
         {
           "identity": "Claude Haiku 5.5",
@@ -476,7 +475,7 @@
           "effort": "low",
           "source": "https://artificialanalysis.ai/models/claude-haiku-5-5-low",
           "model": "claude-haiku-5.5",
-          "status": "missing-from-board"
+          "status": "tracked-model"
         },
         {
           "identity": "Claude Opus 5.5",
@@ -671,7 +670,7 @@
           "effort": "max",
           "source": "https://artificialanalysis.ai/models/claude-haiku-5-5",
           "model": "claude-haiku-5.5",
-          "status": "missing-from-board"
+          "status": "tracked-model"
         },
         {
           "identity": "GPT-6 Luna",
@@ -840,7 +839,7 @@
           "effort": "medium",
           "source": "https://artificialanalysis.ai/models/claude-haiku-5-5-medium",
           "model": "claude-haiku-5.5",
-          "status": "missing-from-board"
+          "status": "tracked-model"
         },
         {
           "identity": "Qwen3.8 27B",
@@ -1241,7 +1240,7 @@
       "baselineVersion": "4.0",
       "currentVersion": "4.0",
       "versionChanged": false,
-      "baselineConfigurations": 30,
+      "baselineConfigurations": 38,
       "observedConfigurations": 35,
       "sourceUpdatedAt": "2026-10-23T00:29:02.387044+00:00",
       "coverage": "All rows in the official leaderboard payload, including all effort levels.",
@@ -1249,25 +1248,8 @@
       "comparisonSkippedForVersionChange": false,
       "scoreDifferences": [],
       "costDifferences": [],
-      "newConfigurations": [
-        "Claude Code - Opus 5.5 (max)",
-        "Claude Code - Sonnet 5.5 (max)",
-        "Codex - GPT-6.1 Sol (max)",
-        "Codex - GPT-6 Sol (max)",
-        "Claude Code - GLM-5.3-Flash (none)",
-        "Claude Code - Qwen3.8-Max-0902 (max)",
-        "Codex - GPT-6 Luna (max)",
-        "Muse Code - Muse Spark 1.3 (xhigh)"
-      ],
-      "missingFromBoard": [
-        "claude-sonnet-5.5",
-        "gpt-6.1-sol",
-        "gpt-6-sol",
-        "glm-5.3-flash",
-        "qwen3.8-max-0902",
-        "gpt-6-luna",
-        "muse-spark-1.3"
-      ],
+      "newConfigurations": [],
+      "missingFromBoard": [],
       "unresolvedIdentities": [],
       "rows": [
         {
@@ -1296,7 +1278,7 @@
           "sourceRank": 2,
           "modelSource": "https://www.anthropic.com/claude-sonnet-5-5",
           "model": "claude-sonnet-5.5",
-          "status": "missing-from-board"
+          "status": "tracked-model"
         },
         {
           "identity": "GPT-6 Astra",
@@ -1324,7 +1306,7 @@
           "sourceRank": 3,
           "modelSource": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
           "model": "gpt-6.1-sol",
-          "status": "missing-from-board"
+          "status": "tracked-model"
         },
         {
           "identity": "Claude Fable 5.1",
@@ -1492,7 +1474,7 @@
           "sourceRank": 16,
           "modelSource": "https://developers.openai.com/api/docs/models/gpt-6-sol",
           "model": "gpt-6-sol",
-          "status": "missing-from-board"
+          "status": "tracked-model"
         },
         {
           "identity": "Claude Opus 5",
@@ -1590,7 +1572,7 @@
           "sourceRank": 23,
           "modelSource": "https://z.ai/blog/glm-5.3-flash",
           "model": "glm-5.3-flash",
-          "status": "missing-from-board"
+          "status": "tracked-model"
         },
         {
           "identity": "Claude Opus 5",
@@ -1618,7 +1600,7 @@
           "sourceRank": 25,
           "modelSource": "https://www.alibabacloud.com/en/notice/model_studio_update_notice_for_qwen38max_models_863",
           "model": "qwen3.8-max-0902",
-          "status": "missing-from-board"
+          "status": "tracked-model"
         },
         {
           "identity": "Claude Opus 4.8",
@@ -1702,7 +1684,7 @@
           "sourceRank": 31,
           "modelSource": "https://developers.openai.com/api/docs/models/gpt-6-luna",
           "model": "gpt-6-luna",
-          "status": "missing-from-board"
+          "status": "tracked-model"
         },
         {
           "identity": "Muse Spark 1.3",
@@ -1716,7 +1698,7 @@
           "sourceRank": 32,
           "modelSource": "https://ai.meta.com/tools/muse/",
           "model": "muse-spark-1.3",
-          "status": "missing-from-board"
+          "status": "tracked-model"
         },
         {
           "identity": "Grok 4.5",
@@ -1769,7 +1751,7 @@
       "baselineVersion": "4.0",
       "currentVersion": "4.0",
       "versionChanged": false,
-      "baselineConfigurations": 124,
+      "baselineConfigurations": 130,
       "observedConfigurations": 140,
       "sourceUpdatedAt": null,
       "coverage": "Current non-deprecated configurations in the public page payload with a non-null score; not all historical releases.",
@@ -1788,7 +1770,6 @@
         "K2 Horizon 7B",
         "Solar Pro 4",
         "North Mini Code",
-        "Claude Haiku 5.5 (High)",
         "Grok 4.7 (Low)",
         "Qwen3.5 122B A10B (Reasoning)",
         "Mistral Large 4 (Medium)",
@@ -1800,8 +1781,6 @@
         "Muse Spark Open (Xhigh)",
         "gpt-oss-20b (High)",
         "Mistral Small 4 (Reasoning)",
-        "Claude Haiku 5.5 (Xhigh)",
-        "Claude Haiku 5.5 (Low)",
         "Ling-3.0-flash-VL",
         "JT-4.1 Flash 236B A21B (Reasoning)",
         "Nanbeige4.3-33B",
@@ -1818,7 +1797,6 @@
         "Ministral 3 14B",
         "Mercury 2.5",
         "NVIDIA Nemotron 3 Nano 30B A3B (Reasoning)",
-        "Claude Haiku 5.5 (Max)",
         "Nemotron 3.5 Bolt 74B-A9B",
         "Ling 3.0 Tiny",
         "Celeris-1",
@@ -1834,7 +1812,6 @@
         "Ling 3.1 Flash",
         "Llama 4 Scout",
         "Granite 4.2 8B",
-        "Claude Haiku 5.5 (Medium)",
         "GPT-6.1 Terra (Max)",
         "Gemini 4 Carbon (Low)",
         "Trinity Large Thinking",
@@ -1854,7 +1831,6 @@
         "Mistral Large 4 (High)",
         "Ring-2.6-1T",
         "gpt-oss-120b (High)",
-        "DeepSeek V4.1 Flash 1017 (Max)",
         "Quasar 438B (Max, Based on GLM-5.2)",
         "Qwen3 Coder Next",
         "Muse Wonder (Max)"
@@ -1870,7 +1846,6 @@
         "k2-horizon-7b",
         "solar-pro-4",
         "north-mini-code",
-        "claude-haiku-5.5",
         "qwen3.5-122b-a10b",
         "mistral-large-4",
         "nemotron-3.5-lightning",
@@ -2189,7 +2164,7 @@
           "effort": "high",
           "source": "https://artificialanalysis.ai/models/claude-haiku-5-5-high",
           "model": "claude-haiku-5.5",
-          "status": "missing-from-board"
+          "status": "tracked-model"
         },
         {
           "identity": "Grok 4.7",
@@ -2488,7 +2463,7 @@
           "effort": "xhigh",
           "source": "https://artificialanalysis.ai/models/claude-haiku-5-5-xhigh",
           "model": "claude-haiku-5.5",
-          "status": "missing-from-board"
+          "status": "tracked-model"
         },
         {
           "identity": "Claude Haiku 5.5",
@@ -2501,7 +2476,7 @@
           "effort": "low",
           "source": "https://artificialanalysis.ai/models/claude-haiku-5-5-low",
           "model": "claude-haiku-5.5",
-          "status": "missing-from-board"
+          "status": "tracked-model"
         },
         {
           "identity": "Ling-3.0-flash-VL",
@@ -2852,7 +2827,7 @@
           "effort": "max",
           "source": "https://artificialanalysis.ai/models/claude-haiku-5-5",
           "model": "claude-haiku-5.5",
-          "status": "missing-from-board"
+          "status": "tracked-model"
         },
         {
           "identity": "GPT-6 Luna",
@@ -3203,7 +3178,7 @@
           "effort": "medium",
           "source": "https://artificialanalysis.ai/models/claude-haiku-5-5-medium",
           "model": "claude-haiku-5.5",
-          "status": "missing-from-board"
+          "status": "tracked-model"
         },
         {
           "identity": "Qwen3.8 27B",
@@ -4515,7 +4490,7 @@
       "baselineVersion": "1.1",
       "currentVersion": "1.1",
       "versionChanged": false,
-      "baselineConfigurations": 75,
+      "baselineConfigurations": 76,
       "observedConfigurations": 70,
       "sourceUpdatedAt": "2026-09-22T06:27:15.860279+00:00",
       "coverage": "Official v1.1 live JSON; excludes upstream additions sourced from vendor self-reports.",
@@ -5541,7 +5516,7 @@
       ]
     }
   ],
-  "releaseSince": "2026-10-01",
+  "releaseSince": "2026-10-19",
   "recentReleases": [
     {
       "name": "Gemini 4 Carbon",
@@ -5554,52 +5529,12 @@
       "inUpstreamBenchmarks": false
     },
     {
-      "name": "Claude Haiku 5.5",
-      "slug": "claude-haiku-5-5",
-      "maker": "Anthropic",
-      "releaseDate": "2026-10-07",
-      "source": "https://artificialanalysis.ai/models/releases/claude-haiku-5-5",
-      "catalogModel": "claude-haiku-5.5",
-      "inUpstreamDirectory": true,
-      "inUpstreamBenchmarks": false
-    },
-    {
       "name": "GPT-6.1 Terra",
       "slug": "gpt-6-1-terra",
       "maker": "OpenAI",
       "releaseDate": "2026-10-26",
       "source": "https://artificialanalysis.ai/models/releases/gpt-6-1-terra",
       "catalogModel": "gpt-6.1-terra",
-      "inUpstreamDirectory": false,
-      "inUpstreamBenchmarks": false
-    },
-    {
-      "name": "Muse Wonder Full",
-      "slug": "muse-wonder-full",
-      "maker": "Meta",
-      "releaseDate": "2026-10-12",
-      "source": "https://artificialanalysis.ai/models/releases/muse-wonder-full",
-      "catalogModel": "muse-wonder-full",
-      "inUpstreamDirectory": false,
-      "inUpstreamBenchmarks": false
-    },
-    {
-      "name": "Muse Wonder",
-      "slug": "muse-wonder",
-      "maker": "Meta",
-      "releaseDate": "2026-10-12",
-      "source": "https://artificialanalysis.ai/models/releases/muse-wonder",
-      "catalogModel": "muse-wonder",
-      "inUpstreamDirectory": false,
-      "inUpstreamBenchmarks": false
-    },
-    {
-      "name": "Muse Spark Open",
-      "slug": "muse-spark-open",
-      "maker": "Meta",
-      "releaseDate": "2026-10-15",
-      "source": "https://artificialanalysis.ai/models/releases/muse-spark-open",
-      "catalogModel": "muse-spark-open",
       "inUpstreamDirectory": false,
       "inUpstreamBenchmarks": false
     },
@@ -5614,16 +5549,6 @@
       "inUpstreamBenchmarks": false
     },
     {
-      "name": "DeepSeek V4.1 Flash 1017",
-      "slug": "deepseek-v4-1-flash-1017",
-      "maker": "DeepSeek",
-      "releaseDate": "2026-10-17",
-      "source": "https://artificialanalysis.ai/models/releases/deepseek-v4-1-flash-1017",
-      "catalogModel": "deepseek-v4.1-flash-1017",
-      "inUpstreamDirectory": false,
-      "inUpstreamBenchmarks": false
-    },
-    {
       "name": "Ling 3.1 Flash 1019",
       "slug": "ling-3-1-flash-rc5",
       "maker": "InclusionAI",
@@ -5631,16 +5556,6 @@
       "source": "https://artificialanalysis.ai/models/releases/ling-3-1-flash-rc5",
       "catalogModel": "ling-3.1-flash-1019",
       "inUpstreamDirectory": false,
-      "inUpstreamBenchmarks": false
-    },
-    {
-      "name": "Ling 3.1 Flash",
-      "slug": "ling-3-1-flash",
-      "maker": "InclusionAI",
-      "releaseDate": "2026-10-01",
-      "source": "https://artificialanalysis.ai/models/releases/ling-3-1-flash",
-      "catalogModel": "ling-3.1-flash",
-      "inUpstreamDirectory": true,
       "inUpstreamBenchmarks": false
     },
     {
@@ -5674,42 +5589,12 @@
       "inUpstreamBenchmarks": false
     },
     {
-      "name": "Beam 1.0",
-      "slug": "reflection-beam",
-      "maker": "Reflection",
-      "releaseDate": "2026-10-16",
-      "source": "https://artificialanalysis.ai/models/releases/reflection-beam",
-      "catalogModel": "beam-1.0",
-      "inUpstreamDirectory": false,
-      "inUpstreamBenchmarks": false
-    },
-    {
-      "name": "Nemotron 3.5 Super VL",
-      "slug": "nemotron-3-5-super-vl",
-      "maker": "NVIDIA",
-      "releaseDate": "2026-10-15",
-      "source": "https://artificialanalysis.ai/models/releases/nemotron-3-5-super-vl",
-      "catalogModel": "nemotron-3.5-super-vl",
-      "inUpstreamDirectory": false,
-      "inUpstreamBenchmarks": false
-    },
-    {
       "name": "Nemotron 3.5 Bolt E4B 4GB",
       "slug": "nemotron-3-5-bolt-e4b-4gb",
       "maker": "NVIDIA",
       "releaseDate": "2026-10-23",
       "source": "https://artificialanalysis.ai/models/releases/nemotron-3-5-bolt-e4b-4gb",
       "catalogModel": "nemotron-3.5-bolt-e4b-4gb",
-      "inUpstreamDirectory": false,
-      "inUpstreamBenchmarks": false
-    },
-    {
-      "name": "Nemotron 3.5 Bolt 74B-A9B",
-      "slug": "nemotron-3-5-bolt-74b-a9b",
-      "maker": "NVIDIA",
-      "releaseDate": "2026-10-15",
-      "source": "https://artificialanalysis.ai/models/releases/nemotron-3-5-bolt-74b-a9b",
-      "catalogModel": "nemotron-3.5-bolt-74b-a9b",
       "inUpstreamDirectory": false,
       "inUpstreamBenchmarks": false
     }

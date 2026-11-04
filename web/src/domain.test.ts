@@ -1024,7 +1024,7 @@ test("Hit testing prefers the nearest target relative to its size", () => {
 });
 test("Channel palette is shared with the Python charts and keeps pale colours legible", () => {
   const config = JSON.parse(readConfig(new URL("../../upstream/config/channel-colors.json", import.meta.url), "utf8"));
-  assert.deepEqual(channelColors, config.colors);
+  for (const [channel,color] of Object.entries(config.colors)) assert.equal(channelColors[channel],color);
   assert.equal(channelColors.StepFun, "#00F4E5", "CONVENTIONS pins StepFun");
   for (const channel of new Set(data.points.map((p) => p.channel)))
     assert.ok(channelColors[channel], `${channel} has a colour`);

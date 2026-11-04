@@ -34,6 +34,40 @@
         "en": "Exact API ID: MiniMax-M2.5 (Legacy Models table); the highspeed variant has different rates.",
         "zh": "准确调用 ID：MiniMax-M2.5（Legacy Models 价表）；highspeed 变体另行计价。"
       }
+    },
+    {
+      "id": "minimax-m3.1-flash",
+      "source": "https://platform.minimax.io/docs/pricing/overview",
+      "checkedAt": "2026-11-04",
+      "defaultVariant": "standard",
+      "variants": [
+        {
+          "id": "standard",
+          "label": {
+            "en": "MiniMax API · Standard",
+            "zh": "MiniMax API · Standard"
+          },
+          "currency": "USD",
+          "region": "MiniMax international API",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 0.15,
+            "cachedInput": 0.015,
+            "output": 0.6
+          }
+        }
+      ],
+      "notes": {
+        "en": "Exact endpoint MiniMax-M3.1-Flash, not the earlier Preview. Flat listed token rates; no Priority tier for this model. Reasoning tokens are billed as output.",
+        "zh": "精确端点 MiniMax-M3.1-Flash，不是早期 Preview。官方列出统一 token 费率，此模型不支持 Priority 档；思考 tokens 计入输出。"
+      },
+      "additionalSources": [
+        "https://platform.minimax.io/docs/api-reference/text-anthropic-api"
+      ]
     }
   ]
 }

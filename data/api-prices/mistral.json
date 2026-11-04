@@ -245,6 +245,41 @@
         "en": "Exact API ID: mistral-medium-3-5. USD/EUR prices and Standard/Batch/Priority rates were read from the official selector, including regional inference. Cache-write pricing is not separately published in that table. EUR amounts retain their original denomination and are not converted for the USD blended comparison.",
         "zh": "准确调用 ID：mistral-medium-3-5。已逐档核对官方选择器中的美元／欧元、Standard／Batch／Priority 及地区指定推理费率。该价表未单列缓存写入价。欧元金额保留原币，不用于美元混合价换算。"
       }
+    },
+    {
+      "id": "mistral-large-4",
+      "source": "https://docs.mistral.ai/inference/pricing",
+      "checkedAt": "2026-11-04",
+      "defaultVariant": "standard",
+      "variants": [
+        {
+          "id": "standard",
+          "label": {
+            "en": "Mistral API · USD Standard",
+            "zh": "Mistral API · USD Standard"
+          },
+          "currency": "USD",
+          "region": "Mistral API",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 0.7,
+            "cachedInput": 0.07,
+            "output": 2.1
+          }
+        }
+      ],
+      "notes": {
+        "en": "Current mistral-large-4 endpoint. October 29 open-weight release improved on the October 6 preview. This price reference is not promoted to a Pareto point until the measured version is resolved for existing preview-era scores. Batch, Priority, EUR and regional tiers are not included in this record.",
+        "zh": "当前 mistral-large-4 端点。10 月 29 日开放权重版相对 10 月 6 日预览版有更新；现有预览期成绩的被测版本尚不能逐项确认，因此此参考价暂不生成帕累托价格点。本记录仅包含美元标准档，不含 Batch、Priority、欧元和区域档。"
+      },
+      "additionalSources": [
+        "https://docs.mistral.ai/models/mistral-large-4-0",
+        "https://mistral.ai/news/mistral-large-4-oss/"
+      ]
     }
   ]
 }

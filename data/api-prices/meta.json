@@ -138,6 +138,40 @@
       "additionalSources": [
         "https://dev.meta.ai/docs/overview"
       ]
+    },
+    {
+      "id": "muse-wonder",
+      "source": "https://dev.meta.ai/docs/pricing-rate-limits",
+      "checkedAt": "2026-11-04",
+      "defaultVariant": "standard",
+      "variants": [
+        {
+          "id": "standard",
+          "label": {
+            "en": "Meta Model API · Standard",
+            "zh": "Meta Model API · Standard"
+          },
+          "currency": "USD",
+          "region": "Meta Model API",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 4,
+            "cachedInput": 0.2,
+            "output": 20
+          }
+        }
+      ],
+      "notes": {
+        "en": "Endpoint muse-wonder-1.0. Standard only; no Contributor API tier. Not Wonder Full, which is subscription-only. Unavailable in South Korea. Tool charges excluded.",
+        "zh": "端点 muse-wonder-1.0，仅标准 API 档，无 Contributor API 档。不代表仅限订阅访问的 Wonder Full。在韩国不可用；工具费用另计。"
+      },
+      "additionalSources": [
+        "https://dev.meta.ai/docs/models"
+      ]
     }
   ]
 }

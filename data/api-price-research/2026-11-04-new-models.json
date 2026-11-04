@@ -1,0 +1,84 @@
+{
+  "checkedAt": "2026-11-04",
+  "scope": "Recent models prioritized; historical-model gaps deferred at user request.",
+  "models": [
+    {
+      "model": "gpt-6.1-terra",
+      "status": "plotted",
+      "decision": "Official prices; 30m cache-write workload and separate <=272K / >272K bands.",
+      "sources": [
+        "https://developers.openai.com/api/docs/models/gpt-6.1-terra",
+        "https://developers.openai.com/api/docs/guides/prompt-caching"
+      ]
+    },
+    {
+      "model": "muse-wonder",
+      "status": "plotted",
+      "decision": "Exact muse-wonder-1.0 endpoint; not Wonder Full.",
+      "sources": [
+        "https://dev.meta.ai/docs/pricing-rate-limits",
+        "https://dev.meta.ai/docs/models"
+      ]
+    },
+    {
+      "model": "minimax-m3.1-flash",
+      "status": "plotted",
+      "decision": "Exact stable endpoint; earlier Preview prices/scores not borrowed.",
+      "sources": [
+        "https://platform.minimax.io/docs/pricing/overview",
+        "https://platform.minimax.io/docs/api-reference/text-anthropic-api"
+      ]
+    },
+    {
+      "model": "deepseek-v4.1-flash-1017",
+      "status": "plotted",
+      "decision": "Official endpoint maps to exact 1017 release; peak and off-peak kept separate.",
+      "sources": [
+        "https://api-docs.deepseek.com/quick_start/pricing/"
+      ]
+    },
+    {
+      "model": "beam-1.0",
+      "status": "plotted-hosted-reference",
+      "decision": "Baseten reflection/Beam-1.0; hosting precision unspecified, not a channel benchmark. Nebius FP4 rates not mapped to generic model.",
+      "sources": [
+        "https://www.baseten.co/library/beam/",
+        "https://www.baseten.co/resources/changelog/beam-10-available-on-baseten/"
+      ]
+    },
+    {
+      "model": "muse-spark-open",
+      "status": "plotted-hosted-reference",
+      "decision": "Baseten meta-models/muse-spark-open; hosting precision unspecified, not a channel benchmark. Nebius FP4 rates not mapped to generic model.",
+      "sources": [
+        "https://www.baseten.co/library/muse-spark-open"
+      ]
+    },
+    {
+      "model": "mistral-large-4",
+      "status": "reference-only-version-review",
+      "decision": "Official current price verified; October 29 improved weights versus preview-era benchmark runs need exact-version review.",
+      "sources": [
+        "https://docs.mistral.ai/inference/pricing",
+        "https://mistral.ai/news/mistral-large-4-oss/"
+      ]
+    },
+    {
+      "model": "gemini-4-carbon",
+      "status": "no-verified-price",
+      "decision": "Checked both official pricing pages; Carbon not listed. No Argon price substitution.",
+      "sources": [
+        "https://aistudio.google.com/docs/pricing",
+        "https://cloud.google.com/model-garden/pricing"
+      ]
+    },
+    {
+      "model": "muse-wonder-full",
+      "status": "no-verified-quota",
+      "decision": "Subscription only; no public API price and no verified usable-token denominator.",
+      "sources": [
+        "https://dev.meta.ai/docs/models"
+      ]
+    }
+  ]
+}

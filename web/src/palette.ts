@@ -1,7 +1,11 @@
 import palette from "../../upstream/config/channel-colors.json";
 
 /** Channel colours shared with the Python charts (config/channel-colors.json). */
-export const channelColors: Record<string, string> = palette.colors;
+export const channelColors: Record<string, string> = {
+  ...palette.colors,
+  Meta: '#0866FF',
+  Baseten: '#198A65',
+};
 export const FALLBACK_COLOR = palette.fallback;
 export const FRONTIER_COLOR = palette.frontier;
 

@@ -19,12 +19,14 @@
     },
     {
       "board": "arena_code",
-      "status": "updated",
+      "status": "retained-previous",
+      "error": "HTTP 403",
       "retainedCheckedAt": "2026-11-04"
     },
     {
       "board": "arena_agent_mode",
-      "status": "updated",
+      "status": "retained-previous",
+      "error": "HTTP 403",
       "retainedCheckedAt": "2026-11-04"
     },
     {

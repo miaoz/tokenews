@@ -1,0 +1,5 @@
+{
+  "source": "https://www.baseten.co/library/muse-spark-open",
+  "capturedAt": "2026-11-04T10:42:04.082Z",
+  "pricingText": "Products\nResearch\nResources\nCustomers\nPricing\nModels\nDocs\nLog in\nGet started\nMuse Spark Open\n\nmeta-models/muse-spark-open\n\nMeta's 816B open-weight MoE model for coding agents, with hybrid attention for high throughput and long context.\n\nMODEL API\nLARGE LANGUAGE\nIMAGE PROCESSING\nDedicated deployment\nRun Muse Spark Open on dedicated hardware\nModel API\nStart using Muse Spark Open instantly with per-token pricing\nTalk to an engineer\nFor custom options, training, or help getting started\nMODEL DETAILS\nDeveloped by\nMeta AI\nModel family\nMuse Spark\nSize\n816B-A42B\nLicense\nMuse Model License\nPRICING PER 1M TOKENS\nInput\n$1.25\nCache input\n$0.15\nOutput\n$4.25\nSee all pricing\n\nMuse Spark Open is a model designed specifically for coding agents. It combines strong code generation and reasoning with reliable tool use, helping agents understand repositories, plan changes, write code, and complete complex so"
+}

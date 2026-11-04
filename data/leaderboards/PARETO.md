@@ -102,6 +102,9 @@ chart's expandable coverage table. `/data/current-leaderboards.json` contains al
 
 ## Remaining gaps after the pricing follow-up (2026-11-04)
 
+The counts in this section describe the first Kimi follow-up; the deployment
+pass below supersedes them.
+
 The official Kimi browser-rendered pricing table supplied four new maintained
 references (K3.1 Pro, K3.1 Pro Highspeed, K3 and K2.7 Code). The Highspeed endpoint
 is additionally verified by the official quickstart and has its own catalog ID:
@@ -133,3 +136,38 @@ manual fallback. Official price research and review of new identities or changed
 methodologies are also manual. The workflow must be merged/deployed before its
 daily schedule takes effect. A source failure preserves prior evidence and is
 now surfaced in the chart, without advancing its verification date.
+
+## Deployment pass: prioritize new releases (2026-11-04)
+
+Merged remote main `50a2021` before deployment, including upstream data through
+commit `ed848df33e27`. Its 337 adopted points remain unchanged. The upstream
+publication date is 2026-10-27; individual evidence includes later review dates.
+Preview, dated and stable identities remain separate after this merge.
+
+Seven more recent-model API references were verified: GPT-6.1 Terra, Muse Wonder,
+MiniMax M3.1 Flash, DeepSeek V4.1 Flash 1017, Beam 1.0, Muse Spark Open and
+Mistral Large 4. The first six now have explicitly reviewed price points.
+DeepSeek peak/off-peak and Terra short/long-context are distinct points. Terra
+uses 97% reads / 2.5% writes / 0.5% output, 30m cache retention; writes replace
+ordinary input billing. Its reference prices and chart points share this basis.
+Beam and Spark Open use Baseten's published model endpoints, labelled as hosted
+API references. Deployment precision is not stated on those pages; these are
+not measurements of Baseten inference. Nebius's explicit FP4 deployments were
+investigated and were not joined to the generic benchmark identities.
+
+Publication: 306 models, 349 points (337 adopted + 12 reviewed API points),
+604 observed configurations, 410 with price mappings, 186 unpriced across 118
+models, and eight excluded routers/fallbacks. API references cover 47 models.
+No older-model pricing sweep was performed, following the user's priority.
+
+Unresolved recent-release items:
+- Carbon: neither Gemini Developer API nor Google Cloud pricing currently lists
+  a verified price. Keep its scores without an assumed Argon price.
+- Wonder Full: official Meta docs say it is subscription-only, distinct from
+  Wonder at maximum reasoning effort. No verified usable-token denominator.
+- Mistral Large 4: current price recorded, but the October 29 weight update
+  versus preview-era scored runs needs identity review before plotting.
+- Arena unattended retrieval: direct public request again returned HTTP 403.
+  Keep the reviewed full browser snapshots and show failed-refresh status.
+
+Source decisions: `data/api-price-research/2026-11-04-new-models.json`.

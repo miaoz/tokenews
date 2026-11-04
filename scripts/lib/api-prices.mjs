@@ -36,7 +36,8 @@ export function validatePriceFile(value, file, today = new Date().toISOString().
   const modelIds = new Set();
   for (const [i, model] of value.models.entries()) {
     const at = `.models[${i}]`;
-    object(model, at, ["id", "source", "checkedAt", "defaultVariant", "variants"], ["notes", "additionalSources"]);
+    object(model, at, ["id", "source", "checkedAt", "defaultVariant", "variants"], ["notes", "additionalSources", "referenceInput"]);
+    if (model.referenceInput !== undefined && model.referenceInput !== 'cacheWrite') fail(`${at}.referenceInput`, 'expected cacheWrite');
     text(model.id, `${at}.id`);
     if (!/^[A-Za-z0-9][A-Za-z0-9._:/-]*$/.test(model.id)) fail(`${at}.id`, "expected an exact model ID");
     if (modelIds.has(model.id)) fail(`${at}.id`, `duplicate model ${model.id}`);
@@ -71,6 +72,8 @@ export function validatePriceFile(value, file, today = new Date().toISOString().
       for (const key of ["input", "output"]) amount(variant.rates[key], `${va}.rates.${key}`);
       for (const key of ["cachedInput", "cacheWrite"])
         if (key in variant.rates && variant.rates[key] !== null) amount(variant.rates[key], `${va}.rates.${key}`);
+      if (model.referenceInput === 'cacheWrite' && variant.rates.cacheWrite == null)
+        fail(`${va}.rates.cacheWrite`, 'required for the cache-write reference workload');
       if (variant.notes !== undefined) bilingual(variant.notes, `${va}.notes`);
     }
     if (!variants.has(model.defaultVariant)) fail(`${at}.defaultVariant`, "does not name a variant");

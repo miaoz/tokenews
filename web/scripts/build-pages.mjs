@@ -614,7 +614,7 @@ function formula(p, lang) {
           "Metered API · public token prices weighted by the Anthropic workload (input share at the 5-minute cache-write rate).",
           "按量 API · 三段公开标价按 Anthropic 统一负载加权（普通输入份额按 5 分钟缓存写价计）。",
         )
-      : t("Metered API · public token prices weighted by the project standard workload.", "按量 API · 三段公开标价按项目标准负载加权。");
+      : t("Metered API · public token prices weighted by the stated comparison workload.", "按量 API · 公开标价按注明的比较负载加权。");
   if (unmetered(p))
     return `${price(p.price_usd)} ${t("/ month", "/ 月")} ÷ ${t("unbounded usage", "无界可用量")} → ≈$0 / MTok · ${unmeteredNote(p, lang)} · ${t("promotional price, not a permanent allowance", "促销价，非永久口径")}`;
   return `${price(p.price_usd)} ${t("/ month", "/ 月")}${p.currency === "CNY" ? ` (¥${p.original_price})` : ""} ÷ ${number(p.monthly_tokens, lang, 0)} tokens × 1,000,000 ≈ ${priceExact(p.real_usd_per_mtok)} / MTok`;
@@ -631,7 +631,7 @@ function evidenceBlock(p, lang) {
           p.list_price
             ? listPriceLine(p, lang) +
               (p.list_blended_usd_per_mtok != null
-                ? t(` · standard-load blended ≈ ${price(p.list_blended_usd_per_mtok)}/MTok`, `；标准负载加权 ≈ ${price(p.list_blended_usd_per_mtok)}/MTok`)
+                ? t(` · comparison-load blended ≈ ${price(p.list_blended_usd_per_mtok)}/MTok`, `；比较负载加权 ≈ ${price(p.list_blended_usd_per_mtok)}/MTok`)
                 : "")
             : "",
         ]
@@ -734,6 +734,7 @@ function modelPage(m, lang) {
   const vName = makerLabel(v, lang);
   const lp = listPrice(m.apiReference?.prices);
   const c = m.cheapest;
+  const priceUpdated = latest(updated, ...m.points.map(p => p.data_date));
   const nPlans = m.subs.length;
   const currentBenchmarks = m.benchmarks.filter(b=>data.boards[b.board].current !== false);
   const topBench = (currentBenchmarks.length ? currentBenchmarks : m.benchmarks).slice().sort((a, b) => a.rank / a.of - b.rank / b.of)[0];
@@ -748,15 +749,15 @@ function modelPage(m, lang) {
     ? t(`As of ${m.modified}, ${m.name} is listed in our model directory. Subscription allowances and real token costs have not yet been recorded.`, `截至 ${m.modified}，${m.name} 已收录到模型目录；订阅额度与真实 token 成本尚未收录。`)
     : c
     ? zh
-      ? `截至 ${updated}，使用 ${m.name} 最便宜的方式是「${planName(c, lang)}」，真实单价约 ${usd(c.real_usd_per_mtok)} / 百万 token${c.price_usd != null ? `（月费 ${fee(c)}，每月约 ${tokens(c, lang)} token）` : ""}。本站共收录 ${m.points.length} 个可使用 ${m.name} 的套餐或 API 渠道。`
-      : `As of ${updated}, the cheapest way to use ${m.name} is ${planName(c, lang)} at a real cost of about ${usd(c.real_usd_per_mtok)} per million tokens${c.price_usd != null ? ` (${fee(c)}/month for roughly ${tokens(c, lang)} tokens a month)` : ""}. We track ${plural(m.points.length, "plan")} and API channels that serve ${m.name}.`
+      ? `截至 ${priceUpdated}，使用 ${m.name} 最便宜的方式是「${planName(c, lang)}」，真实单价约 ${usd(c.real_usd_per_mtok)} / 百万 token${c.price_usd != null ? `（月费 ${fee(c)}，每月约 ${tokens(c, lang)} token）` : ""}。本站共收录 ${m.points.length} 个可使用 ${m.name} 的套餐或 API 渠道。`
+      : `As of ${priceUpdated}, the cheapest way to use ${m.name} is ${planName(c, lang)} at a real cost of about ${usd(c.real_usd_per_mtok)} per million tokens${c.price_usd != null ? ` (${fee(c)}/month for roughly ${tokens(c, lang)} tokens a month)` : ""}. We track ${plural(m.points.length, "plan")} and API channels that serve ${m.name}.`
     : zh
-      ? `截至 ${updated}，${m.name} 在本站收录的渠道中不计额度（真实单价 ≈$0）。`
-      : `As of ${updated}, ${m.name} is unmetered on every channel we track (real cost ≈$0).`;
+      ? `截至 ${priceUpdated}，${m.name} 在本站收录的渠道中不计额度（真实单价 ≈$0）。`
+      : `As of ${priceUpdated}, ${m.name} is unmetered on every channel we track (real cost ≈$0).`;
   const listSentence = lp
     ? zh
-      ? `官方 API 标价（每百万 token）：缓存读 ${lp.cached} / 输入 ${lp.input} / 输出 ${lp.output}${m.listBlended != null ? `；按标准负载折合约 ${usd(m.listBlended)} / 百万 token` : ""}。${m.apiReference.checkedAt ? `适用：${apiPriceScope(m.apiReference.variant, lang)}；价格核实于 ${m.apiReference.checkedAt}。` : ""}`
-      : `Official API list price per million tokens: ${lp.cached} cached input, ${lp.input} input, ${lp.output} output${m.listBlended != null ? ` — about ${usd(m.listBlended)} per million tokens on a standard workload mix` : ""}.${m.apiReference.checkedAt ? ` ${apiPriceScope(m.apiReference.variant, lang)}; prices checked ${m.apiReference.checkedAt}.` : ""}`
+      ? `官方 API 标价（每百万 token）：缓存读 ${lp.cached} / 输入 ${lp.input} / 输出 ${lp.output}${m.listBlended != null ? `；按参考负载折合约 ${usd(m.listBlended)} / 百万 token` : ""}。${m.apiReference.checkedAt ? `适用：${apiPriceScope(m.apiReference.variant, lang)}；价格核实于 ${m.apiReference.checkedAt}。` : ""}`
+      : `Official API list price per million tokens: ${lp.cached} cached input, ${lp.input} input, ${lp.output} output${m.listBlended != null ? ` — about ${usd(m.listBlended)} per million tokens on a comparison workload mix` : ""}.${m.apiReference.checkedAt ? ` ${apiPriceScope(m.apiReference.variant, lang)}; prices checked ${m.apiReference.checkedAt}.` : ""}`
     : "";
 
   const title = !m.points.length ? t(`${m.name}: Benchmarks & Model Information`, `${m.name}：榜单成绩与模型资料`) : zh
@@ -866,10 +867,10 @@ ${overview(
     [t("Benchmark score", "榜单成绩"), topBench ? fmt(topBench.best.score, lang, 2) : null, topBench ? esc(boardName(topBench.board, lang)) : t("Not yet recorded", "尚未收录")],
     [t("Leaderboard rank", "榜单名次"), topBench ? `#${topBench.rank} / ${topBench.of}` : null, topBench?.best.source_rank_scope === "comparison-group" ? t("source comparison group", "来源对比组") : topBench?.sourceRank ? t("source leaderboard", "来源榜单") : t("tracked models", "本站收录模型")],
     [t("Leaderboards", "榜单数"), String(m.benchmarks.length), t("independent evaluations", "独立评测")],
-    [t("API list price", "API 标价"), m.listBlended != null ? `${usd(m.listBlended)}<span class="unit">/MTok</span>` : null, m.listBlended != null ? t("standard workload mix", "标准负载") : t("Not yet recorded", "尚未收录")],
+    [t("API list price", "API 标价"), m.listBlended != null ? `${usd(m.listBlended)}<span class="unit">/MTok</span>` : null, m.listBlended != null ? t("comparison workload mix", "参考负载") : t("Not yet recorded", "尚未收录")],
   ] : [
     [t("Lowest real price", "最低真实单价"), c ? `${usd(c.real_usd_per_mtok)}<span class="unit">/MTok</span>` : m.free.length ? "≈$0" : null, c ? esc(planName(c, lang)) : m.free.length ? t("unmetered on every channel", "所有渠道均不计额度") : t("Not yet recorded", "尚未收录")],
-    [t("API list price", "API 标价"), m.listBlended != null ? `${usd(m.listBlended)}<span class="unit">/MTok</span>` : null, t("standard workload mix", "标准负载")],
+    [t("API list price", "API 标价"), m.listBlended != null ? `${usd(m.listBlended)}<span class="unit">/MTok</span>` : null, t("comparison workload mix", "参考负载")],
     [t("Most monthly tokens", "最多月额度"), m.mostTokens ? tokens(m.mostTokens, lang) : null, m.mostTokens && esc(planName(m.mostTokens, lang))],
     [t("Plans & APIs", "套餐与 API"), String(m.points.length), zh ? `${nPlans} 个订阅 · ${m.api.length} 个按量 API` : `${plural(nPlans, "subscription")} · ${plural(m.api.length, "metered API")}`],
   ],
@@ -883,7 +884,7 @@ ${overview(
 )}
 ${m.points.length ? `<p><a class="button" href="${lockLink(m, lang)}">${t(`Plot ${m.name} on the price–capability chart`, `在价格–能力图中查看 ${m.name}`)}<span class="arrow" aria-hidden="true">→</span></a></p>
 <section aria-labelledby="plans"><h2 id="plans">${t(`${m.name} plans and real prices`, `${m.name} 套餐与真实单价`)}</h2>
-<p>${t("Real price = monthly fee ÷ tokens you can actually use in a month. “vs API” shows how many times cheaper than the official API list price (standard workload mix) the plan is. “Evidence” opens the full calculation and sources for that row.", "真实单价 = 月费 ÷ 每月实际可用 token。「对比 API」表示该套餐比官方 API 标价（标准负载）便宜多少倍。「依据」展开该行的完整计算与来源。")}</p>
+<p>${t("Real price = monthly fee ÷ tokens you can actually use in a month. “vs API” shows how many times cheaper than the official API list price (comparison workload mix) the plan is. “Evidence” opens the full calculation and sources for that row.", "真实单价 = 月费 ÷ 每月实际可用 token。「对比 API」表示该套餐比官方 API 标价（参考负载）便宜多少倍。「依据」展开该行的完整计算与来源。")}</p>
 ${table(
   t(`Every tracked way to use ${m.name}, cheapest first`, `所有可使用 ${m.name} 的套餐，按真实单价从低到高`),
   [t("Plan", "套餐"), t("Provider", "供应商"), t("Billing", "计费"), t("Monthly fee", "月费"), t("Monthly tokens", "月额度"), t("Real $/MTok", "真实单价 $/MTok"), t("vs API", "对比 API"), t("Confidence", "置信度"), t("Data date", "数据日期"), ""],
@@ -976,7 +977,7 @@ ${table(
       [vName, U.maker(v, lang)],
       [m.name, U.model(m, lang)],
     ],
-    byline: `${t("Model data updated", "模型资料更新")} <time datetime="${m.modified}">${m.modified}</time>${m.points.length ? ` · ${t("Plan snapshot", "套餐快照")} <time datetime="${updated}">${updated}</time>` : ""}`,
+    byline: `${t("Model data updated", "模型资料更新")} <time datetime="${m.modified}">${m.modified}</time>${m.points.length ? ` · ${t("Upstream plan snapshot", "上游套餐快照")} <time datetime="${updated}">${updated}</time>` : ""}`,
     graph: { modified: m.modified, about: { "@id": product["@id"] }, mainEntity: { "@id": product["@id"] }, extra: [product, dataset] },
   });
 }
@@ -1072,7 +1073,7 @@ ${overview(
 <section aria-labelledby="models"><h2 id="models">${t(`All ${isOther ? "" : v.name + " "}models`, `${vName} 全部模型`)}</h2>
 ${table(
   t(`${isOther ? "Models" : v.name + " models"} by lowest real price`, `${vName} 模型，按最低真实单价排序`),
-  [t("Model", "模型"), t("Lowest real $/MTok", "最低真实单价 $/MTok"), t("Cheapest plan", "最便宜的套餐"), t("API list (std. mix)", "API 标价（标准负载）"), t("API in / out per MTok", "API 输入 / 输出（每 MTok）"), t("Most monthly tokens", "最多月额度"), t("Plans", "套餐数"), t("Score", "分数")],
+  [t("Model", "模型"), t("Lowest real $/MTok", "最低真实单价 $/MTok"), t("Cheapest plan", "最便宜的套餐"), t("API list (reference mix)", "API 标价（参考负载）"), t("API in / out per MTok", "API 输入 / 输出（每 MTok）"), t("Most monthly tokens", "最多月额度"), t("Plans", "套餐数"), t("Score", "分数")],
   rows,
 )}
 </section>
@@ -1246,6 +1247,7 @@ const workloadName = (p, lang) => ({
   standard: ["Standard workload", "标准负载"],
   anthropic: ["Anthropic workload", "Anthropic 负载"],
   lowCache: ["Low-cache workload", "低缓存负载"],
+  cacheWrite: ["Cache-write workload", "缓存写入负载"],
 }[p.workload]?.[lang === "zh" ? 1 : 0] ?? (lang === "zh" ? "未归一化" : "Not normalized"));
 
 function comparePage(c, lang) {
@@ -1500,7 +1502,7 @@ ${
     ? `<section aria-labelledby="mentioned"><h2 id="mentioned">Models in this article</h2>
 ${table(
   `Current real prices (data updated ${updated})`,
-  ["Model", "Maker", "Lowest real $/MTok", "Cheapest plan", "API list (std. mix)"],
+  ["Model", "Maker", "Lowest real $/MTok", "Cheapest plan", "API list (reference mix)"],
   mentioned.map((m) => [
     modelLink(m, lang),
     makerLink(makers.get(m.maker), lang),
@@ -1699,7 +1701,7 @@ const modelsIndex = (lang) => {
     h1: t("AI model directory", "AI 模型目录"),
     lead: t(`All ${sorted.length} models, including models with benchmark results whose pricing has not yet been recorded. Available real prices are sorted lowest first.`, `全部 ${sorted.length} 个模型，包括已有榜单成绩、价格尚未收录的模型。已收录真实价格的模型按单价从低到高排序。`),
     caption: t("Models by lowest real price", "模型，按最低真实单价排序"),
-    head: [t("Model", "模型"), t("Maker", "厂商"), t("Lowest real $/MTok", "最低真实单价 $/MTok"), t("Cheapest plan", "最便宜的套餐"), t("API list (std. mix)", "API 标价（标准负载）"), t("Plans", "套餐数")],
+    head: [t("Model", "模型"), t("Maker", "厂商"), t("Lowest real $/MTok", "最低真实单价 $/MTok"), t("Cheapest plan", "最便宜的套餐"), t("API list (reference mix)", "API 标价（参考负载）"), t("Plans", "套餐数")],
     rows: sorted.map((m) => [
       modelLink(m, lang),
       makerLink(makers.get(m.maker), lang),
@@ -1754,7 +1756,7 @@ function methodologyPage(lang) {
     alt: U.method(zh ? "en" : "zh"),
     title: t("Methodology: how real AI prices per token are computed", "方法论：AI 模型真实单价如何计算"),
     description: t(
-      "How Tokenews computes a real price per million tokens (monthly fee ÷ usable monthly tokens), the standard workload mix, how leaderboard scores keep their context, and how evidence is graded.",
+      "How Tokenews computes a real price per million tokens (monthly fee ÷ usable monthly tokens), the comparison workload mix, how leaderboard scores keep their context, and how evidence is graded.",
       "Tokenews 如何计算每百万 token 的真实单价（月费 ÷ 每月可用 token）、统一比较负载、榜单分数如何保留语境，以及证据如何分级。",
     ),
     keywords: [t("real price per token", "真实单价"), t("LLM pricing methodology", "大模型价格计算方法"), t("cost per million tokens", "每百万 token 价格"), t("AI subscription allowance", "AI 订阅额度"), SITE_NAME],
