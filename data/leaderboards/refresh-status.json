@@ -1,20 +1,22 @@
 {
   "version": 1,
-  "attemptedAt": "2026-11-04",
+  "attemptedAt": "2026-11-05",
   "results": [
     {
       "board": "aa_intelligence_index",
-      "status": "updated",
+      "status": "retained-previous",
+      "error": "Identity review required: Tencent Hy4",
       "retainedCheckedAt": "2026-11-04"
     },
     {
       "board": "terminal_bench_4",
       "status": "updated",
-      "retainedCheckedAt": "2026-11-04"
+      "retainedCheckedAt": "2026-11-05"
     },
     {
       "board": "aa_terminal_bench_4",
-      "status": "updated",
+      "status": "retained-previous",
+      "error": "Identity review required: Tencent Hy4",
       "retainedCheckedAt": "2026-11-04"
     },
     {
@@ -32,17 +34,17 @@
     {
       "board": "aa_coding_agent_index",
       "status": "updated",
-      "retainedCheckedAt": "2026-11-04"
+      "retainedCheckedAt": "2026-11-05"
     },
     {
       "board": "open_design_arena",
       "status": "updated",
-      "retainedCheckedAt": "2026-11-04"
+      "retainedCheckedAt": "2026-11-05"
     },
     {
       "board": "deepswe_1_1",
       "status": "updated",
-      "retainedCheckedAt": "2026-11-04"
+      "retainedCheckedAt": "2026-11-05"
     }
   ]
 }

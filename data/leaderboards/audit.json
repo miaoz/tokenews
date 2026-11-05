@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "checkedAt": "2026-11-04",
-  "baselineCommit": "ed848df33e273806e9f15ab9d370f83f4a78ec07",
+  "checkedAt": "2026-11-05",
+  "baselineCommit": "1392833f2f7b64de87f8954516bb1ba7a6e49562",
   "note": "Source audit is separate from publication. Unverified sources are never reported as unchanged. Identity-review rows may be aliases, historical models, or new releases. Scores across changed versions must not be mixed.",
   "results": [
     {
@@ -12,7 +12,7 @@
       "currentVersion": "5.0.1",
       "versionChanged": true,
       "baselineConfigurations": 152,
-      "observedConfigurations": 91,
+      "observedConfigurations": 96,
       "sourceUpdatedAt": null,
       "coverage": "Current non-deprecated configurations in the public page payload with a non-null score; not all historical releases.",
       "configurationReviewRequired": true,
@@ -29,6 +29,7 @@
         "nemotron-3.5-lightning",
         "command-a-plus",
         "muse-spark-open",
+        "muse-wonder",
         "mistral-small-4",
         "nanbeige4.3-33b",
         "ling-3.1-flash-1019",
@@ -40,13 +41,15 @@
         "nvidia-nemotron-3-nano-4b",
         "granite-4.2-8b",
         "k2-horizon-375b-a23b",
+        "gemma-4-31b",
         "gemini-4-argon",
         "minimax-m3.1-flash",
         "nemotron-3.5-super-vl",
-        "muse-wonder-full",
-        "muse-wonder"
+        "muse-wonder-full"
       ],
-      "unresolvedIdentities": [],
+      "unresolvedIdentities": [
+        "Tencent Hy4"
+      ],
       "rows": [
         {
           "identity": "Claude Sonnet 5.5",
@@ -398,6 +401,19 @@
           "source": "https://artificialanalysis.ai/models/gpt-6-luna-medium",
           "model": "gpt-6-luna",
           "status": "tracked-model"
+        },
+        {
+          "identity": "Muse Wonder",
+          "sourceId": "muse-wonder-high",
+          "label": "Muse Wonder (High)",
+          "score": 40.5266079185604,
+          "maker": "Meta",
+          "releaseDate": "2026-10-12",
+          "releaseSlug": "muse-wonder",
+          "effort": "high",
+          "source": "https://artificialanalysis.ai/models/muse-wonder-high",
+          "model": "muse-wonder",
+          "status": "missing-from-board"
         },
         {
           "identity": "Claude Fable 5.1",
@@ -1011,6 +1027,19 @@
           "status": "tracked-model"
         },
         {
+          "identity": "Gemma 4 31B",
+          "sourceId": "gemma-4-31b",
+          "label": "Gemma 4 31B (Reasoning)",
+          "score": 4.38438284215374,
+          "maker": "Google",
+          "releaseDate": "2026-04-02",
+          "releaseSlug": "gemma-4-31b",
+          "effort": "reasoning",
+          "source": "https://artificialanalysis.ai/models/gemma-4-31b",
+          "model": "gemma-4-31b",
+          "status": "missing-from-board"
+        },
+        {
           "identity": "GLM-5.3",
           "sourceId": "glm-5-3",
           "label": "GLM-5.3 (Max)",
@@ -1022,6 +1051,19 @@
           "source": "https://artificialanalysis.ai/models/glm-5-3",
           "model": "glm-5.3",
           "status": "tracked-model"
+        },
+        {
+          "identity": "Tencent Hy4",
+          "sourceId": "tencent-hy4",
+          "label": "Tencent Hy4",
+          "score": 34.5552385392508,
+          "maker": "Tencent",
+          "releaseDate": "2026-11-03",
+          "releaseSlug": "hunyuan-dev1030-aa",
+          "effort": null,
+          "source": "https://artificialanalysis.ai/models/tencent-hy4",
+          "model": null,
+          "status": "identity-review"
         },
         {
           "identity": "Gemini 4 Argon",
@@ -1048,6 +1090,32 @@
           "source": "https://artificialanalysis.ai/models/minimax-m3-1-flash",
           "model": "minimax-m3.1-flash",
           "status": "missing-from-board"
+        },
+        {
+          "identity": "DeepSeek V4 Pro 0813",
+          "sourceId": "deepseek-v4-pro-non-reasoning",
+          "label": "DeepSeek V4 Pro 0813 (Non-reasoning)",
+          "score": 12.5675939779921,
+          "maker": "DeepSeek",
+          "releaseDate": "2026-08-13",
+          "releaseSlug": "deepseek-v4-pro",
+          "effort": "non-reasoning",
+          "source": "https://artificialanalysis.ai/models/deepseek-v4-pro-non-reasoning",
+          "model": "deepseek-v4-pro-0813",
+          "status": "missing-from-board"
+        },
+        {
+          "identity": "Mistral Medium 3.5",
+          "sourceId": "mistral-medium-3-5",
+          "label": "Mistral Medium 3.5",
+          "score": 4.64508756526957,
+          "maker": "Mistral",
+          "releaseDate": "2026-04-29",
+          "releaseSlug": "mistral-medium-3-5",
+          "effort": null,
+          "source": "https://artificialanalysis.ai/models/mistral-medium-3-5",
+          "model": "mistral-medium-3.5",
+          "status": "tracked-model"
         },
         {
           "identity": "Claude Opus 5.5",
@@ -1752,7 +1820,7 @@
       "currentVersion": "4.0",
       "versionChanged": false,
       "baselineConfigurations": 130,
-      "observedConfigurations": 140,
+      "observedConfigurations": 142,
       "sourceUpdatedAt": null,
       "coverage": "Current non-deprecated configurations in the public page payload with a non-null score; not all historical releases.",
       "configurationReviewRequired": true,
@@ -1780,6 +1848,7 @@
         "HyperNova 60B 2605 (High, Based on gpt-oss-120b)",
         "Muse Spark Open (Xhigh)",
         "gpt-oss-20b (High)",
+        "Muse Wonder (High)",
         "Mistral Small 4 (Reasoning)",
         "Ling-3.0-flash-VL",
         "JT-4.1 Flash 236B A21B (Reasoning)",
@@ -1821,6 +1890,7 @@
         "GPT-6.1 Terra (Medium)",
         "GPT-6.1 Terra (Low)",
         "Gemma 4 31B (Reasoning)",
+        "Tencent Hy4",
         "Gemini 4 Argon (High)",
         "MiniMax-M3.1-Flash",
         "Gemma 4 E4B (Reasoning)",
@@ -1855,6 +1925,7 @@
         "hypernova-60b-2605",
         "muse-spark-open",
         "gpt-oss-20b",
+        "muse-wonder",
         "mistral-small-4",
         "ling-3.0-flash-vl",
         "jt-4.1-flash-236b-a21b",
@@ -1901,10 +1972,11 @@
         "ring-2.6-1t",
         "gpt-oss-120b",
         "quasar-438b",
-        "qwen3-coder-next",
-        "muse-wonder"
+        "qwen3-coder-next"
       ],
-      "unresolvedIdentities": [],
+      "unresolvedIdentities": [
+        "Tencent Hy4"
+      ],
       "rows": [
         {
           "identity": "Claude Sonnet 5.5",
@@ -2398,6 +2470,19 @@
           "effort": "high",
           "source": "https://artificialanalysis.ai/models/gpt-oss-20b",
           "model": "gpt-oss-20b",
+          "status": "missing-from-board"
+        },
+        {
+          "identity": "Muse Wonder",
+          "sourceId": "muse-wonder-high",
+          "label": "Muse Wonder (High)",
+          "score": 38.383838383838395,
+          "maker": "Meta",
+          "releaseDate": "2026-10-12",
+          "releaseSlug": "muse-wonder",
+          "effort": "high",
+          "source": "https://artificialanalysis.ai/models/muse-wonder-high",
+          "model": "muse-wonder",
           "status": "missing-from-board"
         },
         {
@@ -3426,6 +3511,19 @@
           "source": "https://artificialanalysis.ai/models/glm-5-3",
           "model": "glm-5.3",
           "status": "tracked-model"
+        },
+        {
+          "identity": "Tencent Hy4",
+          "sourceId": "tencent-hy4",
+          "label": "Tencent Hy4",
+          "score": 37.3737373737374,
+          "maker": "Tencent",
+          "releaseDate": "2026-11-03",
+          "releaseSlug": "hunyuan-dev1030-aa",
+          "effort": null,
+          "source": "https://artificialanalysis.ai/models/tencent-hy4",
+          "model": null,
+          "status": "identity-review"
         },
         {
           "identity": "Gemini 4 Argon",
@@ -5545,6 +5643,16 @@
       "releaseDate": "2026-10-23",
       "source": "https://artificialanalysis.ai/models/releases/kimi-k3-1-pro",
       "catalogModel": "kimi-k3.1-pro",
+      "inUpstreamDirectory": false,
+      "inUpstreamBenchmarks": false
+    },
+    {
+      "name": "Tencent Hy4",
+      "slug": "hunyuan-dev1030-aa",
+      "maker": "Tencent",
+      "releaseDate": "2026-11-03",
+      "source": "https://artificialanalysis.ai/models/releases/hunyuan-dev1030-aa",
+      "catalogModel": null,
       "inUpstreamDirectory": false,
       "inUpstreamBenchmarks": false
     },
