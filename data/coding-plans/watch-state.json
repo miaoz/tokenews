@@ -6,13 +6,13 @@
       "channel": "OpenCode",
       "url": "https://opencode.ai/v2/docs/console/go/",
       "kind": "tables",
-      "attemptedAt": "2026-11-05T07:00:55.918Z",
-      "lastSuccessAt": "2026-11-05T07:00:55.918Z",
+      "attemptedAt": "2026-11-06T07:00:45.218Z",
+      "lastSuccessAt": "2026-11-06T07:00:45.218Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-05T07:00:55.918Z",
+        "checkedAt": "2026-11-06T07:00:45.218Z",
         "bodySha256": "5483c3cacaf5e72fdfb22e7b5f126daf79b55c1930f4c946092f273af24992d8",
         "records": [
           {
@@ -7752,13 +7752,13 @@
       "channel": "OpenCode",
       "url": "https://opencode.ai/changelog",
       "kind": "document",
-      "attemptedAt": "2026-11-05T07:00:55.918Z",
-      "lastSuccessAt": "2026-11-05T07:00:55.918Z",
+      "attemptedAt": "2026-11-06T07:00:45.218Z",
+      "lastSuccessAt": "2026-11-06T07:00:45.218Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-05T07:00:55.918Z",
+        "checkedAt": "2026-11-06T07:00:45.218Z",
         "bodySha256": "6189d3eaddd625eb12793e4322bb2b2bb1e71e216ea52a5d95b89ae7f486e580",
         "records": [
           {
@@ -9810,14 +9810,14 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/go",
       "kind": "tables",
-      "attemptedAt": "2026-11-05T07:00:55.918Z",
-      "lastSuccessAt": "2026-11-05T07:00:55.918Z",
+      "attemptedAt": "2026-11-06T07:00:45.218Z",
+      "lastSuccessAt": "2026-11-06T07:00:45.218Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-05T07:00:55.918Z",
-        "bodySha256": "3ceed3c3f9d8f371e12dccc96b0ebcde8432b848c1da20d37e96e5c572f975aa",
+        "checkedAt": "2026-11-06T07:00:45.218Z",
+        "bodySha256": "91673821e68bcb3f8eea226392f5e8d1d97bd30ee38c9c466dcc68007ad58a24",
         "records": [
           {
             "key": "text:b605350bc00209520b7cd8f546322663356ba630708f71bbf30aead6b3dd608e",
@@ -14543,14 +14543,14 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/goat",
       "kind": "tables",
-      "attemptedAt": "2026-11-05T07:00:55.918Z",
-      "lastSuccessAt": "2026-11-05T07:00:55.918Z",
+      "attemptedAt": "2026-11-06T07:00:45.218Z",
+      "lastSuccessAt": "2026-11-06T07:00:45.218Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-05T07:00:55.918Z",
-        "bodySha256": "99b263884c48cca1eff098584a23dfe510d702ef99730c880502feb598eeb29e",
+        "checkedAt": "2026-11-06T07:00:45.218Z",
+        "bodySha256": "6784df6b20e149dcf33771d635f903ff56c2633dbf966cb7556dd6a6d1bb1fd5",
         "records": [
           {
             "key": "text:b605350bc00209520b7cd8f546322663356ba630708f71bbf30aead6b3dd608e",
@@ -20368,14 +20368,14 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/pro",
       "kind": "tables",
-      "attemptedAt": "2026-11-05T07:00:55.918Z",
-      "lastSuccessAt": "2026-11-05T07:00:55.918Z",
+      "attemptedAt": "2026-11-06T07:00:45.218Z",
+      "lastSuccessAt": "2026-11-06T07:00:45.218Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-05T07:00:55.918Z",
-        "bodySha256": "9a4b2d86c9d9478b456cba335f52c53689aa07577ec459634ded793a8567a420",
+        "checkedAt": "2026-11-06T07:00:45.218Z",
+        "bodySha256": "036869699e92bd2eb7da979dcb497a22da84c884456b14150a45c4a2906285ce",
         "records": [
           {
             "key": "text:b605350bc00209520b7cd8f546322663356ba630708f71bbf30aead6b3dd608e",
@@ -27499,14 +27499,14 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/max",
       "kind": "tables",
-      "attemptedAt": "2026-11-05T07:00:55.918Z",
-      "lastSuccessAt": "2026-11-05T07:00:55.918Z",
+      "attemptedAt": "2026-11-06T07:00:45.218Z",
+      "lastSuccessAt": "2026-11-06T07:00:45.218Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-05T07:00:55.918Z",
-        "bodySha256": "1d1186be0ffe22a7f29d97fd41b4568ed3e317537e04acd2deffd2bc1755cbed",
+        "checkedAt": "2026-11-06T07:00:45.218Z",
+        "bodySha256": "af4a0fb85da83673cf92f259df560751cf13d1a389e2bcea8ba6eaf520a9bb30",
         "records": [
           {
             "key": "text:b605350bc00209520b7cd8f546322663356ba630708f71bbf30aead6b3dd608e",
@@ -27895,8 +27895,8 @@
             "url": "https://commandcode.ai/docs/plans/max"
           },
           {
-            "key": "text:0684623836abe51af4f0e132f0b65d71a20cba903260f6ad08bc872cd09f5096",
-            "hash": "0684623836abe51af4f0e132f0b65d71a20cba903260f6ad08bc872cd09f5096",
+            "key": "text:1c4cd2c5264f0c6a953fef91f19f85f775902f7f3292578a40102a7cc639b771",
+            "hash": "1c4cd2c5264f0c6a953fef91f19f85f775902f7f3292578a40102a7cc639b771",
             "type": "announcement",
             "signals": [
               "availability"
@@ -28408,29 +28408,6 @@
             ],
             "cells": [
               "MiniMax M3.1 Flash",
-              "Free",
-              "Free",
-              "Free"
-            ],
-            "hash": "4bd8821f2ede11a640b81601558a67c4b93b2b024de7fe16043b93c97f35bac0",
-            "signals": [
-              "promotion"
-            ],
-            "url": "https://commandcode.ai/docs/plans/max"
-          },
-          {
-            "key": "row:2:6e2f82d4bba3:MiniMax M3.1 Flash:1",
-            "type": "table-row",
-            "label": "MiniMax M3.1 Flash",
-            "heading": "Usage limits",
-            "columns": [
-              "Model",
-              "Requests / 5 hours",
-              "Requests / week",
-              "Requests / month"
-            ],
-            "cells": [
-              "MiniMax M3.1 Flash",
               "47,600",
               "95,200",
               "159,000"
@@ -28504,29 +28481,6 @@
           },
           {
             "key": "row:2:6e2f82d4bba3:Ornith 1.5 122B:0",
-            "type": "table-row",
-            "label": "Ornith 1.5 122B",
-            "heading": "Usage limits",
-            "columns": [
-              "Model",
-              "Requests / 5 hours",
-              "Requests / week",
-              "Requests / month"
-            ],
-            "cells": [
-              "Ornith 1.5 122B",
-              "Free",
-              "Free",
-              "Free"
-            ],
-            "hash": "e14699a26283e41a3ba279f0cb76fdb12388da4edde5b5b6916060c38ca24d32",
-            "signals": [
-              "promotion"
-            ],
-            "url": "https://commandcode.ai/docs/plans/max"
-          },
-          {
-            "key": "row:2:6e2f82d4bba3:Ornith 1.5 122B:1",
             "type": "table-row",
             "label": "Ornith 1.5 122B",
             "heading": "Usage limits",
@@ -29259,27 +29213,6 @@
               "2,990"
             ],
             "hash": "f07f72f94025579f50829108aba13e5293edf2a456c3150d49ac8fb3f6c935de",
-            "signals": [],
-            "url": "https://commandcode.ai/docs/plans/max"
-          },
-          {
-            "key": "row:2:6e2f82d4bba3:Claude Opus 4.6:0",
-            "type": "table-row",
-            "label": "Claude Opus 4.6",
-            "heading": "Usage limits",
-            "columns": [
-              "Model",
-              "Requests / 5 hours",
-              "Requests / week",
-              "Requests / month"
-            ],
-            "cells": [
-              "Claude Opus 4.6",
-              "896",
-              "1,790",
-              "2,990"
-            ],
-            "hash": "ca676d73ed9ae3433ea6e73127241a178a941eddd206c5561896ed3bd06decfd",
             "signals": [],
             "url": "https://commandcode.ai/docs/plans/max"
           },
@@ -30686,36 +30619,6 @@
             ],
             "cells": [
               "MiniMax M3.1 Flash",
-              "$0.00",
-              "$0.00",
-              "$0.00",
-              "-",
-              "Free",
-              "Free"
-            ],
-            "hash": "70e91b96f172910d1f5867543b197742ebef377c504988b55f0b8ed543683944",
-            "signals": [
-              "pricing",
-              "promotion"
-            ],
-            "url": "https://commandcode.ai/docs/plans/max"
-          },
-          {
-            "key": "row:3:508faf2ee524:MiniMax M3.1 Flash:1",
-            "type": "table-row",
-            "label": "MiniMax M3.1 Flash",
-            "heading": "Usage limits",
-            "columns": [
-              "Model",
-              "Input",
-              "Output",
-              "Cache Read",
-              "Cache Write",
-              "Max 10× credits",
-              "Max 20× credits"
-            ],
-            "cells": [
-              "MiniMax M3.1 Flash",
               "$0.15",
               "$0.60",
               "$0.015",
@@ -30818,36 +30721,6 @@
           },
           {
             "key": "row:3:508faf2ee524:Ornith 1.5 122B:0",
-            "type": "table-row",
-            "label": "Ornith 1.5 122B",
-            "heading": "Usage limits",
-            "columns": [
-              "Model",
-              "Input",
-              "Output",
-              "Cache Read",
-              "Cache Write",
-              "Max 10× credits",
-              "Max 20× credits"
-            ],
-            "cells": [
-              "Ornith 1.5 122B",
-              "$0.00",
-              "$0.00",
-              "$0.00",
-              "-",
-              "Free",
-              "Free"
-            ],
-            "hash": "92e272b32b55b5e38548771c911e7609d593950e949ec78ff74f47fdd0bc2a73",
-            "signals": [
-              "pricing",
-              "promotion"
-            ],
-            "url": "https://commandcode.ai/docs/plans/max"
-          },
-          {
-            "key": "row:3:508faf2ee524:Ornith 1.5 122B:1",
             "type": "table-row",
             "label": "Ornith 1.5 122B",
             "heading": "Usage limits",
@@ -31857,35 +31730,6 @@
               "$200"
             ],
             "hash": "519e8340ed02f16544e94ac5f7d8fd228f773c5e7f29019f2b38899bb1522974",
-            "signals": [
-              "pricing"
-            ],
-            "url": "https://commandcode.ai/docs/plans/max"
-          },
-          {
-            "key": "row:3:508faf2ee524:Claude Opus 4.6:0",
-            "type": "table-row",
-            "label": "Claude Opus 4.6",
-            "heading": "Usage limits",
-            "columns": [
-              "Model",
-              "Input",
-              "Output",
-              "Cache Read",
-              "Cache Write",
-              "Max 10× credits",
-              "Max 20× credits"
-            ],
-            "cells": [
-              "Claude Opus 4.6",
-              "$5.00",
-              "$25.00",
-              "$0.50",
-              "$6.25",
-              "$100",
-              "$200"
-            ],
-            "hash": "201911fe262b3578976065d674ef797f9a5beb68ce35c4218ad35f9d641c3bec",
             "signals": [
               "pricing"
             ],
@@ -33380,7 +33224,7 @@
             "url": "https://commandcode.ai/billing"
           }
         ],
-        "hash": "12efc0300e418e1c49962ff453c5dd3af38357b253ab1be86cafe27236c2bbd1"
+        "hash": "11f5d5d274afb88738f204267ba9b78ae3618f5b7d1acdaf0345f37bb7d5e3d3"
       }
     },
     "command-code-models": {
@@ -33388,14 +33232,14 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/reference/cli/models",
       "kind": "tables",
-      "attemptedAt": "2026-11-05T07:00:55.918Z",
-      "lastSuccessAt": "2026-11-05T07:00:55.918Z",
+      "attemptedAt": "2026-11-06T07:00:45.218Z",
+      "lastSuccessAt": "2026-11-06T07:00:45.218Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-05T07:00:55.918Z",
-        "bodySha256": "9727391fa9799e0cab3c07a038f9e25b4c74e9b550e4d4267dd0b8dd28d0a90a",
+        "checkedAt": "2026-11-06T07:00:45.218Z",
+        "bodySha256": "809853abccccb81967b3af5106574bdc7da8e5717135d985aa09193f8f59f6e2",
         "records": [
           {
             "key": "text:b605350bc00209520b7cd8f546322663356ba630708f71bbf30aead6b3dd608e",
@@ -33511,14 +33355,14 @@
             "url": "https://commandcode.ai/docs/reference/cli/models"
           },
           {
-            "key": "text:49955b350172fecbe5a0e7d527fbea1ea11a0173cba3b9e5ca52ec17688b5a95",
-            "hash": "49955b350172fecbe5a0e7d527fbea1ea11a0173cba3b9e5ca52ec17688b5a95",
+            "key": "text:16189401898907297fdb91fb80e103d62ade71cafe3af520e9fede03bc16886f",
+            "hash": "16189401898907297fdb91fb80e103d62ade71cafe3af520e9fede03bc16886f",
             "type": "announcement",
             "signals": [
               "availability"
             ],
             "models": [
-              "deepseek/deepseek-v4-flash ."
+              "deepseek/deepseek-v4.1-flash ."
             ],
             "url": "https://commandcode.ai/docs/reference/cli/models"
           },
@@ -34024,10 +33868,10 @@
             "cells": [
               "claude-sonnet-4-6 Copy model id",
               "Claude Sonnet 4.6",
-              "",
+              "+ 1",
               "older Sonnet, still fast & capable"
             ],
-            "hash": "b12779f27ac2e9e0b55e5716ca7aca314f17bb11e615121f51e7a50036bb9fdf",
+            "hash": "298c7b0d456c313b27ea9253ffc68e399f3144f5945c95d9c5db8b31d662face",
             "signals": [
               "availability"
             ],
@@ -35854,13 +35698,12 @@
             "cells": [
               "typesafe/jev",
               "TypeSafe",
-              "Free through September 24, 2026 , then $0.042 per 1M input tokens",
+              "$0.042 per 1M input tokens",
               "Headless , API"
             ],
-            "hash": "a507f9ea7b6132f531a3f5471146a2a1cfb8414db076aa8e39ac9fd3bea6eca1",
+            "hash": "1ff28027517d0992e5d72355369de51e8aa93f298b8e985819b554f37e9886d2",
             "signals": [
-              "pricing",
-              "promotion"
+              "pricing"
             ],
             "url": "https://commandcode.ai/docs/reference/cli/models"
           },
@@ -35931,7 +35774,7 @@
             "url": "https://commandcode.ai/docs/interactive-mode"
           }
         ],
-        "hash": "34ac03b3bc8658b92bb839954be2a27d8f2b4ec7630dc7531afbb2a411b87dd2"
+        "hash": "2fbb99a60bb8859f2efea4cacc2306fdf59c914f694fcce9604a865fa7b15a3f"
       }
     },
     "command-code-terms": {
@@ -35939,14 +35782,14 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/resources/pricing-limits",
       "kind": "tables",
-      "attemptedAt": "2026-11-05T07:00:55.918Z",
-      "lastSuccessAt": "2026-11-05T07:00:55.918Z",
+      "attemptedAt": "2026-11-06T07:00:45.218Z",
+      "lastSuccessAt": "2026-11-06T07:00:45.218Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-05T07:00:55.918Z",
-        "bodySha256": "797b029349781ba94fe96f13eb7019bd3fc40c13aa9a25fbacb4d68d7ce443d2",
+        "checkedAt": "2026-11-06T07:00:45.218Z",
+        "bodySha256": "7449b6c2fdcea14320cf92b79e712cbcd95fe02441e7783dd2b914e4d0a7625a",
         "records": [
           {
             "key": "text:b605350bc00209520b7cd8f546322663356ba630708f71bbf30aead6b3dd608e",
@@ -37128,8 +36971,8 @@
             "url": "https://commandcode.ai/docs/resources/pricing-limits"
           },
           {
-            "key": "text:cde805d1c742bc10a81a7235bf4957d0ca816dc48f6bdd53d243fa722d546a33",
-            "hash": "cde805d1c742bc10a81a7235bf4957d0ca816dc48f6bdd53d243fa722d546a33",
+            "key": "text:88b820ead2883dbbbce22b5e6f0f3401a9957d2ce682fbb1263399f374234e0b",
+            "hash": "88b820ead2883dbbbce22b5e6f0f3401a9957d2ce682fbb1263399f374234e0b",
             "type": "announcement",
             "signals": [
               "promotion"
@@ -39212,8 +39055,8 @@
             "url": "https://commandcode.ai/docs/resources/pricing-limits"
           },
           {
-            "key": "text:e70da51fd4feadafba0b8301b7c6bc112af1424389c628eb6049335ee9b93a6b",
-            "hash": "e70da51fd4feadafba0b8301b7c6bc112af1424389c628eb6049335ee9b93a6b",
+            "key": "text:70e4b4c9552036dea0f11f72680575269bcb7bba7aeaad83a2e269ab93be429f",
+            "hash": "70e4b4c9552036dea0f11f72680575269bcb7bba7aeaad83a2e269ab93be429f",
             "type": "announcement",
             "signals": [
               "pricing",
@@ -40984,7 +40827,7 @@
             "url": "https://commandcode.ai/docs/resources/pricing-limits"
           }
         ],
-        "hash": "114d84237819c3806d873b9a6574b3e3b28a8b1e85f3cb50c068e0a1ba58e89a"
+        "hash": "1186ab99c07ae0bd920ef39562c6d468dbdcddf6fd029111cc510b85b9edb572"
       }
     },
     "command-code-releases": {
@@ -40992,14 +40835,14 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/changelog",
       "kind": "document",
-      "attemptedAt": "2026-11-05T07:00:55.918Z",
-      "lastSuccessAt": "2026-11-05T07:00:55.918Z",
+      "attemptedAt": "2026-11-06T07:00:45.218Z",
+      "lastSuccessAt": "2026-11-06T07:00:45.218Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-05T07:00:55.918Z",
-        "bodySha256": "1457dc31ae13c8ed3c8540b05217a1483056e4394e7de468995bc51d58189f52",
+        "checkedAt": "2026-11-06T07:00:45.218Z",
+        "bodySha256": "6ebb7122f2ffbade0ceb69198edf1ff537ea441a4ec9b26bb0a38629609fe988",
         "records": [
           {
             "key": "text:bd8dd4dffb1815aee0594f932f11f97d5d8c758be925e2b3ca3d2274d31060a6",
@@ -45384,14 +45227,14 @@
       "channel": "Ollama",
       "url": "https://ollama.com/pricing",
       "kind": "tables",
-      "attemptedAt": "2026-11-05T07:00:55.918Z",
-      "lastSuccessAt": "2026-11-05T07:00:55.918Z",
+      "attemptedAt": "2026-11-06T07:00:45.218Z",
+      "lastSuccessAt": "2026-11-06T07:00:45.218Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-05T07:00:55.918Z",
-        "bodySha256": "e1ff869bd006e90007e572c30406b380ab57628b61856aa07963e38c3923720a",
+        "checkedAt": "2026-11-06T07:00:45.218Z",
+        "bodySha256": "714a816acc605c94561bc49d61a763dd2fc925e2a52903467007846f71d33ee2",
         "records": [
           {
             "key": "text:dfe95783edfef7918760312f94edd764f4ce3ffd38b90c2c955a0cc3b250f040",
@@ -45583,6 +45426,29 @@
               "pricing"
             ],
             "models": [],
+            "url": "https://ollama.com/pricing"
+          },
+          {
+            "key": "row:0:4699f8e99f5e:beam:0",
+            "type": "table-row",
+            "label": "beam",
+            "heading": "Model pricing",
+            "columns": [
+              "Model",
+              "Input",
+              "Cached input",
+              "Output"
+            ],
+            "cells": [
+              "beam",
+              "$0.125",
+              "$0.015",
+              "$0.40"
+            ],
+            "hash": "37702f63073c2ff808795d8dd937dfd6dd34f8819e8c6b5f9877a17e4aea83a2",
+            "signals": [
+              "pricing"
+            ],
             "url": "https://ollama.com/pricing"
           },
           {
@@ -46490,7 +46356,7 @@
             "url": "https://ollama.com/pricing"
           }
         ],
-        "hash": "e4439d412f8f91e531edaa4f9ab9c78309a20eaaf741a888fa58974c9a033b85"
+        "hash": "5f6c6454c76efd0207316f05c9798be87f9ba3be1942595a078982b75f520b56"
       }
     },
     "ollama-announcements": {
@@ -46498,14 +46364,14 @@
       "channel": "Ollama",
       "url": "https://ollama.com/blog",
       "kind": "document",
-      "attemptedAt": "2026-11-05T07:00:55.918Z",
-      "lastSuccessAt": "2026-11-05T07:00:55.918Z",
+      "attemptedAt": "2026-11-06T07:00:45.218Z",
+      "lastSuccessAt": "2026-11-06T07:00:45.218Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-05T07:00:55.918Z",
-        "bodySha256": "24f1ee496ce626c29a6a21cd13a165dd54088aff18d60f15f3fa6a39f72ef674",
+        "checkedAt": "2026-11-06T07:00:45.218Z",
+        "bodySha256": "067f1d395061e35746aaa56ba41e89f7c671188113636905c74fd32ade5369d0",
         "records": [
           {
             "key": "text:5d68e38175ac0eeec7cbf5c22ca2520d5d61efa1755ebba6cdb47e6124c3dd37",
@@ -47130,14 +46996,14 @@
       "channel": "Factory",
       "url": "https://docs.factory.com/models.md",
       "kind": "tables",
-      "attemptedAt": "2026-11-05T07:00:55.918Z",
-      "lastSuccessAt": "2026-11-05T07:00:55.918Z",
+      "attemptedAt": "2026-11-06T07:00:45.218Z",
+      "lastSuccessAt": "2026-11-06T07:00:45.218Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-05T07:00:55.918Z",
-        "bodySha256": "39ad1625b8953fd6ce3ba7816c3ae88215d53b8fa3ca9b6af87bb9641e0104c6",
+        "checkedAt": "2026-11-06T07:00:45.218Z",
+        "bodySha256": "b1a75ab7d56662656adb1c1b0f89c6ec1d3546680f4ac5d4768ff44298d01b31",
         "records": [
           {
             "key": "text:0b28deb982605f12b721a450cd577fb09cb57b68ebe576202b079d4053c492d0",
@@ -48418,6 +48284,27 @@
             "url": "https://docs.factory.com/models.md"
           },
           {
+            "key": "row:4:0534be2c3766:Kimi K3.1 Pro:0",
+            "type": "table-row",
+            "label": "Kimi K3.1 Pro",
+            "heading": "<span className=\"provider-heading\"><img src=\"/brand-guidelines/logos/rotor-black.svg\" alt=\"Factory logo\" className=\"provider-icon\" />Droid Core (Open ",
+            "columns": [
+              "Model",
+              "Model ID",
+              "Multiplier",
+              "Reasoning"
+            ],
+            "cells": [
+              "Kimi K3.1 Pro",
+              "`kimi-k3.1-pro`",
+              "0.8×",
+              "`low`, `high`, `max` (default)"
+            ],
+            "hash": "19e0447cf4cd82ad7a71b83d724669ed6676afcab4fb0a9849eaf525a0f3e454",
+            "signals": [],
+            "url": "https://docs.factory.com/models.md"
+          },
+          {
             "key": "row:4:0534be2c3766:Kimi K3:0",
             "type": "table-row",
             "label": "Kimi K3",
@@ -48821,7 +48708,7 @@
             "url": "https://docs.factory.com/models.md"
           }
         ],
-        "hash": "533b8b3bf25ab21c63157f705d3b35e4850359d501ef3fd84571377aae85305a"
+        "hash": "d435176ea6243d85109c24f05b454c140f818827d2f33496a412d3a0a5cdad87"
       }
     },
     "factory-plans": {
@@ -48829,13 +48716,13 @@
       "channel": "Factory",
       "url": "https://docs.factory.com/pricing/individuals.md",
       "kind": "document",
-      "attemptedAt": "2026-11-05T07:00:55.918Z",
-      "lastSuccessAt": "2026-11-05T07:00:55.918Z",
+      "attemptedAt": "2026-11-06T07:00:45.218Z",
+      "lastSuccessAt": "2026-11-06T07:00:45.218Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-05T07:00:55.918Z",
+        "checkedAt": "2026-11-06T07:00:45.218Z",
         "bodySha256": "88b1107b6f9925530b8dd591e46064c1fdd5bcfafe06e074dae4448c58b84e9f",
         "records": [
           {
@@ -49161,15 +49048,103 @@
       "channel": "Factory",
       "url": "https://docs.factory.com/changelog/release-notes.md",
       "kind": "document",
-      "attemptedAt": "2026-11-05T07:00:55.918Z",
-      "lastSuccessAt": "2026-11-05T07:00:55.918Z",
+      "attemptedAt": "2026-11-06T07:00:45.218Z",
+      "lastSuccessAt": "2026-11-06T07:00:45.218Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-05T07:00:55.918Z",
-        "bodySha256": "9ba4b841266b2874e2512e5eaa3555e1da8239c6786cf6a5b75314ff8f9d7e4b",
+        "checkedAt": "2026-11-06T07:00:45.218Z",
+        "bodySha256": "53e2484dc3ae8183b28fb8982b98cdaeabab733a691a8a0aefd6ee13b2ee70ce",
         "records": [
+          {
+            "key": "text:4fa221938efe893b9601c251df62d907bc9e40f016ec6e920a2b9b6f7a00eaa2",
+            "hash": "4fa221938efe893b9601c251df62d907bc9e40f016ec6e920a2b9b6f7a00eaa2",
+            "type": "announcement",
+            "signals": [
+              "availability"
+            ],
+            "models": [],
+            "url": "https://docs.factory.com/changelog/release-notes.md"
+          },
+          {
+            "key": "text:5b5c6d5bf93abd0569384034daa766768815bd85104cb71f53379b00cca5f158",
+            "hash": "5b5c6d5bf93abd0569384034daa766768815bd85104cb71f53379b00cca5f158",
+            "type": "announcement",
+            "signals": [
+              "availability"
+            ],
+            "models": [],
+            "url": "https://docs.factory.com/changelog/release-notes.md"
+          },
+          {
+            "key": "text:795b8a723f126341432b3bec36cb3409027554972fe16886a67d780b6f8399ad",
+            "hash": "795b8a723f126341432b3bec36cb3409027554972fe16886a67d780b6f8399ad",
+            "type": "announcement",
+            "signals": [
+              "pricing"
+            ],
+            "models": [],
+            "url": "https://docs.factory.com/changelog/release-notes.md"
+          },
+          {
+            "key": "text:36361ca4c7a6bb4ab08f6fce5660bb6d597dd45d2b5927e4be257994d0e342d2",
+            "hash": "36361ca4c7a6bb4ab08f6fce5660bb6d597dd45d2b5927e4be257994d0e342d2",
+            "type": "announcement",
+            "signals": [],
+            "models": [],
+            "url": "https://docs.factory.com/changelog/release-notes.md"
+          },
+          {
+            "key": "text:12eeef707236c733e112c5fa729c4a790557fd3093eb07fe1f1826cc2cfdca99",
+            "hash": "12eeef707236c733e112c5fa729c4a790557fd3093eb07fe1f1826cc2cfdca99",
+            "type": "announcement",
+            "signals": [
+              "availability"
+            ],
+            "models": [],
+            "url": "https://docs.factory.com/changelog/release-notes.md"
+          },
+          {
+            "key": "text:d3a4030f1443e967882179cc2304fe0c8933b60e6a986cdbcc4753478869333c",
+            "hash": "d3a4030f1443e967882179cc2304fe0c8933b60e6a986cdbcc4753478869333c",
+            "type": "announcement",
+            "signals": [],
+            "models": [
+              "swered"
+            ],
+            "url": "https://docs.factory.com/changelog/release-notes.md"
+          },
+          {
+            "key": "text:c3322119fa67b6732b8912e66f8ac82e2a2f54be396a6dbe2995d2292fd3da85",
+            "hash": "c3322119fa67b6732b8912e66f8ac82e2a2f54be396a6dbe2995d2292fd3da85",
+            "type": "announcement",
+            "signals": [
+              "availability"
+            ],
+            "models": [],
+            "url": "https://docs.factory.com/changelog/release-notes.md"
+          },
+          {
+            "key": "text:0f217db5276fefb8b83babe3ce22c4ab066949fed6b6976fe62e2f3986aef423",
+            "hash": "0f217db5276fefb8b83babe3ce22c4ab066949fed6b6976fe62e2f3986aef423",
+            "type": "announcement",
+            "signals": [],
+            "models": [
+              "ling"
+            ],
+            "url": "https://docs.factory.com/changelog/release-notes.md"
+          },
+          {
+            "key": "text:a9355246f95fd74873aa0b9478b4254c96240611841acea1b1cf3974963f3acd",
+            "hash": "a9355246f95fd74873aa0b9478b4254c96240611841acea1b1cf3974963f3acd",
+            "type": "announcement",
+            "signals": [],
+            "models": [
+              "ling"
+            ],
+            "url": "https://docs.factory.com/changelog/release-notes.md"
+          },
           {
             "key": "text:3f0073fa761443b7ada150c5aac1aac0446401bd3074633f48b8bd43d2d6aef5",
             "hash": "3f0073fa761443b7ada150c5aac1aac0446401bd3074633f48b8bd43d2d6aef5",
@@ -56286,7 +56261,7 @@
             "url": "https://docs.factory.com/changelog/release-notes.md"
           }
         ],
-        "hash": "ccf2909dd461795ea80b23aeae852a2f5ef2f97225814ca493c9b1f5fcdecf46"
+        "hash": "388c1a0db363e35e1118367fda6cf7fc28541cb4bd7f8db8d334d2e3c15065c5"
       }
     },
     "cursor-pricing": {
@@ -56294,14 +56269,14 @@
       "channel": "Cursor",
       "url": "https://cursor.com/docs/models-and-pricing",
       "kind": "tables",
-      "attemptedAt": "2026-11-05T07:00:55.918Z",
-      "lastSuccessAt": "2026-11-05T07:00:55.918Z",
+      "attemptedAt": "2026-11-06T07:00:45.218Z",
+      "lastSuccessAt": "2026-11-06T07:00:45.218Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-05T07:00:55.918Z",
-        "bodySha256": "8df8ec598e7e22eb12a7da9e7ee8451acfc853926aacc80055fbbeac31c97367",
+        "checkedAt": "2026-11-06T07:00:45.218Z",
+        "bodySha256": "0608a59f922c3ef08ef5b35456cdae62b83828dc93c5ff6da49bf9379ef033aa",
         "records": [
           {
             "key": "text:6c7ad5d1af746cc7ef5c32cb09479f830dfe5d5418e524a762cbb1699cb4e70c",
@@ -58504,15 +58479,35 @@
       "channel": "Cursor",
       "url": "https://cursor.com/changelog",
       "kind": "document",
-      "attemptedAt": "2026-11-05T07:00:55.918Z",
-      "lastSuccessAt": "2026-11-05T07:00:55.918Z",
+      "attemptedAt": "2026-11-06T07:00:45.218Z",
+      "lastSuccessAt": "2026-11-06T07:00:45.218Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-05T07:00:55.918Z",
-        "bodySha256": "fe5716770caaf27152a84432e1e4e4f7b434c856c5b293eaeff41476cb531285",
+        "checkedAt": "2026-11-06T07:00:45.218Z",
+        "bodySha256": "0e35a7882654c66580aaecf36f83eb3c89e9958a2d1a2375f9ac9893b839990d",
         "records": [
+          {
+            "key": "text:7dbf0e4ae267ebf09bf8e7b8f4124302f3020c40dd12a49ef4982a476adad04f",
+            "hash": "7dbf0e4ae267ebf09bf8e7b8f4124302f3020c40dd12a49ef4982a476adad04f",
+            "type": "announcement",
+            "signals": [],
+            "models": [
+              "Grok Bot to use your app."
+            ],
+            "url": "https://cursor.com/changelog"
+          },
+          {
+            "key": "text:b705b339f429fa20c429a6ea2430ddd5fd15665afabfd5cf9f8ce410631a6d3c",
+            "hash": "b705b339f429fa20c429a6ea2430ddd5fd15665afabfd5cf9f8ce410631a6d3c",
+            "type": "announcement",
+            "signals": [
+              "availability"
+            ],
+            "models": [],
+            "url": "https://cursor.com/docs/cloud-agent/apps"
+          },
           {
             "key": "text:8426dc223d233f7073d2aebb028f8ef1a251e2b5de15158ed4dd65cc9b069748",
             "hash": "8426dc223d233f7073d2aebb028f8ef1a251e2b5de15158ed4dd65cc9b069748",
@@ -58592,85 +58587,9 @@
             ],
             "models": [],
             "url": "https://cursor.com/mobile"
-          },
-          {
-            "key": "text:18467fecef2d590c4b31f3e6bddc992e31e37ce430ada1eadc89b41f719199bb",
-            "hash": "18467fecef2d590c4b31f3e6bddc992e31e37ce430ada1eadc89b41f719199bb",
-            "type": "announcement",
-            "signals": [
-              "availability"
-            ],
-            "models": [],
-            "url": "https://cursor.com/changelog"
-          },
-          {
-            "key": "text:f77b7070dba93242e34ad5bcec6bdb40afb53c73b0ad91ddabaf7ce4492d0e09",
-            "hash": "f77b7070dba93242e34ad5bcec6bdb40afb53c73b0ad91ddabaf7ce4492d0e09",
-            "type": "announcement",
-            "signals": [
-              "availability"
-            ],
-            "models": [],
-            "url": "https://cursor.com/changelog"
-          },
-          {
-            "key": "text:82fd9cb8b13d109fa87ca550e79d4a0d6efbbff019f6678aa6d935b7f30e61b8",
-            "hash": "82fd9cb8b13d109fa87ca550e79d4a0d6efbbff019f6678aa6d935b7f30e61b8",
-            "type": "announcement",
-            "signals": [],
-            "models": [],
-            "url": "https://cursor.com/changelog"
-          },
-          {
-            "key": "text:556dfa12880c1b92794a0fc1fed741131a30ff68797cbb6b011d81ecf98dc06c",
-            "hash": "556dfa12880c1b92794a0fc1fed741131a30ff68797cbb6b011d81ecf98dc06c",
-            "type": "announcement",
-            "signals": [],
-            "models": [],
-            "url": "https://cursor.com/changelog"
-          },
-          {
-            "key": "text:87a4c0172e5b1878ffbe5b63d2490c8d3f94ed108b47af4c692392e534536674",
-            "hash": "87a4c0172e5b1878ffbe5b63d2490c8d3f94ed108b47af4c692392e534536674",
-            "type": "announcement",
-            "signals": [
-              "availability"
-            ],
-            "models": [],
-            "url": "https://cursor.com/changelog"
-          },
-          {
-            "key": "text:b5f0fc4b4c4fe014868a1cedfbed277eed0e4913c0329e724b2e80a2102d620d",
-            "hash": "b5f0fc4b4c4fe014868a1cedfbed277eed0e4913c0329e724b2e80a2102d620d",
-            "type": "announcement",
-            "signals": [
-              "availability"
-            ],
-            "models": [],
-            "url": "https://cursor.com/changelog"
-          },
-          {
-            "key": "text:7b931c7e6ccb73e707191292be9aa37a01772d335756745a3e0de5f9f45b0110",
-            "hash": "7b931c7e6ccb73e707191292be9aa37a01772d335756745a3e0de5f9f45b0110",
-            "type": "announcement",
-            "signals": [
-              "availability"
-            ],
-            "models": [],
-            "url": "https://cursor.com/automations"
-          },
-          {
-            "key": "text:3fbc06ba67601ba42dbed3d5676cac786d9a507ec29000e786f8988c5e78d5ff",
-            "hash": "3fbc06ba67601ba42dbed3d5676cac786d9a507ec29000e786f8988c5e78d5ff",
-            "type": "announcement",
-            "signals": [
-              "pricing"
-            ],
-            "models": [],
-            "url": "https://cursor.com/changelog"
           }
         ],
-        "hash": "f14fe16c514f3285600afa278d5dda8196fa7361dca86fba4b9f6bfc141c3893"
+        "hash": "9b6b7b8e1428c00cbfb4b046160448419a9e08ae8dde91059120d96db081e045"
       }
     },
     "devin-releases": {
@@ -58678,14 +58597,14 @@
       "channel": "Devin",
       "url": "https://docs.devin.ai/release-notes/overview",
       "kind": "document",
-      "attemptedAt": "2026-11-05T07:00:55.918Z",
-      "lastSuccessAt": "2026-11-05T07:00:55.918Z",
+      "attemptedAt": "2026-11-06T07:00:45.218Z",
+      "lastSuccessAt": "2026-11-06T07:00:45.218Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-05T07:00:55.918Z",
-        "bodySha256": "4cbc50ccfd7c9c6c222523c8226dd423bbe2f7075e5acc7149db29b81852a7c3",
+        "checkedAt": "2026-11-06T07:00:45.218Z",
+        "bodySha256": "f3fbb97f55cb4ed721848594710ed3c7c4253f89bb20649fafaeba37d267e5b0",
         "records": [
           {
             "key": "text:8f188bc90439c5b341aca73eb4d84c3dd04eb3bbd57acda295334fbde1178a0f",
@@ -59558,14 +59477,14 @@
       "channel": "Alibaba",
       "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan",
       "kind": "tables",
-      "attemptedAt": "2026-11-05T07:00:55.918Z",
-      "lastSuccessAt": "2026-11-05T07:00:55.918Z",
+      "attemptedAt": "2026-11-06T07:00:45.218Z",
+      "lastSuccessAt": "2026-11-06T07:00:45.218Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-05T07:00:55.918Z",
-        "bodySha256": "50702423bee85061f157af40ddc9e4b4fed09ab540358b385926fc887fa14ee2",
+        "checkedAt": "2026-11-06T07:00:45.218Z",
+        "bodySha256": "06b99defe9f25f77bafb035191fc8925cf6b700bc3ddc4f58b60c7dd5f8acd5d",
         "records": [
           {
             "key": "text:0686d515f782875e3d4496656bed3259cca990eb3f6893deb942abc5bd278f24",
@@ -60070,14 +59989,14 @@
       "channel": "Alibaba",
       "url": "https://help.aliyun.com/zh/model-studio/coding-plan",
       "kind": "tables",
-      "attemptedAt": "2026-11-05T07:00:55.918Z",
-      "lastSuccessAt": "2026-11-05T07:00:55.918Z",
+      "attemptedAt": "2026-11-06T07:00:45.218Z",
+      "lastSuccessAt": "2026-11-06T07:00:45.218Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-05T07:00:55.918Z",
-        "bodySha256": "a706ff7320dc7e4385b1e2ec95277c7e1ee6cf97e3b540e02d60531731923bdd",
+        "checkedAt": "2026-11-06T07:00:45.218Z",
+        "bodySha256": "1bb340095e72d95b8d175ec768859307a0b622152a64406fd13e566b8df70db3",
         "records": [
           {
             "key": "text:775eabf14c55f66ea3e7ef7b3737a001f72434663b87e260b4d68fe798af9495",
@@ -60531,14 +60450,14 @@
       "channel": "Alibaba",
       "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
       "kind": "tables",
-      "attemptedAt": "2026-11-05T07:00:55.918Z",
-      "lastSuccessAt": "2026-11-05T07:00:55.918Z",
+      "attemptedAt": "2026-11-06T07:00:45.218Z",
+      "lastSuccessAt": "2026-11-06T07:00:45.218Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-05T07:00:55.918Z",
-        "bodySha256": "b18ed54c9b8dd4e8d54ddbe05f5fe3a037ac21a073736b20be4823ab09bbf7bb",
+        "checkedAt": "2026-11-06T07:00:45.218Z",
+        "bodySha256": "aa624dabba801b0e6f871cde339a8a4b2e7cab9bc3c616b886f033028d7c178c",
         "records": [
           {
             "key": "text:8308bf6025304dfeaa804bdb593d0df9c619e81206391d574e18f2920c9fa0ff",
@@ -60644,12 +60563,12 @@
             ],
             "cells": [
               "定价",
-              "原价 60 元/月 限时 39 元/月",
-              "原价 120 元/月 限时 79 元/月",
-              "原价 180 元/月 限时 139 元/月",
-              "原价 600 元/月 限时 499 元/月"
+              "39 元/月 新用户限时价 19.5 元/月",
+              "79 元/月 新用户限时价 39.5 元/月",
+              "139 元/月",
+              "499 元/月"
             ],
-            "hash": "90f613a606356bc6775e1a263e39ec21a0ef0311a1875794c6d9bc1775868552",
+            "hash": "ce7477acb987a6890fbf9d1120331d5f452d56e542e507d0247599db32801382",
             "signals": [],
             "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
           },
@@ -60724,6 +60643,14 @@
             "signals": [
               "availability"
             ],
+            "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+          },
+          {
+            "key": "text:219b81111295802f70f833711236c4ebe2fa4611046b627ca0b50ee266f9fae7",
+            "hash": "219b81111295802f70f833711236c4ebe2fa4611046b627ca0b50ee266f9fae7",
+            "type": "announcement",
+            "signals": [],
+            "models": [],
             "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
           },
           {
@@ -60939,33 +60866,30 @@
             "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
           },
           {
-            "key": "row:1:da6e15b7c3a2:千问:0",
+            "key": "row:1:91c8ca9134d3:auto:0",
             "type": "table-row",
-            "label": "千问",
-            "heading": "支持的模型",
+            "label": "auto",
+            "heading": "千问",
             "columns": [
-              "品牌",
               "模型 ID（Model ID）",
               "模型能力"
             ],
             "cells": [
-              "千问",
               "auto",
               "推理模型、文本生成 平台提供的智能模型，按请求内容自动匹配底层模型，兼顾效果与成本。"
             ],
-            "hash": "2f952fed7fc5607a0d06d2c60ce7f22bac2f3355259d28b026afec43322dcf1b",
+            "hash": "ecbc021c705e09e20c0b6c77a50e5e425b60daea124b703a7ef533579684803a",
             "signals": [
               "availability"
             ],
             "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
           },
           {
-            "key": "row:1:da6e15b7c3a2:qwen3.8-max:0",
+            "key": "row:1:91c8ca9134d3:qwen3.8-max:0",
             "type": "table-row",
             "label": "qwen3.8-max",
-            "heading": "支持的模型",
+            "heading": "千问",
             "columns": [
-              "品牌",
               "模型 ID（Model ID）",
               "模型能力"
             ],
@@ -60980,12 +60904,11 @@
             "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
           },
           {
-            "key": "row:1:da6e15b7c3a2:qwen3.8-flash:0",
+            "key": "row:1:91c8ca9134d3:qwen3.8-flash:0",
             "type": "table-row",
             "label": "qwen3.8-flash",
-            "heading": "支持的模型",
+            "heading": "千问",
             "columns": [
-              "品牌",
               "模型 ID（Model ID）",
               "模型能力"
             ],
@@ -61000,12 +60923,11 @@
             "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
           },
           {
-            "key": "row:1:da6e15b7c3a2:qwen3.7-max:0",
+            "key": "row:1:91c8ca9134d3:qwen3.7-max:0",
             "type": "table-row",
             "label": "qwen3.7-max",
-            "heading": "支持的模型",
+            "heading": "千问",
             "columns": [
-              "品牌",
               "模型 ID（Model ID）",
               "模型能力"
             ],
@@ -61020,12 +60942,11 @@
             "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
           },
           {
-            "key": "row:1:da6e15b7c3a2:qwen3.7-plus:0",
+            "key": "row:1:91c8ca9134d3:qwen3.7-plus:0",
             "type": "table-row",
             "label": "qwen3.7-plus",
-            "heading": "支持的模型",
+            "heading": "千问",
             "columns": [
-              "品牌",
               "模型 ID（Model ID）",
               "模型能力"
             ],
@@ -61040,12 +60961,11 @@
             "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
           },
           {
-            "key": "row:1:da6e15b7c3a2:qwen3.6-flash:0",
+            "key": "row:1:91c8ca9134d3:qwen3.6-flash:0",
             "type": "table-row",
             "label": "qwen3.6-flash",
-            "heading": "支持的模型",
+            "heading": "千问",
             "columns": [
-              "品牌",
               "模型 ID（Model ID）",
               "模型能力"
             ],
@@ -61060,12 +60980,11 @@
             "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
           },
           {
-            "key": "row:1:da6e15b7c3a2:qwen-image-3.0-pro:0",
+            "key": "row:1:91c8ca9134d3:qwen-image-3.0-pro:0",
             "type": "table-row",
             "label": "qwen-image-3.0-pro",
-            "heading": "支持的模型",
+            "heading": "千问",
             "columns": [
-              "品牌",
               "模型 ID（Model ID）",
               "模型能力"
             ],
@@ -61078,12 +60997,11 @@
             "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
           },
           {
-            "key": "row:1:da6e15b7c3a2:qwen-audio-3.0-tts-plus:0",
+            "key": "row:1:91c8ca9134d3:qwen-audio-3.0-tts-plus:0",
             "type": "table-row",
             "label": "qwen-audio-3.0-tts-plus",
-            "heading": "支持的模型",
+            "heading": "千问",
             "columns": [
-              "品牌",
               "模型 ID（Model ID）",
               "模型能力"
             ],
@@ -61096,12 +61014,11 @@
             "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
           },
           {
-            "key": "row:1:da6e15b7c3a2:qwen-audio-3.0-realtime-plus:0",
+            "key": "row:1:91c8ca9134d3:qwen-audio-3.0-realtime-plus:0",
             "type": "table-row",
             "label": "qwen-audio-3.0-realtime-plus",
-            "heading": "支持的模型",
+            "heading": "千问",
             "columns": [
-              "品牌",
               "模型 ID（Model ID）",
               "模型能力"
             ],
@@ -61114,12 +61031,11 @@
             "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
           },
           {
-            "key": "row:1:da6e15b7c3a2:qwen-audio-3.0-asr-flash:0",
+            "key": "row:1:91c8ca9134d3:qwen-audio-3.0-asr-flash:0",
             "type": "table-row",
             "label": "qwen-audio-3.0-asr-flash",
-            "heading": "支持的模型",
+            "heading": "千问",
             "columns": [
-              "品牌",
               "模型 ID（Model ID）",
               "模型能力"
             ],
@@ -61132,31 +61048,28 @@
             "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
           },
           {
-            "key": "row:1:da6e15b7c3a2:万相:0",
+            "key": "row:2:91c8ca9134d3:wan2.7-image:0",
             "type": "table-row",
-            "label": "万相",
-            "heading": "支持的模型",
+            "label": "wan2.7-image",
+            "heading": "万相",
             "columns": [
-              "品牌",
               "模型 ID（Model ID）",
               "模型能力"
             ],
             "cells": [
-              "万相",
               "wan2.7-image",
               "图片生成"
             ],
-            "hash": "5171e2ac56f721465a90dbb47d094c466b9012fd6bfd4ace54c202e7f01877a9",
+            "hash": "aad91ff7f5428ffdc5a430338ff8e2c29c2587e239ce497165104764138e6843",
             "signals": [],
             "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
           },
           {
-            "key": "row:1:da6e15b7c3a2:wan2.7-image-pro:0",
+            "key": "row:2:91c8ca9134d3:wan2.7-image-pro:0",
             "type": "table-row",
             "label": "wan2.7-image-pro",
-            "heading": "支持的模型",
+            "heading": "万相",
             "columns": [
-              "品牌",
               "模型 ID（Model ID）",
               "模型能力"
             ],
@@ -61169,12 +61082,11 @@
             "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
           },
           {
-            "key": "row:1:da6e15b7c3a2:wan3.0-video:0",
+            "key": "row:2:91c8ca9134d3:wan3.0-video:0",
             "type": "table-row",
             "label": "wan3.0-video",
-            "heading": "支持的模型",
+            "heading": "万相",
             "columns": [
-              "品牌",
               "模型 ID（Model ID）",
               "模型能力"
             ],
@@ -61187,33 +61099,40 @@
             "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
           },
           {
-            "key": "row:1:da6e15b7c3a2:DeepSeek:0",
+            "key": "text:0648d2111ec0ca3d37d68ea020ce87e5c89caf06d3836a4388cd10bd1ebfd083",
+            "hash": "0648d2111ec0ca3d37d68ea020ce87e5c89caf06d3836a4388cd10bd1ebfd083",
+            "type": "announcement",
+            "signals": [],
+            "models": [
+              "DeepSeek"
+            ],
+            "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+          },
+          {
+            "key": "row:3:91c8ca9134d3:deepseek-v4.1-flash:0",
             "type": "table-row",
-            "label": "DeepSeek",
-            "heading": "支持的模型",
+            "label": "deepseek-v4.1-flash",
+            "heading": "DeepSeek",
             "columns": [
-              "品牌",
               "模型 ID（Model ID）",
               "模型能力"
             ],
             "cells": [
-              "DeepSeek",
               "deepseek-v4.1-flash",
               "推理模型、视觉理解、文本生成"
             ],
-            "hash": "ce1ffdf3a474d7deb2d3bbe7485dc06911977ed6839f9f75b7e41b7ebbb6b5bf",
+            "hash": "1baf0ad0b0062a19ce0a00c6d5eecd48f60939c8fd74024d0cfa4e301cf8902c",
             "signals": [
               "availability"
             ],
             "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
           },
           {
-            "key": "row:1:da6e15b7c3a2:deepseek-v4.1-flash-1017:0",
+            "key": "row:3:91c8ca9134d3:deepseek-v4.1-flash-1017:0",
             "type": "table-row",
             "label": "deepseek-v4.1-flash-1017",
-            "heading": "支持的模型",
+            "heading": "DeepSeek",
             "columns": [
-              "品牌",
               "模型 ID（Model ID）",
               "模型能力"
             ],
@@ -61229,12 +61148,11 @@
             "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
           },
           {
-            "key": "row:1:da6e15b7c3a2:deepseek-v4-pro:0",
+            "key": "row:3:91c8ca9134d3:deepseek-v4-pro:0",
             "type": "table-row",
             "label": "deepseek-v4-pro",
-            "heading": "支持的模型",
+            "heading": "DeepSeek",
             "columns": [
-              "品牌",
               "模型 ID（Model ID）",
               "模型能力"
             ],
@@ -61249,12 +61167,11 @@
             "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
           },
           {
-            "key": "row:1:da6e15b7c3a2:deepseek-v4-pro-0813:0",
+            "key": "row:3:91c8ca9134d3:deepseek-v4-pro-0813:0",
             "type": "table-row",
             "label": "deepseek-v4-pro-0813",
-            "heading": "支持的模型",
+            "heading": "DeepSeek",
             "columns": [
-              "品牌",
               "模型 ID（Model ID）",
               "模型能力"
             ],
@@ -61269,12 +61186,11 @@
             "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
           },
           {
-            "key": "row:1:da6e15b7c3a2:deepseek-v4-flash-0731:0",
+            "key": "row:3:91c8ca9134d3:deepseek-v4-flash-0731:0",
             "type": "table-row",
             "label": "deepseek-v4-flash-0731",
-            "heading": "支持的模型",
+            "heading": "DeepSeek",
             "columns": [
-              "品牌",
               "模型 ID（Model ID）",
               "模型能力"
             ],
@@ -61289,33 +61205,30 @@
             "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
           },
           {
-            "key": "row:1:da6e15b7c3a2:智谱 AI:0",
+            "key": "row:4:91c8ca9134d3:glm-5.3:0",
             "type": "table-row",
-            "label": "智谱 AI",
-            "heading": "支持的模型",
+            "label": "glm-5.3",
+            "heading": "智谱 AI",
             "columns": [
-              "品牌",
               "模型 ID（Model ID）",
               "模型能力"
             ],
             "cells": [
-              "智谱 AI",
               "glm-5.3",
               "推理模型、文本生成"
             ],
-            "hash": "12a2d9f009f0e67dac61e9061b38e6912fc0a3c32e1a60433bb722c9881eabcc",
+            "hash": "36fb25320193b06c07702297fc8c751f7a5e21440d8b44c17a2968d986c24d19",
             "signals": [
               "availability"
             ],
             "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
           },
           {
-            "key": "row:1:da6e15b7c3a2:glm-5.2:0",
+            "key": "row:4:91c8ca9134d3:glm-5.2:0",
             "type": "table-row",
             "label": "glm-5.2",
-            "heading": "支持的模型",
+            "heading": "智谱 AI",
             "columns": [
-              "品牌",
               "模型 ID（Model ID）",
               "模型能力"
             ],
@@ -61330,31 +61243,28 @@
             "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
           },
           {
-            "key": "row:1:da6e15b7c3a2:HappyHorse:0",
+            "key": "row:5:91c8ca9134d3:happyhorse-1.1-i2v:0",
             "type": "table-row",
-            "label": "HappyHorse",
-            "heading": "支持的模型",
+            "label": "happyhorse-1.1-i2v",
+            "heading": "HappyHorse",
             "columns": [
-              "品牌",
               "模型 ID（Model ID）",
               "模型能力"
             ],
             "cells": [
-              "HappyHorse",
               "happyhorse-1.1-i2v",
               "视频生成"
             ],
-            "hash": "86bebd50d5224e1354ca96a7cc87ad40fcf9020b902ce334e0d5e535238fdaa3",
+            "hash": "51ff3d6e8b3118cc099fbf681970f10923f9c8368f1df9a20120267b04335b81",
             "signals": [],
             "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
           },
           {
-            "key": "row:1:da6e15b7c3a2:happyhorse-1.1-t2v:0",
+            "key": "row:5:91c8ca9134d3:happyhorse-1.1-t2v:0",
             "type": "table-row",
             "label": "happyhorse-1.1-t2v",
-            "heading": "支持的模型",
+            "heading": "HappyHorse",
             "columns": [
-              "品牌",
               "模型 ID（Model ID）",
               "模型能力"
             ],
@@ -61367,12 +61277,11 @@
             "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
           },
           {
-            "key": "row:1:da6e15b7c3a2:happyhorse-1.1-r2v:0",
+            "key": "row:5:91c8ca9134d3:happyhorse-1.1-r2v:0",
             "type": "table-row",
             "label": "happyhorse-1.1-r2v",
-            "heading": "支持的模型",
+            "heading": "HappyHorse",
             "columns": [
-              "品牌",
               "模型 ID（Model ID）",
               "模型能力"
             ],
@@ -61385,21 +61294,29 @@
             "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
           },
           {
-            "key": "row:1:da6e15b7c3a2:领域模型:0",
+            "key": "text:42e716c27f4f67cd0aaca45f51ea0416f73014651d47d822342b80665d467d3b",
+            "hash": "42e716c27f4f67cd0aaca45f51ea0416f73014651d47d822342b80665d467d3b",
+            "type": "announcement",
+            "signals": [
+              "availability"
+            ],
+            "models": [],
+            "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+          },
+          {
+            "key": "row:6:91c8ca9134d3:decision-model-preview:0",
             "type": "table-row",
-            "label": "领域模型",
-            "heading": "支持的模型",
+            "label": "decision-model-preview",
+            "heading": "领域模型",
             "columns": [
-              "品牌",
               "模型 ID（Model ID）",
               "模型能力"
             ],
             "cells": [
-              "领域模型",
               "decision-model-preview",
               "文本生成"
             ],
-            "hash": "aab7d84efb100b853f6ec8677602bd6c5fd2b6ecfd1f0e429c616a633b946c31",
+            "hash": "7224238715f20a8bd13693533a85ba8fabae40ab9ad92b15ad96b78dd7e30a9b",
             "signals": [
               "availability"
             ],
@@ -61427,7 +61344,7 @@
             "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
           },
           {
-            "key": "row:2:7658813af3d5:联网搜索:0",
+            "key": "row:7:7658813af3d5:联网搜索:0",
             "type": "table-row",
             "label": "联网搜索",
             "heading": "支持的模型内置工具",
@@ -61444,7 +61361,7 @@
             "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
           },
           {
-            "key": "row:2:7658813af3d5:文搜图:0",
+            "key": "row:7:7658813af3d5:文搜图:0",
             "type": "table-row",
             "label": "文搜图",
             "heading": "支持的模型内置工具",
@@ -61461,7 +61378,7 @@
             "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
           },
           {
-            "key": "row:2:7658813af3d5:图搜图:0",
+            "key": "row:7:7658813af3d5:图搜图:0",
             "type": "table-row",
             "label": "图搜图",
             "heading": "支持的模型内置工具",
@@ -61478,7 +61395,7 @@
             "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
           },
           {
-            "key": "row:2:7658813af3d5:网页抓取:0",
+            "key": "row:7:7658813af3d5:网页抓取:0",
             "type": "table-row",
             "label": "网页抓取",
             "heading": "支持的模型内置工具",
@@ -61495,7 +61412,7 @@
             "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
           },
           {
-            "key": "row:2:7658813af3d5:代码解释器:0",
+            "key": "row:7:7658813af3d5:代码解释器:0",
             "type": "table-row",
             "label": "代码解释器",
             "heading": "支持的模型内置工具",
@@ -61623,7 +61540,7 @@
             "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
           }
         ],
-        "hash": "fdfac98eef942e4ac78c77480a7a3866373c10f40a2fa8e23599b22b83c3e0fd"
+        "hash": "c64ce538657829178dae99dc96bfea6fef14c78f09a75f35b4dc0fec5c8f5f90"
       }
     },
     "opencode-social": {
@@ -61631,8 +61548,8 @@
       "channel": "OpenCode",
       "url": "https://x.com/opencode",
       "kind": "social",
-      "attemptedAt": "2026-11-05T07:00:55.918Z",
-      "lastSuccessAt": "2026-11-05T07:00:55.918Z",
+      "attemptedAt": "2026-11-06T07:00:45.218Z",
+      "lastSuccessAt": "2026-11-06T07:00:45.218Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "official-oembed; discovery may use mirror",
@@ -61782,7 +61699,7 @@
           }
         ],
         "hash": "1eb59b59525ca7ee77e5bfee29f5772126a04fbec4c82972aff01fc90583428e",
-        "checkedAt": "2026-11-05T07:00:55.918Z",
+        "checkedAt": "2026-11-06T07:00:45.218Z",
         "discoveredVia": "https://teapawt.net/opencode"
       }
     },
@@ -61791,13 +61708,31 @@
       "channel": "Command Code",
       "url": "https://x.com/CommandCodeAI",
       "kind": "social",
-      "attemptedAt": "2026-11-05T07:00:55.918Z",
-      "lastSuccessAt": "2026-11-05T07:00:55.918Z",
+      "attemptedAt": "2026-11-06T07:00:45.218Z",
+      "lastSuccessAt": "2026-11-06T07:00:45.218Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "official-oembed; discovery may use mirror",
       "snapshot": {
         "records": [
+          {
+            "key": "post:2118392421352644850",
+            "type": "announcement",
+            "hash": "a71a24d6e1f5073e8fd311d6b1533bceacfaff7aec9daa59e681a3c0ae9a92ae",
+            "signals": [
+              "version",
+              "pricing",
+              "availability"
+            ],
+            "models": [
+              "DeepSeek V4.1 Flash 1017 ",
+              "GLM-5.3 Flash ",
+              "Ling 3.1 Flash 1019 ",
+              "Ling 3.1 Flash That"
+            ],
+            "url": "https://x.com/CommandCodeAI/status/2118392421352644850",
+            "relevant": true
+          },
           {
             "key": "post:2117784140598698248",
             "type": "announcement",
@@ -61899,17 +61834,6 @@
             "relevant": true
           },
           {
-            "key": "post:2116507729909170207",
-            "type": "announcement",
-            "hash": "0cfb05b52b8c73e0d46473985433630339d1991b27e158337244ad7a87c0d57c",
-            "signals": [
-              "promotion"
-            ],
-            "models": [],
-            "url": "https://x.com/CommandCodeAI/status/2116507729909170207",
-            "relevant": true
-          },
-          {
             "key": "post:2116507729670086950",
             "type": "announcement",
             "hash": "d2985bca88d994e18371384d6c61f4b4fb6a7a7134ac36787e519864444ce79f",
@@ -61963,8 +61887,8 @@
             "relevant": false
           }
         ],
-        "hash": "64e48d6497c7f3716c27d392ef5518525403f34f35c6f6cd1524bb37e7cf139c",
-        "checkedAt": "2026-11-05T07:00:55.918Z",
+        "hash": "acc6efa436528696330c729801ed1785719adc55a80c8120cacf2229e74545ee",
+        "checkedAt": "2026-11-06T07:00:45.218Z",
         "discoveredVia": "https://teapawt.net/CommandCodeAI"
       }
     }
@@ -64768,7 +64692,2733 @@
         "relevant": true
       },
       "status": "pending"
+    },
+    {
+      "id": "27b64032fbe98f471d3ff97fa3ba0e21ee9992d46737d34a472e7a10d13f0922",
+      "sourceId": "command-code-max",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://commandcode.ai/models",
+      "before": null,
+      "after": {
+        "key": "text:1c4cd2c5264f0c6a953fef91f19f85f775902f7f3292578a40102a7cc639b771",
+        "hash": "1c4cd2c5264f0c6a953fef91f19f85f775902f7f3292578a40102a7cc639b771",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [
+          "Claude Opus",
+          "Claude Fable"
+        ],
+        "url": "https://commandcode.ai/models"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "0d8ad0e0cd86c4c03765f05d514792823c3867f7ad7d86142b4860d4d79954dc",
+      "sourceId": "command-code-max",
+      "channel": "Command Code",
+      "kind": "terms-changed",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://commandcode.ai/docs/plans/max",
+      "before": {
+        "key": "row:2:6e2f82d4bba3:MiniMax M3.1 Flash:0",
+        "type": "table-row",
+        "label": "MiniMax M3.1 Flash",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Requests / 5 hours",
+          "Requests / week",
+          "Requests / month"
+        ],
+        "cells": [
+          "MiniMax M3.1 Flash",
+          "Free",
+          "Free",
+          "Free"
+        ],
+        "hash": "4bd8821f2ede11a640b81601558a67c4b93b2b024de7fe16043b93c97f35bac0",
+        "signals": [
+          "promotion"
+        ],
+        "url": "https://commandcode.ai/docs/plans/max"
+      },
+      "after": {
+        "key": "row:2:6e2f82d4bba3:MiniMax M3.1 Flash:0",
+        "type": "table-row",
+        "label": "MiniMax M3.1 Flash",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Requests / 5 hours",
+          "Requests / week",
+          "Requests / month"
+        ],
+        "cells": [
+          "MiniMax M3.1 Flash",
+          "47,600",
+          "95,200",
+          "159,000"
+        ],
+        "hash": "aca0bd44f08813f3d1fad6869a7e9ad6eb23358553b08bb2d59ee9ea8ae98f58",
+        "signals": [],
+        "url": "https://commandcode.ai/docs/plans/max"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "6efcd988f3e5edf01a83f27c2c246f24b5ec1cebe75fefbe89d7c1882ef2f34d",
+      "sourceId": "command-code-max",
+      "channel": "Command Code",
+      "kind": "terms-changed",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://commandcode.ai/docs/plans/max",
+      "before": {
+        "key": "row:2:6e2f82d4bba3:Ornith 1.5 122B:0",
+        "type": "table-row",
+        "label": "Ornith 1.5 122B",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Requests / 5 hours",
+          "Requests / week",
+          "Requests / month"
+        ],
+        "cells": [
+          "Ornith 1.5 122B",
+          "Free",
+          "Free",
+          "Free"
+        ],
+        "hash": "e14699a26283e41a3ba279f0cb76fdb12388da4edde5b5b6916060c38ca24d32",
+        "signals": [
+          "promotion"
+        ],
+        "url": "https://commandcode.ai/docs/plans/max"
+      },
+      "after": {
+        "key": "row:2:6e2f82d4bba3:Ornith 1.5 122B:0",
+        "type": "table-row",
+        "label": "Ornith 1.5 122B",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Requests / 5 hours",
+          "Requests / week",
+          "Requests / month"
+        ],
+        "cells": [
+          "Ornith 1.5 122B",
+          "35,800",
+          "71,700",
+          "119,000"
+        ],
+        "hash": "f0cf61dd7182fa937d4deb58324436176d7085aa34f744bd9c4f689b49d66bcf",
+        "signals": [],
+        "url": "https://commandcode.ai/docs/plans/max"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "4f2333e1644743453dc901d20d60828446792874f35e530901c490946fc9055b",
+      "sourceId": "command-code-max",
+      "channel": "Command Code",
+      "kind": "terms-changed",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://commandcode.ai/docs/plans/max",
+      "before": {
+        "key": "row:3:508faf2ee524:MiniMax M3.1 Flash:0",
+        "type": "table-row",
+        "label": "MiniMax M3.1 Flash",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Input",
+          "Output",
+          "Cache Read",
+          "Cache Write",
+          "Max 10× credits",
+          "Max 20× credits"
+        ],
+        "cells": [
+          "MiniMax M3.1 Flash",
+          "$0.00",
+          "$0.00",
+          "$0.00",
+          "-",
+          "Free",
+          "Free"
+        ],
+        "hash": "70e91b96f172910d1f5867543b197742ebef377c504988b55f0b8ed543683944",
+        "signals": [
+          "pricing",
+          "promotion"
+        ],
+        "url": "https://commandcode.ai/docs/plans/max"
+      },
+      "after": {
+        "key": "row:3:508faf2ee524:MiniMax M3.1 Flash:0",
+        "type": "table-row",
+        "label": "MiniMax M3.1 Flash",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Input",
+          "Output",
+          "Cache Read",
+          "Cache Write",
+          "Max 10× credits",
+          "Max 20× credits"
+        ],
+        "cells": [
+          "MiniMax M3.1 Flash",
+          "$0.15",
+          "$0.60",
+          "$0.015",
+          "-",
+          "$150",
+          "$300"
+        ],
+        "hash": "2360fdcf9b87c28ea6b0db1fe7e9e35a0c941fac7f344a2f88e6155f71f7f955",
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://commandcode.ai/docs/plans/max"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "de43f338c2921fc3d1f34611761e32a02d3e12062e8202c4bb9f4cf7af1f5d64",
+      "sourceId": "command-code-max",
+      "channel": "Command Code",
+      "kind": "terms-changed",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://commandcode.ai/docs/plans/max",
+      "before": {
+        "key": "row:3:508faf2ee524:Ornith 1.5 122B:0",
+        "type": "table-row",
+        "label": "Ornith 1.5 122B",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Input",
+          "Output",
+          "Cache Read",
+          "Cache Write",
+          "Max 10× credits",
+          "Max 20× credits"
+        ],
+        "cells": [
+          "Ornith 1.5 122B",
+          "$0.00",
+          "$0.00",
+          "$0.00",
+          "-",
+          "Free",
+          "Free"
+        ],
+        "hash": "92e272b32b55b5e38548771c911e7609d593950e949ec78ff74f47fdd0bc2a73",
+        "signals": [
+          "pricing",
+          "promotion"
+        ],
+        "url": "https://commandcode.ai/docs/plans/max"
+      },
+      "after": {
+        "key": "row:3:508faf2ee524:Ornith 1.5 122B:0",
+        "type": "table-row",
+        "label": "Ornith 1.5 122B",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Input",
+          "Output",
+          "Cache Read",
+          "Cache Write",
+          "Max 10× credits",
+          "Max 20× credits"
+        ],
+        "cells": [
+          "Ornith 1.5 122B",
+          "$0.16",
+          "$0.64",
+          "$0.02",
+          "-",
+          "$150",
+          "$300"
+        ],
+        "hash": "e4529e783006b526c72ebc20ca1d5739966e6363729486ff55fe5e8831e0325d",
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://commandcode.ai/docs/plans/max"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "89f878709c1104148b2b975b7de69103456224fe48341afd3398b41923d6fddb",
+      "sourceId": "command-code-max",
+      "channel": "Command Code",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://commandcode.ai/docs/plans/max",
+      "before": {
+        "key": "row:2:6e2f82d4bba3:MiniMax M3.1 Flash:1",
+        "type": "table-row",
+        "label": "MiniMax M3.1 Flash",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Requests / 5 hours",
+          "Requests / week",
+          "Requests / month"
+        ],
+        "cells": [
+          "MiniMax M3.1 Flash",
+          "47,600",
+          "95,200",
+          "159,000"
+        ],
+        "hash": "aca0bd44f08813f3d1fad6869a7e9ad6eb23358553b08bb2d59ee9ea8ae98f58",
+        "signals": [],
+        "url": "https://commandcode.ai/docs/plans/max"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "aea5d694166187a04ff66a26616bed9a2f46c0fd47529f06e69ce9301f5b5160",
+      "sourceId": "command-code-max",
+      "channel": "Command Code",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://commandcode.ai/docs/plans/max",
+      "before": {
+        "key": "row:2:6e2f82d4bba3:Ornith 1.5 122B:1",
+        "type": "table-row",
+        "label": "Ornith 1.5 122B",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Requests / 5 hours",
+          "Requests / week",
+          "Requests / month"
+        ],
+        "cells": [
+          "Ornith 1.5 122B",
+          "35,800",
+          "71,700",
+          "119,000"
+        ],
+        "hash": "f0cf61dd7182fa937d4deb58324436176d7085aa34f744bd9c4f689b49d66bcf",
+        "signals": [],
+        "url": "https://commandcode.ai/docs/plans/max"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "034875334a21052c113fec05a6b181c414c524371d8f9ee4239260d674eeb444",
+      "sourceId": "command-code-max",
+      "channel": "Command Code",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://commandcode.ai/docs/plans/max",
+      "before": {
+        "key": "row:2:6e2f82d4bba3:Claude Opus 4.6:0",
+        "type": "table-row",
+        "label": "Claude Opus 4.6",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Requests / 5 hours",
+          "Requests / week",
+          "Requests / month"
+        ],
+        "cells": [
+          "Claude Opus 4.6",
+          "896",
+          "1,790",
+          "2,990"
+        ],
+        "hash": "ca676d73ed9ae3433ea6e73127241a178a941eddd206c5561896ed3bd06decfd",
+        "signals": [],
+        "url": "https://commandcode.ai/docs/plans/max"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "e92b3292a022d2f36500d0c7e0119c86a5f5b0e3384ed5d1430a250f8770b092",
+      "sourceId": "command-code-max",
+      "channel": "Command Code",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://commandcode.ai/docs/plans/max",
+      "before": {
+        "key": "row:3:508faf2ee524:MiniMax M3.1 Flash:1",
+        "type": "table-row",
+        "label": "MiniMax M3.1 Flash",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Input",
+          "Output",
+          "Cache Read",
+          "Cache Write",
+          "Max 10× credits",
+          "Max 20× credits"
+        ],
+        "cells": [
+          "MiniMax M3.1 Flash",
+          "$0.15",
+          "$0.60",
+          "$0.015",
+          "-",
+          "$150",
+          "$300"
+        ],
+        "hash": "2360fdcf9b87c28ea6b0db1fe7e9e35a0c941fac7f344a2f88e6155f71f7f955",
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://commandcode.ai/docs/plans/max"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "03dccc97ed8d6a985fc008d281755a0a189643a8a8338843e6fef7dcd9075c5d",
+      "sourceId": "command-code-max",
+      "channel": "Command Code",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://commandcode.ai/docs/plans/max",
+      "before": {
+        "key": "row:3:508faf2ee524:Ornith 1.5 122B:1",
+        "type": "table-row",
+        "label": "Ornith 1.5 122B",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Input",
+          "Output",
+          "Cache Read",
+          "Cache Write",
+          "Max 10× credits",
+          "Max 20× credits"
+        ],
+        "cells": [
+          "Ornith 1.5 122B",
+          "$0.16",
+          "$0.64",
+          "$0.02",
+          "-",
+          "$150",
+          "$300"
+        ],
+        "hash": "e4529e783006b526c72ebc20ca1d5739966e6363729486ff55fe5e8831e0325d",
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://commandcode.ai/docs/plans/max"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "e85152470f4893b25940249013d7d6981589eaccae67180d5b69cd5750df8fab",
+      "sourceId": "command-code-max",
+      "channel": "Command Code",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://commandcode.ai/docs/plans/max",
+      "before": {
+        "key": "row:3:508faf2ee524:Claude Opus 4.6:0",
+        "type": "table-row",
+        "label": "Claude Opus 4.6",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Input",
+          "Output",
+          "Cache Read",
+          "Cache Write",
+          "Max 10× credits",
+          "Max 20× credits"
+        ],
+        "cells": [
+          "Claude Opus 4.6",
+          "$5.00",
+          "$25.00",
+          "$0.50",
+          "$6.25",
+          "$100",
+          "$200"
+        ],
+        "hash": "201911fe262b3578976065d674ef797f9a5beb68ce35c4218ad35f9d641c3bec",
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://commandcode.ai/docs/plans/max"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "1d241a7d465d1e3027eed526b384037d77e577cf411b6de42349f0fadfa8c644",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": null,
+      "after": {
+        "key": "text:16189401898907297fdb91fb80e103d62ade71cafe3af520e9fede03bc16886f",
+        "hash": "16189401898907297fdb91fb80e103d62ade71cafe3af520e9fede03bc16886f",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [
+          "deepseek/deepseek-v4.1-flash ."
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "9c4438f6738fe0388d44f4b3563fd9c17e78950c7cb795e6783e7b57607cde70",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "terms-changed",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": {
+        "key": "row:1:23643f1df728:claude-sonnet-4-6 Copy model id:0",
+        "type": "table-row",
+        "label": "claude-sonnet-4-6 Copy model id",
+        "heading": "Anthropic",
+        "columns": [
+          "Model ID",
+          "Name",
+          "Capabilities",
+          "Best for"
+        ],
+        "cells": [
+          "claude-sonnet-4-6 Copy model id",
+          "Claude Sonnet 4.6",
+          "",
+          "older Sonnet, still fast & capable"
+        ],
+        "hash": "b12779f27ac2e9e0b55e5716ca7aca314f17bb11e615121f51e7a50036bb9fdf",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "after": {
+        "key": "row:1:23643f1df728:claude-sonnet-4-6 Copy model id:0",
+        "type": "table-row",
+        "label": "claude-sonnet-4-6 Copy model id",
+        "heading": "Anthropic",
+        "columns": [
+          "Model ID",
+          "Name",
+          "Capabilities",
+          "Best for"
+        ],
+        "cells": [
+          "claude-sonnet-4-6 Copy model id",
+          "Claude Sonnet 4.6",
+          "+ 1",
+          "older Sonnet, still fast & capable"
+        ],
+        "hash": "298c7b0d456c313b27ea9253ffc68e399f3144f5945c95d9c5db8b31d662face",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "78526860c3c03e1d33329cd529a89b18341cb7442d3287e6e0e2b54d50c7dc02",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "terms-changed",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": {
+        "key": "row:22:598f422c9ab3:typesafe/jev:0",
+        "type": "table-row",
+        "label": "typesafe/jev",
+        "heading": "TypeSafe",
+        "columns": [
+          "Model id",
+          "Made by",
+          "Price",
+          "Runs on"
+        ],
+        "cells": [
+          "typesafe/jev",
+          "TypeSafe",
+          "Free through September 24, 2026 , then $0.042 per 1M input tokens",
+          "Headless , API"
+        ],
+        "hash": "a507f9ea7b6132f531a3f5471146a2a1cfb8414db076aa8e39ac9fd3bea6eca1",
+        "signals": [
+          "pricing",
+          "promotion"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "after": {
+        "key": "row:22:598f422c9ab3:typesafe/jev:0",
+        "type": "table-row",
+        "label": "typesafe/jev",
+        "heading": "TypeSafe",
+        "columns": [
+          "Model id",
+          "Made by",
+          "Price",
+          "Runs on"
+        ],
+        "cells": [
+          "typesafe/jev",
+          "TypeSafe",
+          "$0.042 per 1M input tokens",
+          "Headless , API"
+        ],
+        "hash": "1ff28027517d0992e5d72355369de51e8aa93f298b8e985819b554f37e9886d2",
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "242f1eaa02e581e692a31182a465da215fa5fae486cc5b2749da3badf4a86b84",
+      "sourceId": "command-code-terms",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://commandcode.ai/docs/resources/pricing-limits",
+      "before": null,
+      "after": {
+        "key": "text:88b820ead2883dbbbce22b5e6f0f3401a9957d2ce682fbb1263399f374234e0b",
+        "hash": "88b820ead2883dbbbce22b5e6f0f3401a9957d2ce682fbb1263399f374234e0b",
+        "type": "announcement",
+        "signals": [
+          "promotion"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/docs/resources/pricing-limits"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "a37f27e049da9a517f0f76f662769252dedadd48d2d99f3ec4c8b48cb15b1ba3",
+      "sourceId": "command-code-terms",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://commandcode.ai/docs/resources/pricing-limits",
+      "before": null,
+      "after": {
+        "key": "text:70e4b4c9552036dea0f11f72680575269bcb7bba7aeaad83a2e269ab93be429f",
+        "hash": "70e4b4c9552036dea0f11f72680575269bcb7bba7aeaad83a2e269ab93be429f",
+        "type": "announcement",
+        "signals": [
+          "pricing",
+          "availability"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/docs/resources/pricing-limits"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "3852c0bf3041404e30240ac99171f3592422cc36c5ee2a5966533927ba8a85bd",
+      "sourceId": "ollama-pricing",
+      "channel": "Ollama",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://ollama.com/pricing",
+      "before": null,
+      "after": {
+        "key": "row:0:4699f8e99f5e:beam:0",
+        "type": "table-row",
+        "label": "beam",
+        "heading": "Model pricing",
+        "columns": [
+          "Model",
+          "Input",
+          "Cached input",
+          "Output"
+        ],
+        "cells": [
+          "beam",
+          "$0.125",
+          "$0.015",
+          "$0.40"
+        ],
+        "hash": "37702f63073c2ff808795d8dd937dfd6dd34f8819e8c6b5f9877a17e4aea83a2",
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://ollama.com/pricing"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "f907719465d6f391a269a1a30cb7fcf1c9841a6d67f54cb41e8eaffe7a5386d6",
+      "sourceId": "factory-models",
+      "channel": "Factory",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://docs.factory.com/models.md",
+      "before": null,
+      "after": {
+        "key": "row:4:0534be2c3766:Kimi K3.1 Pro:0",
+        "type": "table-row",
+        "label": "Kimi K3.1 Pro",
+        "heading": "<span className=\"provider-heading\"><img src=\"/brand-guidelines/logos/rotor-black.svg\" alt=\"Factory logo\" className=\"provider-icon\" />Droid Core (Open ",
+        "columns": [
+          "Model",
+          "Model ID",
+          "Multiplier",
+          "Reasoning"
+        ],
+        "cells": [
+          "Kimi K3.1 Pro",
+          "`kimi-k3.1-pro`",
+          "0.8×",
+          "`low`, `high`, `max` (default)"
+        ],
+        "hash": "19e0447cf4cd82ad7a71b83d724669ed6676afcab4fb0a9849eaf525a0f3e454",
+        "signals": [],
+        "url": "https://docs.factory.com/models.md"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "fcf399c19877a02fc6cad06222f705e8f41d8f78abc661fec536b265799f1776",
+      "sourceId": "factory-releases",
+      "channel": "Factory",
+      "kind": "announcement",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://docs.factory.com/changelog/release-notes.md",
+      "before": null,
+      "after": {
+        "key": "text:4fa221938efe893b9601c251df62d907bc9e40f016ec6e920a2b9b6f7a00eaa2",
+        "hash": "4fa221938efe893b9601c251df62d907bc9e40f016ec6e920a2b9b6f7a00eaa2",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [],
+        "url": "https://docs.factory.com/changelog/release-notes.md"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "1b20098f3370d9367100f78714e86c1cfc641f62e388e4fc144e43329d830542",
+      "sourceId": "factory-releases",
+      "channel": "Factory",
+      "kind": "announcement",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://docs.factory.com/changelog/release-notes.md",
+      "before": null,
+      "after": {
+        "key": "text:5b5c6d5bf93abd0569384034daa766768815bd85104cb71f53379b00cca5f158",
+        "hash": "5b5c6d5bf93abd0569384034daa766768815bd85104cb71f53379b00cca5f158",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [],
+        "url": "https://docs.factory.com/changelog/release-notes.md"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "176f620f8647833cf0d2f75863baedc6c1123af6040d07e8d0e7108fd9e907b1",
+      "sourceId": "factory-releases",
+      "channel": "Factory",
+      "kind": "announcement",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://docs.factory.com/changelog/release-notes.md",
+      "before": null,
+      "after": {
+        "key": "text:795b8a723f126341432b3bec36cb3409027554972fe16886a67d780b6f8399ad",
+        "hash": "795b8a723f126341432b3bec36cb3409027554972fe16886a67d780b6f8399ad",
+        "type": "announcement",
+        "signals": [
+          "pricing"
+        ],
+        "models": [],
+        "url": "https://docs.factory.com/changelog/release-notes.md"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "d49c2960edfe886269cb94b9741319413d3283bed7e79bddcc61b78657c82aa3",
+      "sourceId": "factory-releases",
+      "channel": "Factory",
+      "kind": "announcement",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://docs.factory.com/changelog/release-notes.md",
+      "before": null,
+      "after": {
+        "key": "text:36361ca4c7a6bb4ab08f6fce5660bb6d597dd45d2b5927e4be257994d0e342d2",
+        "hash": "36361ca4c7a6bb4ab08f6fce5660bb6d597dd45d2b5927e4be257994d0e342d2",
+        "type": "announcement",
+        "signals": [],
+        "models": [],
+        "url": "https://docs.factory.com/changelog/release-notes.md"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "5e192685de4725861814580f421126dca3a62cd827307a00710f3e7c629a1287",
+      "sourceId": "factory-releases",
+      "channel": "Factory",
+      "kind": "announcement",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://docs.factory.com/changelog/release-notes.md",
+      "before": null,
+      "after": {
+        "key": "text:12eeef707236c733e112c5fa729c4a790557fd3093eb07fe1f1826cc2cfdca99",
+        "hash": "12eeef707236c733e112c5fa729c4a790557fd3093eb07fe1f1826cc2cfdca99",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [],
+        "url": "https://docs.factory.com/changelog/release-notes.md"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "5b0435ac8fdf4c68c86ae0e82e05bc2050316ca99e30445de1a875603b8a539c",
+      "sourceId": "factory-releases",
+      "channel": "Factory",
+      "kind": "announcement",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://docs.factory.com/changelog/release-notes.md",
+      "before": null,
+      "after": {
+        "key": "text:d3a4030f1443e967882179cc2304fe0c8933b60e6a986cdbcc4753478869333c",
+        "hash": "d3a4030f1443e967882179cc2304fe0c8933b60e6a986cdbcc4753478869333c",
+        "type": "announcement",
+        "signals": [],
+        "models": [
+          "swered"
+        ],
+        "url": "https://docs.factory.com/changelog/release-notes.md"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "1a095f0579061920d4c0dbdb977e31b23913c1392026a87bcef6edb33396e87f",
+      "sourceId": "factory-releases",
+      "channel": "Factory",
+      "kind": "announcement",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://docs.factory.com/changelog/release-notes.md",
+      "before": null,
+      "after": {
+        "key": "text:c3322119fa67b6732b8912e66f8ac82e2a2f54be396a6dbe2995d2292fd3da85",
+        "hash": "c3322119fa67b6732b8912e66f8ac82e2a2f54be396a6dbe2995d2292fd3da85",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [],
+        "url": "https://docs.factory.com/changelog/release-notes.md"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "596a919f4d98eed33e0f4597d61e369f50d527e3284699f50b40c657c4831171",
+      "sourceId": "factory-releases",
+      "channel": "Factory",
+      "kind": "announcement",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://docs.factory.com/changelog/release-notes.md",
+      "before": null,
+      "after": {
+        "key": "text:0f217db5276fefb8b83babe3ce22c4ab066949fed6b6976fe62e2f3986aef423",
+        "hash": "0f217db5276fefb8b83babe3ce22c4ab066949fed6b6976fe62e2f3986aef423",
+        "type": "announcement",
+        "signals": [],
+        "models": [
+          "ling"
+        ],
+        "url": "https://docs.factory.com/changelog/release-notes.md"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "f9ddbb2d00e3fdc3632107a1a326110e7d00c5216fdf59331e31fd1ec2cd9d7c",
+      "sourceId": "factory-releases",
+      "channel": "Factory",
+      "kind": "announcement",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://docs.factory.com/changelog/release-notes.md",
+      "before": null,
+      "after": {
+        "key": "text:a9355246f95fd74873aa0b9478b4254c96240611841acea1b1cf3974963f3acd",
+        "hash": "a9355246f95fd74873aa0b9478b4254c96240611841acea1b1cf3974963f3acd",
+        "type": "announcement",
+        "signals": [],
+        "models": [
+          "ling"
+        ],
+        "url": "https://docs.factory.com/changelog/release-notes.md"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "2615bf27f0c20201e85da59ca4da8d92cdc9ccea25c064d9c5938220289986ac",
+      "sourceId": "cursor-releases",
+      "channel": "Cursor",
+      "kind": "announcement",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://cursor.com/changelog",
+      "before": null,
+      "after": {
+        "key": "text:7dbf0e4ae267ebf09bf8e7b8f4124302f3020c40dd12a49ef4982a476adad04f",
+        "hash": "7dbf0e4ae267ebf09bf8e7b8f4124302f3020c40dd12a49ef4982a476adad04f",
+        "type": "announcement",
+        "signals": [],
+        "models": [
+          "Grok Bot to use your app."
+        ],
+        "url": "https://cursor.com/changelog"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "de9832565aaf8f30c2a2300e404ea6e73a8bd122e8e7913dd86e84ddb5375a91",
+      "sourceId": "cursor-releases",
+      "channel": "Cursor",
+      "kind": "announcement",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://cursor.com/docs/cloud-agent/apps",
+      "before": null,
+      "after": {
+        "key": "text:b705b339f429fa20c429a6ea2430ddd5fd15665afabfd5cf9f8ce410631a6d3c",
+        "hash": "b705b339f429fa20c429a6ea2430ddd5fd15665afabfd5cf9f8ce410631a6d3c",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [],
+        "url": "https://cursor.com/docs/cloud-agent/apps"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "a723d4f885603be63fa463e0c6e8ededd94a852a7270e58300b390f44bf60ace",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "terms-changed",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": {
+        "key": "row:0:f588296512dc:定价:0",
+        "type": "table-row",
+        "label": "定价",
+        "heading": "套餐档位与定价",
+        "columns": [
+          "",
+          "Lite 套餐",
+          "Essential 套餐",
+          "Standard 套餐",
+          "Pro 套餐"
+        ],
+        "cells": [
+          "定价",
+          "原价 60 元/月 限时 39 元/月",
+          "原价 120 元/月 限时 79 元/月",
+          "原价 180 元/月 限时 139 元/月",
+          "原价 600 元/月 限时 499 元/月"
+        ],
+        "hash": "90f613a606356bc6775e1a263e39ec21a0ef0311a1875794c6d9bc1775868552",
+        "signals": [],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "after": {
+        "key": "row:0:f588296512dc:定价:0",
+        "type": "table-row",
+        "label": "定价",
+        "heading": "套餐档位与定价",
+        "columns": [
+          "",
+          "Lite 套餐",
+          "Essential 套餐",
+          "Standard 套餐",
+          "Pro 套餐"
+        ],
+        "cells": [
+          "定价",
+          "39 元/月 新用户限时价 19.5 元/月",
+          "79 元/月 新用户限时价 39.5 元/月",
+          "139 元/月",
+          "499 元/月"
+        ],
+        "hash": "ce7477acb987a6890fbf9d1120331d5f452d56e542e507d0247599db32801382",
+        "signals": [],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "061926781e056c295d986f430a4ea06918e84e861cad9a8ff811b595ade702d5",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "announcement",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": null,
+      "after": {
+        "key": "text:219b81111295802f70f833711236c4ebe2fa4611046b627ca0b50ee266f9fae7",
+        "hash": "219b81111295802f70f833711236c4ebe2fa4611046b627ca0b50ee266f9fae7",
+        "type": "announcement",
+        "signals": [],
+        "models": [],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "e246ee523e9e9bfa6914a38e381ece67ed0aa42e4626dc9262fcdc1bf55cbe81",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": null,
+      "after": {
+        "key": "row:1:91c8ca9134d3:auto:0",
+        "type": "table-row",
+        "label": "auto",
+        "heading": "千问",
+        "columns": [
+          "模型 ID（Model ID）",
+          "模型能力"
+        ],
+        "cells": [
+          "auto",
+          "推理模型、文本生成 平台提供的智能模型，按请求内容自动匹配底层模型，兼顾效果与成本。"
+        ],
+        "hash": "ecbc021c705e09e20c0b6c77a50e5e425b60daea124b703a7ef533579684803a",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "a1999e226b39473b189cb486f8efaa97a377bf5c9b093621ff8a38b84f8bbcba",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": null,
+      "after": {
+        "key": "row:1:91c8ca9134d3:qwen3.8-max:0",
+        "type": "table-row",
+        "label": "qwen3.8-max",
+        "heading": "千问",
+        "columns": [
+          "模型 ID（Model ID）",
+          "模型能力"
+        ],
+        "cells": [
+          "qwen3.8-max",
+          "推理模型、视觉理解、文本生成"
+        ],
+        "hash": "7c8a49fa3c720e77ebd7ed54ca25bbfd5295c4b60a3edbdf2721a879e815f01d",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "7c79718a5507a8abbbceea6aea02cdc5d6c6796e7866bb7bede8585db7e545ed",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": null,
+      "after": {
+        "key": "row:1:91c8ca9134d3:qwen3.8-flash:0",
+        "type": "table-row",
+        "label": "qwen3.8-flash",
+        "heading": "千问",
+        "columns": [
+          "模型 ID（Model ID）",
+          "模型能力"
+        ],
+        "cells": [
+          "qwen3.8-flash",
+          "推理模型、视觉理解、文本生成"
+        ],
+        "hash": "619269620328e6186e37c4a8953ceadbfbef5f2103ac838e7883d21ae91e9eac",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "081ced94b4483774bc277999776540b07814dd104aa75f1e427606818a3eeb58",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": null,
+      "after": {
+        "key": "row:1:91c8ca9134d3:qwen3.7-max:0",
+        "type": "table-row",
+        "label": "qwen3.7-max",
+        "heading": "千问",
+        "columns": [
+          "模型 ID（Model ID）",
+          "模型能力"
+        ],
+        "cells": [
+          "qwen3.7-max",
+          "推理模型、文本生成"
+        ],
+        "hash": "59cc68e47ccbf4cbc8122add20d1c67aaedb355e8e0672d060fe8278747bdf95",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "669daf1e0b70df91709254a9f36f397ddeb6a16d6498c02568d7a8b748625fd6",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": null,
+      "after": {
+        "key": "row:1:91c8ca9134d3:qwen3.7-plus:0",
+        "type": "table-row",
+        "label": "qwen3.7-plus",
+        "heading": "千问",
+        "columns": [
+          "模型 ID（Model ID）",
+          "模型能力"
+        ],
+        "cells": [
+          "qwen3.7-plus",
+          "推理模型、视觉理解、文本生成"
+        ],
+        "hash": "ab46333687985c1a944d63ec7738e8dfd2208bbbb22d60e7d4f4eda857606373",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "0de182a55a6e05a778c6cc27dc229a36bb88b3dc2b9e7e1dd674cf8651058908",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": null,
+      "after": {
+        "key": "row:1:91c8ca9134d3:qwen3.6-flash:0",
+        "type": "table-row",
+        "label": "qwen3.6-flash",
+        "heading": "千问",
+        "columns": [
+          "模型 ID（Model ID）",
+          "模型能力"
+        ],
+        "cells": [
+          "qwen3.6-flash",
+          "推理模型、视觉理解、文本生成"
+        ],
+        "hash": "8e583e7df3a7ba4457ff140227458015bc0023effbc53a0febab96d383289228",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "98bd8aca993a96cd89795a9e46beb0904a5487dde27ba500b074c0d28f6e0d82",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": null,
+      "after": {
+        "key": "row:1:91c8ca9134d3:qwen-image-3.0-pro:0",
+        "type": "table-row",
+        "label": "qwen-image-3.0-pro",
+        "heading": "千问",
+        "columns": [
+          "模型 ID（Model ID）",
+          "模型能力"
+        ],
+        "cells": [
+          "qwen-image-3.0-pro",
+          "图片生成"
+        ],
+        "hash": "c29e6aa47e9b44c88941508edb5a9a0d0a372a752dd12b8b4a376ad91656d064",
+        "signals": [],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "a832096de1bfc9f76b7350d0d4433a0a3b476e91cbdb5af029b5ed6ccc794d82",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": null,
+      "after": {
+        "key": "row:1:91c8ca9134d3:qwen-audio-3.0-tts-plus:0",
+        "type": "table-row",
+        "label": "qwen-audio-3.0-tts-plus",
+        "heading": "千问",
+        "columns": [
+          "模型 ID（Model ID）",
+          "模型能力"
+        ],
+        "cells": [
+          "qwen-audio-3.0-tts-plus",
+          "语音合成"
+        ],
+        "hash": "bb00bed87ea777161444eecee69108c754b1e73dbc60a07ba2ac17ac70c60194",
+        "signals": [],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "6bcdc59c4478f7cb4f21f9781a527bee1beb4d0d5ffffff2556e8f8ddfa4ed9a",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": null,
+      "after": {
+        "key": "row:1:91c8ca9134d3:qwen-audio-3.0-realtime-plus:0",
+        "type": "table-row",
+        "label": "qwen-audio-3.0-realtime-plus",
+        "heading": "千问",
+        "columns": [
+          "模型 ID（Model ID）",
+          "模型能力"
+        ],
+        "cells": [
+          "qwen-audio-3.0-realtime-plus",
+          "实时语音对话"
+        ],
+        "hash": "938e8ce11dc7545e90d6de09cdd6f9748ca9d801bf93f10b373b91b06a02f903",
+        "signals": [],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "2b87e8dccd6cc9b87708c12eabce3f13a04be01a47a1d1f3da60017cb4de9504",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": null,
+      "after": {
+        "key": "row:1:91c8ca9134d3:qwen-audio-3.0-asr-flash:0",
+        "type": "table-row",
+        "label": "qwen-audio-3.0-asr-flash",
+        "heading": "千问",
+        "columns": [
+          "模型 ID（Model ID）",
+          "模型能力"
+        ],
+        "cells": [
+          "qwen-audio-3.0-asr-flash",
+          "语音识别"
+        ],
+        "hash": "b509ec212a9c75e3b18d40f9487aa5c909627a43a3c3e326d6122690cf06aaac",
+        "signals": [],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "cc91e2cb97c1aee345f8b763b59d154f2e518f71e537654294546daf753ad72e",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": null,
+      "after": {
+        "key": "row:2:91c8ca9134d3:wan2.7-image:0",
+        "type": "table-row",
+        "label": "wan2.7-image",
+        "heading": "万相",
+        "columns": [
+          "模型 ID（Model ID）",
+          "模型能力"
+        ],
+        "cells": [
+          "wan2.7-image",
+          "图片生成"
+        ],
+        "hash": "aad91ff7f5428ffdc5a430338ff8e2c29c2587e239ce497165104764138e6843",
+        "signals": [],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "dce961e9662e56c04332d6d71cd4fc058e1d373e7eea6fd99ba449197aa233d4",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": null,
+      "after": {
+        "key": "row:2:91c8ca9134d3:wan2.7-image-pro:0",
+        "type": "table-row",
+        "label": "wan2.7-image-pro",
+        "heading": "万相",
+        "columns": [
+          "模型 ID（Model ID）",
+          "模型能力"
+        ],
+        "cells": [
+          "wan2.7-image-pro",
+          "图片生成"
+        ],
+        "hash": "7893fbbc01904d6dfb7288b2eed83dd81e5b6aea786c63aabe9a5e5755a556d1",
+        "signals": [],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "ad6d81a5f57b651caa69cd48329e0e8704b44af77b9d4f9e15f9a79fe208609b",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": null,
+      "after": {
+        "key": "row:2:91c8ca9134d3:wan3.0-video:0",
+        "type": "table-row",
+        "label": "wan3.0-video",
+        "heading": "万相",
+        "columns": [
+          "模型 ID（Model ID）",
+          "模型能力"
+        ],
+        "cells": [
+          "wan3.0-video",
+          "视频生成"
+        ],
+        "hash": "70a347b71508568b8222a2b432adf5c69b32dc0aedd74387460496af70e8f4d0",
+        "signals": [],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "9d624a801d6344a4e1b504b7dc5ca33bb245273f1bd25ec226a0043add9cb73a",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "announcement",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": null,
+      "after": {
+        "key": "text:0648d2111ec0ca3d37d68ea020ce87e5c89caf06d3836a4388cd10bd1ebfd083",
+        "hash": "0648d2111ec0ca3d37d68ea020ce87e5c89caf06d3836a4388cd10bd1ebfd083",
+        "type": "announcement",
+        "signals": [],
+        "models": [
+          "DeepSeek"
+        ],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "0c85fe09c62cf2b8140cd108c9f5264f12b40eca97962e3d4c86e9df07cfc812",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": null,
+      "after": {
+        "key": "row:3:91c8ca9134d3:deepseek-v4.1-flash:0",
+        "type": "table-row",
+        "label": "deepseek-v4.1-flash",
+        "heading": "DeepSeek",
+        "columns": [
+          "模型 ID（Model ID）",
+          "模型能力"
+        ],
+        "cells": [
+          "deepseek-v4.1-flash",
+          "推理模型、视觉理解、文本生成"
+        ],
+        "hash": "1baf0ad0b0062a19ce0a00c6d5eecd48f60939c8fd74024d0cfa4e301cf8902c",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "47f3f483fa043fe3d6d80df67cb2227d3e867ed9f0914ce645882a7e3ab34a07",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": null,
+      "after": {
+        "key": "row:3:91c8ca9134d3:deepseek-v4.1-flash-1017:0",
+        "type": "table-row",
+        "label": "deepseek-v4.1-flash-1017",
+        "heading": "DeepSeek",
+        "columns": [
+          "模型 ID（Model ID）",
+          "模型能力"
+        ],
+        "cells": [
+          "deepseek-v4.1-flash-1017",
+          "推理模型、视觉理解、文本生成"
+        ],
+        "hash": "062a91e8f81becf13795860d1bf12b70340f4093e1c0f365b33539c30dd45f9a",
+        "signals": [
+          "version",
+          "availability"
+        ],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "5a8a23033fc399cace7cea7a20a2e5e82534ac87883a89db269b35ae7a9f91e5",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": null,
+      "after": {
+        "key": "row:3:91c8ca9134d3:deepseek-v4-pro:0",
+        "type": "table-row",
+        "label": "deepseek-v4-pro",
+        "heading": "DeepSeek",
+        "columns": [
+          "模型 ID（Model ID）",
+          "模型能力"
+        ],
+        "cells": [
+          "deepseek-v4-pro",
+          "推理模型、文本生成"
+        ],
+        "hash": "248b2990de0f7caca0c3ec58f01c13f600e892f22c81082b63e6217741f5f8fc",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "8b544efe17c02a9729a9c4a42c219b99cc1c1be000299204e85cbf33a1698596",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": null,
+      "after": {
+        "key": "row:3:91c8ca9134d3:deepseek-v4-pro-0813:0",
+        "type": "table-row",
+        "label": "deepseek-v4-pro-0813",
+        "heading": "DeepSeek",
+        "columns": [
+          "模型 ID（Model ID）",
+          "模型能力"
+        ],
+        "cells": [
+          "deepseek-v4-pro-0813",
+          "推理模型、文本生成"
+        ],
+        "hash": "e1662cc44d5f6f9b3fe5f98280ed8ab30340e816a40b382094522988b408bea1",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "81f5eb68cb99b8bb9d0c327ee6e13923faa9d9cb5524cb9543edbdfb2920f45d",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": null,
+      "after": {
+        "key": "row:3:91c8ca9134d3:deepseek-v4-flash-0731:0",
+        "type": "table-row",
+        "label": "deepseek-v4-flash-0731",
+        "heading": "DeepSeek",
+        "columns": [
+          "模型 ID（Model ID）",
+          "模型能力"
+        ],
+        "cells": [
+          "deepseek-v4-flash-0731",
+          "推理模型、文本生成"
+        ],
+        "hash": "99d521c7a2eda0326ca7d08ff2c7a4a6053fc8d70d69370960def4f5242485dc",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "a704482ec36678e767329d449ff69efb0812a01c19898aabd0a7bb3755029084",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": null,
+      "after": {
+        "key": "row:4:91c8ca9134d3:glm-5.3:0",
+        "type": "table-row",
+        "label": "glm-5.3",
+        "heading": "智谱 AI",
+        "columns": [
+          "模型 ID（Model ID）",
+          "模型能力"
+        ],
+        "cells": [
+          "glm-5.3",
+          "推理模型、文本生成"
+        ],
+        "hash": "36fb25320193b06c07702297fc8c751f7a5e21440d8b44c17a2968d986c24d19",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "052b5ffee4b32c7035d2b4c4f9a9d0f3e16b91142b01779ead2532c52bf8b52e",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": null,
+      "after": {
+        "key": "row:4:91c8ca9134d3:glm-5.2:0",
+        "type": "table-row",
+        "label": "glm-5.2",
+        "heading": "智谱 AI",
+        "columns": [
+          "模型 ID（Model ID）",
+          "模型能力"
+        ],
+        "cells": [
+          "glm-5.2",
+          "推理模型、文本生成"
+        ],
+        "hash": "87b00b134c969262b8dfd2b5478f79cc624c7dc6c6373ed65dab54b4e03c0097",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "08bd1849283c3b3da36730087767c7840ec58aed8e42a408481fd96fe46709ea",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": null,
+      "after": {
+        "key": "row:5:91c8ca9134d3:happyhorse-1.1-i2v:0",
+        "type": "table-row",
+        "label": "happyhorse-1.1-i2v",
+        "heading": "HappyHorse",
+        "columns": [
+          "模型 ID（Model ID）",
+          "模型能力"
+        ],
+        "cells": [
+          "happyhorse-1.1-i2v",
+          "视频生成"
+        ],
+        "hash": "51ff3d6e8b3118cc099fbf681970f10923f9c8368f1df9a20120267b04335b81",
+        "signals": [],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "927115c8ad5c37f54709402424e4f39d2b4bcd073fc09e4d64d3b5a532dc1455",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": null,
+      "after": {
+        "key": "row:5:91c8ca9134d3:happyhorse-1.1-t2v:0",
+        "type": "table-row",
+        "label": "happyhorse-1.1-t2v",
+        "heading": "HappyHorse",
+        "columns": [
+          "模型 ID（Model ID）",
+          "模型能力"
+        ],
+        "cells": [
+          "happyhorse-1.1-t2v",
+          "视频生成"
+        ],
+        "hash": "0655142600c4dfc5f5c240f4e8d3b606230936bd8190e001ea12dfaf0605a946",
+        "signals": [],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "41be94706127164a79da7ef809ad1acd8ab2afb2bbcd08dfcacff70d215cb231",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": null,
+      "after": {
+        "key": "row:5:91c8ca9134d3:happyhorse-1.1-r2v:0",
+        "type": "table-row",
+        "label": "happyhorse-1.1-r2v",
+        "heading": "HappyHorse",
+        "columns": [
+          "模型 ID（Model ID）",
+          "模型能力"
+        ],
+        "cells": [
+          "happyhorse-1.1-r2v",
+          "视频生成"
+        ],
+        "hash": "28c14ec2c7b29b36a17f4f1034e8e3374156c40d4ee91d97f673bfb2316498b7",
+        "signals": [],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "6cdb4cb314a4b6a5e27655cf4b61ce2ea066589a9573ae1dd079ff29c265a3ae",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "announcement",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": null,
+      "after": {
+        "key": "text:42e716c27f4f67cd0aaca45f51ea0416f73014651d47d822342b80665d467d3b",
+        "hash": "42e716c27f4f67cd0aaca45f51ea0416f73014651d47d822342b80665d467d3b",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "c4d7c235d9987331f78729269dc1c3acb9ed217087ae36c55ff1ddeebd5dd8ac",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": null,
+      "after": {
+        "key": "row:6:91c8ca9134d3:decision-model-preview:0",
+        "type": "table-row",
+        "label": "decision-model-preview",
+        "heading": "领域模型",
+        "columns": [
+          "模型 ID（Model ID）",
+          "模型能力"
+        ],
+        "cells": [
+          "decision-model-preview",
+          "文本生成"
+        ],
+        "hash": "7224238715f20a8bd13693533a85ba8fabae40ab9ad92b15ad96b78dd7e30a9b",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "46a2595a9af24ca971d114c88cf006cb2b88d3de37d4c56511aebe3801de0d5c",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": null,
+      "after": {
+        "key": "row:7:7658813af3d5:联网搜索:0",
+        "type": "table-row",
+        "label": "联网搜索",
+        "heading": "支持的模型内置工具",
+        "columns": [
+          "工具能力",
+          "工具名称"
+        ],
+        "cells": [
+          "联网搜索",
+          "web_search"
+        ],
+        "hash": "300580c7ef34f022e1cfb63a087c6a78e803486825200796a2df4c859114bff0",
+        "signals": [],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "cfe286c615241d025933cdecfddfcd0c5dc6522fe65e20e79c0dc9fbfe5f8c2e",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": null,
+      "after": {
+        "key": "row:7:7658813af3d5:文搜图:0",
+        "type": "table-row",
+        "label": "文搜图",
+        "heading": "支持的模型内置工具",
+        "columns": [
+          "工具能力",
+          "工具名称"
+        ],
+        "cells": [
+          "文搜图",
+          "web_search_image"
+        ],
+        "hash": "6d71d54b2b01e279f56e5ba6999bf3b9e0ca3f8bdf2fb07fea23ad556c6fac8a",
+        "signals": [],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "00f8eb62ecf4e8946ce50874de68931a5f9117dab55c17dfdfef440f7b40624c",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": null,
+      "after": {
+        "key": "row:7:7658813af3d5:图搜图:0",
+        "type": "table-row",
+        "label": "图搜图",
+        "heading": "支持的模型内置工具",
+        "columns": [
+          "工具能力",
+          "工具名称"
+        ],
+        "cells": [
+          "图搜图",
+          "image_search"
+        ],
+        "hash": "c3219b9baddb327f3090f9732868915e5bddf5bd8fbc80ec9d880cb6d89c1be1",
+        "signals": [],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "35e56b6ba8a51fa6656529c2df2d03bb41b9717df1e6ffe744958c7b1d85c091",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": null,
+      "after": {
+        "key": "row:7:7658813af3d5:网页抓取:0",
+        "type": "table-row",
+        "label": "网页抓取",
+        "heading": "支持的模型内置工具",
+        "columns": [
+          "工具能力",
+          "工具名称"
+        ],
+        "cells": [
+          "网页抓取",
+          "web_extractor"
+        ],
+        "hash": "1dd459948c4a8574e677346b42176ae1f37ad928693661456e776a7bcc352bfb",
+        "signals": [],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "c280aeb6015f28e404c11c73902e4630d5a96387104c9aaa72d833f877ac8e85",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": null,
+      "after": {
+        "key": "row:7:7658813af3d5:代码解释器:0",
+        "type": "table-row",
+        "label": "代码解释器",
+        "heading": "支持的模型内置工具",
+        "columns": [
+          "工具能力",
+          "工具名称"
+        ],
+        "cells": [
+          "代码解释器",
+          "code_interpreter"
+        ],
+        "hash": "ca6a308a8706a57f42d181c72c37b18d1b50f78fe13a7a3089e269345eaff45f",
+        "signals": [],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "b51c4386d7bde36cf080d10aa8fb9cffd795506c76ade947ae387d9621f162bc",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": {
+        "key": "row:1:da6e15b7c3a2:千问:0",
+        "type": "table-row",
+        "label": "千问",
+        "heading": "支持的模型",
+        "columns": [
+          "品牌",
+          "模型 ID（Model ID）",
+          "模型能力"
+        ],
+        "cells": [
+          "千问",
+          "auto",
+          "推理模型、文本生成 平台提供的智能模型，按请求内容自动匹配底层模型，兼顾效果与成本。"
+        ],
+        "hash": "2f952fed7fc5607a0d06d2c60ce7f22bac2f3355259d28b026afec43322dcf1b",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "a03015b6e4e0684315ba334b67235c05807e5536d6da8b1101513fb39336c6b4",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": {
+        "key": "row:1:da6e15b7c3a2:qwen3.8-max:0",
+        "type": "table-row",
+        "label": "qwen3.8-max",
+        "heading": "支持的模型",
+        "columns": [
+          "品牌",
+          "模型 ID（Model ID）",
+          "模型能力"
+        ],
+        "cells": [
+          "qwen3.8-max",
+          "推理模型、视觉理解、文本生成"
+        ],
+        "hash": "7c8a49fa3c720e77ebd7ed54ca25bbfd5295c4b60a3edbdf2721a879e815f01d",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "6909b0daa39f8d9d11e38d37365faf42eec8e2f412eb127d8dec96511e744f9d",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": {
+        "key": "row:1:da6e15b7c3a2:qwen3.8-flash:0",
+        "type": "table-row",
+        "label": "qwen3.8-flash",
+        "heading": "支持的模型",
+        "columns": [
+          "品牌",
+          "模型 ID（Model ID）",
+          "模型能力"
+        ],
+        "cells": [
+          "qwen3.8-flash",
+          "推理模型、视觉理解、文本生成"
+        ],
+        "hash": "619269620328e6186e37c4a8953ceadbfbef5f2103ac838e7883d21ae91e9eac",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "676ecc37a6f2daa0278b88d5dda8c2b4318fe8e2b1e0cd13d71a31027037d0ef",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": {
+        "key": "row:1:da6e15b7c3a2:qwen3.7-max:0",
+        "type": "table-row",
+        "label": "qwen3.7-max",
+        "heading": "支持的模型",
+        "columns": [
+          "品牌",
+          "模型 ID（Model ID）",
+          "模型能力"
+        ],
+        "cells": [
+          "qwen3.7-max",
+          "推理模型、文本生成"
+        ],
+        "hash": "59cc68e47ccbf4cbc8122add20d1c67aaedb355e8e0672d060fe8278747bdf95",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "1096bd0af3b2c882e8a8a36065bb2d4bd17be97d557274721b501c5a24261386",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": {
+        "key": "row:1:da6e15b7c3a2:qwen3.7-plus:0",
+        "type": "table-row",
+        "label": "qwen3.7-plus",
+        "heading": "支持的模型",
+        "columns": [
+          "品牌",
+          "模型 ID（Model ID）",
+          "模型能力"
+        ],
+        "cells": [
+          "qwen3.7-plus",
+          "推理模型、视觉理解、文本生成"
+        ],
+        "hash": "ab46333687985c1a944d63ec7738e8dfd2208bbbb22d60e7d4f4eda857606373",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "5c0eb86fe35b05e43dd62b62460cea70ce5eea825d42b25b162fc288fe0de435",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": {
+        "key": "row:1:da6e15b7c3a2:qwen3.6-flash:0",
+        "type": "table-row",
+        "label": "qwen3.6-flash",
+        "heading": "支持的模型",
+        "columns": [
+          "品牌",
+          "模型 ID（Model ID）",
+          "模型能力"
+        ],
+        "cells": [
+          "qwen3.6-flash",
+          "推理模型、视觉理解、文本生成"
+        ],
+        "hash": "8e583e7df3a7ba4457ff140227458015bc0023effbc53a0febab96d383289228",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "56fd478f4f5ff1ca3fb86aa1f6de3cad2d4543cb2ea935a04527f5a443202071",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": {
+        "key": "row:1:da6e15b7c3a2:qwen-image-3.0-pro:0",
+        "type": "table-row",
+        "label": "qwen-image-3.0-pro",
+        "heading": "支持的模型",
+        "columns": [
+          "品牌",
+          "模型 ID（Model ID）",
+          "模型能力"
+        ],
+        "cells": [
+          "qwen-image-3.0-pro",
+          "图片生成"
+        ],
+        "hash": "c29e6aa47e9b44c88941508edb5a9a0d0a372a752dd12b8b4a376ad91656d064",
+        "signals": [],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "a911afd0749c44c11b0a5b12395b7a471f97b9316b4ba194fc70ee209f8c3bb5",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": {
+        "key": "row:1:da6e15b7c3a2:qwen-audio-3.0-tts-plus:0",
+        "type": "table-row",
+        "label": "qwen-audio-3.0-tts-plus",
+        "heading": "支持的模型",
+        "columns": [
+          "品牌",
+          "模型 ID（Model ID）",
+          "模型能力"
+        ],
+        "cells": [
+          "qwen-audio-3.0-tts-plus",
+          "语音合成"
+        ],
+        "hash": "bb00bed87ea777161444eecee69108c754b1e73dbc60a07ba2ac17ac70c60194",
+        "signals": [],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "fa4887304de8847171b9dc388f422a1c0ac32f440692c363bf48ed9e36fe9372",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": {
+        "key": "row:1:da6e15b7c3a2:qwen-audio-3.0-realtime-plus:0",
+        "type": "table-row",
+        "label": "qwen-audio-3.0-realtime-plus",
+        "heading": "支持的模型",
+        "columns": [
+          "品牌",
+          "模型 ID（Model ID）",
+          "模型能力"
+        ],
+        "cells": [
+          "qwen-audio-3.0-realtime-plus",
+          "实时语音对话"
+        ],
+        "hash": "938e8ce11dc7545e90d6de09cdd6f9748ca9d801bf93f10b373b91b06a02f903",
+        "signals": [],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "a32d7d051f97f3f902f764f7a657ec5d4d1101b0b9d7fc0a68da5ef9dcf08c28",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": {
+        "key": "row:1:da6e15b7c3a2:qwen-audio-3.0-asr-flash:0",
+        "type": "table-row",
+        "label": "qwen-audio-3.0-asr-flash",
+        "heading": "支持的模型",
+        "columns": [
+          "品牌",
+          "模型 ID（Model ID）",
+          "模型能力"
+        ],
+        "cells": [
+          "qwen-audio-3.0-asr-flash",
+          "语音识别"
+        ],
+        "hash": "b509ec212a9c75e3b18d40f9487aa5c909627a43a3c3e326d6122690cf06aaac",
+        "signals": [],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "0c7b6870181e3322128ea994d27febb4f64eaf7b6621cb3831015d094b19db73",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": {
+        "key": "row:1:da6e15b7c3a2:万相:0",
+        "type": "table-row",
+        "label": "万相",
+        "heading": "支持的模型",
+        "columns": [
+          "品牌",
+          "模型 ID（Model ID）",
+          "模型能力"
+        ],
+        "cells": [
+          "万相",
+          "wan2.7-image",
+          "图片生成"
+        ],
+        "hash": "5171e2ac56f721465a90dbb47d094c466b9012fd6bfd4ace54c202e7f01877a9",
+        "signals": [],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "25fdc1e5594845f031ac90e51ced192ff9d1fd7f2d2a7d40dcb09f96c1da0162",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": {
+        "key": "row:1:da6e15b7c3a2:wan2.7-image-pro:0",
+        "type": "table-row",
+        "label": "wan2.7-image-pro",
+        "heading": "支持的模型",
+        "columns": [
+          "品牌",
+          "模型 ID（Model ID）",
+          "模型能力"
+        ],
+        "cells": [
+          "wan2.7-image-pro",
+          "图片生成"
+        ],
+        "hash": "7893fbbc01904d6dfb7288b2eed83dd81e5b6aea786c63aabe9a5e5755a556d1",
+        "signals": [],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "a01e649ddd152555c12b92b005740b06d6354e77b7ee61a4adff448270848480",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": {
+        "key": "row:1:da6e15b7c3a2:wan3.0-video:0",
+        "type": "table-row",
+        "label": "wan3.0-video",
+        "heading": "支持的模型",
+        "columns": [
+          "品牌",
+          "模型 ID（Model ID）",
+          "模型能力"
+        ],
+        "cells": [
+          "wan3.0-video",
+          "视频生成"
+        ],
+        "hash": "70a347b71508568b8222a2b432adf5c69b32dc0aedd74387460496af70e8f4d0",
+        "signals": [],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "931c8fd72edce52967ef65846650e4e526e4141f1bb98bd4e22305e95ee89ffb",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": {
+        "key": "row:1:da6e15b7c3a2:DeepSeek:0",
+        "type": "table-row",
+        "label": "DeepSeek",
+        "heading": "支持的模型",
+        "columns": [
+          "品牌",
+          "模型 ID（Model ID）",
+          "模型能力"
+        ],
+        "cells": [
+          "DeepSeek",
+          "deepseek-v4.1-flash",
+          "推理模型、视觉理解、文本生成"
+        ],
+        "hash": "ce1ffdf3a474d7deb2d3bbe7485dc06911977ed6839f9f75b7e41b7ebbb6b5bf",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "e13840cd652c039507826242a9b1ff260e8d5a75451393c75e0d5b4e628f9ffe",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": {
+        "key": "row:1:da6e15b7c3a2:deepseek-v4.1-flash-1017:0",
+        "type": "table-row",
+        "label": "deepseek-v4.1-flash-1017",
+        "heading": "支持的模型",
+        "columns": [
+          "品牌",
+          "模型 ID（Model ID）",
+          "模型能力"
+        ],
+        "cells": [
+          "deepseek-v4.1-flash-1017",
+          "推理模型、视觉理解、文本生成"
+        ],
+        "hash": "062a91e8f81becf13795860d1bf12b70340f4093e1c0f365b33539c30dd45f9a",
+        "signals": [
+          "version",
+          "availability"
+        ],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "8ad860b6bb1d8e6d72e6b4ac52102989e66c7614183ee0f32e78a98cfed13f7a",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": {
+        "key": "row:1:da6e15b7c3a2:deepseek-v4-pro:0",
+        "type": "table-row",
+        "label": "deepseek-v4-pro",
+        "heading": "支持的模型",
+        "columns": [
+          "品牌",
+          "模型 ID（Model ID）",
+          "模型能力"
+        ],
+        "cells": [
+          "deepseek-v4-pro",
+          "推理模型、文本生成"
+        ],
+        "hash": "248b2990de0f7caca0c3ec58f01c13f600e892f22c81082b63e6217741f5f8fc",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "dc8f7d4896c5a832317674cff3ffc2863b8db4e60936a2bff9f88f734ad57425",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": {
+        "key": "row:1:da6e15b7c3a2:deepseek-v4-pro-0813:0",
+        "type": "table-row",
+        "label": "deepseek-v4-pro-0813",
+        "heading": "支持的模型",
+        "columns": [
+          "品牌",
+          "模型 ID（Model ID）",
+          "模型能力"
+        ],
+        "cells": [
+          "deepseek-v4-pro-0813",
+          "推理模型、文本生成"
+        ],
+        "hash": "e1662cc44d5f6f9b3fe5f98280ed8ab30340e816a40b382094522988b408bea1",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "8c87dead6fe46e940fa872198d6b331e2cdce3c459b1f45b34b959cc8a45146d",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": {
+        "key": "row:1:da6e15b7c3a2:deepseek-v4-flash-0731:0",
+        "type": "table-row",
+        "label": "deepseek-v4-flash-0731",
+        "heading": "支持的模型",
+        "columns": [
+          "品牌",
+          "模型 ID（Model ID）",
+          "模型能力"
+        ],
+        "cells": [
+          "deepseek-v4-flash-0731",
+          "推理模型、文本生成"
+        ],
+        "hash": "99d521c7a2eda0326ca7d08ff2c7a4a6053fc8d70d69370960def4f5242485dc",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "457632d7d67bf231ff64c3a90e039d3e390fac8998e2f2b0375d087b81c4eee4",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": {
+        "key": "row:1:da6e15b7c3a2:智谱 AI:0",
+        "type": "table-row",
+        "label": "智谱 AI",
+        "heading": "支持的模型",
+        "columns": [
+          "品牌",
+          "模型 ID（Model ID）",
+          "模型能力"
+        ],
+        "cells": [
+          "智谱 AI",
+          "glm-5.3",
+          "推理模型、文本生成"
+        ],
+        "hash": "12a2d9f009f0e67dac61e9061b38e6912fc0a3c32e1a60433bb722c9881eabcc",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "15b0b2a463b42939ba66bff4fa8fbdfa4adcc9d6604f70a66d75970bd0aee8a5",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": {
+        "key": "row:1:da6e15b7c3a2:glm-5.2:0",
+        "type": "table-row",
+        "label": "glm-5.2",
+        "heading": "支持的模型",
+        "columns": [
+          "品牌",
+          "模型 ID（Model ID）",
+          "模型能力"
+        ],
+        "cells": [
+          "glm-5.2",
+          "推理模型、文本生成"
+        ],
+        "hash": "87b00b134c969262b8dfd2b5478f79cc624c7dc6c6373ed65dab54b4e03c0097",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "09ccca504be943339569d4e622958e133fd1ee59db450b93ddb39a9630a1348f",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": {
+        "key": "row:1:da6e15b7c3a2:HappyHorse:0",
+        "type": "table-row",
+        "label": "HappyHorse",
+        "heading": "支持的模型",
+        "columns": [
+          "品牌",
+          "模型 ID（Model ID）",
+          "模型能力"
+        ],
+        "cells": [
+          "HappyHorse",
+          "happyhorse-1.1-i2v",
+          "视频生成"
+        ],
+        "hash": "86bebd50d5224e1354ca96a7cc87ad40fcf9020b902ce334e0d5e535238fdaa3",
+        "signals": [],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "26b96ce9d1aa8c0cdd6f88af67132748c18bc285551ade018700de190fa017b4",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": {
+        "key": "row:1:da6e15b7c3a2:happyhorse-1.1-t2v:0",
+        "type": "table-row",
+        "label": "happyhorse-1.1-t2v",
+        "heading": "支持的模型",
+        "columns": [
+          "品牌",
+          "模型 ID（Model ID）",
+          "模型能力"
+        ],
+        "cells": [
+          "happyhorse-1.1-t2v",
+          "视频生成"
+        ],
+        "hash": "0655142600c4dfc5f5c240f4e8d3b606230936bd8190e001ea12dfaf0605a946",
+        "signals": [],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "d5073ff901e5eb69e5e7bf3c3b5e32b2789db471a5b4bb873db5a4119b6dcf4d",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": {
+        "key": "row:1:da6e15b7c3a2:happyhorse-1.1-r2v:0",
+        "type": "table-row",
+        "label": "happyhorse-1.1-r2v",
+        "heading": "支持的模型",
+        "columns": [
+          "品牌",
+          "模型 ID（Model ID）",
+          "模型能力"
+        ],
+        "cells": [
+          "happyhorse-1.1-r2v",
+          "视频生成"
+        ],
+        "hash": "28c14ec2c7b29b36a17f4f1034e8e3374156c40d4ee91d97f673bfb2316498b7",
+        "signals": [],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "307524a8a6ca23cae4ffac4a41f771927154a5c84882d74cbab2b43143b655eb",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": {
+        "key": "row:1:da6e15b7c3a2:领域模型:0",
+        "type": "table-row",
+        "label": "领域模型",
+        "heading": "支持的模型",
+        "columns": [
+          "品牌",
+          "模型 ID（Model ID）",
+          "模型能力"
+        ],
+        "cells": [
+          "领域模型",
+          "decision-model-preview",
+          "文本生成"
+        ],
+        "hash": "aab7d84efb100b853f6ec8677602bd6c5fd2b6ecfd1f0e429c616a633b946c31",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "23839d465b5cae71583e8231f45c63542c03e826056dd9a9dc5c2d5a381d9fac",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": {
+        "key": "row:2:7658813af3d5:联网搜索:0",
+        "type": "table-row",
+        "label": "联网搜索",
+        "heading": "支持的模型内置工具",
+        "columns": [
+          "工具能力",
+          "工具名称"
+        ],
+        "cells": [
+          "联网搜索",
+          "web_search"
+        ],
+        "hash": "300580c7ef34f022e1cfb63a087c6a78e803486825200796a2df4c859114bff0",
+        "signals": [],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "952706dad911bdb0fb71c7c3bdefb91ba236be999128faee6d6989e58b374703",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": {
+        "key": "row:2:7658813af3d5:文搜图:0",
+        "type": "table-row",
+        "label": "文搜图",
+        "heading": "支持的模型内置工具",
+        "columns": [
+          "工具能力",
+          "工具名称"
+        ],
+        "cells": [
+          "文搜图",
+          "web_search_image"
+        ],
+        "hash": "6d71d54b2b01e279f56e5ba6999bf3b9e0ca3f8bdf2fb07fea23ad556c6fac8a",
+        "signals": [],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "609820df0ed55f803ff4652a6b6eeb87caffdc3e4816bd28c2aa2010432b0ff5",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": {
+        "key": "row:2:7658813af3d5:图搜图:0",
+        "type": "table-row",
+        "label": "图搜图",
+        "heading": "支持的模型内置工具",
+        "columns": [
+          "工具能力",
+          "工具名称"
+        ],
+        "cells": [
+          "图搜图",
+          "image_search"
+        ],
+        "hash": "c3219b9baddb327f3090f9732868915e5bddf5bd8fbc80ec9d880cb6d89c1be1",
+        "signals": [],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "1219d66a97d95b60e997f39b663dbeacb280a5f117ada77a15ab092d42922250",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": {
+        "key": "row:2:7658813af3d5:网页抓取:0",
+        "type": "table-row",
+        "label": "网页抓取",
+        "heading": "支持的模型内置工具",
+        "columns": [
+          "工具能力",
+          "工具名称"
+        ],
+        "cells": [
+          "网页抓取",
+          "web_extractor"
+        ],
+        "hash": "1dd459948c4a8574e677346b42176ae1f37ad928693661456e776a7bcc352bfb",
+        "signals": [],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "f391178db5793f79753f6da0efadbf075653085e43a6401f28c90b0c59fb6f0e",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": {
+        "key": "row:2:7658813af3d5:代码解释器:0",
+        "type": "table-row",
+        "label": "代码解释器",
+        "heading": "支持的模型内置工具",
+        "columns": [
+          "工具能力",
+          "工具名称"
+        ],
+        "cells": [
+          "代码解释器",
+          "code_interpreter"
+        ],
+        "hash": "ca6a308a8706a57f42d181c72c37b18d1b50f78fe13a7a3089e269345eaff45f",
+        "signals": [],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "5d38db5aa9e915654fb878de3686f3e110dfec083513d407159af035656266b9",
+      "sourceId": "command-code-social",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-06T07:00:45.218Z",
+      "url": "https://x.com/CommandCodeAI/status/2118392421352644850",
+      "before": null,
+      "after": {
+        "key": "post:2118392421352644850",
+        "type": "announcement",
+        "hash": "a71a24d6e1f5073e8fd311d6b1533bceacfaff7aec9daa59e681a3c0ae9a92ae",
+        "signals": [
+          "version",
+          "pricing",
+          "availability"
+        ],
+        "models": [
+          "DeepSeek V4.1 Flash 1017 ",
+          "GLM-5.3 Flash ",
+          "Ling 3.1 Flash 1019 ",
+          "Ling 3.1 Flash That"
+        ],
+        "url": "https://x.com/CommandCodeAI/status/2118392421352644850",
+        "relevant": true
+      },
+      "status": "pending"
     }
   ],
-  "checkedAt": "2026-11-05T07:00:55.918Z"
+  "checkedAt": "2026-11-06T07:00:45.218Z"
 }
