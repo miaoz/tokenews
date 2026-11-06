@@ -1,12 +1,19 @@
 {
   "version": 1,
-  "checkedAt": "2026-11-05",
+  "checkedAt": "2026-11-06",
   "source": "https://artificialanalysis.ai/models/releases",
   "note": "Unmapped source entries requiring identity/configuration review; these may already exist under another catalog ID. Not automatically published.",
   "candidates": [
     {
+      "url": "https://artificialanalysis.ai/models/inkling-2-small",
+      "label": "Inkling 2 Small Thinking Machines · Nov 2026 · 1 variant Image Economics (#13) Finance & Accounting (#14) Intelligence 31 Cost / task $1.18 Context 1M",
+      "possibleCatalogMatches": [
+        "inkling"
+      ]
+    },
+    {
       "url": "https://artificialanalysis.ai/models/tencent-hy4",
-      "label": "Tencent Hy4 Tencent · Nov 2026 · 1 variant Image Engineering (#14) Strategy & Ops (#15) Intelligence 35 Cost / task — Context 1M",
+      "label": "Tencent Hy4 Tencent · Nov 2026 · 1 variant Image Engineering (#14) Strategy & Ops (#15) Intelligence 35 Cost / task $1.03 Context 1M",
       "possibleCatalogMatches": []
     }
   ]
