@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "checkedAt": "2026-11-06T07:00:45.218Z",
+  "checkedAt": "2026-11-07T06:14:47.485Z",
   "intervalHours": 24,
-  "newEvents": 92,
+  "newEvents": 39,
   "pending": [
     {
       "id": "4533c6040aa95efeaf575f7486523b4550c1a1975e7ba1df4f0cfa6f888e5935",
@@ -5528,6 +5528,1070 @@
         "relevant": true
       },
       "status": "pending"
+    },
+    {
+      "id": "cc21fd1f5c410829e5d41a5352b59f4b32f6f6a48989e73b7357a646a2c6dff5",
+      "sourceId": "opencode-go",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-07T06:14:47.485Z",
+      "url": "https://opencode.ai/v2/docs/console/go/",
+      "before": null,
+      "after": {
+        "key": "text:dd160246375555463ba841c4fe3bc238ae0654fd8437678ccacaae96e25b27d8",
+        "hash": "dd160246375555463ba841c4fe3bc238ae0654fd8437678ccacaae96e25b27d8",
+        "type": "announcement",
+        "signals": [
+          "pricing",
+          "promotion"
+        ],
+        "models": [
+          "Crouton Alpha Free "
+        ],
+        "url": "https://opencode.ai/v2/docs/console/go/"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "53f8c0daa2caf463cb577d9f53b4bef88c07297f6585a1f884ce4703884b2a6f",
+      "sourceId": "opencode-go",
+      "channel": "OpenCode",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-07T06:14:47.485Z",
+      "url": "https://opencode.ai/v2/docs/console/go/",
+      "before": null,
+      "after": {
+        "key": "row:3:42a62dde35a9:Crouton Alpha Free:0",
+        "type": "table-row",
+        "label": "Crouton Alpha Free",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Input",
+          "Output",
+          "Cached Read",
+          "Cached Write",
+          "Monthly limit"
+        ],
+        "cells": [
+          "Crouton Alpha Free",
+          "Free",
+          "Free",
+          "Free",
+          "-",
+          "Unlimited limited time"
+        ],
+        "hash": "a4e77697bf2bf046a68928c14b1967a04d5b2667ca207dbb9b39009b5f4dcc11",
+        "signals": [
+          "pricing",
+          "promotion"
+        ],
+        "url": "https://opencode.ai/v2/docs/console/go/"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "68481e5bfc9ef81a98c8a3550ca5e3c06aecbde04d983f419ee8b5debe6472c6",
+      "sourceId": "opencode-go",
+      "channel": "OpenCode",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-07T06:14:47.485Z",
+      "url": "https://opencode.ai/v2/docs/console/go/",
+      "before": null,
+      "after": {
+        "key": "row:4:42a62dde35a9:Crouton Alpha Free:0",
+        "type": "table-row",
+        "label": "Crouton Alpha Free",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Input",
+          "Output",
+          "Cached Read",
+          "Cached Write",
+          "Monthly limit"
+        ],
+        "cells": [
+          "Crouton Alpha Free",
+          "Free",
+          "Free",
+          "Free",
+          "-",
+          "Unlimited limited time"
+        ],
+        "hash": "a4e77697bf2bf046a68928c14b1967a04d5b2667ca207dbb9b39009b5f4dcc11",
+        "signals": [
+          "pricing",
+          "promotion"
+        ],
+        "url": "https://opencode.ai/v2/docs/console/go/"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "a059ea34382bae390ee752e614278a653731a2dd363446c7a79957703c507764",
+      "sourceId": "opencode-go",
+      "channel": "OpenCode",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-07T06:14:47.485Z",
+      "url": "https://opencode.ai/v2/docs/console/go/",
+      "before": null,
+      "after": {
+        "key": "row:5:42a62dde35a9:Crouton Alpha Free:0",
+        "type": "table-row",
+        "label": "Crouton Alpha Free",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Input",
+          "Output",
+          "Cached Read",
+          "Cached Write",
+          "Monthly limit"
+        ],
+        "cells": [
+          "Crouton Alpha Free",
+          "Free",
+          "Free",
+          "Free",
+          "-",
+          "Unlimited limited time"
+        ],
+        "hash": "a4e77697bf2bf046a68928c14b1967a04d5b2667ca207dbb9b39009b5f4dcc11",
+        "signals": [
+          "pricing",
+          "promotion"
+        ],
+        "url": "https://opencode.ai/v2/docs/console/go/"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "f8710fbfa619c2a530bcb082f64fa67567a3b9e8ea3b68e79cb55435a19924e7",
+      "sourceId": "opencode-go",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-07T06:14:47.485Z",
+      "url": "https://opencode.ai/v2/docs/console/go/",
+      "before": null,
+      "after": {
+        "key": "text:b664e31767003a23093ce2e1a83b86c3883b86b6788819bf686cb6261aefd1ff",
+        "hash": "b664e31767003a23093ce2e1a83b86c3883b86b6788819bf686cb6261aefd1ff",
+        "type": "announcement",
+        "signals": [
+          "pricing",
+          "promotion",
+          "availability"
+        ],
+        "models": [
+          "Crouton Alpha Free: Free for a limited time. Not available in the Europe"
+        ],
+        "url": "https://opencode.ai/v2/docs/console/go/"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "3a2c2e59528e3182e2b2921543b5c6744b26738e491ff6a21eee70072a64bffb",
+      "sourceId": "opencode-go",
+      "channel": "OpenCode",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-07T06:14:47.485Z",
+      "url": "https://opencode.ai/v2/docs/console/go/",
+      "before": null,
+      "after": {
+        "key": "row:6:9aea4a0c80de:Crouton Alpha Free:0",
+        "type": "table-row",
+        "label": "Crouton Alpha Free",
+        "heading": "Estimated requests",
+        "columns": [
+          "Model",
+          "Requests per 5 hours",
+          "Requests per week",
+          "Requests per month"
+        ],
+        "cells": [
+          "Crouton Alpha Free",
+          "Unlimited",
+          "Unlimited",
+          "Unlimited"
+        ],
+        "hash": "e9f44729cb5e09a9f05208f790e6f75b49e078b45b74f31bfbfe5111b5cb54c4",
+        "signals": [
+          "pricing",
+          "promotion"
+        ],
+        "url": "https://opencode.ai/v2/docs/console/go/"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "7ffbaa8d3bd5deda6d1cf3ece3eb8ccddce5b444c4f304520b49c3b1a7f90b6c",
+      "sourceId": "opencode-go",
+      "channel": "OpenCode",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-07T06:14:47.485Z",
+      "url": "https://opencode.ai/v2/docs/console/go/",
+      "before": null,
+      "after": {
+        "key": "row:7:9aea4a0c80de:Crouton Alpha Free:0",
+        "type": "table-row",
+        "label": "Crouton Alpha Free",
+        "heading": "Estimated requests",
+        "columns": [
+          "Model",
+          "Requests per 5 hours",
+          "Requests per week",
+          "Requests per month"
+        ],
+        "cells": [
+          "Crouton Alpha Free",
+          "Unlimited",
+          "Unlimited",
+          "Unlimited"
+        ],
+        "hash": "e9f44729cb5e09a9f05208f790e6f75b49e078b45b74f31bfbfe5111b5cb54c4",
+        "signals": [
+          "pricing",
+          "promotion"
+        ],
+        "url": "https://opencode.ai/v2/docs/console/go/"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "1c6e087f13848bfffd47ac84cd46a162957fa1c90334c7d12bdcc0bb80367af2",
+      "sourceId": "opencode-go",
+      "channel": "OpenCode",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-07T06:14:47.485Z",
+      "url": "https://opencode.ai/v2/docs/console/go/",
+      "before": null,
+      "after": {
+        "key": "row:8:9aea4a0c80de:Crouton Alpha Free:0",
+        "type": "table-row",
+        "label": "Crouton Alpha Free",
+        "heading": "Estimated requests",
+        "columns": [
+          "Model",
+          "Requests per 5 hours",
+          "Requests per week",
+          "Requests per month"
+        ],
+        "cells": [
+          "Crouton Alpha Free",
+          "Unlimited",
+          "Unlimited",
+          "Unlimited"
+        ],
+        "hash": "e9f44729cb5e09a9f05208f790e6f75b49e078b45b74f31bfbfe5111b5cb54c4",
+        "signals": [
+          "pricing",
+          "promotion"
+        ],
+        "url": "https://opencode.ai/v2/docs/console/go/"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "fe83ce4ef2966b093890bca12ef6c91e6ccc23bbf2a108479dfc186599d65aca",
+      "sourceId": "opencode-go",
+      "channel": "OpenCode",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-07T06:14:47.485Z",
+      "url": "https://opencode.ai/v2/docs/console/go/",
+      "before": null,
+      "after": {
+        "key": "row:9:602c5d867d33:Crouton Alpha Free:0",
+        "type": "table-row",
+        "label": "Crouton Alpha Free",
+        "heading": "Endpoints",
+        "columns": [
+          "Model",
+          "Model ID",
+          "Endpoint",
+          "AI SDK Package"
+        ],
+        "cells": [
+          "Crouton Alpha Free",
+          "crouton-alpha-free",
+          "https://opencode.ai/inference/go/openai/v1/responses",
+          "@ai-sdk/openai"
+        ],
+        "hash": "045ee3049a6dbf1a2bad9f6af23620880640586bc1dca30c5ad27c7b6e03473e",
+        "signals": [
+          "promotion"
+        ],
+        "url": "https://opencode.ai/v2/docs/console/go/"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "3a731f5ca980321eb697dff30281fd555078a18cc14c034bd624cb83711e0b65",
+      "sourceId": "opencode-go",
+      "channel": "OpenCode",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-07T06:14:47.485Z",
+      "url": "https://opencode.ai/v2/docs/console/go/",
+      "before": null,
+      "after": {
+        "key": "row:10:88a3377b9f9a:Crouton Alpha Free:0",
+        "type": "table-row",
+        "label": "Crouton Alpha Free",
+        "heading": "Privacy",
+        "columns": [
+          "Model",
+          "Model training",
+          "Data retention"
+        ],
+        "cells": [
+          "Crouton Alpha Free",
+          "Not used",
+          "30 days"
+        ],
+        "hash": "db5679f4697e1e4f1c1ef9e91d6b2ba1ff412de00ac5847330f7cd4279831de6",
+        "signals": [
+          "promotion"
+        ],
+        "url": "https://opencode.ai/v2/docs/console/go/"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "ca2ba1337ab28177ceee7e43c1f9196478f2c65e1821220a1e66b438ea9e6e04",
+      "sourceId": "command-code-go",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-07T06:14:47.485Z",
+      "url": "https://commandcode.ai/docs/plans/go",
+      "before": null,
+      "after": {
+        "key": "text:bcbc4995fc88f447fcd52d2441f4ad4dd12b971fb605b4144eaeacc0fe30e590",
+        "hash": "bcbc4995fc88f447fcd52d2441f4ad4dd12b971fb605b4144eaeacc0fe30e590",
+        "type": "announcement",
+        "signals": [
+          "promotion"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/docs/plans/go"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "0b759f06bcfc6b46f3adb994cc30d7f2d6d51abc0fb305593736c41938eb45bf",
+      "sourceId": "command-code-go",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-07T06:14:47.485Z",
+      "url": "https://commandcode.ai/docs/plans/go",
+      "before": null,
+      "after": {
+        "key": "text:3dff50652d35eb148d8f9eb1c825ceeda281a6147fe57bb06b2117e0050d1ba1",
+        "hash": "3dff50652d35eb148d8f9eb1c825ceeda281a6147fe57bb06b2117e0050d1ba1",
+        "type": "announcement",
+        "signals": [
+          "pricing",
+          "availability"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/docs/plans/go"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "568ac6d9fbeed85aa8ff8a6dd0d6649275aa998d9cd244c1bd3b7600fdd9fac8",
+      "sourceId": "command-code-goat",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-07T06:14:47.485Z",
+      "url": "https://commandcode.ai/docs/plans/goat",
+      "before": null,
+      "after": {
+        "key": "text:9abf69bfdf017aadd675dc9764aceff05d9c88f4de2ba426f6f556f2a109dabd",
+        "hash": "9abf69bfdf017aadd675dc9764aceff05d9c88f4de2ba426f6f556f2a109dabd",
+        "type": "announcement",
+        "signals": [
+          "promotion"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/docs/plans/goat"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "da9de8748ad62b30a20f98aa7b86c10cfc06745c843c531b11bdfcc70d4a8378",
+      "sourceId": "command-code-goat",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-07T06:14:47.485Z",
+      "url": "https://commandcode.ai/docs/plans/goat",
+      "before": null,
+      "after": {
+        "key": "row:0:7dda73ad401e:DeepSeek V4.1 Flash Ultrafast:0",
+        "type": "table-row",
+        "label": "DeepSeek V4.1 Flash Ultrafast",
+        "heading": "Models included",
+        "columns": [
+          "Model ↕",
+          "Context ↕",
+          "Intelligence ↕",
+          "Input ↕",
+          "Output ↕",
+          "Cache read ↕",
+          "Cache write ↕",
+          "Caps"
+        ],
+        "cells": [
+          "DeepSeek V4.1 Flash Ultrafast",
+          "1M",
+          "not yet scored",
+          "$2.40",
+          "$9.60",
+          "$0.048",
+          "—",
+          "+ 1"
+        ],
+        "hash": "70670484c47f09a9bfaf7db564bca61c5d5ba782c87057fb353d54596675a136",
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://commandcode.ai/docs/plans/goat"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "ca25d8d52f25a1e46d8dd0d517a6f3a3ad0407fa20a5762d2656134527ef87a3",
+      "sourceId": "command-code-goat",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-07T06:14:47.485Z",
+      "url": "https://commandcode.ai/docs/plans/goat",
+      "before": null,
+      "after": {
+        "key": "text:71d546941db48d073de18cd8de4653526ca8018bf909020674ea56d90e9f3a0c",
+        "hash": "71d546941db48d073de18cd8de4653526ca8018bf909020674ea56d90e9f3a0c",
+        "type": "announcement",
+        "signals": [
+          "pricing",
+          "availability"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/docs/plans/goat"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "bfbdfff309af357202e3a59e082bc84bf5ca59295d06f42841bee9c22dfe139a",
+      "sourceId": "command-code-goat",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-07T06:14:47.485Z",
+      "url": "https://commandcode.ai/docs/plans/goat",
+      "before": null,
+      "after": {
+        "key": "row:1:6e2f82d4bba3:DeepSeek V4.1 Flash Ultrafast:0",
+        "type": "table-row",
+        "label": "DeepSeek V4.1 Flash Ultrafast",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Requests / 5 hours",
+          "Requests / week",
+          "Requests / month"
+        ],
+        "cells": [
+          "DeepSeek V4.1 Flash Ultrafast",
+          "641",
+          "1,600",
+          "3,210"
+        ],
+        "hash": "40d19a39ea805a87f1c07173bc69f4f6096c574bf175da5f868dadbcbf2c7233",
+        "signals": [],
+        "url": "https://commandcode.ai/docs/plans/goat"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "4613123e910fe862b6295b2fda6e096141078013181d21246b3755bc0248f472",
+      "sourceId": "command-code-goat",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-07T06:14:47.485Z",
+      "url": "https://commandcode.ai/docs/plans/goat",
+      "before": null,
+      "after": {
+        "key": "row:4:285022454e42:DeepSeek V4.1 Flash Ultrafast:0",
+        "type": "table-row",
+        "label": "DeepSeek V4.1 Flash Ultrafast",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Input",
+          "Output",
+          "Cache Read",
+          "Cache Write",
+          "Monthly credits"
+        ],
+        "cells": [
+          "DeepSeek V4.1 Flash Ultrafast",
+          "$2.40",
+          "$9.60",
+          "$0.048",
+          "-",
+          "$20"
+        ],
+        "hash": "5a60bdf5d94451fc075bcbe42b98087c0b7e64dd8fad493f824bc9a7818e68fe",
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://commandcode.ai/docs/plans/goat"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "68e967b6cc225cb3947ec371eaaf66f1cf9e8be05d37e954cf78ad8cda1beff6",
+      "sourceId": "command-code-pro",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-07T06:14:47.485Z",
+      "url": "https://commandcode.ai/docs/plans/pro",
+      "before": null,
+      "after": {
+        "key": "text:301d52c0295554120d81fa962f37ccc4cba83ae561dd6655b2c22525ced63049",
+        "hash": "301d52c0295554120d81fa962f37ccc4cba83ae561dd6655b2c22525ced63049",
+        "type": "announcement",
+        "signals": [
+          "promotion"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/docs/plans/pro"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "0286c128cebc8acb0ec0226b157e26328310e0f30e86cd04a8f4298c7f180c48",
+      "sourceId": "command-code-pro",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-07T06:14:47.485Z",
+      "url": "https://commandcode.ai/docs/plans/pro",
+      "before": null,
+      "after": {
+        "key": "row:0:7dda73ad401e:DeepSeek V4.1 Flash Ultrafast:0",
+        "type": "table-row",
+        "label": "DeepSeek V4.1 Flash Ultrafast",
+        "heading": "Models included",
+        "columns": [
+          "Model ↕",
+          "Context ↕",
+          "Intelligence ↕",
+          "Input ↕",
+          "Output ↕",
+          "Cache read ↕",
+          "Cache write ↕",
+          "Caps"
+        ],
+        "cells": [
+          "DeepSeek V4.1 Flash Ultrafast",
+          "1M",
+          "not yet scored",
+          "$2.40",
+          "$9.60",
+          "$0.048",
+          "—",
+          "+ 1"
+        ],
+        "hash": "70670484c47f09a9bfaf7db564bca61c5d5ba782c87057fb353d54596675a136",
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://commandcode.ai/docs/plans/pro"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "2d98bdbf524edabb26c0ac5b5c8efc393a05785656427376b721399fc4224faf",
+      "sourceId": "command-code-pro",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-07T06:14:47.485Z",
+      "url": "https://commandcode.ai/docs/plans/pro",
+      "before": null,
+      "after": {
+        "key": "text:89508ec5a12853f3d53fce4031bc79fe8b0f61caa213ca5174007bba0bc473ec",
+        "hash": "89508ec5a12853f3d53fce4031bc79fe8b0f61caa213ca5174007bba0bc473ec",
+        "type": "announcement",
+        "signals": [
+          "pricing",
+          "availability"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/docs/plans/pro"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "14d80d5330341dc7c4d86311544b09f630bd72d10f2ea29edf03bd83986bfb88",
+      "sourceId": "command-code-pro",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-07T06:14:47.485Z",
+      "url": "https://commandcode.ai/docs/plans/pro",
+      "before": null,
+      "after": {
+        "key": "row:1:6e2f82d4bba3:DeepSeek V4.1 Flash Ultrafast:0",
+        "type": "table-row",
+        "label": "DeepSeek V4.1 Flash Ultrafast",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Requests / 5 hours",
+          "Requests / week",
+          "Requests / month"
+        ],
+        "cells": [
+          "DeepSeek V4.1 Flash Ultrafast",
+          "962",
+          "2,400",
+          "4,810"
+        ],
+        "hash": "2aeb0ff30a81e3e45480ac321202da7efebc7928902a2eb53734cabf3e1eb294",
+        "signals": [],
+        "url": "https://commandcode.ai/docs/plans/pro"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "7857ff89a14cdaff4f889e976205c17602265b9aceefb1d522e9fc93badaf2ce",
+      "sourceId": "command-code-pro",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-07T06:14:47.485Z",
+      "url": "https://commandcode.ai/docs/plans/pro",
+      "before": null,
+      "after": {
+        "key": "row:4:285022454e42:DeepSeek V4.1 Flash Ultrafast:0",
+        "type": "table-row",
+        "label": "DeepSeek V4.1 Flash Ultrafast",
+        "heading": "New open models",
+        "columns": [
+          "Model",
+          "Input",
+          "Output",
+          "Cache Read",
+          "Cache Write",
+          "Monthly credits"
+        ],
+        "cells": [
+          "DeepSeek V4.1 Flash Ultrafast",
+          "$2.40",
+          "$9.60",
+          "$0.048",
+          "-",
+          "$30"
+        ],
+        "hash": "9c0fe58f61fad16ee2c5fe22383992e7b563619dd76b7f8b81f4f0293bc22913",
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://commandcode.ai/docs/plans/pro"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "8c808b8c583bc3bbfd1123e90ef1496edf1b540dc8249e2628ef6766999c3817",
+      "sourceId": "command-code-max",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-07T06:14:47.485Z",
+      "url": "https://commandcode.ai/models",
+      "before": null,
+      "after": {
+        "key": "text:5d69850b71539f1f61f2ffa87ec0d41471eed1e399ac5950de3312cb92fb5986",
+        "hash": "5d69850b71539f1f61f2ffa87ec0d41471eed1e399ac5950de3312cb92fb5986",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [
+          "Claude Opus",
+          "Claude Fable"
+        ],
+        "url": "https://commandcode.ai/models"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "3cbf94c6682d3d08546b9cdc576fe317c1017d9ddd0ca08859831c8e307d3258",
+      "sourceId": "command-code-max",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-07T06:14:47.485Z",
+      "url": "https://commandcode.ai/docs/plans/max",
+      "before": null,
+      "after": {
+        "key": "row:2:6e2f82d4bba3:DeepSeek V4.1 Flash Ultrafast:0",
+        "type": "table-row",
+        "label": "DeepSeek V4.1 Flash Ultrafast",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Requests / 5 hours",
+          "Requests / week",
+          "Requests / month"
+        ],
+        "cells": [
+          "DeepSeek V4.1 Flash Ultrafast",
+          "7,210",
+          "14,400",
+          "24,000"
+        ],
+        "hash": "38d42fcf5e2034c313daa51cd1155d9f061f25171324ace8d07ac4770413a28d",
+        "signals": [],
+        "url": "https://commandcode.ai/docs/plans/max"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "882956e0c111b66b2db07667a15648e425d1f7593130afba5ca8b8afd72b3dc8",
+      "sourceId": "command-code-max",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-07T06:14:47.485Z",
+      "url": "https://commandcode.ai/docs/plans/max",
+      "before": null,
+      "after": {
+        "key": "row:3:508faf2ee524:DeepSeek V4.1 Flash Ultrafast:0",
+        "type": "table-row",
+        "label": "DeepSeek V4.1 Flash Ultrafast",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Input",
+          "Output",
+          "Cache Read",
+          "Cache Write",
+          "Max 10× credits",
+          "Max 20× credits"
+        ],
+        "cells": [
+          "DeepSeek V4.1 Flash Ultrafast",
+          "$2.40",
+          "$9.60",
+          "$0.048",
+          "-",
+          "$150",
+          "$300"
+        ],
+        "hash": "3b8aeab5ffcb4c5a1fa6a45ab38c0b319d61aae157ae95f3127a8831740cb32b",
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://commandcode.ai/docs/plans/max"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "82d828505436b7217a17020b7f1bdaf76afe30082c17b36b139cfd12a2a9f062",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-07T06:14:47.485Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": null,
+      "after": {
+        "key": "row:2:23643f1df728:deepseek/deepseek-v4.1-flash-ultrafast Copy model id:0",
+        "type": "table-row",
+        "label": "deepseek/deepseek-v4.1-flash-ultrafast Copy model id",
+        "heading": "DeepSeek",
+        "columns": [
+          "Model ID",
+          "Name",
+          "Capabilities",
+          "Best for"
+        ],
+        "cells": [
+          "deepseek/deepseek-v4.1-flash-ultrafast Copy model id",
+          "DeepSeek V4.1 Flash Ultrafast",
+          "+ 1",
+          "Accelerated V4.1 Flash"
+        ],
+        "hash": "3ead12b096938b368f695cdc8bc0ed889644fc74e70bb758446664fcd24a8fc4",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "959b72fa7434a15fc5dce4b5dfcd2c92b22a53d3fa22f8e6d61127a06ab71578",
+      "sourceId": "command-code-terms",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-07T06:14:47.485Z",
+      "url": "https://commandcode.ai/docs/resources/pricing-limits",
+      "before": null,
+      "after": {
+        "key": "text:833a0634ddf40c9cc19f21335959a7ed75aa4f7059ef3d5b560adda0aabac685",
+        "hash": "833a0634ddf40c9cc19f21335959a7ed75aa4f7059ef3d5b560adda0aabac685",
+        "type": "announcement",
+        "signals": [],
+        "models": [],
+        "url": "https://commandcode.ai/docs/resources/pricing-limits"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "d48d38501e1077407e8567d0932d495da4d4223dc28bfef682b6c968c1e39f90",
+      "sourceId": "command-code-terms",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-07T06:14:47.485Z",
+      "url": "https://commandcode.ai/docs/resources/pricing-limits",
+      "before": null,
+      "after": {
+        "key": "text:cc0e77e639ee84ee123046a2452c4a574f5ffa657373f7a3573c697e90c8832a",
+        "hash": "cc0e77e639ee84ee123046a2452c4a574f5ffa657373f7a3573c697e90c8832a",
+        "type": "announcement",
+        "signals": [
+          "promotion"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/docs/resources/pricing-limits"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "1d2af690a6ed773ef922d177928271f19cb27a2f7d8f15bdb9ea04e2e6933225",
+      "sourceId": "command-code-terms",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-07T06:14:47.485Z",
+      "url": "https://commandcode.ai/docs/resources/pricing-limits",
+      "before": null,
+      "after": {
+        "key": "text:0d13ffbbb569e6112166f4d5b0ffb98f67013e22248137a32f87c9feda80b6ca",
+        "hash": "0d13ffbbb569e6112166f4d5b0ffb98f67013e22248137a32f87c9feda80b6ca",
+        "type": "announcement",
+        "signals": [],
+        "models": [
+          "DeepSeek V4.1 Flash Ultrafast"
+        ],
+        "url": "https://commandcode.ai/docs/resources/pricing-limits"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "e67fa8e98f1804f6717dbaccf09634c49be2dba31a6f6dbde9e809da4bbb28f8",
+      "sourceId": "command-code-terms",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-07T06:14:47.485Z",
+      "url": "https://commandcode.ai/docs/resources/pricing-limits",
+      "before": null,
+      "after": {
+        "key": "text:35bf3d7fae9e0e688ae9db371e90ed0ef89e6208673c453e321eac3b500f7515",
+        "hash": "35bf3d7fae9e0e688ae9db371e90ed0ef89e6208673c453e321eac3b500f7515",
+        "type": "announcement",
+        "signals": [
+          "pricing"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/docs/resources/pricing-limits"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "3c57a97782446feb1e609df57e2228e6e8de5947d62b5f97d10583c5219755a1",
+      "sourceId": "command-code-terms",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-07T06:14:47.485Z",
+      "url": "https://commandcode.ai/docs/resources/pricing-limits",
+      "before": null,
+      "after": {
+        "key": "text:e380deb92750dcea7efc735559846c179f1aa9ab84ab6fb29d11f42c252a7c54",
+        "hash": "e380deb92750dcea7efc735559846c179f1aa9ab84ab6fb29d11f42c252a7c54",
+        "type": "announcement",
+        "signals": [
+          "pricing"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/docs/resources/pricing-limits"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "11ea241dec63d3c74bec76e49f9285c214755225b1a7e304d0a0cb56967cee05",
+      "sourceId": "command-code-terms",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-07T06:14:47.485Z",
+      "url": "https://commandcode.ai/docs/resources/pricing-limits",
+      "before": null,
+      "after": {
+        "key": "text:d6c09250a735e5e8d25ac974894fd5300082c292e6add201ee8cec888a48159e",
+        "hash": "d6c09250a735e5e8d25ac974894fd5300082c292e6add201ee8cec888a48159e",
+        "type": "announcement",
+        "signals": [
+          "pricing",
+          "availability"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/docs/resources/pricing-limits"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "8b81d6a22d115f342f360b30fdbabee7a445692e42f5ff8335a54fc628d06a4d",
+      "sourceId": "factory-releases",
+      "channel": "Factory",
+      "kind": "announcement",
+      "detectedAt": "2026-11-07T06:14:47.485Z",
+      "url": "https://docs.factory.com/changelog/release-notes.md",
+      "before": null,
+      "after": {
+        "key": "text:3ea54483c89c5526fd28e46bf4484635092c7d699ae9788b56bff223952d676c",
+        "hash": "3ea54483c89c5526fd28e46bf4484635092c7d699ae9788b56bff223952d676c",
+        "type": "announcement",
+        "signals": [],
+        "models": [
+          "swers",
+          "swer when you steer a message into it"
+        ],
+        "url": "https://docs.factory.com/changelog/release-notes.md"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "53468756aae3186133d5118ee19e81e3a480594ab24f6eba57eaaf16c97a0183",
+      "sourceId": "cursor-releases",
+      "channel": "Cursor",
+      "kind": "announcement",
+      "detectedAt": "2026-11-07T06:14:47.485Z",
+      "url": "https://cursor.com/changelog",
+      "before": null,
+      "after": {
+        "key": "text:ceae2e4d00b67f9353c8d8d9364784dc9a7196dd9dacfad1e0bc016bc8e88c33",
+        "hash": "ceae2e4d00b67f9353c8d8d9364784dc9a7196dd9dacfad1e0bc016bc8e88c33",
+        "type": "announcement",
+        "signals": [
+          "pricing"
+        ],
+        "models": [
+          "swer when it"
+        ],
+        "url": "https://cursor.com/changelog"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "c0847216ce609aa9222046f5e5bd1c52120355004e9868efa9f85a88a492660e",
+      "sourceId": "cursor-releases",
+      "channel": "Cursor",
+      "kind": "announcement",
+      "detectedAt": "2026-11-07T06:14:47.485Z",
+      "url": "https://cursor.com/changelog",
+      "before": null,
+      "after": {
+        "key": "text:ddcce6feab143eda3ac8d33669e14870f201c2f2b5f9b27a875942a90b8bca89",
+        "hash": "ddcce6feab143eda3ac8d33669e14870f201c2f2b5f9b27a875942a90b8bca89",
+        "type": "announcement",
+        "signals": [],
+        "models": [
+          "Grok Voice"
+        ],
+        "url": "https://cursor.com/changelog"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "e9b371a8414f175ac3cce3fcd750079937c0a53719f18faef50d8b3d98c822cf",
+      "sourceId": "cursor-releases",
+      "channel": "Cursor",
+      "kind": "announcement",
+      "detectedAt": "2026-11-07T06:14:47.485Z",
+      "url": "https://cursor.com/changelog",
+      "before": null,
+      "after": {
+        "key": "text:3a20631102b07f1001e8555ad695a52f16d308086405348f097faa69669b1a47",
+        "hash": "3a20631102b07f1001e8555ad695a52f16d308086405348f097faa69669b1a47",
+        "type": "announcement",
+        "signals": [],
+        "models": [
+          "Grok Voice. Pick from many voices in Voice settings"
+        ],
+        "url": "https://cursor.com/changelog"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "b737b5dc8c5ba2c22808223723f81ee00fc75f091fe335c412c4c60144286afd",
+      "sourceId": "cursor-releases",
+      "channel": "Cursor",
+      "kind": "announcement",
+      "detectedAt": "2026-11-07T06:14:47.485Z",
+      "url": "https://cursor.com/changelog",
+      "before": null,
+      "after": {
+        "key": "text:8b1d50e78f4cd89f4ff320334f98f29eb35731d602d7479f217706698d424dd1",
+        "hash": "8b1d50e78f4cd89f4ff320334f98f29eb35731d602d7479f217706698d424dd1",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [
+          "swers out loud."
+        ],
+        "url": "https://cursor.com/changelog"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "6e17093a70f779fcf5bce2736ff0d8917d388af8f6a4131da8fe522774ede5a5",
+      "sourceId": "opencode-social",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-07T06:14:47.485Z",
+      "url": "https://x.com/opencode/status/2118895128152621153",
+      "before": null,
+      "after": {
+        "key": "post:2118895128152621153",
+        "type": "announcement",
+        "hash": "f508ac870212ba0c8faa70226abdb3a6aee57178d9a557b96aa5974647d6ad6f",
+        "signals": [
+          "availability"
+        ],
+        "models": [],
+        "url": "https://x.com/opencode/status/2118895128152621153",
+        "relevant": true
+      },
+      "status": "pending"
+    },
+    {
+      "id": "b956e7993d8fed4d560f2278655124220d8a72ddf968f88d9778fa08c63acdc0",
+      "sourceId": "command-code-social",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-07T06:14:47.485Z",
+      "url": "https://x.com/CommandCodeAI/status/2118824521314783243",
+      "before": null,
+      "after": {
+        "key": "post:2118824521314783243",
+        "type": "announcement",
+        "hash": "e9f07a652da4567a751bdb87ec69588093b6fe08e63961dd0cd7d6b47f4f7a9d",
+        "signals": [
+          "version",
+          "pricing",
+          "availability"
+        ],
+        "models": [
+          "DeepSeek V4.1 Flash 1017 Ultrafast is now live in Command Code. "
+        ],
+        "url": "https://x.com/CommandCodeAI/status/2118824521314783243",
+        "relevant": true
+      },
+      "status": "pending"
     }
   ],
   "resolvedCount": 0,
@@ -5537,23 +6601,24 @@
       "channel": "OpenCode",
       "url": "https://opencode.ai/v2/docs/console/go/",
       "kind": "tables",
-      "attemptedAt": "2026-11-06T07:00:45.218Z",
-      "lastSuccessAt": "2026-11-06T07:00:45.218Z",
+      "attemptedAt": "2026-11-07T06:14:47.485Z",
+      "lastSuccessAt": "2026-11-07T06:14:47.485Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 392
+      "recordCount": 402
     },
     {
       "id": "opencode-releases",
       "channel": "OpenCode",
       "url": "https://opencode.ai/changelog",
       "kind": "document",
-      "attemptedAt": "2026-11-06T07:00:45.218Z",
+      "attemptedAt": "2026-11-07T06:14:47.485Z",
       "lastSuccessAt": "2026-11-06T07:00:45.218Z",
-      "status": "checked",
-      "consecutiveFailures": 0,
+      "status": "failed",
+      "consecutiveFailures": 1,
       "retrieval": "http",
+      "error": "Table coverage dropped by more than 40%; retaining last successful snapshot",
       "recordCount": 190
     },
     {
@@ -5561,8 +6626,8 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/go",
       "kind": "tables",
-      "attemptedAt": "2026-11-06T07:00:45.218Z",
-      "lastSuccessAt": "2026-11-06T07:00:45.218Z",
+      "attemptedAt": "2026-11-07T06:14:47.485Z",
+      "lastSuccessAt": "2026-11-07T06:14:47.485Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -5573,68 +6638,68 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/goat",
       "kind": "tables",
-      "attemptedAt": "2026-11-06T07:00:45.218Z",
-      "lastSuccessAt": "2026-11-06T07:00:45.218Z",
+      "attemptedAt": "2026-11-07T06:14:47.485Z",
+      "lastSuccessAt": "2026-11-07T06:14:47.485Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 257
+      "recordCount": 260
     },
     {
       "id": "command-code-pro",
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/pro",
       "kind": "tables",
-      "attemptedAt": "2026-11-06T07:00:45.218Z",
-      "lastSuccessAt": "2026-11-06T07:00:45.218Z",
+      "attemptedAt": "2026-11-07T06:14:47.485Z",
+      "lastSuccessAt": "2026-11-07T06:14:47.485Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 307
+      "recordCount": 310
     },
     {
       "id": "command-code-max",
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/max",
       "kind": "tables",
-      "attemptedAt": "2026-11-06T07:00:45.218Z",
-      "lastSuccessAt": "2026-11-06T07:00:45.218Z",
+      "attemptedAt": "2026-11-07T06:14:47.485Z",
+      "lastSuccessAt": "2026-11-07T06:14:47.485Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 265
+      "recordCount": 267
     },
     {
       "id": "command-code-models",
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/reference/cli/models",
       "kind": "tables",
-      "attemptedAt": "2026-11-06T07:00:45.218Z",
-      "lastSuccessAt": "2026-11-06T07:00:45.218Z",
+      "attemptedAt": "2026-11-07T06:14:47.485Z",
+      "lastSuccessAt": "2026-11-07T06:14:47.485Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 125
+      "recordCount": 126
     },
     {
       "id": "command-code-terms",
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/resources/pricing-limits",
       "kind": "tables",
-      "attemptedAt": "2026-11-06T07:00:45.218Z",
-      "lastSuccessAt": "2026-11-06T07:00:45.218Z",
+      "attemptedAt": "2026-11-07T06:14:47.485Z",
+      "lastSuccessAt": "2026-11-07T06:14:47.485Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 436
+      "recordCount": 439
     },
     {
       "id": "command-code-releases",
       "channel": "Command Code",
       "url": "https://commandcode.ai/changelog",
       "kind": "document",
-      "attemptedAt": "2026-11-06T07:00:45.218Z",
-      "lastSuccessAt": "2026-11-06T07:00:45.218Z",
+      "attemptedAt": "2026-11-07T06:14:47.485Z",
+      "lastSuccessAt": "2026-11-07T06:14:47.485Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -5645,8 +6710,8 @@
       "channel": "Ollama",
       "url": "https://ollama.com/pricing",
       "kind": "tables",
-      "attemptedAt": "2026-11-06T07:00:45.218Z",
-      "lastSuccessAt": "2026-11-06T07:00:45.218Z",
+      "attemptedAt": "2026-11-07T06:14:47.485Z",
+      "lastSuccessAt": "2026-11-07T06:14:47.485Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -5657,8 +6722,8 @@
       "channel": "Ollama",
       "url": "https://ollama.com/blog",
       "kind": "document",
-      "attemptedAt": "2026-11-06T07:00:45.218Z",
-      "lastSuccessAt": "2026-11-06T07:00:45.218Z",
+      "attemptedAt": "2026-11-07T06:14:47.485Z",
+      "lastSuccessAt": "2026-11-07T06:14:47.485Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -5669,8 +6734,8 @@
       "channel": "Factory",
       "url": "https://docs.factory.com/models.md",
       "kind": "tables",
-      "attemptedAt": "2026-11-06T07:00:45.218Z",
-      "lastSuccessAt": "2026-11-06T07:00:45.218Z",
+      "attemptedAt": "2026-11-07T06:14:47.485Z",
+      "lastSuccessAt": "2026-11-07T06:14:47.485Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -5681,8 +6746,8 @@
       "channel": "Factory",
       "url": "https://docs.factory.com/pricing/individuals.md",
       "kind": "document",
-      "attemptedAt": "2026-11-06T07:00:45.218Z",
-      "lastSuccessAt": "2026-11-06T07:00:45.218Z",
+      "attemptedAt": "2026-11-07T06:14:47.485Z",
+      "lastSuccessAt": "2026-11-07T06:14:47.485Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -5693,20 +6758,20 @@
       "channel": "Factory",
       "url": "https://docs.factory.com/changelog/release-notes.md",
       "kind": "document",
-      "attemptedAt": "2026-11-06T07:00:45.218Z",
-      "lastSuccessAt": "2026-11-06T07:00:45.218Z",
+      "attemptedAt": "2026-11-07T06:14:47.485Z",
+      "lastSuccessAt": "2026-11-07T06:14:47.485Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 702
+      "recordCount": 703
     },
     {
       "id": "cursor-pricing",
       "channel": "Cursor",
       "url": "https://cursor.com/docs/models-and-pricing",
       "kind": "tables",
-      "attemptedAt": "2026-11-06T07:00:45.218Z",
-      "lastSuccessAt": "2026-11-06T07:00:45.218Z",
+      "attemptedAt": "2026-11-07T06:14:47.485Z",
+      "lastSuccessAt": "2026-11-07T06:14:47.485Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -5717,20 +6782,20 @@
       "channel": "Cursor",
       "url": "https://cursor.com/changelog",
       "kind": "document",
-      "attemptedAt": "2026-11-06T07:00:45.218Z",
-      "lastSuccessAt": "2026-11-06T07:00:45.218Z",
+      "attemptedAt": "2026-11-07T06:14:47.485Z",
+      "lastSuccessAt": "2026-11-07T06:14:47.485Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 10
+      "recordCount": 13
     },
     {
       "id": "devin-releases",
       "channel": "Devin",
       "url": "https://docs.devin.ai/release-notes/overview",
       "kind": "document",
-      "attemptedAt": "2026-11-06T07:00:45.218Z",
-      "lastSuccessAt": "2026-11-06T07:00:45.218Z",
+      "attemptedAt": "2026-11-07T06:14:47.485Z",
+      "lastSuccessAt": "2026-11-07T06:14:47.485Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -5741,8 +6806,8 @@
       "channel": "Alibaba",
       "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan",
       "kind": "tables",
-      "attemptedAt": "2026-11-06T07:00:45.218Z",
-      "lastSuccessAt": "2026-11-06T07:00:45.218Z",
+      "attemptedAt": "2026-11-07T06:14:47.485Z",
+      "lastSuccessAt": "2026-11-07T06:14:47.485Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -5753,8 +6818,8 @@
       "channel": "Alibaba",
       "url": "https://help.aliyun.com/zh/model-studio/coding-plan",
       "kind": "tables",
-      "attemptedAt": "2026-11-06T07:00:45.218Z",
-      "lastSuccessAt": "2026-11-06T07:00:45.218Z",
+      "attemptedAt": "2026-11-07T06:14:47.485Z",
+      "lastSuccessAt": "2026-11-07T06:14:47.485Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -5765,8 +6830,8 @@
       "channel": "Alibaba",
       "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
       "kind": "tables",
-      "attemptedAt": "2026-11-06T07:00:45.218Z",
-      "lastSuccessAt": "2026-11-06T07:00:45.218Z",
+      "attemptedAt": "2026-11-07T06:14:47.485Z",
+      "lastSuccessAt": "2026-11-07T06:14:47.485Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -5777,8 +6842,8 @@
       "channel": "OpenCode",
       "url": "https://x.com/opencode",
       "kind": "social",
-      "attemptedAt": "2026-11-06T07:00:45.218Z",
-      "lastSuccessAt": "2026-11-06T07:00:45.218Z",
+      "attemptedAt": "2026-11-07T06:14:47.485Z",
+      "lastSuccessAt": "2026-11-07T06:14:47.485Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "official-oembed; discovery may use mirror",
@@ -5789,13 +6854,13 @@
       "channel": "Command Code",
       "url": "https://x.com/CommandCodeAI",
       "kind": "social",
-      "attemptedAt": "2026-11-06T07:00:45.218Z",
-      "lastSuccessAt": "2026-11-06T07:00:45.218Z",
+      "attemptedAt": "2026-11-07T06:14:47.485Z",
+      "lastSuccessAt": "2026-11-07T06:14:47.485Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "official-oembed; discovery may use mirror",
       "recordCount": 12
     }
   ],
-  "failedSources": 0
+  "failedSources": 1
 }
