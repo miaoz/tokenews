@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "checkedAt": "2026-11-06",
-  "baselineCommit": "1392833f2f7b64de87f8954516bb1ba7a6e49562",
+  "checkedAt": "2026-11-07",
+  "baselineCommit": "f40a2d0d57327eed44f01f41ab3bb2505b6fc75d",
   "note": "Source audit is separate from publication. Unverified sources are never reported as unchanged. Identity-review rows may be aliases, historical models, or new releases. Scores across changed versions must not be mixed.",
   "results": [
     {
@@ -12,7 +12,7 @@
       "currentVersion": "5.0.1",
       "versionChanged": true,
       "baselineConfigurations": 152,
-      "observedConfigurations": 98,
+      "observedConfigurations": 99,
       "sourceUpdatedAt": null,
       "coverage": "Current non-deprecated configurations in the public page payload with a non-null score; not all historical releases.",
       "configurationReviewRequired": true,
@@ -25,6 +25,7 @@
         "granite-4.2-3b",
         "gpt-6.1-terra",
         "gemini-4-carbon",
+        "k-exaone-2.0",
         "north-mini-code",
         "mistral-large-4",
         "nemotron-3.5-lightning",
@@ -182,6 +183,19 @@
           "source": "https://artificialanalysis.ai/models/mimo-v2-6-flash",
           "model": "mimo-v2.6-flash",
           "status": "tracked-model"
+        },
+        {
+          "identity": "K-EXAONE 2.0",
+          "sourceId": "k-exaone-2-0-0803",
+          "label": "K-EXAONE 2.0",
+          "score": 7.56357436827474,
+          "maker": "LG AI Research",
+          "releaseDate": "2026-08-12",
+          "releaseSlug": "k-exaone-2-0-0803",
+          "effort": null,
+          "source": "https://artificialanalysis.ai/models/k-exaone-2-0-0803",
+          "model": "k-exaone-2.0",
+          "status": "missing-from-board"
         },
         {
           "identity": "GLM-5.3-Flash",
@@ -1848,7 +1862,7 @@
       "currentVersion": "4.0",
       "versionChanged": false,
       "baselineConfigurations": 130,
-      "observedConfigurations": 143,
+      "observedConfigurations": 144,
       "sourceUpdatedAt": null,
       "coverage": "Current non-deprecated configurations in the public page payload with a non-null score; not all historical releases.",
       "configurationReviewRequired": true,
@@ -1865,6 +1879,7 @@
         "Granite 4.2 30B",
         "K2 Horizon 7B",
         "Solar Pro 4",
+        "K-EXAONE 2.0",
         "North Mini Code",
         "Grok 4.7 (Low)",
         "Qwen3.5 122B A10B (Reasoning)",
@@ -1944,6 +1959,7 @@
         "granite-4.2-30b",
         "k2-horizon-7b",
         "solar-pro-4",
+        "k-exaone-2.0",
         "north-mini-code",
         "qwen3.5-122b-a10b",
         "mistral-large-4",
@@ -2201,6 +2217,19 @@
           "effort": null,
           "source": "https://artificialanalysis.ai/models/solar-pro4",
           "model": "solar-pro-4",
+          "status": "missing-from-board"
+        },
+        {
+          "identity": "K-EXAONE 2.0",
+          "sourceId": "k-exaone-2-0-0803",
+          "label": "K-EXAONE 2.0",
+          "score": 0,
+          "maker": "LG AI Research",
+          "releaseDate": "2026-08-12",
+          "releaseSlug": "k-exaone-2-0-0803",
+          "effort": null,
+          "source": "https://artificialanalysis.ai/models/k-exaone-2-0-0803",
+          "model": "k-exaone-2.0",
           "status": "missing-from-board"
         },
         {
