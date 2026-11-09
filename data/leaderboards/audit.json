@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checkedAt": "2026-11-08",
+  "checkedAt": "2026-11-09",
   "baselineCommit": "f40a2d0d57327eed44f01f41ab3bb2505b6fc75d",
   "note": "Source audit is separate from publication. Unverified sources are never reported as unchanged. Identity-review rows may be aliases, historical models, or new releases. Scores across changed versions must not be mixed.",
   "results": [
@@ -12,7 +12,7 @@
       "currentVersion": "5.0.1",
       "versionChanged": true,
       "baselineConfigurations": 152,
-      "observedConfigurations": 99,
+      "observedConfigurations": 100,
       "sourceUpdatedAt": null,
       "coverage": "Current non-deprecated configurations in the public page payload with a non-null score; not all historical releases.",
       "configurationReviewRequired": true,
@@ -51,6 +51,7 @@
       ],
       "unresolvedIdentities": [
         "Tencent Hy4",
+        "Agnes 2.5 Pro Theta",
         "Inkling 2 Small"
       ],
       "rows": [
@@ -1121,6 +1122,19 @@
           "status": "missing-from-board"
         },
         {
+          "identity": "Agnes 2.5 Pro Theta",
+          "sourceId": "agnes-2-5-pro-theta",
+          "label": "Agnes 2.5 Pro Theta",
+          "score": 24.029012523359,
+          "maker": "Sapiens AI",
+          "releaseDate": "2026-11-07",
+          "releaseSlug": "agnes-2-5-pro-theta",
+          "effort": null,
+          "source": "https://artificialanalysis.ai/models/agnes-2-5-pro-theta",
+          "model": null,
+          "status": "identity-review"
+        },
+        {
           "identity": "DeepSeek V4 Pro 0813",
           "sourceId": "deepseek-v4-pro-non-reasoning",
           "label": "DeepSeek V4 Pro 0813 (Non-reasoning)",
@@ -1862,7 +1876,7 @@
       "currentVersion": "4.0",
       "versionChanged": false,
       "baselineConfigurations": 130,
-      "observedConfigurations": 144,
+      "observedConfigurations": 145,
       "sourceUpdatedAt": null,
       "coverage": "Current non-deprecated configurations in the public page payload with a non-null score; not all historical releases.",
       "configurationReviewRequired": true,
@@ -1936,6 +1950,7 @@
         "Tencent Hy4",
         "Gemini 4 Argon (High)",
         "MiniMax-M3.1-Flash",
+        "Agnes 2.5 Pro Theta",
         "Gemma 4 E4B (Reasoning)",
         "Nemotron 3.5 Super VL",
         "Inkling 2 Small",
@@ -2021,6 +2036,7 @@
       ],
       "unresolvedIdentities": [
         "Tencent Hy4",
+        "Agnes 2.5 Pro Theta",
         "Inkling 2 Small"
       ],
       "rows": [
@@ -3609,6 +3625,19 @@
           "source": "https://artificialanalysis.ai/models/minimax-m3-1-flash",
           "model": "minimax-m3.1-flash",
           "status": "missing-from-board"
+        },
+        {
+          "identity": "Agnes 2.5 Pro Theta",
+          "sourceId": "agnes-2-5-pro-theta",
+          "label": "Agnes 2.5 Pro Theta",
+          "score": 10.1010101010101,
+          "maker": "Sapiens AI",
+          "releaseDate": "2026-11-07",
+          "releaseSlug": "agnes-2-5-pro-theta",
+          "effort": null,
+          "source": "https://artificialanalysis.ai/models/agnes-2-5-pro-theta",
+          "model": null,
+          "status": "identity-review"
         },
         {
           "identity": "DeepSeek V4 Pro 0813",
@@ -5763,6 +5792,16 @@
       "releaseDate": "2026-10-29",
       "source": "https://artificialanalysis.ai/models/releases/mistral-large-4",
       "catalogModel": "mistral-large-4",
+      "inUpstreamDirectory": false,
+      "inUpstreamBenchmarks": false
+    },
+    {
+      "name": "Agnes 2.5 Pro Theta",
+      "slug": "agnes-2-5-pro-theta",
+      "maker": "Sapiens AI",
+      "releaseDate": "2026-11-07",
+      "source": "https://artificialanalysis.ai/models/releases/agnes-2-5-pro-theta",
+      "catalogModel": null,
       "inUpstreamDirectory": false,
       "inUpstreamBenchmarks": false
     },
