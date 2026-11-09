@@ -6,14 +6,14 @@
       "channel": "OpenCode",
       "url": "https://opencode.ai/v2/docs/console/go/",
       "kind": "tables",
-      "attemptedAt": "2026-11-08T06:20:11.865Z",
-      "lastSuccessAt": "2026-11-08T06:20:11.865Z",
+      "attemptedAt": "2026-11-09T06:53:41.572Z",
+      "lastSuccessAt": "2026-11-09T06:53:41.572Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-08T06:20:11.865Z",
-        "bodySha256": "68676432b8b6e8667d8415b96124efe74abdb72c332ec23f64bce0972dfb524d",
+        "checkedAt": "2026-11-09T06:53:41.572Z",
+        "bodySha256": "cb7fab58cf5c6dc92ea1089cbf89812c92603bfdde6154a3c4b47d3839e1d5a2",
         "records": [
           {
             "key": "text:0ab61f7fc122a5631bc29248a6fa6ab7421ee026fdde6d50271dd4ad9afce488",
@@ -7979,10 +7979,10 @@
       "channel": "OpenCode",
       "url": "https://opencode.ai/changelog",
       "kind": "document",
-      "attemptedAt": "2026-11-08T06:20:11.865Z",
+      "attemptedAt": "2026-11-09T06:53:41.572Z",
       "lastSuccessAt": "2026-11-06T07:00:45.218Z",
       "status": "failed",
-      "consecutiveFailures": 2,
+      "consecutiveFailures": 3,
       "retrieval": "http",
       "snapshot": {
         "checkedAt": "2026-11-06T07:00:45.218Z",
@@ -10038,13 +10038,13 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/go",
       "kind": "tables",
-      "attemptedAt": "2026-11-08T06:20:11.865Z",
-      "lastSuccessAt": "2026-11-08T06:20:11.865Z",
+      "attemptedAt": "2026-11-09T06:53:41.572Z",
+      "lastSuccessAt": "2026-11-09T06:53:41.572Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-08T06:20:11.865Z",
+        "checkedAt": "2026-11-09T06:53:41.572Z",
         "bodySha256": "1dddfe3dbd58079df8aee2a16569f1d966525be4a967aa005b67b658b362160e",
         "records": [
           {
@@ -14771,13 +14771,13 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/goat",
       "kind": "tables",
-      "attemptedAt": "2026-11-08T06:20:11.865Z",
-      "lastSuccessAt": "2026-11-08T06:20:11.865Z",
+      "attemptedAt": "2026-11-09T06:53:41.572Z",
+      "lastSuccessAt": "2026-11-09T06:53:41.572Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-08T06:20:11.865Z",
+        "checkedAt": "2026-11-09T06:53:41.572Z",
         "bodySha256": "c3f6e1213152d34c717bf54f48de549ad2c35caf2f2c26f5e052f6663b8857aa",
         "records": [
           {
@@ -20675,13 +20675,13 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/pro",
       "kind": "tables",
-      "attemptedAt": "2026-11-08T06:20:11.865Z",
-      "lastSuccessAt": "2026-11-08T06:20:11.865Z",
+      "attemptedAt": "2026-11-09T06:53:41.572Z",
+      "lastSuccessAt": "2026-11-09T06:53:41.572Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-08T06:20:11.865Z",
+        "checkedAt": "2026-11-09T06:53:41.572Z",
         "bodySha256": "ea7f94c601ebd89834477429f48c4d735cffa8d17ca04cbfaa5746b1d324522f",
         "records": [
           {
@@ -27885,13 +27885,13 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/max",
       "kind": "tables",
-      "attemptedAt": "2026-11-08T06:20:11.865Z",
-      "lastSuccessAt": "2026-11-08T06:20:11.865Z",
+      "attemptedAt": "2026-11-09T06:53:41.572Z",
+      "lastSuccessAt": "2026-11-09T06:53:41.572Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-08T06:20:11.865Z",
+        "checkedAt": "2026-11-09T06:53:41.572Z",
         "bodySha256": "8056ff3f2ef4b147e9616629de470f26495100a26d8ccd23149750eb8bc7eb9b",
         "records": [
           {
@@ -33668,13 +33668,13 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/reference/cli/models",
       "kind": "tables",
-      "attemptedAt": "2026-11-08T06:20:11.865Z",
-      "lastSuccessAt": "2026-11-08T06:20:11.865Z",
+      "attemptedAt": "2026-11-09T06:53:41.572Z",
+      "lastSuccessAt": "2026-11-09T06:53:41.572Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-08T06:20:11.865Z",
+        "checkedAt": "2026-11-09T06:53:41.572Z",
         "bodySha256": "6b64071010ea5b5d99cefa6377d0ad92339d966ce135e27534685c45f1b21efd",
         "records": [
           {
@@ -36241,13 +36241,13 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/resources/pricing-limits",
       "kind": "tables",
-      "attemptedAt": "2026-11-08T06:20:11.865Z",
-      "lastSuccessAt": "2026-11-08T06:20:11.865Z",
+      "attemptedAt": "2026-11-09T06:53:41.572Z",
+      "lastSuccessAt": "2026-11-09T06:53:41.572Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-08T06:20:11.865Z",
+        "checkedAt": "2026-11-09T06:53:41.572Z",
         "bodySha256": "e882f6485b83c1b7b6ea22cf01fc687259cb3097e0b828590118099ae3708bde",
         "records": [
           {
@@ -41324,13 +41324,13 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/changelog",
       "kind": "document",
-      "attemptedAt": "2026-11-08T06:20:11.865Z",
-      "lastSuccessAt": "2026-11-08T06:20:11.865Z",
+      "attemptedAt": "2026-11-09T06:53:41.572Z",
+      "lastSuccessAt": "2026-11-09T06:53:41.572Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-08T06:20:11.865Z",
+        "checkedAt": "2026-11-09T06:53:41.572Z",
         "bodySha256": "5a7e47e619c0de98245418e436850d6372b07d57df4ea7d2b111b1f292d09672",
         "records": [
           {
@@ -45716,14 +45716,14 @@
       "channel": "Ollama",
       "url": "https://ollama.com/pricing",
       "kind": "tables",
-      "attemptedAt": "2026-11-08T06:20:11.865Z",
-      "lastSuccessAt": "2026-11-08T06:20:11.865Z",
+      "attemptedAt": "2026-11-09T06:53:41.572Z",
+      "lastSuccessAt": "2026-11-09T06:53:41.572Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-08T06:20:11.865Z",
-        "bodySha256": "cf90220d39e3787c6c4dd3804315d65c59bb7c3a292e53838c62fcb2e6a46388",
+        "checkedAt": "2026-11-09T06:53:41.572Z",
+        "bodySha256": "d55a4d609ca32a6714ee7d11173f0adf5dd3c4d7d7a1dc85300eb793c117fb88",
         "records": [
           {
             "key": "text:dfe95783edfef7918760312f94edd764f4ce3ffd38b90c2c955a0cc3b250f040",
@@ -46853,14 +46853,14 @@
       "channel": "Ollama",
       "url": "https://ollama.com/blog",
       "kind": "document",
-      "attemptedAt": "2026-11-08T06:20:11.865Z",
-      "lastSuccessAt": "2026-11-08T06:20:11.865Z",
+      "attemptedAt": "2026-11-09T06:53:41.572Z",
+      "lastSuccessAt": "2026-11-09T06:53:41.572Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-08T06:20:11.865Z",
-        "bodySha256": "7aaaa7e822e5ee2391190b01742db1bafe4f26d7cba831b284ed7ff6e0a1ad09",
+        "checkedAt": "2026-11-09T06:53:41.572Z",
+        "bodySha256": "623cd1423544c78a3d7f7ca3cac2508baf91d55a246de6c2a9ad7f4b7530585f",
         "records": [
           {
             "key": "text:5d68e38175ac0eeec7cbf5c22ca2520d5d61efa1755ebba6cdb47e6124c3dd37",
@@ -47485,13 +47485,13 @@
       "channel": "Factory",
       "url": "https://docs.factory.com/models.md",
       "kind": "tables",
-      "attemptedAt": "2026-11-08T06:20:11.865Z",
-      "lastSuccessAt": "2026-11-08T06:20:11.865Z",
+      "attemptedAt": "2026-11-09T06:53:41.572Z",
+      "lastSuccessAt": "2026-11-09T06:53:41.572Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-08T06:20:11.865Z",
+        "checkedAt": "2026-11-09T06:53:41.572Z",
         "bodySha256": "b1a75ab7d56662656adb1c1b0f89c6ec1d3546680f4ac5d4768ff44298d01b31",
         "records": [
           {
@@ -49205,13 +49205,13 @@
       "channel": "Factory",
       "url": "https://docs.factory.com/pricing/individuals.md",
       "kind": "document",
-      "attemptedAt": "2026-11-08T06:20:11.865Z",
-      "lastSuccessAt": "2026-11-08T06:20:11.865Z",
+      "attemptedAt": "2026-11-09T06:53:41.572Z",
+      "lastSuccessAt": "2026-11-09T06:53:41.572Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-08T06:20:11.865Z",
+        "checkedAt": "2026-11-09T06:53:41.572Z",
         "bodySha256": "88b1107b6f9925530b8dd591e46064c1fdd5bcfafe06e074dae4448c58b84e9f",
         "records": [
           {
@@ -49537,13 +49537,13 @@
       "channel": "Factory",
       "url": "https://docs.factory.com/changelog/release-notes.md",
       "kind": "document",
-      "attemptedAt": "2026-11-08T06:20:11.865Z",
-      "lastSuccessAt": "2026-11-08T06:20:11.865Z",
+      "attemptedAt": "2026-11-09T06:53:41.572Z",
+      "lastSuccessAt": "2026-11-09T06:53:41.572Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-08T06:20:11.865Z",
+        "checkedAt": "2026-11-09T06:53:41.572Z",
         "bodySha256": "c82f9ccb1427a2b7b2fcbc40805e7924b4bdcb643fbfd7799aa3bad850d1a2d9",
         "records": [
           {
@@ -56769,14 +56769,14 @@
       "channel": "Cursor",
       "url": "https://cursor.com/docs/models-and-pricing",
       "kind": "tables",
-      "attemptedAt": "2026-11-08T06:20:11.865Z",
-      "lastSuccessAt": "2026-11-08T06:20:11.865Z",
+      "attemptedAt": "2026-11-09T06:53:41.572Z",
+      "lastSuccessAt": "2026-11-09T06:53:41.572Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-08T06:20:11.865Z",
-        "bodySha256": "5ca2ed704bd1a5862c1db1ba28fb28ae956a90633d067823bda5e2d4d02f469e",
+        "checkedAt": "2026-11-09T06:53:41.572Z",
+        "bodySha256": "fce4bbf1fc06d27f8c5fe6751e8c544f3cc8e69518108e497a2675ea3664f72b",
         "records": [
           {
             "key": "text:6c7ad5d1af746cc7ef5c32cb09479f830dfe5d5418e524a762cbb1699cb4e70c",
@@ -58979,14 +58979,14 @@
       "channel": "Cursor",
       "url": "https://cursor.com/changelog",
       "kind": "document",
-      "attemptedAt": "2026-11-08T06:20:11.865Z",
-      "lastSuccessAt": "2026-11-08T06:20:11.865Z",
+      "attemptedAt": "2026-11-09T06:53:41.572Z",
+      "lastSuccessAt": "2026-11-09T06:53:41.572Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-08T06:20:11.865Z",
-        "bodySha256": "261fd3a66e0f8945f7ba16680861f7ea0cceef365df30aec9fef84526c69d027",
+        "checkedAt": "2026-11-09T06:53:41.572Z",
+        "bodySha256": "d465b60dd34f36bef5d785f2efa767de721e7192e0d2766fd106fa314dbf1f98",
         "records": [
           {
             "key": "text:ceae2e4d00b67f9353c8d8d9364784dc9a7196dd9dacfad1e0bc016bc8e88c33",
@@ -59131,14 +59131,14 @@
       "channel": "Devin",
       "url": "https://docs.devin.ai/release-notes/overview",
       "kind": "document",
-      "attemptedAt": "2026-11-08T06:20:11.865Z",
-      "lastSuccessAt": "2026-11-08T06:20:11.865Z",
+      "attemptedAt": "2026-11-09T06:53:41.572Z",
+      "lastSuccessAt": "2026-11-09T06:53:41.572Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-08T06:20:11.865Z",
-        "bodySha256": "3f95e87303cc0ed86029ea8c1f750c046a74f30c914b3466e0d3e53ba86637e9",
+        "checkedAt": "2026-11-09T06:53:41.572Z",
+        "bodySha256": "212caf7b834ad2f6b564e74a059846afd2ca69527a799eb2070a41364333192f",
         "records": [
           {
             "key": "text:8f188bc90439c5b341aca73eb4d84c3dd04eb3bbd57acda295334fbde1178a0f",
@@ -59158,6 +59158,24 @@
               "availability"
             ],
             "models": [],
+            "url": "https://docs.devin.ai/release-notes/overview"
+          },
+          {
+            "key": "text:17f932fec11907e3c1cad8c314748ef809398746513a41fcf2eb94aece18dcb8",
+            "hash": "17f932fec11907e3c1cad8c314748ef809398746513a41fcf2eb94aece18dcb8",
+            "type": "announcement",
+            "signals": [
+              "pricing",
+              "promotion",
+              "availability"
+            ],
+            "models": [
+              "Steps on Secret Request Cards When Devin needs an API key from you",
+              "step-by-step instructions for getting it. Redesigned Share Artifact D",
+              "swers when installed org-wide on Enterprise Grid. You can upload an ",
+              "ling State Plugins show ",
+              "ling"
+            ],
             "url": "https://docs.devin.ai/release-notes/overview"
           },
           {
@@ -60003,7 +60021,7 @@
             "url": "https://docs.devin.ai/release-notes/overview"
           }
         ],
-        "hash": "0ef39a527fbf60b7acdfe0fa29e15bb409c6eaa73bf6f39f23dae59a8f7b1304"
+        "hash": "69a850f3c7f2882fd7e0609934def532ba5c881831074123da4ce6a45899d978"
       }
     },
     "alibaba-coding-global": {
@@ -60011,14 +60029,14 @@
       "channel": "Alibaba",
       "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan",
       "kind": "tables",
-      "attemptedAt": "2026-11-08T06:20:11.865Z",
-      "lastSuccessAt": "2026-11-08T06:20:11.865Z",
+      "attemptedAt": "2026-11-09T06:53:41.572Z",
+      "lastSuccessAt": "2026-11-09T06:53:41.572Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-08T06:20:11.865Z",
-        "bodySha256": "3bb5a5749f00e0067ab454c955cecb48e5d4eeebeb5c3c2fd4599bd0a937c617",
+        "checkedAt": "2026-11-09T06:53:41.572Z",
+        "bodySha256": "f4232c15d121f81d437cd89fcb9ca7d1470181f001001c4edf5648721b6ea5e4",
         "records": [
           {
             "key": "text:0686d515f782875e3d4496656bed3259cca990eb3f6893deb942abc5bd278f24",
@@ -60523,14 +60541,14 @@
       "channel": "Alibaba",
       "url": "https://help.aliyun.com/zh/model-studio/coding-plan",
       "kind": "tables",
-      "attemptedAt": "2026-11-08T06:20:11.865Z",
-      "lastSuccessAt": "2026-11-08T06:20:11.865Z",
+      "attemptedAt": "2026-11-09T06:53:41.572Z",
+      "lastSuccessAt": "2026-11-09T06:53:41.572Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-08T06:20:11.865Z",
-        "bodySha256": "f3eb56e0231c5d220f6211d936a5993e6f933c4f932b205044d355646b64ab15",
+        "checkedAt": "2026-11-09T06:53:41.572Z",
+        "bodySha256": "70937ca826cfe98a3e5d40f7810437687bb0ff95e6c708d052763e5e066ab514",
         "records": [
           {
             "key": "text:775eabf14c55f66ea3e7ef7b3737a001f72434663b87e260b4d68fe798af9495",
@@ -60984,14 +61002,14 @@
       "channel": "Alibaba",
       "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
       "kind": "tables",
-      "attemptedAt": "2026-11-08T06:20:11.865Z",
-      "lastSuccessAt": "2026-11-08T06:20:11.865Z",
+      "attemptedAt": "2026-11-09T06:53:41.572Z",
+      "lastSuccessAt": "2026-11-09T06:53:41.572Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-08T06:20:11.865Z",
-        "bodySha256": "bc437b1e462729ff4c1fc288c5da0b685ecb8b95523a4a7bdfcef2f409e18499",
+        "checkedAt": "2026-11-09T06:53:41.572Z",
+        "bodySha256": "ff7a280e73e951e37ef827e3ea8c87d9b2ec689d3fa0d6f8ca719b9f427edcbc",
         "records": [
           {
             "key": "text:8308bf6025304dfeaa804bdb593d0df9c619e81206391d574e18f2920c9fa0ff",
@@ -62082,8 +62100,8 @@
       "channel": "OpenCode",
       "url": "https://x.com/opencode",
       "kind": "social",
-      "attemptedAt": "2026-11-08T06:20:11.865Z",
-      "lastSuccessAt": "2026-11-08T06:20:11.865Z",
+      "attemptedAt": "2026-11-09T06:53:41.572Z",
+      "lastSuccessAt": "2026-11-09T06:53:41.572Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "official-oembed; discovery may use mirror",
@@ -62231,7 +62249,7 @@
           }
         ],
         "hash": "c4221386d01116af3d302b0716c0d5c1300e6922e564ebb0ad9f4a69e6cd25ed",
-        "checkedAt": "2026-11-08T06:20:11.865Z",
+        "checkedAt": "2026-11-09T06:53:41.572Z",
         "discoveredVia": "https://teapawt.net/opencode"
       }
     },
@@ -62240,8 +62258,8 @@
       "channel": "Command Code",
       "url": "https://x.com/CommandCodeAI",
       "kind": "social",
-      "attemptedAt": "2026-11-08T06:20:11.865Z",
-      "lastSuccessAt": "2026-11-08T06:20:11.865Z",
+      "attemptedAt": "2026-11-09T06:53:41.572Z",
+      "lastSuccessAt": "2026-11-09T06:53:41.572Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "official-oembed; discovery may use mirror",
@@ -62400,7 +62418,7 @@
           }
         ],
         "hash": "ae7a8d28f4400d8b0bfaaa2efac809c96f9c440e777a9881e3d181051a990f89",
-        "checkedAt": "2026-11-08T06:20:11.865Z",
+        "checkedAt": "2026-11-09T06:53:41.572Z",
         "discoveredVia": "https://teapawt.net/CommandCodeAI"
       }
     }
@@ -68994,7 +69012,35 @@
         "relevant": true
       },
       "status": "pending"
+    },
+    {
+      "id": "91a60f5ef44dce2edc4c2646b666c0e8055020f55b74ed6cb629a118d7b7823d",
+      "sourceId": "devin-releases",
+      "channel": "Devin",
+      "kind": "announcement",
+      "detectedAt": "2026-11-09T06:53:41.572Z",
+      "url": "https://docs.devin.ai/release-notes/overview",
+      "before": null,
+      "after": {
+        "key": "text:17f932fec11907e3c1cad8c314748ef809398746513a41fcf2eb94aece18dcb8",
+        "hash": "17f932fec11907e3c1cad8c314748ef809398746513a41fcf2eb94aece18dcb8",
+        "type": "announcement",
+        "signals": [
+          "pricing",
+          "promotion",
+          "availability"
+        ],
+        "models": [
+          "Steps on Secret Request Cards When Devin needs an API key from you",
+          "step-by-step instructions for getting it. Redesigned Share Artifact D",
+          "swers when installed org-wide on Enterprise Grid. You can upload an ",
+          "ling State Plugins show ",
+          "ling"
+        ],
+        "url": "https://docs.devin.ai/release-notes/overview"
+      },
+      "status": "pending"
     }
   ],
-  "checkedAt": "2026-11-08T06:20:11.865Z"
+  "checkedAt": "2026-11-09T06:53:41.572Z"
 }
