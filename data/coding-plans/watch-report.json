@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "checkedAt": "2026-11-09T06:53:41.572Z",
+  "checkedAt": "2026-11-10T07:32:24.800Z",
   "intervalHours": 24,
-  "newEvents": 1,
+  "newEvents": 124,
   "pending": [
     {
       "id": "4533c6040aa95efeaf575f7486523b4550c1a1975e7ba1df4f0cfa6f888e5935",
@@ -6620,6 +6620,4024 @@
         "url": "https://docs.devin.ai/release-notes/overview"
       },
       "status": "pending"
+    },
+    {
+      "id": "040c45fa2207724bddc7efc73bdb12ba302495b4508ad839c71c932a6c1416a5",
+      "sourceId": "opencode-go",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://opencode.ai/v2/docs/console/go/",
+      "before": null,
+      "after": {
+        "key": "text:d529fdd8895750d7505ef53b2a13913ec5b58680258ae840e8181e01c74625bb",
+        "hash": "d529fdd8895750d7505ef53b2a13913ec5b58680258ae840e8181e01c74625bb",
+        "type": "announcement",
+        "signals": [
+          "pricing",
+          "promotion"
+        ],
+        "models": [],
+        "url": "https://opencode.ai/v2/docs/console/go/"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "e72fec036524488f696946b213080afdc4c9c0aff5cc25afd8e018a640cec994",
+      "sourceId": "opencode-go",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://opencode.ai/v2/docs/console/go/",
+      "before": null,
+      "after": {
+        "key": "text:cfc9e93f68054ef5d1315a07cc654c89ba94b7c9d37a6cb0e557543ef68805f7",
+        "hash": "cfc9e93f68054ef5d1315a07cc654c89ba94b7c9d37a6cb0e557543ef68805f7",
+        "type": "announcement",
+        "signals": [
+          "promotion"
+        ],
+        "models": [],
+        "url": "https://opencode.ai/v2/docs/console/go/"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "43af354a943a14911b577c57fa2b9f20482503a73dd6c96479957a2882fdee71",
+      "sourceId": "opencode-go",
+      "channel": "OpenCode",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://opencode.ai/v2/docs/console/go/",
+      "before": null,
+      "after": {
+        "key": "row:3:42a62dde35a9:LongCat 2.5 Free:0",
+        "type": "table-row",
+        "label": "LongCat 2.5 Free",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Input",
+          "Output",
+          "Cached Read",
+          "Cached Write",
+          "Monthly limit"
+        ],
+        "cells": [
+          "LongCat 2.5 Free",
+          "Free",
+          "Free",
+          "Free",
+          "-",
+          "Unlimited limited time"
+        ],
+        "hash": "1b334be892b7f9b1ad79459b12d154d79b330427ea3bb839a7333692b0620be7",
+        "signals": [
+          "pricing",
+          "promotion"
+        ],
+        "url": "https://opencode.ai/v2/docs/console/go/"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "f94db93e2c31b8edfbcbc8915a3d1941b5c79afc939790f4ea3d1913ff6c2e35",
+      "sourceId": "opencode-go",
+      "channel": "OpenCode",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://opencode.ai/v2/docs/console/go/",
+      "before": null,
+      "after": {
+        "key": "row:4:42a62dde35a9:LongCat 2.5 Free:0",
+        "type": "table-row",
+        "label": "LongCat 2.5 Free",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Input",
+          "Output",
+          "Cached Read",
+          "Cached Write",
+          "Monthly limit"
+        ],
+        "cells": [
+          "LongCat 2.5 Free",
+          "Free",
+          "Free",
+          "Free",
+          "-",
+          "Unlimited limited time"
+        ],
+        "hash": "1b334be892b7f9b1ad79459b12d154d79b330427ea3bb839a7333692b0620be7",
+        "signals": [
+          "pricing",
+          "promotion"
+        ],
+        "url": "https://opencode.ai/v2/docs/console/go/"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "98b496c2482b4a82c5da19d191bd5f70cbe2aca515e2036f48c609787e739d22",
+      "sourceId": "opencode-go",
+      "channel": "OpenCode",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://opencode.ai/v2/docs/console/go/",
+      "before": null,
+      "after": {
+        "key": "row:5:42a62dde35a9:LongCat 2.5 Free:0",
+        "type": "table-row",
+        "label": "LongCat 2.5 Free",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Input",
+          "Output",
+          "Cached Read",
+          "Cached Write",
+          "Monthly limit"
+        ],
+        "cells": [
+          "LongCat 2.5 Free",
+          "Free",
+          "Free",
+          "Free",
+          "-",
+          "Unlimited limited time"
+        ],
+        "hash": "1b334be892b7f9b1ad79459b12d154d79b330427ea3bb839a7333692b0620be7",
+        "signals": [
+          "pricing",
+          "promotion"
+        ],
+        "url": "https://opencode.ai/v2/docs/console/go/"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "195b7d25328bc254ccc1be5b35aa5ecd6c6b28246af5262b113988045f88e859",
+      "sourceId": "opencode-go",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://opencode.ai/v2/docs/console/go/",
+      "before": null,
+      "after": {
+        "key": "text:6e5903f328618c11b25e46ab858bed40d54e12ae5488bc937939c31d5cc5e40e",
+        "hash": "6e5903f328618c11b25e46ab858bed40d54e12ae5488bc937939c31d5cc5e40e",
+        "type": "announcement",
+        "signals": [
+          "pricing",
+          "promotion"
+        ],
+        "models": [],
+        "url": "https://opencode.ai/v2/docs/console/go/"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "7afc8fa12601cf70dd9d9c4178e41096f987f42104666450a2f35fe5fd261869",
+      "sourceId": "opencode-go",
+      "channel": "OpenCode",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://opencode.ai/v2/docs/console/go/",
+      "before": null,
+      "after": {
+        "key": "row:6:9aea4a0c80de:LongCat 2.5 Free:0",
+        "type": "table-row",
+        "label": "LongCat 2.5 Free",
+        "heading": "Estimated requests",
+        "columns": [
+          "Model",
+          "Requests per 5 hours",
+          "Requests per week",
+          "Requests per month"
+        ],
+        "cells": [
+          "LongCat 2.5 Free",
+          "Unlimited",
+          "Unlimited",
+          "Unlimited"
+        ],
+        "hash": "128b2faed40d29ae95998a4d6a0709cd4ca282fd2e721f4898b597123638f4ab",
+        "signals": [
+          "pricing",
+          "promotion"
+        ],
+        "url": "https://opencode.ai/v2/docs/console/go/"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "1e22621ebe0070cf0c6fad04d6317ef314f9dc1bfec6ebce258242e0a2e0d05c",
+      "sourceId": "opencode-go",
+      "channel": "OpenCode",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://opencode.ai/v2/docs/console/go/",
+      "before": null,
+      "after": {
+        "key": "row:7:9aea4a0c80de:LongCat 2.5 Free:0",
+        "type": "table-row",
+        "label": "LongCat 2.5 Free",
+        "heading": "Estimated requests",
+        "columns": [
+          "Model",
+          "Requests per 5 hours",
+          "Requests per week",
+          "Requests per month"
+        ],
+        "cells": [
+          "LongCat 2.5 Free",
+          "Unlimited",
+          "Unlimited",
+          "Unlimited"
+        ],
+        "hash": "128b2faed40d29ae95998a4d6a0709cd4ca282fd2e721f4898b597123638f4ab",
+        "signals": [
+          "pricing",
+          "promotion"
+        ],
+        "url": "https://opencode.ai/v2/docs/console/go/"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "339ae3e9eb29735526701a2e023e24b5ce85e2dbdf7461cac664507a7aa389db",
+      "sourceId": "opencode-go",
+      "channel": "OpenCode",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://opencode.ai/v2/docs/console/go/",
+      "before": null,
+      "after": {
+        "key": "row:8:9aea4a0c80de:LongCat 2.5 Free:0",
+        "type": "table-row",
+        "label": "LongCat 2.5 Free",
+        "heading": "Estimated requests",
+        "columns": [
+          "Model",
+          "Requests per 5 hours",
+          "Requests per week",
+          "Requests per month"
+        ],
+        "cells": [
+          "LongCat 2.5 Free",
+          "Unlimited",
+          "Unlimited",
+          "Unlimited"
+        ],
+        "hash": "128b2faed40d29ae95998a4d6a0709cd4ca282fd2e721f4898b597123638f4ab",
+        "signals": [
+          "pricing",
+          "promotion"
+        ],
+        "url": "https://opencode.ai/v2/docs/console/go/"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "429d6b054e330328fe13c2589b7bc039704fedf5dd4f5d7285c10a698b3ad3f6",
+      "sourceId": "opencode-go",
+      "channel": "OpenCode",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://opencode.ai/v2/docs/console/go/",
+      "before": null,
+      "after": {
+        "key": "row:9:602c5d867d33:LongCat 2.5 Free:0",
+        "type": "table-row",
+        "label": "LongCat 2.5 Free",
+        "heading": "Endpoints",
+        "columns": [
+          "Model",
+          "Model ID",
+          "Endpoint",
+          "AI SDK Package"
+        ],
+        "cells": [
+          "LongCat 2.5 Free",
+          "longcat-2.5-free",
+          "https://opencode.ai/inference/go/openai/v1/chat/completions",
+          "@ai-sdk/openai-compatible"
+        ],
+        "hash": "796b934b892870bf974ab841d5633e7e4cabc0bc6031a06b76b78c5d7ea2c471",
+        "signals": [
+          "promotion"
+        ],
+        "url": "https://opencode.ai/v2/docs/console/go/"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "7295e0a000d887d7cbaf07c6336087a7b727d31aa3b85a9ba4b5fcaf813373f3",
+      "sourceId": "opencode-go",
+      "channel": "OpenCode",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://opencode.ai/v2/docs/console/go/",
+      "before": null,
+      "after": {
+        "key": "row:10:88a3377b9f9a:LongCat 2.5 Free:0",
+        "type": "table-row",
+        "label": "LongCat 2.5 Free",
+        "heading": "Privacy",
+        "columns": [
+          "Model",
+          "Model training",
+          "Data retention"
+        ],
+        "cells": [
+          "LongCat 2.5 Free",
+          "Not used",
+          "0 days"
+        ],
+        "hash": "0d5dcc1b50b49e4df481834e0b299c27f888224728da3d05b3d4c6d69fe087ec",
+        "signals": [
+          "promotion"
+        ],
+        "url": "https://opencode.ai/v2/docs/console/go/"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "d451fc0dc0aeacfb74784aaa892f0cd97ac90505eddb08c4237775f25de10eaa",
+      "sourceId": "opencode-go",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://opencode.ai/v2/docs/console/go/",
+      "before": null,
+      "after": {
+        "key": "text:42cb4eee8e2630489a6ed47bb34973148de90fe55e87fd6b166b6f317d16ba9e",
+        "hash": "42cb4eee8e2630489a6ed47bb34973148de90fe55e87fd6b166b6f317d16ba9e",
+        "type": "announcement",
+        "signals": [
+          "promotion"
+        ],
+        "models": [],
+        "url": "https://opencode.ai/v2/docs/console/go/"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "86e2a191e37f374659493413d606c01801fc766af99dc7bd9f7c8db98b5e31a3",
+      "sourceId": "opencode-go",
+      "channel": "OpenCode",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://opencode.ai/v2/docs/console/go/",
+      "before": {
+        "key": "row:3:42a62dde35a9:Crouton Alpha Free:0",
+        "type": "table-row",
+        "label": "Crouton Alpha Free",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Input",
+          "Output",
+          "Cached Read",
+          "Cached Write",
+          "Monthly limit"
+        ],
+        "cells": [
+          "Crouton Alpha Free",
+          "Free",
+          "Free",
+          "Free",
+          "-",
+          "Unlimited limited time"
+        ],
+        "hash": "a4e77697bf2bf046a68928c14b1967a04d5b2667ca207dbb9b39009b5f4dcc11",
+        "signals": [
+          "pricing",
+          "promotion"
+        ],
+        "url": "https://opencode.ai/v2/docs/console/go/"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "83236de115be9f7b3ee04335e702016f65eb857744d0e38705c002e16a5d9e72",
+      "sourceId": "opencode-go",
+      "channel": "OpenCode",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://opencode.ai/v2/docs/console/go/",
+      "before": {
+        "key": "row:4:42a62dde35a9:Crouton Alpha Free:0",
+        "type": "table-row",
+        "label": "Crouton Alpha Free",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Input",
+          "Output",
+          "Cached Read",
+          "Cached Write",
+          "Monthly limit"
+        ],
+        "cells": [
+          "Crouton Alpha Free",
+          "Free",
+          "Free",
+          "Free",
+          "-",
+          "Unlimited limited time"
+        ],
+        "hash": "a4e77697bf2bf046a68928c14b1967a04d5b2667ca207dbb9b39009b5f4dcc11",
+        "signals": [
+          "pricing",
+          "promotion"
+        ],
+        "url": "https://opencode.ai/v2/docs/console/go/"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "17ca7d8b75627ec3d0b56527ae9e0a44aa6274fe8ee951bb581d65dcdf252e03",
+      "sourceId": "opencode-go",
+      "channel": "OpenCode",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://opencode.ai/v2/docs/console/go/",
+      "before": {
+        "key": "row:5:42a62dde35a9:Crouton Alpha Free:0",
+        "type": "table-row",
+        "label": "Crouton Alpha Free",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Input",
+          "Output",
+          "Cached Read",
+          "Cached Write",
+          "Monthly limit"
+        ],
+        "cells": [
+          "Crouton Alpha Free",
+          "Free",
+          "Free",
+          "Free",
+          "-",
+          "Unlimited limited time"
+        ],
+        "hash": "a4e77697bf2bf046a68928c14b1967a04d5b2667ca207dbb9b39009b5f4dcc11",
+        "signals": [
+          "pricing",
+          "promotion"
+        ],
+        "url": "https://opencode.ai/v2/docs/console/go/"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "90bb0a1131b55b66c6651bce5fe0dd46265faf92fa2859040b1940744184f200",
+      "sourceId": "opencode-go",
+      "channel": "OpenCode",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://opencode.ai/v2/docs/console/go/",
+      "before": {
+        "key": "row:6:9aea4a0c80de:Crouton Alpha Free:0",
+        "type": "table-row",
+        "label": "Crouton Alpha Free",
+        "heading": "Estimated requests",
+        "columns": [
+          "Model",
+          "Requests per 5 hours",
+          "Requests per week",
+          "Requests per month"
+        ],
+        "cells": [
+          "Crouton Alpha Free",
+          "Unlimited",
+          "Unlimited",
+          "Unlimited"
+        ],
+        "hash": "e9f44729cb5e09a9f05208f790e6f75b49e078b45b74f31bfbfe5111b5cb54c4",
+        "signals": [
+          "pricing",
+          "promotion"
+        ],
+        "url": "https://opencode.ai/v2/docs/console/go/"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "a61b710d13b7ba4dfba25598ac8f95ddd6b09cc39880c92b5acf9fa37b98e48c",
+      "sourceId": "opencode-go",
+      "channel": "OpenCode",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://opencode.ai/v2/docs/console/go/",
+      "before": {
+        "key": "row:7:9aea4a0c80de:Crouton Alpha Free:0",
+        "type": "table-row",
+        "label": "Crouton Alpha Free",
+        "heading": "Estimated requests",
+        "columns": [
+          "Model",
+          "Requests per 5 hours",
+          "Requests per week",
+          "Requests per month"
+        ],
+        "cells": [
+          "Crouton Alpha Free",
+          "Unlimited",
+          "Unlimited",
+          "Unlimited"
+        ],
+        "hash": "e9f44729cb5e09a9f05208f790e6f75b49e078b45b74f31bfbfe5111b5cb54c4",
+        "signals": [
+          "pricing",
+          "promotion"
+        ],
+        "url": "https://opencode.ai/v2/docs/console/go/"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "6e84c81e21546afc9b20fcb8bb91de6dfdcec438d3f971a94a3e4a433e740d28",
+      "sourceId": "opencode-go",
+      "channel": "OpenCode",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://opencode.ai/v2/docs/console/go/",
+      "before": {
+        "key": "row:8:9aea4a0c80de:Crouton Alpha Free:0",
+        "type": "table-row",
+        "label": "Crouton Alpha Free",
+        "heading": "Estimated requests",
+        "columns": [
+          "Model",
+          "Requests per 5 hours",
+          "Requests per week",
+          "Requests per month"
+        ],
+        "cells": [
+          "Crouton Alpha Free",
+          "Unlimited",
+          "Unlimited",
+          "Unlimited"
+        ],
+        "hash": "e9f44729cb5e09a9f05208f790e6f75b49e078b45b74f31bfbfe5111b5cb54c4",
+        "signals": [
+          "pricing",
+          "promotion"
+        ],
+        "url": "https://opencode.ai/v2/docs/console/go/"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "6a0f3ea96de7c120148c870b3d2839a87292d0648cb49066df18cea1eaa645b5",
+      "sourceId": "opencode-go",
+      "channel": "OpenCode",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://opencode.ai/v2/docs/console/go/",
+      "before": {
+        "key": "row:9:602c5d867d33:Crouton Alpha Free:0",
+        "type": "table-row",
+        "label": "Crouton Alpha Free",
+        "heading": "Endpoints",
+        "columns": [
+          "Model",
+          "Model ID",
+          "Endpoint",
+          "AI SDK Package"
+        ],
+        "cells": [
+          "Crouton Alpha Free",
+          "crouton-alpha-free",
+          "https://opencode.ai/inference/go/openai/v1/responses",
+          "@ai-sdk/openai"
+        ],
+        "hash": "045ee3049a6dbf1a2bad9f6af23620880640586bc1dca30c5ad27c7b6e03473e",
+        "signals": [
+          "promotion"
+        ],
+        "url": "https://opencode.ai/v2/docs/console/go/"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "981a1c524749789225dd6cd2a2b5a001b910e06b9753628b41319125d039bab2",
+      "sourceId": "opencode-go",
+      "channel": "OpenCode",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://opencode.ai/v2/docs/console/go/",
+      "before": {
+        "key": "row:10:88a3377b9f9a:Crouton Alpha Free:0",
+        "type": "table-row",
+        "label": "Crouton Alpha Free",
+        "heading": "Privacy",
+        "columns": [
+          "Model",
+          "Model training",
+          "Data retention"
+        ],
+        "cells": [
+          "Crouton Alpha Free",
+          "Not used",
+          "30 days"
+        ],
+        "hash": "db5679f4697e1e4f1c1ef9e91d6b2ba1ff412de00ac5847330f7cd4279831de6",
+        "signals": [
+          "promotion"
+        ],
+        "url": "https://opencode.ai/v2/docs/console/go/"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "0c86dbd4420ee6a0a2bc260c756ff1c66089908b6c3474409b3860cb2eb57304",
+      "sourceId": "command-code-go",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/plans/go",
+      "before": null,
+      "after": {
+        "key": "text:3fc118685b0f15751526655c04dc0654b3150b439a462eb275d5e54ed797df1c",
+        "hash": "3fc118685b0f15751526655c04dc0654b3150b439a462eb275d5e54ed797df1c",
+        "type": "announcement",
+        "signals": [
+          "promotion"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/docs/plans/go"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "fd81811a4d248d42894747fe40e9ed973f48ffe49c6a79bc0796a0cc929b44a6",
+      "sourceId": "command-code-go",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/plans/go",
+      "before": null,
+      "after": {
+        "key": "row:0:7dda73ad401e:Muse Ember:0",
+        "type": "table-row",
+        "label": "Muse Ember",
+        "heading": "Models included",
+        "columns": [
+          "Model ↕",
+          "Context ↕",
+          "Intelligence ↕",
+          "Input ↕",
+          "Output ↕",
+          "Cache read ↕",
+          "Cache write ↕",
+          "Caps"
+        ],
+        "cells": [
+          "Muse Ember",
+          "1M",
+          "not yet scored",
+          "$0.10",
+          "$0.50",
+          "$0.004",
+          "—",
+          "+ 1"
+        ],
+        "hash": "6bf080c28c79af4da6e7858ff5840740942a3c1f58a441d38c1dc90716b94c2b",
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://commandcode.ai/docs/plans/go"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "4af6a737d6141106dfb0aedbdf47f8a6dea4f9e447be7e29167ead92b08d787f",
+      "sourceId": "command-code-go",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/plans/go",
+      "before": null,
+      "after": {
+        "key": "text:7f4f490a17c30ddb7d8a7ff82de43edb47d20c1c704038687919744c1fa950ae",
+        "hash": "7f4f490a17c30ddb7d8a7ff82de43edb47d20c1c704038687919744c1fa950ae",
+        "type": "announcement",
+        "signals": [
+          "pricing",
+          "availability"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/docs/plans/go"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "a3773fb8a97af007b789f88b76c2d808679bafa4cfd4eedae2b66e468f13bd82",
+      "sourceId": "command-code-go",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/plans/go",
+      "before": null,
+      "after": {
+        "key": "row:1:6e2f82d4bba3:Muse Ember:0",
+        "type": "table-row",
+        "label": "Muse Ember",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Requests / 5 hours",
+          "Requests / week",
+          "Requests / month"
+        ],
+        "cells": [
+          "Muse Ember",
+          "4,740",
+          "9,470",
+          "15,800"
+        ],
+        "hash": "0958693abcf53bd253afed6134bfcc58e53691b2626e4a40049a8ae7b319ed69",
+        "signals": [],
+        "url": "https://commandcode.ai/docs/plans/go"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "71e7d5ddfc6bd3ccb0e756c1b13368ceef08e531b1696caa1e6a5cf52819c058",
+      "sourceId": "command-code-go",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/plans/go",
+      "before": null,
+      "after": {
+        "key": "row:3:285022454e42:Muse Ember:0",
+        "type": "table-row",
+        "label": "Muse Ember",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Input",
+          "Output",
+          "Cache Read",
+          "Cache Write",
+          "Monthly credits"
+        ],
+        "cells": [
+          "Muse Ember",
+          "$0.10",
+          "$0.50",
+          "$0.004",
+          "-",
+          "$6"
+        ],
+        "hash": "e6bb90dbea3f0d09c5d2f9c26032e117651684250bbc8675823512b73f32a4ac",
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://commandcode.ai/docs/plans/go"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "016a177c722c4512f74305bf9983929398eefe5f0c82414edac894b54a2f9703",
+      "sourceId": "command-code-go",
+      "channel": "Command Code",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/plans/go",
+      "before": {
+        "key": "row:0:7dda73ad401e:Beam 1.0 Free:0",
+        "type": "table-row",
+        "label": "Beam 1.0 Free",
+        "heading": "Models included",
+        "columns": [
+          "Model ↕",
+          "Context ↕",
+          "Intelligence ↕",
+          "Input ↕",
+          "Output ↕",
+          "Cache read ↕",
+          "Cache write ↕",
+          "Caps"
+        ],
+        "cells": [
+          "Beam 1.0 Free",
+          "1M",
+          "not yet scored",
+          "Free",
+          "Free",
+          "Free",
+          "—",
+          ""
+        ],
+        "hash": "98976902c1cd3e321a47bb7dbc4064399d4cbeafd0368ce30c23c0aab4c43720",
+        "signals": [
+          "promotion"
+        ],
+        "url": "https://commandcode.ai/docs/plans/go"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "14672a2888c930e9fc6d0d14017885f519c666251ad7178d4b880fe802075ddf",
+      "sourceId": "command-code-goat",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/plans/goat",
+      "before": null,
+      "after": {
+        "key": "text:3ece4afccfeeede96955085868a8e9e87e79cdbcfcd389e7ed66f738a0c33178",
+        "hash": "3ece4afccfeeede96955085868a8e9e87e79cdbcfcd389e7ed66f738a0c33178",
+        "type": "announcement",
+        "signals": [
+          "promotion"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/docs/plans/goat"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "d82ae4acbd352aa2f9ca1a942716daa511fc5e4de6977a528592742049022bf8",
+      "sourceId": "command-code-goat",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/plans/goat",
+      "before": null,
+      "after": {
+        "key": "row:0:7dda73ad401e:Muse Ember:0",
+        "type": "table-row",
+        "label": "Muse Ember",
+        "heading": "Models included",
+        "columns": [
+          "Model ↕",
+          "Context ↕",
+          "Intelligence ↕",
+          "Input ↕",
+          "Output ↕",
+          "Cache read ↕",
+          "Cache write ↕",
+          "Caps"
+        ],
+        "cells": [
+          "Muse Ember",
+          "1M",
+          "not yet scored",
+          "$0.10",
+          "$0.50",
+          "$0.004",
+          "—",
+          "+ 1"
+        ],
+        "hash": "6bf080c28c79af4da6e7858ff5840740942a3c1f58a441d38c1dc90716b94c2b",
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://commandcode.ai/docs/plans/goat"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "c30c785e4b47d41bba393dade5567fdd17346ceb011a9ba4a4dbc4d0e39e7661",
+      "sourceId": "command-code-goat",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/plans/goat",
+      "before": null,
+      "after": {
+        "key": "text:ced09cac041eb6d72ba638a2eb4ff8c85f0647f89db4532b49da8c2c320de433",
+        "hash": "ced09cac041eb6d72ba638a2eb4ff8c85f0647f89db4532b49da8c2c320de433",
+        "type": "announcement",
+        "signals": [
+          "pricing",
+          "availability"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/docs/plans/goat"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "507da3953753601999743077d343f36069dcdb466e22f770bdb53ff81c29061c",
+      "sourceId": "command-code-goat",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/plans/goat",
+      "before": null,
+      "after": {
+        "key": "row:1:6e2f82d4bba3:Muse Ember:0",
+        "type": "table-row",
+        "label": "Muse Ember",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Requests / 5 hours",
+          "Requests / week",
+          "Requests / month"
+        ],
+        "cells": [
+          "Muse Ember",
+          "10,500",
+          "26,300",
+          "52,600"
+        ],
+        "hash": "e4275275b5ce26f69e8e25c6d2c0ac9e81f5886cda428d08947e4eb16111cc32",
+        "signals": [],
+        "url": "https://commandcode.ai/docs/plans/goat"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "0ba2399dcf8b4234106c6edca77f46297bc568ccb31fbbec0ac4f33885bf181e",
+      "sourceId": "command-code-goat",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/plans/goat",
+      "before": null,
+      "after": {
+        "key": "row:4:285022454e42:Muse Ember:0",
+        "type": "table-row",
+        "label": "Muse Ember",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Input",
+          "Output",
+          "Cache Read",
+          "Cache Write",
+          "Monthly credits"
+        ],
+        "cells": [
+          "Muse Ember",
+          "$0.10",
+          "$0.50",
+          "$0.004",
+          "-",
+          "$20"
+        ],
+        "hash": "92167eacaff8457b262396f1d452d0e2e96a1e1cb176513a488257da252b2596",
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://commandcode.ai/docs/plans/goat"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "174a780a1b747665e2250ef51a7b9ba0ff0b9dba230d43d6e8c2c94edfae82d0",
+      "sourceId": "command-code-goat",
+      "channel": "Command Code",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/plans/goat",
+      "before": {
+        "key": "row:0:7dda73ad401e:Beam 1.0 Free:0",
+        "type": "table-row",
+        "label": "Beam 1.0 Free",
+        "heading": "Models included",
+        "columns": [
+          "Model ↕",
+          "Context ↕",
+          "Intelligence ↕",
+          "Input ↕",
+          "Output ↕",
+          "Cache read ↕",
+          "Cache write ↕",
+          "Caps"
+        ],
+        "cells": [
+          "Beam 1.0 Free",
+          "1M",
+          "not yet scored",
+          "Free",
+          "Free",
+          "Free",
+          "—",
+          ""
+        ],
+        "hash": "98976902c1cd3e321a47bb7dbc4064399d4cbeafd0368ce30c23c0aab4c43720",
+        "signals": [
+          "promotion"
+        ],
+        "url": "https://commandcode.ai/docs/plans/goat"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "0e0da44a361bb3a558e96845339cd1273eb5510133a74eb9427c99cec2650eaa",
+      "sourceId": "command-code-pro",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/plans/pro",
+      "before": null,
+      "after": {
+        "key": "text:95509fafe38ec37a6506e4574ee814329670491518a7600c8a135dcfe1cd83bf",
+        "hash": "95509fafe38ec37a6506e4574ee814329670491518a7600c8a135dcfe1cd83bf",
+        "type": "announcement",
+        "signals": [
+          "promotion"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/docs/plans/pro"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "98ee27b95cadf8c29731cd658b5e77c936209243946faac6bfee7e768b26ee72",
+      "sourceId": "command-code-pro",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/plans/pro",
+      "before": null,
+      "after": {
+        "key": "row:0:7dda73ad401e:Muse Ember:0",
+        "type": "table-row",
+        "label": "Muse Ember",
+        "heading": "Models included",
+        "columns": [
+          "Model ↕",
+          "Context ↕",
+          "Intelligence ↕",
+          "Input ↕",
+          "Output ↕",
+          "Cache read ↕",
+          "Cache write ↕",
+          "Caps"
+        ],
+        "cells": [
+          "Muse Ember",
+          "1M",
+          "not yet scored",
+          "$0.10",
+          "$0.50",
+          "$0.004",
+          "—",
+          "+ 1"
+        ],
+        "hash": "6bf080c28c79af4da6e7858ff5840740942a3c1f58a441d38c1dc90716b94c2b",
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://commandcode.ai/docs/plans/pro"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "56974eab84ae4a6f5d43a93fc9153ae91701ba9e708ab560bb5ce073b8aa6352",
+      "sourceId": "command-code-pro",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/plans/pro",
+      "before": null,
+      "after": {
+        "key": "text:419552dbde3879902178d7fcfb889384d10b5109cbeda459aae1c325808e86ee",
+        "hash": "419552dbde3879902178d7fcfb889384d10b5109cbeda459aae1c325808e86ee",
+        "type": "announcement",
+        "signals": [
+          "pricing",
+          "availability"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/docs/plans/pro"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "d6a9e41558452d4080b5cb70788ae9607de7426cd634d66d33da28046ebbf307",
+      "sourceId": "command-code-pro",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/plans/pro",
+      "before": null,
+      "after": {
+        "key": "row:1:6e2f82d4bba3:Muse Ember:0",
+        "type": "table-row",
+        "label": "Muse Ember",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Requests / 5 hours",
+          "Requests / week",
+          "Requests / month"
+        ],
+        "cells": [
+          "Muse Ember",
+          "15,800",
+          "39,500",
+          "78,900"
+        ],
+        "hash": "323ef417f0fcc5359d46b86ae5cc2a5919107c2a03984f7b0cecce979996f513",
+        "signals": [],
+        "url": "https://commandcode.ai/docs/plans/pro"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "21a3869d933ff85f6a2e0b5bcb67596f91c3b8332e4cf82ca423a160227b60fa",
+      "sourceId": "command-code-pro",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/plans/pro",
+      "before": null,
+      "after": {
+        "key": "row:4:285022454e42:Muse Ember:0",
+        "type": "table-row",
+        "label": "Muse Ember",
+        "heading": "New open models",
+        "columns": [
+          "Model",
+          "Input",
+          "Output",
+          "Cache Read",
+          "Cache Write",
+          "Monthly credits"
+        ],
+        "cells": [
+          "Muse Ember",
+          "$0.10",
+          "$0.50",
+          "$0.004",
+          "-",
+          "$30"
+        ],
+        "hash": "ad030d8775f143836eae7d4ba117c9b62ccd1d332efa352b15966da5db628458",
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://commandcode.ai/docs/plans/pro"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "e28dd016f0e71e3778ca0cfa3a7346fef7aaf877a5c9c4b935ea203cb5ac54b2",
+      "sourceId": "command-code-pro",
+      "channel": "Command Code",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/plans/pro",
+      "before": {
+        "key": "row:0:7dda73ad401e:Beam 1.0 Free:0",
+        "type": "table-row",
+        "label": "Beam 1.0 Free",
+        "heading": "Models included",
+        "columns": [
+          "Model ↕",
+          "Context ↕",
+          "Intelligence ↕",
+          "Input ↕",
+          "Output ↕",
+          "Cache read ↕",
+          "Cache write ↕",
+          "Caps"
+        ],
+        "cells": [
+          "Beam 1.0 Free",
+          "1M",
+          "not yet scored",
+          "Free",
+          "Free",
+          "Free",
+          "—",
+          ""
+        ],
+        "hash": "98976902c1cd3e321a47bb7dbc4064399d4cbeafd0368ce30c23c0aab4c43720",
+        "signals": [
+          "promotion"
+        ],
+        "url": "https://commandcode.ai/docs/plans/pro"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "29625baf14216b70b2459d3b7ae06a78381d3148107acfd48d8c1dc7e0950008",
+      "sourceId": "command-code-max",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/models",
+      "before": null,
+      "after": {
+        "key": "text:cc7e9593bf19f1551678fdd450ecdb76dbf4ca6b7a8b259ce6f401c3792a9cf1",
+        "hash": "cc7e9593bf19f1551678fdd450ecdb76dbf4ca6b7a8b259ce6f401c3792a9cf1",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [
+          "Claude Opus",
+          "Claude Fable"
+        ],
+        "url": "https://commandcode.ai/models"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "f8212a84c66bf3df71891c934f13ef49817eef7e38afb138c3a44c25f45228f3",
+      "sourceId": "command-code-max",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/plans/max",
+      "before": null,
+      "after": {
+        "key": "row:2:6e2f82d4bba3:Claude Fable 5.2:0",
+        "type": "table-row",
+        "label": "Claude Fable 5.2",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Requests / 5 hours",
+          "Requests / week",
+          "Requests / month"
+        ],
+        "cells": [
+          "Claude Fable 5.2",
+          "1,270",
+          "2,540",
+          "4,240"
+        ],
+        "hash": "b1f0b304a812bc680fc3d99dad0677919a4056f64aa1aee7f284b000dbc3cbbd",
+        "signals": [],
+        "url": "https://commandcode.ai/docs/plans/max"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "34c88da780de5e3ad11c0fd5eafb8cb885e47b629c1149d0c888581349e3498a",
+      "sourceId": "command-code-max",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/plans/max",
+      "before": null,
+      "after": {
+        "key": "row:2:6e2f82d4bba3:Muse Ember:0",
+        "type": "table-row",
+        "label": "Muse Ember",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Requests / 5 hours",
+          "Requests / week",
+          "Requests / month"
+        ],
+        "cells": [
+          "Muse Ember",
+          "118,000",
+          "237,000",
+          "395,000"
+        ],
+        "hash": "965b13d12b0da1f758bcb7826a80c3d218033a12c3dde4b2894733ac9701b66b",
+        "signals": [],
+        "url": "https://commandcode.ai/docs/plans/max"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "70b644888021b0c80ed86bd598a73bf24b7bd8dfeedb7465c219044f9c3f2a42",
+      "sourceId": "command-code-max",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/plans/max",
+      "before": null,
+      "after": {
+        "key": "row:3:508faf2ee524:Claude Fable 5.2:0",
+        "type": "table-row",
+        "label": "Claude Fable 5.2",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Input",
+          "Output",
+          "Cache Read",
+          "Cache Write",
+          "Max 10× credits",
+          "Max 20× credits"
+        ],
+        "cells": [
+          "Claude Fable 5.2",
+          "$8.00",
+          "$40.00",
+          "$0.20",
+          "$10.00",
+          "$100",
+          "$200"
+        ],
+        "hash": "e9eb4649ef5499aec9a452865dc23941105970b746acbeea87bbccd9a8f7ec3c",
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://commandcode.ai/docs/plans/max"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "93cb19d73acce44b695c6b8bd3a9aa04cad281f86b7d5ca8029bad9be5591e2a",
+      "sourceId": "command-code-max",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/plans/max",
+      "before": null,
+      "after": {
+        "key": "row:3:508faf2ee524:Muse Ember:0",
+        "type": "table-row",
+        "label": "Muse Ember",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Input",
+          "Output",
+          "Cache Read",
+          "Cache Write",
+          "Max 10× credits",
+          "Max 20× credits"
+        ],
+        "cells": [
+          "Muse Ember",
+          "$0.10",
+          "$0.50",
+          "$0.004",
+          "-",
+          "$150",
+          "$300"
+        ],
+        "hash": "9429ae71075bbf73f59c21f7df8c93d4d278c2598b03dd5624884610cf5d7243",
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://commandcode.ai/docs/plans/max"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "041740c17fce43046165921fbc23343ad36a019e737e0530d7860b1fdcee8bd2",
+      "sourceId": "command-code-max",
+      "channel": "Command Code",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/plans/max",
+      "before": {
+        "key": "row:2:6e2f82d4bba3:Beam 1.0:0",
+        "type": "table-row",
+        "label": "Beam 1.0",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Requests / 5 hours",
+          "Requests / week",
+          "Requests / month"
+        ],
+        "cells": [
+          "Beam 1.0",
+          "Free",
+          "Free",
+          "Free"
+        ],
+        "hash": "90134899309d948bb7dbc88bfe110cf2a874e7f0cea0d7b4ee89da944e0745eb",
+        "signals": [
+          "promotion"
+        ],
+        "url": "https://commandcode.ai/docs/plans/max"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "805a8defb089d940a34b07d6e4d17ede775b898d91d85a452acab0cca576482a",
+      "sourceId": "command-code-max",
+      "channel": "Command Code",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/plans/max",
+      "before": {
+        "key": "row:3:508faf2ee524:Beam 1.0:0",
+        "type": "table-row",
+        "label": "Beam 1.0",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Input",
+          "Output",
+          "Cache Read",
+          "Cache Write",
+          "Max 10× credits",
+          "Max 20× credits"
+        ],
+        "cells": [
+          "Beam 1.0",
+          "$0.00",
+          "$0.00",
+          "$0.00",
+          "-",
+          "Free",
+          "Free"
+        ],
+        "hash": "8c13e51bc188336b7330b984379a611d66d740907d3a2df8e24eacd155c37e91",
+        "signals": [
+          "pricing",
+          "promotion"
+        ],
+        "url": "https://commandcode.ai/docs/plans/max"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "587164575f7c14e738b33dd46c6a98e16ad2adba7b79c668aea593581a4ddb52",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "terms-changed",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": {
+        "key": "row:1:23643f1df728:claude-fable-5 Copy model id:0",
+        "type": "table-row",
+        "label": "claude-fable-5 Copy model id",
+        "heading": "Anthropic",
+        "columns": [
+          "Model ID",
+          "Name",
+          "Capabilities",
+          "Best for"
+        ],
+        "cells": [
+          "claude-fable-5 Copy model id",
+          "Claude Fable 5",
+          "+ 1",
+          "prev Fable, still strong for deep reasoning & agents"
+        ],
+        "hash": "d7dd4470e72b155efe38d1c7c892525192bfd866f8655ed203385e3c949d92df",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "after": {
+        "key": "row:1:23643f1df728:claude-fable-5 Copy model id:0",
+        "type": "table-row",
+        "label": "claude-fable-5 Copy model id",
+        "heading": "Anthropic",
+        "columns": [
+          "Model ID",
+          "Name",
+          "Capabilities",
+          "Best for"
+        ],
+        "cells": [
+          "claude-fable-5 Copy model id",
+          "Claude Fable 5",
+          "+ 1",
+          "older Fable for deep reasoning & agents"
+        ],
+        "hash": "97b7a8765b63f2338d5413599c5aaca4a21d373442e4b1e35f810fc525ca35b6",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "21d9bd6d671bc1776618fc96e9c1fa142564081865ae729beb05581a3013e110",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "terms-changed",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": {
+        "key": "row:1:23643f1df728:claude-fable-5-1 Copy model id:0",
+        "type": "table-row",
+        "label": "claude-fable-5-1 Copy model id",
+        "heading": "Anthropic",
+        "columns": [
+          "Model ID",
+          "Name",
+          "Capabilities",
+          "Best for"
+        ],
+        "cells": [
+          "claude-fable-5-1 Copy model id",
+          "Claude Fable 5.1",
+          "+ 1",
+          "most capable for demanding reasoning & long-horizon agents"
+        ],
+        "hash": "180b30cfb0c7daf39bf728e875316c8f1d60a6fcaadb19e06b54a3323e060762",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "after": {
+        "key": "row:1:23643f1df728:claude-fable-5-1 Copy model id:0",
+        "type": "table-row",
+        "label": "claude-fable-5-1 Copy model id",
+        "heading": "Anthropic",
+        "columns": [
+          "Model ID",
+          "Name",
+          "Capabilities",
+          "Best for"
+        ],
+        "cells": [
+          "claude-fable-5-1 Copy model id",
+          "Claude Fable 5.1",
+          "+ 1",
+          "prev Fable, still strong for deep reasoning & agents"
+        ],
+        "hash": "464edbaebe8614074a1df1b11021d6dc7108bc0f0bb512e5ec6d2d444b600433",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "59f32ec46c061c91017a37272a0f309bcadd59cf64918b36f8149206d775bd59",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": null,
+      "after": {
+        "key": "row:1:23643f1df728:claude-fable-5-2 Copy model id:0",
+        "type": "table-row",
+        "label": "claude-fable-5-2 Copy model id",
+        "heading": "Anthropic",
+        "columns": [
+          "Model ID",
+          "Name",
+          "Capabilities",
+          "Best for"
+        ],
+        "cells": [
+          "claude-fable-5-2 Copy model id",
+          "Claude Fable 5.2",
+          "+ 1",
+          "most capable for demanding reasoning & long-horizon agents"
+        ],
+        "hash": "771d9606310b7d526b39ca8899203ab23c121f0fd7237fb5267adcaa9ee5f48e",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "1d8619c64a1024fa5477d2dca2990b0561cc2989af1e28e30e430f5739d87af8",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": null,
+      "after": {
+        "key": "row:6:23643f1df728:meta/muse-ember Copy model id:0",
+        "type": "table-row",
+        "label": "meta/muse-ember Copy model id",
+        "heading": "Meta",
+        "columns": [
+          "Model ID",
+          "Name",
+          "Capabilities",
+          "Best for"
+        ],
+        "cells": [
+          "meta/muse-ember Copy model id",
+          "Muse Ember",
+          "+ 1",
+          "multimodal reasoning for conversational and agentic work"
+        ],
+        "hash": "79cf3e211370f88c4a87e02fc7fb4ec225d87d3b6fb5a3da2d716811e727cf9f",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "36c2b7670348e0d3fe17a8d31840af45ff1e7961c95b3632ba19a0179c432146",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": null,
+      "after": {
+        "key": "row:13:23643f1df728:sakana/fugu-ultra Copy model id:0",
+        "type": "table-row",
+        "label": "sakana/fugu-ultra Copy model id",
+        "heading": "Sakana AI",
+        "columns": [
+          "Model ID",
+          "Name",
+          "Capabilities",
+          "Best for"
+        ],
+        "cells": [
+          "sakana/fugu-ultra Copy model id",
+          "Fugu Ultra",
+          "+ 1",
+          "multi-agent orchestration across frontier models"
+        ],
+        "hash": "39b918c06d8c60e8df26d74b165936fb5b7611285ab7f5592a3ab1fcae9a8268",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "d0232109f34389627f56a8eae69fda82afae503810bafa3cf05697309ad50ea3",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": null,
+      "after": {
+        "key": "row:14:23643f1df728:stealth/crouton-alpha Copy model id:0",
+        "type": "table-row",
+        "label": "stealth/crouton-alpha Copy model id",
+        "heading": "Stealth",
+        "columns": [
+          "Model ID",
+          "Name",
+          "Capabilities",
+          "Best for"
+        ],
+        "cells": [
+          "stealth/crouton-alpha Copy model id",
+          "Crouton Alpha",
+          "+ 1",
+          "lightweight stealth model for agentic sub-tasks, 1M context"
+        ],
+        "hash": "a2d34d3e98a1e83e76a506589b596bcc87087d6cb1a8d506faee21039a9e4817",
+        "signals": [
+          "version",
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "cfc02572f7e79e149ce0188862c5b40428f86c7346eebc01e0d45e130d72e09a",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": null,
+      "after": {
+        "key": "row:14:23643f1df728:stealth/glyph-cluster:free Copy model id:0",
+        "type": "table-row",
+        "label": "stealth/glyph-cluster:free Copy model id",
+        "heading": "Stealth",
+        "columns": [
+          "Model ID",
+          "Name",
+          "Capabilities",
+          "Best for"
+        ],
+        "cells": [
+          "stealth/glyph-cluster:free Copy model id",
+          "Glyph Cluster",
+          "",
+          "stealth reasoning model in early access"
+        ],
+        "hash": "05bbe1c13fc759b04a6fb97f64a5ca521ba3f669be0cc7a9e9811aaa0f5d9a39",
+        "signals": [
+          "promotion",
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "fb9c050b1e353e9fc2166f9fbf9a74dd57b005655c87b3386b9fc9a33119e4d9",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": null,
+      "after": {
+        "key": "row:15:23643f1df728:stepfun/Step-3.5-Flash Copy model id:0",
+        "type": "table-row",
+        "label": "stepfun/Step-3.5-Flash Copy model id",
+        "heading": "StepFun",
+        "columns": [
+          "Model ID",
+          "Name",
+          "Capabilities",
+          "Best for"
+        ],
+        "cells": [
+          "stepfun/Step-3.5-Flash Copy model id",
+          "Step 3.5 Flash",
+          "",
+          "fast sparse-MoE agentic reasoning"
+        ],
+        "hash": "2cf8b9cd812f784c6248f2eb8a6d423ee7d82c5ed4f740f1a88dd077d7960d79",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "f51db445fade53424d78f71bdd45a0e14d02c40d162a1ac6e61574e5d3a2798f",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": null,
+      "after": {
+        "key": "row:15:23643f1df728:stepfun/Step-3.7-Flash Copy model id:0",
+        "type": "table-row",
+        "label": "stepfun/Step-3.7-Flash Copy model id",
+        "heading": "StepFun",
+        "columns": [
+          "Model ID",
+          "Name",
+          "Capabilities",
+          "Best for"
+        ],
+        "cells": [
+          "stepfun/Step-3.7-Flash Copy model id",
+          "Step 3.7 Flash",
+          "+ 1",
+          "multimodal sparse-MoE reasoning"
+        ],
+        "hash": "9b8594d71f6fc217750d1138586a2dacb437732967c8a307a2591f85414b8cd5",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "f1c400bc416f6aeba74ff4ad7a57fc06fbc012a34a6c204957dd4ca79ce141b1",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": null,
+      "after": {
+        "key": "row:15:23643f1df728:stepfun/Step-5-Preview Copy model id:0",
+        "type": "table-row",
+        "label": "stepfun/Step-5-Preview Copy model id",
+        "heading": "StepFun",
+        "columns": [
+          "Model ID",
+          "Name",
+          "Capabilities",
+          "Best for"
+        ],
+        "cells": [
+          "stepfun/Step-5-Preview Copy model id",
+          "Step 5 Preview",
+          "+ 1",
+          "600B sparse-MoE agentic coding with 1M context"
+        ],
+        "hash": "ac6dcfbfb7e8639ef7c841d2afa71788bf83ca7450d93bc2e73f7154210a4f62",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "dbd127de3ba97b4e256c9b96ab6cec33d05224f7bade54389334c890623418a1",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": null,
+      "after": {
+        "key": "row:16:23643f1df728:tencent/hy3-paid Copy model id:0",
+        "type": "table-row",
+        "label": "tencent/hy3-paid Copy model id",
+        "heading": "Tencent",
+        "columns": [
+          "Model ID",
+          "Name",
+          "Capabilities",
+          "Best for"
+        ],
+        "cells": [
+          "tencent/hy3-paid Copy model id",
+          "Tencent Hy3",
+          "",
+          "sparse-MoE reasoning & agentic tool use"
+        ],
+        "hash": "c049dd0b92cf7c275f6dde7294ed3cb9505567da4b795919e0c171fb6bddd383",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "b165a07b0d8f0cc0034be555e1894dd1508ce1d768b5e98fb519ebe3e6b36651",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": null,
+      "after": {
+        "key": "row:16:23643f1df728:tencent/hy4-preview Copy model id:0",
+        "type": "table-row",
+        "label": "tencent/hy4-preview Copy model id",
+        "heading": "Tencent",
+        "columns": [
+          "Model ID",
+          "Name",
+          "Capabilities",
+          "Best for"
+        ],
+        "cells": [
+          "tencent/hy4-preview Copy model id",
+          "Tencent Hy4 Preview",
+          "",
+          "agentic coding & sustained multi-step tool use"
+        ],
+        "hash": "6e798cd92996bf1637a4d935028937780b9772a6626647e6576aa8407d0dd9f4",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "2986f0e3e73fd559c3363eee12c8f7d0b7da910a231bbd5af85eb9b48e29c07b",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": null,
+      "after": {
+        "key": "row:17:23643f1df728:thinkingmachines/inkling Copy model id:0",
+        "type": "table-row",
+        "label": "thinkingmachines/inkling Copy model id",
+        "heading": "Thinking Machines",
+        "columns": [
+          "Model ID",
+          "Name",
+          "Capabilities",
+          "Best for"
+        ],
+        "cells": [
+          "thinkingmachines/inkling Copy model id",
+          "Inkling",
+          "+ 1",
+          "multimodal MoE reasoning"
+        ],
+        "hash": "0d411d6caa11066f0b3cd20ee4e86568673cfe4ebcee8720a97356f756e4c81b",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "dc15d0dc41568d0efa89873f9a75806f18e08f9da4910b5c70b629c43d535989",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": null,
+      "after": {
+        "key": "row:17:23643f1df728:thinkingmachines/inkling-small Copy model id:0",
+        "type": "table-row",
+        "label": "thinkingmachines/inkling-small Copy model id",
+        "heading": "Thinking Machines",
+        "columns": [
+          "Model ID",
+          "Name",
+          "Capabilities",
+          "Best for"
+        ],
+        "cells": [
+          "thinkingmachines/inkling-small Copy model id",
+          "Inkling Small",
+          "+ 1",
+          "lightweight MoE reasoning at lower cost and latency"
+        ],
+        "hash": "8ec583a5216b40ad20883bb411faeeede34b05f781ced2a35e6c8ee9dea060f8",
+        "signals": [
+          "version",
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "aa395c0a8a1b467ffc39b3a5168ab4dfd8fc68a9b2ee11b4f2ea70564a5cb3f1",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": null,
+      "after": {
+        "key": "row:18:23643f1df728:xai/grok-4.5 Copy model id:0",
+        "type": "table-row",
+        "label": "xai/grok-4.5 Copy model id",
+        "heading": "xAI",
+        "columns": [
+          "Model ID",
+          "Name",
+          "Capabilities",
+          "Best for"
+        ],
+        "cells": [
+          "xai/grok-4.5 Copy model id",
+          "Grok 4.5",
+          "+ 1",
+          "smartest model for coding, agentic tasks, knowledge work"
+        ],
+        "hash": "98c60fcf47bc2d10c1488ce1d5e307029668129c5d1148eecb922fc654d5a224",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "86f3da1f11930414538d37a06430f025d3606ab2dff2e3568a1d9ea5642d3cfd",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": null,
+      "after": {
+        "key": "row:18:23643f1df728:xai/grok-4.6 Copy model id:0",
+        "type": "table-row",
+        "label": "xai/grok-4.6 Copy model id",
+        "heading": "xAI",
+        "columns": [
+          "Model ID",
+          "Name",
+          "Capabilities",
+          "Best for"
+        ],
+        "cells": [
+          "xai/grok-4.6 Copy model id",
+          "Grok 4.6",
+          "+ 1",
+          "frontier performance on coding, knowledge work, and STEM"
+        ],
+        "hash": "27fbb3899a9b8f7c04a77a65fa9958b62e117b789f0bfb3a6bb87acae82dabb8",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "45d03d4645e5e26b945621eb714a5cc66cda44acbc0b382ab2d08e3ac3b14fd1",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": null,
+      "after": {
+        "key": "row:18:23643f1df728:xai/grok-4.7 Copy model id:0",
+        "type": "table-row",
+        "label": "xai/grok-4.7 Copy model id",
+        "heading": "xAI",
+        "columns": [
+          "Model ID",
+          "Name",
+          "Capabilities",
+          "Best for"
+        ],
+        "cells": [
+          "xai/grok-4.7 Copy model id",
+          "Grok 4.7",
+          "+ 1",
+          "coding and knowledge work, built for multi-hour tasks"
+        ],
+        "hash": "41747c7e37c4d8eb4b1f6886fe01d0f0fc5ad62a46fe880e4902a010e3e84995",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "78885d486489377cf5e758b0052cff78fa8230a9dfa35b746c58d1d224e5cdd1",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": null,
+      "after": {
+        "key": "row:19:23643f1df728:xiaomi/mimo-v2.6-flash Copy model id:0",
+        "type": "table-row",
+        "label": "xiaomi/mimo-v2.6-flash Copy model id",
+        "heading": "Xiaomi",
+        "columns": [
+          "Model ID",
+          "Name",
+          "Capabilities",
+          "Best for"
+        ],
+        "cells": [
+          "xiaomi/mimo-v2.6-flash Copy model id",
+          "MiMo V2.6 Flash",
+          "",
+          "efficient multimodal agentic coding with 1M context"
+        ],
+        "hash": "c00b3fade8f92e6b5f82a1af061563eee768ee159daab9857d5c613b9c6eef5b",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "e992c811628666b73d114e4d1fcaf1091de818e447a9b703fad6cf325b08f3bf",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": null,
+      "after": {
+        "key": "row:19:23643f1df728:xiaomi/mimo-v2.6-pro Copy model id:0",
+        "type": "table-row",
+        "label": "xiaomi/mimo-v2.6-pro Copy model id",
+        "heading": "Xiaomi",
+        "columns": [
+          "Model ID",
+          "Name",
+          "Capabilities",
+          "Best for"
+        ],
+        "cells": [
+          "xiaomi/mimo-v2.6-pro Copy model id",
+          "MiMo V2.6 Pro",
+          "",
+          "flagship multimodal agentic coding with 1M context"
+        ],
+        "hash": "22a865f0f54a63d4458ca06c38082c4bfb9230c9795c9c53e868e7ef2a44a848",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "35509dabb6e2420c8619b317f739d19c7a2c5cc1a14605efc33e420600ed35b7",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": null,
+      "after": {
+        "key": "row:19:23643f1df728:xiaomi/mimo-v2.6-pro-ultraspeed Copy model id:0",
+        "type": "table-row",
+        "label": "xiaomi/mimo-v2.6-pro-ultraspeed Copy model id",
+        "heading": "Xiaomi",
+        "columns": [
+          "Model ID",
+          "Name",
+          "Capabilities",
+          "Best for"
+        ],
+        "cells": [
+          "xiaomi/mimo-v2.6-pro-ultraspeed Copy model id",
+          "MiMo V2.6 Pro UltraSpeed",
+          "",
+          "low-latency serving tier of MiMo V2.6 Pro"
+        ],
+        "hash": "af154806110e0244d8ab56a91ea303c0e6c1a9ece550667d91175c5ad946eb7b",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "b6f0510b57f5092a413a3c635d44a4ac113d1ce440b1ed4923a1c61c2a3b5a85",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": null,
+      "after": {
+        "key": "row:20:23643f1df728:zai-org/GLM-5 Copy model id:0",
+        "type": "table-row",
+        "label": "zai-org/GLM-5 Copy model id",
+        "heading": "Z AI",
+        "columns": [
+          "Model ID",
+          "Name",
+          "Capabilities",
+          "Best for"
+        ],
+        "cells": [
+          "zai-org/GLM-5 Copy model id",
+          "GLM-5",
+          "",
+          "multi-mode thinking & long-range planning"
+        ],
+        "hash": "5990eae8131e95aed967b6d188beaad28b903919c43ce80999ca99a716ef3b41",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "662d3b45cf0db713063af51c7df543d14e36c5921c1bc26bf1aed50c98ebfa7c",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": null,
+      "after": {
+        "key": "row:20:23643f1df728:zai-org/GLM-5.1 Copy model id:0",
+        "type": "table-row",
+        "label": "zai-org/GLM-5.1 Copy model id",
+        "heading": "Z AI",
+        "columns": [
+          "Model ID",
+          "Name",
+          "Capabilities",
+          "Best for"
+        ],
+        "cells": [
+          "zai-org/GLM-5.1 Copy model id",
+          "GLM-5.1",
+          "",
+          "long-horizon autonomous coding agent"
+        ],
+        "hash": "b4ae1399a4e41ce03c3bd2b67d8db72c3a09ac1c7743b37c0c28ae1e779e059b",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "cb27eeb724fe5c72a20c07a1f6b4dd0de59bab84c844da0d6c9afaa6bae2d548",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": null,
+      "after": {
+        "key": "row:20:23643f1df728:zai-org/GLM-5.2 Copy model id:0",
+        "type": "table-row",
+        "label": "zai-org/GLM-5.2 Copy model id",
+        "heading": "Z AI",
+        "columns": [
+          "Model ID",
+          "Name",
+          "Capabilities",
+          "Best for"
+        ],
+        "cells": [
+          "zai-org/GLM-5.2 Copy model id",
+          "GLM-5.2",
+          "",
+          "powerful coding with 1M context and long-horizon tasks"
+        ],
+        "hash": "4b4cb4d7efb70ad9dc3af7b987453dea62b983a836d14c01d9867fcee3569c07",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "6c088fdf621331c544e6fdbbce6a24a6f5144ca6b34d1beeafaf49fc5389fc9c",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": null,
+      "after": {
+        "key": "row:20:23643f1df728:zai-org/GLM-5.2-Fast Copy model id:0",
+        "type": "table-row",
+        "label": "zai-org/GLM-5.2-Fast Copy model id",
+        "heading": "Z AI",
+        "columns": [
+          "Model ID",
+          "Name",
+          "Capabilities",
+          "Best for"
+        ],
+        "cells": [
+          "zai-org/GLM-5.2-Fast Copy model id",
+          "GLM-5.2 Fast",
+          "",
+          "high-throughput GLM-5.2 with 1M context"
+        ],
+        "hash": "028711359131ba2b93ae70cd6abfcc1e499e44d16f70eae38444694d0fca8735",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "b38b35cb8046d35d112a8d5f5ae1f93aabb4c40c0e1a87b613e94198f937cbfd",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": null,
+      "after": {
+        "key": "row:20:23643f1df728:zai-org/GLM-5.3 Copy model id:0",
+        "type": "table-row",
+        "label": "zai-org/GLM-5.3 Copy model id",
+        "heading": "Z AI",
+        "columns": [
+          "Model ID",
+          "Name",
+          "Capabilities",
+          "Best for"
+        ],
+        "cells": [
+          "zai-org/GLM-5.3 Copy model id",
+          "GLM-5.3",
+          "",
+          "frontier coding with emergent cyber capabilities"
+        ],
+        "hash": "286e9531b9829787d7495d4e9edb5cf5c6dd6c3029dfe4836b4c3388b633b15f",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "4c8a1045e2bfbe90efa6057d95e436d5d7670da3d3477303c071c4a0be262173",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": null,
+      "after": {
+        "key": "row:20:23643f1df728:z-ai/glm-5.3-flash Copy model id:0",
+        "type": "table-row",
+        "label": "z-ai/glm-5.3-flash Copy model id",
+        "heading": "Z AI",
+        "columns": [
+          "Model ID",
+          "Name",
+          "Capabilities",
+          "Best for"
+        ],
+        "cells": [
+          "z-ai/glm-5.3-flash Copy model id",
+          "GLM-5.3 Flash",
+          "+ 1",
+          "fast, affordable GLM coding with 1M context"
+        ],
+        "hash": "7bdfc27aab5c9ae5dc3a51989b1648716863ae01fdb6178777350c08e3108ef1",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "0aa013499762892d83387d87027b847ceba672b20ab316248417359670cd57b4",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": null,
+      "after": {
+        "key": "row:20:23643f1df728:z-ai/glm-5.3-flashx Copy model id:0",
+        "type": "table-row",
+        "label": "z-ai/glm-5.3-flashx Copy model id",
+        "heading": "Z AI",
+        "columns": [
+          "Model ID",
+          "Name",
+          "Capabilities",
+          "Best for"
+        ],
+        "cells": [
+          "z-ai/glm-5.3-flashx Copy model id",
+          "GLM-5.3 FlashX",
+          "+ 1",
+          "high-speed GLM-5.3 Flash with 1M context"
+        ],
+        "hash": "e81436536f425d840e5167c2cec3658e569b8c12e0de3c753f54e68ac781f4e0",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "eb1f5496ec2a6a19de3bbd93798f28f90ca6a4c3a882d8f95bb13ce3de418f93",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": null,
+      "after": {
+        "key": "row:21:598f422c9ab3:typesafe/jev:0",
+        "type": "table-row",
+        "label": "typesafe/jev",
+        "heading": "TypeSafe",
+        "columns": [
+          "Model id",
+          "Made by",
+          "Price",
+          "Runs on"
+        ],
+        "cells": [
+          "typesafe/jev",
+          "TypeSafe",
+          "$0.042 per 1M input tokens",
+          "Headless , API"
+        ],
+        "hash": "1ff28027517d0992e5d72355369de51e8aa93f298b8e985819b554f37e9886d2",
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "4de47395521f781bd9321817e825853292e17b4f07d59dbb497b675d66bbbe88",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": null,
+      "after": {
+        "key": "row:21:598f422c9ab3:typesafe/jev-1.14.0:0",
+        "type": "table-row",
+        "label": "typesafe/jev-1.14.0",
+        "heading": "TypeSafe",
+        "columns": [
+          "Model id",
+          "Made by",
+          "Price",
+          "Runs on"
+        ],
+        "cells": [
+          "typesafe/jev-1.14.0",
+          "TypeSafe",
+          "$0.042 per 1M input tokens",
+          "API"
+        ],
+        "hash": "2f045c3310630d438012706f8780aaeb9245098dafc5f96a49a5ccc22673210c",
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "cd43ddbf9459a6ae104d542d64f742036bed8dd507102138a3337fa2a86efd00",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": {
+        "key": "row:13:23643f1df728:reflection/beam:free Copy model id:0",
+        "type": "table-row",
+        "label": "reflection/beam:free Copy model id",
+        "heading": "Reflection AI",
+        "columns": [
+          "Model ID",
+          "Name",
+          "Capabilities",
+          "Best for"
+        ],
+        "cells": [
+          "reflection/beam:free Copy model id",
+          "Beam 1.0",
+          "",
+          "reasoning model for coding and agentic workflows"
+        ],
+        "hash": "a2e42a3b8cecd9939c4096ede8b55d93d7d2d92513621b6bafd0cf4eb0cb270a",
+        "signals": [
+          "promotion",
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "647ae284917f98ca91cf542b7b5535015cc3fd20d4bd8cf7d0f6cae00ce3c271",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": {
+        "key": "row:14:23643f1df728:sakana/fugu-ultra Copy model id:0",
+        "type": "table-row",
+        "label": "sakana/fugu-ultra Copy model id",
+        "heading": "Sakana AI",
+        "columns": [
+          "Model ID",
+          "Name",
+          "Capabilities",
+          "Best for"
+        ],
+        "cells": [
+          "sakana/fugu-ultra Copy model id",
+          "Fugu Ultra",
+          "+ 1",
+          "multi-agent orchestration across frontier models"
+        ],
+        "hash": "39b918c06d8c60e8df26d74b165936fb5b7611285ab7f5592a3ab1fcae9a8268",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "0195b8d05f03d124fb802ebdfb826b91be0ed10465c3362bdc54db19508a6af7",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": {
+        "key": "row:15:23643f1df728:stealth/crouton-alpha Copy model id:0",
+        "type": "table-row",
+        "label": "stealth/crouton-alpha Copy model id",
+        "heading": "Stealth",
+        "columns": [
+          "Model ID",
+          "Name",
+          "Capabilities",
+          "Best for"
+        ],
+        "cells": [
+          "stealth/crouton-alpha Copy model id",
+          "Crouton Alpha",
+          "+ 1",
+          "lightweight stealth model for agentic sub-tasks, 1M context"
+        ],
+        "hash": "a2d34d3e98a1e83e76a506589b596bcc87087d6cb1a8d506faee21039a9e4817",
+        "signals": [
+          "version",
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "44ba4cdce092354601e46d786dcaea7cb209c03f7b70c7651270fba105130cb4",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": {
+        "key": "row:15:23643f1df728:stealth/glyph-cluster:free Copy model id:0",
+        "type": "table-row",
+        "label": "stealth/glyph-cluster:free Copy model id",
+        "heading": "Stealth",
+        "columns": [
+          "Model ID",
+          "Name",
+          "Capabilities",
+          "Best for"
+        ],
+        "cells": [
+          "stealth/glyph-cluster:free Copy model id",
+          "Glyph Cluster",
+          "",
+          "stealth reasoning model in early access"
+        ],
+        "hash": "05bbe1c13fc759b04a6fb97f64a5ca521ba3f669be0cc7a9e9811aaa0f5d9a39",
+        "signals": [
+          "promotion",
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "4f92860a38bbccbfcc74ac26fe167735813376c1259a1dd4f1c91a2d060a3e96",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": {
+        "key": "row:16:23643f1df728:stepfun/Step-3.5-Flash Copy model id:0",
+        "type": "table-row",
+        "label": "stepfun/Step-3.5-Flash Copy model id",
+        "heading": "StepFun",
+        "columns": [
+          "Model ID",
+          "Name",
+          "Capabilities",
+          "Best for"
+        ],
+        "cells": [
+          "stepfun/Step-3.5-Flash Copy model id",
+          "Step 3.5 Flash",
+          "",
+          "fast sparse-MoE agentic reasoning"
+        ],
+        "hash": "2cf8b9cd812f784c6248f2eb8a6d423ee7d82c5ed4f740f1a88dd077d7960d79",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "e29d601ca0b2311aef6788b3adf39fcc79d20491a71ea091b6c3b140b36510d9",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": {
+        "key": "row:16:23643f1df728:stepfun/Step-3.7-Flash Copy model id:0",
+        "type": "table-row",
+        "label": "stepfun/Step-3.7-Flash Copy model id",
+        "heading": "StepFun",
+        "columns": [
+          "Model ID",
+          "Name",
+          "Capabilities",
+          "Best for"
+        ],
+        "cells": [
+          "stepfun/Step-3.7-Flash Copy model id",
+          "Step 3.7 Flash",
+          "+ 1",
+          "multimodal sparse-MoE reasoning"
+        ],
+        "hash": "9b8594d71f6fc217750d1138586a2dacb437732967c8a307a2591f85414b8cd5",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "2167534bdee6c393cdd125f650f7edc03618504774f1dd387d81e4b379aae1ff",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": {
+        "key": "row:16:23643f1df728:stepfun/Step-5-Preview Copy model id:0",
+        "type": "table-row",
+        "label": "stepfun/Step-5-Preview Copy model id",
+        "heading": "StepFun",
+        "columns": [
+          "Model ID",
+          "Name",
+          "Capabilities",
+          "Best for"
+        ],
+        "cells": [
+          "stepfun/Step-5-Preview Copy model id",
+          "Step 5 Preview",
+          "+ 1",
+          "600B sparse-MoE agentic coding with 1M context"
+        ],
+        "hash": "ac6dcfbfb7e8639ef7c841d2afa71788bf83ca7450d93bc2e73f7154210a4f62",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "5b7fa1184eba4957904f0653f7b60be3ee30dae4d5ef75c2c2228854c8349aaf",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": {
+        "key": "row:17:23643f1df728:tencent/hy3-paid Copy model id:0",
+        "type": "table-row",
+        "label": "tencent/hy3-paid Copy model id",
+        "heading": "Tencent",
+        "columns": [
+          "Model ID",
+          "Name",
+          "Capabilities",
+          "Best for"
+        ],
+        "cells": [
+          "tencent/hy3-paid Copy model id",
+          "Tencent Hy3",
+          "",
+          "sparse-MoE reasoning & agentic tool use"
+        ],
+        "hash": "c049dd0b92cf7c275f6dde7294ed3cb9505567da4b795919e0c171fb6bddd383",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "e2d84f2aa32d26207e8576bdf72aaf17af480f51d470df5c025c1abf0d003cf3",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": {
+        "key": "row:17:23643f1df728:tencent/hy4-preview Copy model id:0",
+        "type": "table-row",
+        "label": "tencent/hy4-preview Copy model id",
+        "heading": "Tencent",
+        "columns": [
+          "Model ID",
+          "Name",
+          "Capabilities",
+          "Best for"
+        ],
+        "cells": [
+          "tencent/hy4-preview Copy model id",
+          "Tencent Hy4 Preview",
+          "",
+          "agentic coding & sustained multi-step tool use"
+        ],
+        "hash": "6e798cd92996bf1637a4d935028937780b9772a6626647e6576aa8407d0dd9f4",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "d0a06695cf9e68714761664a9472bb8e3269c37ba6c27794bc624d86b9f8588c",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": {
+        "key": "row:18:23643f1df728:thinkingmachines/inkling Copy model id:0",
+        "type": "table-row",
+        "label": "thinkingmachines/inkling Copy model id",
+        "heading": "Thinking Machines",
+        "columns": [
+          "Model ID",
+          "Name",
+          "Capabilities",
+          "Best for"
+        ],
+        "cells": [
+          "thinkingmachines/inkling Copy model id",
+          "Inkling",
+          "+ 1",
+          "multimodal MoE reasoning"
+        ],
+        "hash": "0d411d6caa11066f0b3cd20ee4e86568673cfe4ebcee8720a97356f756e4c81b",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "5a0f51a641d5e5a1c010ac8f50d182bde65ccc3a0d762d3bd825c463495843c0",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": {
+        "key": "row:18:23643f1df728:thinkingmachines/inkling-small Copy model id:0",
+        "type": "table-row",
+        "label": "thinkingmachines/inkling-small Copy model id",
+        "heading": "Thinking Machines",
+        "columns": [
+          "Model ID",
+          "Name",
+          "Capabilities",
+          "Best for"
+        ],
+        "cells": [
+          "thinkingmachines/inkling-small Copy model id",
+          "Inkling Small",
+          "+ 1",
+          "lightweight MoE reasoning at lower cost and latency"
+        ],
+        "hash": "8ec583a5216b40ad20883bb411faeeede34b05f781ced2a35e6c8ee9dea060f8",
+        "signals": [
+          "version",
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "fbbb97a745a7d8842a067adbe427d508f15ba47c49c1eb917883295e2be9144f",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": {
+        "key": "row:19:23643f1df728:xai/grok-4.5 Copy model id:0",
+        "type": "table-row",
+        "label": "xai/grok-4.5 Copy model id",
+        "heading": "xAI",
+        "columns": [
+          "Model ID",
+          "Name",
+          "Capabilities",
+          "Best for"
+        ],
+        "cells": [
+          "xai/grok-4.5 Copy model id",
+          "Grok 4.5",
+          "+ 1",
+          "smartest model for coding, agentic tasks, knowledge work"
+        ],
+        "hash": "98c60fcf47bc2d10c1488ce1d5e307029668129c5d1148eecb922fc654d5a224",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "ee96624ceca60275398f853e062b23953733ec8597727d21532648bb97b803c2",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": {
+        "key": "row:19:23643f1df728:xai/grok-4.6 Copy model id:0",
+        "type": "table-row",
+        "label": "xai/grok-4.6 Copy model id",
+        "heading": "xAI",
+        "columns": [
+          "Model ID",
+          "Name",
+          "Capabilities",
+          "Best for"
+        ],
+        "cells": [
+          "xai/grok-4.6 Copy model id",
+          "Grok 4.6",
+          "+ 1",
+          "frontier performance on coding, knowledge work, and STEM"
+        ],
+        "hash": "27fbb3899a9b8f7c04a77a65fa9958b62e117b789f0bfb3a6bb87acae82dabb8",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "fca93b6516175a82fab338921325b4381ba1600a11bc3c0b2c6c3a91271654c5",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": {
+        "key": "row:19:23643f1df728:xai/grok-4.7 Copy model id:0",
+        "type": "table-row",
+        "label": "xai/grok-4.7 Copy model id",
+        "heading": "xAI",
+        "columns": [
+          "Model ID",
+          "Name",
+          "Capabilities",
+          "Best for"
+        ],
+        "cells": [
+          "xai/grok-4.7 Copy model id",
+          "Grok 4.7",
+          "+ 1",
+          "coding and knowledge work, built for multi-hour tasks"
+        ],
+        "hash": "41747c7e37c4d8eb4b1f6886fe01d0f0fc5ad62a46fe880e4902a010e3e84995",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "dbdbeed94105e956a429bc335776be9f3d234767d32903faa7d455a8ca08d92a",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": {
+        "key": "row:20:23643f1df728:xiaomi/mimo-v2.6-flash Copy model id:0",
+        "type": "table-row",
+        "label": "xiaomi/mimo-v2.6-flash Copy model id",
+        "heading": "Xiaomi",
+        "columns": [
+          "Model ID",
+          "Name",
+          "Capabilities",
+          "Best for"
+        ],
+        "cells": [
+          "xiaomi/mimo-v2.6-flash Copy model id",
+          "MiMo V2.6 Flash",
+          "",
+          "efficient multimodal agentic coding with 1M context"
+        ],
+        "hash": "c00b3fade8f92e6b5f82a1af061563eee768ee159daab9857d5c613b9c6eef5b",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "7c3ffb52a229b46f40d837ca45e12aac8f74419511ac0bb3cd90ceec560858ac",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": {
+        "key": "row:20:23643f1df728:xiaomi/mimo-v2.6-pro Copy model id:0",
+        "type": "table-row",
+        "label": "xiaomi/mimo-v2.6-pro Copy model id",
+        "heading": "Xiaomi",
+        "columns": [
+          "Model ID",
+          "Name",
+          "Capabilities",
+          "Best for"
+        ],
+        "cells": [
+          "xiaomi/mimo-v2.6-pro Copy model id",
+          "MiMo V2.6 Pro",
+          "",
+          "flagship multimodal agentic coding with 1M context"
+        ],
+        "hash": "22a865f0f54a63d4458ca06c38082c4bfb9230c9795c9c53e868e7ef2a44a848",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "87adc1aebae691b07beaf60bee36873d26f3ab2c48928c0fe8d4e0c281c3018f",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": {
+        "key": "row:20:23643f1df728:xiaomi/mimo-v2.6-pro-ultraspeed Copy model id:0",
+        "type": "table-row",
+        "label": "xiaomi/mimo-v2.6-pro-ultraspeed Copy model id",
+        "heading": "Xiaomi",
+        "columns": [
+          "Model ID",
+          "Name",
+          "Capabilities",
+          "Best for"
+        ],
+        "cells": [
+          "xiaomi/mimo-v2.6-pro-ultraspeed Copy model id",
+          "MiMo V2.6 Pro UltraSpeed",
+          "",
+          "low-latency serving tier of MiMo V2.6 Pro"
+        ],
+        "hash": "af154806110e0244d8ab56a91ea303c0e6c1a9ece550667d91175c5ad946eb7b",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "677d7b60bb8dd0013002efcae595432bc4fd135ab8161c9923e16c7801331899",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": {
+        "key": "row:21:23643f1df728:zai-org/GLM-5 Copy model id:0",
+        "type": "table-row",
+        "label": "zai-org/GLM-5 Copy model id",
+        "heading": "Z AI",
+        "columns": [
+          "Model ID",
+          "Name",
+          "Capabilities",
+          "Best for"
+        ],
+        "cells": [
+          "zai-org/GLM-5 Copy model id",
+          "GLM-5",
+          "",
+          "multi-mode thinking & long-range planning"
+        ],
+        "hash": "5990eae8131e95aed967b6d188beaad28b903919c43ce80999ca99a716ef3b41",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "8b870863b7046346b0c8bf37f98e8b0b60e46c7713a0419767868a444113126d",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": {
+        "key": "row:21:23643f1df728:zai-org/GLM-5.1 Copy model id:0",
+        "type": "table-row",
+        "label": "zai-org/GLM-5.1 Copy model id",
+        "heading": "Z AI",
+        "columns": [
+          "Model ID",
+          "Name",
+          "Capabilities",
+          "Best for"
+        ],
+        "cells": [
+          "zai-org/GLM-5.1 Copy model id",
+          "GLM-5.1",
+          "",
+          "long-horizon autonomous coding agent"
+        ],
+        "hash": "b4ae1399a4e41ce03c3bd2b67d8db72c3a09ac1c7743b37c0c28ae1e779e059b",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "1505e6961a5c90f7ba1f11d176e471d1cfa9454d872912e6abf39d7135d37095",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": {
+        "key": "row:21:23643f1df728:zai-org/GLM-5.2 Copy model id:0",
+        "type": "table-row",
+        "label": "zai-org/GLM-5.2 Copy model id",
+        "heading": "Z AI",
+        "columns": [
+          "Model ID",
+          "Name",
+          "Capabilities",
+          "Best for"
+        ],
+        "cells": [
+          "zai-org/GLM-5.2 Copy model id",
+          "GLM-5.2",
+          "",
+          "powerful coding with 1M context and long-horizon tasks"
+        ],
+        "hash": "4b4cb4d7efb70ad9dc3af7b987453dea62b983a836d14c01d9867fcee3569c07",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "d3034349a4a0d28872d0f9921120d0c2feec5dd97a214a25f9e9457f16e1f6d7",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": {
+        "key": "row:21:23643f1df728:zai-org/GLM-5.2-Fast Copy model id:0",
+        "type": "table-row",
+        "label": "zai-org/GLM-5.2-Fast Copy model id",
+        "heading": "Z AI",
+        "columns": [
+          "Model ID",
+          "Name",
+          "Capabilities",
+          "Best for"
+        ],
+        "cells": [
+          "zai-org/GLM-5.2-Fast Copy model id",
+          "GLM-5.2 Fast",
+          "",
+          "high-throughput GLM-5.2 with 1M context"
+        ],
+        "hash": "028711359131ba2b93ae70cd6abfcc1e499e44d16f70eae38444694d0fca8735",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "9bd5a2ee4b234f16cbea4ac749400b21e166acc44ea10196273e6ae6e6bb802b",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": {
+        "key": "row:21:23643f1df728:zai-org/GLM-5.3 Copy model id:0",
+        "type": "table-row",
+        "label": "zai-org/GLM-5.3 Copy model id",
+        "heading": "Z AI",
+        "columns": [
+          "Model ID",
+          "Name",
+          "Capabilities",
+          "Best for"
+        ],
+        "cells": [
+          "zai-org/GLM-5.3 Copy model id",
+          "GLM-5.3",
+          "",
+          "frontier coding with emergent cyber capabilities"
+        ],
+        "hash": "286e9531b9829787d7495d4e9edb5cf5c6dd6c3029dfe4836b4c3388b633b15f",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "d6acf90db8705aa8d5e265f9faf7d34207c7fc1a26e41e3b9ae0b878a3692da5",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": {
+        "key": "row:21:23643f1df728:z-ai/glm-5.3-flash Copy model id:0",
+        "type": "table-row",
+        "label": "z-ai/glm-5.3-flash Copy model id",
+        "heading": "Z AI",
+        "columns": [
+          "Model ID",
+          "Name",
+          "Capabilities",
+          "Best for"
+        ],
+        "cells": [
+          "z-ai/glm-5.3-flash Copy model id",
+          "GLM-5.3 Flash",
+          "+ 1",
+          "fast, affordable GLM coding with 1M context"
+        ],
+        "hash": "7bdfc27aab5c9ae5dc3a51989b1648716863ae01fdb6178777350c08e3108ef1",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "c9aace32ec011a5d275ada1e18d46a4587bc2da02d532737167f4c5a1a2e2104",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": {
+        "key": "row:21:23643f1df728:z-ai/glm-5.3-flashx Copy model id:0",
+        "type": "table-row",
+        "label": "z-ai/glm-5.3-flashx Copy model id",
+        "heading": "Z AI",
+        "columns": [
+          "Model ID",
+          "Name",
+          "Capabilities",
+          "Best for"
+        ],
+        "cells": [
+          "z-ai/glm-5.3-flashx Copy model id",
+          "GLM-5.3 FlashX",
+          "+ 1",
+          "high-speed GLM-5.3 Flash with 1M context"
+        ],
+        "hash": "e81436536f425d840e5167c2cec3658e569b8c12e0de3c753f54e68ac781f4e0",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "b1bfff9c8659bfe21dfd89338acf62b684923759b2cb96c009d26a222722d6c3",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": {
+        "key": "row:22:598f422c9ab3:typesafe/jev:0",
+        "type": "table-row",
+        "label": "typesafe/jev",
+        "heading": "TypeSafe",
+        "columns": [
+          "Model id",
+          "Made by",
+          "Price",
+          "Runs on"
+        ],
+        "cells": [
+          "typesafe/jev",
+          "TypeSafe",
+          "$0.042 per 1M input tokens",
+          "Headless , API"
+        ],
+        "hash": "1ff28027517d0992e5d72355369de51e8aa93f298b8e985819b554f37e9886d2",
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "dcac1a92024fe666cd8abcafc9f0fdd5a6e620dc091bb40f744f2fb11be2967f",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": {
+        "key": "row:22:598f422c9ab3:typesafe/jev-1.14.0:0",
+        "type": "table-row",
+        "label": "typesafe/jev-1.14.0",
+        "heading": "TypeSafe",
+        "columns": [
+          "Model id",
+          "Made by",
+          "Price",
+          "Runs on"
+        ],
+        "cells": [
+          "typesafe/jev-1.14.0",
+          "TypeSafe",
+          "$0.042 per 1M input tokens",
+          "API"
+        ],
+        "hash": "2f045c3310630d438012706f8780aaeb9245098dafc5f96a49a5ccc22673210c",
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "f143460918ffbd4f56d44e33c81f81e837e6897842d9896468434974c2ee7ef8",
+      "sourceId": "command-code-releases",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/changelog",
+      "before": null,
+      "after": {
+        "key": "text:ab6b21b7e6502b54f0b23c8e82df8c1833842147300a1c052f6ef77acd692c00",
+        "hash": "ab6b21b7e6502b54f0b23c8e82df8c1833842147300a1c052f6ef77acd692c00",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/changelog"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "a3ef09bf18421c7dd8e01989567b752c4696f9b27f1630ff8041f9bddea1309d",
+      "sourceId": "command-code-releases",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/changelog",
+      "before": null,
+      "after": {
+        "key": "text:78b04202c9344ce338a247080a262944ff456d3c2f83d6b2aab6da693ab0f1d4",
+        "hash": "78b04202c9344ce338a247080a262944ff456d3c2f83d6b2aab6da693ab0f1d4",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [
+          "DeepSeek V4.1 Flash is the new default model"
+        ],
+        "url": "https://commandcode.ai/changelog"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "074017363bc9f9536a621fbcfab1b3c05128dd2751b5ff2d7a38dc5d77a234f2",
+      "sourceId": "command-code-releases",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://commandcode.ai/changelog",
+      "before": null,
+      "after": {
+        "key": "text:569effdcc125d018fd89aca75acae81911123c2b4655f588b0997a500ee79cd2",
+        "hash": "569effdcc125d018fd89aca75acae81911123c2b4655f588b0997a500ee79cd2",
+        "type": "announcement",
+        "signals": [
+          "promotion",
+          "availability"
+        ],
+        "models": [
+          "Laguna S 2.1 model is retired"
+        ],
+        "url": "https://commandcode.ai/changelog"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "542205571e6bcc43225a45c7286a5fa17e5bc2b58514c079cc35418352e7a57c",
+      "sourceId": "ollama-pricing",
+      "channel": "Ollama",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://ollama.com/pricing",
+      "before": {
+        "key": "row:0:4699f8e99f5e:minimax-m2.7:0",
+        "type": "table-row",
+        "label": "minimax-m2.7",
+        "heading": "Model pricing",
+        "columns": [
+          "Model",
+          "Input",
+          "Cached input",
+          "Output"
+        ],
+        "cells": [
+          "minimax-m2.7",
+          "$0.30",
+          "$0.06",
+          "$1.20"
+        ],
+        "hash": "d17f6b685a1236f116acdea5d0f094f51feddfd0d173423e095544b56c25e3e3",
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://ollama.com/pricing"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "e4d0dd59ae010f913c7a6b77228f53624a37e4c941341c91c100f26c62528318",
+      "sourceId": "ollama-pricing",
+      "channel": "Ollama",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://ollama.com/pricing",
+      "before": {
+        "key": "row:0:4699f8e99f5e:mistral-large-3:0",
+        "type": "table-row",
+        "label": "mistral-large-3",
+        "heading": "Model pricing",
+        "columns": [
+          "Model",
+          "Input",
+          "Cached input",
+          "Output"
+        ],
+        "cells": [
+          "mistral-large-3",
+          "$0.50",
+          "-",
+          "$1.50"
+        ],
+        "hash": "cac9e7933826bdf6e3bc42346e13fd60db7487e7b712982711fb94c85b2d53bc",
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://ollama.com/pricing"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "dab48f1dee898c9dab6f5f387c8ba63e2c438212bdd3903c002b38f55b48e8b6",
+      "sourceId": "ollama-pricing",
+      "channel": "Ollama",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://ollama.com/pricing",
+      "before": {
+        "key": "row:0:4699f8e99f5e:nemotron-3-nano:0",
+        "type": "table-row",
+        "label": "nemotron-3-nano",
+        "heading": "Model pricing",
+        "columns": [
+          "Model",
+          "Input",
+          "Cached input",
+          "Output"
+        ],
+        "cells": [
+          "nemotron-3-nano",
+          "$0.06",
+          "-",
+          "$0.24"
+        ],
+        "hash": "cf8a72fe9aa97dd5ad2f5661a46f251800bb83af45451afd69dceae0bc64ca78",
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://ollama.com/pricing"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "e220106dc910197881aa538c0b886da8e2fc7279a84802e900d1d55e7207722c",
+      "sourceId": "factory-models",
+      "channel": "Factory",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://docs.factory.com/models.md",
+      "before": null,
+      "after": {
+        "key": "row:0:0534be2c3766:Claude Fable 5.2<sup>\\*</sup>:0",
+        "type": "table-row",
+        "label": "Claude Fable 5.2<sup>\\*</sup>",
+        "heading": "<span className=\"provider-heading\"><img src=\"/docs-assets/images/model-icons/anthropic.png\" alt=\"Anthropic logo\" className=\"provider-icon anthropic-ic",
+        "columns": [
+          "Model",
+          "Model ID",
+          "Multiplier",
+          "Reasoning"
+        ],
+        "cells": [
+          "Claude Fable 5.2<sup>\\*</sup>",
+          "`claude-fable-5.2`",
+          "3.2×",
+          "`low`, `medium`, `high` (default), `xhigh`, `max`"
+        ],
+        "hash": "49fc4582cc67a25ff5f8f68cfe4da780143ba6c053019f64a38238e8b17ba39f",
+        "signals": [],
+        "url": "https://docs.factory.com/models.md"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "7e758a48a123cfaf84708d8f80597e5ec02ae07e22d5d1fb663a10cdbca5f21c",
+      "sourceId": "factory-releases",
+      "channel": "Factory",
+      "kind": "announcement",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://docs.factory.com/changelog/release-notes.md",
+      "before": null,
+      "after": {
+        "key": "text:061a4cc1d92b4300818fdfe55a8e2e1b9cceb06ae9677a756df53159849e3d6c",
+        "hash": "061a4cc1d92b4300818fdfe55a8e2e1b9cceb06ae9677a756df53159849e3d6c",
+        "type": "announcement",
+        "signals": [],
+        "models": [],
+        "url": "https://docs.factory.com/changelog/release-notes.md"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "c3b83de0ece5af50ec5a4f3960795dedc16b491734a308cb8b43702a75b17b44",
+      "sourceId": "factory-releases",
+      "channel": "Factory",
+      "kind": "announcement",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://docs.factory.com/changelog/release-notes.md",
+      "before": null,
+      "after": {
+        "key": "text:bf4806e8332d93c19223453a5388e45f4454b8392ae565261ef1eee5dc07995d",
+        "hash": "bf4806e8332d93c19223453a5388e45f4454b8392ae565261ef1eee5dc07995d",
+        "type": "announcement",
+        "signals": [],
+        "models": [
+          "swers",
+          "swer now shows Next question instead of only accepting Enter"
+        ],
+        "url": "https://docs.factory.com/changelog/release-notes.md"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "96c72f10ffde4c63a42c0f4ad8189995c98532b58fff455c3f62495e2461209c",
+      "sourceId": "factory-releases",
+      "channel": "Factory",
+      "kind": "announcement",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://docs.factory.com/changelog/release-notes.md",
+      "before": null,
+      "after": {
+        "key": "text:512180ef6b25c21a7feea6fbfec6d56791217c5a51d477c34ebcae7234d5af2c",
+        "hash": "512180ef6b25c21a7feea6fbfec6d56791217c5a51d477c34ebcae7234d5af2c",
+        "type": "announcement",
+        "signals": [],
+        "models": [
+          "ling it invalid"
+        ],
+        "url": "https://docs.factory.com/changelog/release-notes.md"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "fce8e46e72f5e4b58b05649d2565470f11517067ad2334f0aeea60f4f84f79d6",
+      "sourceId": "cursor-pricing",
+      "channel": "Cursor",
+      "kind": "announcement",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://cursor.com/docs/models-and-pricing",
+      "before": null,
+      "after": {
+        "key": "text:66224fe28d45c48b233777a52ebd026890cda62a68af98931f75ad2702f3ac9e",
+        "hash": "66224fe28d45c48b233777a52ebd026890cda62a68af98931f75ad2702f3ac9e",
+        "type": "announcement",
+        "signals": [],
+        "models": [
+          "Claude Fable 5.2"
+        ],
+        "url": "https://cursor.com/docs/models-and-pricing"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "a2d4ef50f2ae9b453d6da9a918ea5d942b653748ff4f8bad02f7fbac740a2d10",
+      "sourceId": "cursor-pricing",
+      "channel": "Cursor",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://cursor.com/docs/models-and-pricing",
+      "before": null,
+      "after": {
+        "key": "row:2:4fe18c3b7d33:Claude Fable 5.2:0",
+        "type": "table-row",
+        "label": "Claude Fable 5.2",
+        "heading": "Model pricing",
+        "columns": [
+          "Name",
+          "Input",
+          "Cache Write",
+          "Cache Read",
+          "Output",
+          "US Data Residency"
+        ],
+        "cells": [
+          "Claude Fable 5.2",
+          "$ 8",
+          "$ 10",
+          "$ 0.2",
+          "$ 40",
+          "Yes"
+        ],
+        "hash": "87507201b7b5413d688ee566ed1b8e2b8714393c7ce82f150867948d038cec22",
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://cursor.com/docs/models-and-pricing"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "420dc39732c4dd988f18e833528f34d706c2c0c776e48f33ec23939157625288",
+      "sourceId": "cursor-pricing",
+      "channel": "Cursor",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://cursor.com/docs/models-and-pricing",
+      "before": null,
+      "after": {
+        "key": "row:5:4fe18c3b7d33:Claude Fable 5.2:0",
+        "type": "table-row",
+        "label": "Claude Fable 5.2",
+        "heading": "Model pricing",
+        "columns": [
+          "Name",
+          "Input",
+          "Cache Write",
+          "Cache Read",
+          "Output",
+          "US Data Residency"
+        ],
+        "cells": [
+          "Claude Fable 5.2",
+          "$ 8",
+          "$ 10",
+          "$ 0.2",
+          "$ 40",
+          "Yes"
+        ],
+        "hash": "87507201b7b5413d688ee566ed1b8e2b8714393c7ce82f150867948d038cec22",
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://cursor.com/docs/models-and-pricing"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "e2558fa068991fc51a8bfc718404d9c95ae8a6fde455ef8ce479ac686aeb5d1b",
+      "sourceId": "cursor-pricing",
+      "channel": "Cursor",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://cursor.com/docs/models-and-pricing",
+      "before": {
+        "key": "row:2:4fe18c3b7d33:Claude Fable 5.1:0",
+        "type": "table-row",
+        "label": "Claude Fable 5.1",
+        "heading": "Model pricing",
+        "columns": [
+          "Name",
+          "Input",
+          "Cache Write",
+          "Cache Read",
+          "Output",
+          "US Data Residency"
+        ],
+        "cells": [
+          "Claude Fable 5.1",
+          "$ 10",
+          "$ 12.5",
+          "$ 0.25",
+          "$ 50",
+          "Yes"
+        ],
+        "hash": "7721b797a3bee833fe937351666505f469549510046752559277a6a2fbccecba",
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://cursor.com/docs/models-and-pricing"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "f7c062ae0085cb5a776dc6300d7933224c93bf1c70195870c87ec307f7091947",
+      "sourceId": "cursor-pricing",
+      "channel": "Cursor",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://cursor.com/docs/models-and-pricing",
+      "before": {
+        "key": "row:5:4fe18c3b7d33:Claude Fable 5.1:0",
+        "type": "table-row",
+        "label": "Claude Fable 5.1",
+        "heading": "Model pricing",
+        "columns": [
+          "Name",
+          "Input",
+          "Cache Write",
+          "Cache Read",
+          "Output",
+          "US Data Residency"
+        ],
+        "cells": [
+          "Claude Fable 5.1",
+          "$ 10",
+          "$ 12.5",
+          "$ 0.25",
+          "$ 50",
+          "Yes"
+        ],
+        "hash": "7721b797a3bee833fe937351666505f469549510046752559277a6a2fbccecba",
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://cursor.com/docs/models-and-pricing"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "63bd4dc06ccc42fb3103f94ea57c38de4b72c0054565e6cbf308a51a4aecefff",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "terms-changed",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": {
+        "key": "row:0:f588296512dc:定价:0",
+        "type": "table-row",
+        "label": "定价",
+        "heading": "套餐档位与定价",
+        "columns": [
+          "",
+          "Lite 套餐",
+          "Essential 套餐",
+          "Standard 套餐",
+          "Pro 套餐"
+        ],
+        "cells": [
+          "定价",
+          "39 元/月 新用户限时价 19.5 元/月",
+          "79 元/月 新用户限时价 39.5 元/月",
+          "139 元/月",
+          "499 元/月"
+        ],
+        "hash": "ce7477acb987a6890fbf9d1120331d5f452d56e542e507d0247599db32801382",
+        "signals": [],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "after": {
+        "key": "row:0:f588296512dc:定价:0",
+        "type": "table-row",
+        "label": "定价",
+        "heading": "套餐档位与定价",
+        "columns": [
+          "",
+          "Lite 套餐",
+          "Essential 套餐",
+          "Standard 套餐",
+          "Pro 套餐"
+        ],
+        "cells": [
+          "定价",
+          "39 元/月 新用户限时价 19.5 元/月",
+          "79 元/月 新用户限时价 39.5 元/月",
+          "139 元/月",
+          "312 元/月"
+        ],
+        "hash": "c9b3ae32f68dab6d8e87e666354c2277f3c0e29d10d464b1fe5aab689a40d76d",
+        "signals": [],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "b77a54c4066b7da56d5e5297b66dc18de7da19dd80040805d849188a849b319d",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "terms-changed",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": {
+        "key": "row:0:f588296512dc:每月限额:0",
+        "type": "table-row",
+        "label": "每月限额",
+        "heading": "套餐档位与定价",
+        "columns": [
+          "",
+          "Lite 套餐",
+          "Essential 套餐",
+          "Standard 套餐",
+          "Pro 套餐"
+        ],
+        "cells": [
+          "每月限额",
+          "11,500 Credits",
+          "25,500 Credits",
+          "45,000 Credits",
+          "180,000 Credits"
+        ],
+        "hash": "cc148cd69343d591efcb5111dfe5ff4c3e84cba5db0f01b1a1ab24c3b4ad08a6",
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "after": {
+        "key": "row:0:f588296512dc:每月限额:0",
+        "type": "table-row",
+        "label": "每月限额",
+        "heading": "套餐档位与定价",
+        "columns": [
+          "",
+          "Lite 套餐",
+          "Essential 套餐",
+          "Standard 套餐",
+          "Pro 套餐"
+        ],
+        "cells": [
+          "每月限额",
+          "20,000 Credits",
+          "45,000 Credits",
+          "80,000 Credits",
+          "200,000 Credits"
+        ],
+        "hash": "5382cd51951f2e0083c6b62083b0edb5a15c6b6192d02ff9420c0b14d51f084f",
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "67bd0cebf68f535bd8bf93b8cfedbde79e304156c5ce6e7ef321e6f9f7c5e557",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "announcement",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://www.aliyun.com/notice/118815",
+      "before": null,
+      "after": {
+        "key": "text:4f1e6542516c0608136fc48e416272f08268009ecc773c31c4623a9d862b16b3",
+        "hash": "4f1e6542516c0608136fc48e416272f08268009ecc773c31c4623a9d862b16b3",
+        "type": "announcement",
+        "signals": [
+          "pricing"
+        ],
+        "models": [],
+        "url": "https://www.aliyun.com/notice/118815"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "bda0a4033aee6d2d5a13092da3e5c5335ee725b6a1b5302bbc0471e8a7b6c1d5",
+      "sourceId": "opencode-social",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://x.com/opencode/status/2119982381021192354",
+      "before": null,
+      "after": {
+        "key": "post:2119982381021192354",
+        "type": "announcement",
+        "hash": "99a1a641af99993c338d84f944a949542975cecd730313d24476880442f11dff",
+        "signals": [
+          "promotion"
+        ],
+        "models": [
+          "MiniMax M3.1 Flash is now free in OpenCode "
+        ],
+        "url": "https://x.com/opencode/status/2119982381021192354",
+        "relevant": true
+      },
+      "status": "pending"
+    },
+    {
+      "id": "a3a4ffafceb8ecdfa00f39d4b9de4a1df6774f61170eb57147d8b579fc825ec6",
+      "sourceId": "opencode-social",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://x.com/opencode/status/2119860072134353308",
+      "before": null,
+      "after": {
+        "key": "post:2119860072134353308",
+        "type": "announcement",
+        "hash": "fc8fd423d7c1555fca7f404c721932626337c8ad8f6cc01f657eb02781416cec",
+        "signals": [
+          "availability"
+        ],
+        "models": [
+          "Muse Ember from Meta is now available in OpenCode "
+        ],
+        "url": "https://x.com/opencode/status/2119860072134353308",
+        "relevant": true
+      },
+      "status": "pending"
+    },
+    {
+      "id": "e6b4202017299f889c602e30a8bd4c9ea10c79be47cbd5215bd64d615ddabcf9",
+      "sourceId": "opencode-social",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://x.com/opencode/status/2119789096503746751",
+      "before": null,
+      "after": {
+        "key": "post:2119789096503746751",
+        "type": "announcement",
+        "hash": "96288e83aa28cce0e9ee2386188006f9a75ff3886272f1e9e460eff4f9c83640",
+        "signals": [
+          "promotion"
+        ],
+        "models": [],
+        "url": "https://x.com/opencode/status/2119789096503746751",
+        "relevant": true
+      },
+      "status": "pending"
+    },
+    {
+      "id": "b557099205c9f01115aed0439a0a5572f86922c8bbd11e1d42cf0760968ae419",
+      "sourceId": "command-code-social",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://x.com/CommandCodeAI/status/2120012859812065735",
+      "before": null,
+      "after": {
+        "key": "post:2120012859812065735",
+        "type": "announcement",
+        "hash": "9fdd33d2a05186a26fe930b3579496410a08e698d59417120d2e0148b9822891",
+        "signals": [
+          "version",
+          "pricing"
+        ],
+        "models": [
+          "DeepSeek V4.1 Flash 1017",
+          "GLM-5.3 Flash"
+        ],
+        "url": "https://x.com/CommandCodeAI/status/2120012859812065735",
+        "relevant": true
+      },
+      "status": "pending"
+    },
+    {
+      "id": "93a2974d841ec237bc7174463636d486716a647dc1126b25831109bf67fd52ea",
+      "sourceId": "command-code-social",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://x.com/CommandCodeAI/status/2119884096944144443",
+      "before": null,
+      "after": {
+        "key": "post:2119884096944144443",
+        "type": "announcement",
+        "hash": "9eb718d717bb66e636fa221d399e41893ad500dccb2d8050b0d0e3d0ce38921a",
+        "signals": [
+          "pricing"
+        ],
+        "models": [
+          "Muse Ember is now live in Command Code on all plans. ",
+          "GPT-6 Luna "
+        ],
+        "url": "https://x.com/CommandCodeAI/status/2119884096944144443",
+        "relevant": true
+      },
+      "status": "pending"
+    },
+    {
+      "id": "7785ec5e1ebb89789f3428d39b94fde4fb9716879f1b46ed91802e2c51ddae96",
+      "sourceId": "command-code-social",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-10T07:32:24.800Z",
+      "url": "https://x.com/CommandCodeAI/status/2119818742750470571",
+      "before": null,
+      "after": {
+        "key": "post:2119818742750470571",
+        "type": "announcement",
+        "hash": "be4ac77d7ef393e684177ab8b663396cc533750ef05e5abcf5add95bc4d80fd1",
+        "signals": [
+          "version",
+          "pricing",
+          "promotion",
+          "availability"
+        ],
+        "models": [
+          "DeepSeek V4.1 Flash 1017 Ultrafast ",
+          "GLM 5.3 Flash ",
+          "Ling 3.1 Flash 1019 ",
+          "Crouton Alpha "
+        ],
+        "url": "https://x.com/CommandCodeAI/status/2119818742750470571",
+        "relevant": true
+      },
+      "status": "pending"
     }
   ],
   "resolvedCount": 0,
@@ -6629,22 +10647,22 @@
       "channel": "OpenCode",
       "url": "https://opencode.ai/v2/docs/console/go/",
       "kind": "tables",
-      "attemptedAt": "2026-11-09T06:53:41.572Z",
-      "lastSuccessAt": "2026-11-09T06:53:41.572Z",
+      "attemptedAt": "2026-11-10T07:32:24.800Z",
+      "lastSuccessAt": "2026-11-10T07:32:24.800Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 402
+      "recordCount": 404
     },
     {
       "id": "opencode-releases",
       "channel": "OpenCode",
       "url": "https://opencode.ai/changelog",
       "kind": "document",
-      "attemptedAt": "2026-11-09T06:53:41.572Z",
+      "attemptedAt": "2026-11-10T07:32:24.800Z",
       "lastSuccessAt": "2026-11-06T07:00:45.218Z",
       "status": "failed",
-      "consecutiveFailures": 3,
+      "consecutiveFailures": 4,
       "retrieval": "http",
       "error": "Table coverage dropped by more than 40%; retaining last successful snapshot",
       "recordCount": 190
@@ -6654,71 +10672,72 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/go",
       "kind": "tables",
-      "attemptedAt": "2026-11-09T06:53:41.572Z",
-      "lastSuccessAt": "2026-11-09T06:53:41.572Z",
+      "attemptedAt": "2026-11-10T07:32:24.800Z",
+      "lastSuccessAt": "2026-11-10T07:32:24.800Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 213
+      "recordCount": 215
     },
     {
       "id": "command-code-goat",
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/goat",
       "kind": "tables",
-      "attemptedAt": "2026-11-09T06:53:41.572Z",
-      "lastSuccessAt": "2026-11-09T06:53:41.572Z",
+      "attemptedAt": "2026-11-10T07:32:24.800Z",
+      "lastSuccessAt": "2026-11-10T07:32:24.800Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 260
+      "recordCount": 262
     },
     {
       "id": "command-code-pro",
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/pro",
       "kind": "tables",
-      "attemptedAt": "2026-11-09T06:53:41.572Z",
-      "lastSuccessAt": "2026-11-09T06:53:41.572Z",
+      "attemptedAt": "2026-11-10T07:32:24.800Z",
+      "lastSuccessAt": "2026-11-10T07:32:24.800Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 310
+      "recordCount": 312
     },
     {
       "id": "command-code-max",
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/max",
       "kind": "tables",
-      "attemptedAt": "2026-11-09T06:53:41.572Z",
-      "lastSuccessAt": "2026-11-09T06:53:41.572Z",
+      "attemptedAt": "2026-11-10T07:32:24.800Z",
+      "lastSuccessAt": "2026-11-10T07:32:24.800Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 267
+      "recordCount": 268
     },
     {
       "id": "command-code-models",
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/reference/cli/models",
       "kind": "tables",
-      "attemptedAt": "2026-11-09T06:53:41.572Z",
-      "lastSuccessAt": "2026-11-09T06:53:41.572Z",
+      "attemptedAt": "2026-11-10T07:32:24.800Z",
+      "lastSuccessAt": "2026-11-10T07:32:24.800Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 126
+      "recordCount": 127
     },
     {
       "id": "command-code-terms",
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/resources/pricing-limits",
       "kind": "tables",
-      "attemptedAt": "2026-11-09T06:53:41.572Z",
+      "attemptedAt": "2026-11-10T07:32:24.800Z",
       "lastSuccessAt": "2026-11-09T06:53:41.572Z",
-      "status": "checked",
-      "consecutiveFailures": 0,
+      "status": "failed",
+      "consecutiveFailures": 1,
       "retrieval": "http",
+      "error": "Source structure changed: 37 records, expected at least 40; fallback: Source structure changed: 37 records, expected at least 40",
       "recordCount": 439
     },
     {
@@ -6726,32 +10745,32 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/changelog",
       "kind": "document",
-      "attemptedAt": "2026-11-09T06:53:41.572Z",
-      "lastSuccessAt": "2026-11-09T06:53:41.572Z",
+      "attemptedAt": "2026-11-10T07:32:24.800Z",
+      "lastSuccessAt": "2026-11-10T07:32:24.800Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 421
+      "recordCount": 424
     },
     {
       "id": "ollama-pricing",
       "channel": "Ollama",
       "url": "https://ollama.com/pricing",
       "kind": "tables",
-      "attemptedAt": "2026-11-09T06:53:41.572Z",
-      "lastSuccessAt": "2026-11-09T06:53:41.572Z",
+      "attemptedAt": "2026-11-10T07:32:24.800Z",
+      "lastSuccessAt": "2026-11-10T07:32:24.800Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 77
+      "recordCount": 74
     },
     {
       "id": "ollama-announcements",
       "channel": "Ollama",
       "url": "https://ollama.com/blog",
       "kind": "document",
-      "attemptedAt": "2026-11-09T06:53:41.572Z",
-      "lastSuccessAt": "2026-11-09T06:53:41.572Z",
+      "attemptedAt": "2026-11-10T07:32:24.800Z",
+      "lastSuccessAt": "2026-11-10T07:32:24.800Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -6762,20 +10781,20 @@
       "channel": "Factory",
       "url": "https://docs.factory.com/models.md",
       "kind": "tables",
-      "attemptedAt": "2026-11-09T06:53:41.572Z",
-      "lastSuccessAt": "2026-11-09T06:53:41.572Z",
+      "attemptedAt": "2026-11-10T07:32:24.800Z",
+      "lastSuccessAt": "2026-11-10T07:32:24.800Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 90
+      "recordCount": 91
     },
     {
       "id": "factory-plans",
       "channel": "Factory",
       "url": "https://docs.factory.com/pricing/individuals.md",
       "kind": "document",
-      "attemptedAt": "2026-11-09T06:53:41.572Z",
-      "lastSuccessAt": "2026-11-09T06:53:41.572Z",
+      "attemptedAt": "2026-11-10T07:32:24.800Z",
+      "lastSuccessAt": "2026-11-10T07:32:24.800Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -6786,20 +10805,20 @@
       "channel": "Factory",
       "url": "https://docs.factory.com/changelog/release-notes.md",
       "kind": "document",
-      "attemptedAt": "2026-11-09T06:53:41.572Z",
-      "lastSuccessAt": "2026-11-09T06:53:41.572Z",
+      "attemptedAt": "2026-11-10T07:32:24.800Z",
+      "lastSuccessAt": "2026-11-10T07:32:24.800Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 703
+      "recordCount": 706
     },
     {
       "id": "cursor-pricing",
       "channel": "Cursor",
       "url": "https://cursor.com/docs/models-and-pricing",
       "kind": "tables",
-      "attemptedAt": "2026-11-09T06:53:41.572Z",
-      "lastSuccessAt": "2026-11-09T06:53:41.572Z",
+      "attemptedAt": "2026-11-10T07:32:24.800Z",
+      "lastSuccessAt": "2026-11-10T07:32:24.800Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -6810,8 +10829,8 @@
       "channel": "Cursor",
       "url": "https://cursor.com/changelog",
       "kind": "document",
-      "attemptedAt": "2026-11-09T06:53:41.572Z",
-      "lastSuccessAt": "2026-11-09T06:53:41.572Z",
+      "attemptedAt": "2026-11-10T07:32:24.800Z",
+      "lastSuccessAt": "2026-11-10T07:32:24.800Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -6822,8 +10841,8 @@
       "channel": "Devin",
       "url": "https://docs.devin.ai/release-notes/overview",
       "kind": "document",
-      "attemptedAt": "2026-11-09T06:53:41.572Z",
-      "lastSuccessAt": "2026-11-09T06:53:41.572Z",
+      "attemptedAt": "2026-11-10T07:32:24.800Z",
+      "lastSuccessAt": "2026-11-10T07:32:24.800Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -6834,8 +10853,8 @@
       "channel": "Alibaba",
       "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan",
       "kind": "tables",
-      "attemptedAt": "2026-11-09T06:53:41.572Z",
-      "lastSuccessAt": "2026-11-09T06:53:41.572Z",
+      "attemptedAt": "2026-11-10T07:32:24.800Z",
+      "lastSuccessAt": "2026-11-10T07:32:24.800Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -6846,8 +10865,8 @@
       "channel": "Alibaba",
       "url": "https://help.aliyun.com/zh/model-studio/coding-plan",
       "kind": "tables",
-      "attemptedAt": "2026-11-09T06:53:41.572Z",
-      "lastSuccessAt": "2026-11-09T06:53:41.572Z",
+      "attemptedAt": "2026-11-10T07:32:24.800Z",
+      "lastSuccessAt": "2026-11-10T07:32:24.800Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -6858,8 +10877,8 @@
       "channel": "Alibaba",
       "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
       "kind": "tables",
-      "attemptedAt": "2026-11-09T06:53:41.572Z",
-      "lastSuccessAt": "2026-11-09T06:53:41.572Z",
+      "attemptedAt": "2026-11-10T07:32:24.800Z",
+      "lastSuccessAt": "2026-11-10T07:32:24.800Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -6870,8 +10889,8 @@
       "channel": "OpenCode",
       "url": "https://x.com/opencode",
       "kind": "social",
-      "attemptedAt": "2026-11-09T06:53:41.572Z",
-      "lastSuccessAt": "2026-11-09T06:53:41.572Z",
+      "attemptedAt": "2026-11-10T07:32:24.800Z",
+      "lastSuccessAt": "2026-11-10T07:32:24.800Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "official-oembed; discovery may use mirror",
@@ -6882,13 +10901,13 @@
       "channel": "Command Code",
       "url": "https://x.com/CommandCodeAI",
       "kind": "social",
-      "attemptedAt": "2026-11-09T06:53:41.572Z",
-      "lastSuccessAt": "2026-11-09T06:53:41.572Z",
+      "attemptedAt": "2026-11-10T07:32:24.800Z",
+      "lastSuccessAt": "2026-11-10T07:32:24.800Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "official-oembed; discovery may use mirror",
       "recordCount": 12
     }
   ],
-  "failedSources": 1
+  "failedSources": 2
 }
