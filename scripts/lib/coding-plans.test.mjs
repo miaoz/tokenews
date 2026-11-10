@@ -108,3 +108,22 @@ test('Checkpoint upgrades remove stale mappings while preserving unrelated and o
   assert.ok(source.points.find(p=>p.id==='opencode_go::deepseek-v4.1-flash').model==='deepseek-v4.1-flash');
   assert.ok(merged.points.find(p=>p.id==='command_code_goat::deepseek-v4.1-flash-fast').model==='deepseek-v4.1-flash-fast');
 });
+
+test('New upstream OpenCode Kimi and MiniMax rows are explicitly reviewed and archived without weakening guards',()=>{
+  for(const model of ['kimi-k3.1-pro','minimax-m3.1-flash']) {
+    const id=`opencode_go::${model}`;
+    const entry=manifest.entries.find(e=>e.plan==='opencode_go'&&e.model===model);
+    const original=base.points.find(p=>p.id===id);
+    assert.ok(original,`Expected synced upstream sample: ${id}`);
+    assert.ok(entry.replaces.includes(id));
+    assert.equal(result.points.filter(p=>p.id===id).length,1);
+    assert.equal(result.points.find(p=>p.id===id).price_origin,'maintained-plan');
+    assert.deepEqual(result.supersededPoints.find(p=>p.id===id),original);
+    const unreviewed=structuredClone(manifest);
+    unreviewed.entries.find(e=>e.plan==='opencode_go'&&e.model===model).replaces=[];
+    assert.throws(()=>mergeCodingPlans(base,unreviewed),/overwrite/);
+    const newer=structuredClone(base);
+    newer.points.find(p=>p.id===id).data_date='2026-11-05';
+    assert.throws(()=>mergeCodingPlans(newer,manifest),/Newer upstream/);
+  }
+});

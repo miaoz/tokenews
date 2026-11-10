@@ -152,7 +152,10 @@
         "cache": 0.2,
         "cacheWrite": 2.0
       },
-      "monthlyCreditsUsd": 15.0
+      "monthlyCreditsUsd": 15.0,
+      "replaces": [
+        "opencode_go::kimi-k3.1-pro"
+      ]
     },
     {
       "plan": "opencode_go",
@@ -191,7 +194,10 @@
         "output": 0.6,
         "cache": 0.015
       },
-      "monthlyCreditsUsd": 20.0
+      "monthlyCreditsUsd": 20.0,
+      "replaces": [
+        "opencode_go::minimax-m3.1-flash"
+      ]
     },
     {
       "plan": "opencode_go",
@@ -4268,11 +4274,38 @@
         "en": "Official November 3 announcement: one-week free stealth preview, regional restrictions, 1M context. No permanent free quota or identity with another scored model is assumed.",
         "zh": "11 月 3 日官方公告：一周免费匿名预览、限地区、1M 上下文。不推定永久免费额度，也不与其他有榜单成绩的模型合并。"
       }
+    },
+    {
+      "channel": "Anthropic",
+      "models": [
+        "claude-fable-5.2"
+      ],
+      "status": "quota-unverified",
+      "checkedAt": "2026-11-10",
+      "source": "https://support.claude.com/en/articles/15424964-claude-fable-models-on-your-plan",
+      "note": {
+        "en": "Fable 5.2: Max/Ultra and Team Premium share an allowance capped at 50% of the weekly limit; Pro and Team Standard normally use credits. A launch offer temporarily provides the 50% weekly allowance on Pro/Team Standard through November 16, 2026, 23:59 PT. These are plan limits, not a verified monthly token quota; no subscription price point or benchmark is inferred.",
+        "zh": "Fable 5.2：Max／Ultra 与 Team Premium 共享最多周限额 50% 的额度；Pro 和 Team Standard 通常使用 credits。发布优惠临时为 Pro／Team Standard 提供 50% 周额度，截至太平洋时间 2026 年 11 月 16 日 23:59。这些是套餐限制，不是已核实的月 token 额度，不据此虚构订阅价格点或榜单成绩。"
+      }
+    },
+    {
+      "channel": "Anthropic",
+      "models": [
+        "claude-mythos-5.2"
+      ],
+      "status": "verification-required",
+      "checkedAt": "2026-11-10",
+      "source": "https://support.claude.com/en/articles/14604842-cyber-verification-program",
+      "note": {
+        "en": "Mythos 5.2 requires Cyber Verification approval. Eligible individuals and organizations may apply; approved Pro users use credits, while approved Max/Ultra users share the relevant allowance. A paid subscription alone does not establish access. No monthly token quota or benchmark is inferred.",
+        "zh": "Mythos 5.2 须获网络安全验证批准，符合条件的个人与组织可申请；获批 Pro 用户使用 credits，获批 Max／Ultra 用户共享相应额度。付费订阅本身不代表已获访问权限，不推定月 token 额度或榜单成绩。"
+      }
     }
   ],
   "evidenceFiles": [
     "evidence-2026-11-04.json",
     "evidence-2026-11-04-1017.json",
-    "evidence-2026-11-04-02.json"
+    "evidence-2026-11-04-02.json",
+    "evidence-2026-11-10.json"
   ]
 }

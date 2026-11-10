@@ -1060,10 +1060,14 @@ test("Real prices keep full precision for ordering; summaries stay short, detail
   const s = { ...defaultState(), view: "price" as const, sort: "price", direction: "asc" as const };
   const ordered = tableRows(rowsFor(data, s), s).map((r) => r.point.real_usd_per_mtok);
   ordered.forEach((v, i) => i && assert.ok(v >= ordered[i - 1], "ascending by exact price"));
-  const plus = data.points.find((p) => p.id === "chatgpt_plus::gpt-5.6-luna")!;
-  const pro5 = data.points.find((p) => p.id === "chatgpt_pro_5x::gpt-5.6-luna")!;
-  assert.equal(price(plus.real_usd_per_mtok), price(pro5.real_usd_per_mtok));
-  assert.notEqual(plus.real_usd_per_mtok, pro5.real_usd_per_mtok);
+  // Keep the near-tie regression independent of upstream plan retirements.
+  const seed = data.points.find((p) => p.real_usd_per_mtok > 0)!;
+  const near = { ...seed, id: "fixture-near", real_usd_per_mtok: 0.11574074 };
+  const dear = { ...seed, id: "fixture-dear", real_usd_per_mtok: 0.11574075 };
+  assert.equal(price(near.real_usd_per_mtok), price(dear.real_usd_per_mtok));
+  assert.notEqual(near.real_usd_per_mtok, dear.real_usd_per_mtok);
+  const fixture = { ...data, points: [dear, near], mappings: [] };
+  assert.deepEqual(tableRows(rowsFor(fixture, s), s).map(r => r.point.id), [near.id, dear.id]);
 });
 test("Ranking bars sit on a fixed decade-aligned log axis, independent of filters", () => {
   for (const view of ["allowance", "price"] as const) {

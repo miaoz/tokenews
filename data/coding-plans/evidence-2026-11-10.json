@@ -1,0 +1,38 @@
+{
+  "checkedAt": "2026-11-10",
+  "scope": "Review the two upstream OpenCode ID collisions and the new Claude 5.2 release; retain upstream samples and do not infer subscription token quotas.",
+  "upstreamCommit": "2599b7ad743a",
+  "replacementReview": [
+    {
+      "id": "opencode_go::kimi-k3.1-pro",
+      "upstreamDataDate": "2026-10-30",
+      "maintainedReviewDate": "2026-11-04",
+      "decision": "Explicitly supersede the older rounded upstream sample with the existing reviewed exact credit calculation; preserve the original sample in superseded-points.json.",
+      "source": "https://opencode.ai/v2/docs/console/go/"
+    },
+    {
+      "id": "opencode_go::minimax-m3.1-flash",
+      "upstreamDataDate": "2026-10-30",
+      "maintainedReviewDate": "2026-11-04",
+      "decision": "Explicitly supersede the older rounded upstream sample with the existing reviewed exact credit calculation; preserve the original sample in superseded-points.json.",
+      "source": "https://opencode.ai/v2/docs/console/go/"
+    }
+  ],
+  "claudeRelease": {
+    "announcedAt": "2026-11-09",
+    "apiIds": [
+      "claude-fable-5-2",
+      "claude-mythos-5-2"
+    ],
+    "sources": [
+      "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+      "https://platform.claude.com/docs/en/about-claude/pricing",
+      "https://platform.claude.com/docs/en/models/fable-5-2/overview",
+      "https://platform.claude.com/docs/en/models/mythos-5-2/overview",
+      "https://support.claude.com/en/articles/15424964-claude-fable-models-on-your-plan",
+      "https://support.claude.com/en/articles/17506494-claude-fable-5-2-launch-offers",
+      "https://support.claude.com/en/articles/14604842-cyber-verification-program"
+    ],
+    "decision": "Publish independently reviewed model identities, official API rates, subscription availability and verification caveats. Latest upstream has neither model; no existing quota or benchmark score is copied to them."
+  }
+}

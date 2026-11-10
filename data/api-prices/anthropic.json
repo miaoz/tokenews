@@ -80,6 +80,245 @@
       "additionalSources": [
         "https://platform.claude.com/docs/en/about-claude/pricing"
       ]
+    },
+    {
+      "id": "claude-fable-5.2",
+      "source": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "checkedAt": "2026-11-10",
+      "defaultVariant": "standard-5m",
+      "variants": [
+        {
+          "id": "standard-5m",
+          "label": {
+            "en": "Standard · 5m cache",
+            "zh": "标准档 · 5 分钟缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 8,
+            "cachedInput": 0.2,
+            "cacheWrite": 10,
+            "output": 40
+          }
+        },
+        {
+          "id": "standard-1h",
+          "label": {
+            "en": "Standard · 1h cache",
+            "zh": "标准档 · 1 小时缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 8,
+            "cachedInput": 0.2,
+            "cacheWrite": 16,
+            "output": 40
+          }
+        },
+        {
+          "id": "us-only-5m",
+          "label": {
+            "en": "US-only · 5m cache",
+            "zh": "仅限美国推理 · 5 分钟缓存"
+          },
+          "currency": "USD",
+          "region": "US",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 8.8,
+            "cachedInput": 0.22,
+            "cacheWrite": 11,
+            "output": 44
+          }
+        },
+        {
+          "id": "us-only-1h",
+          "label": {
+            "en": "US-only · 1h cache",
+            "zh": "仅限美国推理 · 1 小时缓存"
+          },
+          "currency": "USD",
+          "region": "US",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 8.8,
+            "cachedInput": 0.22,
+            "cacheWrite": 17.6,
+            "output": 44
+          }
+        },
+        {
+          "id": "batch",
+          "label": {
+            "en": "Batch",
+            "zh": "批处理"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "batch",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 4,
+            "cachedInput": null,
+            "output": 20
+          },
+          "notes": {
+            "en": "Batch input/output rates; cache charges are not included in this row.",
+            "zh": "本档为批处理输入／输出价，未计入缓存费用。"
+          }
+        }
+      ],
+      "notes": {
+        "en": "Claude API ID: claude-fable-5-2. Announced November 9, 2026; 1M context with no long-context premium. US-only inference adds 10% to every token category. Tools are charged separately. Fable is broadly available; Claude subscription eligibility and usage limits depend on the plan.",
+        "zh": "Claude API 调用 ID：claude-fable-5-2。2026 年 11 月 9 日发布，1M 上下文，无长上下文加价。仅限美国推理时各类 token 加收 10%，工具调用另计。Fable 广泛提供，但 Claude 订阅的可用方式及使用限制取决于套餐。"
+      },
+      "additionalSources": [
+        "https://platform.claude.com/docs/en/models/fable-5-2/overview",
+        "https://www.anthropic.com/claude-fable-and-mythos-5-2"
+      ]
+    },
+    {
+      "id": "claude-mythos-5.2",
+      "source": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "checkedAt": "2026-11-10",
+      "defaultVariant": "standard-5m",
+      "variants": [
+        {
+          "id": "standard-5m",
+          "label": {
+            "en": "Standard · 5m cache",
+            "zh": "标准档 · 5 分钟缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 8,
+            "cachedInput": 0.2,
+            "cacheWrite": 10,
+            "output": 40
+          }
+        },
+        {
+          "id": "standard-1h",
+          "label": {
+            "en": "Standard · 1h cache",
+            "zh": "标准档 · 1 小时缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 8,
+            "cachedInput": 0.2,
+            "cacheWrite": 16,
+            "output": 40
+          }
+        },
+        {
+          "id": "us-only-5m",
+          "label": {
+            "en": "US-only · 5m cache",
+            "zh": "仅限美国推理 · 5 分钟缓存"
+          },
+          "currency": "USD",
+          "region": "US",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 8.8,
+            "cachedInput": 0.22,
+            "cacheWrite": 11,
+            "output": 44
+          }
+        },
+        {
+          "id": "us-only-1h",
+          "label": {
+            "en": "US-only · 1h cache",
+            "zh": "仅限美国推理 · 1 小时缓存"
+          },
+          "currency": "USD",
+          "region": "US",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 8.8,
+            "cachedInput": 0.22,
+            "cacheWrite": 17.6,
+            "output": 44
+          }
+        },
+        {
+          "id": "batch",
+          "label": {
+            "en": "Batch",
+            "zh": "批处理"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "batch",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 4,
+            "cachedInput": null,
+            "output": 20
+          },
+          "notes": {
+            "en": "Batch input/output rates; cache charges are not included in this row.",
+            "zh": "本档为批处理输入／输出价，未计入缓存费用。"
+          }
+        }
+      ],
+      "notes": {
+        "en": "Claude API ID: claude-mythos-5-2. Announced November 9, 2026; 1M context with no long-context premium. US-only inference adds 10% to every token category. Tools are charged separately. Access requires approval through Anthropic’s Cyber Verification Program; eligible verified individuals as well as organizations can apply. This is not unrestricted general availability.",
+        "zh": "Claude API 调用 ID：claude-mythos-5-2。2026 年 11 月 9 日发布，1M 上下文，无长上下文加价。仅限美国推理时各类 token 加收 10%，工具调用另计。须通过 Anthropic 网络安全验证计划获得批准；符合条件的个人与组织均可申请，并非不受限的公开访问。"
+      },
+      "additionalSources": [
+        "https://platform.claude.com/docs/en/models/mythos-5-2/overview",
+        "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+        "https://support.claude.com/en/articles/14604842-cyber-verification-program"
+      ]
     }
   ]
 }

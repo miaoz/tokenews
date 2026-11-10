@@ -77,3 +77,21 @@ test("Shared API details expose every tier, conditions, write fees, source and v
   assert.equal(qwen.variants.find((v) => v.id === "singapore-explicit")!.rates.cachedInput, 0.17);
   assert.ok(renderToStaticMarkup(<ApiPriceDetails reference={qwen} lang="zh" />).includes("context-cache"));
 });
+
+test('Claude 5.2 releases publish exact API prices and access caveats without fabricated quotas or benchmarks',()=>{
+  for (const family of ['fable','mythos']) {
+    const id=`claude-${family}-5.2`;
+    assert.ok(data.models?.some(m=>m.id===id));
+    const ref=apiPriceReference(data,id)!;
+    assert.equal(ref.origin,'maintained');
+    assert.deepEqual(ref.variant.rates,{input:8,cachedInput:.2,cacheWrite:10,output:40});
+    const record=data.apiPrices!.models[id];
+    assert.equal(record.variants.find(v=>v.id==='standard-1h')!.rates.cacheWrite,16);
+    assert.equal(record.variants.find(v=>v.id==='us-only-5m')!.rates.input,8.8);
+    assert.equal(record.variants.find(v=>v.id==='batch')!.rates.output,20);
+    assert.ok(record.notes!.en.includes(`claude-${family}-5-2`));
+    assert.ok(!data.points.some(p=>p.model===id),'no unverified subscription or API workload point');
+    assert.ok(!data.configurations.some(c=>c.model===id),'no borrowed benchmark score');
+  }
+  assert.match(data.apiPrices!.models['claude-mythos-5.2'].notes!.en,/requires approval/);
+});

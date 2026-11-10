@@ -72,6 +72,13 @@
       "checkedAt": "2026-10-19"
     },
     {
+      "id": "claude-fable-5.2",
+      "name": "Claude Fable 5.2",
+      "maker": "Anthropic",
+      "source": "https://platform.claude.com/docs/en/models/fable-5-2/overview",
+      "checkedAt": "2026-11-10"
+    },
+    {
       "id": "claude-haiku-4.5-20251001",
       "name": "Claude Haiku 4.5 (20251001)",
       "maker": "Anthropic",
@@ -84,6 +91,13 @@
       "maker": "Anthropic",
       "source": "https://github.com/Fei2411/real-api-pricing/tree/0be92b7ce3edf7690672ce5217607032a4bc7c45",
       "checkedAt": "2026-10-19"
+    },
+    {
+      "id": "claude-mythos-5.2",
+      "name": "Claude Mythos 5.2",
+      "maker": "Anthropic",
+      "source": "https://platform.claude.com/docs/en/models/mythos-5-2/overview",
+      "checkedAt": "2026-11-10"
     },
     {
       "id": "claude-opus-4.1-20250805",
