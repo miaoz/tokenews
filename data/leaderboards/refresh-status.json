@@ -1,22 +1,23 @@
 {
   "version": 1,
-  "attemptedAt": "2026-11-09",
+  "attemptedAt": "2026-11-10",
   "results": [
     {
       "board": "aa_intelligence_index",
       "status": "retained-previous",
-      "error": "Identity review required: Tencent Hy4",
+      "error": "Identity review required: Claude Fable 5.2",
       "retainedCheckedAt": "2026-11-04"
     },
     {
       "board": "terminal_bench_4",
-      "status": "updated",
+      "status": "retained-previous",
+      "error": "Methodology review required: terminal_bench_4 4.1",
       "retainedCheckedAt": "2026-11-09"
     },
     {
       "board": "aa_terminal_bench_4",
       "status": "retained-previous",
-      "error": "Identity review required: Tencent Hy4",
+      "error": "Identity review required: Claude Fable 5.2",
       "retainedCheckedAt": "2026-11-04"
     },
     {
@@ -33,18 +34,19 @@
     },
     {
       "board": "aa_coding_agent_index",
-      "status": "updated",
+      "status": "retained-previous",
+      "error": "Identity review required: Muse Ember",
       "retainedCheckedAt": "2026-11-09"
     },
     {
       "board": "open_design_arena",
       "status": "updated",
-      "retainedCheckedAt": "2026-11-09"
+      "retainedCheckedAt": "2026-11-10"
     },
     {
       "board": "deepswe_1_1",
       "status": "updated",
-      "retainedCheckedAt": "2026-11-09"
+      "retainedCheckedAt": "2026-11-10"
     }
   ]
 }
