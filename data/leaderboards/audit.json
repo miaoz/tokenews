@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "checkedAt": "2026-11-10",
-  "baselineCommit": "f40a2d0d57327eed44f01f41ab3bb2505b6fc75d",
+  "checkedAt": "2026-11-11",
+  "baselineCommit": "2599b7ad743a94b3ab6d4ff8cdb4d8359ee6943c",
   "note": "Source audit is separate from publication. Unverified sources are never reported as unchanged. Identity-review rows may be aliases, historical models, or new releases. Scores across changed versions must not be mixed.",
   "results": [
     {
@@ -12,7 +12,7 @@
       "currentVersion": "5.0.1",
       "versionChanged": true,
       "baselineConfigurations": 152,
-      "observedConfigurations": 103,
+      "observedConfigurations": 104,
       "sourceUpdatedAt": null,
       "coverage": "Current non-deprecated configurations in the public page payload with a non-null score; not all historical releases.",
       "configurationReviewRequired": true,
@@ -21,8 +21,10 @@
       "costDifferences": [],
       "newConfigurations": [],
       "missingFromBoard": [
+        "apodex-1.1",
         "gemini-3.5-flash-lite",
         "granite-4.2-3b",
+        "claude-fable-5.2",
         "gpt-6.1-terra",
         "gemini-4-carbon",
         "k-exaone-2.0",
@@ -51,7 +53,6 @@
         "gpt-oss-120b"
       ],
       "unresolvedIdentities": [
-        "Claude Fable 5.2",
         "Muse Ember",
         "Tencent Hy4",
         "Agnes 2.5 Pro Theta",
@@ -70,6 +71,19 @@
           "source": "https://artificialanalysis.ai/models/claude-sonnet-5-5-medium",
           "model": "claude-sonnet-5.5",
           "status": "tracked-model"
+        },
+        {
+          "identity": "Apodex 1.1",
+          "sourceId": "apodex-1-1",
+          "label": "Apodex 1.1",
+          "score": 13.6712884627289,
+          "maker": "Apodex",
+          "releaseDate": "2026-08-30",
+          "releaseSlug": "apodex-1-1",
+          "effort": null,
+          "source": "https://artificialanalysis.ai/models/apodex-1-1",
+          "model": "apodex-1.1",
+          "status": "missing-from-board"
         },
         {
           "identity": "GPT-6.1 Sol",
@@ -133,8 +147,8 @@
           "releaseSlug": "claude-fable-5-2",
           "effort": "medium",
           "source": "https://artificialanalysis.ai/models/claude-fable-5-2-medium",
-          "model": null,
-          "status": "identity-review"
+          "model": "claude-fable-5.2",
+          "status": "missing-from-board"
         },
         {
           "identity": "GPT-6.1 Terra",
@@ -575,8 +589,8 @@
           "releaseSlug": "claude-fable-5-2",
           "effort": "max",
           "source": "https://artificialanalysis.ai/models/claude-fable-5-2",
-          "model": null,
-          "status": "identity-review"
+          "model": "claude-fable-5.2",
+          "status": "missing-from-board"
         },
         {
           "identity": "Grok 4.7",
@@ -705,8 +719,8 @@
           "releaseSlug": "claude-fable-5-2",
           "effort": "xhigh",
           "source": "https://artificialanalysis.ai/models/claude-fable-5-2-xhigh",
-          "model": null,
-          "status": "identity-review"
+          "model": "claude-fable-5.2",
+          "status": "missing-from-board"
         },
         {
           "identity": "Muse Ember",
@@ -1082,8 +1096,8 @@
           "releaseSlug": "claude-fable-5-2",
           "effort": "low",
           "source": "https://artificialanalysis.ai/models/claude-fable-5-2-low",
-          "model": null,
-          "status": "identity-review"
+          "model": "claude-fable-5.2",
+          "status": "missing-from-board"
         },
         {
           "identity": "Tencent Hy4",
@@ -1381,8 +1395,8 @@
           "releaseSlug": "claude-fable-5-2",
           "effort": "high",
           "source": "https://artificialanalysis.ai/models/claude-fable-5-2-high",
-          "model": null,
-          "status": "identity-review"
+          "model": "claude-fable-5.2",
+          "status": "missing-from-board"
         },
         {
           "identity": "Muse Wonder",
@@ -1408,7 +1422,7 @@
       "versionChanged": true,
       "baselineConfigurations": 38,
       "observedConfigurations": 35,
-      "sourceUpdatedAt": "2026-11-09T08:06:04.151519+00:00",
+      "sourceUpdatedAt": "2026-11-11T02:51:25.977111+00:00",
       "coverage": "All rows in the official leaderboard payload, including all effort levels.",
       "configurationReviewRequired": true,
       "comparisonSkippedForVersionChange": true,
@@ -2017,6 +2031,7 @@
         "apodex-1.1",
         "gemini-3.5-flash-lite",
         "granite-4.2-3b",
+        "claude-fable-5.2",
         "gpt-6.1-terra",
         "gemini-4-carbon",
         "qwen3.5-397b-a17b",
@@ -2084,7 +2099,6 @@
         "qwen3-coder-next"
       ],
       "unresolvedIdentities": [
-        "Claude Fable 5.2",
         "Muse Ember",
         "Tencent Hy4",
         "Agnes 2.5 Pro Theta",
@@ -2179,8 +2193,8 @@
           "releaseSlug": "claude-fable-5-2",
           "effort": "medium",
           "source": "https://artificialanalysis.ai/models/claude-fable-5-2-medium",
-          "model": null,
-          "status": "identity-review"
+          "model": "claude-fable-5.2",
+          "status": "missing-from-board"
         },
         {
           "identity": "GPT-6.1 Terra",
@@ -2777,8 +2791,8 @@
           "releaseSlug": "claude-fable-5-2",
           "effort": "max",
           "source": "https://artificialanalysis.ai/models/claude-fable-5-2",
-          "model": null,
-          "status": "identity-review"
+          "model": "claude-fable-5.2",
+          "status": "missing-from-board"
         },
         {
           "identity": "Grok 4.7",
@@ -2998,8 +3012,8 @@
           "releaseSlug": "claude-fable-5-2",
           "effort": "xhigh",
           "source": "https://artificialanalysis.ai/models/claude-fable-5-2-xhigh",
-          "model": null,
-          "status": "identity-review"
+          "model": "claude-fable-5.2",
+          "status": "missing-from-board"
         },
         {
           "identity": "NVIDIA Nemotron 3 Nano 30B A3B",
@@ -3635,8 +3649,8 @@
           "releaseSlug": "claude-fable-5-2",
           "effort": "low",
           "source": "https://artificialanalysis.ai/models/claude-fable-5-2-low",
-          "model": null,
-          "status": "identity-review"
+          "model": "claude-fable-5.2",
+          "status": "missing-from-board"
         },
         {
           "identity": "Tencent Hy4",
@@ -3986,8 +4000,8 @@
           "releaseSlug": "claude-fable-5-2",
           "effort": "high",
           "source": "https://artificialanalysis.ai/models/claude-fable-5-2-high",
-          "model": null,
-          "status": "identity-review"
+          "model": "claude-fable-5.2",
+          "status": "missing-from-board"
         },
         {
           "identity": "Muse Wonder",
@@ -4033,37 +4047,23 @@
       "costDifferences": [],
       "newConfigurations": [],
       "missingFromBoard": [
-        "muse-wonder",
         "mistral-large-4",
         "gemini-4-carbon",
-        "gpt-6.1-terra",
-        "muse-spark-open",
+        "muse-wonder",
         "deepseek-v4.1-flash-1017",
         "deepseek-v4.1-flash",
         "step-5-preview",
         "claude-haiku-5.5",
         "beam-1.0",
+        "gpt-6.1-terra",
         "muse-wonder-full",
+        "muse-spark-open",
         "gemini-4-argon"
       ],
       "unresolvedIdentities": [
         "Muse Ember"
       ],
       "rows": [
-        {
-          "identity": "Muse Wonder",
-          "sourceId": "52f72f7f3393c5edf92b32326e7a678d",
-          "label": "Muse Code - Muse Wonder (Max)",
-          "score": 51.9768236993592,
-          "harness": "Muse Code",
-          "router": false,
-          "effort": "max",
-          "fallback": false,
-          "meanCost": 8.04811220428196,
-          "medianCost": 4.21125933333333,
-          "model": "muse-wonder",
-          "status": "missing-from-board"
-        },
         {
           "identity": "Claude Sonnet 5.5",
           "sourceId": "9983e10d68576074ad63407d0ca81e4b",
@@ -4163,31 +4163,17 @@
           "status": "missing-from-board"
         },
         {
-          "identity": "GPT-6.1 Terra",
-          "sourceId": "b54e883be1cff7a6a43a737ee106011c",
-          "label": "Codex - GPT-6.1 Terra (Low)",
-          "score": 34.85683422396,
-          "harness": "Codex",
-          "router": false,
-          "effort": "low",
-          "fallback": false,
-          "meanCost": 0.198820047696481,
-          "medianCost": 0.133640266666667,
-          "model": "gpt-6.1-terra",
-          "status": "missing-from-board"
-        },
-        {
-          "identity": "Muse Spark Open",
-          "sourceId": "d843fce803ff4f84ababc47040306116",
-          "label": "Muse Code - Muse Spark Open (Xhigh)",
-          "score": 26.300702389486304,
+          "identity": "Muse Wonder",
+          "sourceId": "52f72f7f3393c5edf92b32326e7a678d",
+          "label": "Muse Code - Muse Wonder (Max)",
+          "score": 51.9768236993592,
           "harness": "Muse Code",
           "router": false,
-          "effort": "xhigh",
+          "effort": "max",
           "fallback": false,
-          "meanCost": 3.54324946048794,
-          "medianCost": 1.50236314166667,
-          "model": "muse-spark-open",
+          "meanCost": 8.04811220428196,
+          "medianCost": 4.21125933333333,
+          "model": "muse-wonder",
           "status": "missing-from-board"
         },
         {
@@ -4443,18 +4429,18 @@
           "status": "router-review"
         },
         {
-          "identity": "GLM-5.3",
-          "sourceId": "96d7404e06194027474a6cc3bb31c068",
-          "label": "Opencode - GLM-5.3 (Max)",
-          "score": 48.916169034430304,
-          "harness": "Opencode",
+          "identity": "Muse Spark Open",
+          "sourceId": "d843fce803ff4f84ababc47040306116",
+          "label": "Muse Code - Muse Spark Open (Xhigh)",
+          "score": 26.300702389486304,
+          "harness": "Muse Code",
           "router": false,
-          "effort": "max",
+          "effort": "xhigh",
           "fallback": false,
-          "meanCost": 5.23102713863476,
-          "medianCost": 2.68592986666667,
-          "model": "glm-5.3",
-          "status": "tracked-model"
+          "meanCost": 3.54324946048794,
+          "medianCost": 1.50236314166667,
+          "model": "muse-spark-open",
+          "status": "missing-from-board"
         },
         {
           "identity": "GitHub Copilot - Copilot Fusion (max)",
@@ -4485,6 +4471,20 @@
           "status": "missing-from-board"
         },
         {
+          "identity": "GLM-5.3",
+          "sourceId": "96d7404e06194027474a6cc3bb31c068",
+          "label": "Opencode - GLM-5.3 (Max)",
+          "score": 48.916169034430304,
+          "harness": "Opencode",
+          "router": false,
+          "effort": "max",
+          "fallback": false,
+          "meanCost": 5.23102713863476,
+          "medianCost": 2.68592986666667,
+          "model": "glm-5.3",
+          "status": "tracked-model"
+        },
+        {
           "identity": "GPT-6.1 Terra",
           "sourceId": "41bcc9881ff1465f62e417e5a7535e20",
           "label": "Codex - GPT-6.1 Terra (High)",
@@ -4495,6 +4495,20 @@
           "fallback": false,
           "meanCost": 0.544031579042956,
           "medianCost": 0.320868575,
+          "model": "gpt-6.1-terra",
+          "status": "missing-from-board"
+        },
+        {
+          "identity": "GPT-6.1 Terra",
+          "sourceId": "b54e883be1cff7a6a43a737ee106011c",
+          "label": "Codex - GPT-6.1 Terra (Low)",
+          "score": 34.85683422396,
+          "harness": "Codex",
+          "router": false,
+          "effort": "low",
+          "fallback": false,
+          "meanCost": 0.198820047696481,
+          "medianCost": 0.133640266666667,
           "model": "gpt-6.1-terra",
           "status": "missing-from-board"
         },
@@ -4801,33 +4815,7 @@
       "configurationReviewRequired": true,
       "comparisonSkippedForVersionChange": false,
       "scoreDifferences": [],
-      "costDifferences": [
-        {
-          "label": "mini-swe-agent - gpt-6-astra (xhigh)",
-          "before": 6.52377356460177,
-          "after": 4.429117203539823
-        },
-        {
-          "label": "mini-swe-agent - gpt-6-astra (high)",
-          "before": 5.723721956194691,
-          "after": 3.9237237909292038
-        },
-        {
-          "label": "mini-swe-agent - gpt-6-astra (max)",
-          "before": 12.369032401327434,
-          "after": 7.497827996681416
-        },
-        {
-          "label": "mini-swe-agent - gpt-6-astra (medium)",
-          "before": 4.379527705752213,
-          "after": 3.0754742975663714
-        },
-        {
-          "label": "mini-swe-agent - gpt-6-astra (low)",
-          "before": 2.188762706637168,
-          "after": 1.595223439159292
-        }
-      ],
+      "costDifferences": [],
       "newConfigurations": [],
       "missingFromBoard": [],
       "unresolvedIdentities": [],
@@ -5828,7 +5816,7 @@
       "maker": "Anthropic",
       "releaseDate": "2026-11-09",
       "source": "https://artificialanalysis.ai/models/releases/claude-fable-5-2",
-      "catalogModel": null,
+      "catalogModel": "claude-fable-5.2",
       "inUpstreamDirectory": false,
       "inUpstreamBenchmarks": false
     },
@@ -5869,7 +5857,7 @@
       "releaseDate": "2026-10-23",
       "source": "https://artificialanalysis.ai/models/releases/kimi-k3-1-pro",
       "catalogModel": "kimi-k3.1-pro",
-      "inUpstreamDirectory": false,
+      "inUpstreamDirectory": true,
       "inUpstreamBenchmarks": false
     },
     {
@@ -5909,7 +5897,7 @@
       "releaseDate": "2026-10-19",
       "source": "https://artificialanalysis.ai/models/releases/minimax-m3-1-flash",
       "catalogModel": "minimax-m3.1-flash",
-      "inUpstreamDirectory": false,
+      "inUpstreamDirectory": true,
       "inUpstreamBenchmarks": false
     },
     {
