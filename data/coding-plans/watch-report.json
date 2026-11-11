@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "checkedAt": "2026-11-10T07:32:24.800Z",
+  "checkedAt": "2026-11-11T06:47:39.267Z",
   "intervalHours": 24,
-  "newEvents": 124,
+  "newEvents": 42,
   "pending": [
     {
       "id": "4533c6040aa95efeaf575f7486523b4550c1a1975e7ba1df4f0cfa6f888e5935",
@@ -10638,6 +10638,1147 @@
         "relevant": true
       },
       "status": "pending"
+    },
+    {
+      "id": "c7ada06fc21e6a6bdf0f57aadc32e694cf1954d922f7359c00237a8faf5a981e",
+      "sourceId": "opencode-go",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-11T06:47:39.267Z",
+      "url": "https://opencode.ai/v2/docs/console/go/",
+      "before": null,
+      "after": {
+        "key": "text:83937820c27b1cbfbd1fa698f398fd6d8e521544e2e9d0509377e31e2a2ec669",
+        "hash": "83937820c27b1cbfbd1fa698f398fd6d8e521544e2e9d0509377e31e2a2ec669",
+        "type": "announcement",
+        "signals": [
+          "pricing"
+        ],
+        "models": [],
+        "url": "https://opencode.ai/v2/docs/console/go/"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "2fcaadd9e374f601cbe951e4787137a9a9b01947b9e19efa512ed1a026bfbf2f",
+      "sourceId": "opencode-go",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-11T06:47:39.267Z",
+      "url": "https://opencode.ai/v2/docs/console/go/#usage-beyond-limits",
+      "before": null,
+      "after": {
+        "key": "text:ad65fc0c25d7398149c3e4dfaeb7c3b866e7721d2aca0a79fda7a342a8d6e460",
+        "hash": "ad65fc0c25d7398149c3e4dfaeb7c3b866e7721d2aca0a79fda7a342a8d6e460",
+        "type": "announcement",
+        "signals": [
+          "version",
+          "pricing"
+        ],
+        "models": [],
+        "url": "https://opencode.ai/v2/docs/console/go/#usage-beyond-limits"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "c10d4957610fb96e05d59671ea9156ac8a5d52e932dc8cf6ca1489e4d3af2dd2",
+      "sourceId": "opencode-go",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-11T06:47:39.267Z",
+      "url": "https://opencode.ai/v2/docs/console/go/",
+      "before": null,
+      "after": {
+        "key": "text:b117db47ae1dc3e458b6ed5c185b3173d22bc7eb8eb921288f693c0cfcc92859",
+        "hash": "b117db47ae1dc3e458b6ed5c185b3173d22bc7eb8eb921288f693c0cfcc92859",
+        "type": "announcement",
+        "signals": [
+          "pricing"
+        ],
+        "models": [],
+        "url": "https://opencode.ai/v2/docs/console/go/"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "cb2ab658bc267b3adf2d116cd1f531cfda53c593e2dcc558414c06ce9a1813f5",
+      "sourceId": "opencode-go",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-11T06:47:39.267Z",
+      "url": "https://opencode.ai/v2/docs/console/go/",
+      "before": null,
+      "after": {
+        "key": "text:3d7a54dd7cc312d303b2302100160fa872a32e317b7597fbd935b2e4f1ab16bd",
+        "hash": "3d7a54dd7cc312d303b2302100160fa872a32e317b7597fbd935b2e4f1ab16bd",
+        "type": "announcement",
+        "signals": [
+          "pricing"
+        ],
+        "models": [],
+        "url": "https://opencode.ai/v2/docs/console/go/"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "6a272aa5f61a12bd2ce6aa37b5d4052ccbf60d2ec26fff6bcf6243a3666b8408",
+      "sourceId": "opencode-go",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-11T06:47:39.267Z",
+      "url": "https://opencode.ai/docs/console/billing#invoiced-billing",
+      "before": null,
+      "after": {
+        "key": "text:d2904c076ed3052f234592557818c271877525a9294b67b1eccb755472dbb60e",
+        "hash": "d2904c076ed3052f234592557818c271877525a9294b67b1eccb755472dbb60e",
+        "type": "announcement",
+        "signals": [
+          "pricing"
+        ],
+        "models": [
+          "ling can"
+        ],
+        "url": "https://opencode.ai/docs/console/billing#invoiced-billing"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "c0e4b52307c2d403c2bb7e17de3869fe95ab53dd8f72bd958f8195f556f376ad",
+      "sourceId": "opencode-go",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-11T06:47:39.267Z",
+      "url": "https://opencode.ai/v2/docs/console/go/",
+      "before": null,
+      "after": {
+        "key": "text:427207ec65672fc446c94eb89a374b66bc58b39e3d311245a7faad8fc31fd5b1",
+        "hash": "427207ec65672fc446c94eb89a374b66bc58b39e3d311245a7faad8fc31fd5b1",
+        "type": "announcement",
+        "signals": [
+          "pricing"
+        ],
+        "models": [],
+        "url": "https://opencode.ai/v2/docs/console/go/"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "b02800865e4d3d870c91cca9f626d98d66e5bccd9299c38a1af8b24cbc783805",
+      "sourceId": "command-code-go",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-11T06:47:39.267Z",
+      "url": "https://commandcode.ai/docs/plans/go",
+      "before": null,
+      "after": {
+        "key": "text:d77b3e4e50fd4cc3816c49528ab68d41c9ad46af391ba487134c2de5433852e0",
+        "hash": "d77b3e4e50fd4cc3816c49528ab68d41c9ad46af391ba487134c2de5433852e0",
+        "type": "announcement",
+        "signals": [
+          "promotion"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/docs/plans/go"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "b5261f7efa8df8214cee83e2eaa2a2be5a6a5fed6136cb6e0dfe8e2799feed3d",
+      "sourceId": "command-code-go",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-11T06:47:39.267Z",
+      "url": "https://commandcode.ai/docs/plans/go",
+      "before": null,
+      "after": {
+        "key": "text:73aa47a31a498d1d92bfeba1ddc61ce255bbd2a45c4bd6264315dff637ee6719",
+        "hash": "73aa47a31a498d1d92bfeba1ddc61ce255bbd2a45c4bd6264315dff637ee6719",
+        "type": "announcement",
+        "signals": [
+          "pricing",
+          "availability"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/docs/plans/go"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "f243f765ab4e23b6a6807e82c873b35db01f09e6386c0c7509d8c6900ab75450",
+      "sourceId": "command-code-go",
+      "channel": "Command Code",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-11T06:47:39.267Z",
+      "url": "https://commandcode.ai/docs/plans/go",
+      "before": {
+        "key": "row:0:7dda73ad401e:Crouton Alpha Free:0",
+        "type": "table-row",
+        "label": "Crouton Alpha Free",
+        "heading": "Models included",
+        "columns": [
+          "Model ↕",
+          "Context ↕",
+          "Intelligence ↕",
+          "Input ↕",
+          "Output ↕",
+          "Cache read ↕",
+          "Cache write ↕",
+          "Caps"
+        ],
+        "cells": [
+          "Crouton Alpha Free",
+          "1M",
+          "not yet scored",
+          "Free",
+          "Free",
+          "Free",
+          "—",
+          "+ 1"
+        ],
+        "hash": "bd33dc5d4d9ab81260c6e3985efd262c1e8cdfc31b326460d8e0db1bb2274b7d",
+        "signals": [
+          "promotion"
+        ],
+        "url": "https://commandcode.ai/docs/plans/go"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "16cb443babc63fc52c4734a779c9978b51f22ab8104f4b765a577dd292a34e7a",
+      "sourceId": "command-code-goat",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-11T06:47:39.267Z",
+      "url": "https://commandcode.ai/docs/plans/goat",
+      "before": null,
+      "after": {
+        "key": "text:031682a1c765db89464ef0127e82c6fde4812085f84d9f440356dea12ee114ab",
+        "hash": "031682a1c765db89464ef0127e82c6fde4812085f84d9f440356dea12ee114ab",
+        "type": "announcement",
+        "signals": [
+          "promotion"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/docs/plans/goat"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "4fb9774426185dc5219b05b2257e255d0af6a911bf20dca13d0390ca6e17e0dc",
+      "sourceId": "command-code-goat",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-11T06:47:39.267Z",
+      "url": "https://commandcode.ai/docs/plans/goat",
+      "before": null,
+      "after": {
+        "key": "text:9a6e7abeb9f1310a8f3470711112d13c71c12db3cff7efe18c0a61ce95ca107a",
+        "hash": "9a6e7abeb9f1310a8f3470711112d13c71c12db3cff7efe18c0a61ce95ca107a",
+        "type": "announcement",
+        "signals": [
+          "pricing",
+          "availability"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/docs/plans/goat"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "dd27694bb4a30d0d8c7276602d0bf6a57a702d332f84811de2cb84d3f9005f7f",
+      "sourceId": "command-code-goat",
+      "channel": "Command Code",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-11T06:47:39.267Z",
+      "url": "https://commandcode.ai/docs/plans/goat",
+      "before": {
+        "key": "row:0:7dda73ad401e:Crouton Alpha Free:0",
+        "type": "table-row",
+        "label": "Crouton Alpha Free",
+        "heading": "Models included",
+        "columns": [
+          "Model ↕",
+          "Context ↕",
+          "Intelligence ↕",
+          "Input ↕",
+          "Output ↕",
+          "Cache read ↕",
+          "Cache write ↕",
+          "Caps"
+        ],
+        "cells": [
+          "Crouton Alpha Free",
+          "1M",
+          "not yet scored",
+          "Free",
+          "Free",
+          "Free",
+          "—",
+          "+ 1"
+        ],
+        "hash": "bd33dc5d4d9ab81260c6e3985efd262c1e8cdfc31b326460d8e0db1bb2274b7d",
+        "signals": [
+          "promotion"
+        ],
+        "url": "https://commandcode.ai/docs/plans/goat"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "6aab32aa2c8a90cbc1698b971af0a520c3fabb7168d8f339ed93823ed427bc2c",
+      "sourceId": "command-code-pro",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-11T06:47:39.267Z",
+      "url": "https://commandcode.ai/docs/plans/pro",
+      "before": null,
+      "after": {
+        "key": "text:f19a0d2bafefba9bf6128297df7ac7866561ca78a0bbc97328a5b75c2e47eba0",
+        "hash": "f19a0d2bafefba9bf6128297df7ac7866561ca78a0bbc97328a5b75c2e47eba0",
+        "type": "announcement",
+        "signals": [
+          "promotion"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/docs/plans/pro"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "9562fecaffcf578f7318ec14da08959caf9ccee50393204ac229801b83c91519",
+      "sourceId": "command-code-pro",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-11T06:47:39.267Z",
+      "url": "https://commandcode.ai/docs/plans/pro",
+      "before": null,
+      "after": {
+        "key": "row:0:7dda73ad401e:Gemini 4 Carbon:0",
+        "type": "table-row",
+        "label": "Gemini 4 Carbon",
+        "heading": "Models included",
+        "columns": [
+          "Model ↕",
+          "Context ↕",
+          "Intelligence ↕",
+          "Input ↕",
+          "Output ↕",
+          "Cache read ↕",
+          "Cache write ↕",
+          "Caps"
+        ],
+        "cells": [
+          "Gemini 4 Carbon",
+          "1M",
+          "not yet scored",
+          "$2.00",
+          "$10.00",
+          "$0.10",
+          "—",
+          "+ 1"
+        ],
+        "hash": "19201cad76ddb1a307278c9d3fbd7af7035f8edb1426098ef587524a4db097a3",
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://commandcode.ai/docs/plans/pro"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "aca06c939130433b2b4246f96c84e96fb44a7a1e00965ecbc8e5f8fb79b161b8",
+      "sourceId": "command-code-pro",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-11T06:47:39.267Z",
+      "url": "https://commandcode.ai/docs/plans/pro",
+      "before": null,
+      "after": {
+        "key": "row:1:6e2f82d4bba3:Gemini 4 Carbon:0",
+        "type": "table-row",
+        "label": "Gemini 4 Carbon",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Requests / 5 hours",
+          "Requests / week",
+          "Requests / month"
+        ],
+        "cells": [
+          "Gemini 4 Carbon",
+          "698",
+          "1,740",
+          "3,490"
+        ],
+        "hash": "4705223b40135c2248214d1ac38ee1843de4aa8a8f4ebb9e86ced107906ff34e",
+        "signals": [],
+        "url": "https://commandcode.ai/docs/plans/pro"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "792aec4a8919363dd1500e3ecfe6b9be0f73253cc954d65701a931ab706046e3",
+      "sourceId": "command-code-pro",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-11T06:47:39.267Z",
+      "url": "https://commandcode.ai/docs/plans/pro",
+      "before": null,
+      "after": {
+        "key": "row:3:285022454e42:Gemini 4 Carbon:0",
+        "type": "table-row",
+        "label": "Gemini 4 Carbon",
+        "heading": "Premium models",
+        "columns": [
+          "Model",
+          "Input",
+          "Output",
+          "Cache Read",
+          "Cache Write",
+          "Monthly credits"
+        ],
+        "cells": [
+          "Gemini 4 Carbon",
+          "$2.00",
+          "$10.00",
+          "$0.10",
+          "-",
+          "$30"
+        ],
+        "hash": "80fc5042694e804736af8d221d81ca3b24d2edd7b20567f0dab2d69b9d6247aa",
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://commandcode.ai/docs/plans/pro"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "6655de9a3f83371c0ce97e777a908f7f74055918336d7a84c23a2a9dd7a505b8",
+      "sourceId": "command-code-pro",
+      "channel": "Command Code",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-11T06:47:39.267Z",
+      "url": "https://commandcode.ai/docs/plans/pro",
+      "before": {
+        "key": "row:0:7dda73ad401e:Crouton Alpha Free:0",
+        "type": "table-row",
+        "label": "Crouton Alpha Free",
+        "heading": "Models included",
+        "columns": [
+          "Model ↕",
+          "Context ↕",
+          "Intelligence ↕",
+          "Input ↕",
+          "Output ↕",
+          "Cache read ↕",
+          "Cache write ↕",
+          "Caps"
+        ],
+        "cells": [
+          "Crouton Alpha Free",
+          "1M",
+          "not yet scored",
+          "Free",
+          "Free",
+          "Free",
+          "—",
+          "+ 1"
+        ],
+        "hash": "bd33dc5d4d9ab81260c6e3985efd262c1e8cdfc31b326460d8e0db1bb2274b7d",
+        "signals": [
+          "promotion"
+        ],
+        "url": "https://commandcode.ai/docs/plans/pro"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "c857824999a12a1bf978b43fa46b1dc34dd5797af7c2f3531b1dd471acb9afb0",
+      "sourceId": "command-code-max",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-11T06:47:39.267Z",
+      "url": "https://commandcode.ai/docs/plans/max",
+      "before": null,
+      "after": {
+        "key": "row:2:6e2f82d4bba3:Gemini 4 Carbon:0",
+        "type": "table-row",
+        "label": "Gemini 4 Carbon",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Requests / 5 hours",
+          "Requests / week",
+          "Requests / month"
+        ],
+        "cells": [
+          "Gemini 4 Carbon",
+          "5,230",
+          "10,500",
+          "17,400"
+        ],
+        "hash": "74df5feb63bf584a5e19e76889de4c864995ad4d7ae3d7b44e84e6cf9ba86b2b",
+        "signals": [],
+        "url": "https://commandcode.ai/docs/plans/max"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "05fc7de87aee6d0eab542fc03a83a4e3667a3b2be6cbf88fcc32d6a297587585",
+      "sourceId": "command-code-max",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-11T06:47:39.267Z",
+      "url": "https://commandcode.ai/docs/plans/max",
+      "before": null,
+      "after": {
+        "key": "row:3:508faf2ee524:Gemini 4 Carbon:0",
+        "type": "table-row",
+        "label": "Gemini 4 Carbon",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Input",
+          "Output",
+          "Cache Read",
+          "Cache Write",
+          "Max 10× credits",
+          "Max 20× credits"
+        ],
+        "cells": [
+          "Gemini 4 Carbon",
+          "$2.00",
+          "$10.00",
+          "$0.10",
+          "-",
+          "$150",
+          "$300"
+        ],
+        "hash": "a23d04c8df13b52dfdcc4be119b4b9dc2a9be51b5a88f203d73418764165029b",
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://commandcode.ai/docs/plans/max"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "4f4bd41878e2fda80f5c0fdc3e63b1e86668ee7bd0574770f9695a4525a14a93",
+      "sourceId": "command-code-max",
+      "channel": "Command Code",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-11T06:47:39.267Z",
+      "url": "https://commandcode.ai/docs/plans/max",
+      "before": {
+        "key": "row:2:6e2f82d4bba3:Crouton Alpha:0",
+        "type": "table-row",
+        "label": "Crouton Alpha",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Requests / 5 hours",
+          "Requests / week",
+          "Requests / month"
+        ],
+        "cells": [
+          "Crouton Alpha",
+          "Free",
+          "Free",
+          "Free"
+        ],
+        "hash": "454037d109148dec8202c12e69160ddba708cf9265cae120af049c015ef345f8",
+        "signals": [
+          "promotion"
+        ],
+        "url": "https://commandcode.ai/docs/plans/max"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "6006bb51a48bc4de1261ac451a0917a482576558c0d767e646f4ee54e9a56904",
+      "sourceId": "command-code-max",
+      "channel": "Command Code",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-11T06:47:39.267Z",
+      "url": "https://commandcode.ai/docs/plans/max",
+      "before": {
+        "key": "row:3:508faf2ee524:Crouton Alpha:0",
+        "type": "table-row",
+        "label": "Crouton Alpha",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Input",
+          "Output",
+          "Cache Read",
+          "Cache Write",
+          "Max 10× credits",
+          "Max 20× credits"
+        ],
+        "cells": [
+          "Crouton Alpha",
+          "$0.00",
+          "$0.00",
+          "$0.00",
+          "-",
+          "Free",
+          "Free"
+        ],
+        "hash": "08c2609e772aaadd9dd878bb6b7b52a2cafbd9b7ab21db7a9886ef98b353f924",
+        "signals": [
+          "pricing",
+          "promotion"
+        ],
+        "url": "https://commandcode.ai/docs/plans/max"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "ba7c6319f6f81ff1b9e9f1eaac33199969f4c8911eee0f1c354e468f83b9fba3",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-11T06:47:39.267Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": null,
+      "after": {
+        "key": "row:3:23643f1df728:google/gemini-4-carbon Copy model id:0",
+        "type": "table-row",
+        "label": "google/gemini-4-carbon Copy model id",
+        "heading": "Google",
+        "columns": [
+          "Model ID",
+          "Name",
+          "Capabilities",
+          "Best for"
+        ],
+        "cells": [
+          "google/gemini-4-carbon Copy model id",
+          "Gemini 4 Carbon",
+          "+ 1",
+          "complex software engineering & sustained agent workflows"
+        ],
+        "hash": "7f84d995cb4734ebca3fd326ea272de24aeb421465934e481f1690ccf515ef09",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "5d43fb1feb01bfca99ac07cbe5a02a59bcab23eeeae46892c4d98ff84359d147",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-11T06:47:39.267Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": {
+        "key": "row:14:23643f1df728:stealth/crouton-alpha Copy model id:0",
+        "type": "table-row",
+        "label": "stealth/crouton-alpha Copy model id",
+        "heading": "Stealth",
+        "columns": [
+          "Model ID",
+          "Name",
+          "Capabilities",
+          "Best for"
+        ],
+        "cells": [
+          "stealth/crouton-alpha Copy model id",
+          "Crouton Alpha",
+          "+ 1",
+          "lightweight stealth model for agentic sub-tasks, 1M context"
+        ],
+        "hash": "a2d34d3e98a1e83e76a506589b596bcc87087d6cb1a8d506faee21039a9e4817",
+        "signals": [
+          "version",
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "1e2894c2f471d37c7d740d91f2c4aa8b60a16f7f09b796e984b704e8f2bb122a",
+      "sourceId": "factory-models",
+      "channel": "Factory",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-11T06:47:39.267Z",
+      "url": "https://docs.factory.com/models.md",
+      "before": null,
+      "after": {
+        "key": "row:1:0534be2c3766:GPT-6.1 Terra:0",
+        "type": "table-row",
+        "label": "GPT-6.1 Terra",
+        "heading": "<span className=\"provider-heading\"><img src=\"/docs-assets/images/model-icons/openai.svg\" alt=\"OpenAI logo\" className=\"provider-icon openai-icon\" />Ope",
+        "columns": [
+          "Model",
+          "Model ID",
+          "Multiplier",
+          "Reasoning"
+        ],
+        "cells": [
+          "GPT-6.1 Terra",
+          "`gpt-6.1-terra`",
+          "0.4×",
+          "`none`, `low`, `medium` (default), `high`, `xhigh`, `max`"
+        ],
+        "hash": "3f7779058bf2e0ba1b1f7c83594c7612c05309d2d07bfec1f9c0ca6af3ac69cb",
+        "signals": [],
+        "url": "https://docs.factory.com/models.md"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "5eaca1844cee5459058f8311f1600f4a6cb0edd0085527188f2e3ad120fd4904",
+      "sourceId": "factory-models",
+      "channel": "Factory",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-11T06:47:39.267Z",
+      "url": "https://docs.factory.com/models.md",
+      "before": null,
+      "after": {
+        "key": "row:2:0534be2c3766:Gemini 4 Carbon<sup>†</sup>:0",
+        "type": "table-row",
+        "label": "Gemini 4 Carbon<sup>†</sup>",
+        "heading": "<span className=\"provider-heading\"><img src=\"/docs-assets/images/model-icons/google.ico\" alt=\"Google logo\" className=\"provider-icon\" />Google</span>",
+        "columns": [
+          "Model",
+          "Model ID",
+          "Multiplier",
+          "Reasoning"
+        ],
+        "cells": [
+          "Gemini 4 Carbon<sup>†</sup>",
+          "`gemini-4-carbon`",
+          "0.8×",
+          "`low`, `medium` (default), `high`"
+        ],
+        "hash": "28d1849675d056cc50a299cef9fc6b7c091cd61201f420c661f2878074c78767",
+        "signals": [],
+        "url": "https://docs.factory.com/models.md"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "b7a5c57fde14085fe6bdcd2078efacdb83ce37347dc2ea8913cb64cc44a5942f",
+      "sourceId": "factory-models",
+      "channel": "Factory",
+      "kind": "announcement",
+      "detectedAt": "2026-11-11T06:47:39.267Z",
+      "url": "https://docs.factory.com/models.md",
+      "before": null,
+      "after": {
+        "key": "text:9cea05929a61ade0f821b6d95be2b0e66938a735d6b63ad6e5416c72945804a6",
+        "hash": "9cea05929a61ade0f821b6d95be2b0e66938a735d6b63ad6e5416c72945804a6",
+        "type": "announcement",
+        "signals": [
+          "pricing",
+          "promotion"
+        ],
+        "models": [
+          "Gemini 4 Carbon bills at 0.8"
+        ],
+        "url": "https://docs.factory.com/models.md"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "5163493a67337acb238982f05fa5c3a6359f7ad6b483d635de31c2def9e1a3c8",
+      "sourceId": "factory-releases",
+      "channel": "Factory",
+      "kind": "announcement",
+      "detectedAt": "2026-11-11T06:47:39.267Z",
+      "url": "https://docs.factory.com/changelog/release-notes.md",
+      "before": null,
+      "after": {
+        "key": "text:777c84b126f08a1a4fb8d94c9951aa0c524f026289cbcbc4e12196056d618f4a",
+        "hash": "777c84b126f08a1a4fb8d94c9951aa0c524f026289cbcbc4e12196056d618f4a",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [],
+        "url": "https://docs.factory.com/changelog/release-notes.md"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "ff7ff6673db56451500e287de90b2357633cf1583130b9e33d962c2ea13add69",
+      "sourceId": "factory-releases",
+      "channel": "Factory",
+      "kind": "announcement",
+      "detectedAt": "2026-11-11T06:47:39.267Z",
+      "url": "https://docs.factory.com/changelog/release-notes.md",
+      "before": null,
+      "after": {
+        "key": "text:f1b8ea8bfab631e5291174797ae83a87cb7ffa2577ae1a1e017e9add12c9765c",
+        "hash": "f1b8ea8bfab631e5291174797ae83a87cb7ffa2577ae1a1e017e9add12c9765c",
+        "type": "announcement",
+        "signals": [
+          "pricing"
+        ],
+        "models": [
+          "ling"
+        ],
+        "url": "https://docs.factory.com/changelog/release-notes.md"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "9e12e03c11eb70d9e10dd44bf6516dd8740da6ee2d5e336365a3dad701676b69",
+      "sourceId": "factory-releases",
+      "channel": "Factory",
+      "kind": "announcement",
+      "detectedAt": "2026-11-11T06:47:39.267Z",
+      "url": "https://docs.factory.com/changelog/release-notes.md",
+      "before": null,
+      "after": {
+        "key": "text:02b9d7f1b7d1481ff5aa693e1abf503443adefc8b54b0fbbc32b2f303304b3e1",
+        "hash": "02b9d7f1b7d1481ff5aa693e1abf503443adefc8b54b0fbbc32b2f303304b3e1",
+        "type": "announcement",
+        "signals": [],
+        "models": [
+          "ling your next message"
+        ],
+        "url": "https://docs.factory.com/changelog/release-notes.md"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "634d4234f626da4a4c46fe6de506b1ecec11ec384af398f9e723c1921c82fdc6",
+      "sourceId": "cursor-pricing",
+      "channel": "Cursor",
+      "kind": "announcement",
+      "detectedAt": "2026-11-11T06:47:39.267Z",
+      "url": "https://cursor.com/docs/models-and-pricing",
+      "before": null,
+      "after": {
+        "key": "text:426e221eec2bf57aa1071f3d74c98fbe59cf0304edfdc1f3ed9211fe66b8472f",
+        "hash": "426e221eec2bf57aa1071f3d74c98fbe59cf0304edfdc1f3ed9211fe66b8472f",
+        "type": "announcement",
+        "signals": [],
+        "models": [
+          "Gemini 4 Carbon"
+        ],
+        "url": "https://cursor.com/docs/models-and-pricing"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "3342f873396625383f1c4bb65f286794c7dda1851c5bd9158704df387eb7d588",
+      "sourceId": "cursor-pricing",
+      "channel": "Cursor",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-11T06:47:39.267Z",
+      "url": "https://cursor.com/docs/models-and-pricing",
+      "before": null,
+      "after": {
+        "key": "row:2:4fe18c3b7d33:Gemini 4 Carbon:0",
+        "type": "table-row",
+        "label": "Gemini 4 Carbon",
+        "heading": "Model pricing",
+        "columns": [
+          "Name",
+          "Input",
+          "Cache Write",
+          "Cache Read",
+          "Output",
+          "US Data Residency"
+        ],
+        "cells": [
+          "Gemini 4 Carbon",
+          "$ 2",
+          "-",
+          "$ 0.1",
+          "$ 10",
+          "No"
+        ],
+        "hash": "2f01cecb03d0e318b4a597245f09ace191bb9209bf8d1df82216d075de91c478",
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://cursor.com/docs/models-and-pricing"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "0ada1527ccb42566abe569d2884984ccfe96cea4ff062b43205fb6f5e2c306f8",
+      "sourceId": "cursor-pricing",
+      "channel": "Cursor",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-11T06:47:39.267Z",
+      "url": "https://cursor.com/docs/models-and-pricing",
+      "before": null,
+      "after": {
+        "key": "row:5:4fe18c3b7d33:Gemini 4 Carbon:0",
+        "type": "table-row",
+        "label": "Gemini 4 Carbon",
+        "heading": "Model pricing",
+        "columns": [
+          "Name",
+          "Input",
+          "Cache Write",
+          "Cache Read",
+          "Output",
+          "US Data Residency"
+        ],
+        "cells": [
+          "Gemini 4 Carbon",
+          "$ 2",
+          "-",
+          "$ 0.1",
+          "$ 10",
+          "No"
+        ],
+        "hash": "2f01cecb03d0e318b4a597245f09ace191bb9209bf8d1df82216d075de91c478",
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://cursor.com/docs/models-and-pricing"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "1863123507d97c027d506bab1accdf89a698b3413522b9626e010651fc834a34",
+      "sourceId": "devin-releases",
+      "channel": "Devin",
+      "kind": "announcement",
+      "detectedAt": "2026-11-11T06:47:39.267Z",
+      "url": "https://docs.devin.ai/release-notes/overview",
+      "before": null,
+      "after": {
+        "key": "text:2454776e7b5f9bdde98796b6578f6490ddad1c827be689337634b2867e8c29ba",
+        "hash": "2454776e7b5f9bdde98796b6578f6490ddad1c827be689337634b2867e8c29ba",
+        "type": "announcement",
+        "signals": [
+          "pricing"
+        ],
+        "models": [
+          "ling"
+        ],
+        "url": "https://docs.devin.ai/release-notes/overview"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "6733816a6498d4e2b92d564b9b4639094e063936d8e8b27bea3056512edf0f71",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "announcement",
+      "detectedAt": "2026-11-11T06:47:39.267Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": null,
+      "after": {
+        "key": "text:5fcc88c78b2b5873972b9fc40f656289e87a4c66736f7d3c1bdfb066da5935c4",
+        "hash": "5fcc88c78b2b5873972b9fc40f656289e87a4c66736f7d3c1bdfb066da5935c4",
+        "type": "announcement",
+        "signals": [
+          "pricing"
+        ],
+        "models": [
+          "qwen4-max-preview "
+        ],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "3e4ba8a78cc74058176b3663f381647f566440f37c688e17446a165bdf906160",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "announcement",
+      "detectedAt": "2026-11-11T06:47:39.267Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": null,
+      "after": {
+        "key": "text:6a7c175b92898e08ff3707a94b28a7663fc9e44cb291c0fc4de0b5a447a7f2d6",
+        "hash": "6a7c175b92898e08ff3707a94b28a7663fc9e44cb291c0fc4de0b5a447a7f2d6",
+        "type": "announcement",
+        "signals": [
+          "version"
+        ],
+        "models": [
+          "qwen3.8-max",
+          "qwen3.8-flash ",
+          "deepseek-v4-pro-0813",
+          "deepseek-v4-flash-0731",
+          "deepseek-v4.1-flash",
+          "deepseek-v4.1-flash-1017 "
+        ],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "a4273b9725912248a071ce82d6567b7c47cd4d3146b7e32e40256eaa644a2ede",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "announcement",
+      "detectedAt": "2026-11-11T06:47:39.267Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": null,
+      "after": {
+        "key": "text:f29b450a8215daa7f235856358c161137536fc6ee4fdc47a864e2225fc204aa0",
+        "hash": "f29b450a8215daa7f235856358c161137536fc6ee4fdc47a864e2225fc204aa0",
+        "type": "announcement",
+        "signals": [],
+        "models": [
+          "qwen4-max-preview ",
+          "qwen4.0-max-preview"
+        ],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "ed5630e909d0b42fe31fc92ad92f735019c7cedbc476f8680bce741315a9fd1c",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-11T06:47:39.267Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": null,
+      "after": {
+        "key": "row:1:91c8ca9134d3:qwen4-max-preview:0",
+        "type": "table-row",
+        "label": "qwen4-max-preview",
+        "heading": "千问",
+        "columns": [
+          "模型 ID（Model ID）",
+          "模型能力"
+        ],
+        "cells": [
+          "qwen4-max-preview",
+          "推理模型、视觉理解、文本生成"
+        ],
+        "hash": "9478bca6da3851bf47d680eb9287d737744ef45621bb2da72d67445277744f29",
+        "signals": [
+          "availability"
+        ],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "f43485d9672e3c543c44f903bf7a294a926650e7a7721e1009f4caf5df9200bd",
+      "sourceId": "opencode-social",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-11T06:47:39.267Z",
+      "url": "https://x.com/opencode/status/2120256195017781692",
+      "before": null,
+      "after": {
+        "key": "post:2120256195017781692",
+        "type": "announcement",
+        "hash": "070d67f19667509977bd36e137cfdb590721653d5b663128f9c6f9b44aae8754",
+        "signals": [
+          "pricing",
+          "promotion"
+        ],
+        "models": [
+          "ling 2 Small is now free on OpenCode for a limited time - 1M Context "
+        ],
+        "url": "https://x.com/opencode/status/2120256195017781692",
+        "relevant": true
+      },
+      "status": "pending"
+    },
+    {
+      "id": "abbd051fc16dd9bd5fff66e261683a3ae488071dfe6e36a7f052da554c2270c6",
+      "sourceId": "opencode-social",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-11T06:47:39.267Z",
+      "url": "https://x.com/opencode/status/2120230826898293238",
+      "before": null,
+      "after": {
+        "key": "post:2120230826898293238",
+        "type": "announcement",
+        "hash": "400170e0d4b5fb83eeb90e5eb1b8888137de026e417f77db1c1ac2f5f05db861",
+        "signals": [
+          "availability"
+        ],
+        "models": [
+          "Gemini 4 Carbon and Claude Fable 5.2 are now available in OpenCode "
+        ],
+        "url": "https://x.com/opencode/status/2120230826898293238",
+        "relevant": true
+      },
+      "status": "pending"
+    },
+    {
+      "id": "98aa5735558ae6a158fca96a0caf5a15fd3a227d5c26c3c8a7b9c87e83d68f16",
+      "sourceId": "command-code-social",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-11T06:47:39.267Z",
+      "url": "https://x.com/CommandCodeAI/status/2120280401809969571",
+      "before": null,
+      "after": {
+        "key": "post:2120280401809969571",
+        "type": "announcement",
+        "hash": "ac25e8865637cc5a88a70368f7b8f909475484b81f12a44cb8ab0e44645aeb92",
+        "signals": [],
+        "models": [
+          "Gemini 4 Carbon and Claude Fable 5.2 are now both live in Command Code."
+        ],
+        "url": "https://x.com/CommandCodeAI/status/2120280401809969571",
+        "relevant": true
+      },
+      "status": "pending"
+    },
+    {
+      "id": "237a2ec61beea6255c0c0099a0b13a1d091200657a21cf1a75d125f5f72d7696",
+      "sourceId": "command-code-social",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-11T06:47:39.267Z",
+      "url": "https://x.com/CommandCodeAI/status/2120236115382980617",
+      "before": null,
+      "after": {
+        "key": "post:2120236115382980617",
+        "type": "announcement",
+        "hash": "bdc1a5420e849be34469617ff1c7142640bcdbf127cff48df2d83224c3b11a0c",
+        "signals": [
+          "pricing",
+          "promotion",
+          "availability"
+        ],
+        "models": [],
+        "url": "https://x.com/CommandCodeAI/status/2120236115382980617",
+        "relevant": true
+      },
+      "status": "pending"
+    },
+    {
+      "id": "ed6b742d349bf5b45a6b6b805b3888d48188c0bdbe59cbebe81301258d5cf9ee",
+      "sourceId": "command-code-social",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-11T06:47:39.267Z",
+      "url": "https://x.com/CommandCodeAI/status/2120157277839556758",
+      "before": null,
+      "after": {
+        "key": "post:2120157277839556758",
+        "type": "announcement",
+        "hash": "02497fe4f7aa7d9ebc71487e290563a56474c5442c840fb03128b446922855a1",
+        "signals": [
+          "availability"
+        ],
+        "models": [],
+        "url": "https://x.com/CommandCodeAI/status/2120157277839556758",
+        "relevant": true
+      },
+      "status": "pending"
     }
   ],
   "resolvedCount": 0,
@@ -10647,22 +11788,22 @@
       "channel": "OpenCode",
       "url": "https://opencode.ai/v2/docs/console/go/",
       "kind": "tables",
-      "attemptedAt": "2026-11-10T07:32:24.800Z",
-      "lastSuccessAt": "2026-11-10T07:32:24.800Z",
+      "attemptedAt": "2026-11-11T06:47:39.267Z",
+      "lastSuccessAt": "2026-11-11T06:47:39.267Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 404
+      "recordCount": 410
     },
     {
       "id": "opencode-releases",
       "channel": "OpenCode",
       "url": "https://opencode.ai/changelog",
       "kind": "document",
-      "attemptedAt": "2026-11-10T07:32:24.800Z",
+      "attemptedAt": "2026-11-11T06:47:39.267Z",
       "lastSuccessAt": "2026-11-06T07:00:45.218Z",
       "status": "failed",
-      "consecutiveFailures": 4,
+      "consecutiveFailures": 5,
       "retrieval": "http",
       "error": "Table coverage dropped by more than 40%; retaining last successful snapshot",
       "recordCount": 190
@@ -10672,56 +11813,56 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/go",
       "kind": "tables",
-      "attemptedAt": "2026-11-10T07:32:24.800Z",
-      "lastSuccessAt": "2026-11-10T07:32:24.800Z",
+      "attemptedAt": "2026-11-11T06:47:39.267Z",
+      "lastSuccessAt": "2026-11-11T06:47:39.267Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 215
+      "recordCount": 214
     },
     {
       "id": "command-code-goat",
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/goat",
       "kind": "tables",
-      "attemptedAt": "2026-11-10T07:32:24.800Z",
-      "lastSuccessAt": "2026-11-10T07:32:24.800Z",
+      "attemptedAt": "2026-11-11T06:47:39.267Z",
+      "lastSuccessAt": "2026-11-11T06:47:39.267Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 262
+      "recordCount": 261
     },
     {
       "id": "command-code-pro",
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/pro",
       "kind": "tables",
-      "attemptedAt": "2026-11-10T07:32:24.800Z",
-      "lastSuccessAt": "2026-11-10T07:32:24.800Z",
+      "attemptedAt": "2026-11-11T06:47:39.267Z",
+      "lastSuccessAt": "2026-11-11T06:47:39.267Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 312
+      "recordCount": 314
     },
     {
       "id": "command-code-max",
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/max",
       "kind": "tables",
-      "attemptedAt": "2026-11-10T07:32:24.800Z",
-      "lastSuccessAt": "2026-11-10T07:32:24.800Z",
+      "attemptedAt": "2026-11-11T06:47:39.267Z",
+      "lastSuccessAt": "2026-11-11T06:47:39.267Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 268
+      "recordCount": 267
     },
     {
       "id": "command-code-models",
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/reference/cli/models",
       "kind": "tables",
-      "attemptedAt": "2026-11-10T07:32:24.800Z",
-      "lastSuccessAt": "2026-11-10T07:32:24.800Z",
+      "attemptedAt": "2026-11-11T06:47:39.267Z",
+      "lastSuccessAt": "2026-11-11T06:47:39.267Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -10732,12 +11873,12 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/resources/pricing-limits",
       "kind": "tables",
-      "attemptedAt": "2026-11-10T07:32:24.800Z",
+      "attemptedAt": "2026-11-11T06:47:39.267Z",
       "lastSuccessAt": "2026-11-09T06:53:41.572Z",
       "status": "failed",
-      "consecutiveFailures": 1,
+      "consecutiveFailures": 2,
       "retrieval": "http",
-      "error": "Source structure changed: 37 records, expected at least 40; fallback: Source structure changed: 37 records, expected at least 40",
+      "error": "Source structure changed: 35 records, expected at least 40; fallback: Source structure changed: 35 records, expected at least 40",
       "recordCount": 439
     },
     {
@@ -10745,8 +11886,8 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/changelog",
       "kind": "document",
-      "attemptedAt": "2026-11-10T07:32:24.800Z",
-      "lastSuccessAt": "2026-11-10T07:32:24.800Z",
+      "attemptedAt": "2026-11-11T06:47:39.267Z",
+      "lastSuccessAt": "2026-11-11T06:47:39.267Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -10757,8 +11898,8 @@
       "channel": "Ollama",
       "url": "https://ollama.com/pricing",
       "kind": "tables",
-      "attemptedAt": "2026-11-10T07:32:24.800Z",
-      "lastSuccessAt": "2026-11-10T07:32:24.800Z",
+      "attemptedAt": "2026-11-11T06:47:39.267Z",
+      "lastSuccessAt": "2026-11-11T06:47:39.267Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -10769,8 +11910,8 @@
       "channel": "Ollama",
       "url": "https://ollama.com/blog",
       "kind": "document",
-      "attemptedAt": "2026-11-10T07:32:24.800Z",
-      "lastSuccessAt": "2026-11-10T07:32:24.800Z",
+      "attemptedAt": "2026-11-11T06:47:39.267Z",
+      "lastSuccessAt": "2026-11-11T06:47:39.267Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -10781,20 +11922,20 @@
       "channel": "Factory",
       "url": "https://docs.factory.com/models.md",
       "kind": "tables",
-      "attemptedAt": "2026-11-10T07:32:24.800Z",
-      "lastSuccessAt": "2026-11-10T07:32:24.800Z",
+      "attemptedAt": "2026-11-11T06:47:39.267Z",
+      "lastSuccessAt": "2026-11-11T06:47:39.267Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 91
+      "recordCount": 94
     },
     {
       "id": "factory-plans",
       "channel": "Factory",
       "url": "https://docs.factory.com/pricing/individuals.md",
       "kind": "document",
-      "attemptedAt": "2026-11-10T07:32:24.800Z",
-      "lastSuccessAt": "2026-11-10T07:32:24.800Z",
+      "attemptedAt": "2026-11-11T06:47:39.267Z",
+      "lastSuccessAt": "2026-11-11T06:47:39.267Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -10805,32 +11946,32 @@
       "channel": "Factory",
       "url": "https://docs.factory.com/changelog/release-notes.md",
       "kind": "document",
-      "attemptedAt": "2026-11-10T07:32:24.800Z",
-      "lastSuccessAt": "2026-11-10T07:32:24.800Z",
+      "attemptedAt": "2026-11-11T06:47:39.267Z",
+      "lastSuccessAt": "2026-11-11T06:47:39.267Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 706
+      "recordCount": 709
     },
     {
       "id": "cursor-pricing",
       "channel": "Cursor",
       "url": "https://cursor.com/docs/models-and-pricing",
       "kind": "tables",
-      "attemptedAt": "2026-11-10T07:32:24.800Z",
-      "lastSuccessAt": "2026-11-10T07:32:24.800Z",
+      "attemptedAt": "2026-11-11T06:47:39.267Z",
+      "lastSuccessAt": "2026-11-11T06:47:39.267Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 123
+      "recordCount": 126
     },
     {
       "id": "cursor-releases",
       "channel": "Cursor",
       "url": "https://cursor.com/changelog",
       "kind": "document",
-      "attemptedAt": "2026-11-10T07:32:24.800Z",
-      "lastSuccessAt": "2026-11-10T07:32:24.800Z",
+      "attemptedAt": "2026-11-11T06:47:39.267Z",
+      "lastSuccessAt": "2026-11-11T06:47:39.267Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -10841,20 +11982,20 @@
       "channel": "Devin",
       "url": "https://docs.devin.ai/release-notes/overview",
       "kind": "document",
-      "attemptedAt": "2026-11-10T07:32:24.800Z",
-      "lastSuccessAt": "2026-11-10T07:32:24.800Z",
+      "attemptedAt": "2026-11-11T06:47:39.267Z",
+      "lastSuccessAt": "2026-11-11T06:47:39.267Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 70
+      "recordCount": 71
     },
     {
       "id": "alibaba-coding-global",
       "channel": "Alibaba",
       "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan",
       "kind": "tables",
-      "attemptedAt": "2026-11-10T07:32:24.800Z",
-      "lastSuccessAt": "2026-11-10T07:32:24.800Z",
+      "attemptedAt": "2026-11-11T06:47:39.267Z",
+      "lastSuccessAt": "2026-11-11T06:47:39.267Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -10865,8 +12006,8 @@
       "channel": "Alibaba",
       "url": "https://help.aliyun.com/zh/model-studio/coding-plan",
       "kind": "tables",
-      "attemptedAt": "2026-11-10T07:32:24.800Z",
-      "lastSuccessAt": "2026-11-10T07:32:24.800Z",
+      "attemptedAt": "2026-11-11T06:47:39.267Z",
+      "lastSuccessAt": "2026-11-11T06:47:39.267Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -10877,20 +12018,20 @@
       "channel": "Alibaba",
       "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
       "kind": "tables",
-      "attemptedAt": "2026-11-10T07:32:24.800Z",
-      "lastSuccessAt": "2026-11-10T07:32:24.800Z",
+      "attemptedAt": "2026-11-11T06:47:39.267Z",
+      "lastSuccessAt": "2026-11-11T06:47:39.267Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 77
+      "recordCount": 78
     },
     {
       "id": "opencode-social",
       "channel": "OpenCode",
       "url": "https://x.com/opencode",
       "kind": "social",
-      "attemptedAt": "2026-11-10T07:32:24.800Z",
-      "lastSuccessAt": "2026-11-10T07:32:24.800Z",
+      "attemptedAt": "2026-11-11T06:47:39.267Z",
+      "lastSuccessAt": "2026-11-11T06:47:39.267Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "official-oembed; discovery may use mirror",
@@ -10901,8 +12042,8 @@
       "channel": "Command Code",
       "url": "https://x.com/CommandCodeAI",
       "kind": "social",
-      "attemptedAt": "2026-11-10T07:32:24.800Z",
-      "lastSuccessAt": "2026-11-10T07:32:24.800Z",
+      "attemptedAt": "2026-11-11T06:47:39.267Z",
+      "lastSuccessAt": "2026-11-11T06:47:39.267Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "official-oembed; discovery may use mirror",
