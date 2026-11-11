@@ -1,0 +1,12 @@
+{
+  "checkedAt": "2026-11-11",
+  "scope": "Reconcile the first upstream Claude Pro Fable 5.2 sample with the current launch-offer limitations.",
+  "upstreamCommit": "f2a79c39a72b1127f3672ca2b74b0c1743b3460c",
+  "upstreamEvidence": "https://github.com/Fei2411/real-api-pricing/blob/f2a79c39a72b1127f3672ca2b74b0c1743b3460c/data/research/local-samples-round1-2026-11-09.json",
+  "pointId": "claude_pro::claude-fable-5.2",
+  "source": "https://support.claude.com/en/articles/17506494-claude-fable-5-2-launch-offers",
+  "responseSha256": "e7843faf862bb9a820f7ff39e6ac5429010fc2a34880feb402dc94a41e2b5db4",
+  "officialTerms": "Pro and Team Standard receive Fable access up to 50% of weekly usage through November 16, 2026 at 23:59 PT. After the cap or expiry, Fable uses enabled usage credits.",
+  "upstreamAssumption": "The November 9 sample is extrapolated from 7 percentage points of the main weekly meter to four weeks; the adopted 782M-token estimate explicitly does not apply the 50% Fable cap.",
+  "decision": "Preserve source measurements and original numeric fields. Show the historical-sample, cap and expiry caveats in the existing model/provider availability review. Do not invent a corrected monthly quota or a benchmark. Tests assert source-preserving transformations, not permanent absence of future upstream evidence."
+}

@@ -78,7 +78,8 @@ test("Shared API details expose every tier, conditions, write fees, source and v
   assert.ok(renderToStaticMarkup(<ApiPriceDetails reference={qwen} lang="zh" />).includes("context-cache"));
 });
 
-test('Claude 5.2 releases publish exact API prices and access caveats without fabricated quotas or benchmarks',()=>{
+test('Claude 5.2 references retain exact API prices and access caveats as upstream evidence evolves',()=>{
+  const evidenceBefore=structuredClone({points:data.points,configurations:data.configurations,mappings:data.mappings});
   for (const family of ['fable','mythos']) {
     const id=`claude-${family}-5.2`;
     assert.ok(data.models?.some(m=>m.id===id));
@@ -90,8 +91,9 @@ test('Claude 5.2 releases publish exact API prices and access caveats without fa
     assert.equal(record.variants.find(v=>v.id==='us-only-5m')!.rates.input,8.8);
     assert.equal(record.variants.find(v=>v.id==='batch')!.rates.output,20);
     assert.ok(record.notes!.en.includes(`claude-${family}-5-2`));
-    assert.ok(!data.points.some(p=>p.model===id),'no unverified subscription or API workload point');
-    assert.ok(!data.configurations.some(c=>c.model===id),'no borrowed benchmark score');
+    // A reference lookup must not invent evidence, but new upstream evidence
+    // is allowed. Absence in the release-day snapshot is not an invariant.
   }
   assert.match(data.apiPrices!.models['claude-mythos-5.2'].notes!.en,/requires approval/);
+  assert.deepEqual({points:data.points,configurations:data.configurations,mappings:data.mappings},evidenceBefore);
 });

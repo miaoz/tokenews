@@ -79,3 +79,42 @@ test('a fully mapped release page produces an empty discovery queue', () => {
   const h=Array.from({length:12},(_,i)=>`<a href="/models/releases/model-${i}">Model ${i}</a>`).join('');
   assert.deepEqual(discoverAA(h,new Set(Array.from({length:12},(_,i)=>`https://artificialanalysis.ai/models/model-${i}`))),[]);
 });
+
+test('Claude catalog and price references add no evidence, while subsequent upstream samples and scores survive', async () => {
+  const {addApiPricePoints} = await import('./api-price-points.mjs');
+  const {loadApiPrices} = await import('./api-prices.mjs');
+  const {catalog} = await loadCatalog(root);
+  const {catalog:prices} = await loadApiPrices(`${root}/data/api-prices`);
+  const referenceOnly = {version:1,entries:[]};
+  const conventions = {standardTokenMix:{cache:.97,input:.025,output:.005}};
+  const merge = source => addApiPricePoints(
+    mergeCatalog({...source,conventions},catalog,{version:1,records:[]}),prices,referenceOnly);
+  const empty = merge(upstream);
+  for (const model of ['claude-fable-5.2','claude-mythos-5.2']) {
+    assert.ok(empty.models.some(m=>m.id===model));
+    assert.ok(prices.models[model]);
+  }
+  assert.deepEqual(empty.points,[]);
+  assert.deepEqual(empty.configurations,[]);
+  assert.deepEqual(empty.mappings,[]);
+  // Synthetic evidence exercises the transition from catalog-only to upstream
+  // coverage without depending on when a real source publishes a new result.
+  const point = {id:'fixture-plan::claude-fable-5.2',model:'claude-fable-5.2',
+    model_display:'Claude Fable 5.2',vendor:'Anthropic',monthly_yi:1,
+    real_usd_per_mtok:.2,data_date:'2026-11-09'};
+  const sampleOnly = merge({...upstream,points:[point]});
+  assert.deepEqual(sampleOnly.points,[point]);
+  assert.deepEqual(sampleOnly.configurations,[]);
+  assert.deepEqual(sampleOnly.mappings,[]);
+  const configuration = {configuration_id:'fixture:fable52',model:'claude-fable-5.2',score:42};
+  const mapping = {point_id:point.id,configuration_id:configuration.configuration_id};
+  const source = {...upstream,points:[point],configurations:[configuration],mappings:[mapping]};
+  const before = structuredClone(source);
+  const merged = merge(source);
+  assert.deepEqual(merged.points,source.points);
+  assert.deepEqual(merged.configurations,source.configurations);
+  assert.deepEqual(merged.mappings,source.mappings);
+  assert.deepEqual(source,before);
+  assert.ok(!merged.points.some(p=>p.model==='claude-mythos-5.2'));
+  assert.ok(!merged.configurations.some(c=>c.model==='claude-mythos-5.2'));
+});
