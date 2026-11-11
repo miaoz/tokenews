@@ -114,7 +114,7 @@ export interface SiteData {
   /** Current official API references maintained by Tokenews, separate from quota adoption. */
   apiPrices?: ApiPriceCatalog;
   /** Model identity is independent of subscription and API price coverage. */
-  models?: { id: string; name: string; maker: string; source: string; checkedAt: string }[];
+  models?: { id: string; name: string; maker: string; source: string; checkedAt: string; releaseDate?: string }[];
   catalogUpdatedAt?: string;
   leaderboardUpdatedAt?: string | null;
   currentBoards?: string[];

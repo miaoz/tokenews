@@ -14,12 +14,13 @@ export function validateCatalog(catalog) {
     const slug = m.id?.replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
     if (!/^[a-z0-9][a-z0-9.-]*$/.test(m.id) || ids.has(m.id) || slugs.has(slug)) fail(`Duplicate/invalid model ID: ${m.id}`);
     if (!m.name?.trim() || !m.maker?.trim() || !validUrl(m.source) || !validDate(m.checkedAt)) fail(`Incomplete model: ${m.id}`);
+    if (m.releaseDate != null && !validDate(m.releaseDate)) fail(`Invalid release date: ${m.id}`);
     ids.add(m.id); slugs.add(slug);
   }
   return catalog;
 }
 
-export function mergeCatalog(data, catalog, snapshots) {
+export function mergeCatalog(data, catalog, snapshots, current = { sources: [] }) {
   validateCatalog(catalog);
   const models = new Map(catalog.models.map(m => [m.id, { ...m }]));
   // Retain compatibility with newly synced upstream models without making
@@ -29,6 +30,19 @@ export function mergeCatalog(data, catalog, snapshots) {
     models.set(p.model, { id: p.model, name: tag && p.model_display.endsWith(tag) ? p.model_display.slice(0, -tag.length) : p.model_display,
       maker: p.vendor === 'Muse' ? 'Meta' : p.model.startsWith('nemotron') ? 'NVIDIA' : p.vendor === 'other' ? 'Other' : p.vendor,
       source: 'https://github.com/Fei2411/real-api-pricing', checkedAt: data.generatedAt });
+  }
+  // Source dates describe the exact reviewed model, never its ingestion/check date.
+  const releases = new Map();
+  for (const source of current.sources) for (const row of source.rows) {
+    if (!row.model || !models.has(row.model) || row.releaseDate == null) continue;
+    if (!validDate(row.releaseDate)) fail(`Invalid release date: ${row.model}`);
+    if (releases.has(row.model) && releases.get(row.model) !== row.releaseDate)
+      fail(`Conflicting release dates: ${row.model}`);
+    releases.set(row.model, row.releaseDate);
+  }
+  for (const [id, releaseDate] of releases) {
+    const model = models.get(id);
+    if (model.releaseDate == null) model.releaseDate = releaseDate;
   }
   if (snapshots.version !== 1 || !Array.isArray(snapshots.records)) fail('Invalid leaderboard snapshots');
   const boards = { ...data.boards }, configs = new Map(), observations = new Set();

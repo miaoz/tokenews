@@ -9,6 +9,29 @@ const target = { adapter:'artificial-analysis', model:'new-model', label:'New Mo
 const html = '<h1>New Model (High)</h1><p>Model summary Intelligence Updated # 2 / 62</p><p>New Model (High) scores 60 on the Artificial Analysis Intelligence Index.</p><p>Artificial Analysis Intelligence Index v5.0.1 includes evaluations</p>';
 const record = parseLeaderboard(html, target, '2026-11-04');
 const upstream = { points: [], configurations: [], boards: { aa_intelligence_index: {name:'AA v4.3'} }, mappings: [] };
+test('release dates join exact model IDs without substituting checked dates', () => {
+  const snapshots = {version:1, records:[]};
+  const source = rows => ({sources:[{rows}]});
+  const result = mergeCatalog(upstream, catalog, snapshots, source([
+    {model:'new-model', releaseDate:'2026-10-28'},
+    {model:'unrelated', releaseDate:'2026-11-01'},
+    {model:null, releaseDate:'2026-11-02'},
+  ]));
+  assert.equal(result.models[0].releaseDate, '2026-10-28');
+  assert.equal(catalog.models[0].releaseDate, undefined);
+  assert.equal(mergeCatalog(upstream, catalog, snapshots).models[0].releaseDate, undefined);
+  const reviewed = {...catalog, models:[{...catalog.models[0],releaseDate:'2026-10-27'}]};
+  assert.equal(mergeCatalog(upstream, reviewed, snapshots, source([
+    {model:'new-model',releaseDate:'2026-10-28'},
+  ])).models[0].releaseDate, '2026-10-27');
+  for (const releaseDate of ['2026-02-30', 'yesterday', '2026-1-01']) {
+    assert.throws(() => mergeCatalog(upstream, catalog, snapshots, source([{model:'new-model',releaseDate}])));
+    assert.throws(() => validateCatalog({...catalog, models:[{...catalog.models[0], releaseDate}]}));
+  }
+  assert.throws(() => mergeCatalog(upstream, catalog, snapshots, source([
+    {model:'new-model',releaseDate:'2026-10-28'}, {model:'new-model',releaseDate:'2026-10-29'},
+  ])), /Conflicting release dates/);
+});
 test('models without price points remain visible, and local benchmarks do not overwrite old versions or create price mappings', () => {
   const data = mergeCatalog(upstream, catalog, { version:1, records:[record] });
   assert.equal(data.models[0].id, 'new-model');

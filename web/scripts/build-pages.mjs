@@ -566,13 +566,16 @@ ${PAGE_SCRIPT}
 // $20/mo, —) is right-aligned so the numbers line up.
 const FIGURE = /^(?:—|(?:≈|#)?[$¥€]?\d[\d.,]*(?:\s*[%×KMBT亿万])?(?:\/\S+)?(?:\s*\/\s*\d+)?)$/;
 const isFigure = (cell) => FIGURE.test(String(cell).replace(/<[^>]+>/g, "").trim());
-const table = (caption, head, rows) => {
+const table = (caption, head, rows, sorting) => {
   const num = head.map((_, i) => i > 0 && rows.length > 0 && rows.every((r) => isFigure(r[i])) && rows.some((r) => String(r[i]).replace(/<[^>]+>/g, "").trim() !== "—"));
   const cls = (i) => (num[i] ? ' class="num"' : "");
-  return `<div class="table-wrap"><table><caption>${caption}</caption><thead><tr>${head
-    .map((h, i) => `<th scope="col"${cls(i)}>${h}</th>`)
+  return `<div class="table-wrap"><table${sorting ? ' data-sortable' : ""}><caption>${caption}</caption><thead><tr>${head
+    .map((h, i) => `<th scope="col"${cls(i)}${sorting ? ` aria-sort="${i === sorting.column ? sorting.direction : "none"}"` : ""}>${sorting ? `<button type="button" data-sort-type="${sorting.types[i]}" data-default-direction="${sorting.types[i] === "date" ? "descending" : "ascending"}">${h}<span class="sort-indicator" aria-hidden="true">${i === sorting.column ? "↓" : "↕"}</span></button>` : h}</th>`)
     .join("")}</tr></thead><tbody>${rows
-    .map((r) => `<tr>${r.map((c, i) => (i === 0 ? `<th scope="row">${c}</th>` : `<td${cls(i)}>${c}</td>`)).join("")}</tr>`)
+    .map((r, row) => `<tr>${r.map((c, i) => {
+      const value = sorting ? ` data-sort-value="${esc(sorting.values[row][i])}"` : "";
+      return i === 0 ? `<th scope="row"${value}>${c}</th>` : `<td${cls(i)}${value}>${c}</td>`;
+    }).join("")}</tr>`)
     .join("")}</tbody></table></div>`;
 };
 // Page overview: a fixed row of four headline numbers (always four, "—" when
@@ -1606,7 +1609,7 @@ ${a.tags.map((x) => `<category>${esc(x)}</category>`).join("")}
 // ---------------------------------------------------------------------------
 // Index pages.
 // ---------------------------------------------------------------------------
-function indexPage({ lang, section, path: [en, zh], title, description, keywords, kicker, h1, lead, caption, head, rows, items }) {
+function indexPage({ lang, section, path: [en, zh], title, description, keywords, kicker, h1, lead, caption, head, rows, items, sorting }) {
   const isZh = lang === "zh";
   const t = (a, b) => (isZh ? b : a);
   const urlPath = isZh ? zh : en;
@@ -1627,7 +1630,7 @@ function indexPage({ lang, section, path: [en, zh], title, description, keywords
     kicker: `${t("Directory", "目录")} · ${esc(kicker)}`,
     h1,
     lead: esc(lead),
-    body: table(caption, head, rows),
+    body: table(caption, head, rows, sorting) + (sorting ? '<script src="/table-sort.js" defer></script>' : ""),
     crumbs: [
       [NAME[lang], U.home(lang)],
       [h1, urlPath],
@@ -1698,30 +1701,38 @@ const providersIndex = (lang) => {
 
 const modelsIndex = (lang) => {
   const t = (en, cn) => (lang === "zh" ? cn : en);
-  const sorted = [...modelList].sort((a, b) => (a.cheapest?.real_usd_per_mtok ?? (a.free.length ? 0 : Infinity)) - (b.cheapest?.real_usd_per_mtok ?? (b.free.length ? 0 : Infinity)) || a.name.localeCompare(b.name));
+  const sorted = [...modelList].sort((a, b) => (b.releaseDate ?? "").localeCompare(a.releaseDate ?? "") || a.name.localeCompare(b.name));
   return indexPage({
     lang,
     section: "models",
     path: [U.models("en"), U.models("zh")],
     title: t(`AI Model Directory: ${sorted.length} Models, Benchmarks & Prices`, `AI 模型目录：${sorted.length} 个模型、榜单与价格`),
     description: t(
-      `Real price per million tokens for ${sorted.length} AI models — GPT, Claude, Gemini, Grok, DeepSeek, Qwen, Kimi, GLM and more — across subscriptions and APIs, cheapest first.`,
-      `GPT、Claude、Gemini、Grok、DeepSeek、通义千问、Kimi、GLM 等 ${sorted.length} 个 AI 模型在订阅与 API 中的真实每百万 token 单价，从低到高排序。`,
+      `Real price per million tokens for ${sorted.length} AI models — GPT, Claude, Gemini, Grok, DeepSeek, Qwen, Kimi, GLM and more — across subscriptions and APIs, newest releases first.`,
+      `GPT、Claude、Gemini、Grok、DeepSeek、通义千问、Kimi、GLM 等 ${sorted.length} 个 AI 模型的发布时间及订阅与 API 真实每百万 token 单价，默认按发布时间从新到旧排序。`,
     ),
     keywords: [t("AI model prices", "AI 模型价格"), t("LLM price per million tokens", "大模型每百万 token 价格"), ...sorted.slice(0, 20).map((m) => m.name)],
     kicker: t(plural(models.size, "model"), `${models.size} 个模型`),
     h1: t("AI model directory", "AI 模型目录"),
-    lead: t(`All ${sorted.length} models, including models with benchmark results whose pricing has not yet been recorded. Available real prices are sorted lowest first.`, `全部 ${sorted.length} 个模型，包括已有榜单成绩、价格尚未收录的模型。已收录真实价格的模型按单价从低到高排序。`),
-    caption: t("Models by lowest real price", "模型，按最低真实单价排序"),
-    head: [t("Model", "模型"), t("Maker", "厂商"), t("Lowest real $/MTok", "最低真实单价 $/MTok"), t("Cheapest plan", "最便宜的套餐"), t("API list (reference mix)", "API 标价（参考负载）"), t("Plans", "套餐数")],
+    lead: t(`All ${sorted.length} models, including models with benchmark results whose pricing has not yet been recorded. Sorted by release date, newest first. Click a column heading to change the sort order. Missing values appear last.`, `全部 ${sorted.length} 个模型，包括已有榜单成绩、价格尚未收录的模型。默认按发布时间从新到旧排序，点击表头可切换排序；缺失值始终排在末尾。`),
+    caption: t("Models · click a column heading to sort", "模型 · 点击表头切换排序"),
+    head: [t("Model", "模型"), t("Maker", "厂商"), t("Release date", "发布时间"), t("Lowest real $/MTok", "最低真实单价 $/MTok"), t("Cheapest plan", "最便宜的套餐"), t("API list (reference mix)", "API 标价（参考负载）"), t("Plans", "套餐数")],
     rows: sorted.map((m) => [
       modelLink(m, lang),
       makerLink(makers.get(m.maker), lang),
+      m.releaseDate ? `<time datetime="${m.releaseDate}">${m.releaseDate}</time>` : "—",
       m.cheapest ? `<strong>${usd(m.cheapest.real_usd_per_mtok)}</strong>` : m.free.length ? "≈$0" : "—",
       m.cheapest ? planLink(m.cheapest, lang) : "—",
       m.listBlended != null ? usd(m.listBlended) : "—",
       String(m.points.length),
     ]),
+    sorting: {
+      column: 2, direction: "descending",
+      types: ["text", "text", "date", "number", "text", "number", "number"],
+      values: sorted.map(m => [m.name, makerLabel(makers.get(m.maker), lang), m.releaseDate,
+        m.cheapest?.real_usd_per_mtok ?? (m.free.length ? 0 : null),
+        m.cheapest ? planName(m.cheapest, lang) : null, m.listBlended, m.points.length]),
+    },
     items: sorted.map((m) => [m.name, U.model(m, lang)]),
   });
 };
@@ -1792,6 +1803,10 @@ function methodologyPage(lang) {
 // absolute links, for AI tools that read Markdown better than HTML.
 const turndown = new TurndownService({ headingStyle: "atx", codeBlockStyle: "fenced", bulletListMarker: "-", emDelimiter: "*" });
 turndown.use(gfm);
+turndown.addRule("sortableHeading", {
+  filter: node => node.nodeName === "BUTTON" && node.hasAttribute("data-sort-type"),
+  replacement: (_content, node) => node.firstChild.textContent,
+});
 turndown.remove(["script", "style", "nav", "aside", "button", "svg"]);
 const hasClass = (node, name) => (node.getAttribute?.("class") ?? "").split(/\s+/).includes(name);
 const elements = (node) => Array.from(node.childNodes).filter((n) => n.nodeType === 1);

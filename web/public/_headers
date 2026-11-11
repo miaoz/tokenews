@@ -10,6 +10,9 @@
 /pages.css
   Cache-Control: public, max-age=0, must-revalidate
 
+/table-sort.js
+  Cache-Control: public, max-age=0, must-revalidate
+
 # Markdown copies of pages (build-pages.mjs): served as Markdown, pointing
 # search engines at the HTML page as the canonical one.
 /*/index.md

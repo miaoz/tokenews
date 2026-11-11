@@ -24,7 +24,7 @@ const priceDirectory = path.resolve(root, "../data/api-prices");
 const { catalog, files: priceFiles } = await loadApiPrices(priceDirectory);
 const apiPointManifest = JSON.parse(await readFile(path.resolve(root, '../data/api-price-points.json'), 'utf8'));
 const codingPlans = JSON.parse(await readFile(path.resolve(root, '../data/coding-plans/current.json'), 'utf8'));
-const pricedData = mergeCodingPlans(addApiPricePoints(mergeCatalog(upstreamData, models, snapshots), catalog, apiPointManifest), codingPlans);
+const pricedData = mergeCodingPlans(addApiPricePoints(mergeCatalog(upstreamData, models, snapshots, current), catalog, apiPointManifest), codingPlans);
 const data = attachRefreshStatus(mergeCurrentLeaderboards(pricedData, current), refresh);
 // Keep adopted points byte-for-byte meaningful: current prices never replace
 // the historical list_price / blended reference used to explain a quota.

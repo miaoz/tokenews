@@ -328,6 +328,33 @@ html[lang="zh-CN"] .kv dt {
   height: auto;
   white-space: nowrap;
 }
+.static-page [data-sortable] thead button {
+  width: 100%;
+  justify-content: space-between;
+  gap: 8px;
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+}
+.static-page [data-sortable] thead button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+.static-page .sort-indicator {
+  color: var(--muted);
+}
+.static-page [aria-sort="ascending"] .sort-indicator,
+.static-page [aria-sort="descending"] .sort-indicator {
+  color: var(--accent);
+}
+.static-page [data-sortable] time {
+  white-space: nowrap;
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+.static-page [data-sortable] td:nth-child(5) {
+  min-width: 16em;
+}
 .static-page tbody th {
   min-width: 12em;
   font-weight: 600;
