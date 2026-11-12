@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "checkedAt": "2026-11-11",
-  "baselineCommit": "2599b7ad743a94b3ab6d4ff8cdb4d8359ee6943c",
+  "checkedAt": "2026-11-12",
+  "baselineCommit": "f2a79c39a72b1127f3672ca2b74b0c1743b3460c",
   "note": "Source audit is separate from publication. Unverified sources are never reported as unchanged. Identity-review rows may be aliases, historical models, or new releases. Scores across changed versions must not be mixed.",
   "results": [
     {
@@ -12,7 +12,7 @@
       "currentVersion": "5.0.1",
       "versionChanged": true,
       "baselineConfigurations": 152,
-      "observedConfigurations": 104,
+      "observedConfigurations": 107,
       "sourceUpdatedAt": null,
       "coverage": "Current non-deprecated configurations in the public page payload with a non-null score; not all historical releases.",
       "configurationReviewRequired": true,
@@ -27,6 +27,7 @@
         "claude-fable-5.2",
         "gpt-6.1-terra",
         "gemini-4-carbon",
+        "solar-pro-4",
         "k-exaone-2.0",
         "north-mini-code",
         "mistral-large-4",
@@ -42,8 +43,10 @@
         "kimi-k3.1-pro",
         "beam-1.0",
         "deepseek-v4-pro-0813",
+        "qwen3.8-flash-next",
         "nvidia-nemotron-3-nano-4b",
         "granite-4.2-8b",
+        "jt-4.1-flash-236b-a21b",
         "k2-horizon-375b-a23b",
         "gemma-4-31b",
         "gemini-4-argon",
@@ -201,6 +204,19 @@
           "source": "https://artificialanalysis.ai/models/mimo-v2-6-flash",
           "model": "mimo-v2.6-flash",
           "status": "tracked-model"
+        },
+        {
+          "identity": "Solar Pro 4",
+          "sourceId": "solar-pro4",
+          "label": "Solar Pro 4",
+          "score": 14.1589437644357,
+          "maker": "Upstage",
+          "releaseDate": "2026-08-06",
+          "releaseSlug": "solar-pro-4-2026-09-18",
+          "effort": null,
+          "source": "https://artificialanalysis.ai/models/solar-pro4",
+          "model": "solar-pro-4",
+          "status": "missing-from-board"
         },
         {
           "identity": "K-EXAONE 2.0",
@@ -827,6 +843,19 @@
           "status": "tracked-model"
         },
         {
+          "identity": "Qwen3.8-Flash-Next",
+          "sourceId": "qwen3-8-flash-next",
+          "label": "Qwen3.8-Flash-Next",
+          "score": 28.5750026655353,
+          "maker": "Alibaba",
+          "releaseDate": "2026-08-26",
+          "releaseSlug": "qwen3-8-flash-next",
+          "effort": null,
+          "source": "https://artificialanalysis.ai/models/qwen3-8-flash-next",
+          "model": "qwen3.8-flash-next",
+          "status": "missing-from-board"
+        },
+        {
           "identity": "NVIDIA Nemotron 3 Nano 4B",
           "sourceId": "nvidia-nemotron-3-nano-4b",
           "label": "NVIDIA Nemotron 3 Nano 4B",
@@ -955,6 +984,19 @@
           "source": "https://artificialanalysis.ai/models/gpt-6-1-sol",
           "model": "gpt-6.1-sol",
           "status": "tracked-model"
+        },
+        {
+          "identity": "JT-4.1 Flash 236B A21B",
+          "sourceId": "jt-4-1-flash-236b-a21b",
+          "label": "JT-4.1 Flash 236B A21B",
+          "score": 18.952876906667,
+          "maker": "China Mobile",
+          "releaseDate": "2026-11-11",
+          "releaseSlug": "jt-4-1-flash-236b-a21b",
+          "effort": null,
+          "source": "https://artificialanalysis.ai/models/jt-4-1-flash-236b-a21b",
+          "model": "jt-4.1-flash-236b-a21b",
+          "status": "missing-from-board"
         },
         {
           "identity": "Gemini 4 Carbon",
@@ -1965,7 +2007,6 @@
         "Muse Wonder (High)",
         "Mistral Small 4 (Reasoning)",
         "Ling-3.0-flash-VL",
-        "JT-4.1 Flash 236B A21B (Reasoning)",
         "Nanbeige4.3-33B",
         "Ling 3.1 Flash 1019",
         "K2 Horizon MoVA 36B A4B",
@@ -1999,6 +2040,7 @@
         "Llama 4 Scout",
         "Granite 4.2 8B",
         "GPT-6.1 Terra (Max)",
+        "JT-4.1 Flash 236B A21B",
         "Gemini 4 Carbon (Low)",
         "Trinity Large Thinking",
         "K2 Horizon 375B A23B",
@@ -2052,7 +2094,6 @@
         "muse-wonder",
         "mistral-small-4",
         "ling-3.0-flash-vl",
-        "jt-4.1-flash-236b-a21b",
         "nanbeige4.3-33b",
         "ling-3.1-flash-1019",
         "k2-horizon-mova-36b-a4b",
@@ -2083,6 +2124,7 @@
         "ling-3.1-flash",
         "llama-4-scout",
         "granite-4.2-8b",
+        "jt-4.1-flash-236b-a21b",
         "trinity-large-thinking",
         "k2-horizon-375b-a23b",
         "gemini-3.1-pro-preview",
@@ -2702,19 +2744,6 @@
           "source": "https://artificialanalysis.ai/models/claude-opus-5-5-low",
           "model": "claude-opus-5.5",
           "status": "tracked-model"
-        },
-        {
-          "identity": "JT-4.1 Flash 236B A21B",
-          "sourceId": "jt-4-1-flash-236b-a21b",
-          "label": "JT-4.1 Flash 236B A21B (Reasoning)",
-          "score": 3.03030303030303,
-          "maker": "China Mobile",
-          "releaseDate": "2026-07-09",
-          "releaseSlug": "jt-4-1-flash-236b-a21b",
-          "effort": "reasoning",
-          "source": "https://artificialanalysis.ai/models/jt-4-1-flash-236b-a21b",
-          "model": "jt-4.1-flash-236b-a21b",
-          "status": "missing-from-board"
         },
         {
           "identity": "Nanbeige4.3-33B",
@@ -3471,6 +3500,19 @@
           "status": "tracked-model"
         },
         {
+          "identity": "JT-4.1 Flash 236B A21B",
+          "sourceId": "jt-4-1-flash-236b-a21b",
+          "label": "JT-4.1 Flash 236B A21B",
+          "score": 15.656565656565698,
+          "maker": "China Mobile",
+          "releaseDate": "2026-11-11",
+          "releaseSlug": "jt-4-1-flash-236b-a21b",
+          "effort": null,
+          "source": "https://artificialanalysis.ai/models/jt-4-1-flash-236b-a21b",
+          "model": "jt-4.1-flash-236b-a21b",
+          "status": "missing-from-board"
+        },
+        {
           "identity": "Gemini 4 Carbon",
           "sourceId": "gemini-4-carbon-low",
           "label": "Gemini 4 Carbon (Low)",
@@ -4038,7 +4080,7 @@
       "currentVersion": "2.0",
       "versionChanged": true,
       "baselineConfigurations": 30,
-      "observedConfigurations": 35,
+      "observedConfigurations": 36,
       "sourceUpdatedAt": null,
       "coverage": "Public agent-variant payload, including routers. Routers are not treated as standalone base models.",
       "configurationReviewRequired": true,
@@ -4047,23 +4089,37 @@
       "costDifferences": [],
       "newConfigurations": [],
       "missingFromBoard": [
+        "muse-wonder",
         "mistral-large-4",
         "gemini-4-carbon",
-        "muse-wonder",
+        "gpt-6.1-terra",
+        "muse-spark-open",
+        "beam-1.0",
         "deepseek-v4.1-flash-1017",
         "deepseek-v4.1-flash",
         "step-5-preview",
         "claude-haiku-5.5",
-        "beam-1.0",
-        "gpt-6.1-terra",
         "muse-wonder-full",
-        "muse-spark-open",
         "gemini-4-argon"
       ],
       "unresolvedIdentities": [
         "Muse Ember"
       ],
       "rows": [
+        {
+          "identity": "Muse Wonder",
+          "sourceId": "52f72f7f3393c5edf92b32326e7a678d",
+          "label": "Muse Code - Muse Wonder (Max)",
+          "score": 51.9768236993592,
+          "harness": "Muse Code",
+          "router": false,
+          "effort": "max",
+          "fallback": false,
+          "meanCost": 8.04811220428196,
+          "medianCost": 4.21125933333333,
+          "model": "muse-wonder",
+          "status": "missing-from-board"
+        },
         {
           "identity": "Claude Sonnet 5.5",
           "sourceId": "9983e10d68576074ad63407d0ca81e4b",
@@ -4091,6 +4147,20 @@
           "medianCost": 8.256333,
           "model": "claude-opus-5.5",
           "status": "tracked-model"
+        },
+        {
+          "identity": "Mistral Large 4",
+          "sourceId": "9fcf1e000a8ac75cca614977bcac25da",
+          "label": "Mistral Vibe - Mistral Large 4 (High)",
+          "score": 48.2774919409145,
+          "harness": "Mistral Vibe",
+          "router": false,
+          "effort": "high",
+          "fallback": false,
+          "meanCost": 1.25944220793442,
+          "medianCost": 0.546025783333333,
+          "model": "mistral-large-4",
+          "status": "missing-from-board"
         },
         {
           "identity": "Grok 4.7",
@@ -4121,20 +4191,6 @@
           "status": "tracked-model"
         },
         {
-          "identity": "Mistral Large 4",
-          "sourceId": "730b8ffd93e83875305984c999467c69",
-          "label": "Mistral Vibe - Mistral Large 4 (High)",
-          "score": 35.4072051699794,
-          "harness": "Mistral Vibe",
-          "router": false,
-          "effort": "high",
-          "fallback": false,
-          "meanCost": 0.782666187098099,
-          "medianCost": 0.288543546666667,
-          "model": "mistral-large-4",
-          "status": "missing-from-board"
-        },
-        {
           "identity": "GPT-6.1 Sol",
           "sourceId": "3897d72a57138fd2e2353367570b4b37",
           "label": "Codex - GPT-6.1 Sol (Max)",
@@ -4163,17 +4219,87 @@
           "status": "missing-from-board"
         },
         {
-          "identity": "Muse Wonder",
-          "sourceId": "52f72f7f3393c5edf92b32326e7a678d",
-          "label": "Muse Code - Muse Wonder (Max)",
-          "score": 51.9768236993592,
-          "harness": "Muse Code",
+          "identity": "GPT-6.1 Terra",
+          "sourceId": "ee13e548b65eeee544cd5b0c6068a4f5",
+          "label": "Codex - GPT-6.1 Terra (Non-reasoning)",
+          "score": 39.215161464103396,
+          "harness": "Codex",
+          "router": false,
+          "effort": null,
+          "fallback": false,
+          "meanCost": 0.454255643441512,
+          "medianCost": 0.246047841666667,
+          "model": "gpt-6.1-terra",
+          "status": "missing-from-board"
+        },
+        {
+          "identity": "GPT-6.1 Terra",
+          "sourceId": "a3eeef492929228973b8da75e051291d",
+          "label": "Codex - GPT-6.1 Terra (Medium)",
+          "score": 42.0492375909634,
+          "harness": "Codex",
+          "router": false,
+          "effort": "medium",
+          "fallback": false,
+          "meanCost": 0.394994482142174,
+          "medianCost": 0.2338406,
+          "model": "gpt-6.1-terra",
+          "status": "missing-from-board"
+        },
+        {
+          "identity": "GPT-6.1 Terra",
+          "sourceId": "b54e883be1cff7a6a43a737ee106011c",
+          "label": "Codex - GPT-6.1 Terra (Low)",
+          "score": 34.85683422396,
+          "harness": "Codex",
+          "router": false,
+          "effort": "low",
+          "fallback": false,
+          "meanCost": 0.198820047696481,
+          "medianCost": 0.133640266666667,
+          "model": "gpt-6.1-terra",
+          "status": "missing-from-board"
+        },
+        {
+          "identity": "GPT-6.1 Terra",
+          "sourceId": "41bcc9881ff1465f62e417e5a7535e20",
+          "label": "Codex - GPT-6.1 Terra (High)",
+          "score": 46.2787772238514,
+          "harness": "Codex",
+          "router": false,
+          "effort": "high",
+          "fallback": false,
+          "meanCost": 0.544031579042956,
+          "medianCost": 0.320868575,
+          "model": "gpt-6.1-terra",
+          "status": "missing-from-board"
+        },
+        {
+          "identity": "GLM-5.3",
+          "sourceId": "96d7404e06194027474a6cc3bb31c068",
+          "label": "Opencode - GLM-5.3 (Max)",
+          "score": 48.916169034430304,
+          "harness": "Opencode",
           "router": false,
           "effort": "max",
           "fallback": false,
-          "meanCost": 8.04811220428196,
-          "medianCost": 4.21125933333333,
-          "model": "muse-wonder",
+          "meanCost": 5.23102713863476,
+          "medianCost": 2.68592986666667,
+          "model": "glm-5.3",
+          "status": "tracked-model"
+        },
+        {
+          "identity": "Muse Spark Open",
+          "sourceId": "d843fce803ff4f84ababc47040306116",
+          "label": "Muse Code - Muse Spark Open (Xhigh)",
+          "score": 26.300702389486304,
+          "harness": "Muse Code",
+          "router": false,
+          "effort": "xhigh",
+          "fallback": false,
+          "meanCost": 3.54324946048794,
+          "medianCost": 1.50236314166667,
+          "model": "muse-spark-open",
           "status": "missing-from-board"
         },
         {
@@ -4203,6 +4329,20 @@
           "medianCost": 2.78907719,
           "model": "kimi-k3",
           "status": "tracked-model"
+        },
+        {
+          "identity": "Beam 1.0",
+          "sourceId": "accfbb12d349c0f2c93547ce814534b2",
+          "label": "Mirror - Beam 1.0",
+          "score": 20.478987379168,
+          "harness": "Mirror",
+          "router": false,
+          "effort": null,
+          "fallback": false,
+          "meanCost": 0.319490234063365,
+          "medianCost": 0.181565053333333,
+          "model": "beam-1.0",
+          "status": "missing-from-board"
         },
         {
           "identity": "Devin Fusion CLI - Claude Opus 5.5 Max + GPT-6 Luna High",
@@ -4242,7 +4382,7 @@
           "effort": "max",
           "fallback": false,
           "meanCost": 0.156271419158149,
-          "medianCost": 0.0924018583333334,
+          "medianCost": 0.0924018583333333,
           "model": "gpt-6-luna",
           "status": "tracked-model"
         },
@@ -4331,17 +4471,17 @@
           "status": "tracked-model"
         },
         {
-          "identity": "Beam 1.0",
-          "sourceId": "accfbb12d349c0f2c93547ce814534b2",
-          "label": "Mirror - Beam 1.0",
-          "score": 20.478987379168,
-          "harness": "Mirror",
+          "identity": "Mistral Large 4",
+          "sourceId": "730b8ffd93e83875305984c999467c69",
+          "label": "Mistral Vibe - Mistral Large 4 (Medium)",
+          "score": 35.4072051699794,
+          "harness": "Mistral Vibe",
           "router": false,
-          "effort": null,
+          "effort": "medium",
           "fallback": false,
-          "meanCost": 0.319490234063365,
-          "medianCost": 0.181565053333333,
-          "model": "beam-1.0",
+          "meanCost": 0.782666187098099,
+          "medianCost": 0.288543546666667,
+          "model": "mistral-large-4",
           "status": "missing-from-board"
         },
         {
@@ -4429,34 +4569,6 @@
           "status": "router-review"
         },
         {
-          "identity": "Muse Spark Open",
-          "sourceId": "d843fce803ff4f84ababc47040306116",
-          "label": "Muse Code - Muse Spark Open (Xhigh)",
-          "score": 26.300702389486304,
-          "harness": "Muse Code",
-          "router": false,
-          "effort": "xhigh",
-          "fallback": false,
-          "meanCost": 3.54324946048794,
-          "medianCost": 1.50236314166667,
-          "model": "muse-spark-open",
-          "status": "missing-from-board"
-        },
-        {
-          "identity": "GitHub Copilot - Copilot Fusion (max)",
-          "sourceId": "24cd2ab21d1cf5161ddd831f0949bff4",
-          "label": "GitHub Copilot - Copilot Fusion (max)",
-          "score": 59.8570672857608,
-          "harness": "GitHub Copilot",
-          "router": true,
-          "effort": null,
-          "fallback": false,
-          "meanCost": 5.58738499550885,
-          "medianCost": 3.899995,
-          "model": null,
-          "status": "router-review"
-        },
-        {
           "identity": "Gemini 4 Argon",
           "sourceId": "ee454ece0aab8dacb7127770643dcb6b",
           "label": "Antigravity CLI - Gemini 4 Argon (High)",
@@ -4468,76 +4580,6 @@
           "meanCost": 11.7318632341125,
           "medianCost": 7.44099162766667,
           "model": "gemini-4-argon",
-          "status": "missing-from-board"
-        },
-        {
-          "identity": "GLM-5.3",
-          "sourceId": "96d7404e06194027474a6cc3bb31c068",
-          "label": "Opencode - GLM-5.3 (Max)",
-          "score": 48.916169034430304,
-          "harness": "Opencode",
-          "router": false,
-          "effort": "max",
-          "fallback": false,
-          "meanCost": 5.23102713863476,
-          "medianCost": 2.68592986666667,
-          "model": "glm-5.3",
-          "status": "tracked-model"
-        },
-        {
-          "identity": "GPT-6.1 Terra",
-          "sourceId": "41bcc9881ff1465f62e417e5a7535e20",
-          "label": "Codex - GPT-6.1 Terra (High)",
-          "score": 46.2787772238514,
-          "harness": "Codex",
-          "router": false,
-          "effort": "high",
-          "fallback": false,
-          "meanCost": 0.544031579042956,
-          "medianCost": 0.320868575,
-          "model": "gpt-6.1-terra",
-          "status": "missing-from-board"
-        },
-        {
-          "identity": "GPT-6.1 Terra",
-          "sourceId": "b54e883be1cff7a6a43a737ee106011c",
-          "label": "Codex - GPT-6.1 Terra (Low)",
-          "score": 34.85683422396,
-          "harness": "Codex",
-          "router": false,
-          "effort": "low",
-          "fallback": false,
-          "meanCost": 0.198820047696481,
-          "medianCost": 0.133640266666667,
-          "model": "gpt-6.1-terra",
-          "status": "missing-from-board"
-        },
-        {
-          "identity": "GPT-6.1 Terra",
-          "sourceId": "a3eeef492929228973b8da75e051291d",
-          "label": "Codex - GPT-6.1 Terra (Medium)",
-          "score": 42.0492375909634,
-          "harness": "Codex",
-          "router": false,
-          "effort": "medium",
-          "fallback": false,
-          "meanCost": 0.394994482142174,
-          "medianCost": 0.2338406,
-          "model": "gpt-6.1-terra",
-          "status": "missing-from-board"
-        },
-        {
-          "identity": "GPT-6.1 Terra",
-          "sourceId": "ee13e548b65eeee544cd5b0c6068a4f5",
-          "label": "Codex - GPT-6.1 Terra (Non-reasoning)",
-          "score": 39.215161464103396,
-          "harness": "Codex",
-          "router": false,
-          "effort": null,
-          "fallback": false,
-          "meanCost": 0.454255643441512,
-          "medianCost": 0.246047841666667,
-          "model": "gpt-6.1-terra",
           "status": "missing-from-board"
         },
         {
@@ -4553,6 +4595,20 @@
           "medianCost": 0.441727341666667,
           "model": "gpt-6.1-terra",
           "status": "missing-from-board"
+        },
+        {
+          "identity": "GitHub Copilot - Copilot Fusion (max)",
+          "sourceId": "24cd2ab21d1cf5161ddd831f0949bff4",
+          "label": "GitHub Copilot - Copilot Fusion (max)",
+          "score": 59.8570672857608,
+          "harness": "GitHub Copilot",
+          "router": true,
+          "effort": null,
+          "fallback": false,
+          "meanCost": 5.58738499550885,
+          "medianCost": 3.899995,
+          "model": null,
+          "status": "router-review"
         }
       ]
     },
@@ -5817,7 +5873,7 @@
       "releaseDate": "2026-11-09",
       "source": "https://artificialanalysis.ai/models/releases/claude-fable-5-2",
       "catalogModel": "claude-fable-5.2",
-      "inUpstreamDirectory": false,
+      "inUpstreamDirectory": true,
       "inUpstreamBenchmarks": false
     },
     {
@@ -5927,6 +5983,16 @@
       "releaseDate": "2026-10-25",
       "source": "https://artificialanalysis.ai/models/releases/nanbeige4-3-33b",
       "catalogModel": "nanbeige4.3-33b",
+      "inUpstreamDirectory": false,
+      "inUpstreamBenchmarks": false
+    },
+    {
+      "name": "JT-4.1 Flash 236B A21B",
+      "slug": "jt-4-1-flash-236b-a21b",
+      "maker": "China Mobile",
+      "releaseDate": "2026-11-11",
+      "source": "https://artificialanalysis.ai/models/releases/jt-4-1-flash-236b-a21b",
+      "catalogModel": "jt-4.1-flash-236b-a21b",
       "inUpstreamDirectory": false,
       "inUpstreamBenchmarks": false
     },
