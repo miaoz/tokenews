@@ -1,1 +1,2594 @@
-[]
+[
+  {
+    "id": "4d0c06195fe9dbbe60f552e7d813800d38edf51466190063be44a915c6b500b8",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "712422fe508f6af4a24290b77c0b4f728bf93da64443c2de793e77bf44327d85",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "336eb4738f043b5373cce32ee8a9428dcd39b4f6361a165545e18a846fa0971f",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "4123a928fad542cb5c311d845cf6a29ae513b652268af48ecca64160016eed93",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "ca42904a70ba3fe6092958e43cb1466324a31ba6b68d8382f3848c360ff5fbe6",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "82384685294d25dd0ed77216e7d875fc51e12d28a7a18b20d5e72592391f7fa1",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "09bd8d43611ab85477c73a00d37338c8ab72b3f9b8e1a020fa20ba1872ee8d34",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "602f8b88e34ba638efea246dac78ff834eab6c7292f52e5fbddbf2043d5f2b58",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "32b9abd01c13acea88f9322c95ce308abab169db496505e19231613938a15986",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "a33b80d9c71398724b520572f5f8e70816a57b646b2430bff0688ac90c6ea509",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "f0b447676a4a227ef3ea4a40428d878325d2d06d3d975a0637d44d05aeb230ae",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "c07c5ae7de593611fa1572b4f2c6af4115eef78f0ebddbf638a068b066672de0",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "60e6ff3819c776ee00efc524c46e950e51fe1180f9dcc0b34f10e00d2985d80f",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "5b7955f73d85b7801a6ff3e7c3e55d56a860d16a01c0a8a0d034cbc33a14e65f",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "f5ed0191a489a8f06357a31fcd70e8407c0de0cca713416027dd103743203fdd",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "938841e599e6b89ff37ef85f6e68f5a24482d6324c780bd4aabc3afc9e9cd84a",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "85b5ee0e94d93cabe3c6e99620544e6edbc9864460f397906e0a821156226ef2",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "990ac4bec0426a267fd296a353bc944bdbb4499b16cb1e1e26b615b83a446fe0",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "d50147d26aeda01324cf021b1474664d9692b3b2a228cb6fea3ce6005a64fab5",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "d5dc5f77b249e0ca04550c15b9e6730232f4128157c1a40ae93be3040852eab1",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "683e77a6cd96d128bd5d4ebe8e950ad73cfbdeabc437cee8b1b95c4e11a5ce14",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "b5dd0137aa987ba16fb99f3e48858d23e2afff788fe3f27ab4612f03ce18e0c9",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "0be32c1ae4c575f47feb6cb12059fbb7b584e373e4acbc38e2c286810fe369d9",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "43ab5849dd90c93d498b32437cfe1048a20cbb5ca77b59290bdaf74cb33d8d53",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "17beedca25c5ad25f63a0ae133e398d6c5aafbb6be847f4a7e10628ed47aba44",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "cd166a638c22192c35f7617981518e166c7fc9dd2f93cd271f6b9dc5d7111d43",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "31485c5b10ad078723780e6ab646719cf9de6340c2db200bdb16355139f988f8",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "46c0b2bf120e71eb2b09cbe7aa360a924b1f03ec0de93afca04d88f0eefb0443",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "ef892924003e3bc7b96135497dac1dde69d4137e932fa4c19d1e0685918d1dd0",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "7be6f83f722be340446a6e0da632e10e94b584d49879e91088fa0a36b82953cc",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "9639d4b16e674663942dedcbfe469fb7ea0ae7cd3d9f9d4fb9bade3c964baacd",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "da6140e58b9bccda7ecca8eb48f375c825235d0c39aeb140970226f487827576",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "851d2cb2dbd40090c117472fd5590e58a52fd1a2398f8f0a88622da32981247c",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "b252e707e9c95cafb159c2adc852d6c9c9a4446ab53e4faa58edcbe40773364b",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "9cc0a61354c203f5cfc2a01faae5fdf411b8a52d1044c6709b97aab095946162",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "75fb6a9cfc4a4b9c6c17bddc8b46fbc67477cacff5585af2d01ed103dce0159e",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "d39e5ec171ab77c25916b13b5e7f1f740544d48930a2020b9594c1a466c115aa",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "6d0bb54dc66a283365746f30b55eb650f06501d1e3639370b2a88ae0c799c41f",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "0c780287f8cbfee21fac2d47c1954403f2e73b7305348160ca17ed58639c15ca",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "c0459a2412a02b10fc3e050b43ce7aa99081fd86d13ee002f7cdf4c802b2f0aa",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "9e715e52725c3a7af75a602b604ca31719a7d821e8f34f0c6864c13bf9cbae9f",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "359a9eedf46821a59be7450261c11e7f012128fca772ddc23d6a538975fbcacf",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "43f8995a4c66af00e7a21b8ccf682a1f0d53d314a484c0b3889fb4687fceb068",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "aa6f1c0ebcfcee02fd7ad0935109638baab8aabd7a564b65159ed5f2602a87f2",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "985ee6e5424ce00d44d791958e737dfeff641cba6273c138bab1fe8a04f1bc3f",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "d1e283a0d05f6548d45eb03ffa8a17806e232daaf921f5e7ae8171acf5b9fa4f",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "31ed53aa8971222b89f76f6d60efe24dd1600d417f782de9440b5b34fb7cb898",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "ca20f9a7a0bdb79615bcfc0d13b35e4eb47acb75f311127591db466be49cdcb1",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "c537917eafe829ddfb4a26ea8e7cf5d2f8129a186aa9c8550ec16c25050e9337",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "a9cdf57b04eadb1b1423fbd9f797751c35917dc9069f0eee9d2ae7446ae0c52b",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "7faf9f3c87821f8b29f5fb5f6762f0f752a9e51d87264ead902e1fa4272bd9f2",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "5de30cc13b58f05c9f07174704d5eb30a42f1d29dee8d45774ffc9e55d36f0d0",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "d1d3affa526bcb6283c7f729d7fb3b43ea85008c775c3c4319710be54457afc5",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "2e42991731b2b06055bd23b3a95b8bc39f19ce4a450853613b300b985974ab77",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "f97f9e94400f608d0e312a008dd3ae2893bfbc3f6ead048293c7c34b94f439f2",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "fe407d53822f39bc1379d7a99a55403f18800506468e91ff01bf05fd77482cc1",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "4f0c90bc7d4a1a174cf600ac264c6146650570209348ea5d9b162bab93dde84f",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "c0eb8455f1793aaa3000337c15860de46928cdabc32268f6b64f8118eb13ebef",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "815e2eeac77e4b9c9637a335fc77c6be68f08f4b455e59b0604861b08eecbaf2",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "c1b59ec9f46c1af78218eb5a66ab7cc391bc8f20158f0f15c6e8813c6bc58ed3",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "82c34f82034f69fa2b0a09a965698420c2d4c2604cbf19e02bc4b58e103e98f5",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "e2848d8972031ae03cb455915028c9bb889cd65e530c1f72c2a893db704a6044",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "e0cdf50f1ddf96827fe58b07f429d58c905cac8e215fb4a5d05fbf1e65009464",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "c8af3c1aa303581e9f69b7f653a2fcca6020b291a51603508df8609ec19c2b51",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "146b05c071c642f816adf12eb1394799ce61f9fe8db546b1f1f5c7d08148e7af",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "f721424c103c12575e223ae3f6d3af40319fa069cb6d9df90804631cdff26c6a",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "f21775ed1f1163aab42ffde00a0435bb142b5178cdc90fc6e7e0900d85f0b9ea",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "36d9f9437f84b1c0f6b6237d8aafac44ee7aaf2d664d6ef3603f36d15210eabb",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "a1680ff386500bcf6f3a705778c7bc1e8074e38b99215556891aeb4ed1aa1661",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "c904ece5987064be318f5261370ebe3807d57cf47c6f6f9a2ee670591f01d243",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "10489cb3655c6efcfdc22d8c13a3f2fa7d7e502d16e663bbf8c54a24f25cdd3e",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "78a584db1f478f24911896489e5535a68fd61f866076f8ce4e026127b12af528",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "16cd6c24494ec988be2ffc3136c7490f759698d24165065aff1a0feb726e4f5a",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "89da04cf6978cfb9b183a5c4d351db7f479b5e8a0048e178b48ea55b16086224",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "adb9df47420ba69b0995f67979b3f41250e6a98e1cfcade339efb84dd487e162",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "eb9953bbcbf264d8ebea6b3b5ac044579ed4ce581b4570fa8565005e34e8104f",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "681b35ba73fb8000f483158fae4c0f98286c445040e24109ecd6f5e15b74b987",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "e800e6ed95440c035fe220149774c80ab139bbda065a0ce6ca3d03be9d175299",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "6eb29ac4fbea4935a24c2b643a2ff84e26efdf3429466d8dde0459ac20811643",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "9c85e83f2ada469f91ed3350ffa2a5867f6c53b69294da31ffb87a0080f87c8c",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "d5af1072758b627194bf43a9050e915ed7056ac109a383415ae3ac25b2fd1b01",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "a1dee52004a5cb886604231d16a55411cbff3e9500f1ef90a5801bc75bc24cf2",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "40317c6263fa8c3c590d04961fe1d8da33e823cdc1afb81bbaa1b633914be024",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "536514e6315991c7bee64497bfd8605285c9361cf464e87f67b643bdd7054c0f",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "a1c61feb1991a743c315fabe4c867b025657be976bcd99494be63783dfa7f350",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "7a366a7a238469fde9d0151c7f5475304cd6ee0913d9b8a49e974d45dba07753",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "91feb76f040b57900b73af01bb5d33948f9662e4b359af5174eff5d8f3f74ea6",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "786a1a2f8e8c9443614138a28994da1326b0ff0588fd3ca1860e6a20c61b71af",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "bd0c125ac44015ed1ae4d2465854e2e5d64baa73a2cc63c0265568f4b44c9884",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "e40c4265d920ec50ac592d61331ae4d97f4910c2f1100370cfacf74343e061eb",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "fc4f99835ebb2e58d1521cc94fa726855f689660bff10d513c3f76cd01b8f2da",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "5a80e2985be0b6aee6cb14501ed5d8c4415317decd3b53dc6891fd39f404a65f",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "fa8c51231fcf4243f88a59d5be470792220aec8a905efd3ca4e1f6f949687874",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "5fe826d54081383f52c7d0e77fe1a4838ccd97bceb54f4e33009d4b7edfe1ecc",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "14777ff9ae1467d75f86325e12def222ad419afb6cd3c170ef7a46a736dbe913",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "c2b0cf2661b65f108fd769134b27ea2613922bc5e78cbd8be0ca88c084c1492c",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "b391c857a6215a4992ef12dcac1c71dccce4d1f15efc957a54efe3f1bb0580b9",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "4b585108f3c2243aa2ec6d7b02182bdc649729e0c277b492ba14c616f7217658",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "91e7c6af11b50e6f0fa2b91e474ca4162b2a1507a1c6f3dafd1affc468eb76ca",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "1253ba24a7a157789ce4de3286afb963bc449cc8bd087d7cd4daf7835fd579b9",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "6fe456823b1a050a9d2486d8bed45fb4d1532ec4101401f2a99667e51d1f6ecc",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "7ce1f026db0a844864a5b9376f684a6529640b385f3451f360eef95e63ed043e",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "c92be5cdc14fd419831ef7bc8d8f563ed69229b4b4de8836d5f47c7df4cfbbcf",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "7c9bf5526f968086fa4bbb711749abdfa5e44daa061348656bc74f0f993ed3be",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "78426b7620bf14f9b21f953c5b73b043838b111ce505cf53333b76fca0c76cb2",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "baf096ec42dc235df2a00df6657b3bebd9fdc9ea86dcb3b0d1194bf8b57ae758",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "408bf8aa147a9faf182391951a81b9d83e42737797233f5d5cfd2ec9f25107e0",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "409dc5bd477cbf6e2db36bee238533bd89807da903799722b99d2cafca0b2107",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "b56206c453387a1126534c6133c10b5eb8b61a3c3f545c763490f68c707459e8",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "ae11260c734883f3aea2f2ac1f6a7c3fe34341d4b97aa4e852cc0da3454427f0",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "705e699d72662afc8eb703d9719babc88eeb5ee9df9fd27ef36a39a7debb69fa",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "aeb11229c715ab0ca03fce716b8a88736b35d561b713296e4d778cec3c47c7da",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "0c04d5f8c9fe6e1f51239cc3455a06a6fb9d01d5080d9c1bd54c5d98a88ae8d9",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "a4ed89f1876640af775671e2d3b46dcfa8155506637925779adf6d2efa6f87eb",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "4f35fce057205b74e7a51dd4a1a9a615e1eff130963ffebab01a6f62e44d5374",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "d61b6b4b4d1f63e48461a1edbb33b1a43beb95c789252c9a9f65971b06d97bdb",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "237aa28b215ba605d26e8b9de74571f320f2695b7a821759823722b2d12093f3",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "d0d710b4438322ab3f746e8541c43772d1c22ed85c2b4a2542f60a26ae2fc3f5",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "f65ecb0b900befa1d091c6793112ae55648913609ccc0fefe11cba0a9190d6ac",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "9d1bc07ff28265487be5cc43bc729725432f096285f1f020c921f8266496594b",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "b9191683042339552746b14683e53bcd18e294138becf96b1582a59c95687914",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "0d635876a91aa322e7209f3dfd3eb306803fa6ad08dbf1796871ecfb0d13aa97",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "052a3811371a668d1b043548981dbecff9d5a70c22842de899337f9c57d43d54",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "c63532622a93c7656f8b0de90d1f3852350ad334bd6ba43a3769b000bbd8039c",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "5f4218157f5bfe0edc81384e3ff302d22335bb2e4a33125ec7a5a7faeb88aab7",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "365b21396ac703cfda55e622c1973e96391aa955a0d34d65522a9302d63aa09b",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "9a30279ef5d0f5595be074421f24df079e6fb6852a8b47e1b165977f007c4015",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "9111f04aca8939917a2ac83bae042df61c2c602e50d15d14fc76afe7ab049f42",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "7baea4aed3c6f0967018ca1cd26002d39dab7b94cbe9d85da25e603b813fc8c2",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "10d179a2c374f39380ca32bfc1caa6312710e58d10c22f9c30b65d54fd923118",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "66da595f69468331c117d5d8faf9c9c78efdb85aeb525909c87a05eb0146a1fc",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "95196305c057359ade8826a3578142927e9e40bf380b2f0a241715afe766445f",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "9f1443949ff848f4fc8b7168853b5bcbb53af092ebf79eed6b07f85892bdf4c5",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "617ecd043aa13672e24d5c3c5d74190c5e5ef07adb8ca736f9904d3ffdf6fc32",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "fdfcb4a98b0c86afb6c9749a74bf7a93f14cf7f093eb52c7bb1c606ac3a808c3",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "cb79883fe8edff9e2b86ceafcd39da42778a13be17e1019cc0dc3bb65ba69af1",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "d687f25b14a1a7ea3feba1b7da438c4581250b0a9538a96601cca03c4fa5c435",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "e373ba52040465137599822d6cc5e85d4657c0b4702bb0dcc6b5ac62fc274fb9",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "808441d76c7857bf147ee308b9bae40e48d2a24ceaa9575894c6197adff42b14",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "4caf1fb2498f7042a2708539cb4f2edd2ce33f83a79112f9b640586683019283",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "9b4b094571600995cc5cb4c442e512f432d5c22bf8afff3ec86cb536413031a8",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "fcda1a40a8005a152cea0641c041c437f798baabae1766386a918771cd10adb7",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "bb5fb085dd7a154f75f3660218575c8f1c018710a633843f88f6fa4cf2035783",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "bd62cae53d9514c454c1687f3c4729268af901261d716c6407f005d0fd377185",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "9b4c889d19c4dc94aecc493dd25f6f47628933216a18070d3380f7096b1d2b79",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "f9ca3e2b17614e5f930f433053800b08955b803c4c4150a7a6ce461f7a6b636b",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "964734a387042efb2face388703be5b2bc2ec9182671bdf872e023e2c89a36e9",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "d1ee0d7520a9e6d5ffbd683337c0bb04989933942de591201d94abe88984ca60",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "b6397511e6dcccacf5ca988a03b505cfead35ee5ad9f5ae50188f2b2fa30a52f",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "30c44ad73c3d55b5a746d7aa45749034b3074dc015cb6fb2c4c8d2aef5741220",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "875152ec331f472de2ca52491272dc94d2fa121ff6389100574013c930de6815",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "ead23465a1113ad06359f471a76b77b6c2fc79188b57a7d3f29b0aeb0c87668c",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "c0774059b7bcc2229730906fd15d9d10858dd12e257cfadb2eafa92b5dbdd61b",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "ee4b1d927d497eda8b8a43c70865febfed48f39c59913aa19e558b3b2ef7503e",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "e727092e8bc7606a50201cae3a3e9adc53cf01b39d38a1ef929648acfe700649",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "ad04b765c24e46c0331e8f5dfe61c5670bf6dbd793809d18be05d62999445622",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "7715cbb1d953adfa748bf38fe7ca2af79843cab9c5171a0067962bf48b651d8c",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "dcbf0be7425c12e7f8bb3790debe85b5e000592eb3680b11e17b60e5734831a7",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "9fd07cd6a4f04f08f2be9b8b5f3aa1a0db60bd718f55a4a39c4e641e9be3902f",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "1e377a7059cdccc38381a2ad82ace96313b423d393bbd75a026fbc12faef6b47",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "9d0202ac0ced9e6bb7b63fce8936b2b0ac71e41925a27a5432221252e8c8bbf7",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "2d23a93f8d4c545cac2153358fdba0d3eb7adc013b071f31b537a3c2955a9041",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "69e6d3fe7122b70d91f64ac617c98d5d5a887980319898b0dd934aef79c90f35",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "927da0b06623c8db6c112d43b94e4f77fd0824b6fa64f4e4def8b53ab5b5c20e",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "cb6248d2086d34d815173dda3426980e23a694eeb5cbd1ccc54a0550c6370de4",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "ece3ddb7682aafe745ef8a540b0240718845674f287f864c6a720e0636de0484",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "3d4ab1b9899650f62c69d6d28863f2531ef13e404c504e57cb05884a91f8a92f",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "bacba3731dabfee9685f7b685079850cc8d6ad7f11cc660259ec4cf29697a957",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "d4875947337f7fbb52995427d03fc1d2ac60dda49b4a626d31691ad234ac3d2e",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "f7edc0381237df7172debe93bb39023432abbd3e729a904827d4ff9792721da9",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "087b183a70883281bd1023887ea72847e5b7ce0defe16b67be2c21e02f68f056",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "6493c72b25074f630220acb6b7a60ce32cea2be2307d7a1f60c4ddabf0931954",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "6c5974b104108993af0faeca23254d5b1022ef1c4963f8c888139c2bd3a2a1db",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "ff8a9bcf2ad2885da60c484993818c1ed41dce5a4e729a7bc3e1106da1a0dca2",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "7158df8f7b4977b0d8644d61fc4c8ece5fd135856b968ffc19990bc3d00b2714",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "bb9b8c6b01cf329be2140c642de0cd6eeed4c95b8aa38822d2eb2ef9a82bbec5",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "fb24e090d807c0530c5477bd6544310d556ba7d50d5cbe7e15f6de61da08799d",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "23511486d0c77ecc99916b3f183e441bc4381e1fefe0de9967c6e71d2b488b21",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "4dff4816803a0019e2ee76aa1386fcf2359e684ed9d2ef0e82c153f0d3ce3371",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "6cc531aba9fa810a9ea0eb7d30c0313fa2efc3b8e0042f63930cad8778eab7f2",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "7a4cc819fdd5a0c8b203dc1654bda40c6e26c58493acb85acfda9ba09bf00a7c",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "798f9f0d294053aa2404737e5aa73635ba76a94145eaff1855054e182655b50e",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "7021179aed2b0b2c1e6e3fe3579df7368b6e4a02eb7cfe30a96190a479f02af6",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "b5e4cf69d4d88c9742e422b488afabcb21080ea0782214b9571c416f9bb367b9",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "bf9bbe1595f02a99628111f852db7a6f49476c49ed09743d4be6d3104b9d1701",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "b1e7668bfa94343b1118295229bb2202ff7227c6cc8e828106cd9988621d64da",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "4bbd92ee54dd9970ea13f166ebcebed2a1d7e7b5277ec6e569696a52e46a3dd6",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "ad1bb72308d3707a07d453eee35c8d9ddd9d57de5ea99515a26559e88a0f2aa1",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "43bedbd3ac83fd5075d5e6da275f5874b7bdc2cb153d01991921efa284eb31c1",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "cf9ea185a16365802adf47f726470d87e3ea4311d6efecd252c1cd9358391e86",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "4bf4a88717e0f07634cc7b5f7d0956c4f0f90b6933d8f23c5993bf99d254ca43",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "955daf50c92c5cfb420525fba2bb650569268ae7f14559941af4b9b3432974ef",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "75422ab4ec655cdb79e0087f269e5a25615d7e96edb6abcb579c1ca66ea1d3bf",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "5898422e52c84c44c7ddfb2544416f66ab1e74e6ad283f3da2d8d15d1bcf2649",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "a6368713156892d63e779a6d8fe8dc752e9cb58b1240f462cb1679b0c1dfcb5f",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "9cfbd01691370fb634246a398369c64dae5cc2454c75e801191776758f743dae",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "7860689bdf7b967cd1f16b1402f628916c812e521bf41a7ed72ebb6afe71e103",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "1618d3c40a381dbf8faee3f18b8366fe315b4de58a1f6a887c1ea05202f107a1",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "e2585277b681d350d97944f2bc639129330e24410e8c40dd6acbe019805fed8c",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "dc51a42ccaaff99035e3ddd1cde1d4519a9fc9b2f7f7c5415dca77e1cc4af7e1",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "1c4f700a2184b98f711cd2657b723d10a556fb79c71c6081b7901f3634e707ad",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "1eccf107c944ff48bdf63704a55bc7791e9c0890e1451b67265ce9c966139340",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "f85732aa32a6d72e543da14ca47bb7344deee506beac6515bc3cc42ff5c3181f",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "a8531306576a97378666445d533b69305f32ac4d46d1d1ce45376d6eac04ee1e",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "d4f0fecf582f04109fe74a120d5ff013db855134a5977f087bba5f4b593f6f24",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "ab34d4dbaf2c80eaf9c75771a315e9e82d43ac2253e1c5d1061290b8464409eb",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "193f322e3c344a3f88c183a51cffee6c7f14cfd578828894d5b9c6839e44e3f8",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "c5b3e1a405d201ad3f5c7d7b236166daad66e7ae6cd424430fb5140023863940",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "23d90e8edf5c02af5cd9287159eeed11f3bbe30e3e7ffcd58f203a7492cdb208",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "2788bce3e16278599f222a86283a59c40b3b834204b5cf3094bcb0287c7339cc",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "9c561fe3dddd5ce8fe192b51472300d4c554f5dce409be0c71184bdc650c1d49",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "d42379e4adf72e1c539b78bce827cfb241c0a831f1e13994e15448fa1fafa8bc",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "6e609e29a134579108c1767e909578a69ebf16d823fc3c315d9655da3b23e9f8",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "a6598d6f6c9cd0e4cf9999896a32e8e378a98e51384c5a089b26d8e760341c44",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "0bfd40c9ee45e0bd90996b2bd90e73e14b522fca16bd296100ff805e4cd74959",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "a546a387e8ebe4bdc0f7a7f36fbdcf4fc98372ab7898f1593c7896fe7ed60d41",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "24e40df7b37ef0e2b4384433ea89139e000452735f6beb2d1f55c7b5e9d466a2",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "ec7f10abe8da08da9d91164ea982c965e9b9a6f0a3dadeddb5c47d7d88210458",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "bc55222903a25b3b913c858bb38e4b74c64e057f98f6e018d0a1d9ce4366a9fd",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "322b198ba0f32206b72d3bf123516233e2836c73897e212f8c0f47615b9a3953",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "28060cff0ea7f19a3d43bee9f6d634e30076f6c38a488ae78deb151a0a0088ae",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "dbb7970a3dc628493dd0a046f0544caf0c4bb332eae236c9f312f083e3020846",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "7c64a6e685c5ed918b4e1cf94c35070237542141690832d8685a97382d344a17",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "2421fcb73e859693cef9318677fc21216c9a94db7688b5ef58d8f01e13cbe76f",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "3f68a47587e689f0207d3bfc08c04c3a1a65ebaf6d1c2488274db4ffa920e116",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "eb456e8b181f8f3d4b12abeb78070aaa9229bd9d1caaed27f5b20c37e1c15a2f",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "76200493752cda8e5731de1f9a0a0bbcde8df9d3310edd290a7900c5e98bf78c",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "5bc0707cde90164094c039e1b595cd42285b1737ac169542cdae37ecadebfd2c",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "e0ca27e8ac0c484116720b0df8c36350ff14419cf59d2ad7fda57d487e0bc087",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "1980fc8644888f05cc0719be5d1a3a7a4c7b93635065659860321ecf8d07b09a",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "b3c55921f47f81079193beec016731da30487abb59403b6318bab53b23e5a674",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "daeaa2387991704c65e8c88eda8c920500e4d2539079494d779d550fe47dcd91",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "00ee0111bdd720a58f970da22a33b4b41777897a26d0c9ed6fbc3875923c08b9",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "d3d1fc0daa3480903d40fbe31288a7bded05e14ca85ed4cc5b38932297aa9801",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "c35766ff221fa57eb0451b435503f90a1b0210f9aed20cdd2687d1fb2c77940d",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "46c0a458304d8fa6703142640a30ddb8515ca3656872a83e53909c5b91b53b4f",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "0b4c52469e11d3d6d9bbbf90dd7e8f9c0d86dc86104ad8adc5e5d08a2e4e238e",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "d8f0b3767df3093d31b08084208fe31ce58be25d0563ce54291467c309e06d1d",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "0560dfa675903328ef873455bd8de7821a50a8e1e1ae4537a6c06e5c1340432c",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "e88d70022dc13c84844df65359578057e6ffa84c0ddd91c1c746987197689df2",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "d301b9c4c6ee6df1af89cb98dfc4e5ff2f8fb6ec7483ca782b1b1d44704af291",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "4587e5a2853a26e36d442d8b9fd7bf3dad69ca7bb95e807bdb6b8ac04321c475",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "d0f095f074f30e9ecbba93c61ee872636c6cbb7d098715304bbd12e86e0e70fe",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "a2eea56e75c545d55e77b189b3bc013aabe400a1657389eba00bdb64e77afdfa",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "17e09d757571541b1ea2d6ad3f3bb909da422e2dedb76d227a9f49231ca3132b",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "660f93c3e5fc3027e6d65ffdc9be4e3b02ea66c6a2aefe99ad708ce284154b70",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "8dd85c8dc861ed16addc849bf0bf7ef0ec2d4c60f9e29842fa364ed58fdfc069",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "96654f3c366b8bee859df49744b590b1e3921fbdfa18eb11697bf2d089927861",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "b2ae88bbae052916bb870184c3d046f827cd87bbcbbcf958163696f9ee9571f6",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "33e618b2a41d2fc718c219e0be7ca7e7243b3adb2e32f174802c32e67c99c3d5",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "7ae6009eda714d5caaab59641d97afcba3754d8084cfceaebf3a4b48dc3fca94",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "35185ba8024f638adca3eb4fc7f9ea08334af1ebf3428f6ed08ca0efb426b891",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "6c4539e2d2177825c2a859048e971299f8bd96e4001c33ede43049c7ff11f3cd",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "0606bb696ff65172f68d20bd9faa1ee71c112e6ddc9d5c58315d34b1e437f294",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "cf61e6d498cb1ed3bc8510807662b9d8903fbbe9c7c6774a06d5f1ea678f3340",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "fbf4a5722e95c2fc04b32f0b8b47bdf9c25853aa7035583eeb203ad48b8eb4a6",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "190bce93303f9ab8a50235e47b070f40784903564f4ba3e5ee209294c4830247",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "bfeb66e99ad1784be9a5511e3ab36178ad372b9d00daa66c591cd81daea1f583",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "8d8a9b8f7d8e4fd3b7bc8f3d7ea07893e4065f5e58fd4a59a7c7b42763f5cfcd",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "0b2062f12065aa522e3511b99d2e3d8bd193d81eb85b2812a7965856265bea77",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "7c13de2ab55327c1d8a04646c3f5b7af562da19830227ae7a1369db86f1e6bcf",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "3639f53ab5a1546cd93e547aa92d1146e6762a3ace4fe0212f5765b3f64aec0b",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "8a4e2a030b2f021c4e979c1fdd7ff3c24b55f726465b508a9085a73936d059f9",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "cc4137d0387f864693ac20de89cf23b8620b325546c244d4d029c615d74e2865",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "479416ececb48596c83e97900fde10d53a75ad85a4c60c03781d268cfc66570b",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "3a88cffe358e9997a8f282cc25b8bf687a2f94680386d25c074f3e743dcdb95b",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "81ee229ae02f372de250aba3f36035c268eb32093202b5319d59701a3babe392",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "46ab42018c0950d3157750c000868d26de744a7727b0369cd1f1609962ca828c",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "545858847ae2b73cc77bedf27c6246170e574e61e199ae8faad682b9afc44311",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "7fa2d0d7938a5d7d91f7a6477a8e51e65e6fa005e9f41459f7d9e413f4ecb44c",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "e7757c99fd79ff2939213abaca135f69559dd094cc621f596ddefca82c16c170",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "4af1496ddac18d63be21882d139fdd047d853f28633ca076e7a036ed51aa1461",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "66a480d272fecece8d17334ff916c3ddfd98c3225dd5b19fe64e18aecf824120",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "31db721f60d656825e1a8c82c4ed93be873ed0021830aacb4125bf56a56349bb",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "b76d29a4b82d8e368868bbc379426ec5001541f086e9762b20f6939c7f77f907",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "683da549c9c0e93695906f42f9f6066b9dc8ce4c697527c21cb87a6204064a97",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "b1332bdc61d73ac4aa80fb1979a8a921db274b9143e371a56ea672faa1505456",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "db9dabc6c41715683b21f4466174f82bef739d741855cdf1366b379e387e36ea",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "de940a556e059f61196552c27f23713e628feb282e0f8c2567df34409ebe44e2",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "768d9af8d1c7766162d589eba96b62cc8823fdb1256235f2d294b26dafd49fee",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "16eeeb41ec1f5965f7b679a9bf18da46228093603e2c02a44736936ea94425e8",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "a6fd13d1481f40692eafea485aab48253a4112c616f2c20a9aa052174b300175",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "fd3f303cbd728061fde0f32d2c01285ef746c480b1631c1516c10ac8991c06d7",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "08a5f4b92a0bc8677e1361126640535546446d8efa04e2073687a73ff07f6250",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "f4e12ff1cb9dadd4688760f7ebed527681162b7a2e7825db08f48d6d31f669b3",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "6ee4cfa58c0ba84c4cbdbfde3374c1230128cc1997b32b9b10be34b11070fde6",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "10a354e651897c894df548d3a45fec40869eb42498f03f11e7d2800b45fb36c9",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "6bd1f3bf9c7fdf618894bcb24736e5210de8b75b371befee5d15e94fcaf96a30",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "4a5591babf64f51cd0c9b83fa9c71e5ad096f15d680e44dc486fd7aafd108cc4",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "6892d7641838fc523b3d86113f0b295f5e557ea8da6dcc8e382d21f461f1ad06",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "7d8d4d77a101adb9fcbbce393e202e61ef9e30f6edace819add84a7603f19585",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "7c7a7a0270643307db999dca202d5f852a7f4ea451f87a0f061f6c0313d13c67",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "3e929f0a65ac62df05b7df261aea0d5631d84a32703a74ccb98c4ff8d9f40ca5",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "e8c5c09b73fda877815c568e93b3f605d2f94fb96a74b1096f35868f0686fdcd",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "f9b4cf3dbf466d0a0680bae5ffb9c2bde973c7e2911566da484566110730a1d4",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "fb11cc23a4f01bb176e65c968de14ebd56c984cc236690689756669df45785aa",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "34555b439358edd99f63045aa80bba56cc177c849782f000e2d2a7334cce344b",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "9fcb8811c182992ce5c4a25aef2ce0bf4cf8c80b9ed4eb91e886a1d543f9574c",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "ffbcab8a154efb3d6c48776bbacba8351b3c30e84cea1a48638ed68068e02078",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "0f651e79aa381a9405c2cd8e7bf2c3c8c1caed0b32fdfbdb5508f3761577ed22",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "da75df20a60e07496424eb1623573fd567ab88438cb73069d52177b53ef13a6f",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "919130c8cd373ca0b09f7b3048635ac5672923edef0fae4ba9b55a887980c75a",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "e4602ec7244e19b7cb335b02b27f181b4bf3e3cacf780c56c2460342a6a79214",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "96d529d69449e7e351b5fcbf153ad3992ac0894a9020ddb55ef7af61c51e0a3c",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "7cb44515aaace1daebf8c65e53c81aa5c34e1281256770c255b36fa3e7cc881b",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "01140a4c614246e66b83862ed0f60a51d11c00212cb34a677c84ba7f31b14e76",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "6187c1737139dd58211cd3243b8023ade22d37a4f7100a836574b94b3c73f2a5",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "e71091e794cf8886e263eaf2741ed81cbc262e8ab7847664d3761cc4b5f161e6",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "e76035a8d7b84a353341ceb3ced6640e8cfc1fcf2fb1641b31998126423a3b44",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "e713fcf3d543828e9b964f662baa4d36f859f8cf948400474e5f2d2cf83a5f2e",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "7d2153332869f3394c2bd2d4521a9edd673115be16a46cb971436558755f0f43",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "047cfdf4f38abcdc4644b01eeb2c5975b86a36ae1f6f66e1f9c4b2c3aaf78066",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "71a108c29bd1c08af80671f83e932d08e9c7ef61b96e81e45c16fcd802f0587d",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "8b98c3c4b7f586e7a68ceb1b7adeff9a298fc95b6ed81bc5b1c20382fc862c42",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "2d9ffc0026c1b19228d1566ba95442cb948cf65ddce4ac7219eca52a368fd707",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "f25b6903dceec6c03fff3cd4a04c2d713c4a79fa3095ce45fefd08b04d668fd4",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "66344d9f7af8d06a08253ff7e326db248dea1f6ec4c8cff4b7ca3dda1a0f3488",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "7967cb261f8a28a3edfe138a1486a5ec9e2864966470be8e2e160c53cdc8226b",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "07529c2231acd0d9aa42bd40099bb4e3345c20fe983ecd440790e5d48b709ac6",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "433f65d4e0997e291ca4d8d13cc7ed8d16e2796cd2b28b4d345ac8ea79b67437",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "572fd2689f39a4f8161e311334008ff2a3273fd90897cca4552df93d38b14a5b",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "0604448b40ace0385c38803c662e5791a679dfa4d83d485e5ef9eaaa871b5c26",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "be6626336a3859592ae7b9b3a1af88c7b5c2526e0eda88a1c099e78d8a432448",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "0316c153209438bda434190cb1a608dbd957dd317d681819c301934ef7eb4dc9",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "cc86d2e3f9a930923cea6300a98eb2f3f0378da78562cfed25d4f973596a97b1",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "c36a6919cc21721459c417d6b14b32d051d7f2170657c36f413fab7dd2fdf101",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "c29c8b68a92b0ce315d131d65df2f37e5a730082c887a3eb0d5831dce6593166",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "2294f3f2282928bbc4a8b2dcee4cc67d8f41cbfc041338cb7ab02b9579c81312",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "8585064dab121950ba7469b915b7ba31ca1758dcbd56c3b49bd853cf19974a56",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "d2dcf06106403477bb680bd22c4f2edd17ee5077eff671c7ddb68a1b1095067a",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "ab9d9d2b7b968425a8f677825c6104b5caf1d967f5f9b6e06fe7681a4d1c462c",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "8332d883e24fa18f7e5cb000aa7ada4a9a391156b18b3ad64f2f1019f48b408e",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "f232fe2f5c5bc052af1d4ddbf19337b0e19c12fdfd018895289639fc873e5854",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "4f0cf3f63135774972cdcad47ac7f0f407ad3e39973aa098965172cf6f2ac4e4",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "a9598b475eb382882bc92fcd866f4f616c9c5410842fe2b9a73588097946ecf8",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "9cbd0aa82f0f6dbc58279b2ac51a4d41ca2c1cfc89cbdd3f71529f2b149fefdb",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "a34a1d25211831dc0b74f73523f451b036019b61dc9c31d4792262afded8483e",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "518d62d0feb91f6b98f16309e369078a62ab3850419d8d16244b8e1ef8086704",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "a856b8d54b7260616549c7455fef68ad868a34b322d90a5534d9bcbf15de711c",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "afb2e8bf1e9f3c66f80ada1d9be4228b5be363a9aff6e6bcbdb43a26f374e158",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "1046a82b5038e7e7e8e423bb2fa8dedb2c075e8196c8a08cc6471c94d531867a",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "c3cb5f364d635457c7f4f29f20ad2cf7d881f606b3acb1651365e881bede4229",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "e6abab857add9bd143fcdec70726c6eb49471d00b32277c73a475b818a5c87f6",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "704d7dffc2f595389fc5972e2b31c1d9a6bd08cf68409c6385c4889a03200209",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "604746028c62588637c364b8aa842d37b7008921c379878aa1f00108645e5053",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "1c1c52e7c53e61834100a973e8a8ee70a6755aab41f5c522ad4f97720fdf5970",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "e0640a03d02886cfc8adf32abc0e59a9a1977d6cdddae728065603dcd7c76039",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "c7c347fbc4bb7e93e9f6756b23775d24fda22c6bd2a484d0df517a898fc69a65",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "dc8031bb746f4c6f3a19ce00e1cee6a26c5c4304fbb54cb41d83b6615ba17d14",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "52f00f7cd11bad87583fb740096778f8d0cd93665f31532b905ec377008bd118",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "e02f1252b155dcb7d4813ee827514dcba752169f8a2ebb81793e70b28ae477ef",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "e134be3afdb4f95b2419b986d4b87ae547a10eac4b4282be28f3600a577bdacf",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "77728ffc88f5e68f848d0460f7ce6d3050ac2bc371a11493567eefba378bb4eb",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "1a6a09459dae53e26f92999769dc406ff2080a162af4634b236ee48f458d45cf",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "f6eea5810077898d6e8c219d0b3e20a193bce3c5ec59173fedde54059434da30",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "11d4228801f891fb0deccdf153e8d847944fc1ad7633cb9a7500c6efe8c87af4",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "82309cc597198691d464719ffbdccc5712dc87cc724fbd105d39294399bd72cd",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "09f86ca37a32b9f68118e94edea9a9b6c594cc341fa469f1545c96f7eb84d1cb",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "a0dfab6de3265ddff9cc269bd9dbe01f35d3c29e64b27ff51423dd49b0050c60",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "383019f3827a19811b8de9071d389393c995cd0ecadfc7d0416535ed61ba107b",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "9dc27c9bdaa1de3cf6045775c7996da2bbfbdbb2ae0f2fbd1cca68b4d5a21aef",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "891c4ddf400dba97719d8be25e19abf17f137224bf5610eedb3cea615b7d1420",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "58ee6055fb13d17bc8e136d40f3e8ddd114759835fb93affee4f0da268df47d8",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "8e253ed785f0253d38708b6e3bf271d74599620cffc96cc09ba1f6d5cb863dc7",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "62a910cd32c88f7dc92832e106738b6b4e0325e00e3bb2c76e8b30b4f26370a9",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "23c6fb9aa6637505d0bb5960997423d9b0f053361264dfa7251bbd1de39d6662",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "ce283541a630a87158da4c6847b7a25ea6f931b05b04991cd0408075d26c1988",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "52faf97080df00fd4a6ec7abbcf138f1b6adab632f3ded48aab60594e26c2dd8",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "5b2e89c05463f8dc081d68154652644f02463c2ee2a5232192ca5b7b875d8510",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "d6394e23bcb3275c95c8cec16b7c6886857f069661189a20cb6276b4a644768c",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "e2b02954535f1a90a5a30ffc9e3513f6c4df39a384949beeb65d01af19d55efa",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "8ffc86677322cfc40d046db97896cdda2931f1fedb87b9f380a0273faf8ccae4",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "c9efd857223650cfd749e0acfc18761d1b95a648c9d59222a0f6b7635bc7eb03",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "d254b88c5c2a197b54c5c5ce0351eceb262f3639a5d52e12b26de2d1bf368faa",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "d276b18cda7688bb4b3ae45ca799f0392b359d668dd74d33dbc430fc6e3559eb",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "5bf4367da48fc0f5defb9806f6d512034ac9f8ec4b9741e028af3565845a3e26",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "806591e7e85aba70a32bc3bf54b75fb2926789857301e89b2f4243d5525515e4",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "b89f0fe0e905ea143a6bf0bb370aaa18f519b7d92e8f8cee197af35a4eef5e10",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "c2ce0f59c4059f12ce8538bd7316e7c77519d568679979d32721c881df3fb29f",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "ba23ba899ccbf7bae9c30aaf6aa2b586dc65aac87b7aac472fc7c1d61e3c0c7d",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "b83ebced65fb23ebe989529644c4189f1cb0badee8994803988098b2c52564cb",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "eb68db591f05729d268665e874ee6642ccbd66720adfefbb8c63f81d0f60516b",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "61e139d3fe8252bcdbdbafbe0f0e7b4accf6ff7b599f43179d094a163033516b",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "689fde312ccf03f60191eda1126611ca62f924aafbb0bd695daed87fe8e3399c",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "d98f764f14b5c126bcfa2eae8d2502354c86e7b1573785cdad4226f264cba8d9",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "fbdf25cb1841786421cd573a2b1fa2c7185053074e86934eb6146f6c9ebc9d29",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "c093f08ec6bc37774938d89a73cd1251dbd9606011e387378365d95c9f7299d0",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "038edeb317101a0c50c89d3d9e48446130a481652c3a188055b40371ac6369a1",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "54d6026761a5b7483c3442f1ef41d406424587f8071d173b555e7f496127a671",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "06beb95c49607882a48a630ce51993413b6217d64f581674e7011e8cb40590a3",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "25d0d28178f14f28a5f9504a6796b9fb0380f026d3ce39f3d07f9e137c9121a4",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "cfa5f0a7bd6906b1febcdc7532532e65b4497e6121ff2f0024731bfb5bdcb52e",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "7297f672e4ebc3f3f6979d5b70d91314fde5c8ba8b23dec35e6687a0945f46c6",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "e3dde7c9c18c3ac9c2dbb0610e65385e201b4be9f34436138c11518855a4afab",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "90711beb862cdc7b981445d2d1309002f65185c028b2779050cc3d074dea51b6",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "abc2b922ae2782334546556b5f9fd27c630fd21e002403b39131d79e93b093db",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "ec9693e0bc98d778f151f75eff89518abe4292b4aa56e6a81201ddbe81b763bf",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "2ff16af49f2f977a917d84ccfc4c8e36cc102d7c286acbf17293247aef739d4c",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "d5adf3c670e6faf72f8bf9ae66140dfa4da575abb24e8973f3a0d949c47009d6",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "270c05c92a2b9a0cb0874e293ea75afeea40c645b8617fb2f87cf816e1eddad1",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "a505028d767a94a18f4463bb13508fb38beae1a1aa17951849232b9d88f516a8",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "1c62ad01a44d2adef9c643391c7290fc64f772e884479115465bbb101b319136",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "75d8d27683c3e621ceed7301fb913b79ae4d63e9eb2bf5802d3c0bfa73f21fb6",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "9da8658b771add72a5ebdb41dc8d84a18daf21ffc4a3bf84c80de4a99020a864",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "c6484296ecfceb542d4af697e8983c2b20536fbded3f246a490581b06a927a04",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "6b6dc285106107d1230347c8a75a990dbcb3f7429972cdddbb5227f294a57d3e",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "5851a8eb32dc2c9ad4afd50cd8c9006f2907a4b44e8e05d49176b41264500b75",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "197dec4c4569da42eb257ddb7d34539bf08bc071806b0e18691d1a99a8fafdab",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "bf33b2c8b0e876beeac747d7f3b62c8fb226cdbfae83cf87fd0644f4cb43efd4",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "aabb6fe5711705d14581b74628e53f0fd3dfae7e162557a110edb14fa4743f31",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "1c55ead076f3c6f4a8815237b66a43a23588eda153600b72439618f230a06132",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "5579a9fe36e67523381a2b2ce9ff86be9000e248f7d40e2c155265fd7b5417d5",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "97911a2890eebf803b485394d88d1bc3ca0530598bb5902503d5b4beb9666a97",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "ecec283f165abdab462fa2243e90e4cc3fa01dff0a02129fa6a4c60505c482a6",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "dbfd53dfcad84b1775d33c091bee675364cdb2a0fc9ac08ef64136e63b5132d7",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "ec6c4eeb0a6ba09695f88e83d91483ddb4ae9c327b4c8908d86228bc9db09448",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "fce176a25dd025782c72855f40c26f6d73d6fe25f40820316b5b6b65c70653a1",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "cad55a32a4cbd7acc0f15f3b2ee87fdb6a8257c9c7a0f5b05c011329885e3146",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "f3b4f59ae1d9b32b81c87b79a2bcccdd6e1dfefe3f51021aeb4f7b9ba4938d26",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "49064f5f7d57b837ac33dcc3f62a3f15e30e331231f433d7b9d31c7593c7cff0",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "0149f1c2f8c0d6554c49040935409a52347d7a65edfc402fc74fd3a416988c03",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "2ff7d8d018a002687bb53e7d0672659969a3a4bd7b666e1976ebc8635e78fa0d",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "a25f12871e066fad8248ccfb7ff0462b380be585877320b57129c3a2ddf81857",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "66accd2deb52882f82ac8a961f1c633890cc3619606d387300708569d940f06a",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "45f02bb1d9e58df5e62d6a9fad3d5bfd23e56e63753ff60f3006224cc86169db",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "dcac472478baa8033e51340d6546bbe8ce0fe84d93f89112e31dc22cdb97a9d0",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "5ccbdb93a67d17603b6c6547e5016ac5020ce99cce29995ada528e24167e7d07",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "f0fc0fd4a4c9b62db46aaff3611f72b59737267eec14ed1d446c9b05fba98c5f",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "cc96217e1e9bc29b52d64dadda5c51844df3f3e440553f2b8a023f815c44b0a4",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "768f9bed87e5e6aafe924cfdfd13e10c89727f51860f0fd726be5651be51b468",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "c67915bc671e6b4406314db5915aaca643f8849c4b5895beb2dc95fac8131248",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  },
+  {
+    "id": "443ff4fa15783ba160ab82fe65964e40cd2a4cbc510da5c8fddb13f2d5ad58bb",
+    "status": "dismissed",
+    "reviewedAt": "2026-11-12T16:28:01.322Z",
+    "reason": "Reviewed November 12 Command Code table migration: only the Intelligence display column was removed. Model, context, token rates and Caps are identical after excluding that column. Paired addition/removal is structural noise; original event evidence is retained."
+  }
+]

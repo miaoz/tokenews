@@ -92,6 +92,26 @@ snapshot. Records store table facts, hashes and model mentions rather than
 copies of complete announcements. Snapshots and unresolved events are retained
 in `watch-state.json`; workflow artifacts also retain each run for 30 days.
 
+Table coverage guards apply to table sources, not paginated release documents.
+The Command Code pricing overview also requires the individual-plan and usage
+limit tables, so removed promotional sections do not freeze a valid page while
+a partial overview still fails. Its minimum row count covers the core tables
+rather than assuming every temporary promotion remains forever.
+
+Table row identities use section/offer anchors and the first column, independent
+of the full header and neighbouring tables. Named-column comparisons tolerate
+column reordering. Only explicitly configured display metadata (`Intelligence`
+on Command Code plan pages) is excluded; prices, credit caps, context and billing
+columns remain monitored. Legacy snapshots migrate by matching unchanged facts
+or an unambiguous row identity; ambiguous changes remain reviewable. Model-name
+matches require word boundaries but allow attached version numbers such as
+Qwen3.8. Old events are never deleted by a parser update.
+
+On November 12, 432 paired additions/removals caused solely by Command Code's
+removed Intelligence column were explicitly dismissed in `watch-resolutions.json`.
+All original event evidence and the other 406 pending events were preserved.
+The dated Command Code availability recheck is in `evidence-2026-11-12.json`.
+
 Discovery never silently upgrades a model alias or copies quotas to another
 model. To process a pending event:
 

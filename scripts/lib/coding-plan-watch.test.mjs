@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {observePage,observePost,discoverPostIds,reconcileWatch} from './coding-plan-watch.mjs';
+import {observePage,observePost,discoverPostIds,reconcileWatch,validateSources} from './coding-plan-watch.mjs';
 const source={id:'plans',channel:'Channel',kind:'tables',url:'https://example.com/plans',required:['Model','Credits'],minRecords:1};
 const config={version:1,sources:[source]};
 const empty={version:1,sources:{},events:[]};
@@ -90,4 +90,72 @@ test('A recurring price change cannot inherit the resolution of an earlier occur
   assert.equal(d.report.newEvents,1);
   assert.equal(d.report.pending.length,2);
   assert.notEqual(d.report.pending.at(-1).id,review.id);
+});
+
+test('Document pagination can remove incidental tables without freezing new releases',()=>{
+  const s={...source,kind:'document',required:['Release']};const cfg={version:1,sources:[s]};
+  const table='<table><tr><th>Surface</th><th>Before</th></tr>'+Array.from({length:7},(_,i)=>`<tr><td>SDK ${i}</td><td>old</td></tr>`).join('')+'</table>';
+  const a=reconcileWatch(cfg,empty,[{id:s.id,observation:observePage(s,`<h1>Release</h1>${table}`,now)}],[],manifest,now);
+  const body='<h1>Release</h1><p>Copilot Auto model routing is now available.</p>';
+  const b=reconcileWatch(cfg,a.state,[{id:s.id,observation:observePage(s,body,now)}],[],manifest,now);
+  assert.equal(b.report.failedSources,0);
+  assert.ok(b.report.pending.some(e=>e.kind==='announcement'&&e.after.signals.includes('availability')));
+  assert.throws(()=>observePage({...s,minRecords:5},'<h1>Release</h1>',now),/structure/);
+});
+
+test('Core table guards allow removed promotions but reject partial pricing pages',()=>{
+  const s={...source,minRecords:2,requiredTables:[{heading:'Plans',columns:['Model','Credits'],minRecords:1}]};
+  const promo=id=>`<article id="${id}"><h3>Details</h3><table><tr><th>Token type</th><th>Price</th></tr><tr><td>Input</td><td>$0</td></tr></table></article>`;
+  const page=html()+promo('glyph-free')+promo('beam-free')+promo('crouton-free');
+  const cfg={version:1,sources:[s]},r=body=>[{id:s.id,observation:observePage(s,body,now)}];
+  const a=reconcileWatch(cfg,empty,r(page),[],manifest,now);
+  const b=reconcileWatch(cfg,a.state,r(html()+promo('glyph-free')),[],manifest,now);
+  assert.equal(b.report.failedSources,0);
+  assert.equal(b.report.pending.filter(e=>e.kind==='model-or-plan-removed').length,2);
+  assert.throws(()=>observePage(s,'<p>Model Credits</p>'+promo('a')+promo('b'),now),/Required table/);
+  assert.throws(()=>validateSources({version:1,sources:[{...s,requiredTables:[{heading:'Plans',columns:['Model'],minRecords:0}]}]}),/required table/);
+});
+
+test('Metadata column changes and column reordering do not hide real price changes',()=>{
+  const s={...source,ignoredColumns:['Intelligence']},cfg={version:1,sources:[s]};
+  const table=(score,price=20,reorder=false)=>`<h2>Plans</h2><table><tr><th>Model ↕</th>${score?'<th>Intelligence ↕</th>':''}${reorder?'<th>Context</th><th>Credits</th>':'<th>Credits</th><th>Context</th>'}</tr><tr><td>Kimi K3.1 Pro</td>${score?'<td>42.7</td>':''}${reorder?`<td>1M</td><td>$${price}</td>`:`<td>$${price}</td><td>1M</td>`}</tr></table>`;
+  const r=body=>[{id:s.id,observation:observePage(s,body,now)}];
+  const a=reconcileWatch(cfg,empty,r(table(true)),[],manifest,now);
+  const b=reconcileWatch(cfg,a.state,r(table(false,20,true)),[],manifest,now);
+  assert.equal(b.report.newEvents,0);
+  const c=reconcileWatch(cfg,b.state,r(table(false,40,true)),[],manifest,now);
+  assert.equal(c.report.newEvents,1);assert.equal(c.report.pending[0].kind,'terms-changed');
+});
+
+test('Anchored table identities survive inserted promotions and separate context bands',()=>{
+  const band=(name,price)=>`<table><tr><th>${name}</th><th>Price</th></tr><tr><td>Input</td><td>$${price}</td></tr></table>`;
+  const promo=(id,price)=>`<article id="${id}"><h3>Details</h3>${band('Tokens ≤512K',price)}${band('Tokens >512K',price*2)}</article>`;
+  const page='<h1>Model Credits</h1>'+promo('old',1),next='<h1>Model Credits</h1>'+promo('new',3)+promo('old',1);
+  const a=reconcile(empty,result(page)),b=reconcile(a.state,result(next));
+  assert.equal(b.report.newEvents,2);assert.ok(b.report.pending.every(e=>e.kind==='model-or-plan-added'&&e.url.endsWith('#new')));
+  const c=reconcile(b.state,result(next.replace('$2','$4')));
+  assert.equal(c.report.newEvents,1);assert.equal(c.report.pending.at(-1).kind,'terms-changed');
+});
+
+test('Legacy keys migrate without replaying unchanged rows or dropping genuine pending events',()=>{
+  const s={...source,ignoredColumns:['Intelligence']},cfg={version:1,sources:[s]};
+  const old={...observePage(s,html(),now)};old.records=old.records.map((r,i)=>r.type==='table-row'?{...r,key:`row:0:old-header:${r.label}:0`,hash:'legacy-hash'}:r);
+  const a=reconcileWatch(cfg,empty,[{id:s.id,observation:old}],[],manifest,now);
+  a.state.events=[{id:'real-pending',status:'pending',sourceId:s.id,kind:'announcement'}];
+  const b=reconcileWatch(cfg,a.state,result(html()),[],manifest,now);
+  assert.equal(b.report.newEvents,0);assert.equal(b.report.pending[0].id,'real-pending');
+  const c=reconcileWatch(cfg,a.state,result(html(40)),[],manifest,now);
+  assert.equal(c.report.newEvents,1);assert.equal(c.report.pending.at(-1).kind,'terms-changed');
+  assert.equal(c.report.pending[0].id,'real-pending');
+});
+
+test('Model names require word boundaries, including official social posts',()=>{
+  const s={...source,kind:'document',required:['Notes']};
+  const body='<h1>Notes</h1><p>Answered promptly instead of waiting.</p><p>A failing hook keeps the others.</p><p>Installing the app works.</p><p>Ling 3.1 Flash</p><p>SWE-1.5</p><h2>Qwen3.8-Max</h2>';
+  const o=observePage(s,body,now);
+  assert.equal(o.records.length,3);assert.ok(o.records.every(r=>r.models.length));
+  assert.ok(o.records.some(r=>r.models.includes('Qwen3.8-Max')));
+  const social={...s,kind:'social',account:'official'},id='2112220734768779441';
+  const post={url:`https://x.com/official/status/${id}`,author_url:'https://x.com/official',html:'<p>A failing hook is answered promptly.</p>'};
+  const p=observePost(social,JSON.stringify(post),id);assert.deepEqual(p.models,[]);assert.equal(p.relevant,false);
 });
