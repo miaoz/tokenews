@@ -821,6 +821,8 @@ export const metricLabel = (metric: string, lang: string) =>
   lang === "zh" ? (METRIC_ZH[metric] ?? metric) : metric;
 /** Mapping notes are published in English; Chinese shows the translation. */
 const MAPPING_NOTE_ZH: Record<string, string> = {
+  "Primary-model price reference for a default-fallback-enabled benchmark. Actual fallback use, product harness and quota-measurement effort are unverified. Not measured performance of this plan or pure model.":
+    "启用默认回退评测的主模型价格参考。实际回退使用、产品框架及额度实测推理强度均未经验证；不是该套餐或纯单模型的实测成绩。",
   "Exact served-model reference; quota-measurement effort is unverified.":
     "精确对应所服务的模型；额度实测的推理强度未经验证。",
   "Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.":
@@ -830,6 +832,26 @@ const MAPPING_NOTE_ZH: Record<string, string> = {
 };
 export const mappingNoteLabel = (note: string, lang: string) =>
   lang === "zh" ? (MAPPING_NOTE_ZH[note] ?? note) : note;
+
+/** Visible qualifications travel with a point, not with a particular model name. */
+export function referenceTags(rows: Row[], lang: string): string[] {
+  const zh = lang === "zh", tags = new Set<string>();
+  for (const { point, mapping } of rows) {
+    const estimated = point.quota_is_estimated ?? (point.price_origin === "maintained-estimate" || point.data_date_kind === "derived");
+    if (estimated) {
+      const confidence = { low: zh ? "低置信度" : "low confidence", medium: zh ? "中置信度" : "medium confidence", high: zh ? "高置信度" : "high confidence" }[point.confidence];
+      tags.add((zh ? "额度估算" : "Quota estimate") + (confidence ? ` · ${confidence}` : ""));
+    }
+    if (mapping?.fallback_enabled || mapping?.mapping_kind === "primary_model_configuration_reference") {
+      tags.add(mapping.fallback_observed === true
+        ? (zh ? "跨模型回退 · 已观测到使用" : "Cross-model fallback · use observed")
+        : mapping.fallback_observed === false
+          ? (zh ? "默认回退评测 · 未报告触发" : "Default fallback evaluation · no use reported")
+          : (zh ? "默认回退评测 · 实际使用未知" : "Default fallback evaluation · use unknown"));
+    }
+  }
+  return [...tags];
+}
 export const safeUrl = (url: string) =>
   /^https?:\/\//i.test(url) || url.startsWith("/data/") ? url : undefined;
 /** First URL inside a source text (same match regex as build-data.mjs — the

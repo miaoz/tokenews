@@ -17,7 +17,8 @@ export interface Point {
   channel: string;
   label: string;
   billing: string;
-  price_origin?: 'maintained-api' | 'maintained-plan';
+  price_origin?: 'maintained-api' | 'maintained-plan' | 'maintained-estimate';
+  quota_is_estimated?: boolean;
   confidence: string;
   price_usd: number | null;
   original_price: number | null;

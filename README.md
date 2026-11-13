@@ -18,6 +18,7 @@ data/models.json    independent model identity catalog, including models without
 data/leaderboards/  direct-source snapshots, reviewed mappings and discovery queue
 data/api-prices/    independently maintained official API references, one JSON file per provider
 data/coding-plans/  independently reviewed third-party plan credits and model availability
+data/subscription-estimates/ reviewed sample-based quota estimates with explicit uncertainty
 scripts/
   sync-upstream.mjs  pulls only the data paths into upstream/
   lib/build-site-data.mjs   our adapter: upstream/ → web/public/data/site.json
@@ -39,6 +40,12 @@ explicitly supersede stale upstream records. Original values remain downloadable
 and legacy plan generations are labelled. Model availability without a verified
 quota or precise version is shown separately without inventing a chart point.
 See [the coding plan guide](data/coding-plans/README.md).
+
+**Sample-based subscription estimates** are maintained separately in
+[`data/subscription-estimates/`](data/subscription-estimates/README.md). They retain
+observations, calculation assumptions and confidence labels; they are not guaranteed
+allowances. Default-fallback-enabled scores may appear as explicitly qualified
+primary-model references, while observed cross-model runs remain excluded.
 
 ## Everyday commands
 

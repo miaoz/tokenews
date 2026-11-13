@@ -236,8 +236,12 @@ export function mergeCustomProviders(
       } else if (catalogModel) {
         for (const {model, ...configuration} of data.configurations) {
           if (model !== mod.model || configuration.price_mapping_exclusion) continue;
-          mappings.push({...configuration,point_id:id,mapping_kind:'model_configuration_reference',mapping_confidence:'medium',quota_effort_matched:null,
-            mapping_note:'Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.'});
+          mappings.push({...configuration,point_id:id,
+            mapping_kind:configuration.fallback_enabled?'primary_model_configuration_reference':'model_configuration_reference',
+            mapping_confidence:configuration.fallback_enabled?'low':'medium',quota_effort_matched:null,
+            mapping_note:configuration.fallback_enabled
+              ? 'Primary-model price reference for a default-fallback-enabled benchmark. Actual fallback use, product harness and quota-measurement effort are unverified. Not measured performance of this plan or pure model.'
+              : 'Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.'});
         }
       }
     }

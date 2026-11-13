@@ -4281,11 +4281,11 @@
         "claude-fable-5.2"
       ],
       "status": "historical-sample-caveat",
-      "checkedAt": "2026-11-11",
+      "checkedAt": "2026-11-13",
       "source": "https://support.claude.com/en/articles/17506494-claude-fable-5-2-launch-offers",
       "note": {
-        "en": "Fable 5.2: Max/Ultra and Team Premium share an allowance capped at 50% of the weekly limit; Pro and Team Standard normally use credits. A launch offer temporarily provides the 50% weekly allowance on Pro/Team Standard through November 16, 2026, 23:59 PT. These are plan limits, not a verified monthly token quota; no subscription price point or benchmark is inferred. The imported Claude Pro sample dated November 9 is a single-window historical extrapolation of the main weekly meter. Its 782M monthly-token estimate explicitly omits the 50% Fable cap and extends the temporary launch period to four weeks; it is not a guaranteed ongoing Pro allowance. The original measurement and assumptions are preserved, not independently adopted as a current quota.",
-        "zh": "Fable 5.2：Max／Ultra 与 Team Premium 共享最多周限额 50% 的额度；Pro 和 Team Standard 通常使用 credits。发布优惠临时为 Pro／Team Standard 提供 50% 周额度，截至太平洋时间 2026 年 11 月 16 日 23:59。这些是套餐限制，不是已核实的月 token 额度，不据此虚构订阅价格点或榜单成绩。 新导入的 11 月 9 日 Claude Pro 样本是按主周额度条推算的单窗口历史记录。其 7.82 亿月 token 估计明确未计入 50% Fable 上限，并把临时发布优惠外推为四周，不代表 Pro 长期保证额度。保留原始测量及假设，不将其独立认定为当前可用额度。"
+        "en": "Fable 5.2: Max/Ultra and Team Premium share an allowance capped at 50% of the weekly limit; Pro and Team Standard normally use credits. A launch offer temporarily provides the 50% weekly allowance on Pro/Team Standard through November 16, 2026, 23:59 PT. These plan limits alone do not establish monthly tokens. The separately reviewed subscription-estimates layer now supplies a medium-confidence Max sample extrapolation and a low-confidence Ultra cross-plan estimate; neither is a guaranteed allowance. The imported Claude Pro sample dated November 9 is a single-window historical extrapolation of the main weekly meter. Its 782M monthly-token estimate explicitly omits the 50% Fable cap and extends the temporary launch period to four weeks; it is not a guaranteed ongoing Pro allowance. The original measurement and assumptions are preserved, not independently adopted as a current quota.",
+        "zh": "Fable 5.2：Max／Ultra 与 Team Premium 共享最多周限额 50% 的额度；Pro 和 Team Standard 通常使用 credits。发布优惠临时为 Pro／Team Standard 提供 50% 周额度，截至太平洋时间 2026 年 11 月 16 日 23:59。这些套餐限制本身不能确定月 token 额度。独立 subscription-estimates 层现提供中等置信 Max 样本外推和低置信 Ultra 跨套餐估算，均不是保证额度。 新导入的 11 月 9 日 Claude Pro 样本是按主周额度条推算的单窗口历史记录。其 7.82 亿月 token 估计明确未计入 50% Fable 上限，并把临时发布优惠外推为四周，不代表 Pro 长期保证额度。保留原始测量及假设，不将其独立认定为当前可用额度。"
       }
     },
     {

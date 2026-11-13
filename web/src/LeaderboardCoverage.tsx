@@ -21,7 +21,7 @@ export default function LeaderboardCoverage({data, board, lang}: {data:SiteData;
     {reviewCount>0&&<p role="status">{zh?`${reviewCount} 个新配置的型号身份待审核，已核实配置已更新。`:`${reviewCount} new configurations need identity review; verified configurations have updated.`}</p>}
     <details className="unscored">
       <summary>{zh?`榜单覆盖与缺失原因：${coverage.observed} 个配置，${coverage.matchedConfigurations} 个可对应价格`:`Source coverage & missing models: ${coverage.observed} configurations, ${coverage.matchedConfigurations} with price references`}</summary>
-      <p>{zh?'非前沿点仍会绘制，默认仅标注前沿名称。缺少价格、成绩或可比配置的模型不会强行补点。以下为整个榜单的证据缺口，不随个人筛选改变。':'Non-frontier points are still drawn; only frontier names are labeled by default. Missing prices, scores or comparable configurations are never inferred. The gaps below cover the whole leaderboard, independent of your filters.'}</p>
+      <p>{zh?'非前沿点仍会绘制，默认仅标注前沿名称。已审核的额度推算会单独标识，缺少成绩或型号身份的模型不会强行补点。以下为整个榜单的证据缺口，不随个人筛选改变。':'Non-frontier points are still drawn; only frontier names are labeled by default. Reviewed quota estimates are explicitly labeled; missing scores or model identities are never invented. The gaps below cover the whole leaderboard, independent of your filters.'}</p>
       <p>{zh?'仅按相同模型版本关联价格；评测代理、推理强度与订阅额度并未视为一致。价格仍保留各自采样日期。':'Prices reference the same model version. Agent harness, reasoning effort and subscription quota are not assumed equivalent. Prices retain their own sampling dates.'}</p>
       <p>{zh?'核对日期：':'Checked: '}{coverage.checkedAt}{coverage.sourceUpdatedAt?` · ${zh?'来源更新':'Source updated'}: ${coverage.sourceUpdatedAt.slice(0,10)}`:''}
         {coverage.retrievalMethod==='browser-public-source'?(zh?' · 浏览器读取公开结构化数据。':' · Public structured data retrieved through a browser.'):''}

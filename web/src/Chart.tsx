@@ -36,6 +36,7 @@ import {
   searchCandidates,
   searchHits,
   metricLabel,
+  referenceTags,
 } from "./domain";
 import {
   type AnchorPoint,
@@ -108,7 +109,7 @@ interface SceneProps {
   clipId: string;
   zoomRect?: { x0: number; y0: number; x1: number; y1: number } | null;
   header?: { title: string; subtitle: string } | null;
-  keyRows?: { n: number; text: string; color: string }[];
+  keyRows?: { n: number; text: string; color: string; qualifiers: string[] }[];
   fontCss?: string;
   ariaLabel?: string;
 }
@@ -425,7 +426,7 @@ function ChartScene(p: SceneProps) {
               const col = i % 2;
               const rowI = Math.floor(i / 2);
               const x = box.left + col * ((p.width - box.left - 24) / 2);
-              const y = box.bottom + 92 + rowI * 24;
+              const y = box.bottom + 92 + rowI * 60;
               return (
                 <g key={k.n} transform={`translate(${x} ${y})`}>
                   <circle cx={9} cy={-4} r={9} fill={k.color} />
@@ -443,6 +444,7 @@ function ChartScene(p: SceneProps) {
                   <text x={26} y={-4} dominantBaseline="central">
                     {k.text}
                   </text>
+                  {k.qualifiers.map((tag, j) => <text key={tag} x={26} y={14 + j * 15} fontSize={10.5} fill={c.ink}>{tag}</text>)}
                 </g>
               );
             })}
@@ -892,9 +894,10 @@ export default function Chart({
         const keyRows = cards.map((g, i) => ({
           n: i + 1,
           color: color(g.rows[0].point),
+          qualifiers: referenceTags(g.rows, state.lang),
           text: `${[...new Set(g.rows.map((r) => r.point.model_display))].join(" / ")} · ${price(g.price)} / MTok${g.price === 0 ? " · " + unmeteredNote(g.rows[0].point, state.lang) : ""} · ${number(g.score, state.lang)}${g.rows[0].mapping?.score_is_self_reported ? " · " + selfReportTag(state.lang) : ""}`,
         }));
-        const keyH = keyRows.length ? 70 + Math.ceil(keyRows.length / 2) * 24 : 20;
+        const keyH = keyRows.length ? 70 + Math.ceil(keyRows.length / 2) * 60 : 20;
         const m = marginsFor(base.view, plotH, state.lang, false);
         const exportBox = makeBox(W, top + plotH, { ...m, t: top });
         const H = exportBox.bottom + m.b + keyH;
@@ -967,7 +970,7 @@ export default function Chart({
   const hoverPoint = hoverGroup?.rows[0]?.point;
   const hoverBadge = hoverGroup ? badges.some((b) => b.key === hoverGroup.key) : false;
   const CARD_WIDTH = 256;
-  const CARD_HEIGHT = 150;
+  const CARD_HEIGHT = 150 + referenceTags(hoverGroup?.rows ?? [], state.lang).length * 34;
   const hoverCard =
     hoverGroup && width
       ? (() => {
@@ -1086,6 +1089,7 @@ export default function Chart({
             <div className="hover-plan">
               {displayPlan(hoverPoint.plan, state.lang)} · {accessLine(hoverPoint)}
             </div>
+            <div className="reference-qualifiers">{referenceTags(hoverGroup.rows, state.lang).map(tag => <span key={tag}>{tag}</span>)}</div>
             {hoverGroup.rows[0]?.mapping?.variant && (
               <div className="hover-variant">
                 {variantLabel(hoverGroup.rows[0].mapping.variant, state.lang)}
@@ -1149,6 +1153,7 @@ export default function Chart({
                     {number(g.score, state.lang)}
                     {g.rows[0].mapping?.score_is_self_reported ? ` · ${selfReportTag(state.lang)}` : ""}
                   </small>
+                  <span className="reference-qualifiers">{referenceTags(g.rows, state.lang).map(tag => <span key={tag}>{tag}</span>)}</span>
                 </span>
               </button>
             ))}

@@ -188,7 +188,25 @@ source structure still retain the previous complete snapshot. The new AA agent
 
 Claude Fable 5.2 is a reviewed release identity. AA's `Default Fallback` labels
 mean cross-model fallback is enabled, not proof that it actually occurred. These
-configurations, including the equivalent Opus/Sonnet configurations, retain their
-scores but do not join single-model prices. Observed fallback remains a distinct
-exclusion. Chart search and the searchable source-coverage table now explain
+configurations retain their scores. The follow-up policy below supersedes the
+initial blanket mapping exclusion. Observed fallback remains a distinct exclusion. Chart search and the searchable source-coverage table now explain
 missing prices, scores, identity review, fallback and current-filter exclusions.
+
+
+## 2026-11-13 Fable reference-frontier follow-up
+
+Default Fallback is an enabled configuration, not proof of cross-model usage.
+Rows with unknown actual fallback use now join exact primary-model prices with
+`primary_model_configuration_reference`, low mapping confidence and unverified
+quota-effort alignment. Badges, detail notes and exported legends retain the
+qualification. Router entries and confirmed cross-model fallback stay excluded.
+Raw source snapshots retain their original ingestion flags; the merge layer owns
+this publication policy. AA scores are unchanged, never simulated or converted
+into a claim of measured subscription performance.
+
+Fable 5.2's historical Pro launch-window extrapolation is archived unchanged.
+A reviewed independent Max sample supplies a medium-confidence monthly estimate;
+Ultra uses an explicitly low-confidence 2x cross-plan extrapolation. See
+[`../subscription-estimates/README.md`](../subscription-estimates/README.md) for
+the method and immutable source. Both can enter the **reference** frontier, with
+quota and benchmark qualifications shown next to the values.

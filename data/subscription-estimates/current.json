@@ -1,0 +1,132 @@
+{
+  "version": 1,
+  "checkedAt": "2026-11-13",
+  "evidenceFiles": [
+    "evidence-2026-11-13.json"
+  ],
+  "archivedPointIds": [
+    {
+      "id": "claude_pro::claude-fable-5.2",
+      "model": "claude-fable-5.2",
+      "latestSampleDate": "2026-11-09",
+      "reason": {
+        "en": "Historical Pro launch-offer extrapolation uses the overall weekly meter without the Fable cap and extends temporary access to four weeks. Preserve the original in downloads; do not present it as an ongoing Pro allowance.",
+        "zh": "历史 Pro 发布优惠外推按主周表计算，未计 Fable 上限并把临时活动延长至四周。原记录保留供下载，不作为长期 Pro 额度展示。"
+      },
+      "expectedMonthlyTokens": 782000000,
+      "expectedPriceUsdPerMillion": 0.025575448
+    }
+  ],
+  "entries": [
+    {
+      "model": "claude-fable-5.2",
+      "sampleDate": "2026-11-10",
+      "calibration": {
+        "sampleWorthUsd": 80.385168,
+        "quotaFraction": 0.27,
+        "meter": "fable-weekly",
+        "planRatio": 1,
+        "monthWeeks": 4
+      },
+      "rates": {
+        "cache": 0.2,
+        "input": 8,
+        "cacheWrite": 10,
+        "output": 40
+      },
+      "sources": [
+        {
+          "label": "Patrick Lei: Max allowance audit, fixed revision",
+          "url": "https://github.com/plei99/plei99.github.io/blob/e6eee19e031ba3ecba375cfd06c1205877f6154e/research/fable-allowance-2026-11-10.md"
+        },
+        {
+          "label": "Author plan identification",
+          "url": "https://plei99.github.io/en/uses.html"
+        },
+        {
+          "label": "Max pricing and weekly limits",
+          "url": "https://support.claude.com/en/articles/11049741-what-is-the-max-plan"
+        },
+        {
+          "label": "Fable subscription eligibility and weekly cap",
+          "url": "https://support.claude.com/en/articles/15424964-claude-fable-models-on-your-plan"
+        },
+        {
+          "label": "Fable API reference rates",
+          "url": "https://platform.claude.com/docs/en/about-claude/pricing"
+        }
+      ],
+      "id": "estimate:claude-max:fable-5.2",
+      "planId": "claude_max_estimate",
+      "name": "Claude Max",
+      "monthlyUsd": 100,
+      "confidence": "medium",
+      "note": {
+        "en": "One account, one partial week; two workload intervals pooled, not a measured month. We reviewed the public audit, not its private raw logs. Workload variation and integer meter readings limit precision. No promotional resets or separate Console API credits are added. The 28-point sensitivity gives $0.05608/MTok, not a confidence bound.",
+        "zh": "单账户、同一部分周内两种负载合并外推，不是整月实测。本站复核公开审计，未取得其私有原始日志。负载差异和整数额度读数限制精度。不加一次性重置或另行领取的 Console API credits。按 28 个百分点作敏感性计算为 $0.05608/MTok，不是置信区间。"
+      },
+      "upstreamPlanIds": [
+        "claude_max_5x",
+        "claude_max"
+      ],
+      "sampleFrom": "Claude Max · claude-fable-5.2"
+    },
+    {
+      "model": "claude-fable-5.2",
+      "sampleDate": "2026-11-10",
+      "calibration": {
+        "sampleWorthUsd": 80.385168,
+        "quotaFraction": 0.27,
+        "meter": "fable-weekly",
+        "planRatio": 2,
+        "monthWeeks": 4
+      },
+      "rates": {
+        "cache": 0.2,
+        "input": 8,
+        "cacheWrite": 10,
+        "output": 40
+      },
+      "sources": [
+        {
+          "label": "Patrick Lei: Max allowance audit, fixed revision",
+          "url": "https://github.com/plei99/plei99.github.io/blob/e6eee19e031ba3ecba375cfd06c1205877f6154e/research/fable-allowance-2026-11-10.md"
+        },
+        {
+          "label": "Author plan identification",
+          "url": "https://plei99.github.io/en/uses.html"
+        },
+        {
+          "label": "Max pricing and weekly limits",
+          "url": "https://support.claude.com/en/articles/11049741-what-is-the-max-plan"
+        },
+        {
+          "label": "Fable subscription eligibility and weekly cap",
+          "url": "https://support.claude.com/en/articles/15424964-claude-fable-models-on-your-plan"
+        },
+        {
+          "label": "Fable API reference rates",
+          "url": "https://platform.claude.com/docs/en/about-claude/pricing"
+        },
+        {
+          "label": "Ultra pricing and weekly limits",
+          "url": "https://support.claude.com/en/articles/17728952-what-is-the-ultra-plan"
+        }
+      ],
+      "id": "estimate:claude-ultra:fable-5.2",
+      "planId": "claude_ultra_estimate",
+      "name": "Claude Ultra",
+      "monthlyUsd": 200,
+      "confidence": "low",
+      "note": {
+        "en": "Not directly measured on Ultra. Extrapolated from the Max sample using official weekly limits of 10x Pro versus Max 5x Pro, assuming the same Fable charging relationship. Cross-plan transfer is unverified. No promotional resets or separate Console API credits are added. The 28-point sensitivity gives $0.05608/MTok, not a confidence bound.",
+        "zh": "不是 Ultra 直接实测。按官方 Ultra 周限额为 Pro 的 10 倍、Max 为 5 倍，将 Max 样本外推为 2 倍，并假设 Fable 扣费关系相同；跨套餐适用性未获实测验证。不加一次性重置或另行领取的 Console API credits。28 个百分点敏感性计算为 $0.05608/MTok，不是置信区间。"
+      },
+      "upstreamPlanIds": [
+        "claude_max_20x",
+        "claude_ultra"
+      ],
+      "sampleFrom": "Claude Max · claude-fable-5.2"
+    }
+  ]
+}

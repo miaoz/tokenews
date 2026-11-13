@@ -3561,3 +3561,25 @@ tbody tr.sentinel-row {
     scroll-behavior: auto !important;
   }
 }
+
+/* Evidence stays readable beside the number in both themes and narrow cards. */
+.reference-qualifiers {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-top: 5px;
+  color: var(--ink-2);
+  font-size: 11.5px;
+  line-height: 1.4;
+  font-weight: 500;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+.reference-qualifiers > span { display: block; white-space: normal; }
+.detail-qualifiers {
+  margin: 0 0 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+  font-size: 13px;
+}
+.detail-qualifiers p { margin: 4px 0 0; font-weight: 400; }

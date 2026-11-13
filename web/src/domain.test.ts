@@ -1219,3 +1219,36 @@ test("Every mapping exposes score provenance: checked date, archive file, board 
     }
   }
 });
+
+import { referenceTags } from './domain';
+test('Reference qualifiers follow quota and fallback metadata without model-name special cases', () => {
+  const base = data.points[0];
+  const point = {...base, model:'any-model', price_origin:'maintained-estimate' as const, quota_is_estimated:true, confidence:'low'};
+  const mapping = {...data.mappings[0], mapping_kind:'primary_model_configuration_reference',fallback_enabled:true,fallback_observed:null};
+  const r = {key:'test',point,mapping,score:64};
+  assert.deepEqual(referenceTags([r,r], 'en'), ['Quota estimate · low confidence','Default fallback evaluation · use unknown']);
+  assert.deepEqual(referenceTags([r], 'zh'), ['额度估算 · 低置信度','默认回退评测 · 实际使用未知']);
+  assert.match(referenceTags([{...r,point:{...point,confidence:'medium'}}], 'en')[0], /medium confidence/);
+  assert.deepEqual(referenceTags([{...r,point:{...point,quota_is_estimated:false},mapping:null}], 'en'), []);
+  assert.deepEqual(referenceTags([{...r,point:{...point,quota_is_estimated:false},mapping:{...mapping,fallback_observed:false}}], 'en'), ['Default fallback evaluation · no use reported']);
+  assert.deepEqual(referenceTags([{...r,point:{...point,quota_is_estimated:false},mapping:{...mapping,fallback_observed:true}}], 'en'), ['Cross-model fallback · use observed']);
+  assert.equal(referenceTags([{...r,point:{...base,data_date_kind:'derived'},mapping:null}], 'en').length,1);
+});
+
+import { createElement } from 'react';
+import { renderToStaticMarkup } from 'react-dom/server';
+import Modal from './Modal';
+import Method from './Method';
+test('Detail and methodology keep estimate and fallback qualifications visible in both languages', () => {
+  const point = {...data.points[0],quota_is_estimated:true,confidence:'low'};
+  const mapping = {...data.mappings[0],mapping_kind:'primary_model_configuration_reference',fallback_enabled:true,fallback_observed:null};
+  const rows = [{key:'evidence',point,mapping,score:64}];
+  for (const lang of ['en','zh'] as const) {
+    const detail = renderToStaticMarkup(createElement(Modal,{title:'Details',children:'Evidence',onClose:()=>{},evidenceRows:rows,lang}));
+    for (const label of referenceTags(rows,lang)) assert.ok(detail.includes(label));
+    const method = renderToStaticMarkup(createElement(Method,{data,zh:lang==='zh'}));
+    assert.match(method,lang==='zh'?/一次性重置和另行领取的 Console API credits 不加到本订阅额度估算中/:/One-time resets and separate Console API credits are not added/);
+    assert.match(method,/50%/);
+    assert.match(method,lang==='zh'?/参考前沿/:/reference frontier/);
+  }
+});

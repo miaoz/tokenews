@@ -28,6 +28,8 @@ Inside `web/`: `npm run dev` (Vite dev server), `npm run data` (regenerate `web/
 
 **Model identity and direct leaderboard snapshots are independent of price coverage.** `data/models.json` owns model names, makers and sources. `scripts/lib/model-catalog.mjs` merges that catalog with upstream compatibility entries and validated `data/leaderboards/snapshots.json`; `sources.json` configures reviewed Artificial Analysis / Crusader Bench evaluations. `npm run leaderboards:update` refreshes those sources and writes `discovery.json` for identity review. Keep versions in separate board IDs, preserve observation history, and never synthesize subscription points from benchmark-only models. Model pages, directory/maker listings, news and sitemap include catalog-only models; missing prices are not free. The explorer publishes only boards with actual point mappings. See `data/leaderboards/README.md` for source scope and the daily workflow.
 
+**Reviewed subscription estimates** live in `data/subscription-estimates/`, separate from official credit pools. The adapter preserves archived originals, rejects upstream identity/date collisions and carries sample dates, confidence, assumptions and evidence through the explorer and static pages. See its README before changing quota estimates.
+
 **API references are maintained independently** in `data/api-prices/*.json` (guide: `data/api-prices/README.md`). `scripts/lib/api-prices.mjs` automatically discovers and validates provider files; `npm run prices:check` works without upstream data or web dependencies, and `npm run prices:report` reports coverage/differences. `web/scripts/build-data.mjs` publishes the catalog separately and attaches it as `SiteData.apiPrices`; never overwrite point `list_price`, real costs, quotas or workload conventions with current references. `src/apiPrices.ts` selects an explicitly configured local default, with upstream metadata as fallback, and `ApiPriceDetails.tsx` renders the same source/date/conditions/tier table in the explorer and model pages. New models and tiers belong in JSON, never in a code manifest.
 
 **Shared between explorer and static pages** (keep them the single source):
@@ -55,8 +57,10 @@ GitHub Actions: `ci.yml` (PRs: build/test/check), `deploy.yml` (push to `main` â
 **Current Pareto publication:** `npm run pareto:update` maintains all eight boards
 in `data/leaderboards/current.json`; `current-leaderboards.mjs` joins exact model
 IDs to existing prices. `identities.json` records reviewed source identities.
-Never borrow an older version's score/price or map router/fallback runs to one
-base model. `site.json` keeps upstream history; `explorer.json` contains only the
+Never borrow an older version's score/price or map router or observed cross-model
+fallback runs to one base model. Default-fallback-enabled runs with unknown actual
+use may join as explicitly qualified primary-model references, never as verified
+pure-model or same-plan measurements. `site.json` keeps upstream history; `explorer.json` contains only the
 eight current boards. Unknown source versions/identities fail refresh and retain
 the prior checked date. See `data/leaderboards/PARETO.md` for source limitations.
 

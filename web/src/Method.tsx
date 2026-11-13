@@ -125,6 +125,22 @@ export default function Method({
         </article>
       </div>
       <section className="method-sources">
+        <h2>{t("Estimates and primary-model references", "估算与主模型参考")}</h2>
+        <p>{t(
+          "Where direct quota measurements are missing, reviewed conservative estimates can appear in the default chart and its reference frontier. They are visibly labeled with their confidence level. A price × score point is a reference pairing, not a joint measurement of that subscription, workload and benchmark configuration. Direct measurements remain distinct from estimates; missing scores are never invented.",
+          "缺少直接额度实测时，经审核的保守估算可进入默认图与参考前沿，并明示估算及置信度。价格 × 分数只是参考关联，不代表该订阅、负载与评测配置的联合实测。直接实测与估算分开标记，缺失的能力分数不推算。",
+        )}</p>
+        <p>{t(
+          "An evaluation labeled Default Fallback may be shown as a primary-model reference when actual fallback use is unknown, with that uncertainty visible beside the point. This is not a verified pure-model result. Runs with confirmed cross-model fallback remain excluded from single-model price mappings.",
+          "标注 Default Fallback 的评测，在实际回退使用未知时可作为主模型参考展示，并在数据点旁明确说明不确定性；这不是已核实的纯单模型结果。已确认发生跨型号回退的运行仍不关联单模型价格。",
+        )}</p>
+        <p>{t(
+          "Quota estimates state their baseline and conversion assumptions, including the standard cache workload and any applicable model-specific cap, such as a 50% weekly cap. A cap is not extra allowance. One-time resets and separate Console API credits are not added to this subscription-capacity estimate. Estimates are revised when stronger measurements become available.",
+          "额度估算列明基准与换算假设，包括标准缓存负载及适用的模型专属上限，例如每周 50% 帽；上限不等于额外额度。一次性重置和另行领取的 Console API credits 不加到本订阅额度估算中。取得更强实测证据后会更新估算。",
+        )}</p>
+      </section>
+      <p><a href="/data/subscription-estimates.json">{t("Reviewed quota estimates (JSON)", "已审核额度估算（JSON）")}</a></p>
+      <section className="method-sources">
         <h2>{t("Reviewed coding plans", "独立核实的编程套餐")}</h2>
         <CodingPlanWatch data={data} lang={zh?'zh':'en'} />
         <p>{t(

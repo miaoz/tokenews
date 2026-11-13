@@ -84,22 +84,28 @@ test('original discovery queue is completely resolved or explicitly rejected, pl
  assert.equal(Object.keys(CURRENT_BOARDS).length,8);
 });
 
-test('unknown identities and enabled fallback do not suppress known safe rows or gain price mappings',()=>{
+test('enabled fallback is an explicit primary-model reference; unknown identity and observed fallback stay excluded',()=>{
  const source={board:'aa_intelligence_index',adapter:'aa-models',url:'https://artificialanalysis.ai/leaderboards/models'};
  const model=baseline.points[0].model;
  const rows=[{sourceId:'safe',identity:model,label:'Safe',score:40},
  {sourceId:'unknown',releaseSlug:'unreviewed-new-model',identity:'New',label:'New',score:50},
- {sourceId:'fallback',identity:model,label:'Default Fallback',score:60,fallbackEnabled:true}];
+ {sourceId:'fallback',identity:model,label:'Default Fallback',score:60,fallbackEnabled:true},
+ {sourceId:'observed',identity:model,label:'Observed Fallback',score:70,fallbackEnabled:true,fallback:true}];
  const prepared=prepareCurrentSource(source,{version:'5.0.1',rows},'2026-11-13',catalog,identities);
  assert.equal(prepared.rows[0].exclusion,null);
  assert.equal(prepared.rows[2].exclusion,'fallback-enabled');
  const result=mergeCurrentLeaderboards(baseline,{...snapshot,sources:snapshot.sources.map(s=>s.board===source.board?prepared:s)});
  const configs=result.configurations.filter(c=>c.board===prepared.id);
- assert.equal(configs.length,2);
- assert.ok(configs.some(c=>c.price_mapping_exclusion==='fallback-enabled'));
- const bad=configs.find(c=>c.price_mapping_exclusion==='fallback-enabled');
- assert.equal(bad.fallback_observed,null,'absence of actual-use statistics is unknown, not a verified zero');
- assert.ok(!result.mappings.some(m=>m.configuration_id===bad.configuration_id));
+ assert.equal(configs.length,3);
+ const reference=configs.find(c=>c.variant==='Default Fallback');
+ assert.equal(reference.fallback_observed,null,'absence of actual-use statistics is unknown, not a verified zero');
+ assert.equal(reference.fallback_enabled,true);
+ assert.equal(reference.price_mapping_exclusion,null);
+ const refs=result.mappings.filter(m=>m.configuration_id===reference.configuration_id);
+ assert.ok(refs.length);
+ assert.ok(refs.every(m=>m.mapping_kind==='primary_model_configuration_reference'&&m.mapping_confidence==='low'&&m.quota_effort_matched===null));
+ const observed=configs.find(c=>c.variant==='Observed Fallback');
+ assert.ok(!result.mappings.some(m=>m.configuration_id===observed.configuration_id));
  assert.equal(result.leaderboardCoverage[prepared.id].excluded.length,2);
- assert.equal(result.leaderboardCoverage[prepared.id].matchedConfigurations,1);
+ assert.equal(result.leaderboardCoverage[prepared.id].matchedConfigurations,2);
 });

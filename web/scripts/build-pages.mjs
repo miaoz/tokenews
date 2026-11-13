@@ -43,6 +43,7 @@ import {
   number,
   price,
   priceExact,
+  referenceTags,
   safeUrl,
   unmeteredNote,
   variantLabel,
@@ -71,7 +72,7 @@ const data = JSON.parse(
 const updated = data.conventions.updatedAt || data.generatedAt;
 const pageUpdates = new Map();
 const latest = (...dates) => dates.filter(Boolean).sort().at(-1) ?? updated;
-const siteUpdated = latest(updated, data.apiPrices?.updatedAt, data.catalogUpdatedAt, data.leaderboardUpdatedAt, data.codingPlanUpdatedAt);
+const siteUpdated = latest(updated, data.apiPrices?.updatedAt, data.catalogUpdatedAt, data.leaderboardUpdatedAt, data.codingPlanUpdatedAt, data.subscriptionEstimatesUpdatedAt);
 // The explorer's hashed stylesheet carries the tokens, fonts, header and
 // footer; the static pages load it first so all pages share one design.
 const appCss = (await readFile(path.join(dist, "index.html"), "utf8")).match(
@@ -595,10 +596,11 @@ const kv = (rows) =>
     .filter(([, v]) => v)
     .map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`)
     .join("")}</dl>`;
+const estimateNote = (p, lang) => referenceTags([{point:p,mapping:null}],lang).join(" · ");
 const realCell = (p, lang) =>
   unmetered(p)
     ? `≈$0 <small>${esc(unmeteredNote(p, lang))}</small>`
-    : `<strong>${usd(p.real_usd_per_mtok)}</strong>`;
+    : `<strong>${usd(p.real_usd_per_mtok)}</strong>${estimateNote(p,lang) ? `<small class="block">${esc(estimateNote(p,lang))}</small>` : ""}`;
 const vsList = (p) =>
   !unmetered(p) && p.list_blended_usd_per_mtok && p.billing !== "metered"
     ? `${fmt(p.list_blended_usd_per_mtok / p.real_usd_per_mtok, "en", 1)}×`
@@ -645,6 +647,7 @@ function evidenceBlock(p, lang) {
           .join("")
       : "";
   const maps = (mappingsByPoint.get(p.id) ?? []).sort((a, b) => BOARD_ORDER.indexOf(a.board) - BOARD_ORDER.indexOf(b.board));
+  const qualifications = referenceTags(maps.length ? maps.map(mapping=>({point:p,mapping})) : [{point:p,mapping:null}], lang);
   const texts = [
     zh ? p.source : p.source_en ?? p.source,
     p.decision_note ? (zh ? p.decision_note : p.decision_note_en ?? p.decision_note) : "",
@@ -656,6 +659,7 @@ function evidenceBlock(p, lang) {
   ];
   return `<details class="evidence" id="${evidenceId(p)}"><summary><span class="ev-plan">${esc(planName(p, lang))}</span><span class="ev-channel">${esc(p.channel)}</span><span class="ev-price">${unmetered(p) ? "≈$0" : priceExact(p.real_usd_per_mtok)}<small>/MTok</small></span></summary>
 <div class="ev-body">
+${qualifications.length ? `<p class="note">${qualifications.map(esc).join(' · ')}</p>` : ''}
 ${kv([
   [t("Plan", "套餐"), `${planLink(p, lang)} · ${providerLink(p.channel, lang)}`],
   [t("Data date", "数据日期"), esc(dataDateLine(p, lang)) || null],
@@ -760,8 +764,8 @@ function modelPage(m, lang) {
     ? t(`As of ${m.modified}, ${m.name} is listed in our model directory. Subscription allowances and real token costs have not yet been recorded.`, `截至 ${m.modified}，${m.name} 已收录到模型目录；订阅额度与真实 token 成本尚未收录。`)
     : c
     ? zh
-      ? `截至 ${priceUpdated}，使用 ${m.name} 最便宜的方式是「${planName(c, lang)}」，真实单价约 ${usd(c.real_usd_per_mtok)} / 百万 token${c.price_usd != null ? `（月费 ${fee(c)}，每月约 ${tokens(c, lang)} token）` : ""}。本站共收录 ${m.points.length} 个可使用 ${m.name} 的套餐或 API 渠道。`
-      : `As of ${priceUpdated}, the cheapest way to use ${m.name} is ${planName(c, lang)} at a real cost of about ${usd(c.real_usd_per_mtok)} per million tokens${c.price_usd != null ? ` (${fee(c)}/month for roughly ${tokens(c, lang)} tokens a month)` : ""}. We track ${plural(m.points.length, "plan")} and API channels that serve ${m.name}.`
+      ? `截至 ${priceUpdated}，使用 ${m.name} 最便宜的方式是「${planName(c, lang)}」，${estimateNote(c,lang) ? "估算" : "真实"}单价约 ${usd(c.real_usd_per_mtok)} / 百万 token${c.price_usd != null ? `（月费 ${fee(c)}，每月约 ${tokens(c, lang)} token）` : ""}。本站共收录 ${m.points.length} 个可使用 ${m.name} 的套餐或 API 渠道。`
+      : `As of ${priceUpdated}, the cheapest way to use ${m.name} is ${planName(c, lang)} at ${estimateNote(c,lang) ? "an estimated" : "a real"} cost of about ${usd(c.real_usd_per_mtok)} per million tokens${c.price_usd != null ? ` (${fee(c)}/month for roughly ${tokens(c, lang)} tokens a month)` : ""}. We track ${plural(m.points.length, "plan")} and API channels that serve ${m.name}.`
     : zh
       ? `截至 ${priceUpdated}，${m.name} 在本站收录的渠道中不计额度（真实单价 ≈$0）。`
       : `As of ${priceUpdated}, ${m.name} is unmetered on every channel we track (real cost ≈$0).`;
@@ -777,8 +781,8 @@ function modelPage(m, lang) {
   const description = clip(
     c
       ? zh
-        ? `${m.name}（${vName}）真实单价低至 ${usd(c.real_usd_per_mtok)}/百万 token。对比 ${m.points.length} 个订阅与 API 的月费、额度、官方标价与榜单分数。`
-        : `${m.name} (${vName}) real cost from ${usd(c.real_usd_per_mtok)} per million tokens. Compare ${m.points.length} subscriptions & APIs: fees, token limits, list prices, benchmarks.`
+        ? `${m.name}（${vName}）${estimateNote(c,lang) ? "估算" : "真实"}单价低至 ${usd(c.real_usd_per_mtok)}/百万 token。对比 ${m.points.length} 个订阅与 API 的月费、额度、官方标价与榜单分数。`
+        : `${m.name} (${vName}) ${estimateNote(c,lang) ? "estimated" : "real"} cost from ${usd(c.real_usd_per_mtok)} per million tokens. Compare ${m.points.length} subscriptions & APIs: fees, token limits, list prices, benchmarks.`
       : zh
         ? `${m.name}（${vName}）的订阅额度、官方 API 标价与榜单分数对比，附可追溯来源。`
         : `${m.name} by ${vName}: subscription allowances, official API list prices and leaderboard scores, with traceable sources.`,
@@ -880,9 +884,9 @@ ${overview(
     [t("Leaderboards", "榜单数"), String(m.benchmarks.length), t("independent evaluations", "独立评测")],
     [t("API list price", "API 标价"), m.listBlended != null ? `${usd(m.listBlended)}<span class="unit">/MTok</span>` : null, m.listBlended != null ? t("comparison workload mix", "参考负载") : t("Not yet recorded", "尚未收录")],
   ] : [
-    [t("Lowest real price", "最低真实单价"), c ? `${usd(c.real_usd_per_mtok)}<span class="unit">/MTok</span>` : m.free.length ? "≈$0" : null, c ? esc(planName(c, lang)) : m.free.length ? t("unmetered on every channel", "所有渠道均不计额度") : t("Not yet recorded", "尚未收录")],
+    [t("Lowest real price", "最低真实单价"), c ? `${usd(c.real_usd_per_mtok)}<span class="unit">/MTok</span>` : m.free.length ? "≈$0" : null, c ? esc([planName(c, lang),estimateNote(c,lang)].filter(Boolean).join(" · ")) : m.free.length ? t("unmetered on every channel", "所有渠道均不计额度") : t("Not yet recorded", "尚未收录")],
     [t("API list price", "API 标价"), m.listBlended != null ? `${usd(m.listBlended)}<span class="unit">/MTok</span>` : null, t("comparison workload mix", "参考负载")],
-    [t("Most monthly tokens", "最多月额度"), m.mostTokens ? tokens(m.mostTokens, lang) : null, m.mostTokens && esc(planName(m.mostTokens, lang))],
+    [t("Most monthly tokens", "最多月额度"), m.mostTokens ? tokens(m.mostTokens, lang) : null, m.mostTokens && esc([planName(m.mostTokens, lang),estimateNote(m.mostTokens,lang)].filter(Boolean).join(" · "))],
     [t("Plans & APIs", "套餐与 API"), String(m.points.length), zh ? `${nPlans} 个订阅 · ${m.api.length} 个按量 API` : `${plural(nPlans, "subscription")} · ${plural(m.api.length, "metered API")}`],
   ],
   [

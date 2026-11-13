@@ -54,12 +54,19 @@ export function mergeCurrentLeaderboards(data, snapshot) {
     for (const r of source.rows) {
       if (!r.sourceId || seen.has(r.sourceId) || (!r.exclusion && !Number.isFinite(r.score)) || (r.model && !models.has(r.model))) throw new Error(`Invalid published row: ${r.label}`);
       seen.add(r.sourceId);
+      // Enabling the provider's default refusal fallback does not establish
+      // that another model actually ran. Preserve that configuration and its
+      // caveat as a primary-model reference, not a pure-model measurement.
+      // Actual observed fallback, routers and identity failures remain blocked.
+      const fallbackReference = r.fallbackEnabled === true && r.fallback !== true &&
+        (r.exclusion === 'fallback-enabled' || r.exclusion == null);
+      const exclusion = fallbackReference ? null : r.exclusion ?? (r.fallback === true ? 'multi-model-fallback' : null);
       const displayLabel = source.rows.filter(other=>other.label===r.label).length>1
         ? `${r.label} · ${r.sourceId.replace(/^contenders\//,'')}` : r.label;
       const configId=`current:${meta.id}:${createHash('sha256').update(r.sourceId).digest('hex').slice(0,16)}`;
       const note = {en:'Current source configuration. Subscription cost is an independent model reference, not a measurement of this agent/channel.',zh:'当前来源评测配置；订阅成本仅按模型对应，并非该代理或渠道的实测表现。'};
       if (source.board.startsWith('arena_')) {note.en+=` Source configuration: ${r.sourceId}.`;note.zh+=` 来源配置：${r.sourceId}。`;}
-      if (r.exclusion === 'fallback-enabled') {note.en += ' Default fallback is enabled; actual fallback usage is unverified. Not mapped to a single-model price.';note.zh += ' 来源配置开启默认回退，实际是否触发尚未核实；不关联单一模型价格。';}
+      if (fallbackReference) {note.en += ' The benchmark enables default refusal fallback. Actual fallback use is unverified; this is a primary-model price reference, not verified pure-model or same-plan performance.';note.zh += ' 评测启用默认拒绝回退，实际是否触发尚未核实；仅关联主模型价格作参考，不代表已核实的纯模型或同套餐实测表现。';}
       if (r.exclusion === 'multi-model-fallback') {note.en += ' This run uses fallback models and is excluded from single-model price mappings.';note.zh += ' 此运行包含回退模型，不关联单一模型价格。';}
       if (r.exclusion === 'ambiguous-configuration') {note.en += ' Source runs share this label; price mappings are withheld until their configurations can be distinguished.';note.zh += ' 来源存在同名运行，配置尚不能区分，因此不关联价格。';}
       if (r.model && Number.isFinite(r.score)) configs.push({configuration_id:configId,board:meta.id,model:r.model,
@@ -70,15 +77,17 @@ export function mergeCurrentLeaderboards(data, snapshot) {
         mean_cost_usd_per_task:r.meanCost??null,median_cost_usd_per_task:r.medianCost??null,
         source:r.source??source.source,checked_at:source.checkedAt,archive_url:'/data/current-leaderboards.json',
         record_note_en:note.en+(r.costBasis?` ${r.costBasis}`:''),record_note_zh:note.zh,
-        price_mapping_exclusion:r.exclusion,fallback_enabled:!!r.fallbackEnabled,fallback_observed:typeof r.fallback==='boolean'?r.fallback:null});
-      const entry={model:r.model,label:displayLabel,score:r.score,reason:r.exclusion,preliminary:!!r.preliminary,sourceId:r.sourceId,source:r.source??source.source,...(r.releaseSlug?{releaseSlug:r.releaseSlug}:{})};
-      if (r.exclusion) {excluded.push(entry);continue;}
+        price_mapping_exclusion:exclusion,fallback_enabled:!!r.fallbackEnabled,fallback_observed:typeof r.fallback==='boolean'?r.fallback:null});
+      const entry={model:r.model,label:displayLabel,score:r.score,reason:exclusion,preliminary:!!r.preliminary,sourceId:r.sourceId,source:r.source??source.source,...(r.releaseSlug?{releaseSlug:r.releaseSlug}:{})};
+      if (exclusion) {excluded.push(entry);continue;}
       const points=data.points.filter(p=>p.model===r.model);
       if (!points.length) {unpriced.push({...entry,reason:'no-price-evidence'});continue;}
       matchedConfigurations++;
       for (const point of points) mappings.push({point_id:point.id,configuration_id:configId,
-        mapping_kind:'model_configuration_reference',mapping_confidence:'medium',quota_effort_matched:null,
-        mapping_note:'Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.'});
+        mapping_kind:fallbackReference?'primary_model_configuration_reference':'model_configuration_reference',mapping_confidence:fallbackReference?'low':'medium',quota_effort_matched:null,
+        mapping_note:fallbackReference
+          ? 'Primary-model price reference for a default-fallback-enabled benchmark. Actual fallback use, product harness and quota-measurement effort are unverified. Not measured performance of this plan or pure model.'
+          : 'Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.'});
     }
     coverage[meta.id]={observed:source.rows.length,matchedConfigurations,unpriced,excluded,checkedAt:source.checkedAt,sourceUpdatedAt:source.sourceUpdatedAt,retrievalMethod:source.retrievalMethod};
   }

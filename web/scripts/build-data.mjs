@@ -7,6 +7,7 @@ import { loadCatalog, mergeCatalog } from "../../scripts/lib/model-catalog.mjs";
 import { mergeCurrentLeaderboards } from "../../scripts/lib/current-leaderboards.mjs";
 import { attachRefreshStatus } from "../../scripts/lib/leaderboard-refresh.mjs";
 import { addApiPricePoints, buildApiPointSchedules } from "../../scripts/lib/api-price-points.mjs";
+import { mergeSubscriptionEstimates } from "../../scripts/lib/subscription-estimates.mjs";
 import { mergeCodingPlans } from "../../scripts/lib/coding-plans.mjs";
 import { loadApiPrices, priceCoverage } from "../../scripts/lib/api-prices.mjs";
 
@@ -25,7 +26,8 @@ const { catalog, files: priceFiles } = await loadApiPrices(priceDirectory);
 const apiPointManifest = JSON.parse(await readFile(path.resolve(root, '../data/api-price-points.json'), 'utf8'));
 const codingPlans = JSON.parse(await readFile(path.resolve(root, '../data/coding-plans/current.json'), 'utf8'));
 const pricedData = mergeCodingPlans(addApiPricePoints(mergeCatalog(upstreamData, models, snapshots, current), catalog, apiPointManifest), codingPlans);
-const data = attachRefreshStatus(mergeCurrentLeaderboards(pricedData, current), refresh);
+const subscriptionEstimates = JSON.parse(await readFile(path.resolve(root, "../data/subscription-estimates/current.json"), "utf8"));
+const data = attachRefreshStatus(mergeCurrentLeaderboards(mergeSubscriptionEstimates(pricedData, subscriptionEstimates), current), refresh);
 // Keep adopted points byte-for-byte meaningful: current prices never replace
 // the historical list_price / blended reference used to explain a quota.
 data.apiPrices = catalog;
@@ -48,6 +50,10 @@ await writeFile(path.join(out, "coding-plan-watch.json"), JSON.stringify(data.co
 await writeFile(path.join(out, "superseded-points.json"), JSON.stringify(data.supersededPoints));
 for (const file of codingPlans.evidenceFiles) {
   await copyFile(path.resolve(root, '../data/coding-plans', file), path.join(out, 'evidence', `coding-plans-${file}`));
+}
+await writeFile(path.join(out, "subscription-estimates.json"), JSON.stringify(subscriptionEstimates));
+for (const file of subscriptionEstimates.evidenceFiles) {
+  await copyFile(path.resolve(root, "../data/subscription-estimates", file), path.join(out, "evidence", `subscription-estimates-${file}`));
 }
 await writeFile(path.join(out, "site.json"), JSON.stringify(data));
 // The explorer's first download leaves out the long-form notes it only shows in

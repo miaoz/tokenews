@@ -127,6 +127,20 @@ test("catalog-only models accept local prices without borrowing excluded or diff
   assert.equal(result.mappings[0].quota_effort_matched,null);
 });
 
+
+test("custom prices retain default-fallback qualifications without including observed fallback", () => {
+  const enabled = {...configuration,configuration_id:'enabled',fallback_enabled:true,fallback_observed:null};
+  const data: SiteData = {...site,points:[],mappings:[],
+    models:[{id:'my-model',name:'My Model',maker:'Acme',source:'https://example.com',checkedAt:'2026-11-13'}],
+    configurations:[enabled,{...enabled,configuration_id:'observed',fallback_observed:true,price_mapping_exclusion:'multi-model-fallback'}]};
+  const result=mergeCustomProviders(data,[provider]);
+  assert.equal(result.mappings.length,1);
+  assert.equal(result.mappings[0].mapping_kind,'primary_model_configuration_reference');
+  assert.equal(result.mappings[0].mapping_confidence,'low');
+  assert.equal(result.mappings[0].fallback_observed,null);
+  assert.equal(result.mappings[0].quota_effort_matched,null);
+});
+
 test("realPriceUsd weights the standard mix and defaults cached to input", () => {
   // 0.97×0.3 + 0.025×0.3 + 0.005×1.2
   assert.equal(

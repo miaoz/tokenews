@@ -1,0 +1,120 @@
+{
+  "version": 1,
+  "checkedAt": "2026-11-13",
+  "model": "claude-fable-5.2",
+  "primarySource": "https://github.com/plei99/plei99.github.io/blob/e6eee19e031ba3ecba375cfd06c1205877f6154e/research/fable-allowance-2026-11-10.md",
+  "observationDate": "2026-11-10",
+  "verification": "Public author audit and arithmetic checked; private underlying logs unavailable. One Max $100 account, two intervals in one partial week. No direct Ultra sample independently verified.",
+  "observations": [
+    {
+      "label": "benchmark, including interrupted work",
+      "apiEquivalentUsd": 41.8921884,
+      "fableWeeklyStart": 0,
+      "fableWeeklyEnd": 0.17
+    },
+    {
+      "label": "normal coding, including compaction",
+      "apiEquivalentUsd": 38.4929796,
+      "fableWeeklyStart": 0.17,
+      "fableWeeklyEnd": 0.27
+    }
+  ],
+  "meter": "Fable-specific weekly submeter; its 50% allocation cap is already represented. Five-hour exhaustion is not weekly exhaustion.",
+  "method": {
+    "monthWeeks": 4,
+    "cacheReadShare": 0.97,
+    "cacheWriteShare": 0.025,
+    "outputShare": 0.005,
+    "cacheReadUsdPerMillion": 0.2,
+    "fiveMinuteWriteUsdPerMillion": 10,
+    "outputUsdPerMillion": 40,
+    "blendedUsdPerMillion": 0.644,
+    "pooledApiEquivalentUsd": 80.385168,
+    "pooledQuotaFraction": 0.27,
+    "max": {
+      "quotaFraction": 0.27,
+      "planRatio": 1,
+      "monthlyApiEquivalentUsd": 1190.8913777777775,
+      "monthlyNormalizedTokens": 1849210213.940648,
+      "usdPerMillion": 0.0540771402007893
+    },
+    "ultra": {
+      "quotaFraction": 0.27,
+      "planRatio": 2,
+      "monthlyApiEquivalentUsd": 2381.782755555555,
+      "monthlyNormalizedTokens": 3698420427.881296,
+      "usdPerMillion": 0.0540771402007893
+    }
+  },
+  "conservativeSensitivity": {
+    "note": "28 rather than 27 displayed points is a sensitivity scenario, not an observation, confidence interval or guaranteed rounding bound. Workload differences are larger.",
+    "max": {
+      "quotaFraction": 0.28,
+      "planRatio": 1,
+      "monthlyApiEquivalentUsd": 1148.3595428571427,
+      "monthlyNormalizedTokens": 1783166992.0141966,
+      "usdPerMillion": 0.05607999724526297
+    },
+    "ultra": {
+      "quotaFraction": 0.28,
+      "planRatio": 2,
+      "monthlyApiEquivalentUsd": 2296.7190857142855,
+      "monthlyNormalizedTokens": 3566333984.0283933,
+      "usdPerMillion": 0.05607999724526297
+    }
+  },
+  "limitations": [
+    "No full-month measurement; official internal quota-to-dollar equivalence is unpublished.",
+    "Integer meter readings, workload variation, reporting delay, other devices and unrecorded resets cannot be excluded.",
+    "Monthly extrapolation assumes enough separate five-hour windows.",
+    "Do not adopt the author's higher normal-only headline; pool both intervals and use the project's four-week convention.",
+    "Ultra assumes identical same-model quota conversion and official 2x weekly ratio, not direct measurement."
+  ],
+  "excludedBenefits": [
+    "One-time promotional resets",
+    "Separate monthly Console API credits",
+    "Pro launch-week access extended to a permanent allowance"
+  ],
+  "secondaryLeads": [
+    {
+      "url": "https://x.com/theo/status/2119962809333346662",
+      "decision": "Primary post inaccessible (403); mirror is corroboration only, not adopted calibration."
+    },
+    {
+      "url": "https://github.com/Fei2411/real-api-pricing/issues/219",
+      "decision": "Ultra aggregate raw tokens lack category breakdown needed for project normalization."
+    }
+  ],
+  "officialSources": [
+    {
+      "label": "Max pricing and weekly limits",
+      "url": "https://support.claude.com/en/articles/11049741-what-is-the-max-plan"
+    },
+    {
+      "label": "Fable subscription eligibility and weekly cap",
+      "url": "https://support.claude.com/en/articles/15424964-claude-fable-models-on-your-plan"
+    },
+    {
+      "label": "Fable API reference rates",
+      "url": "https://platform.claude.com/docs/en/about-claude/pricing"
+    },
+    {
+      "label": "Ultra pricing and limits",
+      "url": "https://support.claude.com/en/articles/17728952-what-is-the-ultra-plan"
+    },
+    {
+      "label": "Launch offer end and resets",
+      "url": "https://support.claude.com/en/articles/17506494-claude-fable-5-2-launch-offers"
+    },
+    {
+      "label": "Separate API credits",
+      "url": "https://support.claude.com/en/articles/17154008-monthly-api-credits-for-max-ultra-and-team-plans"
+    }
+  ],
+  "benchmarkQualification": {
+    "source": "https://artificialanalysis.ai/leaderboards/models",
+    "configuration": "Default Fallback; highest published Fable 5.2 effort for each board under existing selector",
+    "actualFallbackUse": "unknown",
+    "decision": "Primary-model price reference only, not a measurement of this plan or proof of pure-model performance. Observed cross-model fallback and router runs remain excluded."
+  }
+}

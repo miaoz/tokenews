@@ -1579,6 +1579,8 @@ function Explorer({
       {detail && (
         <Modal
           title={t("Behind the number", "数据背后的依据")}
+          evidenceRows={detail}
+          lang={state.lang}
           wide
           onClose={() => setDetail(null)}
           closeLabel={t("Close", "关闭")}
