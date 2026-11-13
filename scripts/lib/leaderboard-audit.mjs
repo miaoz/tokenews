@@ -99,9 +99,16 @@ export function parseAuditSource(adapter, body, board) {
         score: r.metrics.accuracy, harness: r.metadata.agent_display.label, effort: r.metadata.reasoning_effort,
         scoreLow: Number.isFinite(r.metrics.accuracy_ci95_half_width) ? r.metrics.accuracy - r.metrics.accuracy_ci95_half_width : null,
         scoreHigh: Number.isFinite(r.metrics.accuracy_ci95_half_width) ? r.metrics.accuracy + r.metrics.accuracy_ci95_half_width : null,
-        sourceRank: r.rank, modelSource: r.metadata.model_display.url };
+        sourceRank: r.rank, modelSource: r.metadata.model_display.url,
+        sourceCreatedAt:r.created_at??null,sourceUpdatedAt:r.updated_at??null,modelReleaseDate:r.metadata.date??null,
+        nTrials:r.metrics.n_trials??r.n_trials??null,nSuccesses:r.metrics.successes??null,
+        ...(version === '4.1' ? {scoreProvenance:'not-disclosed-per-row',recordNote:{
+          en:'Official TB 4.1 leaderboard includes regraded TB 4.0 artifacts and retained TB 4.0 scores where regrading is unavailable or unsuitable. Per-row provenance is not disclosed; this is not evidence of a fresh 4.1 run.',
+          zh:'官方TB 4.1榜包含4.0产物重评分及无法或不宜重评分时沿用的4.0成绩；逐行来源未披露，不代表该配置重新运行了4.1。'}} : {}) };
     });
-    return { version, rows, sourceUpdatedAt: data.leaderboard.updated_at, coverage: 'All rows in the official leaderboard payload, including all effort levels.' };
+    return { version, rows, ...(version === '4.1' ? {recordNote:rows[0].recordNote} : {}), sourceUpdatedAt: data.leaderboard.updated_at, coverage: version === '4.1'
+      ? 'Official TB 4.1 configurations, including all efforts. Includes regraded 4.0 artifacts and retained 4.0 scores; per-row provenance is not disclosed. 官方TB 4.1全部effort配置，包含4.0产物重评分及沿用4.0成绩，逐行来源未披露。'
+      : 'All rows in the official leaderboard payload, including all effort levels.' };
   }
   if (adapter === 'design') {
     const raw = body.match(/<script\b[^>]*id="model-rankings-data"[^>]*>([\s\S]*?)<\/script>/)?.[1];
@@ -161,13 +168,17 @@ export function compareAudit(source, parsed, models, configurations, aliases = {
       costDifferences.push({ label: row.label, before: prior.mean_cost_usd_per_task, after: row.meanCost });
   }
   const rows = parsed.rows.map(r => {
-    const model = r.router ? null : resolveModel(r.identity, models, aliases);
+    const resolved = Object.hasOwn(source, 'identityBySourceId')
+      ? (Object.hasOwn(source.identityBySourceId ?? {}, r.sourceId) ? source.identityBySourceId[r.sourceId] : null)
+      : resolveModel(r.identity, models, aliases);
+    const model = !r.router && models.some(m => m.id === resolved) ? resolved : null;
     return { ...r, model, status: r.router ? 'router-review' : !model ? 'identity-review' : !oldModels.has(model) ? 'missing-from-board' : 'tracked-model' };
   });
   return { board: source.board, source: source.url, status: 'checked', baselineVersion: source.baselineVersion,
     currentVersion: parsed.version, versionChanged: parsed.version !== null && source.baselineVersion !== parsed.version,
     baselineConfigurations: old.length, observedConfigurations: rows.length,
     sourceUpdatedAt: parsed.sourceUpdatedAt ?? null, coverage: parsed.coverage,
+    ...(parsed.excludedSourceRows ? {excludedSourceRows:parsed.excludedSourceRows} : {}),
     // A changed methodology invalidates direct score/configuration comparisons.
     configurationReviewRequired: true,
     comparisonSkippedForVersionChange: baselineVersionChanged, scoreDifferences, costDifferences, newConfigurations,

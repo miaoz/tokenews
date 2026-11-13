@@ -9,7 +9,8 @@ export function parseArenaData(payload, board, costStats) {
   if (!sourceUpdatedAt || !Number.isFinite(Date.parse(sourceUpdatedAt)) || !Array.isArray(data) || data.length!==total || !total)
     throw new Error('Incomplete Arena snapshot');
   const costs=new Map((costStats?.entries??[]).map(r=>[r.contenderName??r.modelKey,r]));
-  const rows=data.map(r=>{
+  const excludedSourceRows=[];
+  const allRows=data.map(r=>{
     const label=agent?r.model:r.modelDisplayName;
     const sourceId=agent?r.contenderName:r.modelKey;
     const score=agent?r.avgScore?.value*100:r.rating;
@@ -17,6 +18,10 @@ export function parseArenaData(payload, board, costStats) {
     const scoreHigh=agent?(r.avgScore?.value+r.avgScore?.ci)*100:r.ratingUpper;
     if (!sourceId || !label || !Number.isFinite(score) || !Number.isFinite(scoreLow) || !Number.isFinite(scoreHigh) || scoreLow>score || scoreHigh<score)
       throw new Error('Invalid Arena numeric record: '+sourceId);
+    if (!agent && r.isDay1===true && r.rank===0) {
+      excludedSourceRows.push({sourceId,label,sourceRank:r.rank,rank:r.rank,isDay1:true,score,scoreLow,scoreHigh,
+        reason:'unranked-autoeval',note:'Official Day-1 AutoEval entry has no human-vote rank; excluded from the ranked WebDev comparison.'});
+    }
     const cost=costs.get(sourceId);
     return {identity:label,label,sourceId,sourceRank:r.rank,score,scoreLow,scoreHigh,
       maker:r.modelOrganization,modelSource:r.modelUrl,preliminary:['pre_release','co_release'].includes(r.releaseType),releaseType:r.releaseType,
@@ -24,8 +29,12 @@ export function parseArenaData(payload, board, costStats) {
       harness:/Codex Harness/.test(label)?'Codex':agent?'Arena Agent':'Arena WebDev',
       serviceMode:agent&&sourceId.endsWith('-text')?'text':agent&&sourceId.endsWith('-agent')?'agent':null,
       medianCost:cost?.medianUsd??null,meanCost:cost?.meanUsd??null};
-  }).sort((a,b)=>a.sourceRank-b.sourceRank);
-  if(new Set(rows.map(r=>r.sourceId)).size!==total || rows.some((r,i)=>r.sourceRank!==i+1 || (i && r.score>rows[i-1].score)))
+  });
+  const excludedIds=new Set(excludedSourceRows.map(r=>r.sourceId));
+  const rows=allRows.filter(r=>!excludedIds.has(r.sourceId)).sort((a,b)=>a.sourceRank-b.sourceRank);
+  if(new Set(allRows.map(r=>r.sourceId)).size!==total || !rows.length || rows.some((r,i)=>r.sourceRank!==i+1 || (i && r.score>rows[i-1].score)))
     throw new Error('Invalid Arena source IDs/ranking');
-  return {version:null,sourceUpdatedAt,rows,coverage:'Complete Overall structured payload: '+total+' configurations, signed scores, confidence intervals and stable source IDs.'};
+  return {version:null,sourceUpdatedAt,rows,excludedSourceRows,
+    coverage:'Complete Overall structured payload: '+total+' configurations validated; '+rows.length+' ranked configurations with signed scores, confidence intervals and stable source IDs.'+
+      (excludedSourceRows.length?' Excluded '+excludedSourceRows.length+' unranked Day-1 AutoEval entries (isDay1=true, rank=0), not human-vote ranks.':'')};
 }

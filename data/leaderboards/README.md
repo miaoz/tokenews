@@ -101,3 +101,11 @@ matching AA release name/Anthropic creator metadata and its official model sourc
 retain their configuration labels and are excluded from single-model price
 mappings as `fallback-enabled`. Explicit positive fallback attempt counts remain
 `multi-model-fallback`. Neither flag is inferred to be a pure-model measurement.
+
+
+See [the November 13 all-board review](review-2026-11-13.json) for source freshness,
+Fable/Carbon coverage, the isolated official TB 4.1 migration and unranked Arena
+AutoEval handling. All eight homepage sources are refreshed; missing source
+results are not approximated from another benchmark. Crusader remains a partial
+model-page integration, documented separately rather than advertised as a full
+current homepage board.

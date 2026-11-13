@@ -34,16 +34,18 @@ const results = await Promise.all(config.sources.map(async source => {
     const baselineVersion = points.boards[source.board].name.match(/\bv?(\d+(?:\.\d+)+)/)?.[1] ?? null;
     const aliases = {...config.aliases, ...identities.aliases};
     for (const row of parsed.rows) if (row.releaseSlug && identities.aaReleases[row.releaseSlug]) aliases[row.identity] = identities.aaReleases[row.releaseSlug];
-    return compareAudit({...source, baselineVersion}, parsed, knownModels, configurations, aliases);
+    const identityBySourceId = source.adapter === 'arena' ? identities.arenaSources
+      : parsed.rows.some(row=>row.releaseSlug) ? Object.fromEntries(parsed.rows.filter(row=>identities.aaReleases[row.releaseSlug]).map(row=>[row.sourceId,identities.aaReleases[row.releaseSlug]])) : null;
+    return compareAudit({...source, baselineVersion, ...(identityBySourceId ? {identityBySourceId} : {})}, parsed, knownModels, configurations, aliases);
   } catch (error) { return {board:source.board,source:source.url,status:'unverified',error:error.message}; }
 }));
 const checkedAt = new Intl.DateTimeFormat('en-CA', {timeZone:'America/Los_Angeles',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
 const report = {version:1,checkedAt,baselineCommit:(await read('upstream.lock.json')).commit,
   note:'Source audit is separate from publication. Unverified sources are never reported as unchanged. Identity-review rows may be aliases, historical models, or new releases. Scores across changed versions must not be mixed.',
   results, releaseSince, recentReleases: releases.filter(r=>!r.deprecated && r.releaseDate>=releaseSince).map(r=>({name:r.name,slug:r.slug,maker:r.creator.name,releaseDate:r.releaseDate,source:`https://artificialanalysis.ai/models/releases/${r.slug}`,
-    catalogModel: resolveModel(r.name, catalog.models, config.aliases),
-    inUpstreamDirectory: points.points.some(p => p.model === resolveModel(r.name, catalog.models, config.aliases)),
-    inUpstreamBenchmarks: configurations.some(c => c.model === resolveModel(r.name, catalog.models, config.aliases))
+    catalogModel: identities.aaReleases[r.slug] ?? null,
+    inUpstreamDirectory: points.points.some(p => p.model === identities.aaReleases[r.slug]),
+    inUpstreamBenchmarks: configurations.some(c => c.model === identities.aaReleases[r.slug])
   }))};
 const destination = new URL('data/leaderboards/audit.json',root);
 await writeFile(new URL('data/leaderboards/audit.json.tmp',root),JSON.stringify(report,null,2)+'\n');

@@ -210,3 +210,50 @@ Ultra uses an explicitly low-confidence 2x cross-plan extrapolation. See
 [`../subscription-estimates/README.md`](../subscription-estimates/README.md) for
 the method and immutable source. Both can enter the **reference** frontier, with
 quota and benchmark qualifications shown next to the values.
+
+
+## 2026-11-13 all-board audit
+
+All eight homepage sources were independently reread successfully. The published
+report is `/data/leaderboard-review.json`; its evidence and per-model matrix live
+in `review-2026-11-13.json`. Verification dates use America/Los_Angeles; source
+update timestamps are retained separately and are not fabricated when absent.
+
+| Current board | Source configurations | Fable 5.2 | Carbon |
+| --- | ---: | --- | --- |
+| AA Intelligence 5.0.1 | 111 | 64.5636, Max | 60.0257, High |
+| Official Terminal-Bench 4.1 | 55 | 65.76, Claude Code Max | Not published |
+| AA Terminal-Bench 4.0 | 151 | 61.6162, Xhigh | 65.1515, High |
+| Code Arena WebDev | 157 ranked | 1837.8083, Xhigh | 1768.2252, High |
+| Agent Arena | 64 | 30.4836, Max | 16.9017, High |
+| AA Coding Agent 2.0 | 36 | Not published | 59.4049, Antigravity CLI High |
+| OpenDesign quality | 23 | Not published | Not published |
+| DeepSWE 1.1 | 70 | Not published | Not published |
+
+Terminal-Bench's official [4.1 announcement](https://www.tbench.ai/news/terminal-bench-4-1)
+describes verifier fixes without agent-facing environment changes. A separate
+`terminal_bench_v4_1` prevents score mixing with AA's still-4.0 evaluation. Prior
+4.0 snapshots remain in `history/`. Official 4.1 results include regraded cached
+artifacts and retained 4.0 trial results where regrading was unsuitable or missing;
+there is no per-row provenance flag. Preserve source IDs, timestamps and trial
+counts; do not call all rows newly run 4.1 evaluations.
+
+Arena WebDev's one explicit `isDay1=true, rank=0` AutoEval row no longer blocks
+157 human-vote rankings. It is validated then retained separately in
+`excludedSourceRows`; it receives no invented human rank or chart point. All
+ranked IDs, continuous ranks, numeric scores and confidence intervals still pass
+strict validation. New reviewed source IDs restore Fable in both Arena boards.
+
+Hydrogen, Muse Ember, Agnes Theta and Inkling 2 Small now have distinct catalog
+identities. Missing prices remain missing. Tencent Hy4, K-EXAONE's changed slug
+and U2 Flash require further identity evidence. Source audits now use the same
+reviewed exact source IDs as publication, not approximate display-label matches.
+
+OpenDesign's quality score is not its cost/speed-weighted recommendation. DeepSWE's
+feed is still dated September 22; neither source publishes Fable 5.2 or Carbon.
+Do not fill their missing official scores with vendor claims.
+
+Crusader Bench is a separately configured Kimi-only observation, not a ninth
+homepage board. Its homepage now includes Fable 5.2 (68.4, medium, 2/13), while
+the configured Kimi detail page still describes 12 models. Full-board Crusader
+ingestion remains a separate expansion; the audit records this limitation.

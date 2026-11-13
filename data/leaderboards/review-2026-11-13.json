@@ -1,0 +1,694 @@
+{
+  "version": 1,
+  "reviewedAtUtc": "2026-11-13T07:55:36.789796+00:00",
+  "scope": "All eight homepage leaderboards, plus the separately configured single-model Crusader source. No model inference calls were made.",
+  "boards": [
+    {
+      "board": "aa_intelligence_index",
+      "publishedBoardId": "aa_intelligence_index_v5_0_1",
+      "version": "5.0.1",
+      "source": "https://artificialanalysis.ai/leaderboards/models",
+      "sourceUpdatedAt": null,
+      "checkedAtPacificDate": "2026-11-12",
+      "sourceStatus": "checked",
+      "rankedConfigurations": 111,
+      "priceMatchedConfigurations": 79,
+      "identityReview": [
+        {
+          "model": null,
+          "label": "K-EXAONE 2.0",
+          "score": 7.56357436827474,
+          "reason": "identity-review-required",
+          "preliminary": false,
+          "sourceId": "k-exaone-2-0",
+          "source": "https://artificialanalysis.ai/models/k-exaone-2-0",
+          "releaseSlug": "k-exaone-2-0"
+        },
+        {
+          "model": null,
+          "label": "Tencent Hy4",
+          "score": 34.5552385392508,
+          "reason": "identity-review-required",
+          "preliminary": false,
+          "sourceId": "tencent-hy4",
+          "source": "https://artificialanalysis.ai/models/tencent-hy4",
+          "releaseSlug": "hunyuan-dev1030-aa"
+        }
+      ],
+      "excludedSourceRows": [],
+      "findings": {
+        "en": "Current full payload matches target scores. Fable Default Fallback remains an explicitly qualified primary-model price reference.",
+        "zh": "实时完整来源与目标成绩一致；Fable Default Fallback 仍为明确标注的主模型价格参考。"
+      },
+      "models": {
+        "claude-fable-5.2": {
+          "sourceConfigurations": 5,
+          "best": {
+            "identity": "Claude Fable 5.2",
+            "sourceId": "claude-fable-5-2",
+            "label": "Claude Fable 5.2 (Max, Default Fallback)",
+            "score": 64.563595756626,
+            "fallbackEnabled": true,
+            "maker": "Anthropic",
+            "releaseDate": "2026-11-09",
+            "releaseSlug": "claude-fable-5-2",
+            "effort": "max",
+            "source": "https://artificialanalysis.ai/models/claude-fable-5-2",
+            "model": "claude-fable-5.2",
+            "exclusion": "fallback-enabled"
+          },
+          "chartHasPriceMapping": true
+        },
+        "gemini-4-carbon": {
+          "sourceConfigurations": 3,
+          "best": {
+            "identity": "Gemini 4 Carbon",
+            "sourceId": "gemini-4-carbon",
+            "label": "Gemini 4 Carbon (High)",
+            "score": 60.025738829526,
+            "fallbackEnabled": false,
+            "maker": "Google",
+            "releaseDate": "2026-10-28",
+            "releaseSlug": "gemini-4-carbon",
+            "effort": "high",
+            "source": "https://artificialanalysis.ai/models/gemini-4-carbon",
+            "model": "gemini-4-carbon",
+            "exclusion": null
+          },
+          "chartHasPriceMapping": true
+        }
+      }
+    },
+    {
+      "board": "terminal_bench_4",
+      "publishedBoardId": "terminal_bench_v4_1",
+      "version": "4.1",
+      "source": "https://www.tbench.ai/",
+      "sourceUpdatedAt": "2026-11-13T06:38:11.170193+00:00",
+      "checkedAtPacificDate": "2026-11-12",
+      "sourceStatus": "checked",
+      "rankedConfigurations": 55,
+      "priceMatchedConfigurations": 49,
+      "identityReview": [],
+      "excludedSourceRows": [],
+      "findings": {
+        "en": "Migrated official minor verifier update into a separate 4.1 board; preserved 4.0 history. Published scores combine regraded artifacts and retained 4.0 trial results, not necessarily fresh 4.1 runs. Per-row provenance is not disclosed.",
+        "zh": "官方验证器小版本升级独立为 4.1，保留 4.0 历史。官方榜含产物重评分及沿用的 4.0 trial 结果，不代表全部重新运行；逐行来源未披露。"
+      },
+      "models": {
+        "claude-fable-5.2": {
+          "sourceConfigurations": 1,
+          "best": {
+            "identity": "Claude Fable 5.2",
+            "sourceId": "a8c62ada-1715-4553-bd4b-87cbf2527290",
+            "label": "Claude Code - Fable 5.2 (max)",
+            "score": 65.76,
+            "harness": "Claude Code",
+            "effort": "max",
+            "scoreLow": 62.910000000000004,
+            "scoreHigh": 68.61,
+            "sourceRank": 1,
+            "modelSource": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+            "sourceCreatedAt": "2026-11-13T01:22:52.478025+00:00",
+            "sourceUpdatedAt": "2026-11-13T01:22:52.478025+00:00",
+            "modelReleaseDate": "2026-11-09",
+            "nTrials": 330,
+            "nSuccesses": 217,
+            "scoreProvenance": "not-disclosed-per-row",
+            "recordNote": {
+              "en": "Official TB 4.1 leaderboard includes regraded TB 4.0 artifacts and retained TB 4.0 scores where regrading is unavailable or unsuitable. Per-row provenance is not disclosed; this is not evidence of a fresh 4.1 run.",
+              "zh": "官方TB 4.1榜包含4.0产物重评分及无法或不宜重评分时沿用的4.0成绩；逐行来源未披露，不代表该配置重新运行了4.1。"
+            },
+            "model": "claude-fable-5.2",
+            "exclusion": null
+          },
+          "chartHasPriceMapping": true
+        },
+        "gemini-4-carbon": {
+          "sourceConfigurations": 0,
+          "best": null,
+          "chartHasPriceMapping": false
+        }
+      }
+    },
+    {
+      "board": "aa_terminal_bench_4",
+      "publishedBoardId": "aa_terminal_bench_v4_0",
+      "version": "4.0",
+      "source": "https://artificialanalysis.ai/leaderboards/models",
+      "sourceUpdatedAt": null,
+      "checkedAtPacificDate": "2026-11-12",
+      "sourceStatus": "checked",
+      "rankedConfigurations": 151,
+      "priceMatchedConfigurations": 84,
+      "identityReview": [
+        {
+          "model": null,
+          "label": "K-EXAONE 2.0",
+          "score": 0,
+          "reason": "identity-review-required",
+          "preliminary": false,
+          "sourceId": "k-exaone-2-0",
+          "source": "https://artificialanalysis.ai/models/k-exaone-2-0",
+          "releaseSlug": "k-exaone-2-0"
+        },
+        {
+          "model": null,
+          "label": "Tencent Hy4",
+          "score": 37.3737373737374,
+          "reason": "identity-review-required",
+          "preliminary": false,
+          "sourceId": "tencent-hy4",
+          "source": "https://artificialanalysis.ai/models/tencent-hy4",
+          "releaseSlug": "hunyuan-dev1030-aa"
+        }
+      ],
+      "excludedSourceRows": [],
+      "findings": {
+        "en": "AA still publishes Terminal-Bench 4.0. Do not relabel these scores as the official TB 4.1 leaderboard.",
+        "zh": "AA 仍发布 Terminal-Bench 4.0，不能改标签冒充官方 TB 4.1。"
+      },
+      "models": {
+        "claude-fable-5.2": {
+          "sourceConfigurations": 5,
+          "best": {
+            "identity": "Claude Fable 5.2",
+            "sourceId": "claude-fable-5-2-xhigh",
+            "label": "Claude Fable 5.2 (Xhigh, Default Fallback)",
+            "score": 61.616161616161605,
+            "fallbackEnabled": true,
+            "maker": "Anthropic",
+            "releaseDate": "2026-11-09",
+            "releaseSlug": "claude-fable-5-2",
+            "effort": "xhigh",
+            "source": "https://artificialanalysis.ai/models/claude-fable-5-2-xhigh",
+            "model": "claude-fable-5.2",
+            "exclusion": "fallback-enabled"
+          },
+          "chartHasPriceMapping": true
+        },
+        "gemini-4-carbon": {
+          "sourceConfigurations": 3,
+          "best": {
+            "identity": "Gemini 4 Carbon",
+            "sourceId": "gemini-4-carbon",
+            "label": "Gemini 4 Carbon (High)",
+            "score": 65.1515151515151,
+            "fallbackEnabled": false,
+            "maker": "Google",
+            "releaseDate": "2026-10-28",
+            "releaseSlug": "gemini-4-carbon",
+            "effort": "high",
+            "source": "https://artificialanalysis.ai/models/gemini-4-carbon",
+            "model": "gemini-4-carbon",
+            "exclusion": null
+          },
+          "chartHasPriceMapping": true
+        }
+      }
+    },
+    {
+      "board": "arena_code",
+      "publishedBoardId": "arena_code_current",
+      "version": null,
+      "source": "https://arena.ai/leaderboard/code/webdev",
+      "sourceUpdatedAt": "2026-11-11T14:00:00.000Z",
+      "checkedAtPacificDate": "2026-11-12",
+      "sourceStatus": "checked",
+      "rankedConfigurations": 157,
+      "priceMatchedConfigurations": 71,
+      "identityReview": [
+        {
+          "model": null,
+          "label": "U2 Flash",
+          "score": 1612.768171940325,
+          "reason": "identity-review-required",
+          "preliminary": false,
+          "sourceId": "u2-flash-1020-6jm8",
+          "source": "https://arena.ai/leaderboard/code/webdev"
+        }
+      ],
+      "excludedSourceRows": [
+        {
+          "sourceId": "tpg-bloom-udor",
+          "label": "Ernie 5.5 Flash Preview",
+          "sourceRank": 0,
+          "rank": 0,
+          "isDay1": true,
+          "score": 1667.984550798724,
+          "scoreLow": 1651.5786829247766,
+          "scoreHigh": 1684.3904186726716,
+          "reason": "unranked-autoeval",
+          "note": "Official Day-1 AutoEval entry has no human-vote rank; excluded from the ranked WebDev comparison."
+        }
+      ],
+      "findings": {
+        "en": "Fixed rejection of a whole board caused by one rank-0 Day-1 AutoEval entry. All 157 human-vote ranks remain strictly validated; AutoEval evidence is isolated.",
+        "zh": "修复一条 rank=0 的 Day-1 AutoEval 导致整榜失败的问题；157 条正式排名仍严格校验，AutoEval 证据单独隔离。"
+      },
+      "models": {
+        "claude-fable-5.2": {
+          "sourceConfigurations": 1,
+          "best": {
+            "identity": "Claude Fable 5.2 (xHigh)",
+            "label": "Claude Fable 5.2 (xHigh)",
+            "sourceId": "claude-fable-5.2-xhigh",
+            "sourceRank": 1,
+            "score": 1837.808306458596,
+            "scoreLow": 1817.2695979499167,
+            "scoreHigh": 1858.3470149672753,
+            "maker": "Anthropic",
+            "modelSource": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+            "preliminary": false,
+            "releaseType": null,
+            "effort": "xhigh",
+            "harness": "Arena WebDev",
+            "serviceMode": null,
+            "medianCost": 10.897325900000004,
+            "meanCost": 11.531893173323722,
+            "model": "claude-fable-5.2",
+            "exclusion": null
+          },
+          "chartHasPriceMapping": true
+        },
+        "gemini-4-carbon": {
+          "sourceConfigurations": 1,
+          "best": {
+            "identity": "Gemini 4 Carbon (High)",
+            "label": "Gemini 4 Carbon (High)",
+            "sourceId": "carbon-g-c6jt",
+            "sourceRank": 4,
+            "score": 1768.2252020707176,
+            "scoreLow": 1752.9048890196934,
+            "scoreHigh": 1783.5455151217416,
+            "maker": "Google",
+            "modelSource": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
+            "preliminary": true,
+            "releaseType": "pre_release",
+            "effort": "high",
+            "harness": "Arena WebDev",
+            "serviceMode": null,
+            "medianCost": 1.6148460999999998,
+            "meanCost": 2.200811457414449,
+            "model": "gemini-4-carbon",
+            "exclusion": null
+          },
+          "chartHasPriceMapping": true
+        }
+      }
+    },
+    {
+      "board": "arena_agent_mode",
+      "publishedBoardId": "arena_agent_mode_current",
+      "version": null,
+      "source": "https://arena.ai/leaderboard/agent",
+      "sourceUpdatedAt": "2026-11-11T20:00:00.000Z",
+      "checkedAtPacificDate": "2026-11-12",
+      "sourceStatus": "checked",
+      "rankedConfigurations": 64,
+      "priceMatchedConfigurations": 52,
+      "identityReview": [],
+      "excludedSourceRows": [],
+      "findings": {
+        "en": "Fable 5.2 existed in the official source but its new source ID was not reviewed. Exact identity mappings now restore it and other reviewed configurations.",
+        "zh": "来源已有 Fable 5.2，但新 source ID 未审核；现补齐精确身份映射及其他已核实配置。"
+      },
+      "models": {
+        "claude-fable-5.2": {
+          "sourceConfigurations": 1,
+          "best": {
+            "identity": "Claude Fable 5.2 (Max)",
+            "label": "Claude Fable 5.2 (Max)",
+            "sourceId": "contenders/claude-fable-5.2-max",
+            "sourceRank": 1,
+            "score": 30.48356898058816,
+            "scoreLow": 27.416445260960252,
+            "scoreHigh": 33.55069270021607,
+            "maker": "Anthropic",
+            "modelSource": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+            "preliminary": false,
+            "releaseType": null,
+            "effort": "max",
+            "harness": "Arena Agent",
+            "serviceMode": null,
+            "medianCost": 7.670844400000001,
+            "meanCost": 17.43350575114374,
+            "model": "claude-fable-5.2",
+            "exclusion": null
+          },
+          "chartHasPriceMapping": true
+        },
+        "gemini-4-carbon": {
+          "sourceConfigurations": 1,
+          "best": {
+            "identity": "Gemini 4 Carbon (High)",
+            "label": "Gemini 4 Carbon (High)",
+            "sourceId": "contenders/carbon-g-c6jt",
+            "sourceRank": 3,
+            "score": 16.901703047143766,
+            "scoreLow": 16.223447220951304,
+            "scoreHigh": 17.579958873336228,
+            "maker": "Google",
+            "modelSource": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
+            "preliminary": true,
+            "releaseType": "pre_release",
+            "effort": "high",
+            "harness": "Arena Agent",
+            "serviceMode": null,
+            "medianCost": 1.4440805,
+            "meanCost": 3.393149803043442,
+            "model": "gemini-4-carbon",
+            "exclusion": null
+          },
+          "chartHasPriceMapping": true
+        }
+      }
+    },
+    {
+      "board": "aa_coding_agent_index",
+      "publishedBoardId": "aa_coding_agent_index_v2_0",
+      "version": "2.0",
+      "source": "https://artificialanalysis.ai/agents/coding-agents",
+      "sourceUpdatedAt": null,
+      "checkedAtPacificDate": "2026-11-12",
+      "sourceStatus": "checked",
+      "rankedConfigurations": 36,
+      "priceMatchedConfigurations": 23,
+      "identityReview": [],
+      "excludedSourceRows": [],
+      "findings": {
+        "en": "No Fable 5.2 scored agent row is published. Shared model-navigation metadata is not a score; Fable 5.1 router/fallback rows are not substitutes.",
+        "zh": "来源没有 Fable 5.2 带分数的 agent 行；共享模型导航不算成绩，也不借用 Fable 5.1 的组合/回退成绩。"
+      },
+      "models": {
+        "claude-fable-5.2": {
+          "sourceConfigurations": 0,
+          "best": null,
+          "chartHasPriceMapping": false
+        },
+        "gemini-4-carbon": {
+          "sourceConfigurations": 1,
+          "best": {
+            "identity": "Gemini 4 Carbon",
+            "sourceId": "615aa2e21916e4843210a552131d95b7",
+            "label": "Antigravity CLI - Gemini 4 Carbon (High)",
+            "score": 59.40490257412841,
+            "harness": "Antigravity CLI",
+            "router": false,
+            "effort": "high",
+            "fallback": false,
+            "fallbackEnabled": false,
+            "meanCost": 7.7432202900257,
+            "medianCost": 6.23861773333333,
+            "model": "gemini-4-carbon",
+            "exclusion": null
+          },
+          "chartHasPriceMapping": true
+        }
+      }
+    },
+    {
+      "board": "open_design_arena",
+      "publishedBoardId": "open_design_arena_current",
+      "version": null,
+      "source": "https://open-design.ai/zh/llm-arena-for-design/",
+      "sourceUpdatedAt": null,
+      "checkedAtPacificDate": "2026-11-12",
+      "sourceStatus": "checked",
+      "rankedConfigurations": 23,
+      "priceMatchedConfigurations": 22,
+      "identityReview": [],
+      "excludedSourceRows": [],
+      "findings": {
+        "en": "All 23 quality-score rows match. Neither Fable 5.2 nor Carbon is published. Quality is not the default recommendation mix of quality, cost and speed. Source evaluation time is not disclosed.",
+        "zh": "23 项质量分与来源一致，无 Fable 5.2 或 Carbon。质量分不同于质量/成本/速度混合推荐分；来源未披露评测时间。"
+      },
+      "models": {
+        "claude-fable-5.2": {
+          "sourceConfigurations": 0,
+          "best": null,
+          "chartHasPriceMapping": false
+        },
+        "gemini-4-carbon": {
+          "sourceConfigurations": 0,
+          "best": null,
+          "chartHasPriceMapping": false
+        }
+      }
+    },
+    {
+      "board": "deepswe_1_1",
+      "publishedBoardId": "deepswe_v1_1",
+      "version": "1.1",
+      "source": "https://deepswe.datacurve.ai/artifacts/v1.1/leaderboard-live.json",
+      "sourceUpdatedAt": "2026-09-22T06:27:15.860279+00:00",
+      "checkedAtPacificDate": "2026-11-12",
+      "sourceStatus": "checked",
+      "rankedConfigurations": 70,
+      "priceMatchedConfigurations": 65,
+      "identityReview": [],
+      "excludedSourceRows": [],
+      "findings": {
+        "en": "Official 70-row feed remains generated on September 22. No Fable 5.2 or Carbon; vendor self-reported results are not official feed entries.",
+        "zh": "官方 70 行来源仍生成于 9 月 22 日，没有 Fable 5.2 或 Carbon；厂商自报不能冒充官方榜数据。"
+      },
+      "models": {
+        "claude-fable-5.2": {
+          "sourceConfigurations": 0,
+          "best": null,
+          "chartHasPriceMapping": false
+        },
+        "gemini-4-carbon": {
+          "sourceConfigurations": 0,
+          "best": null,
+          "chartHasPriceMapping": false
+        }
+      }
+    }
+  ],
+  "identityDecisions": [
+    {
+      "kind": "AA release",
+      "model": "gemini-4-hydrogen",
+      "releaseSlug": "gemini-4-hydrogen",
+      "name": "Gemini 4 Hydrogen",
+      "maker": "Google",
+      "releaseDate": "2026-11-12",
+      "source": "https://artificialanalysis.ai/models/releases/gemini-4-hydrogen",
+      "basis": "Explicit official modelsAndReleases release and variant association; independent catalog identity, not inferred from an existing model family."
+    },
+    {
+      "kind": "AA release",
+      "model": "muse-ember",
+      "releaseSlug": "muse-ember",
+      "name": "Muse Ember",
+      "maker": "Meta",
+      "releaseDate": "2026-11-09",
+      "source": "https://artificialanalysis.ai/models/releases/muse-ember",
+      "basis": "Explicit official modelsAndReleases release and variant association; independent catalog identity, not inferred from an existing model family."
+    },
+    {
+      "kind": "AA release",
+      "model": "agnes-2.5-pro-theta",
+      "releaseSlug": "agnes-2-5-pro-theta",
+      "name": "Agnes 2.5 Pro Theta",
+      "maker": "Sapiens AI",
+      "releaseDate": "2026-11-07",
+      "source": "https://artificialanalysis.ai/models/releases/agnes-2-5-pro-theta",
+      "basis": "Explicit official modelsAndReleases release and variant association; independent catalog identity, not inferred from an existing model family."
+    },
+    {
+      "kind": "AA release",
+      "model": "inkling-2-small",
+      "releaseSlug": "inkling-small-1102-rc17",
+      "name": "Inkling 2 Small",
+      "maker": "Thinking Machines",
+      "releaseDate": "2026-11-05",
+      "source": "https://artificialanalysis.ai/models/releases/inkling-small-1102-rc17",
+      "basis": "Explicit official modelsAndReleases release and variant association; independent catalog identity, not inferred from an existing model family."
+    },
+    {
+      "kind": "Arena exact source",
+      "sourceId": "claude-fable-5.2-xhigh",
+      "model": "claude-fable-5.2",
+      "label": "Claude Fable 5.2 (xHigh)",
+      "maker": "Anthropic",
+      "modelUrl": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+      "releaseType": null,
+      "basis": "Exact source ID, explicit release label and provider/model-specific URL. Configuration/effort remains in original source row; no price or checkpoint borrowing."
+    },
+    {
+      "kind": "Arena exact source",
+      "sourceId": "contenders/claude-fable-5.2-max",
+      "model": "claude-fable-5.2",
+      "label": "Claude Fable 5.2 (Max)",
+      "maker": "Anthropic",
+      "modelUrl": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+      "releaseType": null,
+      "basis": "Exact source ID, explicit release label and provider/model-specific URL. Configuration/effort remains in original source row; no price or checkpoint borrowing."
+    },
+    {
+      "kind": "Arena exact source",
+      "sourceId": "contenders/claude-opus-5.5-high-vertex-agent",
+      "model": "claude-opus-5.5",
+      "label": "Claude Opus 5.5 (High)",
+      "maker": "Anthropic",
+      "modelUrl": "https://www.anthropic.com/claude-opus-5-5",
+      "releaseType": null,
+      "basis": "Exact source ID, explicit release label and provider/model-specific URL. Configuration/effort remains in original source row; no price or checkpoint borrowing."
+    },
+    {
+      "kind": "Arena exact source",
+      "sourceId": "contenders/gpt-6.1-sol-medium",
+      "model": "gpt-6.1-sol",
+      "label": "GPT-6.1 Sol (Medium)",
+      "maker": "OpenAI",
+      "modelUrl": "https://openai.com/index/introducing-gpt-6-1-sol/",
+      "releaseType": null,
+      "basis": "Exact source ID, explicit release label and provider/model-specific URL. Configuration/effort remains in original source row; no price or checkpoint borrowing."
+    },
+    {
+      "kind": "Arena exact source",
+      "sourceId": "contenders/claude-sonnet-5-5-high-agent",
+      "model": "claude-sonnet-5.5",
+      "label": "Claude Sonnet 5.5 (High)",
+      "maker": "Anthropic",
+      "modelUrl": "https://www.anthropic.com/claude-sonnet-5-5",
+      "releaseType": null,
+      "basis": "Exact source ID, explicit release label and provider/model-specific URL. Configuration/effort remains in original source row; no price or checkpoint borrowing."
+    },
+    {
+      "kind": "Arena exact source",
+      "sourceId": "contenders/gpt-6.1-terra-medium",
+      "model": "gpt-6.1-terra",
+      "label": "GPT-6.1 Terra (Medium)",
+      "maker": "OpenAI",
+      "modelUrl": "https://openai.com/index/introducing-gpt-6-1-terra/",
+      "releaseType": null,
+      "basis": "Exact source ID, explicit release label and provider/model-specific URL. Configuration/effort remains in original source row; no price or checkpoint borrowing."
+    },
+    {
+      "kind": "Arena exact source",
+      "sourceId": "mistral-large-4-high",
+      "model": "mistral-large-4",
+      "label": "Mistral Large 4",
+      "maker": "Mistral",
+      "modelUrl": "https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B",
+      "releaseType": null,
+      "basis": "Exact source ID, explicit release label and provider/model-specific URL. Configuration/effort remains in original source row; no price or checkpoint borrowing."
+    },
+    {
+      "kind": "Arena exact source",
+      "sourceId": "contenders/mistral-large-4-high",
+      "model": "mistral-large-4",
+      "label": "Mistral Large 4",
+      "maker": "Mistral",
+      "modelUrl": "https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B",
+      "releaseType": null,
+      "basis": "Exact source ID, explicit release label and provider/model-specific URL. Configuration/effort remains in original source row; no price or checkpoint borrowing."
+    },
+    {
+      "kind": "Arena exact source",
+      "sourceId": "hydrogen-l-high-1p00-nkf9",
+      "model": "gemini-4-hydrogen",
+      "label": "Gemini 4 Hydrogen (High)",
+      "maker": "Google",
+      "modelUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/",
+      "releaseType": "pre_release",
+      "basis": "Exact source ID, explicit release label and provider/model-specific URL. Configuration/effort remains in original source row; no price or checkpoint borrowing."
+    },
+    {
+      "kind": "Arena exact source",
+      "sourceId": "contenders/hydrogen-l-high-1p00-nkf9",
+      "model": "gemini-4-hydrogen",
+      "label": "Gemini 4 Hydrogen (High)",
+      "maker": "Google",
+      "modelUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/",
+      "releaseType": "pre_release",
+      "basis": "Exact source ID, explicit release label and provider/model-specific URL. Configuration/effort remains in original source row; no price or checkpoint borrowing."
+    },
+    {
+      "kind": "Arena exact source",
+      "sourceId": "inkling-small-1102-rc17-ls91",
+      "model": "inkling-2-small",
+      "label": "Inkling 2 Small",
+      "maker": "Thinky",
+      "modelUrl": "https://thinkingmachines.ai/news/inkling-2-small/",
+      "releaseType": "co_release",
+      "basis": "Exact source ID, explicit release label and provider/model-specific URL. Configuration/effort remains in original source row; no price or checkpoint borrowing."
+    },
+    {
+      "kind": "Arena exact source",
+      "sourceId": "contenders/inkling-small-1102-rc17-ls91",
+      "model": "inkling-2-small",
+      "label": "Inkling 2 Small",
+      "maker": "Thinky",
+      "modelUrl": "https://thinkingmachines.ai/news/inkling-2-small/",
+      "releaseType": "co_release",
+      "basis": "Exact source ID, explicit release label and provider/model-specific URL. Configuration/effort remains in original source row; no price or checkpoint borrowing."
+    },
+    {
+      "kind": "Arena exact source",
+      "sourceId": "zippy-150-evals-ext-wgd2",
+      "model": "muse-ember",
+      "label": "Muse Ember (Max)",
+      "maker": "Meta",
+      "modelUrl": "https://research.meta.ai/blog/muse-ember",
+      "releaseType": "co_release",
+      "basis": "Exact source ID, explicit release label and provider/model-specific URL. Configuration/effort remains in original source row; no price or checkpoint borrowing."
+    },
+    {
+      "kind": "Arena exact source",
+      "sourceId": "contenders/muse-ember-max",
+      "model": "muse-ember",
+      "label": "Muse Ember (Max)",
+      "maker": "Meta",
+      "modelUrl": "https://research.meta.ai/blog/muse-ember",
+      "releaseType": null,
+      "basis": "Exact source ID, explicit release label and provider/model-specific URL. Configuration/effort remains in original source row; no price or checkpoint borrowing."
+    },
+    {
+      "kind": "Official release alias",
+      "source": "https://www.tbench.ai/",
+      "sourceId": "9e86002f-0585-4be4-acfe-d23f3fa9d240",
+      "sourceLabel": "Inkling Small 2",
+      "model": "inkling-2-small",
+      "modelSource": "https://thinkingmachines.ai/news/inkling-2-small/",
+      "basis": "TB model link explicitly identifies the same November 5 release; word-order alias only, not old Inkling Small."
+    }
+  ],
+  "unresolved": [
+    {
+      "identity": "Tencent Hy4",
+      "reason": "AA checkpoint hunyuan-dev1030-aa is not yet proven identical to existing Arena Hy4 or Hy4 Preview pricing."
+    },
+    {
+      "identity": "K-EXAONE 2.0",
+      "reason": "Old reviewed dated release URL no longer resolves; equivalence to the new release slug requires evidence."
+    },
+    {
+      "identity": "U2 Flash",
+      "reason": "Arena source is retained for identity review; maker product URL could not be independently verified in this pass."
+    }
+  ],
+  "additionalSource": {
+    "name": "Crusader Bench v1.7",
+    "source": "https://crusbench.com/",
+    "configuredScope": "Only Kimi K3.1 Pro model-page evidence; not one of the eight homepage boards.",
+    "homepageUpdatedAt": "2026-11-11",
+    "homepageScoredModels": 13,
+    "fable": {
+      "source": "https://crusbench.com/models/claude-fable-5-2/",
+      "score": 68.4,
+      "effort": "medium",
+      "sourceRank": 2,
+      "sourceTotal": 13,
+      "games": 6
+    },
+    "carbon": "Not in the current all-map ranking.",
+    "gap": "Existing Kimi detail page remains on an older 12-model source version, while the homepage has 13 models. Complete Crusader leaderboard ingestion is not implemented; no claim of full coverage.",
+    "nextStep": "Add a full structured source adapter and a separate homepage board if expanded coverage is desired; do not synthesize it from the Kimi page."
+  },
+  "versionMigrationSource": "https://www.tbench.ai/news/terminal-bench-4-1",
+  "pricingPolicy": "This review does not alter subscription quotas or invent prices for newly identified models. Same model identity is required; harness/effort alignment remains unverified."
+}

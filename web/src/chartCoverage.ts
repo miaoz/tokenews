@@ -20,6 +20,7 @@ export function missingReason(reason: string, lang: Lang): string {
     "multi-model-fallback": ["Run used fallback models; no single-model price match", "运行使用了回退模型，不能对应单一模型价格"],
     router: ["Router; no single-model price", "路由代理，不能对应单一模型价格"],
     "ambiguous-configuration": ["Source configurations share an ambiguous label", "来源同名配置尚不能区分"],
+    "unranked-autoeval": ["Day-1 AutoEval has no human-vote rank; not comparable to the ranked leaderboard", "Day-1 AutoEval 没有人工投票排名，不与正式排名混用"],
     "unverified-score": ["Score not verified", "分数尚未核实"],
   };
   return labels[reason]?.[lang === "zh" ? 1 : 0] ?? reason;
@@ -29,6 +30,7 @@ export function missingReason(reason: string, lang: Lang): string {
 export function unplottedRows(data: SiteData, board: string): UnplottedRow[] {
   const coverage = data.leaderboardCoverage?.[board];
   const rows: UnplottedRow[] = coverage ? [...coverage.unpriced, ...coverage.excluded] : [];
+  for (const row of coverage?.excludedSourceRows ?? []) rows.push({model:null,label:row.label,score:null,reason:row.reason,preliminary:true});
   const explained = new Set(rows.flatMap(r => r.model ? [r.model] : []));
   const priced = new Set(data.points.map(p => p.model));
   // A dated reference can expire after the static coverage report was built.

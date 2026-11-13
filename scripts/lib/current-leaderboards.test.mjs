@@ -109,3 +109,33 @@ test('enabled fallback is an explicit primary-model reference; unknown identity 
  assert.equal(result.leaderboardCoverage[prepared.id].excluded.length,2);
  assert.equal(result.leaderboardCoverage[prepared.id].matchedConfigurations,2);
 });
+
+test('TB 4.1 is separate from AA 4.0 and preserves source provenance without inventing run dates',()=>{
+ assert.equal(CURRENT_BOARDS.terminal_bench_4.id,'terminal_bench_v4_1');
+ assert.equal(CURRENT_BOARDS.aa_terminal_bench_4.version,'4.0');
+ const old=structuredClone(snapshot);const tb=old.sources.find(s=>s.board==='terminal_bench_4');tb.version='4.0';tb.id='terminal_bench_v4_0';
+ assert.throws(()=>mergeCurrentLeaderboards(baseline,old),/Invalid current snapshot/);
+ const model=baseline.points[0].model;
+ const parsed={version:'4.1',coverage:'Regraded and retained / 重评分及沿用',rows:[{sourceId:'official-uuid',identity:model,label:'Harness - model',score:65.76,
+ sourceCreatedAt:'2026-11-13T01:22:52Z',sourceUpdatedAt:'2026-11-13T01:22:52Z',modelReleaseDate:'2026-11-09',nTrials:330,nSuccesses:217,
+ scoreProvenance:'not-disclosed-per-row',recordNote:{en:'Not evidence of a fresh run.',zh:'不代表重新运行。'}}]};
+ parsed.recordNote=parsed.rows[0].recordNote;
+ const prepared=prepareCurrentSource({board:'terminal_bench_4',adapter:'terminal',url:'https://www.tbench.ai/'},parsed,'2026-11-13',catalog,identities);
+ const result=mergeCurrentLeaderboards(baseline,{...snapshot,sources:snapshot.sources.map(s=>s.board===prepared.board?prepared:s)});
+ const config=result.configurations.find(c=>c.board===prepared.id);
+ assert.equal(config.source_id,'official-uuid');assert.equal(config.n_trials,330);assert.equal(config.n_successes,217);
+ assert.equal(config.model_release_date,'2026-11-09');assert.equal(config.source_created_at,parsed.rows[0].sourceCreatedAt);
+ assert.equal(config.source_updated_at,parsed.rows[0].sourceUpdatedAt);assert.equal(config.score_provenance,'not-disclosed-per-row');
+ assert.match(config.record_note_en,/Not evidence/);assert.match(config.record_note_zh,/不代表/);
+ assert.equal(result.leaderboardCoverage[prepared.id].coverage,parsed.coverage);
+ assert.deepEqual(result.leaderboardCoverage[prepared.id].recordNote,parsed.recordNote);
+});
+test('source-level excluded rows survive preparation and coverage without becoming plotted scores',()=>{
+ const source={board:'arena_code',adapter:'arena',url:'https://arena.ai/leaderboard/code'};
+ const excludedSourceRows=[{sourceId:'autoeval',label:'Not human votes',reason:'autoeval'}];
+ const prepared=prepareCurrentSource(source,{version:null,excludedSourceRows,rows:[{sourceId:'unknown',identity:'unknown',label:'unknown',score:40}]},'2026-11-13',catalog,identities);
+ assert.deepEqual(prepared.excludedSourceRows,excludedSourceRows);
+ const result=mergeCurrentLeaderboards(baseline,{...snapshot,sources:snapshot.sources.map(s=>s.board===source.board?prepared:s)});
+ assert.deepEqual(result.leaderboardCoverage[prepared.id].excludedSourceRows,excludedSourceRows);
+ assert.ok(!result.configurations.some(c=>c.source_id==='autoeval'));
+});

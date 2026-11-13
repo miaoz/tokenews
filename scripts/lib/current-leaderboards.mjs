@@ -3,7 +3,7 @@ import { resolveModel } from './leaderboard-audit.mjs';
 
 export const CURRENT_BOARDS = {
   aa_intelligence_index: { id:'aa_intelligence_index_v5_0_1', version:'5.0.1', name:'Artificial Analysis Intelligence Index v5.0.1', metric:'Intelligence Index' },
-  terminal_bench_4: { id:'terminal_bench_v4_0', version:'4.0', name:'Terminal-Bench 4.0', metric:'Resolution Rate %' },
+  terminal_bench_4: { id:'terminal_bench_v4_1', version:'4.1', name:'Terminal-Bench 4.1', metric:'Resolution Rate %' },
   aa_terminal_bench_4: { id:'aa_terminal_bench_v4_0', version:'4.0', name:'Terminal-Bench 4.0 (AA)', metric:'Resolution Rate %' },
   arena_code: { id:'arena_code_current', version:null, name:'Code Arena | WebDev Overall', metric:'Arena Score' },
   arena_agent_mode: { id:'arena_agent_mode_current', version:null, name:'Agent Arena | Overall', metric:'Net Improvement %' },
@@ -33,7 +33,7 @@ export function prepareCurrentSource(source, parsed, checkedAt, catalog, identit
   });
   return {board:source.board, id:board.id, version:parsed.version, source:source.url, checkedAt,
     sourceUpdatedAt:parsed.sourceUpdatedAt??null, retrievalMethod:parsed.retrievalMethod??'direct-public-source',
-    coverage:parsed.coverage, rows};
+    coverage:parsed.coverage, ...(parsed.recordNote ? {recordNote:parsed.recordNote} : {}), ...(parsed.excludedSourceRows ? {excludedSourceRows:parsed.excludedSourceRows} : {}), rows};
 }
 
 export function mergeCurrentLeaderboards(data, snapshot) {
@@ -65,6 +65,7 @@ export function mergeCurrentLeaderboards(data, snapshot) {
         ? `${r.label} · ${r.sourceId.replace(/^contenders\//,'')}` : r.label;
       const configId=`current:${meta.id}:${createHash('sha256').update(r.sourceId).digest('hex').slice(0,16)}`;
       const note = {en:'Current source configuration. Subscription cost is an independent model reference, not a measurement of this agent/channel.',zh:'当前来源评测配置；订阅成本仅按模型对应，并非该代理或渠道的实测表现。'};
+      if (r.recordNote) {note.en+=' '+r.recordNote.en;note.zh+=' '+r.recordNote.zh;}
       if (source.board.startsWith('arena_')) {note.en+=` Source configuration: ${r.sourceId}.`;note.zh+=` 来源配置：${r.sourceId}。`;}
       if (fallbackReference) {note.en += ' The benchmark enables default refusal fallback. Actual fallback use is unverified; this is a primary-model price reference, not verified pure-model or same-plan performance.';note.zh += ' 评测启用默认拒绝回退，实际是否触发尚未核实；仅关联主模型价格作参考，不代表已核实的纯模型或同套餐实测表现。';}
       if (r.exclusion === 'multi-model-fallback') {note.en += ' This run uses fallback models and is excluded from single-model price mappings.';note.zh += ' 此运行包含回退模型，不关联单一模型价格。';}
@@ -72,6 +73,9 @@ export function mergeCurrentLeaderboards(data, snapshot) {
       if (r.model && Number.isFinite(r.score)) configs.push({configuration_id:configId,board:meta.id,model:r.model,
         variant:displayLabel,board_label:displayLabel,score:r.score,score_low:r.scoreLow??null,score_high:r.scoreHigh??null,
         score_is_estimated:false,score_is_preliminary:!!r.preliminary,score_is_self_reported:false,
+        source_id:r.sourceId,source_created_at:r.sourceCreatedAt??null,source_updated_at:r.sourceUpdatedAt??null,
+        model_release_date:r.modelReleaseDate??null,n_trials:r.nTrials??null,n_successes:r.nSuccesses??null,
+        score_provenance:r.scoreProvenance??null,
         source_rank:r.sourceRank,source_rank_scope:r.sourceRank?'leaderboard':undefined,source_total:r.sourceRank?source.rows.length:undefined,
         agent_harness:r.harness??null,reasoning_effort:r.effort??null,service_mode:r.serviceMode??null,
         mean_cost_usd_per_task:r.meanCost??null,median_cost_usd_per_task:r.medianCost??null,
@@ -89,7 +93,7 @@ export function mergeCurrentLeaderboards(data, snapshot) {
           ? 'Primary-model price reference for a default-fallback-enabled benchmark. Actual fallback use, product harness and quota-measurement effort are unverified. Not measured performance of this plan or pure model.'
           : 'Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.'});
     }
-    coverage[meta.id]={observed:source.rows.length,matchedConfigurations,unpriced,excluded,checkedAt:source.checkedAt,sourceUpdatedAt:source.sourceUpdatedAt,retrievalMethod:source.retrievalMethod};
+    coverage[meta.id]={coverage:source.coverage,...(source.recordNote ? {recordNote:source.recordNote} : {}),...(source.excludedSourceRows ? {excludedSourceRows:source.excludedSourceRows} : {}),observed:source.rows.length,matchedConfigurations,unpriced,excluded,checkedAt:source.checkedAt,sourceUpdatedAt:source.sourceUpdatedAt,retrievalMethod:source.retrievalMethod};
   }
   // Keep the original upstream snapshots intact and explicitly historical. The
   // same version's old observations never fill gaps in a current leaderboard.

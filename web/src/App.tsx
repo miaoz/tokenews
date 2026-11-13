@@ -96,6 +96,7 @@ import {
 const boardLabels: Record<string, string> = {
   aa_intelligence_index_v5_0_1: "AA Intelligence v5.0.1",
   aa_coding_agent_index_v2_0: "AA Coding Agent v2.0",
+  terminal_bench_v4_1: "Terminal-Bench 4.1",
   terminal_bench_v4_0: "Terminal-Bench 4.0",
   aa_terminal_bench_v4_0: "Terminal-Bench 4.0 (AA)",
   arena_code_current: "Code Arena",
@@ -114,6 +115,7 @@ const boardLabels: Record<string, string> = {
 const boardZh: Record<string, string> = {
   aa_intelligence_index_v5_0_1: "AA 智力榜 v5.0.1",
   aa_coding_agent_index_v2_0: "AA 编程 Agent v2.0",
+  terminal_bench_v4_1: "Terminal-Bench 4.1 终端榜",
   terminal_bench_v4_0: "Terminal-Bench 4.0 终端榜",
   aa_terminal_bench_v4_0: "TB4（AA 实测）",
   arena_code_current: "Code Arena · 网页开发",

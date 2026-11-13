@@ -16,6 +16,14 @@
       "checkedAt": "2026-11-04"
     },
     {
+      "id": "agnes-2.5-pro-theta",
+      "name": "Agnes 2.5 Pro Theta",
+      "maker": "Sapiens AI",
+      "source": "https://artificialanalysis.ai/models/releases/agnes-2-5-pro-theta",
+      "checkedAt": "2026-11-13",
+      "releaseDate": "2026-11-07"
+    },
+    {
       "id": "apertus-70b-instruct",
       "name": "Apertus 70B Instruct",
       "maker": "Swiss AI Initiative",
@@ -506,6 +514,14 @@
       "checkedAt": "2026-11-04"
     },
     {
+      "id": "gemini-4-hydrogen",
+      "name": "Gemini 4 Hydrogen",
+      "maker": "Google",
+      "source": "https://artificialanalysis.ai/models/releases/gemini-4-hydrogen",
+      "checkedAt": "2026-11-13",
+      "releaseDate": "2026-11-12"
+    },
+    {
       "id": "gemma-3-270m",
       "name": "Gemma 3 270M",
       "maker": "Google",
@@ -973,6 +989,14 @@
       "maker": "Thinking Machines Lab",
       "source": "https://arena.ai/leaderboard/code/webdev",
       "checkedAt": "2026-11-04"
+    },
+    {
+      "id": "inkling-2-small",
+      "name": "Inkling 2 Small",
+      "maker": "Thinking Machines",
+      "source": "https://artificialanalysis.ai/models/releases/inkling-small-1102-rc17",
+      "checkedAt": "2026-11-13",
+      "releaseDate": "2026-11-05"
     },
     {
       "id": "inkling-small",
@@ -1568,6 +1592,14 @@
       "maker": "Motif Technologies",
       "source": "https://artificialanalysis.ai/models/releases/motif-3",
       "checkedAt": "2026-11-04"
+    },
+    {
+      "id": "muse-ember",
+      "name": "Muse Ember",
+      "maker": "Meta",
+      "source": "https://artificialanalysis.ai/models/releases/muse-ember",
+      "checkedAt": "2026-11-13",
+      "releaseDate": "2026-11-09"
     },
     {
       "id": "muse-glimmer",

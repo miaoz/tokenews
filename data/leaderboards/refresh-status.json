@@ -5,7 +5,7 @@
     {
       "board": "aa_intelligence_index",
       "status": "updated",
-      "reviewRequired": 10,
+      "reviewRequired": 2,
       "identityReview": [
         {
           "label": "K-EXAONE 2.0",
@@ -13,63 +13,24 @@
           "releaseSlug": "k-exaone-2-0"
         },
         {
-          "label": "Muse Ember (Xhigh)",
-          "sourceId": "muse-ember-xhigh",
-          "releaseSlug": "muse-ember"
-        },
-        {
-          "label": "Gemini 4 Hydrogen (Low)",
-          "sourceId": "gemini-4-hydrogen-low",
-          "releaseSlug": "gemini-4-hydrogen"
-        },
-        {
           "label": "Tencent Hy4",
           "sourceId": "tencent-hy4",
           "releaseSlug": "hunyuan-dev1030-aa"
-        },
-        {
-          "label": "Agnes 2.5 Pro Theta",
-          "sourceId": "agnes-2-5-pro-theta",
-          "releaseSlug": "agnes-2-5-pro-theta"
-        },
-        {
-          "label": "Gemini 4 Hydrogen (Xhigh)",
-          "sourceId": "gemini-4-hydrogen",
-          "releaseSlug": "gemini-4-hydrogen"
-        },
-        {
-          "label": "Gemini 4 Hydrogen (High)",
-          "sourceId": "gemini-4-hydrogen-high",
-          "releaseSlug": "gemini-4-hydrogen"
-        },
-        {
-          "label": "Muse Ember (Max)",
-          "sourceId": "muse-ember",
-          "releaseSlug": "muse-ember"
-        },
-        {
-          "label": "Inkling 2 Small",
-          "sourceId": "inkling-2-small",
-          "releaseSlug": "inkling-small-1102-rc17"
-        },
-        {
-          "label": "Gemini 4 Hydrogen (Medium)",
-          "sourceId": "gemini-4-hydrogen-medium",
-          "releaseSlug": "gemini-4-hydrogen"
         }
       ],
       "retainedCheckedAt": "2026-11-12"
     },
     {
       "board": "terminal_bench_4",
-      "status": "retained-previous",
-      "error": "Methodology review required: terminal_bench_4 4.1",
-      "retainedCheckedAt": "2026-11-09"
+      "status": "updated",
+      "reviewRequired": 0,
+      "identityReview": [],
+      "retainedCheckedAt": "2026-11-12"
     },
     {
       "board": "aa_terminal_bench_4",
       "status": "updated",
-      "reviewRequired": 10,
+      "reviewRequired": 2,
       "identityReview": [
         {
           "label": "K-EXAONE 2.0",
@@ -77,128 +38,38 @@
           "releaseSlug": "k-exaone-2-0"
         },
         {
-          "label": "Muse Ember (Xhigh)",
-          "sourceId": "muse-ember-xhigh",
-          "releaseSlug": "muse-ember"
-        },
-        {
-          "label": "Gemini 4 Hydrogen (Low)",
-          "sourceId": "gemini-4-hydrogen-low",
-          "releaseSlug": "gemini-4-hydrogen"
-        },
-        {
           "label": "Tencent Hy4",
           "sourceId": "tencent-hy4",
           "releaseSlug": "hunyuan-dev1030-aa"
-        },
-        {
-          "label": "Agnes 2.5 Pro Theta",
-          "sourceId": "agnes-2-5-pro-theta",
-          "releaseSlug": "agnes-2-5-pro-theta"
-        },
-        {
-          "label": "Gemini 4 Hydrogen (Xhigh)",
-          "sourceId": "gemini-4-hydrogen",
-          "releaseSlug": "gemini-4-hydrogen"
-        },
-        {
-          "label": "Gemini 4 Hydrogen (High)",
-          "sourceId": "gemini-4-hydrogen-high",
-          "releaseSlug": "gemini-4-hydrogen"
-        },
-        {
-          "label": "Muse Ember (Max)",
-          "sourceId": "muse-ember",
-          "releaseSlug": "muse-ember"
-        },
-        {
-          "label": "Inkling 2 Small",
-          "sourceId": "inkling-2-small",
-          "releaseSlug": "inkling-small-1102-rc17"
-        },
-        {
-          "label": "Gemini 4 Hydrogen (Medium)",
-          "sourceId": "gemini-4-hydrogen-medium",
-          "releaseSlug": "gemini-4-hydrogen"
         }
       ],
       "retainedCheckedAt": "2026-11-12"
     },
     {
       "board": "arena_code",
-      "status": "retained-previous",
-      "error": "Invalid Arena source IDs/ranking",
-      "retainedCheckedAt": "2026-11-04"
-    },
-    {
-      "board": "arena_agent_mode",
       "status": "updated",
-      "reviewRequired": 9,
+      "reviewRequired": 1,
       "identityReview": [
         {
-          "label": "Claude Fable 5.2 (Max)",
-          "sourceId": "contenders/claude-fable-5.2-max",
-          "releaseSlug": null
-        },
-        {
-          "label": "Gemini 4 Hydrogen (High)",
-          "sourceId": "contenders/hydrogen-l-high-1p00-nkf9",
-          "releaseSlug": null
-        },
-        {
-          "label": "Claude Opus 5.5 (High)",
-          "sourceId": "contenders/claude-opus-5.5-high-vertex-agent",
-          "releaseSlug": null
-        },
-        {
-          "label": "GPT-6.1 Sol (Medium)",
-          "sourceId": "contenders/gpt-6.1-sol-medium",
-          "releaseSlug": null
-        },
-        {
-          "label": "Claude Sonnet 5.5 (High)",
-          "sourceId": "contenders/claude-sonnet-5-5-high-agent",
-          "releaseSlug": null
-        },
-        {
-          "label": "GPT-6.1 Terra (Medium)",
-          "sourceId": "contenders/gpt-6.1-terra-medium",
-          "releaseSlug": null
-        },
-        {
-          "label": "Inkling 2 Small",
-          "sourceId": "contenders/inkling-small-1102-rc17-ls91",
-          "releaseSlug": null
-        },
-        {
-          "label": "Muse Ember (Max)",
-          "sourceId": "contenders/muse-ember-max",
-          "releaseSlug": null
-        },
-        {
-          "label": "Mistral Large 4",
-          "sourceId": "contenders/mistral-large-4-high",
+          "label": "U2 Flash",
+          "sourceId": "u2-flash-1020-6jm8",
           "releaseSlug": null
         }
       ],
       "retainedCheckedAt": "2026-11-12"
     },
     {
+      "board": "arena_agent_mode",
+      "status": "updated",
+      "reviewRequired": 0,
+      "identityReview": [],
+      "retainedCheckedAt": "2026-11-12"
+    },
+    {
       "board": "aa_coding_agent_index",
       "status": "updated",
-      "reviewRequired": 2,
-      "identityReview": [
-        {
-          "label": "Muse Code - Muse Ember (Xhigh)",
-          "sourceId": "9f9935acf5ec3f55d1752fd01ff30de9",
-          "releaseSlug": null
-        },
-        {
-          "label": "Muse Code - Muse Ember (Max)",
-          "sourceId": "1566a99a00883bdb3cbdb4894e95ca1f",
-          "releaseSlug": null
-        }
-      ],
+      "reviewRequired": 0,
+      "identityReview": [],
       "retainedCheckedAt": "2026-11-12"
     },
     {

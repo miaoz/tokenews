@@ -61,3 +61,38 @@ test("Coverage shows actual remaining gaps and precise refresh failures in both 
     assert.match(html, lang === "en" ? /identity needs review/ : /身份待审核/);
   }
 });
+
+
+test("all eight current boards distinguish published Fable and Carbon scores from source absences", () => {
+  const expected: Record<string, [boolean,boolean]> = {
+    aa_intelligence_index_v5_0_1:[true,true], terminal_bench_v4_1:[true,false],
+    aa_terminal_bench_v4_0:[true,true], arena_code_current:[true,true],
+    arena_agent_mode_current:[true,true], aa_coding_agent_index_v2_0:[false,true],
+    open_design_arena_current:[false,false], deepswe_v1_1:[false,false],
+  };
+  assert.deepEqual(new Set(data.currentBoards),new Set(Object.keys(expected)));
+  for(const [board, present] of Object.entries(expected)) {
+    const rows=rowsFor(data,{...state,board});
+    for(const [i,model] of ['claude-fable-5.2','gemini-4-carbon'].entries()) {
+      assert.equal(rows.some(r=>r.point.model===model && r.mapping),present[i],`${board}: ${model}`);
+      if(!present[i]) assert.ok(unplottedRows(data,board).some(r=>r.model===model&&r.reason==='no-score-evidence'));
+    }
+  }
+  assert.equal(Math.max(...data.configurations.filter(c=>c.board==='terminal_bench_v4_1'&&c.model==='claude-fable-5.2').map(c=>c.score)),65.76);
+  assert.equal(Math.max(...data.configurations.filter(c=>c.board==='arena_code_current'&&c.model==='claude-fable-5.2').map(c=>c.score)),1837.808306458596);
+});
+
+test("AutoEval and TB regrade provenance are visible without mixing different evaluation measures", () => {
+  const arena=data.leaderboardCoverage!.arena_code_current;
+  assert.equal(arena.observed,157);
+  assert.equal(arena.excludedSourceRows?.length,1);
+  assert.ok(!data.configurations.some(c=>c.board==='arena_code_current'&&c.source_id===arena.excludedSourceRows![0].sourceId));
+  assert.ok(unplottedRows(data,'arena_code_current').some(r=>r.reason==='unranked-autoeval'&&r.score===null));
+  for(const lang of ['en','zh'] as const) {
+    const html=renderToStaticMarkup(<LeaderboardCoverage data={data} board="arena_code_current" lang={lang}/>);
+    assert.match(html,/AutoEval/);
+    assert.match(html,lang==='en'?/not mixed into the human-vote/:/不混入人工投票榜/);
+    const tb=renderToStaticMarkup(<LeaderboardCoverage data={data} board="terminal_bench_v4_1" lang={lang}/>);
+    assert.match(tb,lang==='en'?/not evidence of a fresh 4.1 run/:/逐行来源未披露/);
+  }
+});

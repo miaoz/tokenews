@@ -69,3 +69,33 @@ test('AA agents accepts new shortName and legacy name without parsing harness la
  assert.equal(rows[1].identity,'Legacy');assert.equal(rows[1].fallback,true);
  assert.equal(rows[2].fallback,null);
 });
+
+test('TB 4.1 preserves official row metadata and states unknown regrade provenance',()=>{
+ const row={id:'uuid',created_at:'2026-11-13T01:22:52Z',updated_at:'2026-11-13T02:00:00Z',rank:1,
+ metadata:{date:'2026-11-09',model_display:{label:'Fable 5.2',url:'https://example.com/model'},agent_display:{label:'Claude Code'},reasoning_effort:'max'},
+ metrics:{accuracy:65.76,accuracy_ci95_half_width:2.85,n_trials:330,successes:217}};
+ const body=flight('1:'+JSON.stringify({state:{queries:[{state:{data:{leaderboard:{title:'Terminal-Bench 4.1',updated_at:'2026-11-13'},rows:[row]}}}]}}));
+ const parsed=parseAuditSource('terminal',body);const r=parsed.rows[0];
+ assert.equal(parsed.version,'4.1');assert.equal(r.sourceId,'uuid');assert.equal(r.modelReleaseDate,'2026-11-09');
+ assert.equal(r.sourceCreatedAt,row.created_at);assert.equal(r.sourceUpdatedAt,row.updated_at);assert.equal(r.nTrials,330);assert.equal(r.nSuccesses,217);
+ assert.equal(r.scoreProvenance,'not-disclosed-per-row');assert.match(r.recordNote.en,/not evidence of a fresh/);assert.match(r.recordNote.zh,/逐行来源未披露/);
+ assert.deepEqual(parsed.recordNote,r.recordNote);assert.match(parsed.coverage,/retained 4.0/);assert.equal(r.regraded,undefined);assert.equal(r.runDate,undefined);
+ const legacy=parseAuditSource('terminal',body.replace('Terminal-Bench 4.1','Terminal-Bench 4.0'));
+ assert.equal(legacy.rows[0].scoreProvenance,undefined);
+});
+
+test('explicit source identity maps never infer same-label runs or unknown catalog IDs',()=>{
+ const models=[{id:'reviewed',name:'Same name'},{id:'other',name:'Other'}];
+ const source={board:'arena',url:'https://arena.ai',baselineVersion:null,identityBySourceId:{a:'reviewed',b:'other',invalid:'absent',router:'reviewed'}};
+ const rows=['a','b','missing','invalid','router'].map(sourceId=>({sourceId,identity:'Same name',label:'Same name (High)',score:42,...(sourceId==='router'?{router:true}:{})}));
+ const excludedSourceRows=[{sourceId:'autoeval',reason:'not-human-votes'}];
+ const result=compareAudit(source,{version:null,rows,excludedSourceRows},models,[]);
+ assert.deepEqual(result.rows.map(r=>r.model),['reviewed','other',null,null,null]);
+ assert.equal(result.rows.at(-1).status,'router-review');
+ assert.deepEqual(result.excludedSourceRows,excludedSourceRows);
+ assert.equal(result.observedConfigurations,5);
+ const empty=compareAudit({...source,identityBySourceId:{}},{version:null,rows:[rows[0]]},models,[]);
+ assert.equal(empty.rows[0].model,null);
+ const {identityBySourceId,...legacy}=source;
+ assert.equal(compareAudit(legacy,{version:null,rows:[rows[0]]},models,[]).rows[0].model,'reviewed');
+});

@@ -45,6 +45,7 @@ await writeFile(path.join(out, "leaderboard-snapshots.json"), JSON.stringify(sna
 await writeFile(path.join(out, "current-leaderboards.json"), JSON.stringify(current));
 await writeFile(path.join(out, "leaderboard-coverage.json"), JSON.stringify(data.leaderboardCoverage));
 await writeFile(path.join(out, "leaderboard-refresh.json"), JSON.stringify(refresh));
+await copyFile(path.resolve(root, "../data/leaderboards/review-2026-11-13.json"), path.join(out, "leaderboard-review.json"));
 await writeFile(path.join(out, "coding-plans.json"), JSON.stringify(codingPlans));
 await writeFile(path.join(out, "coding-plan-watch.json"), JSON.stringify(data.codingPlanWatch));
 await writeFile(path.join(out, "superseded-points.json"), JSON.stringify(data.supersededPoints));

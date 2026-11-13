@@ -5,7 +5,8 @@
     "MiMo 2.6 Flash": "mimo-v2.6-flash",
     "Hunyuan H4 Preview": "hy4-preview",
     "GLM-5.3 Flash-X": "glm-5.3-flashx",
-    "Nemotron 3 Ultra 550B A55B": "nemotron-3-ultra"
+    "Nemotron 3 Ultra 550B A55B": "nemotron-3-ultra",
+    "Inkling Small 2": "inkling-2-small"
   },
   "aaReleases": {
     "gemini-4-carbon": "gemini-4-carbon",
@@ -241,7 +242,11 @@
     "granite-4-1-8b": "granite-4.1-8b",
     "mercury-2": "mercury-2",
     "grok-code-fast-1": "grok-code-fast-1",
-    "grok-4-fast": "grok-4-fast"
+    "grok-4-fast": "grok-4-fast",
+    "gemini-4-hydrogen": "gemini-4-hydrogen",
+    "muse-ember": "muse-ember",
+    "agnes-2-5-pro-theta": "agnes-2.5-pro-theta",
+    "inkling-small-1102-rc17": "inkling-2-small"
   },
   "arenaConfigurations": {
     "Claude Opus 5.5 (Max)": "claude-opus-5.5",
@@ -620,6 +625,20 @@
     "mercury-2": "mercury-2",
     "grok-code-fast-1": "grok-code-fast-1",
     "grok-4-fast-reasoning": "grok-4-fast",
-    "devstral-medium-2507": "devstral-medium-2507"
+    "devstral-medium-2507": "devstral-medium-2507",
+    "claude-fable-5.2-xhigh": "claude-fable-5.2",
+    "contenders/claude-fable-5.2-max": "claude-fable-5.2",
+    "contenders/claude-opus-5.5-high-vertex-agent": "claude-opus-5.5",
+    "contenders/gpt-6.1-sol-medium": "gpt-6.1-sol",
+    "contenders/claude-sonnet-5-5-high-agent": "claude-sonnet-5.5",
+    "contenders/gpt-6.1-terra-medium": "gpt-6.1-terra",
+    "mistral-large-4-high": "mistral-large-4",
+    "contenders/mistral-large-4-high": "mistral-large-4",
+    "hydrogen-l-high-1p00-nkf9": "gemini-4-hydrogen",
+    "contenders/hydrogen-l-high-1p00-nkf9": "gemini-4-hydrogen",
+    "inkling-small-1102-rc17-ls91": "inkling-2-small",
+    "contenders/inkling-small-1102-rc17-ls91": "inkling-2-small",
+    "zippy-150-evals-ext-wgd2": "muse-ember",
+    "contenders/muse-ember-max": "muse-ember"
   }
 }

@@ -7,13 +7,16 @@
     {
       "url": "https://artificialanalysis.ai/models/agnes-2-5-pro-theta",
       "label": "Agnes 2.5 Pro Theta Sapiens AI · Nov 2026 · 1 variant Image Intelligence 24 Cost / task $0.57 Context 1M",
-      "possibleCatalogMatches": []
+      "possibleCatalogMatches": [
+        "agnes-2.5-pro-theta"
+      ]
     },
     {
       "url": "https://artificialanalysis.ai/models/inkling-2-small",
       "label": "Inkling 2 Small Thinking Machines · Nov 2026 · 1 variant Open weights Image Economics (#14) Legal (#15) Intelligence 31 Cost / task $1.18 Context 1M",
       "possibleCatalogMatches": [
-        "inkling"
+        "inkling",
+        "inkling-2-small"
       ]
     },
     {
@@ -36,16 +39,6 @@
       "possibleCatalogMatches": [
         "claude-fable-5.2"
       ]
-    },
-    {
-      "url": "https://artificialanalysis.ai/models/releases/gemini-4-hydrogen",
-      "label": "Gemini 4 Hydrogen Google · Nov 2026 · 4 variants Image Video Audio Finance & Accounting (#4) Legal (#4) Intelligence 54 27–54 Cost / task $0.29 $0.29–$3.16 Context 1M",
-      "possibleCatalogMatches": []
-    },
-    {
-      "url": "https://artificialanalysis.ai/models/releases/muse-ember",
-      "label": "Muse Ember Meta · Nov 2026 · 2 variants Image Finance & Accounting (#15) Healthcare & Medical (#15) Intelligence 36 34–36 Cost / task $0.12 $0.12–$0.14 Context 1M",
-      "possibleCatalogMatches": []
     },
     {
       "url": "https://artificialanalysis.ai/models/tencent-hy4",

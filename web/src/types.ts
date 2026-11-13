@@ -60,6 +60,13 @@ export interface Configuration {
   model: string;
   variant: string;
   score: number;
+  source_id?: string;
+  source_created_at?: string | null;
+  source_updated_at?: string | null;
+  model_release_date?: string | null;
+  n_trials?: number | null;
+  n_successes?: number | null;
+  score_provenance?: string | null;
   source_rank?: number;
   source_total?: number;
   source_rank_scope?: "comparison-group" | "leaderboard";
@@ -126,6 +133,9 @@ export interface SiteData {
   boardAliases?: Record<string, string>;
   leaderboardRefresh?: Record<string, {status:'updated'|'retained-previous'|'failed';attemptedAt:string;checkedAt:string;error?:string}>;
   leaderboardCoverage?: Record<string, {
+    coverage?: string;
+    recordNote?: {en:string;zh:string};
+    excludedSourceRows?: {sourceId:string;label:string;reason:string;score:number;sourceRank:number;isDay1?:boolean}[];
     observed: number;
     matchedConfigurations: number;
     checkedAt: string;
