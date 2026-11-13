@@ -1,0 +1,339 @@
+{
+  "version": 1,
+  "checkedAt": "2026-11-13",
+  "sources": [
+    "https://commandcode.ai/docs/plans/goat",
+    "https://commandcode.ai/docs/resources/pricing-limits",
+    "https://commandcode.ai/docs/resources/usage-limits"
+  ],
+  "scope": "GOAT GLM-5.3 non-Flash boost and proportional shared allowance clarification; not a change to all other model allowances.",
+  "oldMaintainedEntry": {
+    "plan": "command_code_goat",
+    "model": "glm-5.3",
+    "endpoint": "zai-org/GLM-5.3",
+    "source": "https://commandcode.ai/docs/plans/goat",
+    "identitySource": "https://commandcode.ai/changelog",
+    "rates": {
+      "input": 1.4,
+      "output": 4.4,
+      "cache": 0.26
+    },
+    "monthlyCreditsUsd": 20,
+    "checkedAt": "2026-11-04",
+    "id": "command_code_goat::glm-5.3",
+    "identityNote": {
+      "en": "The official release notes and current plan table confirm this named version; benchmark scores remain model references.",
+      "zh": "官方更新日志与现行套餐表交叉核对该型号；榜单分数仍为模型参考成绩。"
+    },
+    "replaces": [
+      "command_code_goat::glm-5.3"
+    ]
+  },
+  "oldPlanMetadata": {
+    "id": "command_code_goat",
+    "name": "Command Code GOAT",
+    "channel": "Command Code",
+    "monthlyUsd": 10,
+    "pool": "shared",
+    "sharedCreditsUsd": 100,
+    "note": {
+      "zh": "共享池上限 $100/月、$50/周、$20/5 小时；取模型上限与共享池较小值。",
+      "en": "Shared caps: $100/month, $50/week, $20/5 hours; use the lesser of model credits and shared credits."
+    }
+  },
+  "officialCurrent": {
+    "monthlyUsd": 10,
+    "glm53MonthlyUsageUsd": 70,
+    "ratesPerMillion": {
+      "input": 1.4,
+      "output": 4.4,
+      "cache": 0.26
+    },
+    "requests": {
+      "fiveHour": 947,
+      "weekly": 2370,
+      "monthly": 4740
+    },
+    "requestEstimateBasis": "Approximately 800 fresh input, 50000 cache-read and 125–200 output tokens, not the project standard workload.",
+    "normalizedFractions": {
+      "monthly": 1,
+      "fiveHour": 0.2,
+      "weekly": 0.5
+    },
+    "glm53SingleModelWindowsUsd": {
+      "fiveHour": 14,
+      "weekly": 35
+    },
+    "hundredDollarModelWindowsUsd": {
+      "fiveHour": 20,
+      "weekly": 50
+    }
+  },
+  "calculation": {
+    "mix": {
+      "cache": 0.97,
+      "input": 0.025,
+      "output": 0.005
+    },
+    "blendedUsdPerMillion": 0.3092,
+    "monthlyTokens": 226390685.64036226,
+    "usdPerMillion": 0.04417142857142857
+  },
+  "upstreamCorroboration": "upstream/data/research/goat-glm53-boost-round1-2026-11-13.json reports Nov12→Nov13 boost $20→$70, requests 1350→4740. Research only; upstream adopted point still unchanged.",
+  "upstreamOriginalPoint": {
+    "id": "command_code_goat::glm-5.3",
+    "plan": "Command Code GOAT",
+    "plan_en": null,
+    "billing": "subscription",
+    "model": "glm-5.3",
+    "model_display": "GLM 5.3",
+    "plan_gen": "",
+    "vendor": "Zhipu",
+    "local_price": null,
+    "label": "GLM 5.3 · Command Code GOAT",
+    "workload": "standard",
+    "list_price": {
+      "cached": 0.26,
+      "input": 1.4,
+      "output": 4.4,
+      "currency": "USD"
+    },
+    "price_usd": 10,
+    "monthly_yi": 0.647,
+    "real_usd_per_mtok": 0.15455951,
+    "list_blended_usd_per_mtok": 0.3092,
+    "d": 0.4999,
+    "confidence": "medium",
+    "tier": "full",
+    "source": "https://commandcode.ai/docs/plans/goat official per-model allowance and three-part pricing; https://commandcode.ai/pricing; $10->$70 credits; code-subscriptions-round1-2026-09-06.json; goat-opencode-catalogs-round3-2026-09-30.json",
+    "note": "新增0.647亿：min(共享月池$70, 模型allowance $20) ÷ 统一标准负载加权价；官网三段价；New models 默认$20。忽略 processing fee；同套餐各模型额度不可相加；无面板 token+% 截图，按官方绝对credits+价表",
+    "unmetered": false,
+    "promo_until": null,
+    "data_date": "2026-09-30",
+    "data_date_kind": "official",
+    "data_date_from": null,
+    "aa_intelligence_index__selection": "highest_archived_reference",
+    "aa_intelligence_index__configuration_count": 2,
+    "aa_intelligence_index__configuration_id": "aa_intelligence_index:21922ac966701739",
+    "aa_intelligence_index__variant": "GLM-5.3 (max)",
+    "aa_intelligence_index__score": 44.7774,
+    "aa_intelligence_index__score_is_estimated": false,
+    "aa_intelligence_index__score_is_self_reported": false,
+    "aa_intelligence_index__agent_harness": null,
+    "aa_intelligence_index__reasoning_effort": "max",
+    "aa_intelligence_index__service_mode": null,
+    "aa_intelligence_index__score_low": null,
+    "aa_intelligence_index__score_high": null,
+    "aa_intelligence_index__mean_cost_usd_per_task": null,
+    "aa_intelligence_index__median_cost_usd_per_task": null,
+    "aa_intelligence_index__source": "https://artificialanalysis.ai/leaderboards/models",
+    "aa_intelligence_index__mapping_kind": "model_configuration_reference",
+    "aa_intelligence_index__mapping_confidence": "medium",
+    "aa_intelligence_index__mapping_note": "Exact served-model reference; quota-measurement effort is unverified.",
+    "aa_intelligence_index__quota_effort_matched": null,
+    "terminal_bench_4__selection": "highest_archived_reference",
+    "terminal_bench_4__configuration_count": 1,
+    "terminal_bench_4__configuration_id": "terminal_bench_4:e159571270c58a00",
+    "terminal_bench_4__variant": "Claude Code - GLM-5.3 (max)",
+    "terminal_bench_4__score": 41.82,
+    "terminal_bench_4__score_is_estimated": null,
+    "terminal_bench_4__score_is_self_reported": false,
+    "terminal_bench_4__agent_harness": "Claude Code",
+    "terminal_bench_4__reasoning_effort": "max",
+    "terminal_bench_4__service_mode": null,
+    "terminal_bench_4__score_low": 38.59,
+    "terminal_bench_4__score_high": 45.05,
+    "terminal_bench_4__mean_cost_usd_per_task": null,
+    "terminal_bench_4__median_cost_usd_per_task": null,
+    "terminal_bench_4__source": "https://www.tbench.ai/leaderboard",
+    "terminal_bench_4__mapping_kind": "agent_configuration_reference",
+    "terminal_bench_4__mapping_confidence": "low",
+    "terminal_bench_4__mapping_note": "Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.",
+    "terminal_bench_4__quota_effort_matched": null,
+    "aa_terminal_bench_4__selection": "highest_archived_reference",
+    "aa_terminal_bench_4__configuration_count": 2,
+    "aa_terminal_bench_4__configuration_id": "aa_terminal_bench_4:496fda38cce0cdb6",
+    "aa_terminal_bench_4__variant": "Artificial Analysis - GLM-5.3 (max)",
+    "aa_terminal_bench_4__score": 41.9192,
+    "aa_terminal_bench_4__score_is_estimated": null,
+    "aa_terminal_bench_4__score_is_self_reported": false,
+    "aa_terminal_bench_4__agent_harness": "Artificial Analysis",
+    "aa_terminal_bench_4__reasoning_effort": "max",
+    "aa_terminal_bench_4__service_mode": null,
+    "aa_terminal_bench_4__score_low": null,
+    "aa_terminal_bench_4__score_high": null,
+    "aa_terminal_bench_4__mean_cost_usd_per_task": null,
+    "aa_terminal_bench_4__median_cost_usd_per_task": null,
+    "aa_terminal_bench_4__source": "https://artificialanalysis.ai/leaderboards/models",
+    "aa_terminal_bench_4__mapping_kind": "agent_configuration_reference",
+    "aa_terminal_bench_4__mapping_confidence": "low",
+    "aa_terminal_bench_4__mapping_note": "Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.",
+    "aa_terminal_bench_4__quota_effort_matched": null,
+    "arena_code__selection": "highest_archived_reference",
+    "arena_code__configuration_count": 1,
+    "arena_code__configuration_id": "arena_code:d2eac88788fb569d",
+    "arena_code__variant": "GLM-5.3 (Max)",
+    "arena_code__score": 1621,
+    "arena_code__score_is_estimated": null,
+    "arena_code__score_is_self_reported": false,
+    "arena_code__agent_harness": null,
+    "arena_code__reasoning_effort": "max",
+    "arena_code__service_mode": null,
+    "arena_code__score_low": 1613.5,
+    "arena_code__score_high": 1628.5,
+    "arena_code__mean_cost_usd_per_task": null,
+    "arena_code__median_cost_usd_per_task": null,
+    "arena_code__source": "https://arena.ai/leaderboard/code",
+    "arena_code__mapping_kind": "agent_configuration_reference",
+    "arena_code__mapping_confidence": "low",
+    "arena_code__mapping_note": "Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.",
+    "arena_code__quota_effort_matched": null,
+    "arena_agent_mode__selection": "highest_archived_reference",
+    "arena_agent_mode__configuration_count": 1,
+    "arena_agent_mode__configuration_id": "arena_agent_mode:ee4c8ff1faace996",
+    "arena_agent_mode__variant": "GLM-5.3 (Max)",
+    "arena_agent_mode__score": 1.31,
+    "arena_agent_mode__score_is_estimated": null,
+    "arena_agent_mode__score_is_self_reported": false,
+    "arena_agent_mode__agent_harness": null,
+    "arena_agent_mode__reasoning_effort": "max",
+    "arena_agent_mode__service_mode": null,
+    "arena_agent_mode__score_low": 0.4600000000000001,
+    "arena_agent_mode__score_high": 2.16,
+    "arena_agent_mode__mean_cost_usd_per_task": null,
+    "arena_agent_mode__median_cost_usd_per_task": 0.88,
+    "arena_agent_mode__source": "https://arena.ai/leaderboard/agent",
+    "arena_agent_mode__mapping_kind": "agent_configuration_reference",
+    "arena_agent_mode__mapping_confidence": "low",
+    "arena_agent_mode__mapping_note": "Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.",
+    "arena_agent_mode__quota_effort_matched": null,
+    "aa_coding_agent_index__selection": "highest_archived_reference",
+    "aa_coding_agent_index__configuration_count": 1,
+    "aa_coding_agent_index__configuration_id": "aa_coding_agent_index:9f41ae70311c2b0b",
+    "aa_coding_agent_index__variant": "Opencode - GLM-5.3",
+    "aa_coding_agent_index__score": 53.5548,
+    "aa_coding_agent_index__score_is_estimated": null,
+    "aa_coding_agent_index__score_is_self_reported": false,
+    "aa_coding_agent_index__agent_harness": "Opencode",
+    "aa_coding_agent_index__reasoning_effort": "max",
+    "aa_coding_agent_index__service_mode": null,
+    "aa_coding_agent_index__score_low": null,
+    "aa_coding_agent_index__score_high": null,
+    "aa_coding_agent_index__mean_cost_usd_per_task": 4.2414,
+    "aa_coding_agent_index__median_cost_usd_per_task": null,
+    "aa_coding_agent_index__source": "https://artificialanalysis.ai/agents/coding-agents",
+    "aa_coding_agent_index__mapping_kind": "agent_configuration_reference",
+    "aa_coding_agent_index__mapping_confidence": "low",
+    "aa_coding_agent_index__mapping_note": "Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.",
+    "aa_coding_agent_index__quota_effort_matched": null,
+    "open_design_arena__selection": null,
+    "open_design_arena__configuration_count": 0,
+    "open_design_arena__configuration_id": null,
+    "open_design_arena__variant": null,
+    "open_design_arena__score": null,
+    "open_design_arena__score_is_estimated": null,
+    "open_design_arena__score_is_self_reported": null,
+    "open_design_arena__agent_harness": null,
+    "open_design_arena__reasoning_effort": null,
+    "open_design_arena__service_mode": null,
+    "open_design_arena__score_low": null,
+    "open_design_arena__score_high": null,
+    "open_design_arena__mean_cost_usd_per_task": null,
+    "open_design_arena__median_cost_usd_per_task": null,
+    "open_design_arena__source": null,
+    "open_design_arena__mapping_kind": null,
+    "open_design_arena__mapping_confidence": null,
+    "open_design_arena__mapping_note": null,
+    "open_design_arena__quota_effort_matched": null,
+    "deepswe_1_1__selection": "highest_archived_reference",
+    "deepswe_1_1__configuration_count": 1,
+    "deepswe_1_1__configuration_id": "deepswe_1_1:898188da21bc1ea9",
+    "deepswe_1_1__variant": "mini-swe-agent - glm-5-3 (max)",
+    "deepswe_1_1__score": 68.95787139689578,
+    "deepswe_1_1__score_is_estimated": null,
+    "deepswe_1_1__score_is_self_reported": false,
+    "deepswe_1_1__agent_harness": "mini-swe-agent",
+    "deepswe_1_1__reasoning_effort": "max",
+    "deepswe_1_1__service_mode": null,
+    "deepswe_1_1__score_low": 65.93922012533709,
+    "deepswe_1_1__score_high": 71.97652266845449,
+    "deepswe_1_1__mean_cost_usd_per_task": 3.9933584893126386,
+    "deepswe_1_1__median_cost_usd_per_task": 3.1315945999999992,
+    "deepswe_1_1__source": "https://deepswe.datacurve.ai/artifacts/v1.1/leaderboard-live.json",
+    "deepswe_1_1__mapping_kind": "agent_configuration_reference",
+    "deepswe_1_1__mapping_confidence": "low",
+    "deepswe_1_1__mapping_note": "Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.",
+    "deepswe_1_1__quota_effort_matched": null
+  },
+  "notes": [
+    "Official up-to-$100 is highest single-model usage value, not a flat additive dollar pool across all models.",
+    "Rolling windows begin at first request; monthly allowance is not multiplied by four weeks.",
+    "Mixed-model example: $35 GLM-5.3 / $70 plus $50 of a $100 model consumes one whole monthly allowance.",
+    "Original upstream is not edited; replaced active point remains in superseded archive."
+  ],
+  "liveCaptures": [
+    {
+      "url": "https://commandcode.ai/docs/plans/goat",
+      "finalUrl": "https://commandcode.ai/docs/plans/goat",
+      "httpStatus": 200,
+      "capturedAtUtc": "2026-11-13T12:36:17.719Z",
+      "sha256": "310497a132a60376af6d4daa380b2ee4a9d226bfcb87a55d43aac9ed12e044f6",
+      "hashBasis": "Complete decoded HTTP response body bytes returned by fetch, before text extraction; not headers or compressed wire bytes.",
+      "extracts": [
+        {
+          "anchor": "Model Input Output Cache Read Cache Write Monthly credits",
+          "text": "Model Input Output Cache Read Cache Write Monthly credits DeepSeek V4.1 Flash (latest) $0.15 $0.60 $0.003 - $100 GLM-5.3 Flash $0.15 $0.50 $0.03 - $100 Ling 3.1 Flash $0.30 $0.90 $0.06 - $100 Ling 3.1 Flash 1019 $0.30 $0.90 $0.06 - $100 GLM-5.2 $1.40 $4.40 $0.26 - $70 Tencent Hy3 $0.14 $0.58 $0.035 - $70 Qwen 3.8 27B $0.40 $3.00 $0.04 - $70 GLM-5.3 $1.40 $4.40 $0.26 - $70 DeepSeek V4 Flash (latest) $0.15 $0.60 $0.003 - $60 DeepSeek V4.1 Flash Fast (latest) $0.16 $0.58 $0.016 - $60 Kimi K2.7 Code $0.95 $4.00 $0.19 - $60 LongCat 2.0 $0.30 $1.20 $0.006 - $50 MiniMax M3 $0.30 $1.20 $0.06 - $47 Gemini 3.8 Flash $1.50 $7.50 $0.15 - $40 Qwen 3.7 Max $2.50 $7.50 $0.50 $3.13 $33 Qwen 3.7 Plus $0.40 $1.60 $0.08 $0.50 $33 Qwen 3.6 Plus $0.50 $3.00 $0.10 - $33 GPT-5.6 Sol $5.00 $30.00 $0.50 $6.25 $20 GPT-5.6 Luna $0.20 $1.20 $0.02 $0.25 $20 Qwen 3.8 Max $2.00 $6.00 $0.25 $2.50 $20 DeepSeek V4 Pro (latest) $0.66 $1.98 $0.022 - $20 Premium models on GOAT carry $10 in monthly credits at public API pr"
+        },
+        {
+          "anchor": "GLM-5.3 947",
+          "text": "GLM-5.3 947 2,370 4,740 Gemini 3.8 Flash 784 1,960 3,920 LongCat 2.0 12,800 32,100 64,100 Ling 3.1 Flash 5,850 14,600 29,200 Ling 3.1 Flash 1019 5,850 14,600 29,200 DeepSeek V4 Pro (latest) 1,980 4,940 9,880 Claude Sonnet 5.5 238 595 1,190 Claude Haiku 5.5 5,970 14,900 29,900 Kimi K3.1 Pro 294 735 1,470 Kimi K3 196 490 980 Mistral Large 4 448 1,120 2,240 GPT-6 Luna 6,060 15,200 30,300 Qwen 3.8 Omni Flash 3,940 9,860 19,700 Qwen 3.8 Max Prime 131 327 654 Qwen 3.8 Max 0902 261 654 1,310 Tencent Hy4 Preview 1,220 3,060 6,120 MiniMax M3.1 Flash 4,230 10,600 21,200 Ornith 1.5 122B 3,180 7,960 15,900 Qwen 3.8 Flash 3,910 9,780 19,600 GLM-5.3 FlashX 945 2,360 4,720 DeepSeek V4 Flash Vision (exp) 10,300 25,600 51,300 DeepSeek V4 Flash Fast 1,040 2,610 5,210 DeepSeek V4.1 Flash Ultrafast 641 1,600 3,210 Muse Ember 10,500 26,300 52,600 Muse Spark 1.3 428 1,070 2,140 Muse Spark 1.3 Contributor 18,200 45,500 90,900 Muse Spark 1.2 428 1,070 2,140 Muse Spark 1.2 Contributor 18,200 45,500 90,900 Muse"
+        },
+        {
+          "anchor": "The estimates assume",
+          "text": "The estimates assume a typical agent request - ~800 fresh input tokens, ~50,000 cache-read tokens, and ~125-200 output tokens depending on the model family - at the prices below per 1M tokens. Most of an agent's volume is cache reads, which is why cache hit rates matter so much. Browse every model on Available Models , with per-token rates on Pricing & Limits . Every model on the GOAT plan is listed below: Model Input Output Cache Read Cache Write Monthly credits DeepSeek V4.1 Flash (latest) $0.15 $0.60 $0.003 - $100 GLM-5.3 Flash $0.15 $0.50 $0.03 - $100 Ling 3.1 Flash $0.30 $0.90 $0.06 - $100 Ling 3.1 Flash 1019 $0.30 $0.90 $0.06 - $100 GLM-5.2 $1.40 $4.40 $0.26 - $70 Tencent Hy3 $0.14 $0.58 $0.035 - $70 Qwen 3.8 27B $0.40 $3.00 $0.04 - $70 GLM-5.3 $1.40 $4.40 $0.26 - $70 DeepSeek V4 Flash (latest) $0.15 $0.60 $0.003 - $60 DeepSeek V4.1 Flash Fast (latest) $0.16 $0.58 $0.016 - $60 Kimi K2.7 Code $0.95 $4.00 $0.19 - $60 LongCat 2.0 $0.30 $1.20 $0.006 - $50 MiniMax M3 $0.30 $1.20 $0.06"
+        }
+      ]
+    },
+    {
+      "url": "https://commandcode.ai/docs/resources/pricing-limits",
+      "finalUrl": "https://commandcode.ai/docs/resources/pricing-limits",
+      "httpStatus": 200,
+      "capturedAtUtc": "2026-11-13T12:36:17.909Z",
+      "sha256": "48f35ce03f5dfc1bcadc50f121885b7ac17929d8a7e0cc43dd70e63df22bb8e8",
+      "hashBasis": "Complete decoded HTTP response body bytes returned by fetch, before text extraction; not headers or compressed wire bytes.",
+      "extracts": [
+        {
+          "anchor": "Plan Your cost Monthly credits",
+          "text": "Plan Your cost Monthly credits 5-hour limit Weekly limit Go $1 $10 of usage $2 $5 GOAT $10 Up to $100 of usage Up to $20 Up to $50 Pro $20 Up to $110 of usage Up to $22 Up to $55 Max 10× $100 $150 $45 $90 Max 20× $200 $300 $90 $180 Team Pro $40 $40 $12 $24 Limits are measured in credit value , not request count - so how many requests you get depends on the models you run. Cheaper models like DeepSeek V4 Flash stretch much further than premium models like Claude Opus. The usage estimates below and the calculator help you gauge your own mix. These windows apply to your plan's included monthly credits . Usage with no subscription (free or balance-only) and custom Enterprise pools have no rolling window caps - they're gated only by your credit balance. On-demand credits are never throttled either, on any plan ( details below ). How the windows roll Both windows roll from first use , not on a fixed clock: A window opens on the first request you make after the previous one elapsed, then rese"
+        },
+        {
+          "anchor": "Individual plans",
+          "text": "Individual plans Team plans Usage limits How the windows roll Usage beyond your limit Tracking your limits Usage estimates Models. Model pricing. At cost. Context windows. Managed for you. Geo model limits. FAQs Deals. Copy Page Pricing & Limits Plain pricing. No surprises. Credits that never expire. See full plans and side-by-side comparison on the pricing page . DEAL deepseek-v4.1-flash boosted usage: $10 Go, $100 GOAT, $110 Pro. DEAL glm-5.3-flash boosted usage: $10 Go, $100 GOAT, $110 Pro. while capacity lasts DEAL ling-3.1-flash boosted usage: $100 GOAT, $110 Pro. DEAL ling-3.1-flash-1019 boosted usage: $100 GOAT, $110 Pro. DEAL glm-5.3 boosted usage: $10 Go, $70 GOAT, $80 Pro. DEAL minimax-m3 2× usage. Every credit goes 2× further. DEAL glyph-cluster:free is free, up to 1000 requests a day. while the stealth preview lasts DEAL inkling-2-small:free is free, up to 200 requests a day. while the free tier lasts How it works. Resets monthly: Your request budget refreshes at the start "
+        }
+      ]
+    },
+    {
+      "url": "https://commandcode.ai/docs/resources/usage-limits",
+      "finalUrl": "https://commandcode.ai/docs/resources/usage-limits",
+      "httpStatus": 200,
+      "capturedAtUtc": "2026-11-13T12:36:18.036Z",
+      "sha256": "d3005cc0b6891adc3ca52fad5a4718a7af313500c3051b31fcf1972d90cc544e",
+      "hashBasis": "Complete decoded HTTP response body bytes returned by fetch, before text extraction; not headers or compressed wire bytes.",
+      "extracts": [
+        {
+          "anchor": "Limits by plan. Plan",
+          "text": "Limits by plan. Plan Your cost Monthly credits 5-hour cap Weekly cap Go $1 $10 of usage $2 $5 GOAT $10 Up to $100 of usage Up to $20 Up to $50 Pro $20 Up to $110 of usage Up to $22 Up to $55 Max 10× $100 $150 $45 $90 Max 20× $200 $300 $90 $180 Team Pro $40 $40 $12 $24 Credits track model usage. On most plans 1 credit = $1 of model usage; on Go, GOAT and Pro, credits are usage-value units - full-allowance models like GLM-5.2 get $1 of usage per credit, and lower-allowance models draw proportionally more credits per dollar. Caps scale with your plan, so an upgrade raises both windows. GOAT is simpler than it looks: you can use 14 credits in any 5 hours and 35 in any 7 days , no matter which models you mix - worth up to $20 / $50 of usage on a $100 model like Ling 3.1 Flash, or $14 / $35 on a $70 model like GLM-5.2. Each request counts as the slice it takes out of that model's monthly credits , and all the slices add up to one plan. Pro works the same way: 16 credits in any 5 hours and 40"
+        },
+        {
+          "anchor": "Credits track model usage",
+          "text": "Credits track model usage. On most plans 1 credit = $1 of model usage; on Go, GOAT and Pro, credits are usage-value units - full-allowance models like GLM-5.2 get $1 of usage per credit, and lower-allowance models draw proportionally more credits per dollar. Caps scale with your plan, so an upgrade raises both windows. GOAT is simpler than it looks: you can use 14 credits in any 5 hours and 35 in any 7 days , no matter which models you mix - worth up to $20 / $50 of usage on a $100 model like Ling 3.1 Flash, or $14 / $35 on a $70 model like GLM-5.2. Each request counts as the slice it takes out of that model's monthly credits , and all the slices add up to one plan. Pro works the same way: 16 credits in any 5 hours and 40 in any 7 days across its per-model credits - premium models included - worth up to $22 / $55 of usage on a $110 model like Ling 3.1 Flash, or $16 / $40 on an $80 model like GLM-5.2. Go runs the same mechanism on a smaller pool: 3 credits in any 5 hours and 6 in any 7 "
+        },
+        {
+          "anchor": "Each request counts",
+          "text": "Each request counts as the slice it takes out of that model's monthly credits , and all the slices add up to one plan. Pro works the same way: 16 credits in any 5 hours and 40 in any 7 days across its per-model credits - premium models included - worth up to $22 / $55 of usage on a $110 model like Ling 3.1 Flash, or $16 / $40 on an $80 model like GLM-5.2. Go runs the same mechanism on a smaller pool: 3 credits in any 5 hours and 6 in any 7 days across its per-model credits , out of a 10-credit monthly pool - worth $3 / $6 of usage on a full-allowance model. Subscribers on the older flat $10 Go plan already have the same $3 / $6 windows, so nothing changes when their next billing cycle moves them over. Caps are measured in credit value , not request count - so how many requests fit inside a window depends on the models you run. Cheaper models like DeepSeek V4 Flash stretch much further than premium models like Claude Opus. The usage estimates and calculator help you gauge your own mix. "
+        }
+      ]
+    }
+  ],
+  "capturedAtUtc": "2026-11-13T12:36:18.036Z"
+}

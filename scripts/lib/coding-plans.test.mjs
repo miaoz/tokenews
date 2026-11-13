@@ -22,8 +22,9 @@ test('Current Go limits use monthly credits once, with distinct time bands and p
   assert.equal(teams.price_usd,20);
   assert.ok(Math.abs(teams.monthly_tokens/peak.monthly_tokens-1.05)<1e-12);
 });
-test('GOAT model credits are capped by its shared pool, and other plan fees are never copied',()=>{
+test('Legacy fixed shared-pool mode still caps credits, and other plan fees are never copied',()=>{
   const changed=structuredClone(manifest);
+  const plan=changed.plans.find(p=>p.id==='command_code_goat');plan.pool='shared';plan.sharedCreditsUsd=100;delete plan.poolFractions;
   changed.entries.find(e=>e.model==='kimi-k3.1-pro'&&e.plan==='command_code_goat').monthlyCreditsUsd=1000;
   const p=mergeCodingPlans(base,changed).points.find(p=>p.id==='command_code_goat::kimi-k3.1-pro');
   assert.ok(Math.abs(p.monthly_tokens-100/.294*1e6)<1e-6);
@@ -126,4 +127,38 @@ test('New upstream OpenCode Kimi and MiniMax rows are explicitly reviewed and ar
     newer.points.find(p=>p.id===id).data_date='2026-11-05';
     assert.throws(()=>mergeCodingPlans(newer,manifest),/Newer upstream/);
   }
+});
+
+test('GOAT GLM-5.3 boost uses proportional windows, not a flat shared dollar pool',()=>{
+ const p=result.points.find(p=>p.id==='command_code_goat::glm-5.3');
+ assert.ok(Math.abs(p.monthly_tokens-226390685.64036226)<1e-6);
+ assert.ok(Math.abs(p.real_usd_per_mtok-.04417142857142857)<1e-12);
+ assert.deepEqual(p.quota_pool_fractions,{monthly:1,fiveHour:.2,weekly:.5});
+ assert.deepEqual(p.single_model_window_usd,{fiveHour:14,weekly:35});
+ const full=result.points.find(p=>p.plan_id==='command_code_goat'&&p.single_model_window_usd?.fiveHour===20);
+ assert.ok(full);assert.equal(full.single_model_window_usd.weekly,50);
+ assert.equal(35/70+50/100,1);
+ assert.match(p.note_en,/not additive/);assert.match(p.note,/不可相加/);
+ assert.doesNotMatch(p.note_en,/\$100 shared monthly pool/);
+ assert.doesNotMatch(p.note,/共享月池上限/);
+ assert.equal(p.data_date,'2026-11-13');
+ assert.deepEqual(result.supersededPoints.find(p=>p.id==='command_code_goat::glm-5.3'),base.points.find(p=>p.id==='command_code_goat::glm-5.3'));
+});
+test('proportional metadata fails closed without affecting other plans',()=>{
+ for(const mutate of [p=>p.sharedCreditsUsd=100,p=>p.poolFractions.weekly=.6,p=>delete p.poolFractions,p=>p.poolFractions.extra=1,p=>p.poolFractions.fiveHour=NaN,p=>p.pool='shared']){
+  const m=structuredClone(manifest);mutate(m.plans.find(p=>p.id==='command_code_goat'));
+  assert.throws(()=>mergeCodingPlans(base,m),/pool|metadata/i);
+ }
+ const m=structuredClone(manifest);m.entries.find(e=>e.model==='glm-5.3'&&e.plan==='command_code_goat').monthlyCreditsUsd=20;
+ const previous=mergeCodingPlans(base,m,{asOf:'2026-11-04'});
+ assert.deepEqual(previous.points.filter(p=>p.plan_id!=='command_code_goat'),result.points.filter(p=>p.plan_id!=='command_code_goat'));
+});
+
+test('proportional window amounts avoid binary floating point noise',()=>{
+ const m=structuredClone(manifest);
+ m.entries.find(e=>e.plan==='command_code_goat'&&e.model==='glm-5.3').monthlyCreditsUsd=33;
+ const p=mergeCodingPlans(base,m).points.find(p=>p.id==='command_code_goat::glm-5.3');
+ assert.ok(p);assert.deepEqual(p.single_model_window_usd,{fiveHour:6.6,weekly:16.5});
+ assert.match(p.note_en,/\$6\.6 per 5 hours and \$16\.5 per 7 days/);
+ assert.doesNotMatch(p.note_en,/6\.600000/);assert.doesNotMatch(p.note,/6\.600000/);
 });

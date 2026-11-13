@@ -1,5 +1,17 @@
 name: Update independent leaderboards
 on:
+  push:
+    branches: [main]
+    # Code-only validation: generated data commits must not trigger a loop.
+    paths:
+      - '.github/workflows/update-leaderboards.yml'
+      - 'scripts/audit-leaderboards.mjs'
+      - 'scripts/update-pareto.mjs'
+      - 'scripts/update-leaderboards.mjs'
+      - 'scripts/check-leaderboard-health.mjs'
+      - 'scripts/lib/leaderboard*.mjs'
+      - 'scripts/lib/current-leaderboards*.mjs'
+      - 'scripts/lib/arena*.mjs'
   schedule:
     - cron: '47 2 * * *'
   workflow_dispatch:
@@ -19,6 +31,8 @@ jobs:
       - uses: actions/checkout@v7
         with:
           ref: main
+      # Never let a committed report masquerade as evidence from this run.
+      - run: rm -f data/leaderboards/refresh-status.json
       - uses: actions/setup-node@v7
         with:
           node-version-file: .node-version
@@ -40,6 +54,13 @@ jobs:
             data/leaderboards/discovery.json
             data/leaderboards/audit.json
             data/leaderboards/refresh-status.json
+      - name: Preserve this run's source health report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: leaderboard-source-health-${{ github.run_attempt }}
+          path: data/leaderboards/refresh-status.json
+          if-no-files-found: warn
       - name: Commit validated snapshots
         id: push
         run: |
@@ -54,6 +75,26 @@ jobs:
           git push origin HEAD:main
           echo 'pushed=true' >> "$GITHUB_OUTPUT"
           echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+  source-health:
+    needs: update
+    if: always()
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .node-version
+      - name: Download this run's refresh evidence
+        uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          name: leaderboard-source-health-${{ github.run_attempt }}
+          path: source-health-report
+      - name: Check every source and report failures
+        if: always()
+        run: node scripts/check-leaderboard-health.mjs source-health-report/refresh-status.json
   deploy:
     needs: update
     # Rebuild date-sensitive plan prices even when source snapshots are unchanged.

@@ -15,8 +15,10 @@ gaps. Evidence and availability records are published with the site.
 ## Calculation and identities
 
 Each price record requires an exact catalog model, provider endpoint, identity
-source, bilingual explanation, rates, credits and verification date. The shared
-and per-model caps use the smaller amount. Monthly tokens equal credits divided
+source, bilingual explanation, rates, credits and verification date. Fixed-dollar
+shared plans use the smaller of the shared and per-model caps. GOAT instead uses
+each model's single-model allowance and proportional shared fractions, not a
+universal dollar pool. Monthly tokens equal credits divided
 by workload-weighted USD/MTok, multiplied by one million. Monthly pools are not
 multiplied by four weeks. Request estimates are not quota evidence.
 
@@ -109,3 +111,26 @@ The three data workflows share one concurrency group and check out current
 `main` after waiting, preventing scheduled updates from racing each other.
 A successful watch publishes its report through the existing validated deploy
 workflow. Reviewed price data stays available when one source is unreachable.
+
+### GOAT proportional allowances (reviewed 2026-11-13)
+
+GOAT uses `pool: "proportional"` and `poolFractions` of monthly 1,
+5-hour 0.2 and rolling 7-day 0.5. A model's `monthlyCreditsUsd` is its
+single-model usage value, not an independent balance. For mixed models,
+`sum(model spending / model monthly allowance)` must stay within the applicable
+fraction. Thus $35 of GLM-5.3's $70 allowance plus $50 of a $100 model consumes
+one monthly allowance, not two. Only GLM-5.3's reviewed monthly value changes
+from $20 to $70 in this update; all other model amounts remain untouched.
+
+For GLM-5.3 alone, the window values are $14/5 hours and $35/7 days; a $100
+model has $20/$50. Generated points expose `quota_pool_fractions` and
+`single_model_window_usd` and explain these limits in both languages. The
+up-to-$100 marketing figure is not a flat pool interchangeable across models.
+Extra purchased credits are outside these subscription points; monthly credits
+are not multiplied by four weeks. Other plans retain their existing algorithms.
+
+`evidence-2026-11-13.json` retains the previous maintained entry, prior pool
+metadata and unchanged upstream original, along with live official source
+observations and the upstream research-only boost report. Official request
+estimates use their own workload and are not converted directly to our standard
+97% cache-read / 2.5% fresh-input / 0.5% output tokens.

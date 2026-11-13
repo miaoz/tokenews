@@ -13,6 +13,14 @@ export function mergeCodingPlans(data, manifest, {asOf = new Date().toISOString(
   const mix = data.conventions.standardTokenMix;
   if (mix.cache !== .97 || mix.input !== .025 || mix.output !== .005) throw Error('Coding plan workload needs review');
   for (const p of plans.values()) if (!p.note?.en || !p.note?.zh || !p.name || !p.channel) throw Error('Incomplete plan metadata');
+  for (const p of plans.values()) {
+    if (p.pool === 'proportional') {
+      const f=p.poolFractions;
+      if (p.id !== 'command_code_goat' || p.sharedCreditsUsd != null || !f ||
+          f.monthly !== 1 || f.fiveHour !== .2 || f.weekly !== .5 ||
+          Object.keys(f).some(k=>!['monthly','fiveHour','weekly'].includes(k))) throw Error('Proportional pool needs review');
+    } else if (p.poolFractions != null) throw Error('Unexpected proportional metadata');
+  }
   for (const r of manifest.reviews ?? []) if (!validDate(r.checkedAt) || !https(r.source) || !r.note?.en || !r.note?.zh || !r.models?.length || [...r.models, ...(r.relatedModels ?? [])].some(id=>!models.has(id))) throw Error('Invalid plan availability review');
   const replacements = new Set(), generated = [], ids = new Set();
   for (const record of manifest.entries) {
@@ -23,7 +31,7 @@ export function mergeCodingPlans(data, manifest, {asOf = new Date().toISOString(
     if (!plan || !model || !positive(plan.monthlyUsd) || !validDate(e.checkedAt) ||
         !https(e.source) || !https(e.identitySource) || !e.endpoint || !e.identityNote?.en || !e.identityNote?.zh)
       throw Error(`Invalid coding plan provenance: ${e.model}`);
-    if (!positive(e.monthlyCreditsUsd) || !['model', 'shared'].includes(plan.pool)) throw Error('Invalid credit pool');
+    if (!positive(e.monthlyCreditsUsd) || !['model', 'shared', 'proportional'].includes(plan.pool)) throw Error('Invalid credit pool');
     if (plan.sharedCreditsUsd != null && !positive(plan.sharedCreditsUsd)) throw Error('Invalid shared cap');
     if (plan.pool === 'shared' && !positive(plan.sharedCreditsUsd)) throw Error('Missing shared cap');
     for (const key of ['cache', 'input', 'output']) if (!(typeof e.rates[key] === 'number' && Number.isFinite(e.rates[key]) && e.rates[key] >= 0)) throw Error('Incomplete token rates');
@@ -34,6 +42,7 @@ export function mergeCodingPlans(data, manifest, {asOf = new Date().toISOString(
     if (!positive(cost)) throw Error('Free or unknown quota must not create a finite credit point');
     const credits = Math.min(e.monthlyCreditsUsd, plan.sharedCreditsUsd ?? Infinity);
     const tokens = credits / cost * 1e6;
+    const windows = plan.pool === 'proportional' ? {fiveHour:Number((credits*plan.poolFractions.fiveHour).toFixed(8)),weekly:Number((credits*plan.poolFractions.weekly).toFixed(8))} : null;
     const id = e.id ?? `${plan.id}::${model.id}`;
     if (ids.has(id)) throw Error(`Duplicate coding plan point: ${id}`);
     ids.add(id);
@@ -48,6 +57,11 @@ export function mergeCodingPlans(data, manifest, {asOf = new Date().toISOString(
       zh: `套餐月费 $${plan.monthlyUsd}；模型月信用额度 $${e.monthlyCreditsUsd}${plan.sharedCreditsUsd ? `，套餐共享月池上限 $${plan.sharedCreditsUsd}` : ''}。本行按全部有效额度 $${credits} 用于该模型计算：月 token = 额度 ÷ 加权费率 × 1,000,000；真实单价 = 月费 ÷ 月 token × 1,000,000。97% 缓存读、2.5% 非缓存输入、0.5% 输出。同套餐各模型及各计费时段不可相加。${plan.note.zh} ${scope.zh} ${e.identityNote.zh}`,
       en: `Monthly fee $${plan.monthlyUsd}; model credits $${e.monthlyCreditsUsd}${plan.sharedCreditsUsd ? `, capped by the $${plan.sharedCreditsUsd} shared monthly pool` : ''}. Assumes all $${credits} of effective credits go to this model. Monthly tokens = credits / weighted rate * 1,000,000; real price = fee / tokens * 1,000,000. Mix: 97% cache reads, 2.5% fresh input, 0.5% output. Models and time bands within one plan are alternatives, not additive. ${plan.note.en} ${scope.en} ${e.identityNote.en}`,
     };
+    if (plan.pool === 'proportional') {
+      const five=windows.fiveHour, week=windows.weekly;
+      note.zh += ` 仅使用本模型时，5 小时使用价值上限 $${five}、7 天上限 $${week}；混用按各模型月额度占比共同扣减，不是各自独立美元池。`;
+      note.en += ` Using only this model, the usage-value caps are $${five} per 5 hours and $${week} per 7 days; mixed models draw proportional shares of one allowance, not independent dollar pools.`;
+    }
     if (e.freshInputBilling === 'cache-write') {
       note.zh += ` 采用缓存写入场景：2.5% 新输入全部按写入费率 $${e.rates.cacheWrite}/百万 token 计算，替代普通输入费率，不重复收费。`;
       note.en += ` Cache-write scenario: all 2.5% fresh input is billed at $${e.rates.cacheWrite}/MTok, replacing ordinary input rather than adding both rates.`;
@@ -58,6 +72,8 @@ export function mergeCodingPlans(data, manifest, {asOf = new Date().toISOString(
     const label = scope.en ? `${plan.name} · ${scope.en}` : plan.name;
     generated.push({ id, plan_id:plan.id, plan:label, plan_en:label, model:model.id, model_display:model.name,
       vendor:model.maker, channel:plan.channel, label:`${model.name} · ${label}`, billing:'subscription',
+      ...(plan.pool === 'proportional' ? {quota_pool:'proportional',quota_pool_fractions:{...plan.poolFractions},
+        single_model_window_usd:windows} : {}),
       price_origin:'maintained-plan', plan_gen:plan.generation ?? '', price_usd:plan.monthlyUsd,
       original_price:plan.monthlyUsd, currency:'USD', monthly_tokens:tokens, monthly_yi:tokens / 1e8,
       real_usd_per_mtok:plan.monthlyUsd / tokens * 1e6, list_blended_usd_per_mtok:cost,

@@ -837,6 +837,7 @@ export const mappingNoteLabel = (note: string, lang: string) =>
 export function referenceTags(rows: Row[], lang: string): string[] {
   const zh = lang === "zh", tags = new Set<string>();
   for (const { point, mapping } of rows) {
+    if (point.quota_pool === 'proportional') tags.add(zh ? '比例共享额度 · 不可相加' : 'Proportional shared quota · not additive');
     const estimated = point.quota_is_estimated ?? (point.price_origin === "maintained-estimate" || point.data_date_kind === "derived");
     if (estimated) {
       const confidence = { low: zh ? "低置信度" : "low confidence", medium: zh ? "中置信度" : "medium confidence", high: zh ? "高置信度" : "high confidence" }[point.confidence];
@@ -929,6 +930,10 @@ export function csv(rows: Row[], lang: string): string {
           "月 token",
           "真实单价 USD/MTok",
           "额度置信度",
+          "额度共享方式",
+          "仅用本模型5小时使用价值 USD",
+          "仅用本模型7天使用价值 USD",
+          "价格与评测限定",
           "评测配置",
           "分数",
           "AA 估计值",
@@ -951,6 +956,10 @@ export function csv(rows: Row[], lang: string): string {
           "Monthly tokens",
           "Real price USD/MTok",
           "Quota confidence",
+          "Quota sharing",
+          "Single-model 5-hour usage value USD",
+          "Single-model 7-day usage value USD",
+          "Price and benchmark qualifications",
           "Benchmark configuration",
           "Score",
           "AA estimated score",
@@ -982,6 +991,10 @@ export function csv(rows: Row[], lang: string): string {
         r.point.monthly_tokens,
         r.point.real_usd_per_mtok,
         r.point.confidence,
+        r.point.quota_pool,
+        r.point.single_model_window_usd?.fiveHour,
+        r.point.single_model_window_usd?.weekly,
+        referenceTags([r], lang).join('; '),
         r.mapping?.variant,
         r.score,
         r.mapping?.score_is_estimated,

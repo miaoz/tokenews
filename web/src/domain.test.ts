@@ -81,6 +81,29 @@ const data: SiteData = unpackData(JSON.parse(
   readFileSync(new URL("../public/data/site.json", import.meta.url), "utf8"),
 ));
 
+test('GOAT GLM-5.3 current point and bilingual notes use the reviewed proportional allowance', () => {
+  const p = data.points.find(p => p.id === 'command_code_goat::glm-5.3')!;
+  assert.ok(Math.abs(p.monthly_tokens! - 226390685.64036226) < 1e-6);
+  assert.ok(Math.abs(p.real_usd_per_mtok - .04417142857142857) < 1e-12);
+  assert.equal(p.data_date, '2026-11-13');
+  assert.equal(p.quota_pool, 'proportional');
+  assert.deepEqual(p.single_model_window_usd, {fiveHour:14, weekly:35});
+  assert.match(p.note_en!, /\$14 per 5 hours and \$35 per 7 days/);
+  assert.match(p.note!, /5 小时使用价值上限 \$14、7 天上限 \$35/);
+  assert.doesNotMatch(p.note_en!, /\$100 shared monthly pool/);
+  assert.doesNotMatch(p.note!, /共享月池上限 \$100/);
+  const archived = data.supersededPoints?.find(p => p.id === 'command_code_goat::glm-5.3');
+  assert.equal(archived?.monthly_tokens, 64700000);
+  assert.ok(data.mappings.some(m => m.point_id === p.id));
+  const row = {key:p.id, point:p, mapping:null, score:null};
+  const exported = parse(csv([row], 'en'), {bom:true, columns:true}) as Record<string,string>[];
+  assert.equal(exported[0]['Quota sharing'], 'proportional');
+  assert.equal(exported[0]['Single-model 5-hour usage value USD'], '14');
+  assert.equal(exported[0]['Single-model 7-day usage value USD'], '35');
+  assert.match(exported[0]['Price and benchmark qualifications'], /not additive/);
+  assert.deepEqual(referenceTags([row], 'zh'), ['比例共享额度 · 不可相加']);
+});
+
 test("Packed mappings preserve original fields except superseded model identities", () => {
   const raw = JSON.parse(readFileSync(new URL("../../upstream/derived/benchmark-points.json", import.meta.url), "utf8"));
   const originalPoints = JSON.parse(readFileSync(new URL("../../upstream/derived/points.json", import.meta.url), "utf8")).points as Point[];

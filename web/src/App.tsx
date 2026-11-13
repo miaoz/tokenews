@@ -1542,7 +1542,8 @@ function Explorer({
                 {t("Table", "表格")} · CSV
                 <ArrowUpRight />
               </button>
-              <h3>{t("Complete source data", "完整源数据")}</h3>
+              <h3>{t("Original upstream snapshot", "原始上游快照")}</h3>
+              <p>{t("Historical source values are preserved unchanged. Use the table CSV above for current reviewed prices.", "历史来源数值原样保留；当前已审核价格请下载上方表格 CSV。")}</p>
               {[
                 "adopted.csv",
                 "points.csv",

@@ -39,11 +39,15 @@
       "name": "Command Code GOAT",
       "channel": "Command Code",
       "monthlyUsd": 10,
-      "pool": "shared",
-      "sharedCreditsUsd": 100,
+      "pool": "proportional",
       "note": {
-        "zh": "共享池上限 $100/月、$50/周、$20/5 小时；取模型上限与共享池较小值。",
-        "en": "Shared caps: $100/month, $50/week, $20/5 hours; use the lesser of model credits and shared credits."
+        "en": "All models share one normalized allowance: sum of each model’s spending divided by its monthly allowance cannot exceed 1 per cycle, 0.2 per rolling 5-hour window, or 0.5 per rolling 7-day window. Per-model allowances are alternatives, not additive. Separately purchased credits are excluded.",
+        "zh": "所有模型共享一份归一化额度：各模型花费除以该模型月额度后的占比之和，每账期不超过 1、滚动 5 小时不超过 0.2、滚动 7 天不超过 0.5。各模型额度不可相加；另购 credits 不计入本行。"
+      },
+      "poolFractions": {
+        "monthly": 1,
+        "fiveHour": 0.2,
+        "weekly": 0.5
       }
     },
     {
@@ -1434,8 +1438,8 @@
         "output": 4.4,
         "cache": 0.26
       },
-      "monthlyCreditsUsd": 20.0,
-      "checkedAt": "2026-11-04",
+      "monthlyCreditsUsd": 70,
+      "checkedAt": "2026-11-13",
       "id": "command_code_goat::glm-5.3",
       "identityNote": {
         "en": "The official release notes and current plan table confirm this named version; benchmark scores remain model references.",
@@ -4307,6 +4311,7 @@
     "evidence-2026-11-04-1017.json",
     "evidence-2026-11-04-02.json",
     "evidence-2026-11-10.json",
-    "evidence-2026-11-11.json"
+    "evidence-2026-11-11.json",
+    "evidence-2026-11-13.json"
   ]
 }

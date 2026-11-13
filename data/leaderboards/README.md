@@ -109,3 +109,29 @@ AutoEval handling. All eight homepage sources are refreshed; missing source
 results are not approximated from another benchmark. Crusader remains a partial
 model-page integration, documented separately rather than advertised as a full
 current homepage board.
+
+## Scheduled source-health check
+
+The refresh job still retains previous snapshots when individual sources fail,
+then validates and deploys successful partial updates. A separate `source-health`
+job consumes only this workflow run and attempt's
+`leaderboard-source-health-${{ github.run_attempt }}` artifact and
+fails when any source is retained/failed, absent, duplicated, or malformed. Its
+job summary lists the attempted date, each snapshot's checked date, and exact
+reported failure. A missing artifact also fails health rather than reading a
+committed old report. `deploy` depends only on the validated update job, not on
+health, so source failures are visible without blocking valid updates.
+
+Run `node scripts/check-leaderboard-health.mjs [report-path]` to inspect existing
+refresh evidence without network requests or data changes. Identity-review rows
+within an otherwise successful refresh are not transport failures.
+
+This surfaces GitHub Actions HTTP 403 failures; it cannot grant that runner access
+to Arena. There are no additional retries, user-agent changes, proxies, cookies,
+or access-control workarounds. GitHub workflow failure notifications follow the
+repository/user's existing notification settings; no external alert subscription
+is created by this check.
+
+Main-branch pushes changing this workflow or its collector/health code also run
+this validation. Generated snapshot/data commits do not match the path filter,
+so the updater's own commits cannot create a refresh loop.

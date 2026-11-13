@@ -19,6 +19,11 @@ export interface Point {
   billing: string;
   price_origin?: 'maintained-api' | 'maintained-plan' | 'maintained-estimate';
   quota_is_estimated?: boolean;
+  /** Model-specific usage values consume proportional shares of one allowance. */
+  quota_pool?: 'proportional';
+  quota_pool_fractions?: { monthly: number; fiveHour: number; weekly: number };
+  /** USD usage value only when the allowance is devoted to this model. */
+  single_model_window_usd?: { fiveHour: number; weekly: number };
   confidence: string;
   price_usd: number | null;
   original_price: number | null;
