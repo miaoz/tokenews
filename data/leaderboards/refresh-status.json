@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "attemptedAt": "2026-11-12",
+  "attemptedAt": "2026-11-13",
   "results": [
     {
       "board": "aa_intelligence_index",
@@ -18,14 +18,14 @@
           "releaseSlug": "hunyuan-dev1030-aa"
         }
       ],
-      "retainedCheckedAt": "2026-11-12"
+      "retainedCheckedAt": "2026-11-13"
     },
     {
       "board": "terminal_bench_4",
       "status": "updated",
       "reviewRequired": 0,
       "identityReview": [],
-      "retainedCheckedAt": "2026-11-12"
+      "retainedCheckedAt": "2026-11-13"
     },
     {
       "board": "aa_terminal_bench_4",
@@ -43,26 +43,18 @@
           "releaseSlug": "hunyuan-dev1030-aa"
         }
       ],
-      "retainedCheckedAt": "2026-11-12"
+      "retainedCheckedAt": "2026-11-13"
     },
     {
       "board": "arena_code",
-      "status": "updated",
-      "reviewRequired": 1,
-      "identityReview": [
-        {
-          "label": "U2 Flash",
-          "sourceId": "u2-flash-1020-6jm8",
-          "releaseSlug": null
-        }
-      ],
+      "status": "retained-previous",
+      "error": "HTTP 403",
       "retainedCheckedAt": "2026-11-12"
     },
     {
       "board": "arena_agent_mode",
-      "status": "updated",
-      "reviewRequired": 0,
-      "identityReview": [],
+      "status": "retained-previous",
+      "error": "HTTP 403",
       "retainedCheckedAt": "2026-11-12"
     },
     {
@@ -70,21 +62,21 @@
       "status": "updated",
       "reviewRequired": 0,
       "identityReview": [],
-      "retainedCheckedAt": "2026-11-12"
+      "retainedCheckedAt": "2026-11-13"
     },
     {
       "board": "open_design_arena",
       "status": "updated",
       "reviewRequired": 0,
       "identityReview": [],
-      "retainedCheckedAt": "2026-11-12"
+      "retainedCheckedAt": "2026-11-13"
     },
     {
       "board": "deepswe_1_1",
       "status": "updated",
       "reviewRequired": 0,
       "identityReview": [],
-      "retainedCheckedAt": "2026-11-12"
+      "retainedCheckedAt": "2026-11-13"
     }
   ]
 }
