@@ -1,6 +1,9 @@
+import { isPriceDate, isPriceVariantActive } from './priceValidity.mjs';
 import type { SiteData } from "./types";
 
 export interface ApiPriceVariant {
+  validFrom?: string;
+  validUntil?: string;
   id: string;
   label: { en: string; zh: string };
   currency: string;
@@ -30,6 +33,7 @@ export interface ApiPriceCatalog {
   models: Record<string, ApiPriceModel>;
 }
 export interface ApiPriceReference {
+  asOf?: string;
   origin: "maintained" | "upstream";
   variant: ApiPriceVariant;
   variants: ApiPriceVariant[];
@@ -43,17 +47,24 @@ export interface ApiPriceReference {
 }
 
 /** Current API references are separate from the prices used to adopt quotas. */
-export function apiPriceReference(data: SiteData, model: string): ApiPriceReference | null {
+export function apiPriceReference(data: SiteData, model: string, asOf = new Date().toISOString().slice(0, 10)): ApiPriceReference | null {
+  if (!isPriceDate(asOf)) throw new Error("Invalid API reference date");
   const own = data.apiPrices && Object.hasOwn(data.apiPrices.models, model) ? data.apiPrices.models[model] : undefined;
   if (own) {
-    const variant = own.variants.find((v) => v.id === own.defaultVariant);
-    if (!variant) throw new Error(`Missing default API price variant: ${model}`);
+    const preferred = own.variants.find((v) => v.id === own.defaultVariant);
+    if (!preferred) throw new Error(`Missing default API price variant: ${model}`);
+    // Keep the reviewed default while active; only roll to the same billing scope.
+    const active = own.variants.filter(v => isPriceVariantActive(v, asOf));
+    const variant = active.find(v => v.id === preferred.id) ?? active.find(v =>
+      v.currency === preferred.currency && v.region === preferred.region && v.serviceTier === preferred.serviceTier
+      && v.context?.min === preferred.context?.min && v.context?.max === preferred.context?.max);
+    if (!variant) return null; // Never represent a future/expired tier as today's price.
     const { input, cachedInput, output } = variant.rates;
     const freshInput = own.referenceInput === 'cacheWrite' ? variant.rates.cacheWrite : input;
     const mix = data.conventions.standardTokenMix;
     const conversion = variant.currency === "USD" ? 1 : variant.currency === "CNY" ? data.conventions.usdPerCny : null;
     return {
-      origin: "maintained", variant, variants: own.variants,
+      origin: "maintained", asOf, variant, variants: own.variants,
       prices: { cached: cachedInput, input, output, currency: variant.currency },
       source: own.source, additionalSources: own.additionalSources, checkedAt: own.checkedAt, recordUrl: own.recordUrl, notes: own.notes,
       blended: cachedInput !== null && conversion !== null && freshInput != null

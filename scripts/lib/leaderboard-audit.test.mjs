@@ -52,3 +52,20 @@ test('OpenDesign reads raw quality scores rather than weighted recommendation sc
   assert.equal(parsed.version,null);
   assert.equal(parsed.rows[0].score,91);
 });
+
+test('AA enabled fallback is evidence distinct from observed fallback usage',()=>{
+ const payload=structuredClone(aa);payload.initialModels[0].name='Example (High, Default Fallback)';
+ const row=parseAuditSource('aa-models',flight('1:'+JSON.stringify(payload))).rows[0];
+ assert.equal(row.fallbackEnabled,true);assert.equal(row.fallback,undefined);
+ assert.match(row.label,/Default Fallback/);
+});
+test('AA agents accepts new shortName and legacy name without parsing harness labels as models',()=>{
+ const variants=[{id:'new',model:{release:{shortName:'Example'},effort:{slug:'high'}},displayLabel:'Harness - Example (High, Default Fallback)',safety:{fallbackAttemptCount:0}},
+ {id:'old',model:{release:{name:'Legacy'}},displayLabel:'Harness - Legacy',safety:{fallbackAttemptCount:2}},
+ {id:'unknown',model:{release:{name:'Unknown usage'}},displayLabel:'Harness - Unknown usage (Default Fallback)'}];
+ const body='<h1>Coding Agent Index v2.0</h1>'+flight('1:'+JSON.stringify(variants.map(r=>({...r,indexScore:.42,agentName:'Harness'}))));
+ const rows=parseAuditSource('aa-agents',body).rows;
+ assert.equal(rows[0].identity,'Example');assert.equal(rows[0].fallbackEnabled,true);assert.equal(rows[0].fallback,false);
+ assert.equal(rows[1].identity,'Legacy');assert.equal(rows[1].fallback,true);
+ assert.equal(rows[2].fallback,null);
+});

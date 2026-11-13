@@ -800,9 +800,9 @@ test("Chart search model and plan locks cover every matching group uncapped", ()
   assert.equal(gone.locked, null);
 });
 test("Chart search candidates match each kind against its own scope", () => {
-  const gs = groups(
-    rowsFor(data, { ...defaultState(), configuration: "all" }),
-  );
+  // Search semantics must not depend on a vendor having a currently eligible
+  // pure-model score. Give these price fixtures synthetic test-only scores.
+  const gs = groups(data.points.filter(p => p.vendor !== "Cursor").map((point, i) => ({ key: point.id, point, mapping: null, score: i + 1 })));
   // "cursor" is a channel: it must list Cursor plans but never the Grok model,
   // whose model-level lock would mark Grok points on other channels too.
   const cursor = searchCandidates(gs, "cursor", "en");

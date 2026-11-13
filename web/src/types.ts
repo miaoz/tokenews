@@ -66,6 +66,8 @@ export interface Configuration {
   score_is_self_reported?: boolean | null;
   score_is_preliminary?: boolean;
   price_mapping_exclusion?: string | null;
+  fallback_enabled?: boolean;
+  fallback_observed?: boolean | null;
   agent_harness: string | null;
   reasoning_effort: string | null;
   service_mode: string | null;
@@ -113,13 +115,15 @@ export interface SiteData {
   generatedAt: string;
   /** Current official API references maintained by Tokenews, separate from quota adoption. */
   apiPrices?: ApiPriceCatalog;
+  /** Reviewed date transitions applied at load time, even if a scheduled rebuild fails. */
+  apiPointSchedules?: { pointIds: string[]; alternatives: { validFrom?: string; validUntil?: string; point: Point }[] }[];
   /** Model identity is independent of subscription and API price coverage. */
   models?: { id: string; name: string; maker: string; source: string; checkedAt: string; releaseDate?: string }[];
   catalogUpdatedAt?: string;
   leaderboardUpdatedAt?: string | null;
   currentBoards?: string[];
   boardAliases?: Record<string, string>;
-  leaderboardRefresh?: Record<string, {status:'updated'|'retained-previous'|'failed';attemptedAt:string;checkedAt:string}>;
+  leaderboardRefresh?: Record<string, {status:'updated'|'retained-previous'|'failed';attemptedAt:string;checkedAt:string;error?:string}>;
   leaderboardCoverage?: Record<string, {
     observed: number;
     matchedConfigurations: number;

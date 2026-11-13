@@ -97,3 +97,55 @@ test('Claude 5.2 references retain exact API prices and access caveats as upstre
   assert.match(data.apiPrices!.models['claude-mythos-5.2'].notes!.en,/requires approval/);
   assert.deepEqual({points:data.points,configurations:data.configurations,mappings:data.mappings},evidenceBefore);
 });
+
+test('Carbon reference rolls to regular pricing on December 1 without showing a future tier as current',()=>{
+ const edited=structuredClone(data);
+ const google=JSON.parse(readFileSync(new URL('../../data/api-prices/google.json',import.meta.url),'utf8'));
+ const carbon=google.models.find((m:{id:string})=>m.id==='gemini-4-carbon');
+ edited.apiPrices!.models[carbon.id]={...carbon,provider:'Google',recordUrl:'/data/api-prices/google.json'};
+ assert.equal(apiPriceReference(edited,carbon.id,'2026-11-12'),null);
+ const intro=apiPriceReference(edited,carbon.id,'2026-11-30')!;
+ const regular=apiPriceReference(edited,carbon.id,'2026-12-01')!;
+ assert.equal(intro.variant.id,'standard-intro');
+ assert.equal(regular.variant.id,'standard-regular');
+ assert.ok(Math.abs(intro.blended!-.197)<1e-12);
+ assert.ok(Math.abs(regular.blended!-.394)<1e-12);
+ for(const lang of ['en','zh']){
+  const before=renderToStaticMarkup(<ApiPriceDetails reference={intro} lang={lang}/>);
+  const after=renderToStaticMarkup(<ApiPriceDetails reference={regular} lang={lang}/>);
+  assert.ok(before.includes(lang==='en'?'Future rate':'未来费率'));
+  assert.ok(after.includes(lang==='en'?'Expired rate':'已过期费率'));
+ }
+});
+
+test('a stale November bundle rolls Carbon chart price and mappings forward without a rebuild',async()=>{
+ const {unpackData}=await import('./loadData');
+ const snapshot=structuredClone(data);
+ const schedule=snapshot.apiPointSchedules!.find(s=>s.alternatives[0].point.model==='gemini-4-carbon')!;
+ assert.ok(schedule,'build ships the reviewed schedule');
+ const intro=schedule.alternatives[0].point,regular=schedule.alternatives[1].point;
+ const originalPoint=snapshot.points.find(p=>schedule.pointIds.includes(p.id))!;
+ snapshot.points=snapshot.points.map(p=>p.id===originalPoint.id?intro:p);
+ snapshot.mappings=snapshot.mappings.map(m=>m.point_id===originalPoint.id?{...m,point_id:intro.id}:m);
+ const before=structuredClone(snapshot);
+ const november=unpackData(snapshot,'2026-11-30'),december=unpackData(snapshot,'2026-12-01');
+ assert.ok(november.points.some(p=>p.id===intro.id));
+ assert.ok(!december.points.some(p=>p.id===intro.id));
+ assert.equal(december.points.find(p=>p.id===regular.id)!.real_usd_per_mtok,.394);
+ const previousMappings=november.mappings.filter(m=>m.point_id===intro.id);
+ assert.ok(previousMappings.length>0);
+ assert.deepEqual(december.mappings.filter(m=>m.point_id===regular.id),previousMappings.map(m=>({...m,point_id:regular.id})));
+ assert.deepEqual(snapshot,before,'runtime does not mutate downloaded history');
+ assert.deepEqual(unpackData(december,'2026-12-01'),december,'repeated load is idempotent');
+ assert.equal(december.points.find(p=>p.id===regular.id)!.note_en,regular.note_en);
+ assert.match(regular.note_en!,/implicit caching/);
+ assert.deepEqual(december.points.filter(p=>!schedule.pointIds.includes(p.id)),snapshot.points.filter(p=>!schedule.pointIds.includes(p.id)));
+ const expired=structuredClone(snapshot);
+ expired.apiPointSchedules!.find(s=>s.pointIds.includes(intro.id))!.alternatives.pop();
+ const noCurrent=unpackData(expired,'2026-12-01');
+ assert.ok(!noCurrent.points.some(p=>p.id===intro.id));
+ assert.ok(!noCurrent.mappings.some(m=>m.point_id===intro.id));
+ const overlap=structuredClone(snapshot);
+ overlap.apiPointSchedules!.find(s=>s.pointIds.includes(intro.id))!.alternatives[1].validFrom='2026-11-30';
+ assert.throws(()=>unpackData(overlap,'2026-11-30'),/Overlapping/);
+});

@@ -23,12 +23,12 @@ export function prepareCurrentSource(source, parsed, checkedAt, catalog, identit
     if (!row.sourceId || seen.has(row.sourceId)) throw new Error(`Duplicate source configuration: ${row.sourceId}`);
     seen.add(row.sourceId);
     if (row.score !== null && !Number.isFinite(row.score)) throw new Error(`Invalid score: ${row.label}`);
-    const model = row.router ? null : row.releaseSlug ? identities.aaReleases[row.releaseSlug]
+    const resolved = row.router ? null : row.releaseSlug ? identities.aaReleases[row.releaseSlug]
       : source.adapter === 'arena' ? identities.arenaSources?.[row.sourceId]
       : resolveModel(row.identity, catalog.models, identities.aliases);
-    if (!row.router && (!model || !catalog.models.some(m=>m.id===model))) throw new Error(`Identity review required: ${row.identity}`);
-    const exclusion = row.router ? 'router' : row.score === null ? 'unverified-score'
-      : row.ambiguousConfiguration ? 'ambiguous-configuration' : row.fallback ? 'multi-model-fallback' : null;
+    const model = resolved && catalog.models.some(m=>m.id===resolved) ? resolved : null;
+    const exclusion = row.router ? 'router' : !model ? 'identity-review-required' : row.score === null ? 'unverified-score'
+      : row.ambiguousConfiguration ? 'ambiguous-configuration' : row.fallback ? 'multi-model-fallback' : row.fallbackEnabled ? 'fallback-enabled' : null;
     return {...row, model, exclusion};
   });
   return {board:source.board, id:board.id, version:parsed.version, source:source.url, checkedAt,
@@ -59,6 +59,7 @@ export function mergeCurrentLeaderboards(data, snapshot) {
       const configId=`current:${meta.id}:${createHash('sha256').update(r.sourceId).digest('hex').slice(0,16)}`;
       const note = {en:'Current source configuration. Subscription cost is an independent model reference, not a measurement of this agent/channel.',zh:'当前来源评测配置；订阅成本仅按模型对应，并非该代理或渠道的实测表现。'};
       if (source.board.startsWith('arena_')) {note.en+=` Source configuration: ${r.sourceId}.`;note.zh+=` 来源配置：${r.sourceId}。`;}
+      if (r.exclusion === 'fallback-enabled') {note.en += ' Default fallback is enabled; actual fallback usage is unverified. Not mapped to a single-model price.';note.zh += ' 来源配置开启默认回退，实际是否触发尚未核实；不关联单一模型价格。';}
       if (r.exclusion === 'multi-model-fallback') {note.en += ' This run uses fallback models and is excluded from single-model price mappings.';note.zh += ' 此运行包含回退模型，不关联单一模型价格。';}
       if (r.exclusion === 'ambiguous-configuration') {note.en += ' Source runs share this label; price mappings are withheld until their configurations can be distinguished.';note.zh += ' 来源存在同名运行，配置尚不能区分，因此不关联价格。';}
       if (r.model && Number.isFinite(r.score)) configs.push({configuration_id:configId,board:meta.id,model:r.model,
@@ -69,8 +70,8 @@ export function mergeCurrentLeaderboards(data, snapshot) {
         mean_cost_usd_per_task:r.meanCost??null,median_cost_usd_per_task:r.medianCost??null,
         source:r.source??source.source,checked_at:source.checkedAt,archive_url:'/data/current-leaderboards.json',
         record_note_en:note.en+(r.costBasis?` ${r.costBasis}`:''),record_note_zh:note.zh,
-        price_mapping_exclusion:r.exclusion});
-      const entry={model:r.model,label:displayLabel,score:r.score,reason:r.exclusion,preliminary:!!r.preliminary};
+        price_mapping_exclusion:r.exclusion,fallback_enabled:!!r.fallbackEnabled,fallback_observed:typeof r.fallback==='boolean'?r.fallback:null});
+      const entry={model:r.model,label:displayLabel,score:r.score,reason:r.exclusion,preliminary:!!r.preliminary,sourceId:r.sourceId,source:r.source??source.source,...(r.releaseSlug?{releaseSlug:r.releaseSlug}:{})};
       if (r.exclusion) {excluded.push(entry);continue;}
       const points=data.points.filter(p=>p.model===r.model);
       if (!points.length) {unpriced.push({...entry,reason:'no-price-evidence'});continue;}

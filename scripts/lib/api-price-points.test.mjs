@@ -51,3 +51,39 @@ test('price references alone do not create points; incomplete or changed billing
    assert.throws(()=>addApiPricePoints(base,changed,manifest));
  }
 });
+
+test('Carbon uses dated Developer API prices with exactly one point at each promotion boundary',()=>{
+ const pointsAt=day=>addApiPricePoints(base,catalog,manifest,day).points.filter(p=>p.model==='gemini-4-carbon'&&p.price_origin==='maintained-api');
+ assert.equal(pointsAt('2026-11-12').length,0,'do not backdate the reviewed price');
+ for(const day of ['2026-11-13','2026-11-30','2026-12-01','2027-01-01']){
+  const points=pointsAt(day); assert.equal(points.length,1,day);
+  const point=points[0],intro=day<='2026-11-30';
+  assert.ok(Math.abs(point.real_usd_per_mtok-(intro?.197:.394))<1e-12,day);
+  assert.equal(point.promo_until,intro?'2026-11-30':null);
+  assert.equal(point.list_price.input,intro?2:4);
+  assert.equal(point.list_price.cached,intro?.1:.2);
+  assert.equal(point.list_price.output,intro?10:20);
+  assert.equal(point.monthly_tokens,null);
+  assert.equal(point.workload,'standard');
+  assert.match(point.note_en,/implicit caching/);
+  assert.match(point.note_en,/not a guaranteed hit rate/);
+  assert.match(point.note_en,/not Google Cloud credits-back/);
+ }
+ const generated=addApiPricePoints(base,catalog,manifest,'2026-11-13');
+ assert.deepEqual(generated.points.slice(0,base.points.length),base.points);
+ const point=pointsAt('2026-11-13')[0];
+ const joined=mergeCurrentLeaderboards(generated,read('data/leaderboards/current.json'));
+ assert.ok(joined.mappings.some(m=>m.point_id===point.id),'exact Carbon identity joins its own scores');
+ assert.throws(()=>addApiPricePoints(base,catalog,manifest,'2026-02-30'),/asOf/);
+});
+
+test('reviewed same-scope schedules carry both Carbon dates and reject overlapping prices',async()=>{
+ const {buildApiPointSchedules}=await import('./api-price-points.mjs');
+ const schedules=buildApiPointSchedules(base,catalog,manifest);
+ const carbon=schedules.find(s=>s.alternatives[0].point.model==='gemini-4-carbon');
+ assert.equal(carbon.alternatives.length,2);
+ assert.equal(carbon.alternatives[1].point.real_usd_per_mtok,.394);
+ const invalid=structuredClone(catalog);
+ invalid.models['gemini-4-carbon'].variants[1].validFrom='2026-11-30';
+ assert.throws(()=>buildApiPointSchedules(base,invalid,manifest),/Overlapping/);
+});

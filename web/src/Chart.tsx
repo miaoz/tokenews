@@ -74,6 +74,7 @@ import {
 } from "./chartScene";
 import { chartColors, dotColors, readableInk, type ChartColors } from "./palette";
 import ChartSearch from "./ChartSearch";
+import { unplottedSearch } from "./chartCoverage";
 import { SITE_NAME } from "./SiteChrome";
 
 export interface ChartHandle {
@@ -1031,6 +1032,7 @@ export default function Chart({
           hits={hits}
           lang={state.lang}
           onSearch={onSearch}
+          unplotted={unplottedSearch(data, state, rows)}
         />
       </div>
     </div>

@@ -89,3 +89,18 @@ test("Coverage separates locally checked, upstream-only, missing and ahead-of-up
   assert.deepEqual(report.unusedModels, ["pending"]);
   assert.deepEqual(points, before);
 });
+
+test('optional inclusive price-validity dates permit future tiers but reject invalid dates and reversed ranges', async () => {
+ const { readFile } = await import('node:fs/promises');
+ const original = JSON.parse(await readFile(new URL('../../data/api-prices/google.json',import.meta.url),'utf8'));
+ validatePriceFile(original,'google.json','2026-11-13');
+ const carbon = original.models.find(m=>m.id==='gemini-4-carbon');
+ assert.deepEqual(carbon.variants.map(v=>[v.validFrom,v.validUntil]),[
+  ['2026-11-13','2026-11-30'],['2026-12-01',undefined]
+ ]);
+ for(const patch of [{validFrom:'2026-02-30'},{validUntil:'tomorrow'},{validFrom:'2026-12-01',validUntil:'2026-11-30'}]){
+  const invalid=structuredClone(original);
+  Object.assign(invalid.models.find(m=>m.id==='gemini-4-carbon').variants[0],patch);
+  assert.throws(()=>validatePriceFile(invalid,'google.json','2026-11-13'),/validFrom|validUntil/);
+ }
+});

@@ -11,7 +11,7 @@
     },
     {
       "url": "https://artificialanalysis.ai/models/inkling-2-small",
-      "label": "Inkling 2 Small Thinking Machines · Nov 2026 · 1 variant Image Economics (#13) Legal (#14) Intelligence 31 Cost / task $1.18 Context 1M",
+      "label": "Inkling 2 Small Thinking Machines · Nov 2026 · 1 variant Open weights Image Economics (#14) Legal (#15) Intelligence 31 Cost / task $1.18 Context 1M",
       "possibleCatalogMatches": [
         "inkling"
       ]
@@ -24,6 +24,13 @@
       ]
     },
     {
+      "url": "https://artificialanalysis.ai/models/k-exaone-2-0",
+      "label": "K-EXAONE 2.0 LG AI Research · Aug 2026 · 1 variant Open weights Intelligence 8 Cost / task — Context 262k",
+      "possibleCatalogMatches": [
+        "k-exaone-2.0"
+      ]
+    },
+    {
       "url": "https://artificialanalysis.ai/models/releases/claude-fable-5-2",
       "label": "Claude Fable 5.2 Anthropic · Nov 2026 · 5 variants Image Finance & Accounting (#1) Strategy & Ops (#1) Intelligence 65 54–65 Cost / task $3.10 $3.10–$26.54 Context 1M",
       "possibleCatalogMatches": [
@@ -31,13 +38,18 @@
       ]
     },
     {
+      "url": "https://artificialanalysis.ai/models/releases/gemini-4-hydrogen",
+      "label": "Gemini 4 Hydrogen Google · Nov 2026 · 4 variants Image Video Audio Finance & Accounting (#4) Legal (#4) Intelligence 54 27–54 Cost / task $0.29 $0.29–$3.16 Context 1M",
+      "possibleCatalogMatches": []
+    },
+    {
       "url": "https://artificialanalysis.ai/models/releases/muse-ember",
-      "label": "Muse Ember Meta · Nov 2026 · 2 variants Image Finance & Accounting (#14) Engineering (#14) Intelligence 36 34–36 Cost / task $0.12 $0.12–$0.14 Context 1M",
+      "label": "Muse Ember Meta · Nov 2026 · 2 variants Image Finance & Accounting (#15) Healthcare & Medical (#15) Intelligence 36 34–36 Cost / task $0.12 $0.12–$0.14 Context 1M",
       "possibleCatalogMatches": []
     },
     {
       "url": "https://artificialanalysis.ai/models/tencent-hy4",
-      "label": "Tencent Hy4 Tencent · Nov 2026 · 1 variant Image Healthcare & Medical (#13) Strategy & Ops (#15) Intelligence 35 Cost / task $1.03 Context 1M",
+      "label": "Tencent Hy4 Tencent · Nov 2026 · 1 variant Image Healthcare & Medical (#13) Strategy & Ops (#16) Intelligence 35 Cost / task $1.03 Context 1M",
       "possibleCatalogMatches": []
     }
   ]

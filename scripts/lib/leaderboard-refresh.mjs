@@ -23,7 +23,8 @@ export function attachRefreshStatus(data, report) {
     // An older report must not describe a subsequently replaced snapshot.
     if (!coverage || result.retainedCheckedAt !== coverage.checkedAt || report.attemptedAt < coverage.checkedAt) continue;
     if (!['updated','retained-previous','failed'].includes(result.status)) throw Error('Invalid leaderboard refresh status');
-    statuses[board] = {status:result.status, attemptedAt:report.attemptedAt, checkedAt:coverage.checkedAt};
+    statuses[board] = {status:result.status, attemptedAt:report.attemptedAt, checkedAt:coverage.checkedAt,
+      ...(result.error ? {error:result.error} : {})};
   }
   return {...data, leaderboardRefresh:statuses};
 }

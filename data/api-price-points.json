@@ -70,6 +70,16 @@
         "min": 272001,
         "max": null
       }
+    },
+    {
+      "model": "gemini-4-carbon",
+      "variant": "standard-intro",
+      "inputBilling": "input-only"
+    },
+    {
+      "model": "gemini-4-carbon",
+      "variant": "standard-regular",
+      "inputBilling": "input-only"
     }
   ]
 }

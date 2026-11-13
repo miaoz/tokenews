@@ -1,0 +1,33 @@
+{
+  "checkedAt": "2026-11-13",
+  "model": "gemini-4-carbon",
+  "status": "reviewed-official-api",
+  "sources": [
+    "https://aistudio.google.com/docs/pricing#gemini-4-carbon",
+    "https://aistudio.google.com/docs/models/gemini-4-carbon"
+  ],
+  "officialTerms": {
+    "endpoint": "gemini-4-carbon",
+    "releaseStatus": "Stable",
+    "service": "Gemini Developer API",
+    "tier": "Standard",
+    "currency": "USD",
+    "unit": "per_million_tokens",
+    "through20261130": {
+      "input": 2,
+      "cachedInput": 0.1,
+      "output": 10
+    },
+    "from20261201": {
+      "input": 4,
+      "cachedInput": 0.2,
+      "output": 20
+    },
+    "caching": "Implicit only; explicit caching is not supported.",
+    "output": "Includes thinking tokens.",
+    "freeTier": false
+  },
+  "decision": "Replace the November 4 unverified-price gap with exact Carbon reference prices, not substituted Argon prices. Register two non-overlapping calendar-day variants: reviewed introductory pricing from the verification date through November 30, and regular pricing from December 1. Preserve earlier research as history.",
+  "workload": "Chart reference assumes 97% implicit cache hits, 2.5% fresh input and 0.5% output, yielding USD 0.197 per million mixed tokens during the promotion and 0.394 afterward. This is not a guaranteed cache-hit rate, subscription quota or measured benchmark task cost. No explicit cache-write or storage charge is invented. Tool charges are excluded.",
+  "limits": "Public documentation verified; no paid invocation or account-specific availability test. Google Cloud credits-back promotions and non-global rates are not adopted. Only standard Developer API tiers are reviewed for plotting."
+}

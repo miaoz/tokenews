@@ -12,6 +12,8 @@ import {
   price,
 } from "./domain";
 import { BrandMarks } from "./ProviderLogo";
+import { missingReason, type UnplottedRow } from "./chartCoverage";
+import { modelPagePath } from "./pageLinks";
 
 const MODEL_CAP = 5;
 const PLAN_CAP = 5;
@@ -29,6 +31,7 @@ export default function ChartSearch({
   hits,
   lang,
   onSearch,
+  unplotted = [],
 }: {
   query: string;
   lock: Lock | null;
@@ -36,6 +39,7 @@ export default function ChartSearch({
   hits: SearchHits;
   lang: Lang;
   onSearch: (find: string, lock: Lock | null) => void;
+  unplotted?: UnplottedRow[];
 }) {
   const zh = lang === "zh";
   const [open, setOpen] = useState(() => !!(query || lock));
@@ -200,7 +204,9 @@ export default function ChartSearch({
       </button>
     );
   return (
-    <div className="chart-search-root" ref={root}>
+    <div className="chart-search-root" ref={root} onBlur={(e) => {
+      if (!e.currentTarget.contains(e.relatedTarget as Node | null)) setFocused(false);
+    }}>
       <div className="chart-search" role="search">
         <MagnifyingGlass size={16} />
         {hits.locked && (
@@ -240,7 +246,6 @@ export default function ChartSearch({
             onSearch(e.target.value, null);
           }}
           onFocus={() => setFocused(true)}
-          onBlur={() => setFocused(false)}
           onKeyDown={onKeyDown}
         />
         {(query || lock) && (
@@ -260,11 +265,10 @@ export default function ChartSearch({
       {showList && (
         <div
           className="chart-search-list"
-          role="listbox"
-          id={LIST_ID}
           // Keep the input focused while a suggestion is clicked.
           onMouseDown={(e) => e.preventDefault()}
         >
+          <div role="listbox" id={LIST_ID}>
           {(
             [
               {
@@ -332,18 +336,30 @@ export default function ChartSearch({
               </div>
             );
           })}
-          {!entries.length && (
+          {!entries.length && !unplotted.length && (
             <div className="chart-search-empty">
               {zh ? "没有匹配的套餐或模型" : "No matching plan or model"}
             </div>
           )}
         </div>
+      {!!query && !lock && unplotted.length > 0 && (
+        <div className="chart-search-unplotted" role="status">
+          <strong>{zh ? "为何没有绘制？" : "Why not plotted?"}</strong>
+          {unplotted.slice(0, 5).map(r => <div key={`${r.model ?? r.label}:${r.reason}`}>
+            {r.model ? <a href={modelPagePath(r.model, lang)}>{r.label}</a> : <span>{r.label}</span>}
+            <small>{missingReason(r.reason, lang)}</small>
+          </div>)}
+          {unplotted.length > 5 && <small>{zh ? "更多结果见图下的来源覆盖。" : "More results in source coverage below the chart."}</small>}
+        </div>
+      )}
+        </div>
       )}
       {status && (
         <small className="chart-search-status" aria-live="polite">
-          {status}
+          {status}{unplotted.length ? (zh ? ` · ${unplotted.length} 个缺失原因（聚焦搜索可查看）` : ` · ${unplotted.length} not plotted (focus search for reasons)`) : ""}
         </small>
       )}
+
     </div>
   );
 }

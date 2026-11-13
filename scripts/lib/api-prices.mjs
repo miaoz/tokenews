@@ -2,6 +2,8 @@
 import { readFile, readdir } from "node:fs/promises";
 import path from "node:path";
 
+import { isPriceDate } from '../../web/src/priceValidity.mjs';
+
 export const PRICE_UNIT = "per_million_tokens";
 
 export function validatePriceFile(value, file, today = new Date().toISOString().slice(0, 10)) {
@@ -57,7 +59,13 @@ export function validatePriceFile(value, file, today = new Date().toISOString().
     const variants = new Set();
     for (const [j, variant] of model.variants.entries()) {
       const va = `${at}.variants[${j}]`;
-      object(variant, va, ["id", "label", "currency", "region", "serviceTier", "context", "rates"], ["notes"]);
+      object(variant, va, ["id", "label", "currency", "region", "serviceTier", "context", "rates"], ["notes", "validFrom", "validUntil"]);
+      for (const key of ["validFrom", "validUntil"]) {
+        const day = variant[key];
+        if (day !== undefined && !isPriceDate(day)) fail(`${va}.${key}`, "expected a valid YYYY-MM-DD date");
+      }
+      if (variant.validFrom && variant.validUntil && variant.validFrom > variant.validUntil)
+        fail(`${va}.validUntil`, "must not precede validFrom");
       text(variant.id, `${va}.id`);
       if (variants.has(variant.id)) fail(`${va}.id`, `duplicate variant ${variant.id}`);
       variants.add(variant.id);

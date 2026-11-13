@@ -62,6 +62,7 @@ export function parseAuditSource(adapter, body, board) {
       const release = releaseBySlug.get(releaseByVariant.get(m.slug));
       if (!release) throw new Error(`Missing AA release identity: ${m.slug}`);
       return [{ identity: release.name, sourceId: m.slug, label: m.name, score: score * (adapter === 'aa-terminal' ? 100 : 1),
+        fallbackEnabled: /\bDefault Fallback\b/i.test(m.name),
         maker: release.creator.name, releaseDate: release.releaseDate, releaseSlug: release.slug,
         effort: m.name.match(/\((Max|Xhigh|High|Medium|Low|Non-reasoning|Reasoning)\b/i)?.[1]?.toLowerCase() ?? null,
         source: `https://artificialanalysis.ai/models/${m.slug}` }];
@@ -74,10 +75,11 @@ export function parseAuditSource(adapter, body, board) {
     for (const m of flight.matchAll(/\{"id":/g)) {
       const r = jsonAt(flight, m.index);
       if (!Number.isFinite(r.indexScore) || !r.displayLabel) continue;
-      rows.set(r.id, { identity: r.model?.release?.name ?? r.displayLabel, sourceId: r.id,
+      rows.set(r.id, { identity: r.model?.release?.name ?? r.model?.release?.shortName ?? r.displayLabel, sourceId: r.id,
         label: r.displayLabel, score: r.indexScore * 100, harness: r.agentName,
         router: !!r.isRouter, effort: r.model?.effort?.slug ?? null,
-        fallback: (r.safety?.fallbackAttemptCount ?? 0) > 0,
+        fallback: Number.isFinite(r.safety?.fallbackAttemptCount) ? r.safety.fallbackAttemptCount > 0 : null,
+        fallbackEnabled: /\bDefault Fallback\b/i.test(r.displayLabel),
         meanCost: r.mean?.costUsd ?? null, medianCost: r.percentiles?.costUsd?.p50 ?? null });
     }
     const version = text.match(/Coding Agent Index v(\d+(?:\.\d+)+)/)?.[1];

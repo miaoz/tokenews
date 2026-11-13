@@ -304,6 +304,62 @@
         "en": "This catalog ID distinguishes Gemini 4 Argon's Contributor billing tier, not separate model weights. Introductory rates through 2026-11-30; input/cache/output double from 2026-12-01. Output includes thinking tokens. Only implicit caching is supported; no explicit cache storage. Grounding costs extra.",
         "zh": "本站此 ID 用于区分 Gemini 4 Argon 的 Contributor 计费档，不代表独立的模型权重。引入价截至 2026-11-30；2026-12-01 起输入／缓存／输出价均翻倍。输出含思考 tokens。仅支持隐式缓存，不支持显式缓存存储。联网工具另计。"
       }
+    },
+    {
+      "id": "gemini-4-carbon",
+      "source": "https://aistudio.google.com/docs/pricing#gemini-4-carbon",
+      "checkedAt": "2026-11-13",
+      "defaultVariant": "standard-intro",
+      "variants": [
+        {
+          "id": "standard-intro",
+          "label": {
+            "en": "Paid standard · introductory · through 2026-11-30",
+            "zh": "付费标准档 · 引入价 · 至 2026-11-30"
+          },
+          "currency": "USD",
+          "region": "Gemini Developer API",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 2,
+            "cachedInput": 0.1,
+            "output": 10
+          },
+          "validFrom": "2026-11-13",
+          "validUntil": "2026-11-30"
+        },
+        {
+          "id": "standard-regular",
+          "label": {
+            "en": "Paid standard · from 2026-12-01",
+            "zh": "付费标准档 · 自 2026-12-01"
+          },
+          "currency": "USD",
+          "region": "Gemini Developer API",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 4,
+            "cachedInput": 0.2,
+            "output": 20
+          },
+          "validFrom": "2026-12-01"
+        }
+      ],
+      "notes": {
+        "en": "Official Gemini Developer API standard rates, verified November 13. Introductory rates end November 30, 2026; regular rates apply December 1. Only implicit caching is supported; a 97% cache-hit share is a comparison assumption, not a guaranteed hit rate. The 2.5% fresh-input share is billed at input rates, not an explicit cache-write fee; output includes thinking tokens. Grounding tools cost extra. No free tier. These Developer API prices are not Google Cloud credits-back promotions.",
+        "zh": "11 月 13 日核实的 Gemini Developer API 官方标准费率。引入价截至 2026 年 11 月 30 日，12 月 1 日起恢复常规价。仅支持隐式缓存；97% 缓存命中率是比较假设，不是保证命中率。2.5% 新输入按输入价计费，不是显式缓存写入费；输出含思考 tokens。联网工具另计，无免费档。此处为 Developer API 价格，不是 Google Cloud 返还 credits 的促销。"
+      },
+      "additionalSources": [
+        "https://aistudio.google.com/docs/models/gemini-4-carbon"
+      ]
     }
   ]
 }

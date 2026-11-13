@@ -44,21 +44,22 @@ test('unpriced models, dated releases and composite agents never borrow another 
  assert.notEqual(identities.aaReleases['deepseek-v4-pro'],'deepseek-v4-pro');
  assert.notEqual(identities.arenaConfigurations['NVIDIA-Nemotron-3.5-Super-VL-120B-A12B (NVFP4)'],'nemotron-3.5-super-vl');
 });
-test('publication fails on missing boards, duplicate runs and unreviewed methodology/identity',()=>{
+test('publication rejects broken structure/methodology but quarantines unknown identities',()=>{
  assert.throws(()=>mergeCurrentLeaderboards(baseline,{...snapshot,sources:snapshot.sources.slice(1)}));
  const duplicate=structuredClone(snapshot);duplicate.sources[0].rows.push(duplicate.sources[0].rows[0]);
  assert.throws(()=>mergeCurrentLeaderboards(baseline,duplicate));
  const source={board:'aa_intelligence_index',adapter:'aa-models',url:'https://artificialanalysis.ai/leaderboards/models'};
  const parsed={version:'5.0.1',rows:[{sourceId:'unknown',identity:'unknown',label:'unknown',score:42}]};
  assert.throws(()=>prepareCurrentSource(source,{...parsed,version:'6.0'},'2026-11-04',catalog,identities));
- assert.throws(()=>prepareCurrentSource(source,parsed,'2026-11-04',catalog,identities));
+ const quarantined=prepareCurrentSource(source,parsed,'2026-11-04',catalog,identities);
+ assert.equal(quarantined.rows[0].model,null);
+ assert.equal(quarantined.rows[0].exclusion,'identity-review-required');
 });
 test('Arena preserves source negative signs and stable IDs, including near-zero and identically labelled runs',()=>{
- const source=snapshot.sources.find(s=>s.board==='arena_agent_mode');
+ const source=parseArenaData(read('data/leaderboards/imports/arena-agent-2026-11-04.json').rawPayload,'arena_agent_mode');
  assert.equal(source.rows.filter(r=>r.score===null).length,0);
  assert.ok(source.rows.find(r=>r.label==='Solar Pro 4').score<0);
  assert.equal(source.rows.find(r=>r.label==='DeepSeek-V4-Pro (High, 20260813)').score,-0.25836097228167776);
- assert.equal(merged.leaderboardCoverage.arena_agent_mode_current.excluded.length,0);
  const mistral=source.rows.filter(r=>r.label==='Mistral Large 4');
  assert.equal(new Set(mistral.map(r=>r.sourceId)).size,2);
  assert.deepEqual(new Set(mistral.map(r=>r.serviceMode)),new Set(['agent','text']));
@@ -81,4 +82,24 @@ test('original discovery queue is completely resolved or explicitly rejected, pl
  assert.ok(review.originalDiscovery.every(r=>r.status==='resolved'?catalog.models.some(m=>m.id===r.model):r.status==='excluded-navigation'));
  assert.notEqual(resolveModel('Command A+',catalog.models),resolveModel('Command A',catalog.models));
  assert.equal(Object.keys(CURRENT_BOARDS).length,8);
+});
+
+test('unknown identities and enabled fallback do not suppress known safe rows or gain price mappings',()=>{
+ const source={board:'aa_intelligence_index',adapter:'aa-models',url:'https://artificialanalysis.ai/leaderboards/models'};
+ const model=baseline.points[0].model;
+ const rows=[{sourceId:'safe',identity:model,label:'Safe',score:40},
+ {sourceId:'unknown',releaseSlug:'unreviewed-new-model',identity:'New',label:'New',score:50},
+ {sourceId:'fallback',identity:model,label:'Default Fallback',score:60,fallbackEnabled:true}];
+ const prepared=prepareCurrentSource(source,{version:'5.0.1',rows},'2026-11-13',catalog,identities);
+ assert.equal(prepared.rows[0].exclusion,null);
+ assert.equal(prepared.rows[2].exclusion,'fallback-enabled');
+ const result=mergeCurrentLeaderboards(baseline,{...snapshot,sources:snapshot.sources.map(s=>s.board===source.board?prepared:s)});
+ const configs=result.configurations.filter(c=>c.board===prepared.id);
+ assert.equal(configs.length,2);
+ assert.ok(configs.some(c=>c.price_mapping_exclusion==='fallback-enabled'));
+ const bad=configs.find(c=>c.price_mapping_exclusion==='fallback-enabled');
+ assert.equal(bad.fallback_observed,null,'absence of actual-use statistics is unknown, not a verified zero');
+ assert.ok(!result.mappings.some(m=>m.configuration_id===bad.configuration_id));
+ assert.equal(result.leaderboardCoverage[prepared.id].excluded.length,2);
+ assert.equal(result.leaderboardCoverage[prepared.id].matchedConfigurations,1);
 });

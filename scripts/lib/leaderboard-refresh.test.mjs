@@ -22,6 +22,7 @@ test('a failed refresh is published with the retained data date; outdated report
  const report={version:1,attemptedAt:'2026-11-06',results:[{board:'arena',status:'retained-previous',retainedCheckedAt:'2026-11-04'}]};
  assert.deepEqual(attachRefreshStatus(data,report).leaderboardRefresh.arena_current,
    {status:'retained-previous',attemptedAt:'2026-11-06',checkedAt:'2026-11-04'});
+ assert.equal(attachRefreshStatus(data,{...report,results:[{...report.results[0],error:'HTTP 403'}]}).leaderboardRefresh.arena_current.error,'HTTP 403');
  assert.deepEqual(attachRefreshStatus(data,{...report,attemptedAt:'2026-11-03'}).leaderboardRefresh,{});
  assert.deepEqual(attachRefreshStatus(data,{...report,results:[{...report.results[0],retainedCheckedAt:'2026-11-03'}]}).leaderboardRefresh,{});
 });

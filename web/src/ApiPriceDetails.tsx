@@ -4,6 +4,7 @@ import { apiPriceScope, formatApiAmount, type ApiPriceReference } from "./apiPri
 export function ApiPriceDetails({ reference, lang }: { reference: ApiPriceReference | null; lang: string }) {
   if (!reference) return null;
   const zh = lang === "zh";
+  const asOf = reference.asOf ?? new Date().toISOString().slice(0, 10);
   const t = (en: string, cn: string) => zh ? cn : en;
   return <>
     <p>{reference.source
@@ -14,7 +15,7 @@ export function ApiPriceDetails({ reference, lang }: { reference: ApiPriceRefere
       <caption>{t("Official API rates per million text tokens", "每百万文本 token 的官方 API 标价")}</caption>
       <thead><tr>{[t("Tier / conditions", "档位 / 适用条件"), t("Cached input", "缓存读"), t("Input", "输入"), t("Cache write", "缓存写"), t("Output", "输出")].map((s) => <th scope="col" key={s}>{s}</th>)}</tr></thead>
       <tbody>{reference.variants.map((v) => <tr key={v.id}>
-        <th scope="row">{apiPriceScope(v, lang)}{v.id === reference.variant.id && reference.variants.length > 1 && <small className="block">{t("Default comparison tier", "对比页默认档位")}</small>}{v.notes && <small className="block">{v.notes[zh ? "zh" : "en"]}</small>}</th>
+        <th scope="row">{apiPriceScope(v, lang)}{v.validFrom && v.validFrom > asOf && <small className="block">{t("Future rate", "未来费率")} · {v.validFrom}</small>}{v.validUntil && v.validUntil < asOf && <small className="block">{t("Expired rate", "已过期费率")} · {v.validUntil}</small>}{v.id === reference.variant.id && reference.variants.length > 1 && <small className="block">{t("Default comparison tier", "对比页默认档位")}</small>}{v.notes && <small className="block">{v.notes[zh ? "zh" : "en"]}</small>}</th>
         {[v.rates.cachedInput, v.rates.input, v.rates.cacheWrite, v.rates.output].map((n, i) => <td key={i}>{formatApiAmount(n, v.currency)}</td>)}
       </tr>)}</tbody>
     </table></div>

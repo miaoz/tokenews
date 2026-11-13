@@ -6,7 +6,7 @@ import { buildSiteData } from "../../scripts/lib/build-site-data.mjs";
 import { loadCatalog, mergeCatalog } from "../../scripts/lib/model-catalog.mjs";
 import { mergeCurrentLeaderboards } from "../../scripts/lib/current-leaderboards.mjs";
 import { attachRefreshStatus } from "../../scripts/lib/leaderboard-refresh.mjs";
-import { addApiPricePoints } from "../../scripts/lib/api-price-points.mjs";
+import { addApiPricePoints, buildApiPointSchedules } from "../../scripts/lib/api-price-points.mjs";
 import { mergeCodingPlans } from "../../scripts/lib/coding-plans.mjs";
 import { loadApiPrices, priceCoverage } from "../../scripts/lib/api-prices.mjs";
 
@@ -29,6 +29,7 @@ const data = attachRefreshStatus(mergeCurrentLeaderboards(pricedData, current), 
 // Keep adopted points byte-for-byte meaningful: current prices never replace
 // the historical list_price / blended reference used to explain a quota.
 data.apiPrices = catalog;
+data.apiPointSchedules = buildApiPointSchedules(data, catalog, apiPointManifest);
 data.codingPlanWatch = JSON.parse(await readFile(path.resolve(root, '../data/coding-plans/watch-report.json'), 'utf8'));
 const coverage = priceCoverage(catalog, data.points, data.models);
 await mkdir(path.join(out, "evidence"), { recursive: true });
@@ -70,6 +71,8 @@ const split = (records, key, fields) => {
   return { core, notes };
 };
 const points = split(data.points, "id", POINT_NOTES);
+const scheduledNotes = split(data.apiPointSchedules.flatMap(s=>s.alternatives.map(a=>a.point)), "id", POINT_NOTES).notes;
+Object.assign(points.notes, scheduledNotes);
 const configurations = split(data.configurations, "configuration_id", CONFIGURATION_NOTES);
 const configBoards = new Map(data.configurations.map(c => [c.configuration_id, c.board]));
 const pricedBoards = new Set(data.mappings.map(m => configBoards.get(m.configuration_id)));

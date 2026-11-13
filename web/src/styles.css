@@ -1296,6 +1296,26 @@ button:hover > .arrow {
   white-space: nowrap;
   pointer-events: none;
 }
+.chart-search-unplotted {
+  padding: 9px;
+  font-size: 12px;
+  line-height: 1.5;
+  white-space: normal;
+}
+.chart-search-unplotted > div { margin-top: 8px; }
+.chart-search-unplotted small { display: block; color: var(--muted); }
+.coverage-search { display: block; margin: 12px 0; }
+.coverage-search input {
+  display: block;
+  width: min(100%, 320px);
+  margin-top: 5px;
+  padding: 7px 9px;
+  border: 1px solid var(--line-2);
+  border-radius: var(--radius-s);
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+}
 
 /* ==========================================================================
    Rankings

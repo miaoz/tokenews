@@ -39,7 +39,8 @@ const results=await Promise.all(manifest.sources.map(async source=>{
   }
   const snapshot=prepareCurrentSource(source,parsed,sourceCheckedAt,catalog,identities);
   if(capturedAt)snapshot.capturedAt=capturedAt;
-  return {board:source.board,status:'updated',snapshot};
+  const identityReview=snapshot.rows.filter(r=>r.exclusion==='identity-review-required').map(r=>({label:r.label,sourceId:r.sourceId,releaseSlug:r.releaseSlug??null}));
+  return {board:source.board,status:'updated',reviewRequired:identityReview.length,identityReview,snapshot};
  }catch(e){
   const prior=previous.sources.find(s=>s.board===source.board);
   return {board:source.board,status:prior?'retained-previous':'failed',error:e.message,snapshot:prior};

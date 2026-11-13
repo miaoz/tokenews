@@ -171,3 +171,24 @@ Unresolved recent-release items:
   Keep the reviewed full browser snapshots and show failed-refresh status.
 
 Source decisions: `data/api-price-research/2026-11-04-new-models.json`.
+
+## 2026-11-13 refresh and price coverage repair
+
+Gemini 4 Carbon now has a reviewed Gemini Developer API point. The introductory
+rates end on November 30; the separately recorded regular rates begin December 1.
+The 97% cached-read / 2.5% input / 0.5% output workload is an explicit comparison
+assumption, not a guarantee of Google's implicit-cache hit rate or a measured
+subscription quota. Google Cloud credits-back offers are not merged into it.
+
+Current sources now quarantine unknown model identities per configuration while
+updating other verified rows. Unknown entries retain their original labels,
+scores and source IDs in the coverage report. Methodology changes and malformed
+source structure still retain the previous complete snapshot. The new AA agent
+`release.shortName` field is supported alongside its previous `name` field.
+
+Claude Fable 5.2 is a reviewed release identity. AA's `Default Fallback` labels
+mean cross-model fallback is enabled, not proof that it actually occurred. These
+configurations, including the equivalent Opus/Sonnet configurations, retain their
+scores but do not join single-model prices. Observed fallback remains a distinct
+exclusion. Chart search and the searchable source-coverage table now explain
+missing prices, scores, identity review, fallback and current-filter exclusions.

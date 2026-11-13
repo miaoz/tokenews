@@ -1,6 +1,8 @@
+import { isPriceDate, isPriceVariantActive } from '../../web/src/priceValidity.mjs';
 // Only explicitly reviewed tiers become chart points. Maintaining a reference
 // price alone never creates a point or rewrites an adopted subscription quota.
-export function addApiPricePoints(data, catalog, manifest) {
+export function addApiPricePoints(data, catalog, manifest, asOf = new Date().toISOString().slice(0, 10)) {
+  if (!isPriceDate(asOf)) throw Error('Invalid API point asOf date');
   if (manifest.version !== 1 || !Array.isArray(manifest.entries)) throw Error('Invalid API point manifest');
   const mix = data.conventions.standardTokenMix, ids = new Set(data.points.map(p=>p.id)), added=[];
   if (![mix.cache,mix.input,mix.output].every(n=>Number.isFinite(n)&&n>=0) || Math.abs(mix.cache+mix.input+mix.output-1)>1e-9)
@@ -11,6 +13,8 @@ export function addApiPricePoints(data, catalog, manifest) {
     const context=entry.context??{min:0,max:null};
     if (!model || !variant || variant.currency!=='USD' || variant.context.min!==context.min || variant.context.max!==context.max)
       throw Error(`API point requires an exact reviewed USD tier and context band: ${entry.model}`);
+    // Validate tier identity before skipping an out-of-date reference.
+    if (!isPriceVariantActive(variant, asOf)) continue;
     const {input,cachedInput,output,cacheWrite}=variant.rates;
     if (![input,cachedInput,output].every(n=>typeof n==='number'&&Number.isFinite(n)&&n>=0)) throw Error('API point has incomplete rates');
     const writes=entry.inputBilling==='cache-write';
@@ -32,10 +36,37 @@ export function addApiPricePoints(data, catalog, manifest) {
       price_usd:null,original_price:null,currency:'USD',monthly_yi:null,monthly_tokens:null,
       real_usd_per_mtok:cost,list_blended_usd_per_mtok:cost,
       list_price:{cached:cachedInput,input,output,currency:'USD'},workload:writes?'cacheWrite':'standard',d:1,
-      unmetered:false,promo_until:null,data_date:price.checkedAt,data_date_kind:'official',source:price.source,
+      unmetered:false,promo_until:variant.validUntil??null,data_date:price.checkedAt,data_date_kind:'official',source:price.source,
       note:noteZh+(price.notes?.zh??''),decision_note:noteZh,
       note_en:noteEn+' '+(price.notes?.en??''),decision_note_en:noteEn,
       evidence:[{label:'Official API pricing',url:price.source}],price_origin:'maintained-api'});
   }
   return {...data,points:[...data.points,...added]};
+}
+
+// Ship already-reviewed transitions so a stale static bundle cannot retain an
+// expired promotion. This does not fetch or assume any future provider prices.
+export function buildApiPointSchedules(data, catalog, manifest) {
+  const scopes = new Map();
+  for (const entry of manifest.entries) {
+    const variant = catalog.models[entry.model]?.variants.find(v=>v.id===entry.variant);
+    if (!variant || (!variant.validFrom && !variant.validUntil)) continue;
+    const scope = JSON.stringify([entry.model,entry.channel??null,entry.inputBilling,
+      variant.currency,variant.region,variant.serviceTier,variant.context]);
+    const day = variant.validFrom ?? variant.validUntil;
+    const point = addApiPricePoints({...data,points:[]},catalog,{version:1,entries:[entry]},day).points[0];
+    if (!scopes.has(scope)) scopes.set(scope,{pointIds:[],alternatives:[]});
+    const group = scopes.get(scope);
+    group.pointIds.push(point.id);
+    group.alternatives.push({validFrom:variant.validFrom,validUntil:variant.validUntil,point});
+  }
+  for (const group of scopes.values()) {
+    group.alternatives.sort((a,b)=>(a.validFrom??'').localeCompare(b.validFrom??''));
+    for (let i=1;i<group.alternatives.length;i++) {
+      const previous=group.alternatives[i-1],next=group.alternatives[i];
+      if (!previous.validUntil || !next.validFrom || previous.validUntil>=next.validFrom)
+        throw Error('Overlapping reviewed API point validity ranges');
+    }
+  }
+  return [...scopes.values()];
 }

@@ -84,3 +84,20 @@ was present in the upstream directory or upstream benchmarks. Its public payload
 coverage is stated per source, and it does not claim to enumerate every model
 that exists. Add source adapters in `scripts/lib/leaderboard-audit.mjs` and keep
 `audit-sources.json` in step with every supported Pareto board.
+
+## Row-level identity review and fallback provenance
+
+Unknown identities are quarantined as `identity-review-required` with their source
+ID, release slug, label and score retained in coverage. They receive no model
+price mapping; other validated rows refresh normally. The refresh report remains
+`updated` and records `reviewRequired` and `identityReview`. This differs from
+unreviewed methodology changes, malformed payloads, duplicate IDs or retrieval
+failures, which retain the entire prior board with its original date.
+
+AA agent payloads support both release `name` and `shortName`. The reviewed AA
+release `claude-fable-5-2` maps to the existing Claude Fable 5.2 catalog entry,
+matching AA release name/Anthropic creator metadata and its official model source.
+`Default Fallback` means fallback is enabled, not proof it was used. Such scores
+retain their configuration labels and are excluded from single-model price
+mappings as `fallback-enabled`. Explicit positive fallback attempt counts remain
+`multi-model-fallback`. Neither flag is inferred to be a pure-model measurement.
