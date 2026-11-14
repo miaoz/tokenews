@@ -9,13 +9,13 @@
       "identityReview": [
         {
           "label": "K-EXAONE 2.0",
-          "sourceId": "k-exaone-2-0",
+          "sourceId": "local:aa-configuration:[\"k-exaone-2-0\",\"K-EXAONE 2.0\"]",
           "releaseSlug": "k-exaone-2-0"
         },
         {
           "label": "Tencent Hy4",
-          "sourceId": "tencent-hy4",
-          "releaseSlug": "hunyuan-dev1030-aa"
+          "sourceId": "local:aa-configuration:[\"tencent-hy4\",\"Tencent Hy4\"]",
+          "releaseSlug": "tencent-hy4"
         }
       ],
       "retainedCheckedAt": "2026-11-13"
@@ -34,34 +34,41 @@
       "identityReview": [
         {
           "label": "K-EXAONE 2.0",
-          "sourceId": "k-exaone-2-0",
+          "sourceId": "local:aa-configuration:[\"k-exaone-2-0\",\"K-EXAONE 2.0\"]",
           "releaseSlug": "k-exaone-2-0"
         },
         {
           "label": "Tencent Hy4",
-          "sourceId": "tencent-hy4",
-          "releaseSlug": "hunyuan-dev1030-aa"
+          "sourceId": "local:aa-configuration:[\"tencent-hy4\",\"Tencent Hy4\"]",
+          "releaseSlug": "tencent-hy4"
         }
       ],
       "retainedCheckedAt": "2026-11-13"
     },
     {
       "board": "arena_code",
-      "status": "retained-previous",
-      "error": "HTTP 403",
-      "retainedCheckedAt": "2026-11-12"
+      "status": "updated",
+      "reviewRequired": 1,
+      "identityReview": [
+        {
+          "label": "U2 Flash",
+          "sourceId": "u2-flash-1020-6jm8",
+          "releaseSlug": null
+        }
+      ],
+      "retainedCheckedAt": "2026-11-13"
     },
     {
       "board": "arena_agent_mode",
-      "status": "retained-previous",
-      "error": "HTTP 403",
-      "retainedCheckedAt": "2026-11-12"
-    },
-    {
-      "board": "aa_coding_agent_index",
       "status": "updated",
       "reviewRequired": 0,
       "identityReview": [],
+      "retainedCheckedAt": "2026-11-13"
+    },
+    {
+      "board": "aa_coding_agent_index",
+      "status": "retained-previous",
+      "error": "Methodology review required: aa_coding_agent_index 2.1",
       "retainedCheckedAt": "2026-11-13"
     },
     {

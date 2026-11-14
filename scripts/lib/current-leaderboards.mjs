@@ -1,5 +1,5 @@
 import { createHash } from 'node:crypto';
-import { resolveModel } from './leaderboard-audit.mjs';
+import { resolveModel, resolveAAReleaseIdentity } from './leaderboard-audit.mjs';
 
 export const CURRENT_BOARDS = {
   aa_intelligence_index: { id:'aa_intelligence_index_v5_0_1', version:'5.0.1', name:'Artificial Analysis Intelligence Index v5.0.1', metric:'Intelligence Index' },
@@ -23,7 +23,9 @@ export function prepareCurrentSource(source, parsed, checkedAt, catalog, identit
     if (!row.sourceId || seen.has(row.sourceId)) throw new Error(`Duplicate source configuration: ${row.sourceId}`);
     seen.add(row.sourceId);
     if (row.score !== null && !Number.isFinite(row.score)) throw new Error(`Invalid score: ${row.label}`);
-    const resolved = row.router ? null : row.releaseSlug ? identities.aaReleases[row.releaseSlug]
+    // Some source release slugs are reused for a new checkpoint. Where reviewed,
+    // require the exact release name too; an unknown name remains quarantined.
+    const resolved = row.router ? null : row.releaseSlug ? resolveAAReleaseIdentity(row,identities)
       : source.adapter === 'arena' ? identities.arenaSources?.[row.sourceId]
       : resolveModel(row.identity, catalog.models, identities.aliases);
     const model = resolved && catalog.models.some(m=>m.id===resolved) ? resolved : null;

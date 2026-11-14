@@ -63,17 +63,17 @@ test("Coverage shows actual remaining gaps and precise refresh failures in both 
 });
 
 
-test("all eight current boards distinguish published Fable and Carbon scores from source absences", () => {
-  const expected: Record<string, [boolean,boolean]> = {
-    aa_intelligence_index_v5_0_1:[true,true], terminal_bench_v4_1:[true,false],
-    aa_terminal_bench_v4_0:[true,true], arena_code_current:[true,true],
-    arena_agent_mode_current:[true,true], aa_coding_agent_index_v2_0:[false,true],
-    open_design_arena_current:[false,false], deepswe_v1_1:[false,false],
+test("all eight current boards distinguish published Fable, Carbon and Hydrogen scores from source absences", () => {
+  const expected: Record<string, [boolean,boolean,boolean]> = {
+    aa_intelligence_index_v5_0_1:[true,true,true], terminal_bench_v4_1:[true,true,true],
+    aa_terminal_bench_v4_0:[true,true,true], arena_code_current:[true,true,true],
+    arena_agent_mode_current:[true,true,true], aa_coding_agent_index_v2_0:[false,true,false],
+    open_design_arena_current:[false,false,false], deepswe_v1_1:[false,false,false],
   };
   assert.deepEqual(new Set(data.currentBoards),new Set(Object.keys(expected)));
   for(const [board, present] of Object.entries(expected)) {
     const rows=rowsFor(data,{...state,board});
-    for(const [i,model] of ['claude-fable-5.2','gemini-4-carbon'].entries()) {
+    for(const [i,model] of ['claude-fable-5.2','gemini-4-carbon','gemini-4-hydrogen'].entries()) {
       assert.equal(rows.some(r=>r.point.model===model && r.mapping),present[i],`${board}: ${model}`);
       if(!present[i]) assert.ok(unplottedRows(data,board).some(r=>r.model===model&&r.reason==='no-score-evidence'));
     }

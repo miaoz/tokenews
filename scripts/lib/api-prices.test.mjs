@@ -92,7 +92,9 @@ test("Coverage separates locally checked, upstream-only, missing and ahead-of-up
 
 test('optional inclusive price-validity dates permit future tiers but reject invalid dates and reversed ranges', async () => {
  const { readFile } = await import('node:fs/promises');
- const original = JSON.parse(await readFile(new URL('../../data/api-prices/google.json',import.meta.url),'utf8'));
+ const catalog = JSON.parse(await readFile(new URL('../../data/api-prices/google.json',import.meta.url),'utf8'));
+ // Isolate the dated transition fixture from later independently checked models.
+ const original = {...catalog, models:catalog.models.filter(m=>m.id==='gemini-4-carbon')};
  validatePriceFile(original,'google.json','2026-11-13');
  const carbon = original.models.find(m=>m.id==='gemini-4-carbon');
  assert.deepEqual(carbon.variants.map(v=>[v.validFrom,v.validUntil]),[

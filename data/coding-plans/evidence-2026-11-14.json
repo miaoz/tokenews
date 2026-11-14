@@ -1,0 +1,21 @@
+{
+  "checkedAt": "2026-11-14",
+  "scope": "Command Code model availability recheck; no changes to other providers or historical pricing.",
+  "checks": [
+    {
+      "source": "https://commandcode.ai/changelog",
+      "release": "CLI v1.89.0",
+      "observation": "Official release notes explicitly retire the free Beam 1.0 offering. CLI v1.88.4 separately retired free Laguna S2.1."
+    },
+    {
+      "source": "https://commandcode.ai/docs/reference/cli/models",
+      "observation": "The current CLI model registry excludes Beam and Crouton; Glyph Cluster remains listed."
+    },
+    {
+      "source": "https://commandcode.ai/docs/resources/pricing-limits",
+      "observation": "Current deals retain Glyph Cluster (up to 1,000 requests/day while the preview lasts) and omit Beam and Crouton."
+    }
+  ],
+  "decision": "Retire only the Command Code Beam free offer, retain the Crouton not-currently-listed status and earlier dated evidence, and preserve all model identities and other-provider prices.",
+  "verificationLimits": "Public documentation checked; no paid model calls or authenticated availability tests. Exact retirement day is not published. Catalog absence alone does not establish Crouton retirement."
+}

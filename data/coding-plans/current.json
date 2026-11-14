@@ -4148,12 +4148,12 @@
       "models": [
         "beam-1.0"
       ],
-      "status": "temporary-free",
-      "checkedAt": "2026-11-04",
-      "source": "https://commandcode.ai/docs/resources/pricing-limits#beam-free",
+      "status": "retired",
+      "checkedAt": "2026-11-14",
+      "source": "https://commandcode.ai/changelog",
       "note": {
-        "en": "CLI v1.85.0 announced Beam 1.0. Current promotion is free with no daily request cap while capacity lasts; this is not a guaranteed monthly token pool.",
-        "zh": "CLI v1.85.0 已官宣 Beam 1.0；当前活动免信用额、无每日请求次数上限，但受可用容量限制，不折算为保证月 token 额度。"
+        "en": "CLI v1.89.0 explicitly retires the free Beam 1.0 offering. This applies only to Command Code; the model, other providers and earlier promotion evidence remain available. The changelog does not establish an exact retirement day.",
+        "zh": "CLI v1.89.0 明确宣布免费 Beam 1.0 下线。仅适用于 Command Code；保留模型、其他渠道和早期活动证据。更新日志未明确具体下线日期。"
       }
     },
     {
@@ -4185,16 +4185,40 @@
     {
       "channel": "Command Code",
       "models": [
-        "crouton-alpha",
-        "glyph-cluster",
-        "laguna-s-2.1"
+        "crouton-alpha"
+      ],
+      "status": "not-currently-listed",
+      "checkedAt": "2026-11-14",
+      "source": "https://commandcode.ai/docs/reference/cli/models",
+      "note": {
+        "en": "As of November 14, this model is absent from Command Code’s current model registry and free offers, and its former model page redirects to the catalog. The earlier free promotion is retained as historical evidence; no current availability or free quota is asserted. No explicit retirement date was verified.",
+        "zh": "截至 11 月 14 日，该型号已不在 Command Code 当前型号目录及免费活动中，原型号页面跳转至目录。早期免费活动保留为历史证据，不再标为当前可用或免费；尚未核实明确的下线日期。"
+      }
+    },
+    {
+      "channel": "Command Code",
+      "models": [
+        "glyph-cluster"
       ],
       "status": "temporary-free",
-      "checkedAt": "2026-11-04",
-      "source": "https://commandcode.ai/docs/resources/pricing-limits#deals",
+      "checkedAt": "2026-11-14",
+      "source": "https://commandcode.ai/docs/resources/pricing-limits",
       "note": {
-        "en": "Current deals confirm stealth Crouton/Glyph (up to 1,000 requests/day) and Laguna S 2.1 (capacity limited). No benchmark identity is borrowed from other models.",
-        "zh": "当前活动确认 Crouton/Glyph 每日最多 1,000 请求及受容量限制的 Laguna S 2.1；不借用其他模型的榜单成绩。"
+        "en": "Current pricing lists Glyph Cluster as a free preview with up to 1,000 requests/day while the preview lasts. No guaranteed monthly token pool or identity with another scored model is inferred.",
+        "zh": "当前价格说明仍列出 Glyph Cluster 免费预览，预览期间每日最多 1,000 请求。不推定保证月 token 额度，也不与其他有榜单成绩的模型合并。"
+      }
+    },
+    {
+      "channel": "Command Code",
+      "models": [
+        "laguna-s-2.1"
+      ],
+      "status": "retired",
+      "checkedAt": "2026-11-14",
+      "source": "https://commandcode.ai/changelog",
+      "note": {
+        "en": "CLI v1.88.4 release notes explicitly retire the free Laguna S2.1 offering. The earlier temporary-free review is historical, not a current allowance; no exact retirement day or availability on other providers is inferred.",
+        "zh": "CLI v1.88.4 更新日志明确宣布免费 Laguna S2.1 活动下线。此前限时免费记录仅保留为历史证据，不代表当前额度；不推定具体下线日或其他渠道的可用性。"
       }
     },
     {
@@ -4312,6 +4336,8 @@
     "evidence-2026-11-04-02.json",
     "evidence-2026-11-10.json",
     "evidence-2026-11-11.json",
-    "evidence-2026-11-13.json"
+    "evidence-2026-11-12.json",
+    "evidence-2026-11-13.json",
+    "evidence-2026-11-14.json"
   ]
 }

@@ -246,7 +246,10 @@
     "gemini-4-hydrogen": "gemini-4-hydrogen",
     "muse-ember": "muse-ember",
     "agnes-2-5-pro-theta": "agnes-2.5-pro-theta",
-    "inkling-small-1102-rc17": "inkling-2-small"
+    "inkling-small-1102-rc17": "inkling-2-small",
+    "solar-pro-4": "solar-pro-4",
+    "inkling-2-small": "inkling-2-small",
+    "ling-3-1-flash-1001": "ling-3.1-flash"
   },
   "arenaConfigurations": {
     "Claude Opus 5.5 (Max)": "claude-opus-5.5",
@@ -640,5 +643,11 @@
     "contenders/inkling-small-1102-rc17-ls91": "inkling-2-small",
     "zippy-150-evals-ext-wgd2": "muse-ember",
     "contenders/muse-ember-max": "muse-ember"
+  },
+  "aaReleaseNames": {
+    "ling-3-1-flash": {
+      "Ling 3.1 Flash": "ling-3.1-flash",
+      "Ling 3.1 Flash 1019": "ling-3.1-flash-1019"
+    }
   }
 }

@@ -135,3 +135,20 @@ is created by this check.
 Main-branch pushes changing this workflow or its collector/health code also run
 this validation. Generated snapshot/data commits do not match the path filter,
 so the updater's own commits cannot create a refresh loop.
+
+### November 14 source maintenance
+
+AA's public model payload now embeds release slugs instead of variant slugs.
+The adapter accepts both schemas and links modern records to official release
+pages. Modern configuration IDs are explicitly local release/name pairs, not
+invented source IDs. Source releases must exist and configurations must be unique.
+Reviewed Solar Pro 4 and Inkling 2 Small slug changes preserve their identities.
+AA reused `ling-3-1-flash` for the 1019 checkpoint; exact release-name guards keep
+legacy and current payloads separate, while `ling-3-1-flash-1001` identifies the
+older checkpoint. Unknown names still require review.
+
+Gemini 4 Hydrogen now has independently verified paid Developer API rates and a
+standard-workload price reference. Its new official TB 4.1 Antigravity High row
+is published without copying Google's separate self-reported result. No scores
+are invented for boards that do not list it. AA Coding Agent 2.1 is retained as a
+methodology-review failure, not silently mixed with the reviewed 2.0 snapshot.

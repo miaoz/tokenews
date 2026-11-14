@@ -99,3 +99,42 @@ test('explicit source identity maps never infer same-label runs or unknown catal
  const {identityBySourceId,...legacy}=source;
  assert.equal(compareAudit(legacy,{version:null,rows:[rows[0]]},models,[]).rows[0].model,'reviewed');
 });
+
+const modernAA = () => ({
+ initialModels:[{release:{slug:'gemini-4-hydrogen'},name:'Gemini 4 Hydrogen (Xhigh)',deprecated:false,intelligenceIndex:53.9192287317542,scores:{'terminalbench-4-0':0.535353535353535}}],
+ releases:[{slug:'gemini-4-hydrogen',name:'Gemini 4 Hydrogen',releaseDate:'2026-11-12',creator:{name:'Google'},modelNames:['Gemini 4 Hydrogen (Xhigh)']}],
+ evaluations:{intelligenceIndex:{name:'Artificial Analysis Intelligence Index v5.0.1'}},
+ staleNavigationTitle:'Artificial Analysis Intelligence Index v4.3'
+});
+const parseModernAA = (value,adapter='aa-models') => parseAuditSource(adapter,flight('1:'+JSON.stringify(value)));
+test('modern AA payload uses exact release-name keys and real release URLs without inventing variant slugs',()=>{
+ const parsed=parseModernAA(modernAA()),row=parsed.rows[0];
+ assert.equal(parsed.version,'5.0.1');assert.equal(row.score,53.9192287317542);
+ assert.equal(row.identity,'Gemini 4 Hydrogen');assert.equal(row.releaseSlug,'gemini-4-hydrogen');
+ assert.equal(row.sourceId,'local:aa-configuration:["gemini-4-hydrogen","Gemini 4 Hydrogen (Xhigh)"]');
+ assert.equal(row.sourceIdKind,'local-release-name-key');assert.equal(row.effort,'xhigh');
+ assert.equal(row.source,'https://artificialanalysis.ai/models/releases/gemini-4-hydrogen');
+ const terminal=parseModernAA(modernAA(),'aa-terminal');assert.equal(terminal.version,'4.0');assert.equal(terminal.rows[0].score,53.5353535353535);
+ const legacy=parseAuditSource('aa-models',html).rows[0];assert.equal(legacy.sourceId,'example-high');assert.equal(legacy.sourceIdKind,undefined);
+});
+test('modern AA rejects missing, conflicting or duplicate identities and missing evaluation metadata',()=>{
+ for(const mutate of [
+  v=>{delete v.initialModels[0].release;},v=>{v.initialModels[0].release.slug='unknown';},
+  v=>{v.initialModels[0].name='';},v=>{v.initialModels[0].name='Unreviewed High';},
+  v=>{v.releases.push(structuredClone(v.releases[0]));},
+  v=>{v.initialModels.push(structuredClone(v.initialModels[0]));},
+  v=>{v.releases[0].slug='../other';},v=>{delete v.evaluations;},
+  v=>{v.evaluations.intelligenceIndex.name='Unknown index';},
+  v=>{v.initialModels[0].intelligenceIndex='54';},v=>{v.initialModels=[];}
+ ]) {const payload=modernAA();mutate(payload);assert.throws(()=>parseModernAA(payload));}
+});
+test('modern AA keeps distinct efforts and fallback configurations separate',()=>{
+ const payload=modernAA();payload.releases[0].modelNames.push('Gemini 4 Hydrogen (High, Default Fallback)');
+ payload.initialModels.push({...payload.initialModels[0],name:'Gemini 4 Hydrogen (High, Default Fallback)'});
+ const rows=parseModernAA(payload).rows;assert.equal(rows.length,2);assert.notEqual(rows[0].sourceId,rows[1].sourceId);
+ assert.equal(rows[1].effort,'high');assert.equal(rows[1].fallbackEnabled,true);
+});
+
+test('modern AA permits releases without optional variant lists while retaining exact row identity',()=>{
+ for(const modelNames of [undefined,[]]) {const p=modernAA();p.releases[0].modelNames=modelNames;assert.equal(parseModernAA(p).rows.length,1);}
+});

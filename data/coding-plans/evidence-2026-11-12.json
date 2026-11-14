@@ -1,0 +1,30 @@
+{
+  "checkedAt": "2026-11-12",
+  "scope": "Recheck Command Code free-offer availability without changing pricing entries or benchmark identities.",
+  "checks": [
+    {
+      "source": "https://commandcode.ai/docs/reference/cli/models",
+      "observation": "Current available-model tables, documented as generated from the same registry as CLI --list-models and /model, do not list Beam or Crouton. The stealth section lists Glyph Cluster."
+    },
+    {
+      "source": "https://commandcode.ai/docs/resources/pricing-limits",
+      "observation": "Beam and Crouton promotional sections are absent. Glyph remains a zero-credit preview with up to 1,000 requests/day while the preview lasts."
+    },
+    {
+      "source": "https://commandcode.ai/models/beam-free",
+      "resolvedUrl": "https://commandcode.ai/models",
+      "observation": "Opening the former Beam page resolves to the general catalog rather than a current Beam offer."
+    },
+    {
+      "source": "https://commandcode.ai/models/crouton-alpha",
+      "resolvedUrl": "https://commandcode.ai/models",
+      "observation": "Opening the former Crouton page resolves to the general catalog rather than a current Crouton offer."
+    },
+    {
+      "source": "https://commandcode.ai/changelog",
+      "observation": "Historical CLI v1.85.0 notes announce Beam 1.0. CLI v1.88.4 explicitly retires the free Laguna S2.1 offering."
+    }
+  ],
+  "decision": "Mark Beam and Crouton not-currently-listed, keep Glyph temporary-free, and mark the free Laguna offering retired. Preserve older evidence and all numeric pricing entries.",
+  "verificationLimits": "Official public pages were checked on November 12, 2026; no authenticated API or live model invocation was performed. Search-index copies still showing earlier free offers are historical, not proof of current availability. Page/catalog absence does not establish permanent model retirement. No exact Beam/Crouton end date or Laguna retirement day was verified; no claims are made about other providers."
+}

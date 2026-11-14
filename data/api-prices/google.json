@@ -360,6 +360,121 @@
       "additionalSources": [
         "https://aistudio.google.com/docs/models/gemini-4-carbon"
       ]
+    },
+    {
+      "id": "gemini-4-hydrogen",
+      "source": "https://aistudio.google.com/docs/pricing#gemini-4-hydrogen",
+      "additionalSources": [
+        "https://aistudio.google.com/docs/models/gemini-4-hydrogen",
+        "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/"
+      ],
+      "checkedAt": "2026-11-14",
+      "defaultVariant": "standard",
+      "variants": [
+        {
+          "id": "standard",
+          "label": {
+            "en": "Paid · standard",
+            "zh": "付费标准档"
+          },
+          "currency": "USD",
+          "region": "Gemini Developer API",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 1.5,
+            "cachedInput": 0.075,
+            "output": 7.5
+          }
+        },
+        {
+          "id": "batch",
+          "label": {
+            "en": "Paid · Batch",
+            "zh": "付费 Batch"
+          },
+          "currency": "USD",
+          "region": "Gemini Developer API",
+          "serviceTier": "batch",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 0.75,
+            "cachedInput": 0.0375,
+            "output": 3.75
+          }
+        },
+        {
+          "id": "flex",
+          "label": {
+            "en": "Paid · Flex",
+            "zh": "付费 Flex"
+          },
+          "currency": "USD",
+          "region": "Gemini Developer API",
+          "serviceTier": "flex",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 0.75,
+            "cachedInput": 0.0375,
+            "output": 3.75
+          }
+        },
+        {
+          "id": "priority",
+          "label": {
+            "en": "Paid · Priority",
+            "zh": "付费 Priority"
+          },
+          "currency": "USD",
+          "region": "Gemini Developer API",
+          "serviceTier": "priority",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 2.7,
+            "cachedInput": 0.135,
+            "output": 13.5
+          }
+        },
+        {
+          "id": "contributor",
+          "label": {
+            "en": "Paid · Contributor · invitation only",
+            "zh": "付费 Contributor · 仅受邀用户"
+          },
+          "currency": "USD",
+          "region": "Gemini Developer API",
+          "serviceTier": "contributor",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 0.75,
+            "cachedInput": 0.0375,
+            "output": 3.75
+          },
+          "notes": {
+            "en": "Private preview by invitation; data may be used to improve Google products. Discounts and availability may change.",
+            "zh": "仅限受邀用户的私有预览；数据可能用于改进 Google 产品。折扣和可用性可能变更。"
+          }
+        }
+      ],
+      "notes": {
+        "en": "Paid Developer API rates; output includes thinking tokens. Implicit caching only, with no guaranteed cache hit rate; explicit caching is unsupported. Flat token rates across the 1M context window. Grounding tools cost extra. Free-tier access is rate limited and is not a guaranteed monthly token allowance.",
+        "zh": "Developer API 付费价格；输出含思考 tokens。仅支持隐式缓存，命中率不保证，不支持显式缓存。1M 上下文窗口内统一 token 价格。联网工具另计。免费档受速率限制，不代表保证月 token 额度。"
+      }
     }
   ]
 }

@@ -1,6 +1,6 @@
 import { readFile, writeFile, rename } from 'node:fs/promises';
 import { pageText } from './lib/leaderboards.mjs';
-import { parseAuditSource, compareAudit, resolveModel } from './lib/leaderboard-audit.mjs';
+import { parseAuditSource, compareAudit, resolveModel, resolveAAReleaseIdentity } from './lib/leaderboard-audit.mjs';
 const root = new URL('../', import.meta.url);
 if (process.argv.slice(2).some(a=>a!=='--allow-partial')) throw new Error('Usage: node scripts/audit-leaderboards.mjs [--allow-partial]');
 const read = async p => JSON.parse(await readFile(new URL(p, root), 'utf8'));
@@ -33,9 +33,9 @@ const results = await Promise.all(config.sources.map(async source => {
     if (parsed.releases) releases = parsed.releases;
     const baselineVersion = points.boards[source.board].name.match(/\bv?(\d+(?:\.\d+)+)/)?.[1] ?? null;
     const aliases = {...config.aliases, ...identities.aliases};
-    for (const row of parsed.rows) if (row.releaseSlug && identities.aaReleases[row.releaseSlug]) aliases[row.identity] = identities.aaReleases[row.releaseSlug];
+    for (const row of parsed.rows) if (row.releaseSlug && resolveAAReleaseIdentity(row,identities)) aliases[row.identity] = resolveAAReleaseIdentity(row,identities);
     const identityBySourceId = source.adapter === 'arena' ? identities.arenaSources
-      : parsed.rows.some(row=>row.releaseSlug) ? Object.fromEntries(parsed.rows.filter(row=>identities.aaReleases[row.releaseSlug]).map(row=>[row.sourceId,identities.aaReleases[row.releaseSlug]])) : null;
+      : parsed.rows.some(row=>row.releaseSlug) ? Object.fromEntries(parsed.rows.filter(row=>resolveAAReleaseIdentity(row,identities)).map(row=>[row.sourceId,resolveAAReleaseIdentity(row,identities)])) : null;
     return compareAudit({...source, baselineVersion, ...(identityBySourceId ? {identityBySourceId} : {})}, parsed, knownModels, configurations, aliases);
   } catch (error) { return {board:source.board,source:source.url,status:'unverified',error:error.message}; }
 }));
@@ -43,9 +43,9 @@ const checkedAt = new Intl.DateTimeFormat('en-CA', {timeZone:'America/Los_Angele
 const report = {version:1,checkedAt,baselineCommit:(await read('upstream.lock.json')).commit,
   note:'Source audit is separate from publication. Unverified sources are never reported as unchanged. Identity-review rows may be aliases, historical models, or new releases. Scores across changed versions must not be mixed.',
   results, releaseSince, recentReleases: releases.filter(r=>!r.deprecated && r.releaseDate>=releaseSince).map(r=>({name:r.name,slug:r.slug,maker:r.creator.name,releaseDate:r.releaseDate,source:`https://artificialanalysis.ai/models/releases/${r.slug}`,
-    catalogModel: identities.aaReleases[r.slug] ?? null,
-    inUpstreamDirectory: points.points.some(p => p.model === identities.aaReleases[r.slug]),
-    inUpstreamBenchmarks: configurations.some(c => c.model === identities.aaReleases[r.slug])
+    catalogModel: resolveAAReleaseIdentity({releaseSlug:r.slug,identity:r.name},identities) ?? null,
+    inUpstreamDirectory: points.points.some(p => p.model === resolveAAReleaseIdentity({releaseSlug:r.slug,identity:r.name},identities)),
+    inUpstreamBenchmarks: configurations.some(c => c.model === resolveAAReleaseIdentity({releaseSlug:r.slug,identity:r.name},identities))
   }))};
 const destination = new URL('data/leaderboards/audit.json',root);
 await writeFile(new URL('data/leaderboards/audit.json.tmp',root),JSON.stringify(report,null,2)+'\n');

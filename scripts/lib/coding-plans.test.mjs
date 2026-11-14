@@ -162,3 +162,14 @@ test('proportional window amounts avoid binary floating point noise',()=>{
  assert.match(p.note_en,/\$6\.6 per 5 hours and \$16\.5 per 7 days/);
  assert.doesNotMatch(p.note_en,/6\.600000/);assert.doesNotMatch(p.note,/6\.600000/);
 });
+
+test('Command Code Beam retirement preserves other providers, model identity and historical promotion evidence',()=>{
+ const review=manifest.reviews.find(r=>r.channel==='Command Code'&&r.models.includes('beam-1.0'));
+ assert.equal(review.status,'retired');assert.equal(review.checkedAt,'2026-11-14');
+ assert.match(review.note.en,/v1\.89\.0/);
+ assert.ok(base.models.some(m=>m.id==='beam-1.0'));
+ assert.ok(manifest.reviews.some(r=>r.channel==='OpenCode'&&r.models.includes('beam-1.0')&&r.status==='temporary-free'));
+ assert.ok(manifest.evidenceFiles.includes('evidence-2026-11-12.json'));
+ assert.ok(manifest.evidenceFiles.includes('evidence-2026-11-13.json'),'preserve the intervening GOAT review');
+ assert.ok(manifest.evidenceFiles.includes('evidence-2026-11-14.json'));
+});

@@ -45,27 +45,46 @@ export function parseAuditSource(adapter, body, board) {
   const text = pageText(body);
   if (adapter === 'aa-models' || adapter === 'aa-terminal') {
     const flight = flightText(body);
-    const meta = property(flight, 'modelsAndReleases');
+    const legacy = flight.includes('"modelsAndReleases":');
+    const meta = legacy ? property(flight, 'modelsAndReleases') : {releases:property(flight, 'releases')};
     const initial = requireRows(property(flight, 'initialModels'));
-    const releaseByVariant = new Map(meta.models.map(m => [m.slug, m.releaseSlug]));
-    const releaseBySlug = new Map(meta.releases.map(m => [m.slug, m]));
+    const releaseByVariant = new Map(legacy ? meta.models.map(m => [m.slug, m.releaseSlug]) : []);
+    const releaseBySlug = new Map();
+    for (const release of requireRows(meta.releases)) {
+      if (typeof release.slug !== 'string' || !/^[a-zA-Z0-9][a-zA-Z0-9._-]*$/.test(release.slug)
+        || !release.name || !release.creator?.name || releaseBySlug.has(release.slug)) throw new Error('Invalid or duplicate AA release identity');
+      releaseBySlug.set(release.slug,release);
+    }
+    // New public payloads identify configurations by release + full display name,
+    // not variant slugs. Keep the derived key explicitly local, never invent URLs.
+    const localKeys = new Set();
+    if (!legacy) for (const model of initial) {
+      const release = releaseBySlug.get(model.release?.slug);
+      if (!release || typeof model.name !== 'string' || !model.name.trim()
+        || (Array.isArray(release.modelNames) && release.modelNames.length > 0 && !release.modelNames.includes(model.name))) throw new Error('Missing AA release/configuration identity');
+      const key = JSON.stringify([release.slug,model.name]);
+      if (localKeys.has(key)) throw new Error('Duplicate AA release/configuration identity');
+      localKeys.add(key);
+    }
     const terminalVersions = [...new Set(initial.flatMap(m=>Object.keys(m.scores??{})).flatMap(key=>{
       const match=key.match(/^terminalbench-(\d+)-(\d+)$/);
       return match?[`${match[1]}.${match[2]}`]:[];
     }))].sort((a,b)=>a.localeCompare(b,'en',{numeric:true}));
     const version = adapter === 'aa-models'
-      ? flight.match(/Artificial Analysis Intelligence Index v(\d+(?:\.\d+)+)/)?.[1] : terminalVersions.at(-1);
+      ? (legacy ? flight.match(/Artificial Analysis Intelligence Index v(\d+(?:\.\d+)+)/)?.[1]
+        : property(flight,'evaluations').intelligenceIndex?.name?.match(/^Artificial Analysis Intelligence Index v(\d+(?:\.\d+)+)$/)?.[1]) : terminalVersions.at(-1);
     const rows = initial.filter(m => !m.deprecated).flatMap(m => {
       const score = adapter === 'aa-models' ? m.intelligenceIndex : m.scores?.[`terminalbench-${version?.replaceAll('.','-')}`];
       if (score == null) return [];
       if (!Number.isFinite(score)) throw new Error('Invalid AA score');
-      const release = releaseBySlug.get(releaseByVariant.get(m.slug));
+      const release = releaseBySlug.get(legacy ? releaseByVariant.get(m.slug) : m.release.slug);
       if (!release) throw new Error(`Missing AA release identity: ${m.slug}`);
-      return [{ identity: release.name, sourceId: m.slug, label: m.name, score: score * (adapter === 'aa-terminal' ? 100 : 1),
+      return [{ identity: release.name, sourceId: legacy ? m.slug : `local:aa-configuration:${JSON.stringify([release.slug,m.name])}`,
+        ...(!legacy ? {sourceIdKind:'local-release-name-key'} : {}), label: m.name, score: score * (adapter === 'aa-terminal' ? 100 : 1),
         fallbackEnabled: /\bDefault Fallback\b/i.test(m.name),
         maker: release.creator.name, releaseDate: release.releaseDate, releaseSlug: release.slug,
         effort: m.name.match(/\((Max|Xhigh|High|Medium|Low|Non-reasoning|Reasoning)\b/i)?.[1]?.toLowerCase() ?? null,
-        source: `https://artificialanalysis.ai/models/${m.slug}` }];
+        source: legacy ? `https://artificialanalysis.ai/models/${m.slug}` : `https://artificialanalysis.ai/models/releases/${release.slug}` }];
     });
     if (!version) throw new Error('AA version missing');
     return { version, rows: requireRows(rows), releases: meta.releases, coverage: 'Current non-deprecated configurations in the public page payload with a non-null score; not all historical releases.' };
@@ -184,4 +203,10 @@ export function compareAudit(source, parsed, models, configurations, aliases = {
     comparisonSkippedForVersionChange: baselineVersionChanged, scoreDifferences, costDifferences, newConfigurations,
     missingFromBoard: [...new Set(rows.filter(r => r.status === 'missing-from-board').map(r => r.model))],
     unresolvedIdentities: [...new Set(rows.filter(r => r.status === 'identity-review').map(r => r.identity))], rows };
+}
+
+// Explicit release-name guards disambiguate source slugs reused for checkpoints.
+export function resolveAAReleaseIdentity(row, identities) {
+  const names=identities.aaReleaseNames?.[row.releaseSlug];
+  return names ? names[row.identity] ?? null : identities.aaReleases[row.releaseSlug] ?? null;
 }

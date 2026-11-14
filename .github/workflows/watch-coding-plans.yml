@@ -1,5 +1,13 @@
 name: Watch official announcements and coding plans
 on:
+  push:
+    branches: [main]
+    paths:
+      - scripts/watch-coding-plans.mjs
+      - scripts/lib/coding-plan-watch.mjs
+      - data/coding-plans/watch-sources.json
+      - data/coding-plans/watch-resolutions.json
+      - .github/workflows/watch-coding-plans.yml
   schedule:
     - cron: '23 0 * * *'
   workflow_dispatch:

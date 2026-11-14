@@ -139,3 +139,18 @@ test('source-level excluded rows survive preparation and coverage without becomi
  assert.deepEqual(result.leaderboardCoverage[prepared.id].excludedSourceRows,excludedSourceRows);
  assert.ok(!result.configurations.some(c=>c.source_id==='autoeval'));
 });
+
+test('reused AA release slugs require exact reviewed release names and never cross Ling checkpoints',()=>{
+ const source={board:'aa_terminal_bench_4',adapter:'aa-terminal',url:'https://artificialanalysis.ai/leaderboards/models'};
+ const parsed={version:'4.0',rows:[
+  {sourceId:'old',identity:'Ling 3.1 Flash',label:'Ling 3.1 Flash',releaseSlug:'ling-3-1-flash',score:33.33},
+  {sourceId:'new',identity:'Ling 3.1 Flash 1019',label:'Ling 3.1 Flash 1019',releaseSlug:'ling-3-1-flash',score:32.83},
+  {sourceId:'unknown',identity:'Ling 3.1 Flash future',label:'Ling 3.1 Flash future',releaseSlug:'ling-3-1-flash',score:40},
+ ]};
+ const rows=prepareCurrentSource(source,parsed,'2026-11-14',catalog,identities).rows;
+ assert.equal(rows[0].model,'ling-3.1-flash');assert.equal(rows[1].model,'ling-3.1-flash-1019');
+ assert.equal(rows[2].model,null);assert.equal(rows[2].exclusion,'identity-review-required');
+ const current=snapshot.sources.find(s=>s.board==='aa_terminal_bench_4');
+ assert.equal(current.rows.find(r=>r.label==='Ling 3.1 Flash 1019').model,'ling-3.1-flash-1019');
+ assert.equal(current.rows.find(r=>r.label==='Ling 3.1 Flash').model,'ling-3.1-flash');
+});

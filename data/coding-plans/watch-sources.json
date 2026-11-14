@@ -31,7 +31,10 @@
         "credits",
         "Model"
       ],
-      "minRecords": 30
+      "minRecords": 30,
+      "ignoredColumns": [
+        "Intelligence"
+      ]
     },
     {
       "id": "command-code-goat",
@@ -42,7 +45,10 @@
         "credits",
         "Model"
       ],
-      "minRecords": 30
+      "minRecords": 30,
+      "ignoredColumns": [
+        "Intelligence"
+      ]
     },
     {
       "id": "command-code-pro",
@@ -53,7 +59,10 @@
         "credits",
         "Model"
       ],
-      "minRecords": 30
+      "minRecords": 30,
+      "ignoredColumns": [
+        "Intelligence"
+      ]
     },
     {
       "id": "command-code-max",
@@ -64,7 +73,10 @@
         "credits",
         "Model"
       ],
-      "minRecords": 30
+      "minRecords": 30,
+      "ignoredColumns": [
+        "Intelligence"
+      ]
     },
     {
       "id": "command-code-models",
@@ -84,9 +96,33 @@
       "url": "https://commandcode.ai/docs/resources/pricing-limits",
       "required": [
         "Pricing",
-        "Credits"
+        "Credits",
+        "Individual plans",
+        "Usage limits",
+        "Deals"
       ],
-      "minRecords": 40
+      "minRecords": 16,
+      "requiredTables": [
+        {
+          "heading": "Individual plans",
+          "columns": [
+            "Plan",
+            "Price/mo",
+            "Credits/mo"
+          ],
+          "minRecords": 4
+        },
+        {
+          "heading": "Usage limits",
+          "columns": [
+            "Plan",
+            "Monthly credits",
+            "5-hour limit",
+            "Weekly limit"
+          ],
+          "minRecords": 4
+        }
+      ]
     },
     {
       "id": "command-code-releases",

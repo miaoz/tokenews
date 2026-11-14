@@ -80,6 +80,11 @@
       "model": "gemini-4-carbon",
       "variant": "standard-regular",
       "inputBilling": "input-only"
+    },
+    {
+      "model": "gemini-4-hydrogen",
+      "variant": "standard",
+      "inputBilling": "input-only"
     }
   ]
 }
