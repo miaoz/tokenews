@@ -47,22 +47,14 @@
     },
     {
       "board": "arena_code",
-      "status": "updated",
-      "reviewRequired": 1,
-      "identityReview": [
-        {
-          "label": "U2 Flash",
-          "sourceId": "u2-flash-1020-6jm8",
-          "releaseSlug": null
-        }
-      ],
+      "status": "retained-previous",
+      "error": "HTTP 403",
       "retainedCheckedAt": "2026-11-14"
     },
     {
       "board": "arena_agent_mode",
-      "status": "updated",
-      "reviewRequired": 0,
-      "identityReview": [],
+      "status": "retained-previous",
+      "error": "HTTP 403",
       "retainedCheckedAt": "2026-11-14"
     },
     {
