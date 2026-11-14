@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "checkedAt": "2026-11-13T06:57:56.125Z",
+  "checkedAt": "2026-11-14T06:44:34.693Z",
   "intervalHours": 24,
-  "newEvents": 77,
+  "newEvents": 21,
   "pending": [
     {
       "id": "4533c6040aa95efeaf575f7486523b4550c1a1975e7ba1df4f0cfa6f888e5935",
@@ -31481,6 +31481,433 @@
         "relevant": true
       },
       "status": "pending"
+    },
+    {
+      "id": "ac23cccaaf46aea28e06cb0f389f1e82aee2a7c2f28db869777ff04153c03c63",
+      "sourceId": "command-code-releases",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-14T06:44:34.693Z",
+      "url": "https://commandcode.ai/changelog",
+      "before": null,
+      "after": {
+        "key": "text:c94b62fabfea68ae79808d5d0579cd3d7351305f3e95fd49f2fd3b5c2cf386e6",
+        "hash": "c94b62fabfea68ae79808d5d0579cd3d7351305f3e95fd49f2fd3b5c2cf386e6",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/changelog"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "fa4b6d57790a52d654c730955f25df6657249e7a98e0ea3563658a84f30cb664",
+      "sourceId": "command-code-releases",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-14T06:44:34.693Z",
+      "url": "https://commandcode.ai/changelog",
+      "before": null,
+      "after": {
+        "key": "text:62cf9d0aaf9badaf3b895c8ed0aaaaf25f496377546779508da2e5ec05e2021e",
+        "hash": "62cf9d0aaf9badaf3b895c8ed0aaaaf25f496377546779508da2e5ec05e2021e",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/changelog"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "c2669b975b0154526ca532d3feaa7513e455384e6e5f6f3502821aba405ede8c",
+      "sourceId": "command-code-releases",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-14T06:44:34.693Z",
+      "url": "https://commandcode.ai/changelog",
+      "before": null,
+      "after": {
+        "key": "text:1450947517ab907902f7c74dcb16db5627ee5f521502bf3ad628af06f8c59236",
+        "hash": "1450947517ab907902f7c74dcb16db5627ee5f521502bf3ad628af06f8c59236",
+        "type": "announcement",
+        "signals": [
+          "promotion",
+          "availability"
+        ],
+        "models": [
+          "Beam 1.0 model is retired"
+        ],
+        "url": "https://commandcode.ai/changelog"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "b0d8263ad36e3606eb39538e7088c2d0fbdae0a2cdd111b8b5d8966ab976b05e",
+      "sourceId": "command-code-releases",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-14T06:44:34.693Z",
+      "url": "https://commandcode.ai/changelog",
+      "before": null,
+      "after": {
+        "key": "text:e3ea536180967387af5abce2d698ef907b75f598506f1c3a70a04f1704698248",
+        "hash": "e3ea536180967387af5abce2d698ef907b75f598506f1c3a70a04f1704698248",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/changelog"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "08c7048ca0f66865b352f2bb05fbe131c12bf5fc82fdb2fd6abf734757220ebf",
+      "sourceId": "factory-releases",
+      "channel": "Factory",
+      "kind": "announcement",
+      "detectedAt": "2026-11-14T06:44:34.693Z",
+      "url": "https://docs.factory.com/changelog/release-notes.md",
+      "before": null,
+      "after": {
+        "key": "text:33b0e48e746b47bec54725cfd18d63a8d8f63d6faeb8563fff059b9c550e7d23",
+        "hash": "33b0e48e746b47bec54725cfd18d63a8d8f63d6faeb8563fff059b9c550e7d23",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [],
+        "url": "https://docs.factory.com/changelog/release-notes.md"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "20c3d6ee355e50a54b606359483d3605409c3ceb0932164069c5f7c0d109214e",
+      "sourceId": "factory-releases",
+      "channel": "Factory",
+      "kind": "announcement",
+      "detectedAt": "2026-11-14T06:44:34.693Z",
+      "url": "https://docs.factory.com/changelog/release-notes.md",
+      "before": null,
+      "after": {
+        "key": "text:e651538bf858480b061232dbe20bd229476bc96fbfd61ee3106aa02d90ea4da2",
+        "hash": "e651538bf858480b061232dbe20bd229476bc96fbfd61ee3106aa02d90ea4da2",
+        "type": "announcement",
+        "signals": [],
+        "models": [
+          "ling"
+        ],
+        "url": "https://docs.factory.com/changelog/release-notes.md"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "070605b5cfe24a56d85ee6d9dff7a12fa5d01bf721f1f97d9a89b266e991f0ec",
+      "sourceId": "factory-releases",
+      "channel": "Factory",
+      "kind": "announcement",
+      "detectedAt": "2026-11-14T06:44:34.693Z",
+      "url": "https://docs.factory.com/changelog/release-notes.md",
+      "before": null,
+      "after": {
+        "key": "text:6de44e5b0abaa868adf54b2d128d86c6853d856dfc9a1101bb7423905ad73e02",
+        "hash": "6de44e5b0abaa868adf54b2d128d86c6853d856dfc9a1101bb7423905ad73e02",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [],
+        "url": "https://docs.factory.com/changelog/release-notes.md"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "098132044b3f23647fc116218f8180f3ab745a98c8039063cf78cf9cdef8427c",
+      "sourceId": "factory-releases",
+      "channel": "Factory",
+      "kind": "announcement",
+      "detectedAt": "2026-11-14T06:44:34.693Z",
+      "url": "https://docs.factory.com/changelog/release-notes.md",
+      "before": null,
+      "after": {
+        "key": "text:6312eea5062344bbc2aa4a38ba6af049899838b959d46bfc06c7ae0e5beec273",
+        "hash": "6312eea5062344bbc2aa4a38ba6af049899838b959d46bfc06c7ae0e5beec273",
+        "type": "announcement",
+        "signals": [],
+        "models": [
+          "ling"
+        ],
+        "url": "https://docs.factory.com/changelog/release-notes.md"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "17de870c243b1c8f62cafa5d0763719385f29460e9317105aa137e5f77dc2cf6",
+      "sourceId": "factory-releases",
+      "channel": "Factory",
+      "kind": "announcement",
+      "detectedAt": "2026-11-14T06:44:34.693Z",
+      "url": "https://docs.factory.com/changelog/release-notes.md",
+      "before": null,
+      "after": {
+        "key": "text:0eb1b77afcc4a97bdbb44a3298ba98c6a8a4422a65f8ca706fdbfe26bb5741d9",
+        "hash": "0eb1b77afcc4a97bdbb44a3298ba98c6a8a4422a65f8ca706fdbfe26bb5741d9",
+        "type": "announcement",
+        "signals": [],
+        "models": [
+          "swerable"
+        ],
+        "url": "https://docs.factory.com/changelog/release-notes.md"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "97f1a0a674089000a36354ca6e3bcf0672dee01be75fc4812b7c4bff1fb84112",
+      "sourceId": "factory-releases",
+      "channel": "Factory",
+      "kind": "announcement",
+      "detectedAt": "2026-11-14T06:44:34.693Z",
+      "url": "https://docs.factory.com/changelog/release-notes.md",
+      "before": null,
+      "after": {
+        "key": "text:54aad73404db13a6059fbe085d6c1ad58579a9db59119852689f58e579b4bc71",
+        "hash": "54aad73404db13a6059fbe085d6c1ad58579a9db59119852689f58e579b4bc71",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [],
+        "url": "https://docs.factory.com/changelog/release-notes.md"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "8094a067e16863597daf7c3b2e293b3fcdc974e5db4cdf21fc9bf5ad3309317e",
+      "sourceId": "factory-releases",
+      "channel": "Factory",
+      "kind": "announcement",
+      "detectedAt": "2026-11-14T06:44:34.693Z",
+      "url": "https://docs.factory.com/changelog/release-notes.md",
+      "before": null,
+      "after": {
+        "key": "text:1c6ffd07067fd47e135c0d349ce4051156cfc5e1c580cc51d7ed14e9adb340bb",
+        "hash": "1c6ffd07067fd47e135c0d349ce4051156cfc5e1c580cc51d7ed14e9adb340bb",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [],
+        "url": "https://docs.factory.com/changelog/release-notes.md"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "167fffbf835d72086a5f348c530f95bdb5930555a65fa485e8578bd826415b29",
+      "sourceId": "devin-releases",
+      "channel": "Devin",
+      "kind": "announcement",
+      "detectedAt": "2026-11-14T06:44:34.693Z",
+      "url": "https://docs.devin.ai/release-notes/overview#sessions-&-workspace",
+      "before": null,
+      "after": {
+        "key": "text:6b81d3292431759a16334f2f90c6965c62d09145f610c917c2765bf1042ec43a",
+        "hash": "6b81d3292431759a16334f2f90c6965c62d09145f610c917c2765bf1042ec43a",
+        "type": "announcement",
+        "signals": [
+          "pricing",
+          "availability"
+        ],
+        "models": [],
+        "url": "https://docs.devin.ai/release-notes/overview#sessions-&-workspace"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "d386dd9aa5ade28e87b0c75512c513bfc47ae1913c2bdcec08ee56c7fada85a5",
+      "sourceId": "alibaba-coding-cn",
+      "channel": "Alibaba",
+      "kind": "announcement",
+      "detectedAt": "2026-11-14T06:44:34.693Z",
+      "url": "https://help.aliyun.com/zh/model-studio/coding-plan-guide/",
+      "before": null,
+      "after": {
+        "key": "text:f837ee72cddef210988d8398da2dfcb6dfd72a83f9cb13673613ffb23a3be86d",
+        "hash": "f837ee72cddef210988d8398da2dfcb6dfd72a83f9cb13673613ffb23a3be86d",
+        "type": "announcement",
+        "signals": [],
+        "models": [],
+        "url": "https://help.aliyun.com/zh/model-studio/coding-plan-guide/"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "3f39fcb5188dbef8d54699d48891258aad0c84a211d3775c5caa7a5a0b1c5a9d",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "announcement",
+      "detectedAt": "2026-11-14T06:44:34.693Z",
+      "url": "https://help.aliyun.com/",
+      "before": null,
+      "after": {
+        "key": "text:c6331a8c511a8bcbc3875d6eab0b268db2d55d5b5e18db81347f58611f6c7435",
+        "hash": "c6331a8c511a8bcbc3875d6eab0b268db2d55d5b5e18db81347f58611f6c7435",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [],
+        "url": "https://help.aliyun.com/"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "0fe110453617116b59fc66b2a182d8edb2cdb6318938ee05f34b5f7f3cedd8d8",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "announcement",
+      "detectedAt": "2026-11-14T06:44:34.693Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": null,
+      "after": {
+        "key": "text:bb430f8f6bb6f7aa9dfc8ff7803211fd6c4ff4f30c45dbbff4c76bff797e4db8",
+        "hash": "bb430f8f6bb6f7aa9dfc8ff7803211fd6c4ff4f30c45dbbff4c76bff797e4db8",
+        "type": "announcement",
+        "signals": [
+          "version"
+        ],
+        "models": [],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "0431adf34bf0bd27668bb50d1b8782479a18ec12f553798ed4e29f6f15a9f907",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "announcement",
+      "detectedAt": "2026-11-14T06:44:34.693Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-usage-quota#tpuq-h-exhausted",
+      "before": null,
+      "after": {
+        "key": "text:999a6b12009b1f28d576f1dc5bb060a3fd906690aa53e3ae6951f9860331cbc3",
+        "hash": "999a6b12009b1f28d576f1dc5bb060a3fd906690aa53e3ae6951f9860331cbc3",
+        "type": "announcement",
+        "signals": [
+          "pricing"
+        ],
+        "models": [],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-usage-quota#tpuq-h-exhausted"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "da097195b0212a973214c528af13a39dccd0a82f8930aa245ade8094f523f591",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "announcement",
+      "detectedAt": "2026-11-14T06:44:34.693Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-usage-quota#tpuq-h-order",
+      "before": null,
+      "after": {
+        "key": "text:08dded3adb9912ad7f08ade384f269c0cb85820f40eafcd88a138f71531a874e",
+        "hash": "08dded3adb9912ad7f08ade384f269c0cb85820f40eafcd88a138f71531a874e",
+        "type": "announcement",
+        "signals": [
+          "pricing",
+          "promotion"
+        ],
+        "models": [],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-usage-quota#tpuq-h-order"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "bbd7748fdee9e1ca5257f931993be0aa1a866a4c2d01c52672d2c66da0e73800",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "announcement",
+      "detectedAt": "2026-11-14T06:44:34.693Z",
+      "url": "https://bailian.console.aliyun.com/cn-beijing/subscription/token-plan",
+      "before": null,
+      "after": {
+        "key": "text:d7b8734b9a0959da25b2f04ef05ecaac0671e2279d8cc092ece95225fa3ec54e",
+        "hash": "d7b8734b9a0959da25b2f04ef05ecaac0671e2279d8cc092ece95225fa3ec54e",
+        "type": "announcement",
+        "signals": [
+          "pricing"
+        ],
+        "models": [],
+        "url": "https://bailian.console.aliyun.com/cn-beijing/subscription/token-plan"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "b8e62270868927104dd19a81031e4c62c758232487e20bda2ebd6b74c26fa12d",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "announcement",
+      "detectedAt": "2026-11-14T06:44:34.693Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-usage-quota#tpuq-h-upgrade",
+      "before": null,
+      "after": {
+        "key": "text:2d75cf2b8d5cbdd924ae76fea5d7d45e5851fa54799a4c3ed200de1617bbdc96",
+        "hash": "2d75cf2b8d5cbdd924ae76fea5d7d45e5851fa54799a4c3ed200de1617bbdc96",
+        "type": "announcement",
+        "signals": [
+          "version",
+          "pricing"
+        ],
+        "models": [],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-usage-quota#tpuq-h-upgrade"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "01e623320d2c2618aa73065b41e70bf4f4d247b56dd52fd0ac20d715cd53c0f7",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "announcement",
+      "detectedAt": "2026-11-14T06:44:34.693Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-usage-quota#tpuq-h-reset",
+      "before": null,
+      "after": {
+        "key": "text:8caf227b63204af955b841cb503ffa8893d9a5dae079da7dbf7bf9f38ec064f8",
+        "hash": "8caf227b63204af955b841cb503ffa8893d9a5dae079da7dbf7bf9f38ec064f8",
+        "type": "announcement",
+        "signals": [
+          "pricing"
+        ],
+        "models": [],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-usage-quota#tpuq-h-reset"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "eda0d65875fecb7c635bf796a415b800932e31d71497140d273eaf20a409f640",
+      "sourceId": "command-code-social",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-14T06:44:34.693Z",
+      "url": "https://x.com/CommandCodeAI/status/2121279422984851601",
+      "before": null,
+      "after": {
+        "key": "post:2121279422984851601",
+        "type": "announcement",
+        "hash": "cc059da62aa4b9121dd71add9136f5aa71437b621495409d28f06d11f95aa542",
+        "signals": [
+          "pricing"
+        ],
+        "models": [
+          "GLM-5.3 usage from "
+        ],
+        "url": "https://x.com/CommandCodeAI/status/2121279422984851601",
+        "relevant": true
+      },
+      "status": "pending"
     }
   ],
   "resolvedCount": 0,
@@ -31490,8 +31917,8 @@
       "channel": "OpenCode",
       "url": "https://opencode.ai/v2/docs/console/go/",
       "kind": "tables",
-      "attemptedAt": "2026-11-13T06:57:56.125Z",
-      "lastSuccessAt": "2026-11-13T06:57:56.125Z",
+      "attemptedAt": "2026-11-14T06:44:34.693Z",
+      "lastSuccessAt": "2026-11-14T06:44:34.693Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -31502,10 +31929,10 @@
       "channel": "OpenCode",
       "url": "https://opencode.ai/changelog",
       "kind": "document",
-      "attemptedAt": "2026-11-13T06:57:56.125Z",
+      "attemptedAt": "2026-11-14T06:44:34.693Z",
       "lastSuccessAt": "2026-11-06T07:00:45.218Z",
       "status": "failed",
-      "consecutiveFailures": 7,
+      "consecutiveFailures": 8,
       "retrieval": "http",
       "error": "Table coverage dropped by more than 40%; retaining last successful snapshot",
       "recordCount": 190
@@ -31515,8 +31942,8 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/go",
       "kind": "tables",
-      "attemptedAt": "2026-11-13T06:57:56.125Z",
-      "lastSuccessAt": "2026-11-13T06:57:56.125Z",
+      "attemptedAt": "2026-11-14T06:44:34.693Z",
+      "lastSuccessAt": "2026-11-14T06:44:34.693Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -31527,8 +31954,8 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/goat",
       "kind": "tables",
-      "attemptedAt": "2026-11-13T06:57:56.125Z",
-      "lastSuccessAt": "2026-11-13T06:57:56.125Z",
+      "attemptedAt": "2026-11-14T06:44:34.693Z",
+      "lastSuccessAt": "2026-11-14T06:44:34.693Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -31539,8 +31966,8 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/pro",
       "kind": "tables",
-      "attemptedAt": "2026-11-13T06:57:56.125Z",
-      "lastSuccessAt": "2026-11-13T06:57:56.125Z",
+      "attemptedAt": "2026-11-14T06:44:34.693Z",
+      "lastSuccessAt": "2026-11-14T06:44:34.693Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -31551,8 +31978,8 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/max",
       "kind": "tables",
-      "attemptedAt": "2026-11-13T06:57:56.125Z",
-      "lastSuccessAt": "2026-11-13T06:57:56.125Z",
+      "attemptedAt": "2026-11-14T06:44:34.693Z",
+      "lastSuccessAt": "2026-11-14T06:44:34.693Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -31563,8 +31990,8 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/reference/cli/models",
       "kind": "tables",
-      "attemptedAt": "2026-11-13T06:57:56.125Z",
-      "lastSuccessAt": "2026-11-13T06:57:56.125Z",
+      "attemptedAt": "2026-11-14T06:44:34.693Z",
+      "lastSuccessAt": "2026-11-14T06:44:34.693Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -31575,8 +32002,8 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/resources/pricing-limits",
       "kind": "tables",
-      "attemptedAt": "2026-11-13T06:57:56.125Z",
-      "lastSuccessAt": "2026-11-13T06:57:56.125Z",
+      "attemptedAt": "2026-11-14T06:44:34.693Z",
+      "lastSuccessAt": "2026-11-14T06:44:34.693Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -31587,20 +32014,20 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/changelog",
       "kind": "document",
-      "attemptedAt": "2026-11-13T06:57:56.125Z",
-      "lastSuccessAt": "2026-11-13T06:57:56.125Z",
+      "attemptedAt": "2026-11-14T06:44:34.693Z",
+      "lastSuccessAt": "2026-11-14T06:44:34.693Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 432
+      "recordCount": 436
     },
     {
       "id": "ollama-pricing",
       "channel": "Ollama",
       "url": "https://ollama.com/pricing",
       "kind": "tables",
-      "attemptedAt": "2026-11-13T06:57:56.125Z",
-      "lastSuccessAt": "2026-11-13T06:57:56.125Z",
+      "attemptedAt": "2026-11-14T06:44:34.693Z",
+      "lastSuccessAt": "2026-11-14T06:44:34.693Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -31611,8 +32038,8 @@
       "channel": "Ollama",
       "url": "https://ollama.com/blog",
       "kind": "document",
-      "attemptedAt": "2026-11-13T06:57:56.125Z",
-      "lastSuccessAt": "2026-11-13T06:57:56.125Z",
+      "attemptedAt": "2026-11-14T06:44:34.693Z",
+      "lastSuccessAt": "2026-11-14T06:44:34.693Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -31623,8 +32050,8 @@
       "channel": "Factory",
       "url": "https://docs.factory.com/models.md",
       "kind": "tables",
-      "attemptedAt": "2026-11-13T06:57:56.125Z",
-      "lastSuccessAt": "2026-11-13T06:57:56.125Z",
+      "attemptedAt": "2026-11-14T06:44:34.693Z",
+      "lastSuccessAt": "2026-11-14T06:44:34.693Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -31635,8 +32062,8 @@
       "channel": "Factory",
       "url": "https://docs.factory.com/pricing/individuals.md",
       "kind": "document",
-      "attemptedAt": "2026-11-13T06:57:56.125Z",
-      "lastSuccessAt": "2026-11-13T06:57:56.125Z",
+      "attemptedAt": "2026-11-14T06:44:34.693Z",
+      "lastSuccessAt": "2026-11-14T06:44:34.693Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -31647,20 +32074,20 @@
       "channel": "Factory",
       "url": "https://docs.factory.com/changelog/release-notes.md",
       "kind": "document",
-      "attemptedAt": "2026-11-13T06:57:56.125Z",
-      "lastSuccessAt": "2026-11-13T06:57:56.125Z",
+      "attemptedAt": "2026-11-14T06:44:34.693Z",
+      "lastSuccessAt": "2026-11-14T06:44:34.693Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 718
+      "recordCount": 725
     },
     {
       "id": "cursor-pricing",
       "channel": "Cursor",
       "url": "https://cursor.com/docs/models-and-pricing",
       "kind": "tables",
-      "attemptedAt": "2026-11-13T06:57:56.125Z",
-      "lastSuccessAt": "2026-11-13T06:57:56.125Z",
+      "attemptedAt": "2026-11-14T06:44:34.693Z",
+      "lastSuccessAt": "2026-11-14T06:44:34.693Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -31671,8 +32098,8 @@
       "channel": "Cursor",
       "url": "https://cursor.com/changelog",
       "kind": "document",
-      "attemptedAt": "2026-11-13T06:57:56.125Z",
-      "lastSuccessAt": "2026-11-13T06:57:56.125Z",
+      "attemptedAt": "2026-11-14T06:44:34.693Z",
+      "lastSuccessAt": "2026-11-14T06:44:34.693Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -31683,20 +32110,20 @@
       "channel": "Devin",
       "url": "https://docs.devin.ai/release-notes/overview",
       "kind": "document",
-      "attemptedAt": "2026-11-13T06:57:56.125Z",
-      "lastSuccessAt": "2026-11-13T06:57:56.125Z",
+      "attemptedAt": "2026-11-14T06:44:34.693Z",
+      "lastSuccessAt": "2026-11-14T06:44:34.693Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 72
+      "recordCount": 73
     },
     {
       "id": "alibaba-coding-global",
       "channel": "Alibaba",
       "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan",
       "kind": "tables",
-      "attemptedAt": "2026-11-13T06:57:56.125Z",
-      "lastSuccessAt": "2026-11-13T06:57:56.125Z",
+      "attemptedAt": "2026-11-14T06:44:34.693Z",
+      "lastSuccessAt": "2026-11-14T06:44:34.693Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -31707,8 +32134,8 @@
       "channel": "Alibaba",
       "url": "https://help.aliyun.com/zh/model-studio/coding-plan",
       "kind": "tables",
-      "attemptedAt": "2026-11-13T06:57:56.125Z",
-      "lastSuccessAt": "2026-11-13T06:57:56.125Z",
+      "attemptedAt": "2026-11-14T06:44:34.693Z",
+      "lastSuccessAt": "2026-11-14T06:44:34.693Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -31719,20 +32146,20 @@
       "channel": "Alibaba",
       "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
       "kind": "tables",
-      "attemptedAt": "2026-11-13T06:57:56.125Z",
-      "lastSuccessAt": "2026-11-13T06:57:56.125Z",
+      "attemptedAt": "2026-11-14T06:44:34.693Z",
+      "lastSuccessAt": "2026-11-14T06:44:34.693Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 79
+      "recordCount": 56
     },
     {
       "id": "opencode-social",
       "channel": "OpenCode",
       "url": "https://x.com/opencode",
       "kind": "social",
-      "attemptedAt": "2026-11-13T06:57:56.125Z",
-      "lastSuccessAt": "2026-11-13T06:57:56.125Z",
+      "attemptedAt": "2026-11-14T06:44:34.693Z",
+      "lastSuccessAt": "2026-11-14T06:44:34.693Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "official-oembed; discovery may use mirror",
@@ -31743,8 +32170,8 @@
       "channel": "Command Code",
       "url": "https://x.com/CommandCodeAI",
       "kind": "social",
-      "attemptedAt": "2026-11-13T06:57:56.125Z",
-      "lastSuccessAt": "2026-11-13T06:57:56.125Z",
+      "attemptedAt": "2026-11-14T06:44:34.693Z",
+      "lastSuccessAt": "2026-11-14T06:44:34.693Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "official-oembed; discovery may use mirror",
