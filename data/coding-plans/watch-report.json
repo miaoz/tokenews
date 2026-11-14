@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "checkedAt": "2026-11-14T06:44:34.693Z",
+  "checkedAt": "2026-11-14T07:52:17.719Z",
   "intervalHours": 24,
-  "newEvents": 21,
+  "newEvents": 25,
   "pending": [
     {
       "id": "4533c6040aa95efeaf575f7486523b4550c1a1975e7ba1df4f0cfa6f888e5935",
@@ -14591,6 +14591,585 @@
         "relevant": true
       },
       "status": "pending"
+    },
+    {
+      "id": "409a0f33f3f57cbb63ef8b067698a1f9d6ab7ef9b128f1e617280fa6dd1a4fe6",
+      "sourceId": "opencode-releases",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-14T07:52:17.719Z",
+      "url": "https://github.com/anomalyco/opencode/pull/63207",
+      "before": null,
+      "after": {
+        "key": "text:bcd0ee5a272da759279f392f5aabbf0aa18696e549eabf5548e4e346a7262ca3",
+        "hash": "bcd0ee5a272da759279f392f5aabbf0aa18696e549eabf5548e4e346a7262ca3",
+        "type": "announcement",
+        "signals": [],
+        "models": [
+          "step again"
+        ],
+        "url": "https://github.com/anomalyco/opencode/pull/63207"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "adefc73d75aba0007daf1aa9940d4f2703b922f3deaea27b4d7bc9c45975a3ff",
+      "sourceId": "opencode-releases",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-14T07:52:17.719Z",
+      "url": "https://github.com/anomalyco/opencode/pull/62997",
+      "before": null,
+      "after": {
+        "key": "text:dd3826d03554f3bad94e3baa2cff319b0a41f368c91a306856134c4bbbfbb1bc",
+        "hash": "dd3826d03554f3bad94e3baa2cff319b0a41f368c91a306856134c4bbbfbb1bc",
+        "type": "announcement",
+        "signals": [
+          "promotion",
+          "availability"
+        ],
+        "models": [],
+        "url": "https://github.com/anomalyco/opencode/pull/62997"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "bc993219e60799b114cb7aa6b4ba8317b71c948ea86df9d8d3a293e87613304a",
+      "sourceId": "opencode-releases",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-14T07:52:17.719Z",
+      "url": "https://opencode.ai/changelog",
+      "before": null,
+      "after": {
+        "key": "text:dc84fe9c14c54c6fba7849f5518bdadcb77715901f28272d82e22c7485682159",
+        "hash": "dc84fe9c14c54c6fba7849f5518bdadcb77715901f28272d82e22c7485682159",
+        "type": "announcement",
+        "signals": [
+          "pricing",
+          "availability"
+        ],
+        "models": [],
+        "url": "https://opencode.ai/changelog"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "ffbdd604c77926018eafe84124f96ff4ef052750b90bce9665d604ff9d2a3372",
+      "sourceId": "opencode-releases",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-14T07:52:17.719Z",
+      "url": "https://github.com/anomalyco/opencode/pull/60647",
+      "before": null,
+      "after": {
+        "key": "text:eb7cb50feef02858013d7114798e6e9421119e0c06ff55adea1ab275b0c5c1b0",
+        "hash": "eb7cb50feef02858013d7114798e6e9421119e0c06ff55adea1ab275b0c5c1b0",
+        "type": "announcement",
+        "signals": [
+          "promotion",
+          "availability"
+        ],
+        "models": [],
+        "url": "https://github.com/anomalyco/opencode/pull/60647"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "b5170e865c66bfc3f5402f23ede07386d939988f284d02e06bf90c85a4994c07",
+      "sourceId": "opencode-releases",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-14T07:52:17.719Z",
+      "url": "https://github.com/anomalyco/opencode/pull/60603",
+      "before": null,
+      "after": {
+        "key": "text:9d5451d864813fefc56fe46f56fecf081af2f0e2355d11913330ffa0419dc6e1",
+        "hash": "9d5451d864813fefc56fe46f56fecf081af2f0e2355d11913330ffa0419dc6e1",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [
+          "Claude Agent from the provider picker to copy claude auth login ",
+          "Claude Code"
+        ],
+        "url": "https://github.com/anomalyco/opencode/pull/60603"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "fd509c77759a08c166755593599e39ef5b66b83fca59ea2d026cf33ee5b07f4c",
+      "sourceId": "opencode-releases",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-14T07:52:17.719Z",
+      "url": "https://github.com/anomalyco/opencode/pull/60579",
+      "before": null,
+      "after": {
+        "key": "text:0656597450f9411ff50c42e92cb62310bc359a716af04460c55d1714bff90e73",
+        "hash": "0656597450f9411ff50c42e92cb62310bc359a716af04460c55d1714bff90e73",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [],
+        "url": "https://github.com/anomalyco/opencode/pull/60579"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "a2abe53db4dcd8d0750bd92983143e0598b1f3fddf1e598caf40135e698d7af7",
+      "sourceId": "opencode-releases",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-14T07:52:17.719Z",
+      "url": "https://github.com/anomalyco/opencode/pull/60625",
+      "before": null,
+      "after": {
+        "key": "text:cd5f0e73988e35dcd3cdc1951ae35e57c44780a4ddc277e0ffae5239c9320be0",
+        "hash": "cd5f0e73988e35dcd3cdc1951ae35e57c44780a4ddc277e0ffae5239c9320be0",
+        "type": "announcement",
+        "signals": [
+          "pricing"
+        ],
+        "models": [
+          "DeepSeek V4.1 Flash. "
+        ],
+        "url": "https://github.com/anomalyco/opencode/pull/60625"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "8e209a5120125da686feab2d1359af5867663f5e2a0dd711795af9daecbe6941",
+      "sourceId": "opencode-releases",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-14T07:52:17.719Z",
+      "url": "https://github.com/anomalyco/opencode/pull/60329",
+      "before": null,
+      "after": {
+        "key": "text:2d51012438ad740e805f3f1b1af1e8e6c22bd28dd8c971861e45793b0d62eef5",
+        "hash": "2d51012438ad740e805f3f1b1af1e8e6c22bd28dd8c971861e45793b0d62eef5",
+        "type": "announcement",
+        "signals": [],
+        "models": [],
+        "url": "https://github.com/anomalyco/opencode/pull/60329"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "c8cb28314288fbaaf9cf57a7f2c3110b0276e5529fe5a1f3b412ca10bd108e15",
+      "sourceId": "opencode-releases",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-14T07:52:17.719Z",
+      "url": "https://github.com/anomalyco/opencode/pull/58782",
+      "before": null,
+      "after": {
+        "key": "text:cb74d6f6f7b9d4b083a5058668365efe63b7c12e34a76a857a6bad51f7398384",
+        "hash": "cb74d6f6f7b9d4b083a5058668365efe63b7c12e34a76a857a6bad51f7398384",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [
+          "Claude Code",
+          "claude auth login ",
+          "Claude Agent in /connect to use your Claude Code login and models. "
+        ],
+        "url": "https://github.com/anomalyco/opencode/pull/58782"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "8efc028814c1353181fa9d2dd6ed0e94659e5daa3e50d0609c0509dcb8ab4b30",
+      "sourceId": "opencode-releases",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-14T07:52:17.719Z",
+      "url": "https://github.com/anomalyco/opencode/pull/60258",
+      "before": null,
+      "after": {
+        "key": "text:ff80c19a952ac555c61bc191fb19bc1cc08a77edf03e45d047963f6cffe95845",
+        "hash": "ff80c19a952ac555c61bc191fb19bc1cc08a77edf03e45d047963f6cffe95845",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [],
+        "url": "https://github.com/anomalyco/opencode/pull/60258"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "6ea2d4f0868e48c88e59572317df7c0a78940db9059de4872c58c297fb2d28dc",
+      "sourceId": "opencode-releases",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-14T07:52:17.719Z",
+      "url": "https://github.com/anomalyco/opencode/pull/59939",
+      "before": null,
+      "after": {
+        "key": "text:7567349d787d766f49e2e832149e7a30760bbf043626d07b710d3244184b3ad8",
+        "hash": "7567349d787d766f49e2e832149e7a30760bbf043626d07b710d3244184b3ad8",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [],
+        "url": "https://github.com/anomalyco/opencode/pull/59939"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "b5154c973d4ee9749418e5d56ff6c882f15f52b94f5739941b77e6c2dba6135c",
+      "sourceId": "opencode-releases",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-14T07:52:17.719Z",
+      "url": "https://github.com/anomalyco/opencode/pull/59997",
+      "before": null,
+      "after": {
+        "key": "text:7effcae503f7193d30bd1d3be76ab28d061705e76356bea8ae29c92ad55d53d5",
+        "hash": "7effcae503f7193d30bd1d3be76ab28d061705e76356bea8ae29c92ad55d53d5",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [],
+        "url": "https://github.com/anomalyco/opencode/pull/59997"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "f291b0f1d17a24faf5876608637d7710bce827eec4e0a6f9de67c47f3b05e7a9",
+      "sourceId": "opencode-releases",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-14T07:52:17.719Z",
+      "url": "https://opencode.ai/changelog",
+      "before": null,
+      "after": {
+        "key": "text:a99565252f8c91c6a22c679315cb09c82bc23556dc2c02bc3896a51b851053eb",
+        "hash": "a99565252f8c91c6a22c679315cb09c82bc23556dc2c02bc3896a51b851053eb",
+        "type": "announcement",
+        "signals": [],
+        "models": [
+          "mistral "
+        ],
+        "url": "https://opencode.ai/changelog"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "22ebc5126cc9c672e2f36c198f07dd30105113a3ce4d6feaa0d72a4c706867f1",
+      "sourceId": "opencode-releases",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-14T07:52:17.719Z",
+      "url": "https://opencode.ai/changelog",
+      "before": null,
+      "after": {
+        "key": "text:be7ce96118add301f1158b999bf980717aa35a12a3dd1f642dd8a11308f12260",
+        "hash": "be7ce96118add301f1158b999bf980717aa35a12a3dd1f642dd8a11308f12260",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [],
+        "url": "https://opencode.ai/changelog"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "cbf8fa37d301b93155727d0ba2e82c630ff5f016e2690d487de44699677924c9",
+      "sourceId": "opencode-releases",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-14T07:52:17.719Z",
+      "url": "https://github.com/anomalyco/opencode/pull/59190",
+      "before": null,
+      "after": {
+        "key": "text:48fd25a0a09ff9189a783b769114f24daed2753b4b085cae68c1f92ded899086",
+        "hash": "48fd25a0a09ff9189a783b769114f24daed2753b4b085cae68c1f92ded899086",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [
+          "clef"
+        ],
+        "url": "https://github.com/anomalyco/opencode/pull/59190"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "51c573d403d3f008b0c6b16506276daa3a07bec3336499c1ae231c5365427684",
+      "sourceId": "opencode-releases",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-14T07:52:17.719Z",
+      "url": "https://github.com/anomalyco/opencode/pull/56550",
+      "before": null,
+      "after": {
+        "key": "text:738666b4f3bcbe433b91d19dc7546f3cc21097c3a88653b6fe23fe23939ae0fd",
+        "hash": "738666b4f3bcbe433b91d19dc7546f3cc21097c3a88653b6fe23fe23939ae0fd",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [
+          "step. The entries also survive compaction and reverts"
+        ],
+        "url": "https://github.com/anomalyco/opencode/pull/56550"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "98ac6aee0bf873755b7872f0dd399c7fcd80c64193b0124e9ecb807e000b97ee",
+      "sourceId": "opencode-releases",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-14T07:52:17.719Z",
+      "url": "https://opencode.ai/changelog",
+      "before": null,
+      "after": {
+        "key": "text:8693fb8fbc3274b0378367c939a953bc53f416390050854e94e992152e36d2c2",
+        "hash": "8693fb8fbc3274b0378367c939a953bc53f416390050854e94e992152e36d2c2",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [],
+        "url": "https://opencode.ai/changelog"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "ac52b9443655185d200f446d390f68bf65e757621a45be8556a5756ce0553e97",
+      "sourceId": "opencode-releases",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-14T07:52:17.719Z",
+      "url": "https://opentui.com/docs/releases/0.7.0",
+      "before": null,
+      "after": {
+        "key": "text:fec2890610fc1fbcd51347822b3a8488cc5ca5659c150ea3c19b1a982835cfca",
+        "hash": "fec2890610fc1fbcd51347822b3a8488cc5ca5659c150ea3c19b1a982835cfca",
+        "type": "announcement",
+        "signals": [
+          "version",
+          "promotion",
+          "availability"
+        ],
+        "models": [],
+        "url": "https://opentui.com/docs/releases/0.7.0"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "3c32fbaca348786bad6906ae75f3201a9f50120dcc911ef6051590bd1583c22e",
+      "sourceId": "opencode-releases",
+      "channel": "OpenCode",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-14T07:52:17.719Z",
+      "url": "https://opencode.ai/changelog",
+      "before": {
+        "key": "row:0:8d75171e0245:Text and reasoning parts:0",
+        "type": "table-row",
+        "label": "Text and reasoning parts",
+        "heading": "Provider replay data is now native",
+        "columns": [
+          "Surface",
+          "Before",
+          "After"
+        ],
+        "cells": [
+          "Text and reasoning parts",
+          "state",
+          "native"
+        ],
+        "hash": "ac4cf89ce6ef057b91a9183618fb73eb8b94d7b4e7eb090b2c619e4353546518",
+        "signals": [],
+        "url": "https://opencode.ai/changelog"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "7bf57a31aaed15831a71b48c16c4129c7122fbc232ac5c53a16dfb1891b168d4",
+      "sourceId": "opencode-releases",
+      "channel": "OpenCode",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-14T07:52:17.719Z",
+      "url": "https://opencode.ai/changelog",
+      "before": {
+        "key": "row:0:8d75171e0245:Assistant and compaction messages:0",
+        "type": "table-row",
+        "label": "Assistant and compaction messages",
+        "heading": "Provider replay data is now native",
+        "columns": [
+          "Surface",
+          "Before",
+          "After"
+        ],
+        "cells": [
+          "Assistant and compaction messages",
+          "providerState",
+          "native"
+        ],
+        "hash": "2c04b36b319972d8836f0b041bc5c6b7d5e175f3d4794e38b4add0bcd063c0e2",
+        "signals": [],
+        "url": "https://opencode.ai/changelog"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "a59e27350c7ef4621d4eba6fa411b74faf92a2c874a9a49b9d7f072aa2e3dd35",
+      "sourceId": "opencode-releases",
+      "channel": "OpenCode",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-14T07:52:17.719Z",
+      "url": "https://opencode.ai/changelog",
+      "before": {
+        "key": "row:0:8d75171e0245:Text/reasoning lifecycle events and session.tool.called:0",
+        "type": "table-row",
+        "label": "Text/reasoning lifecycle events and session.tool.called",
+        "heading": "Provider replay data is now native",
+        "columns": [
+          "Surface",
+          "Before",
+          "After"
+        ],
+        "cells": [
+          "Text/reasoning lifecycle events and session.tool.called",
+          "state",
+          "native"
+        ],
+        "hash": "2bf446bbb3431c711172e69d43d2e46ef649a99ace8c0d47c6fa52cf2940eff7",
+        "signals": [],
+        "url": "https://opencode.ai/changelog"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "3b5e0e524f4e7239571b61120ac0e58dd092d4a6f485765a3d6f6a8107e01e03",
+      "sourceId": "opencode-releases",
+      "channel": "OpenCode",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-14T07:52:17.719Z",
+      "url": "https://opencode.ai/changelog",
+      "before": {
+        "key": "row:0:8d75171e0245:session.step.ended , session.step.failed , and session.compaction.ended:0",
+        "type": "table-row",
+        "label": "session.step.ended , session.step.failed , and session.compaction.ended",
+        "heading": "Provider replay data is now native",
+        "columns": [
+          "Surface",
+          "Before",
+          "After"
+        ],
+        "cells": [
+          "session.step.ended , session.step.failed , and session.compaction.ended",
+          "providerState",
+          "native"
+        ],
+        "hash": "8d5d3a9ebb67b9158ade9022440958fe1164756d18585b1a2995adc716c1436d",
+        "signals": [],
+        "url": "https://opencode.ai/changelog"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "2fd46911c750ae25400139ccbee3a630e92d2b28180c75dc72983be416b073ae",
+      "sourceId": "opencode-releases",
+      "channel": "OpenCode",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-14T07:52:17.719Z",
+      "url": "https://opencode.ai/changelog",
+      "before": {
+        "key": "row:0:8d75171e0245:session.tool.success and session.tool.failed:0",
+        "type": "table-row",
+        "label": "session.tool.success and session.tool.failed",
+        "heading": "Provider replay data is now native",
+        "columns": [
+          "Surface",
+          "Before",
+          "After"
+        ],
+        "cells": [
+          "session.tool.success and session.tool.failed",
+          "resultState",
+          "native"
+        ],
+        "hash": "be6b00c4fb123c61a442e9ac0a17b7bb57bcda32a8779d85845eff4da40e4459",
+        "signals": [],
+        "url": "https://opencode.ai/changelog"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "e3c2344564c17a3496b309cd4df5eb2fd0bd6af62f634615cd5b9abaa73ca57c",
+      "sourceId": "opencode-releases",
+      "channel": "OpenCode",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-14T07:52:17.719Z",
+      "url": "https://opencode.ai/changelog",
+      "before": {
+        "key": "row:0:8d75171e0245:Exported replay-data schema:0",
+        "type": "table-row",
+        "label": "Exported replay-data schema",
+        "heading": "Provider replay data is now native",
+        "columns": [
+          "Surface",
+          "Before",
+          "After"
+        ],
+        "cells": [
+          "Exported replay-data schema",
+          "SessionMessage.ProviderState",
+          "SessionMessage.Native"
+        ],
+        "hash": "5e2765718b2932b881f03a42542feefe6717ed5662d8772ba41c3e19bd195fb9",
+        "signals": [],
+        "url": "https://opencode.ai/changelog"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "952ebcc027e2b2685effba37352c98ec261a0b2c877589704e45b9efef00c2d3",
+      "sourceId": "opencode-releases",
+      "channel": "OpenCode",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-14T07:52:17.719Z",
+      "url": "https://opencode.ai/changelog",
+      "before": {
+        "key": "row:0:8d75171e0245:Plugin compaction hook result:0",
+        "type": "table-row",
+        "label": "Plugin compaction hook result",
+        "heading": "Provider replay data is now native",
+        "columns": [
+          "Surface",
+          "Before",
+          "After"
+        ],
+        "cells": [
+          "Plugin compaction hook result",
+          "SessionCompactionResult.providerState",
+          "SessionCompactionResult.native"
+        ],
+        "hash": "f065dbd28dba9b4cdea8eec437801f10fbb2d86171e5ba9ca53dfab0a304c720",
+        "signals": [],
+        "url": "https://opencode.ai/changelog"
+      },
+      "after": null,
+      "status": "pending"
     }
   ],
   "resolvedCount": 433,
@@ -14600,33 +15179,32 @@
       "channel": "OpenCode",
       "url": "https://opencode.ai/v2/docs/console/go/",
       "kind": "tables",
-      "attemptedAt": "2026-11-14T06:44:34.693Z",
-      "lastSuccessAt": "2026-11-14T06:44:34.693Z",
+      "attemptedAt": "2026-11-14T07:52:17.719Z",
+      "lastSuccessAt": "2026-11-14T07:52:17.719Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 410
+      "recordCount": 409
     },
     {
       "id": "opencode-releases",
       "channel": "OpenCode",
       "url": "https://opencode.ai/changelog",
       "kind": "document",
-      "attemptedAt": "2026-11-14T06:44:34.693Z",
-      "lastSuccessAt": "2026-11-06T07:00:45.218Z",
-      "status": "failed",
-      "consecutiveFailures": 8,
+      "attemptedAt": "2026-11-14T07:52:17.719Z",
+      "lastSuccessAt": "2026-11-14T07:52:17.719Z",
+      "status": "checked",
+      "consecutiveFailures": 0,
       "retrieval": "http",
-      "error": "Table coverage dropped by more than 40%; retaining last successful snapshot",
-      "recordCount": 190
+      "recordCount": 21
     },
     {
       "id": "command-code-go",
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/go",
       "kind": "tables",
-      "attemptedAt": "2026-11-14T06:44:34.693Z",
-      "lastSuccessAt": "2026-11-14T06:44:34.693Z",
+      "attemptedAt": "2026-11-14T07:52:17.719Z",
+      "lastSuccessAt": "2026-11-14T07:52:17.719Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -14637,8 +15215,8 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/goat",
       "kind": "tables",
-      "attemptedAt": "2026-11-14T06:44:34.693Z",
-      "lastSuccessAt": "2026-11-14T06:44:34.693Z",
+      "attemptedAt": "2026-11-14T07:52:17.719Z",
+      "lastSuccessAt": "2026-11-14T07:52:17.719Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -14649,8 +15227,8 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/pro",
       "kind": "tables",
-      "attemptedAt": "2026-11-14T06:44:34.693Z",
-      "lastSuccessAt": "2026-11-14T06:44:34.693Z",
+      "attemptedAt": "2026-11-14T07:52:17.719Z",
+      "lastSuccessAt": "2026-11-14T07:52:17.719Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -14661,8 +15239,8 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/max",
       "kind": "tables",
-      "attemptedAt": "2026-11-14T06:44:34.693Z",
-      "lastSuccessAt": "2026-11-14T06:44:34.693Z",
+      "attemptedAt": "2026-11-14T07:52:17.719Z",
+      "lastSuccessAt": "2026-11-14T07:52:17.719Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -14673,68 +15251,68 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/reference/cli/models",
       "kind": "tables",
-      "attemptedAt": "2026-11-14T06:44:34.693Z",
-      "lastSuccessAt": "2026-11-14T06:44:34.693Z",
+      "attemptedAt": "2026-11-14T07:52:17.719Z",
+      "lastSuccessAt": "2026-11-14T07:52:17.719Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 128
+      "recordCount": 126
     },
     {
       "id": "command-code-terms",
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/resources/pricing-limits",
       "kind": "tables",
-      "attemptedAt": "2026-11-14T06:44:34.693Z",
-      "lastSuccessAt": "2026-11-14T06:44:34.693Z",
+      "attemptedAt": "2026-11-14T07:52:17.719Z",
+      "lastSuccessAt": "2026-11-14T07:52:17.719Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 449
+      "recordCount": 444
     },
     {
       "id": "command-code-releases",
       "channel": "Command Code",
       "url": "https://commandcode.ai/changelog",
       "kind": "document",
-      "attemptedAt": "2026-11-14T06:44:34.693Z",
-      "lastSuccessAt": "2026-11-14T06:44:34.693Z",
+      "attemptedAt": "2026-11-14T07:52:17.719Z",
+      "lastSuccessAt": "2026-11-14T07:52:17.719Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 436
+      "recordCount": 399
     },
     {
       "id": "ollama-pricing",
       "channel": "Ollama",
       "url": "https://ollama.com/pricing",
       "kind": "tables",
-      "attemptedAt": "2026-11-14T06:44:34.693Z",
-      "lastSuccessAt": "2026-11-14T06:44:34.693Z",
+      "attemptedAt": "2026-11-14T07:52:17.719Z",
+      "lastSuccessAt": "2026-11-14T07:52:17.719Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 75
+      "recordCount": 73
     },
     {
       "id": "ollama-announcements",
       "channel": "Ollama",
       "url": "https://ollama.com/blog",
       "kind": "document",
-      "attemptedAt": "2026-11-14T06:44:34.693Z",
-      "lastSuccessAt": "2026-11-14T06:44:34.693Z",
+      "attemptedAt": "2026-11-14T07:52:17.719Z",
+      "lastSuccessAt": "2026-11-14T07:52:17.719Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 55
+      "recordCount": 52
     },
     {
       "id": "factory-models",
       "channel": "Factory",
       "url": "https://docs.factory.com/models.md",
       "kind": "tables",
-      "attemptedAt": "2026-11-14T06:44:34.693Z",
-      "lastSuccessAt": "2026-11-14T06:44:34.693Z",
+      "attemptedAt": "2026-11-14T07:52:17.719Z",
+      "lastSuccessAt": "2026-11-14T07:52:17.719Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -14745,32 +15323,32 @@
       "channel": "Factory",
       "url": "https://docs.factory.com/pricing/individuals.md",
       "kind": "document",
-      "attemptedAt": "2026-11-14T06:44:34.693Z",
-      "lastSuccessAt": "2026-11-14T06:44:34.693Z",
+      "attemptedAt": "2026-11-14T07:52:17.719Z",
+      "lastSuccessAt": "2026-11-14T07:52:17.719Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 28
+      "recordCount": 24
     },
     {
       "id": "factory-releases",
       "channel": "Factory",
       "url": "https://docs.factory.com/changelog/release-notes.md",
       "kind": "document",
-      "attemptedAt": "2026-11-14T06:44:34.693Z",
-      "lastSuccessAt": "2026-11-14T06:44:34.693Z",
+      "attemptedAt": "2026-11-14T07:52:17.719Z",
+      "lastSuccessAt": "2026-11-14T07:52:17.719Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 725
+      "recordCount": 534
     },
     {
       "id": "cursor-pricing",
       "channel": "Cursor",
       "url": "https://cursor.com/docs/models-and-pricing",
       "kind": "tables",
-      "attemptedAt": "2026-11-14T06:44:34.693Z",
-      "lastSuccessAt": "2026-11-14T06:44:34.693Z",
+      "attemptedAt": "2026-11-14T07:52:17.719Z",
+      "lastSuccessAt": "2026-11-14T07:52:17.719Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -14781,32 +15359,32 @@
       "channel": "Cursor",
       "url": "https://cursor.com/changelog",
       "kind": "document",
-      "attemptedAt": "2026-11-14T06:44:34.693Z",
-      "lastSuccessAt": "2026-11-14T06:44:34.693Z",
+      "attemptedAt": "2026-11-14T07:52:17.719Z",
+      "lastSuccessAt": "2026-11-14T07:52:17.719Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 13
+      "recordCount": 11
     },
     {
       "id": "devin-releases",
       "channel": "Devin",
       "url": "https://docs.devin.ai/release-notes/overview",
       "kind": "document",
-      "attemptedAt": "2026-11-14T06:44:34.693Z",
-      "lastSuccessAt": "2026-11-14T06:44:34.693Z",
+      "attemptedAt": "2026-11-14T07:52:17.719Z",
+      "lastSuccessAt": "2026-11-14T07:52:17.719Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 73
+      "recordCount": 70
     },
     {
       "id": "alibaba-coding-global",
       "channel": "Alibaba",
       "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan",
       "kind": "tables",
-      "attemptedAt": "2026-11-14T06:44:34.693Z",
-      "lastSuccessAt": "2026-11-14T06:44:34.693Z",
+      "attemptedAt": "2026-11-14T07:52:17.719Z",
+      "lastSuccessAt": "2026-11-14T07:52:17.719Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -14817,8 +15395,8 @@
       "channel": "Alibaba",
       "url": "https://help.aliyun.com/zh/model-studio/coding-plan",
       "kind": "tables",
-      "attemptedAt": "2026-11-14T06:44:34.693Z",
-      "lastSuccessAt": "2026-11-14T06:44:34.693Z",
+      "attemptedAt": "2026-11-14T07:52:17.719Z",
+      "lastSuccessAt": "2026-11-14T07:52:17.719Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -14829,8 +15407,8 @@
       "channel": "Alibaba",
       "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
       "kind": "tables",
-      "attemptedAt": "2026-11-14T06:44:34.693Z",
-      "lastSuccessAt": "2026-11-14T06:44:34.693Z",
+      "attemptedAt": "2026-11-14T07:52:17.719Z",
+      "lastSuccessAt": "2026-11-14T07:52:17.719Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -14841,8 +15419,8 @@
       "channel": "OpenCode",
       "url": "https://x.com/opencode",
       "kind": "social",
-      "attemptedAt": "2026-11-14T06:44:34.693Z",
-      "lastSuccessAt": "2026-11-14T06:44:34.693Z",
+      "attemptedAt": "2026-11-14T07:52:17.719Z",
+      "lastSuccessAt": "2026-11-14T07:52:17.719Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "official-oembed; discovery may use mirror",
@@ -14853,13 +15431,13 @@
       "channel": "Command Code",
       "url": "https://x.com/CommandCodeAI",
       "kind": "social",
-      "attemptedAt": "2026-11-14T06:44:34.693Z",
-      "lastSuccessAt": "2026-11-14T06:44:34.693Z",
+      "attemptedAt": "2026-11-14T07:52:17.719Z",
+      "lastSuccessAt": "2026-11-14T07:52:17.719Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "official-oembed; discovery may use mirror",
       "recordCount": 12
     }
   ],
-  "failedSources": 1
+  "failedSources": 0
 }
