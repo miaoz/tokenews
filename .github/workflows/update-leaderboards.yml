@@ -2,7 +2,7 @@ name: Update independent leaderboards
 on:
   push:
     branches: [main]
-    # Code-only validation: generated data commits must not trigger a loop.
+    # Collector/config validation: generated data commits must not trigger a loop.
     paths:
       - '.github/workflows/update-leaderboards.yml'
       - 'scripts/audit-leaderboards.mjs'
@@ -10,6 +10,8 @@ on:
       - 'scripts/update-leaderboards.mjs'
       - 'scripts/check-leaderboard-health.mjs'
       - 'scripts/lib/leaderboard*.mjs'
+      - 'scripts/lib/individual-leaderboard*.mjs'
+      - 'data/leaderboards/sources.json'
       - 'scripts/lib/current-leaderboards*.mjs'
       - 'scripts/lib/arena*.mjs'
   schedule:
@@ -32,7 +34,7 @@ jobs:
         with:
           ref: main
       # Never let a committed report masquerade as evidence from this run.
-      - run: rm -f data/leaderboards/refresh-status.json
+      - run: rm -f data/leaderboards/refresh-status.json data/leaderboards/individual-refresh-status.json
       - uses: actions/setup-node@v7
         with:
           node-version-file: .node-version
@@ -43,7 +45,7 @@ jobs:
       - run: npm ci
       - run: npm run leaderboards:audit -- --allow-partial
       - run: npm run pareto:update -- --allow-partial
-      - run: npm run leaderboards:update
+      - run: npm run leaderboards:update -- --allow-partial
       - run: npm run build && npm test && npm run check
       - name: Preserve source audit and discovery reports
         if: always()
@@ -51,6 +53,7 @@ jobs:
         with:
           name: leaderboard-discovery
           path: |
+            data/leaderboards/individual-refresh-status.json
             data/leaderboards/discovery.json
             data/leaderboards/audit.json
             data/leaderboards/refresh-status.json
@@ -59,12 +62,14 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: leaderboard-source-health-${{ github.run_attempt }}
-          path: data/leaderboards/refresh-status.json
+          path: |
+            data/leaderboards/refresh-status.json
+            data/leaderboards/individual-refresh-status.json
           if-no-files-found: warn
       - name: Commit validated snapshots
         id: push
         run: |
-          git add data/leaderboards/snapshots.json data/leaderboards/discovery.json data/leaderboards/audit.json data/leaderboards/current.json data/leaderboards/history data/leaderboards/refresh-status.json
+          git add data/leaderboards/individual-refresh-status.json data/leaderboards/snapshots.json data/leaderboards/discovery.json data/leaderboards/audit.json data/leaderboards/current.json data/leaderboards/history data/leaderboards/refresh-status.json
           if git diff --cached --quiet; then
             echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
             exit 0
@@ -94,7 +99,7 @@ jobs:
           path: source-health-report
       - name: Check every source and report failures
         if: always()
-        run: node scripts/check-leaderboard-health.mjs source-health-report/refresh-status.json
+        run: node scripts/check-leaderboard-health.mjs source-health-report/refresh-status.json source-health-report/individual-refresh-status.json
   deploy:
     needs: update
     # Rebuild date-sensitive plan prices even when source snapshots are unchanged.

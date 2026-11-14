@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "attemptedAt": "2026-11-13",
+  "attemptedAt": "2026-11-14",
   "results": [
     {
       "board": "aa_intelligence_index",
@@ -18,14 +18,14 @@
           "releaseSlug": "tencent-hy4"
         }
       ],
-      "retainedCheckedAt": "2026-11-13"
+      "retainedCheckedAt": "2026-11-14"
     },
     {
       "board": "terminal_bench_4",
       "status": "updated",
       "reviewRequired": 0,
       "identityReview": [],
-      "retainedCheckedAt": "2026-11-13"
+      "retainedCheckedAt": "2026-11-14"
     },
     {
       "board": "aa_terminal_bench_4",
@@ -43,7 +43,7 @@
           "releaseSlug": "tencent-hy4"
         }
       ],
-      "retainedCheckedAt": "2026-11-13"
+      "retainedCheckedAt": "2026-11-14"
     },
     {
       "board": "arena_code",
@@ -56,34 +56,35 @@
           "releaseSlug": null
         }
       ],
-      "retainedCheckedAt": "2026-11-13"
+      "retainedCheckedAt": "2026-11-14"
     },
     {
       "board": "arena_agent_mode",
       "status": "updated",
       "reviewRequired": 0,
       "identityReview": [],
-      "retainedCheckedAt": "2026-11-13"
+      "retainedCheckedAt": "2026-11-14"
     },
     {
       "board": "aa_coding_agent_index",
-      "status": "retained-previous",
-      "error": "Methodology review required: aa_coding_agent_index 2.1",
-      "retainedCheckedAt": "2026-11-13"
+      "status": "updated",
+      "reviewRequired": 0,
+      "identityReview": [],
+      "retainedCheckedAt": "2026-11-14"
     },
     {
       "board": "open_design_arena",
       "status": "updated",
       "reviewRequired": 0,
       "identityReview": [],
-      "retainedCheckedAt": "2026-11-13"
+      "retainedCheckedAt": "2026-11-14"
     },
     {
       "board": "deepswe_1_1",
       "status": "updated",
       "reviewRequired": 0,
       "identityReview": [],
-      "retainedCheckedAt": "2026-11-13"
+      "retainedCheckedAt": "2026-11-14"
     }
   ]
 }

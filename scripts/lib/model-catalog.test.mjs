@@ -141,3 +141,13 @@ test('Claude catalog and price references add no evidence, while subsequent upst
   assert.ok(!merged.points.some(p=>p.model==='claude-mythos-5.2'));
   assert.ok(!merged.configurations.some(c=>c.model==='claude-mythos-5.2'));
 });
+
+test('AA family headings require an explicit review and still validate the exact effort score sentence',()=>{
+ const modern=html.replace('<h1>New Model (High)</h1>','<h1>New Model: Intelligence, Performance &amp; Price Analysis</h1>');
+ assert.throws(()=>parseLeaderboard(modern,target,'2026-11-14'),/identity/);
+ const reviewed={...target,headingLabel:'New Model'};
+ assert.equal(parseLeaderboard(modern,reviewed,'2026-11-14').score,60);
+ for(const bad of [modern.replace('<h1>New Model:', '<h1>New Model 2:'),modern.replace('New Model (High) scores','New Model (Low) scores'),modern.replace('scores 60','scores unavailable')])
+  assert.throws(()=>parseLeaderboard(bad,reviewed,'2026-11-14'));
+ assert.throws(()=>parseLeaderboard(html.replace('<h1>New Model (High)</h1>','<h1>New Model (High) Preview</h1>'),target,'2026-11-14'),/identity/);
+});

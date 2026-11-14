@@ -423,7 +423,7 @@ test("Share links round-trip language, board, exact empty selection and all view
     lang: "zh" as const,
     view: "allowance" as const,
     selected: [],
-    board: "aa_coding_agent_index_v2_0",
+    board: "aa_coding_agent_index_v2_1",
     channels: ["Cursor", "OpenAI"],
     labels: "none" as const,
     frontier: false,

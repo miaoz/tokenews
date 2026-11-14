@@ -30,3 +30,13 @@ export function formatLeaderboardHealth(result) {
     +result.rows.map(r=>`| ${cell(r.board)} | ${cell(r.status)} | ${cell(r.checkedAt)} | ${cell(r.error)} |`).join('\n')
     +'\n\n'+result.errors.map(e=>`- ${cell(e)}`).join('\n')+'\n\nValid partial updates may deploy independently. A retained snapshot is not a successful source refresh.\n';
 }
+
+export function checkIndividualLeaderboardHealth(report, targets) {
+ const id=t=>`${t.adapter}:${t.model}:${t.version}:${t.variant}`;
+ const sources=new Map([...targets.map(t=>[id(t),t.url]),['aa-discovery','https://artificialanalysis.ai/models/releases']]);
+ const normalized=report&&{...report,results:Array.isArray(report.results)?report.results.map(r=>({...r,board:r.id})):report.results};
+ const result=checkLeaderboardHealth(normalized,[...sources.keys()]);
+ for(const r of Array.isArray(report?.results)?report.results:[])if(sources.has(r.id)&&r.source!==sources.get(r.id))result.errors.push(`${r.id}: source URL does not match reviewed target`);
+ result.healthy=result.errors.length===0;
+ return result;
+}

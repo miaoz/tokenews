@@ -7,7 +7,7 @@ export const CURRENT_BOARDS = {
   aa_terminal_bench_4: { id:'aa_terminal_bench_v4_0', version:'4.0', name:'Terminal-Bench 4.0 (AA)', metric:'Resolution Rate %' },
   arena_code: { id:'arena_code_current', version:null, name:'Code Arena | WebDev Overall', metric:'Arena Score' },
   arena_agent_mode: { id:'arena_agent_mode_current', version:null, name:'Agent Arena | Overall', metric:'Net Improvement %' },
-  aa_coding_agent_index: { id:'aa_coding_agent_index_v2_0', version:'2.0', name:'Artificial Analysis Coding Agent Index v2.0', metric:'Coding Agent Index' },
+  aa_coding_agent_index: { id:'aa_coding_agent_index_v2_1', version:'2.1', name:'Artificial Analysis Coding Agent Index v2.1', metric:'Coding Agent Index' },
   open_design_arena: { id:'open_design_arena_current', version:null, name:'OpenDesign Arena | Quality', metric:'Average task score' },
   deepswe_1_1: { id:'deepswe_v1_1', version:'1.1', name:'DeepSWE v1.1', metric:'Pass@1 %' },
 };

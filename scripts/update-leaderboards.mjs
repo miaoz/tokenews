@@ -1,8 +1,10 @@
 import { readFile, writeFile, rename } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
-import { parseLeaderboard, discoverAA, appendSnapshots } from './lib/leaderboards.mjs';
+import { discoverAA } from './lib/leaderboards.mjs';
+import { refreshIndividualTargets } from './lib/individual-leaderboard-refresh.mjs';
 import { loadCatalog, mergeCatalog } from './lib/model-catalog.mjs';
+if(process.argv.slice(2).some(a=>a!=='--allow-partial'))throw Error('Usage: node scripts/update-leaderboards.mjs [--allow-partial]');
 const root = fileURLToPath(new URL('../', import.meta.url));
 const { catalog, snapshots } = await loadCatalog(root);
 const config = JSON.parse(await readFile(path.join(root, 'data/leaderboards/sources.json'), 'utf8'));
@@ -12,17 +14,26 @@ const get = async url => {
   if (!response.ok) throw new Error(`${new URL(url).hostname}: HTTP ${response.status}`);
   return response.text();
 };
-const records = [];
-for (const target of config.targets) records.push(parseLeaderboard(await get(target.url), target, day));
+const {snapshots:next,records,results}=await refreshIndividualTargets(config.targets,snapshots,get,day);
 const reviewed = JSON.parse(await readFile(path.join(root, 'data/leaderboards/identity-review.json'), 'utf8'));
 const knownUrls = new Set([...config.targets.map(t => t.url), ...catalog.models.map(m=>m.source), ...reviewed.originalDiscovery.map(r=>r.url)]);
-const candidates = discoverAA(await get('https://artificialanalysis.ai/models/releases'), knownUrls);
-const next = appendSnapshots(snapshots, records);
-mergeCatalog({ points: [], configurations: [], boards: {} }, catalog, next);
-// All network work and validation completes before any maintained file changes.
 const dir = path.join(root, 'data/leaderboards');
-await writeFile(path.join(dir, 'snapshots.json.tmp'), JSON.stringify(next, null, 2) + '\n');
-await rename(path.join(dir, 'snapshots.json.tmp'), path.join(dir, 'snapshots.json'));
-await writeFile(path.join(dir, 'discovery.json'), JSON.stringify({ version: 1, checkedAt: day, source: 'https://artificialanalysis.ai/models/releases',
-  note: 'Unmapped source entries requiring identity/configuration review; these may already exist under another catalog ID. Not automatically published.', candidates: candidates.map(c => ({ ...c, possibleCatalogMatches: catalog.models.filter(m => c.label.toLowerCase().startsWith(m.name.toLowerCase() + " ")).map(m => m.id) })) }, null, 2) + '\n');
-console.log(`Updated ${records.length} configurations; ${candidates.length} unmapped AA entries to review.`);
+let discovery, discoveryResult;
+try {
+ const candidates=discoverAA(await get('https://artificialanalysis.ai/models/releases'),knownUrls);
+ discovery={version:1,checkedAt:day,source:'https://artificialanalysis.ai/models/releases',
+  note:'Unmapped source entries requiring identity/configuration review; these may already exist under another catalog ID. Not automatically published.',
+  candidates:candidates.map(c=>({...c,possibleCatalogMatches:catalog.models.filter(m=>c.label.toLowerCase().startsWith(m.name.toLowerCase()+" ")).map(m=>m.id)}))};
+ discoveryResult={id:'aa-discovery',source:discovery.source,status:'updated',retainedCheckedAt:day};
+} catch(e) {
+ let previous;try{previous=JSON.parse(await readFile(path.join(dir,'discovery.json'),'utf8'));}catch{}
+ discoveryResult={id:'aa-discovery',source:'https://artificialanalysis.ai/models/releases',status:previous?'retained-previous':'failed',retainedCheckedAt:previous?.checkedAt??null,error:e.message};
+}
+mergeCatalog({ points: [], configurations: [], boards: {} }, catalog, next);
+// Validate before writing. Existing failed-source observations remain unchanged.
+const report={version:1,attemptedAt:day,results:[...results,discoveryResult]};
+const writes=[['snapshots.json',next],['individual-refresh-status.json',report],...(discovery?[['discovery.json',discovery]]:[])];
+for(const [file,value] of writes){await writeFile(path.join(dir,file+'.tmp'),JSON.stringify(value,null,2)+'\n');await rename(path.join(dir,file+'.tmp'),path.join(dir,file));}
+console.log(`Updated ${records.length}/${config.targets.length} tracked configurations; discovery ${discoveryResult.status}.`);
+for(const r of report.results.filter(r=>r.status!=='updated'))console.warn(`::warning::${r.id}: ${r.error}; prior snapshot retained where available.`);
+if(report.results.some(r=>r.status!=='updated')&&!process.argv.includes('--allow-partial'))process.exitCode=1;

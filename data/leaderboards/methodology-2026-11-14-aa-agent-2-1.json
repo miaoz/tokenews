@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "checkedAt": "2026-11-14",
+  "board": "aa_coding_agent_index_v2_1",
+  "previousBoard": "aa_coding_agent_index_v2_0",
+  "sources": ["https://artificialanalysis.ai/agents/coding-agents", "https://artificialanalysis.ai/methodology/coding-agents-benchmarking"],
+  "components": [
+    {"name": "FrontierCode-AA 2.0", "tasks": 132, "payloadKey": "frontiercode-v2.0"},
+    {"name": "Terminal-Bench 4.1", "tasks": 66, "payloadKey": "terminal-bench-v4"},
+    {"name": "SWE-Atlas-QnA-AA", "tasks": 124, "payloadKey": "swe-atlas-qna"}
+  ],
+  "aggregation": "Three attempts per task averaged, then equal task weight within each benchmark, then equal weight across three benchmarks.",
+  "changes": ["FrontierCode 1.1's 100 tasks replaced by FrontierCode-AA 2.0's 132 tasks.", "TB 4.1 regrades saved outputs using new verifiers; some attempts retain 4.0 scores. Not evidence of fresh runs for every row.", "API cost uses provider token counts and typical measured cache hit rates, not subscription prices."],
+  "publicationDecision": "Publish as independent version 2.1. Retain 2.0 history; do not mix scores or compute cross-version improvement. Preserve source configuration IDs, harness, effort, router and observed fallback distinctions.",
+  "observedConfigurations": 29,
+  "observedNonRouterConfigurations": 28,
+  "hydrogenIncluded": false,
+  "fallback": "All five Fable 5.2 effort configurations have observed fallback; Haiku 5.5 also has observed fallback despite no Default Fallback label. Exclude actual multi-model runs from single-model price comparisons."
+}

@@ -1,0 +1,96 @@
+{
+  "version": 1,
+  "attemptedAt": "2026-11-14",
+  "results": [
+    {
+      "id": "artificial-analysis:gemini-4-carbon:5.0.1:high",
+      "source": "https://artificialanalysis.ai/models/gemini-4-carbon",
+      "status": "updated",
+      "retainedCheckedAt": "2026-11-14"
+    },
+    {
+      "id": "artificial-analysis:kimi-k3.1-pro:5.0.1:default",
+      "source": "https://artificialanalysis.ai/models/kimi-k3-1-pro",
+      "status": "updated",
+      "retainedCheckedAt": "2026-11-14"
+    },
+    {
+      "id": "crusader-bench:kimi-k3.1-pro:1.7:high",
+      "source": "https://crusbench.com/models/kimi-1021-preview/",
+      "status": "updated",
+      "retainedCheckedAt": "2026-11-14"
+    },
+    {
+      "id": "artificial-analysis:gpt-6.1-terra:5.0.1:max",
+      "source": "https://artificialanalysis.ai/models/gpt-6-1-terra",
+      "status": "updated",
+      "retainedCheckedAt": "2026-11-14"
+    },
+    {
+      "id": "artificial-analysis:muse-wonder:5.0.1:max",
+      "source": "https://artificialanalysis.ai/models/muse-wonder",
+      "status": "updated",
+      "retainedCheckedAt": "2026-11-14"
+    },
+    {
+      "id": "artificial-analysis:muse-wonder-full:5.0.1:max",
+      "source": "https://artificialanalysis.ai/models/muse-wonder-full",
+      "status": "updated",
+      "retainedCheckedAt": "2026-11-14"
+    },
+    {
+      "id": "artificial-analysis:muse-spark-open:5.0.1:xhigh",
+      "source": "https://artificialanalysis.ai/models/muse-spark-open",
+      "status": "updated",
+      "retainedCheckedAt": "2026-11-14"
+    },
+    {
+      "id": "artificial-analysis:deepseek-v4.1-flash-1017:5.0.1:max",
+      "source": "https://artificialanalysis.ai/models/deepseek-v4-1-flash-1017",
+      "status": "updated",
+      "retainedCheckedAt": "2026-11-14"
+    },
+    {
+      "id": "artificial-analysis:ling-3.1-flash-1019:5.0.1:default",
+      "source": "https://artificialanalysis.ai/models/ling-3-1-flash",
+      "status": "updated",
+      "retainedCheckedAt": "2026-11-14"
+    },
+    {
+      "id": "artificial-analysis:minimax-m3.1-flash:5.0.1:default",
+      "source": "https://artificialanalysis.ai/models/minimax-m3-1-flash",
+      "status": "updated",
+      "retainedCheckedAt": "2026-11-14"
+    },
+    {
+      "id": "artificial-analysis:mistral-large-4:5.0.1:high",
+      "source": "https://artificialanalysis.ai/models/mistral-large-4",
+      "status": "updated",
+      "retainedCheckedAt": "2026-11-14"
+    },
+    {
+      "id": "artificial-analysis:nanbeige4.3-33b:5.0.1:default",
+      "source": "https://artificialanalysis.ai/models/nanbeige4-3-33b",
+      "status": "updated",
+      "retainedCheckedAt": "2026-11-14"
+    },
+    {
+      "id": "artificial-analysis:beam-1.0:5.0.1:default",
+      "source": "https://artificialanalysis.ai/models/reflection-beam",
+      "status": "updated",
+      "retainedCheckedAt": "2026-11-14"
+    },
+    {
+      "id": "artificial-analysis:nemotron-3.5-super-vl:5.0.1:default",
+      "source": "https://artificialanalysis.ai/models/nemotron-3-5-super-vl",
+      "status": "updated",
+      "retainedCheckedAt": "2026-11-14"
+    },
+    {
+      "id": "aa-discovery",
+      "source": "https://artificialanalysis.ai/models/releases",
+      "status": "updated",
+      "retainedCheckedAt": "2026-11-14"
+    }
+  ]
+}

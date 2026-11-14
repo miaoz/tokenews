@@ -37,9 +37,9 @@ test('unpriced models, dated releases and composite agents never borrow another 
  for(const c of merged.configurations.filter(c=>c.configuration_id.startsWith('current:'))){
   if(c.price_mapping_exclusion||!baseline.points.some(p=>p.model===c.model))assert.ok(!ids.has(c.configuration_id));
  }
- const coverage=merged.leaderboardCoverage.aa_coding_agent_index_v2_0;
- assert.equal(coverage.excluded.filter(r=>r.reason==='router').length,4);
- assert.equal(coverage.excluded.filter(r=>r.reason==='multi-model-fallback').length,4);
+ const coverage=merged.leaderboardCoverage.aa_coding_agent_index_v2_1;
+ assert.equal(coverage.excluded.filter(r=>r.reason==='router').length,1);
+ assert.equal(coverage.excluded.filter(r=>r.reason==='multi-model-fallback').length,9);
  assert.ok(merged.leaderboardCoverage.aa_intelligence_index_v5_0_1.unpriced.some(r=>r.model==='gemini-4-carbon'));
  assert.notEqual(identities.aaReleases['deepseek-v4-pro'],'deepseek-v4-pro');
  assert.notEqual(identities.arenaConfigurations['NVIDIA-Nemotron-3.5-Super-VL-120B-A12B (NVFP4)'],'nemotron-3.5-super-vl');

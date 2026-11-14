@@ -150,5 +150,31 @@ older checkpoint. Unknown names still require review.
 Gemini 4 Hydrogen now has independently verified paid Developer API rates and a
 standard-workload price reference. Its new official TB 4.1 Antigravity High row
 is published without copying Google's separate self-reported result. No scores
-are invented for boards that do not list it. AA Coding Agent 2.1 is retained as a
-methodology-review failure, not silently mixed with the reviewed 2.0 snapshot.
+are invented for boards that do not list it. AA Coding Agent 2.1 is now reviewed and published under its own version ID,
+with 2.0 preserved in the content-addressed history. See
+`methodology-2026-11-14-aa-agent-2-1.json` for the component and cost changes.
+
+
+### Partial-source refresh isolation
+
+Individual AA release pages now use model-family headings while the visible
+score sentence retains the precise effort configuration. `headingLabel` is an
+explicit reviewed family label; mismatched checkpoints, missing precise score
+sentences and changed benchmark versions still fail. The Ling 1019 target uses
+the current officially verified URL, not the retired variant slug.
+
+`leaderboards:update --allow-partial` refreshes valid tracked observations and
+retains every failed source's previous records and date. Discovery fails
+independently. `individual-refresh-status.json` records all 14 tracked targets
+and discovery, and is published at `/data/individual-leaderboard-refresh.json`.
+Both primary-board and individual-source reports are checked by the separate
+source-health job. Missing reports fail health. Healthy partial updates still
+build, test and deploy, so one source cannot freeze the other boards.
+
+Arena's runner HTTP 403 is not bypassed. The official Hugging Face dataset was
+rechecked November 14 but still contains only 156/157 WebDev and 59/64 Agent
+ranked records for November 11, lacks stable configuration IDs, and has different
+Agent scores. It is not substituted or mixed into the complete official-site
+snapshots. The direct-source updater retains the last good data and exposes its
+failure; public access succeeding outside the runner does not establish runner
+access. Dataset: https://huggingface.co/datasets/lmarena-ai/leaderboard-dataset

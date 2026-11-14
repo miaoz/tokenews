@@ -138,3 +138,22 @@ test('modern AA keeps distinct efforts and fallback configurations separate',()=
 test('modern AA permits releases without optional variant lists while retaining exact row identity',()=>{
  for(const modelNames of [undefined,[]]) {const p=modernAA();p.releases[0].modelNames=modelNames;assert.equal(parseModernAA(p).rows.length,1);}
 });
+
+const agent21 = () => ({id:'agent-21',displayLabel:'Claude Code - Claude Haiku 5.5 (Max)',agentName:'Claude Code',isRouter:false,
+ model:{release:{shortName:'Claude Haiku 5.5'},effort:{slug:'max'}},indexScore:.295910380688606,indexComponentCount:3,evalCount:3,
+ evals:['frontiercode-v2.0','swe-atlas-qna','terminal-bench-v4'].map(datasetIndexName=>({datasetIndexName,weight:1/3})),
+ safety:{fallbackAttemptCount:3,attemptCount:966},mean:{costUsd:null},versions:{'terminal-bench-v4':{min:{version:'2.1.291'}}}});
+const parse21 = rows => parseAuditSource('aa-agents','<h1>Coding Agent Index v2.1</h1>'+flight('1:'+JSON.stringify(rows)));
+test('AA agent 2.1 validates components and preserves measured fallback, harness and cost caveats',()=>{
+ const r=agent21(),p=parse21([r]),row=p.rows[0];assert.equal(p.version,'2.1');assert.equal(row.fallback,true);assert.equal(row.fallbackEnabled,false);
+ assert.equal(row.fallbackAttemptCount,3);assert.equal(row.attemptCount,966);assert.equal(row.meanCost,null);assert.deepEqual(row.harnessVersions,r.versions);
+ assert.match(row.recordNote.en,/Not comparable with 2.0/);assert.match(row.recordNote.en,/not subscription/);assert.deepEqual(row.recordNote,p.recordNote);
+ assert.equal(parse21([r,r]).rows.length,1,'identical repeated serialized payload is not a second configuration');
+ const router={...r,id:'router',isRouter:true,model:null};assert.equal(parse21([router]).rows[0].router,true);
+});
+test('AA agent 2.1 rejects component changes, unknown shapes and conflicting repeated IDs',()=>{
+ for(const mutate of [r=>r.evals.pop(),r=>r.evals[0].datasetIndexName='frontiercode-v1.1',r=>r.evals[0].weight=.5,
+ r=>r.indexComponentCount=2,r=>r.evalCount=2,r=>r.indexScore=null,r=>r.indexScore=1.1,r=>delete r.model,r=>delete r.isRouter,
+ r=>delete r.agentName,r=>delete r.safety,r=>r.safety.fallbackAttemptCount=-1,r=>r.safety.fallbackAttemptCount=1000]) {const row=agent21();mutate(row);assert.throws(()=>parse21([row]));}
+ const row=agent21();assert.throws(()=>parse21([row,{...row,indexScore:.8}]),/Conflicting/);
+});

@@ -43,6 +43,7 @@ await writeFile(path.join(out, "api-price-coverage.json"), JSON.stringify(covera
 await writeFile(path.join(out, "models.json"), JSON.stringify(data.models));
 await writeFile(path.join(out, "leaderboard-snapshots.json"), JSON.stringify(snapshots));
 await writeFile(path.join(out, "current-leaderboards.json"), JSON.stringify(current));
+await copyFile(path.resolve(root, "../data/leaderboards/individual-refresh-status.json"), path.join(out, "individual-leaderboard-refresh.json"));
 await writeFile(path.join(out, "leaderboard-coverage.json"), JSON.stringify(data.leaderboardCoverage));
 await writeFile(path.join(out, "leaderboard-refresh.json"), JSON.stringify(refresh));
 await copyFile(path.resolve(root, "../data/leaderboards/review-2026-11-13.json"), path.join(out, "leaderboard-review.json"));

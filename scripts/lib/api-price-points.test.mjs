@@ -20,9 +20,9 @@ test('reviewed API points preserve historical prices, calculate costs and join e
  const joined=mergeCurrentLeaderboards(result,read('data/leaderboards/current.json'));
  const matches=joined.mappings.filter(m=>m.point_id===pro.id);
  assert.deepEqual(matches.map(m=>m.configuration_id.split(':')[1]).sort(),[
-  'aa_intelligence_index_v5_0_1','aa_terminal_bench_v4_0','arena_agent_mode_current',
+  'aa_coding_agent_index_v2_1','aa_intelligence_index_v5_0_1','aa_terminal_bench_v4_0','arena_agent_mode_current',
   'arena_code_current','open_design_arena_current','terminal_bench_v4_1',
- ].sort(),'current official TB 4.1 and restored Arena rows join without borrowing other versions');
+ ].sort(),'current AA Agent 2.1 without fallback, TB 4.1 and Arena rows join without borrowing other versions');
  assert.ok(matches.every(m=>m.quota_effort_matched===null));
  const fast=result.points.find(p=>p.model==='kimi-k3.1-pro-highspeed');
  assert.ok(!joined.mappings.some(m=>m.point_id===fast.id),'highspeed cannot borrow standard-model scores');

@@ -90,20 +90,42 @@ export function parseAuditSource(adapter, body, board) {
     return { version, rows: requireRows(rows), releases: meta.releases, coverage: 'Current non-deprecated configurations in the public page payload with a non-null score; not all historical releases.' };
   }
   if (adapter === 'aa-agents') {
-    const flight = flightText(body), rows = new Map();
+    const flight = flightText(body), rows = new Map(), rawRows = new Map();
+    const version = text.match(/Coding Agent Index v(\d+(?:\.\d+)+)/)?.[1];
+    if (!version) throw new Error('Coding Agent Index version missing');
+    const recordNote = version === '2.1' ? {
+      en:'AA Coding Agent Index 2.1: equal-weight FrontierCode-AA 2.0, Terminal-Bench 4.1 and SWE-Atlas-QnA-AA. Not comparable with 2.0. TB 4.1 includes regraded saved outputs and retained 4.0 results. API task costs use provider token counts and typical measured cache hit rates, not subscription prices.',
+      zh:'AA 编程 Agent 指数 2.1：FrontierCode-AA 2.0、Terminal-Bench 4.1、SWE-Atlas-QnA-AA 三项等权，不与 2.0 混比。TB 4.1 包含保存产物重评分及沿用的 4.0 成绩。任务 API 成本按提供商 token 数及典型实测缓存命中率计算，不代表订阅价格。'
+    } : null;
     for (const m of flight.matchAll(/\{"id":/g)) {
       const r = jsonAt(flight, m.index);
-      if (!Number.isFinite(r.indexScore) || !r.displayLabel) continue;
+      if (!r.displayLabel || !Object.hasOwn(r,'indexScore')) continue;
+      if (!Number.isFinite(r.indexScore) || r.indexScore < 0 || r.indexScore > 1 || !r.id || !r.agentName) throw new Error('Invalid AA agent configuration');
+      if (rawRows.has(r.id)) {
+        if (rawRows.get(r.id) !== JSON.stringify(r)) throw new Error('Conflicting AA agent configuration');
+        continue;
+      }
+      rawRows.set(r.id,JSON.stringify(r));
+      if (version === '2.1') {
+        const expected=['frontiercode-v2.0','swe-atlas-qna','terminal-bench-v4'];
+        if (r.indexComponentCount !== 3 || r.evalCount !== 3 || !Array.isArray(r.evals) || r.evals.length !== 3
+          || JSON.stringify(r.evals.map(e=>e.datasetIndexName).sort()) !== JSON.stringify(expected)
+          || r.evals.some(e=>!Number.isFinite(e.weight)||Math.abs(e.weight-1/3)>1e-9)) throw new Error('AA 2.1 component methodology mismatch');
+        if (!Number.isInteger(r.safety?.fallbackAttemptCount) || r.safety.fallbackAttemptCount < 0
+          || !Number.isInteger(r.safety?.attemptCount) || r.safety.attemptCount < 1 || r.safety.fallbackAttemptCount > r.safety.attemptCount) throw new Error('AA 2.1 fallback evidence missing or invalid');
+        if (typeof r.isRouter !== 'boolean' || !r.isRouter && !(r.model?.release?.name || r.model?.release?.shortName)) throw new Error('AA 2.1 model identity missing');
+      }
       rows.set(r.id, { identity: r.model?.release?.name ?? r.model?.release?.shortName ?? r.displayLabel, sourceId: r.id,
         label: r.displayLabel, score: r.indexScore * 100, harness: r.agentName,
         router: !!r.isRouter, effort: r.model?.effort?.slug ?? null,
         fallback: Number.isFinite(r.safety?.fallbackAttemptCount) ? r.safety.fallbackAttemptCount > 0 : null,
         fallbackEnabled: /\bDefault Fallback\b/i.test(r.displayLabel),
-        meanCost: r.mean?.costUsd ?? null, medianCost: r.percentiles?.costUsd?.p50 ?? null });
+        meanCost: r.mean?.costUsd ?? null, medianCost: r.percentiles?.costUsd?.p50 ?? null,
+        ...(version === '2.1' ? {recordNote, harnessVersions:r.versions??null, unavailable:r.isUnavailable??null,
+          components:r.evals.map(e=>({sourceKey:e.datasetIndexName,weight:e.weight})),
+          fallbackAttemptCount:r.safety?.fallbackAttemptCount??null,attemptCount:r.safety?.attemptCount??null} : {}) });
     }
-    const version = text.match(/Coding Agent Index v(\d+(?:\.\d+)+)/)?.[1];
-    if (!version) throw new Error('Coding Agent Index version missing');
-    return { version, rows: requireRows([...rows.values()]), coverage: 'Public agent-variant payload, including routers. Routers are not treated as standalone base models.' };
+    return { version, rows: requireRows([...rows.values()]), ...(recordNote ? {recordNote} : {}), coverage: 'Public agent-variant payload, including routers. Routers are not treated as standalone base models.' };
   }
   if (adapter === 'terminal') {
     const payload = property(flightText(body), 'state');

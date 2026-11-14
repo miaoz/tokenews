@@ -10,7 +10,10 @@ const escape = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 export function parseLeaderboard(html, target, checkedAt) {
   const text = pageText(html);
   const heading = pageText(html.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i)?.[1] ?? '');
-  if (!heading.startsWith(target.label)) throw new Error(`Model identity missing: ${target.model}`);
+  // AA now titles release pages by family while the score sentence still names
+  // the exact reviewed effort. Do not infer family names by stripping suffixes.
+  const headings=[target.label,...(target.headingLabel?[target.headingLabel]:[])];
+  if (!headings.some(label=>heading===label||heading.startsWith(label+': '))) throw new Error(`Model identity missing: ${target.model}`);
   let score, version, name, metric, board, sourceHome, excerpt, rank, total;
   if (target.adapter === 'artificial-analysis') {
     const match = text.match(new RegExp(`${escape(target.label)} scores (\\d+(?:\\.\\d+)?) on the Artificial Analysis Intelligence Index`));

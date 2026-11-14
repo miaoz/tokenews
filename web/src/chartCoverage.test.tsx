@@ -67,7 +67,7 @@ test("all eight current boards distinguish published Fable, Carbon and Hydrogen 
   const expected: Record<string, [boolean,boolean,boolean]> = {
     aa_intelligence_index_v5_0_1:[true,true,true], terminal_bench_v4_1:[true,true,true],
     aa_terminal_bench_v4_0:[true,true,true], arena_code_current:[true,true,true],
-    arena_agent_mode_current:[true,true,true], aa_coding_agent_index_v2_0:[false,true,false],
+    arena_agent_mode_current:[true,true,true], aa_coding_agent_index_v2_1:[false,true,false],
     open_design_arena_current:[false,false,false], deepswe_v1_1:[false,false,false],
   };
   assert.deepEqual(new Set(data.currentBoards),new Set(Object.keys(expected)));
@@ -75,7 +75,10 @@ test("all eight current boards distinguish published Fable, Carbon and Hydrogen 
     const rows=rowsFor(data,{...state,board});
     for(const [i,model] of ['claude-fable-5.2','gemini-4-carbon','gemini-4-hydrogen'].entries()) {
       assert.equal(rows.some(r=>r.point.model===model && r.mapping),present[i],`${board}: ${model}`);
-      if(!present[i]) assert.ok(unplottedRows(data,board).some(r=>r.model===model&&r.reason==='no-score-evidence'));
+      if(!present[i]) {
+        const reason=board==='aa_coding_agent_index_v2_1'&&model==='claude-fable-5.2'?'multi-model-fallback':'no-score-evidence';
+        assert.ok(unplottedRows(data,board).some(r=>r.model===model&&r.reason===reason),`${board}: ${model}: ${reason}`);
+      }
     }
   }
   assert.equal(Math.max(...data.configurations.filter(c=>c.board==='terminal_bench_v4_1'&&c.model==='claude-fable-5.2').map(c=>c.score)),65.76);

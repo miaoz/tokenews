@@ -6,7 +6,7 @@
       "id": "aa_intelligence_index_v5_0_1",
       "version": "5.0.1",
       "source": "https://artificialanalysis.ai/leaderboards/models",
-      "checkedAt": "2026-11-13",
+      "checkedAt": "2026-11-14",
       "sourceUpdatedAt": null,
       "retrievalMethod": "direct-public-source",
       "coverage": "Current non-deprecated configurations in the public page payload with a non-null score; not all historical releases.",
@@ -1713,7 +1713,7 @@
       "id": "terminal_bench_v4_1",
       "version": "4.1",
       "source": "https://www.tbench.ai/",
-      "checkedAt": "2026-11-13",
+      "checkedAt": "2026-11-14",
       "sourceUpdatedAt": "2026-11-14T06:10:26.015148+00:00",
       "retrievalMethod": "direct-public-source",
       "coverage": "Official TB 4.1 configurations, including all efforts. Includes regraded 4.0 artifacts and retained 4.0 scores; per-row provenance is not disclosed. 官方TB 4.1全部effort配置，包含4.0产物重评分及沿用4.0成绩，逐行来源未披露。",
@@ -3145,7 +3145,7 @@
       "id": "aa_terminal_bench_v4_0",
       "version": "4.0",
       "source": "https://artificialanalysis.ai/leaderboards/models",
-      "checkedAt": "2026-11-13",
+      "checkedAt": "2026-11-14",
       "sourceUpdatedAt": null,
       "retrievalMethod": "direct-public-source",
       "coverage": "Current non-deprecated configurations in the public page payload with a non-null score; not all historical releases.",
@@ -5452,7 +5452,7 @@
       "id": "arena_code_current",
       "version": null,
       "source": "https://arena.ai/leaderboard/code/webdev",
-      "checkedAt": "2026-11-13",
+      "checkedAt": "2026-11-14",
       "sourceUpdatedAt": "2026-11-11T14:00:00.000Z",
       "retrievalMethod": "direct-public-source",
       "coverage": "Complete Overall structured payload: 158 configurations validated; 157 ranked configurations with signed scores, confidence intervals and stable source IDs. Excluded 1 unranked Day-1 AutoEval entries (isDay1=true, rank=0), not human-vote ranks.",
@@ -5486,8 +5486,8 @@
           "effort": "xhigh",
           "harness": "Arena WebDev",
           "serviceMode": null,
-          "medianCost": 11.04023115,
-          "meanCost": 11.671978364489803,
+          "medianCost": 11.039178399999999,
+          "meanCost": 11.666198505770534,
           "model": "claude-fable-5.2",
           "exclusion": null
         },
@@ -5506,8 +5506,8 @@
           "effort": "max",
           "harness": "Arena WebDev",
           "serviceMode": null,
-          "medianCost": 9.0291425,
-          "meanCost": 10.068374446423718,
+          "medianCost": 9.022842349999998,
+          "meanCost": 10.067148003687784,
           "model": "claude-opus-5.5",
           "exclusion": null
         },
@@ -5526,8 +5526,8 @@
           "effort": "xhigh",
           "harness": "Arena WebDev",
           "serviceMode": null,
-          "medianCost": 3.0135167999999997,
-          "meanCost": 3.799182252431686,
+          "medianCost": 3.0116305,
+          "meanCost": 3.7989734676614084,
           "model": "claude-sonnet-5.5",
           "exclusion": null
         },
@@ -5547,7 +5547,7 @@
           "harness": "Arena WebDev",
           "serviceMode": null,
           "medianCost": 1.6133064,
-          "meanCost": 2.1985581121486413,
+          "meanCost": 2.198558112148642,
           "model": "gemini-4-carbon",
           "exclusion": null
         },
@@ -5566,8 +5566,8 @@
           "effort": "max",
           "harness": "Arena WebDev",
           "serviceMode": null,
-          "medianCost": 9.415754,
-          "meanCost": 11.732597916311065,
+          "medianCost": 9.414410000000002,
+          "meanCost": 11.732255186566062,
           "model": "gpt-6-astra",
           "exclusion": null
         },
@@ -5586,8 +5586,8 @@
           "effort": "max",
           "harness": "Arena WebDev",
           "serviceMode": null,
-          "medianCost": 1.8459368500000002,
-          "meanCost": 2.6204853229088094,
+          "medianCost": 1.8454166,
+          "meanCost": 2.6197113902620757,
           "model": "gpt-6.1-sol",
           "exclusion": null
         },
@@ -5606,8 +5606,8 @@
           "effort": "max",
           "harness": "Arena WebDev",
           "serviceMode": null,
-          "medianCost": 11.47323,
-          "meanCost": 13.384072876094015,
+          "medianCost": 11.47679575,
+          "meanCost": 13.385336459102492,
           "model": "claude-fable-5.1",
           "exclusion": null
         },
@@ -5646,8 +5646,8 @@
           "effort": "high",
           "harness": "Arena WebDev",
           "serviceMode": null,
-          "medianCost": 1.2830192,
-          "meanCost": 1.972055745339345,
+          "medianCost": 1.2832795000000001,
+          "meanCost": 1.9720092372245257,
           "model": "claude-sonnet-5.5",
           "exclusion": null
         },
@@ -5666,8 +5666,8 @@
           "effort": "high",
           "harness": "Arena WebDev",
           "serviceMode": null,
-          "medianCost": 1.3543791,
-          "meanCost": 1.7448547995581734,
+          "medianCost": 1.3545545250000002,
+          "meanCost": 1.7459510771835136,
           "model": "gemini-4-hydrogen",
           "exclusion": null
         },
@@ -5687,7 +5687,7 @@
           "harness": "Arena WebDev",
           "serviceMode": null,
           "medianCost": 4.7696559999999995,
-          "meanCost": 6.2496223979628525,
+          "meanCost": 6.24962239796285,
           "model": "claude-opus-5",
           "exclusion": null
         },
@@ -5706,8 +5706,8 @@
           "effort": "max",
           "harness": "Arena WebDev",
           "serviceMode": null,
-          "medianCost": 0.9078118500000001,
-          "meanCost": 1.275268738752869,
+          "medianCost": 0.9072360499999998,
+          "meanCost": 1.274684070068807,
           "model": "kimi-k3.1-pro",
           "exclusion": null
         },
@@ -5726,8 +5726,8 @@
           "effort": "high",
           "harness": "Arena WebDev",
           "serviceMode": null,
-          "medianCost": 1.1621618999999999,
-          "meanCost": 1.7828406203486546,
+          "medianCost": 1.16206765,
+          "meanCost": 1.7827059335980173,
           "model": "gemini-4-argon",
           "exclusion": null
         },
@@ -5746,8 +5746,8 @@
           "effort": "max",
           "harness": "Arena WebDev",
           "serviceMode": null,
-          "medianCost": 0.6505244499999999,
-          "meanCost": 1.1440026893217552,
+          "medianCost": 0.6503005749999999,
+          "meanCost": 1.1433346744402118,
           "model": "gpt-6.1-terra",
           "exclusion": null
         },
@@ -5766,8 +5766,8 @@
           "effort": null,
           "harness": "Arena WebDev",
           "serviceMode": null,
-          "medianCost": 1.8947226000000001,
-          "meanCost": 2.3618822340072687,
+          "medianCost": 1.8952809999999998,
+          "meanCost": 2.3622224177895594,
           "model": "qwen3.8-max-0902",
           "exclusion": null
         },
@@ -5786,8 +5786,8 @@
           "effort": "max",
           "harness": "Arena WebDev",
           "serviceMode": null,
-          "medianCost": 1.7647008,
-          "meanCost": 2.7531255328358286,
+          "medianCost": 1.7647659,
+          "meanCost": 2.753090284035189,
           "model": "gpt-6-sol",
           "exclusion": null
         },
@@ -5807,7 +5807,7 @@
           "harness": "Arena WebDev",
           "serviceMode": null,
           "medianCost": 2.301462,
-          "meanCost": 3.3061482034576897,
+          "meanCost": 3.3061482034576883,
           "model": "qwen3.8-max",
           "exclusion": null
         },
@@ -5826,8 +5826,8 @@
           "effort": "max",
           "harness": "Arena WebDev",
           "serviceMode": null,
-          "medianCost": 0.11539126799999998,
-          "meanCost": 0.13232269630941612,
+          "medianCost": 0.1153926097,
+          "meanCost": 0.13231741064443478,
           "model": "deepseek-v4.1-flash-1017",
           "exclusion": null
         },
@@ -5846,8 +5846,8 @@
           "effort": "max",
           "harness": "Arena WebDev",
           "serviceMode": null,
-          "medianCost": 1.7411442959999999,
-          "meanCost": 2.779168852876126,
+          "medianCost": 1.7410674,
+          "meanCost": 2.7789417505803966,
           "model": "kimi-k3",
           "exclusion": null
         },
@@ -5867,7 +5867,7 @@
           "harness": "Arena WebDev",
           "serviceMode": null,
           "medianCost": 2.928802375,
-          "meanCost": 4.594876522949077,
+          "meanCost": 4.59487652294908,
           "model": "claude-opus-5",
           "exclusion": null
         },
@@ -5886,8 +5886,8 @@
           "effort": "max",
           "harness": "Arena WebDev",
           "serviceMode": null,
-          "medianCost": 0.7733247,
-          "meanCost": 1.5305702976582236,
+          "medianCost": 0.7731702999999999,
+          "meanCost": 1.5302955974533499,
           "model": "muse-spark-1.3",
           "exclusion": null
         },
@@ -5906,8 +5906,8 @@
           "effort": "max",
           "harness": "Arena WebDev",
           "serviceMode": null,
-          "medianCost": 1.6035536,
-          "meanCost": 2.9198888113531294,
+          "medianCost": 1.6043760000000002,
+          "meanCost": 2.9195345992971484,
           "model": "muse-wonder",
           "exclusion": null
         },
@@ -5926,8 +5926,8 @@
           "effort": null,
           "harness": "Arena WebDev",
           "serviceMode": null,
-          "medianCost": 0.30995413,
-          "meanCost": 0.3692811074814815,
+          "medianCost": 0.30991616,
+          "meanCost": 0.3691239532839963,
           "model": "inkling-2-small",
           "exclusion": null
         },
@@ -5946,8 +5946,8 @@
           "effort": "xhigh",
           "harness": "Arena WebDev",
           "serviceMode": null,
-          "medianCost": 3.7310768,
-          "meanCost": 4.091895365653246,
+          "medianCost": 3.730887999999999,
+          "meanCost": 4.091328149947201,
           "model": "grok-4.7",
           "exclusion": null
         },
@@ -5967,7 +5967,7 @@
           "harness": "Arena WebDev",
           "serviceMode": null,
           "medianCost": 0.046118828,
-          "meanCost": 0.062113644417689906,
+          "meanCost": 0.062108352622743584,
           "model": "mimo-v2.6-flash",
           "exclusion": null
         },
@@ -6007,7 +6007,7 @@
           "harness": "Arena WebDev",
           "serviceMode": null,
           "medianCost": 3.063884,
-          "meanCost": 5.3361711483479635,
+          "meanCost": 5.336171148347964,
           "model": "claude-fable-5",
           "exclusion": null
         },
@@ -6026,8 +6026,8 @@
           "effort": null,
           "harness": "Arena WebDev",
           "serviceMode": null,
-          "medianCost": 0.10001519550000001,
-          "meanCost": 0.12504863797013238,
+          "medianCost": 0.1000312884,
+          "meanCost": 0.12510580430637602,
           "model": "mimo-v2.6-pro",
           "exclusion": null
         },
@@ -6046,8 +6046,8 @@
           "effort": null,
           "harness": "Arena WebDev",
           "serviceMode": null,
-          "medianCost": 0.176389146,
-          "meanCost": 0.21146290657796257,
+          "medianCost": 0.176389626,
+          "meanCost": 0.2114788804620314,
           "model": "qwen3.8-flash-next",
           "exclusion": null
         },
@@ -6066,8 +6066,8 @@
           "effort": "max",
           "harness": "Arena WebDev",
           "serviceMode": null,
-          "medianCost": 1.3835656,
-          "meanCost": 1.8591964029590529,
+          "medianCost": 1.38420296,
+          "meanCost": 1.8592103081855806,
           "model": "glm-5.3",
           "exclusion": null
         },
@@ -6087,7 +6087,7 @@
           "harness": "Arena WebDev",
           "serviceMode": null,
           "medianCost": 0.0638269844,
-          "meanCost": 0.08176853631306169,
+          "meanCost": 0.08176853631306172,
           "model": "deepseek-v4.1-flash",
           "exclusion": null
         },
@@ -6106,8 +6106,8 @@
           "effort": "xhigh",
           "harness": "Arena WebDev",
           "serviceMode": null,
-          "medianCost": 0.4810408,
-          "meanCost": 0.9903106368155709,
+          "medianCost": 0.48108755000000003,
+          "meanCost": 0.9901959889893605,
           "model": "muse-spark-1.3",
           "exclusion": null
         },
@@ -6167,7 +6167,7 @@
           "harness": "Arena WebDev",
           "serviceMode": null,
           "medianCost": 0.10932522,
-          "meanCost": 0.12665812800410112,
+          "meanCost": 0.12665812800410114,
           "model": null,
           "exclusion": "identity-review-required"
         },
@@ -6186,8 +6186,8 @@
           "effort": null,
           "harness": "Arena WebDev",
           "serviceMode": null,
-          "medianCost": 0.15322023,
-          "meanCost": 0.20749147992474598,
+          "medianCost": 0.15328054,
+          "meanCost": 0.2075348459048647,
           "model": "glm-5.3-flash",
           "exclusion": null
         },
@@ -6207,7 +6207,7 @@
           "harness": "Arena WebDev",
           "serviceMode": null,
           "medianCost": 0.03167802,
-          "meanCost": 0.05464252532123959,
+          "meanCost": 0.05464252532123962,
           "model": "muse-ember",
           "exclusion": null
         },
@@ -6246,8 +6246,8 @@
           "effort": "high",
           "harness": "Arena WebDev",
           "serviceMode": null,
-          "medianCost": 0.112726465,
-          "meanCost": 0.2024804493667638,
+          "medianCost": 0.11274608,
+          "meanCost": 0.20241233956149252,
           "model": "claude-haiku-5.5",
           "exclusion": null
         },
@@ -6266,8 +6266,8 @@
           "effort": null,
           "harness": "Arena WebDev",
           "serviceMode": null,
-          "medianCost": 0.41362519999999997,
-          "meanCost": 0.6918869801720182,
+          "medianCost": 0.413643,
+          "meanCost": 0.6917796766078332,
           "model": "qwen3.8-27b",
           "exclusion": null
         },
@@ -6287,7 +6287,7 @@
           "harness": "Arena WebDev",
           "serviceMode": null,
           "medianCost": 0.698674245,
-          "meanCost": 0.963363308165182,
+          "meanCost": 0.9633633081651819,
           "model": "gemini-3.7-flash",
           "exclusion": null
         },
@@ -6306,8 +6306,8 @@
           "effort": null,
           "harness": "Arena WebDev",
           "serviceMode": null,
-          "medianCost": 0.15618499500000002,
-          "meanCost": 0.1825584547335774,
+          "medianCost": 0.15623388000000005,
+          "meanCost": 0.18255724502751974,
           "model": "minimax-m3.1-flash",
           "exclusion": null
         },
@@ -6327,7 +6327,7 @@
           "harness": "Arena WebDev",
           "serviceMode": null,
           "medianCost": 0.6622595249999998,
-          "meanCost": 1.021986817808247,
+          "meanCost": 1.0219539169018677,
           "model": "gemini-3.8-flash",
           "exclusion": null
         },
@@ -6347,7 +6347,7 @@
           "harness": "Arena WebDev",
           "serviceMode": null,
           "medianCost": 0.119269509,
-          "meanCost": 0.16125852557630138,
+          "meanCost": 0.16125852557630133,
           "model": "deepseek-v4-flash",
           "exclusion": null
         },
@@ -6367,7 +6367,7 @@
           "harness": "Arena WebDev",
           "serviceMode": null,
           "medianCost": 0.3725921472,
-          "meanCost": 0.5268477250693778,
+          "meanCost": 0.5268477250693777,
           "model": "deepseek-v4-pro-0813",
           "exclusion": null
         },
@@ -6386,8 +6386,8 @@
           "effort": "max",
           "harness": "Arena WebDev",
           "serviceMode": null,
-          "medianCost": 0.0632891,
-          "meanCost": 0.12502687816524144,
+          "medianCost": 0.06329398,
+          "meanCost": 0.12502158537536298,
           "model": "gpt-6-luna",
           "exclusion": null
         },
@@ -6406,8 +6406,8 @@
           "effort": "high",
           "harness": "Arena WebDev",
           "serviceMode": null,
-          "medianCost": 0.8561525000000001,
-          "meanCost": 1.0344496327414832,
+          "medianCost": 0.8561858,
+          "meanCost": 1.034575612380818,
           "model": "step-5-preview",
           "exclusion": null
         },
@@ -6426,8 +6426,8 @@
           "effort": null,
           "harness": "Arena WebDev",
           "serviceMode": null,
-          "medianCost": 0.38392914,
-          "meanCost": 0.5490143704866441,
+          "medianCost": 0.38397449999999994,
+          "meanCost": 0.5492425724949055,
           "model": "mistral-large-4",
           "exclusion": null
         },
@@ -6446,8 +6446,8 @@
           "effort": "high",
           "harness": "Arena WebDev",
           "serviceMode": null,
-          "medianCost": 1.330231125,
-          "meanCost": 2.734084017657945,
+          "medianCost": 1.3302387500000001,
+          "meanCost": 2.734172496161957,
           "model": "claude-opus-4.7",
           "exclusion": null
         },
@@ -6467,7 +6467,7 @@
           "harness": "Arena WebDev",
           "serviceMode": null,
           "medianCost": 1.6986617499999999,
-          "meanCost": 3.2565178906494805,
+          "meanCost": 3.2565178906494823,
           "model": "claude-opus-4.8",
           "exclusion": null
         },
@@ -6487,7 +6487,7 @@
           "harness": "Arena WebDev",
           "serviceMode": null,
           "medianCost": 1.214698375,
-          "meanCost": 2.626586051235927,
+          "meanCost": 2.626586051235928,
           "model": "claude-opus-4.7",
           "exclusion": null
         },
@@ -6507,7 +6507,7 @@
           "harness": "Arena WebDev",
           "serviceMode": null,
           "medianCost": 0.35031,
-          "meanCost": 0.6351359754733992,
+          "meanCost": 0.6351359754733993,
           "model": "grok-4.5",
           "exclusion": null
         },
@@ -6527,7 +6527,7 @@
           "harness": "Arena WebDev",
           "serviceMode": null,
           "medianCost": 1.67182875,
-          "meanCost": 2.690156887595185,
+          "meanCost": 2.6901568875951862,
           "model": "claude-opus-4.6",
           "exclusion": null
         },
@@ -6567,7 +6567,7 @@
           "harness": "Arena WebDev",
           "serviceMode": null,
           "medianCost": 0.9983576,
-          "meanCost": 1.789381209004087,
+          "meanCost": 1.7893812090040875,
           "model": "claude-sonnet-5",
           "exclusion": null
         },
@@ -6587,7 +6587,7 @@
           "harness": "Arena WebDev",
           "serviceMode": null,
           "medianCost": 0.7629225,
-          "meanCost": 1.0244695867189078,
+          "meanCost": 1.024469586718908,
           "model": "gemini-3.6-flash",
           "exclusion": null
         },
@@ -6607,7 +6607,7 @@
           "harness": "Arena WebDev",
           "serviceMode": null,
           "medianCost": 1.579984875,
-          "meanCost": 2.618663610773368,
+          "meanCost": 2.61866361077337,
           "model": "claude-opus-4.6",
           "exclusion": null
         },
@@ -6627,7 +6627,7 @@
           "harness": "Arena WebDev",
           "serviceMode": null,
           "medianCost": 1.4618245,
-          "meanCost": 3.2987466169188946,
+          "meanCost": 3.298746616918896,
           "model": "claude-opus-4.8",
           "exclusion": null
         },
@@ -6647,7 +6647,7 @@
           "harness": "Arena WebDev",
           "serviceMode": null,
           "medianCost": 0.37144255,
-          "meanCost": 1.3691880399095668,
+          "meanCost": 1.3691880399095664,
           "model": "muse-spark-1.2",
           "exclusion": null
         },
@@ -6666,8 +6666,8 @@
           "effort": "max",
           "harness": "Arena WebDev",
           "serviceMode": null,
-          "medianCost": 0.14610075,
-          "meanCost": 0.4949945453121099,
+          "medianCost": 0.146157875,
+          "meanCost": 0.49498147670993664,
           "model": "muse-spark-open",
           "exclusion": null
         },
@@ -6687,7 +6687,7 @@
           "harness": "Arena WebDev",
           "serviceMode": null,
           "medianCost": 1.07694255,
-          "meanCost": 1.735632927831011,
+          "meanCost": 1.7356329278310112,
           "model": "claude-sonnet-4.6",
           "exclusion": null
         },
@@ -6707,7 +6707,7 @@
           "harness": "Codex",
           "serviceMode": null,
           "medianCost": 0.5607445999999999,
-          "meanCost": 0.9911277337363579,
+          "meanCost": 0.991127733736358,
           "model": "gpt-5.6-terra",
           "exclusion": null
         },
@@ -6727,7 +6727,7 @@
           "harness": "Codex",
           "serviceMode": null,
           "medianCost": 0.08016074,
-          "meanCost": 0.14919150220704094,
+          "meanCost": 0.14919150220704097,
           "model": "gpt-5.6-luna",
           "exclusion": null
         },
@@ -6746,8 +6746,8 @@
           "effort": null,
           "harness": "Arena WebDev",
           "serviceMode": null,
-          "medianCost": 0.32712536999999997,
-          "meanCost": 0.5122630493724003,
+          "medianCost": 0.32710465999999994,
+          "meanCost": 0.5122362348052839,
           "model": "seed2.1-pro-preview",
           "exclusion": null
         },
@@ -6767,7 +6767,7 @@
           "harness": "Arena WebDev",
           "serviceMode": null,
           "medianCost": 0.5448051875,
-          "meanCost": 1.2509438333669733,
+          "meanCost": 1.2509438333669742,
           "model": "qwen3.7-max-20260517",
           "exclusion": null
         },
@@ -6806,8 +6806,8 @@
           "effort": null,
           "harness": "Arena WebDev",
           "serviceMode": null,
-          "medianCost": 0.23869852,
-          "meanCost": 0.34963001715089537,
+          "medianCost": 0.23872239,
+          "meanCost": 0.3496565631341203,
           "model": "kimi-k2.6",
           "exclusion": null
         },
@@ -6827,7 +6827,7 @@
           "harness": "Arena WebDev",
           "serviceMode": null,
           "medianCost": 0.3087379792,
-          "meanCost": 0.4593460847746002,
+          "meanCost": 0.4593460847745999,
           "model": "glm-5.1",
           "exclusion": null
         },
@@ -6947,7 +6947,7 @@
           "harness": "Codex",
           "serviceMode": null,
           "medianCost": 1.040594,
-          "meanCost": 1.6018890336261866,
+          "meanCost": 1.6018890336261864,
           "model": "gpt-5.5",
           "exclusion": null
         },
@@ -6967,7 +6967,7 @@
           "harness": "Arena WebDev",
           "serviceMode": null,
           "medianCost": 0.08562940000000001,
-          "meanCost": 0.12177907177589138,
+          "meanCost": 0.12177907177589135,
           "model": "spark-x2.6",
           "exclusion": null
         },
@@ -6987,7 +6987,7 @@
           "harness": "Arena WebDev",
           "serviceMode": null,
           "medianCost": 0.10822811999999998,
-          "meanCost": 0.22930640206379568,
+          "meanCost": 0.22930640206379563,
           "model": "minimax-m3",
           "exclusion": null
         },
@@ -7007,7 +7007,7 @@
           "harness": "Arena WebDev",
           "serviceMode": null,
           "medianCost": 0.7854631200000001,
-          "meanCost": 1.4106227570343666,
+          "meanCost": 1.410622757034367,
           "model": "qwen3.6-max-preview",
           "exclusion": null
         },
@@ -7027,7 +7027,7 @@
           "harness": "Arena WebDev",
           "serviceMode": null,
           "medianCost": 0.07199418960000001,
-          "meanCost": 0.16442985786899642,
+          "meanCost": 0.16442985786899644,
           "model": "mimo-v2.5-pro",
           "exclusion": null
         },
@@ -7067,7 +7067,7 @@
           "harness": "Arena WebDev",
           "serviceMode": null,
           "medianCost": 0.89733875,
-          "meanCost": 1.6446560302830808,
+          "meanCost": 1.6446560302830817,
           "model": "claude-opus-4.5-20251101",
           "exclusion": null
         },
@@ -7127,7 +7127,7 @@
           "harness": "Arena WebDev",
           "serviceMode": null,
           "medianCost": 0.36913435,
-          "meanCost": 0.7756474780055461,
+          "meanCost": 0.7756474780055457,
           "model": "qwen3.6-plus",
           "exclusion": null
         },
@@ -7167,7 +7167,7 @@
           "harness": "Arena WebDev",
           "serviceMode": null,
           "medianCost": 0.051907094,
-          "meanCost": 0.09683290340730635,
+          "meanCost": 0.09683290340730631,
           "model": "deepseek-v4-pro",
           "exclusion": null
         },
@@ -7187,7 +7187,7 @@
           "harness": "Arena WebDev",
           "serviceMode": null,
           "medianCost": 0.5028239999999999,
-          "meanCost": 1.044499566585899,
+          "meanCost": 1.0444995665858987,
           "model": "gemini-3.1-pro-preview",
           "exclusion": null
         },
@@ -7267,7 +7267,7 @@
           "harness": "Arena WebDev",
           "serviceMode": null,
           "medianCost": 0.0334903936,
-          "meanCost": 0.0955628873232679,
+          "meanCost": 0.09556288732326788,
           "model": "mimo-v2.5",
           "exclusion": null
         },
@@ -7327,7 +7327,7 @@
           "harness": "Arena WebDev",
           "serviceMode": null,
           "medianCost": 0.099128,
-          "meanCost": 0.22241617692533583,
+          "meanCost": 0.2224161769253358,
           "model": "glm-5",
           "exclusion": null
         },
@@ -7367,7 +7367,7 @@
           "harness": "Arena WebDev",
           "serviceMode": null,
           "medianCost": 0.11217774999999999,
-          "meanCost": 0.3603798944039453,
+          "meanCost": 0.3603798944039452,
           "model": "mimo-v2-pro",
           "exclusion": null
         },
@@ -7467,7 +7467,7 @@
           "harness": "Arena WebDev",
           "serviceMode": null,
           "medianCost": 0.2775387775,
-          "meanCost": 0.3937703327402197,
+          "meanCost": 0.3937703327402196,
           "model": "inkling",
           "exclusion": null
         },
@@ -7587,7 +7587,7 @@
           "harness": "Arena WebDev",
           "serviceMode": null,
           "medianCost": 0.295618875,
-          "meanCost": 0.8786318537744447,
+          "meanCost": 0.8786318537744443,
           "model": "gpt-5.4",
           "exclusion": null
         },
@@ -7627,7 +7627,7 @@
           "harness": "Arena WebDev",
           "serviceMode": null,
           "medianCost": 0.0561251835,
-          "meanCost": 0.11772977048477516,
+          "meanCost": 0.11772977048477515,
           "model": "minimax-m2.7",
           "exclusion": null
         },
@@ -7707,7 +7707,7 @@
           "harness": "Arena WebDev",
           "serviceMode": null,
           "medianCost": 0.021426839999999996,
-          "meanCost": 0.043848954474532555,
+          "meanCost": 0.043848954474532575,
           "model": "minimax-m2.5",
           "exclusion": null
         },
@@ -7727,7 +7727,7 @@
           "harness": "Arena WebDev",
           "serviceMode": null,
           "medianCost": 0.485265,
-          "meanCost": 0.9569429676579929,
+          "meanCost": 0.9569429676579925,
           "model": "claude-sonnet-4.5-20250929",
           "exclusion": null
         },
@@ -7767,7 +7767,7 @@
           "harness": "Arena WebDev",
           "serviceMode": null,
           "medianCost": 0.073868825,
-          "meanCost": 0.16971164691227306,
+          "meanCost": 0.16971164691227303,
           "model": "gemini-3-flash",
           "exclusion": null
         },
@@ -7786,8 +7786,8 @@
           "effort": "reasoning",
           "harness": "Arena WebDev",
           "serviceMode": null,
-          "medianCost": 0.1869119,
-          "meanCost": 0.38844837619228817,
+          "medianCost": 0.1868992,
+          "meanCost": 0.38844218707804273,
           "model": "grok-4.20-beta-0309",
           "exclusion": null
         },
@@ -7807,7 +7807,7 @@
           "harness": "Codex",
           "serviceMode": null,
           "medianCost": 0.15360485000000001,
-          "meanCost": 0.2682093967335058,
+          "meanCost": 0.26820939673350574,
           "model": "gpt-5.3-codex-20260305",
           "exclusion": null
         },
@@ -7847,7 +7847,7 @@
           "harness": "Arena WebDev",
           "serviceMode": null,
           "medianCost": 0.08907980399999998,
-          "meanCost": 0.17314230479182205,
+          "meanCost": 0.1731423047918221,
           "model": "solar-pro-4",
           "exclusion": null
         },
@@ -7887,7 +7887,7 @@
           "harness": "Arena WebDev",
           "serviceMode": null,
           "medianCost": 0.09422036,
-          "meanCost": 0.22738218887118486,
+          "meanCost": 0.22738218887118483,
           "model": "qwen3.5-122b-a10b",
           "exclusion": null
         },
@@ -7927,7 +7927,7 @@
           "harness": "Arena WebDev",
           "serviceMode": null,
           "medianCost": 0.07227064999999999,
-          "meanCost": 0.23101709487017544,
+          "meanCost": 0.23101709487017552,
           "model": "hy3-preview",
           "exclusion": null
         },
@@ -7947,7 +7947,7 @@
           "harness": "Arena WebDev",
           "serviceMode": null,
           "medianCost": 0.08336822,
-          "meanCost": 0.17874287640859726,
+          "meanCost": 0.17874287640859712,
           "model": "qwen3.5-27b",
           "exclusion": null
         },
@@ -7967,7 +7967,7 @@
           "harness": "Arena WebDev",
           "serviceMode": null,
           "medianCost": 0.0765638,
-          "meanCost": 0.3109494701547418,
+          "meanCost": 0.3109494701547419,
           "model": "grok-4.3",
           "exclusion": null
         },
@@ -8007,7 +8007,7 @@
           "harness": "Arena WebDev",
           "serviceMode": null,
           "medianCost": 0.14677249999999997,
-          "meanCost": 0.2212638144293886,
+          "meanCost": 0.2212638144293887,
           "model": "laguna-m.1",
           "exclusion": null
         },
@@ -8127,7 +8127,7 @@
           "harness": "Arena WebDev",
           "serviceMode": null,
           "medianCost": 0.3129142,
-          "meanCost": 0.3667348128307919,
+          "meanCost": 0.3667348128307921,
           "model": "claude-haiku-4.5-20251001",
           "exclusion": null
         },
@@ -8167,7 +8167,7 @@
           "harness": "Arena WebDev",
           "serviceMode": null,
           "medianCost": 0.10215924000000003,
-          "meanCost": 0.17092907424942264,
+          "meanCost": 0.1709290742494226,
           "model": "kimi-k2-thinking-turbo",
           "exclusion": null
         },
@@ -8187,7 +8187,7 @@
           "harness": "Arena WebDev",
           "serviceMode": null,
           "medianCost": 0.0683206,
-          "meanCost": 0.11248367573178485,
+          "meanCost": 0.1124836757317849,
           "model": "laguna-xs.2",
           "exclusion": null
         },
@@ -8287,7 +8287,7 @@
           "harness": "Arena WebDev",
           "serviceMode": null,
           "medianCost": 0.143946,
-          "meanCost": 0.631627380079271,
+          "meanCost": 0.6316273800792708,
           "model": "mistral-medium-3.5",
           "exclusion": null
         },
@@ -8327,7 +8327,7 @@
           "harness": "Arena WebDev",
           "serviceMode": null,
           "medianCost": 0.02239045,
-          "meanCost": 0.08031815182556816,
+          "meanCost": 0.08031815182556817,
           "model": "gemini-3.1-flash-lite-preview",
           "exclusion": null
         },
@@ -8427,7 +8427,7 @@
           "harness": "Arena WebDev",
           "serviceMode": null,
           "medianCost": 0.06607978,
-          "meanCost": 0.08925916219730938,
+          "meanCost": 0.08925916219730942,
           "model": "trinity-large-thinking",
           "exclusion": null
         },
@@ -8527,7 +8527,7 @@
           "harness": "Arena WebDev",
           "serviceMode": null,
           "medianCost": 0.002683,
-          "meanCost": 0.00697608839336764,
+          "meanCost": 0.006976088393367635,
           "model": "granite-4.1-8b",
           "exclusion": null
         },
@@ -8618,7 +8618,7 @@
       "id": "arena_agent_mode_current",
       "version": null,
       "source": "https://arena.ai/leaderboard/agent",
-      "checkedAt": "2026-11-13",
+      "checkedAt": "2026-11-14",
       "sourceUpdatedAt": "2026-11-11T20:00:00.000Z",
       "retrievalMethod": "direct-public-source",
       "coverage": "Complete Overall structured payload: 64 configurations validated; 64 ranked configurations with signed scores, confidence intervals and stable source IDs.",
@@ -9908,64 +9908,227 @@
     },
     {
       "board": "aa_coding_agent_index",
-      "id": "aa_coding_agent_index_v2_0",
-      "version": "2.0",
+      "id": "aa_coding_agent_index_v2_1",
+      "version": "2.1",
       "source": "https://artificialanalysis.ai/agents/coding-agents",
-      "checkedAt": "2026-11-13",
+      "checkedAt": "2026-11-14",
       "sourceUpdatedAt": null,
       "retrievalMethod": "direct-public-source",
       "coverage": "Public agent-variant payload, including routers. Routers are not treated as standalone base models.",
+      "recordNote": {
+        "en": "AA Coding Agent Index 2.1: equal-weight FrontierCode-AA 2.0, Terminal-Bench 4.1 and SWE-Atlas-QnA-AA. Not comparable with 2.0. TB 4.1 includes regraded saved outputs and retained 4.0 results. API task costs use provider token counts and typical measured cache hit rates, not subscription prices.",
+        "zh": "AA 编程 Agent 指数 2.1：FrontierCode-AA 2.0、Terminal-Bench 4.1、SWE-Atlas-QnA-AA 三项等权，不与 2.0 混比。TB 4.1 包含保存产物重评分及沿用的 4.0 成绩。任务 API 成本按提供商 token 数及典型实测缓存命中率计算，不代表订阅价格。"
+      },
       "rows": [
         {
           "identity": "Mistral Large 4",
-          "sourceId": "9fcf1e000a8ac75cca614977bcac25da",
+          "sourceId": "ad1f505937d9446886b286573593bd42",
           "label": "Mistral Vibe - Mistral Large 4 (High)",
-          "score": 48.2774919409145,
+          "score": 40.5885380688606,
           "harness": "Mistral Vibe",
           "router": false,
           "effort": "high",
           "fallback": false,
           "fallbackEnabled": false,
-          "meanCost": 1.25944220793442,
-          "medianCost": 0.546025783333333,
+          "meanCost": 1.34308297720647,
+          "medianCost": 0.60766314,
+          "recordNote": {
+            "en": "AA Coding Agent Index 2.1: equal-weight FrontierCode-AA 2.0, Terminal-Bench 4.1 and SWE-Atlas-QnA-AA. Not comparable with 2.0. TB 4.1 includes regraded saved outputs and retained 4.0 results. API task costs use provider token counts and typical measured cache hit rates, not subscription prices.",
+            "zh": "AA 编程 Agent 指数 2.1：FrontierCode-AA 2.0、Terminal-Bench 4.1、SWE-Atlas-QnA-AA 三项等权，不与 2.0 混比。TB 4.1 包含保存产物重评分及沿用的 4.0 成绩。任务 API 成本按提供商 token 数及典型实测缓存命中率计算，不代表订阅价格。"
+          },
+          "harnessVersions": {
+            "frontiercode-v2.0": {
+              "min": {
+                "version": "3.0.0-v14",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "3.0.0-v14",
+                "dateReleased": null
+              }
+            },
+            "swe-atlas-qna": {
+              "min": {
+                "version": "3.0.0-v14",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "3.0.0-v14",
+                "dateReleased": null
+              }
+            },
+            "terminal-bench-v4": {
+              "min": {
+                "version": "3.0.0-v14",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "3.0.0-v14",
+                "dateReleased": null
+              }
+            }
+          },
+          "unavailable": false,
+          "components": [
+            {
+              "sourceKey": "frontiercode-v2.0",
+              "weight": 0.333333333333333
+            },
+            {
+              "sourceKey": "swe-atlas-qna",
+              "weight": 0.333333333333333
+            },
+            {
+              "sourceKey": "terminal-bench-v4",
+              "weight": 0.333333333333333
+            }
+          ],
+          "fallbackAttemptCount": 0,
+          "attemptCount": 965,
           "model": "mistral-large-4",
           "exclusion": null
         },
         {
           "identity": "Grok 4.7",
-          "sourceId": "a92c8b68f37df782f0e978e0e302b023",
+          "sourceId": "7989f86ae8d744efb7608655672ab296",
           "label": "Grok Build - Grok 4.7 (Xhigh)",
-          "score": 46.5968752688172,
+          "score": 41.6396947974367,
           "harness": "Grok Build",
           "router": false,
           "effort": "xhigh",
           "fallback": false,
           "fallbackEnabled": false,
-          "meanCost": 9.47935653344195,
-          "medianCost": 5.77627633333333,
+          "meanCost": 15.3499017442707,
+          "medianCost": 7.73844566666667,
+          "recordNote": {
+            "en": "AA Coding Agent Index 2.1: equal-weight FrontierCode-AA 2.0, Terminal-Bench 4.1 and SWE-Atlas-QnA-AA. Not comparable with 2.0. TB 4.1 includes regraded saved outputs and retained 4.0 results. API task costs use provider token counts and typical measured cache hit rates, not subscription prices.",
+            "zh": "AA 编程 Agent 指数 2.1：FrontierCode-AA 2.0、Terminal-Bench 4.1、SWE-Atlas-QnA-AA 三项等权，不与 2.0 混比。TB 4.1 包含保存产物重评分及沿用的 4.0 成绩。任务 API 成本按提供商 token 数及典型实测缓存命中率计算，不代表订阅价格。"
+          },
+          "harnessVersions": {
+            "frontiercode-v2.0": {
+              "min": {
+                "version": "1.0.40",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "1.0.40",
+                "dateReleased": null
+              }
+            },
+            "swe-atlas-qna": {
+              "min": {
+                "version": "1.0.40",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "1.0.40",
+                "dateReleased": null
+              }
+            },
+            "terminal-bench-v4": {
+              "min": {
+                "version": "1.0.40",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "1.0.40",
+                "dateReleased": null
+              }
+            }
+          },
+          "unavailable": false,
+          "components": [
+            {
+              "sourceKey": "frontiercode-v2.0",
+              "weight": 0.333333333333333
+            },
+            {
+              "sourceKey": "swe-atlas-qna",
+              "weight": 0.333333333333333
+            },
+            {
+              "sourceKey": "terminal-bench-v4",
+              "weight": 0.333333333333333
+            }
+          ],
+          "fallbackAttemptCount": 0,
+          "attemptCount": 966,
           "model": "grok-4.7",
           "exclusion": null
         },
         {
           "identity": "GPT-6 Astra",
-          "sourceId": "34e0f78892fac8fd39aff6595d04610e",
+          "sourceId": "97f24b3f300fe06034101d053f3a894b",
           "label": "Codex - GPT-6 Astra (Max)",
-          "score": 54.66356905615291,
+          "score": 53.0999198979038,
           "harness": "Codex",
           "router": false,
           "effort": "max",
           "fallback": false,
           "fallbackEnabled": false,
-          "meanCost": 7.03615822479963,
-          "medianCost": 5.23164133333333,
+          "meanCost": 7.625489243747186,
+          "medianCost": 5.793012837088836,
+          "recordNote": {
+            "en": "AA Coding Agent Index 2.1: equal-weight FrontierCode-AA 2.0, Terminal-Bench 4.1 and SWE-Atlas-QnA-AA. Not comparable with 2.0. TB 4.1 includes regraded saved outputs and retained 4.0 results. API task costs use provider token counts and typical measured cache hit rates, not subscription prices.",
+            "zh": "AA 编程 Agent 指数 2.1：FrontierCode-AA 2.0、Terminal-Bench 4.1、SWE-Atlas-QnA-AA 三项等权，不与 2.0 混比。TB 4.1 包含保存产物重评分及沿用的 4.0 成绩。任务 API 成本按提供商 token 数及典型实测缓存命中率计算，不代表订阅价格。"
+          },
+          "harnessVersions": {
+            "frontiercode-v2.0": {
+              "min": {
+                "version": "0.153.4",
+                "dateReleased": "2026-09-04"
+              },
+              "max": {
+                "version": "0.153.4",
+                "dateReleased": "2026-09-04"
+              }
+            },
+            "swe-atlas-qna": {
+              "min": {
+                "version": "0.151.0",
+                "dateReleased": "2026-08-29"
+              },
+              "max": {
+                "version": "0.151.0",
+                "dateReleased": "2026-08-29"
+              }
+            },
+            "terminal-bench-v4": {
+              "min": {
+                "version": "0.153.4",
+                "dateReleased": "2026-09-04"
+              },
+              "max": {
+                "version": "0.153.4",
+                "dateReleased": "2026-09-04"
+              }
+            }
+          },
+          "unavailable": false,
+          "components": [
+            {
+              "sourceKey": "frontiercode-v2.0",
+              "weight": 0.333333333333333
+            },
+            {
+              "sourceKey": "swe-atlas-qna",
+              "weight": 0.333333333333333
+            },
+            {
+              "sourceKey": "terminal-bench-v4",
+              "weight": 0.333333333333333
+            }
+          ],
+          "fallbackAttemptCount": 0,
+          "attemptCount": 966,
           "model": "gpt-6-astra",
           "exclusion": null
         },
         {
           "identity": "Muse Wonder Full",
-          "sourceId": "047ef12b001416f72e30e1ad633988e2",
+          "sourceId": "e9150db5061429910b5341e4f8bdc7a1",
           "label": "Muse Code - Muse Wonder Full (Max)",
-          "score": 58.8804489084392,
+          "score": 54.477460356250695,
           "harness": "Muse Code",
           "router": false,
           "effort": "max",
@@ -9973,487 +10136,1760 @@
           "fallbackEnabled": false,
           "meanCost": null,
           "medianCost": null,
+          "recordNote": {
+            "en": "AA Coding Agent Index 2.1: equal-weight FrontierCode-AA 2.0, Terminal-Bench 4.1 and SWE-Atlas-QnA-AA. Not comparable with 2.0. TB 4.1 includes regraded saved outputs and retained 4.0 results. API task costs use provider token counts and typical measured cache hit rates, not subscription prices.",
+            "zh": "AA 编程 Agent 指数 2.1：FrontierCode-AA 2.0、Terminal-Bench 4.1、SWE-Atlas-QnA-AA 三项等权，不与 2.0 混比。TB 4.1 包含保存产物重评分及沿用的 4.0 成绩。任务 API 成本按提供商 token 数及典型实测缓存命中率计算，不代表订阅价格。"
+          },
+          "harnessVersions": {
+            "frontiercode-v2.0": {
+              "min": {
+                "version": "1.4.5-R5426.1",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "1.4.5-R5426.1",
+                "dateReleased": null
+              }
+            },
+            "swe-atlas-qna": {
+              "min": {
+                "version": "1.4.5-R5426.1",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "1.4.5-R5426.1",
+                "dateReleased": null
+              }
+            },
+            "terminal-bench-v4": {
+              "min": {
+                "version": "1.4.5-R5426.1",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "1.4.5-R5426.1",
+                "dateReleased": null
+              }
+            }
+          },
+          "unavailable": true,
+          "components": [
+            {
+              "sourceKey": "frontiercode-v2.0",
+              "weight": 0.333333333333333
+            },
+            {
+              "sourceKey": "swe-atlas-qna",
+              "weight": 0.333333333333333
+            },
+            {
+              "sourceKey": "terminal-bench-v4",
+              "weight": 0.333333333333333
+            }
+          ],
+          "fallbackAttemptCount": 0,
+          "attemptCount": 966,
           "model": "muse-wonder-full",
           "exclusion": null
         },
         {
+          "identity": "Claude Fable 5.2",
+          "sourceId": "9820ee072540fb8c51becfc2b1f274c8",
+          "label": "Claude Code - Claude Fable 5.2 (Xhigh, Default Fallback)",
+          "score": 58.4719045291626,
+          "harness": "Claude Code",
+          "router": false,
+          "effort": "xhigh",
+          "fallback": true,
+          "fallbackEnabled": true,
+          "meanCost": 15.469299652229711,
+          "medianCost": 10.537308070376024,
+          "recordNote": {
+            "en": "AA Coding Agent Index 2.1: equal-weight FrontierCode-AA 2.0, Terminal-Bench 4.1 and SWE-Atlas-QnA-AA. Not comparable with 2.0. TB 4.1 includes regraded saved outputs and retained 4.0 results. API task costs use provider token counts and typical measured cache hit rates, not subscription prices.",
+            "zh": "AA 编程 Agent 指数 2.1：FrontierCode-AA 2.0、Terminal-Bench 4.1、SWE-Atlas-QnA-AA 三项等权，不与 2.0 混比。TB 4.1 包含保存产物重评分及沿用的 4.0 成绩。任务 API 成本按提供商 token 数及典型实测缓存命中率计算，不代表订阅价格。"
+          },
+          "harnessVersions": {
+            "frontiercode-v2.0": {
+              "min": {
+                "version": "2.1.291",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "2.1.291",
+                "dateReleased": null
+              }
+            },
+            "swe-atlas-qna": {
+              "min": {
+                "version": "2.1.291",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "2.1.291",
+                "dateReleased": null
+              }
+            },
+            "terminal-bench-v4": {
+              "min": {
+                "version": "2.1.291",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "2.1.291",
+                "dateReleased": null
+              }
+            }
+          },
+          "unavailable": false,
+          "components": [
+            {
+              "sourceKey": "frontiercode-v2.0",
+              "weight": 0.333333333333333
+            },
+            {
+              "sourceKey": "swe-atlas-qna",
+              "weight": 0.333333333333333
+            },
+            {
+              "sourceKey": "terminal-bench-v4",
+              "weight": 0.333333333333333
+            }
+          ],
+          "fallbackAttemptCount": 55,
+          "attemptCount": 966,
+          "model": "claude-fable-5.2",
+          "exclusion": "multi-model-fallback"
+        },
+        {
           "identity": "GLM-5.3",
-          "sourceId": "96d7404e06194027474a6cc3bb31c068",
+          "sourceId": "5188996d2a6dad5165cdeebb51f983fe",
           "label": "Opencode - GLM-5.3 (Max)",
-          "score": 48.916169034430304,
+          "score": 40.117560280221596,
           "harness": "Opencode",
           "router": false,
           "effort": "max",
           "fallback": false,
           "fallbackEnabled": false,
-          "meanCost": 5.23102713863476,
-          "medianCost": 2.68592986666667,
+          "meanCost": 5.409056202392271,
+          "medianCost": 2.7428420559836675,
+          "recordNote": {
+            "en": "AA Coding Agent Index 2.1: equal-weight FrontierCode-AA 2.0, Terminal-Bench 4.1 and SWE-Atlas-QnA-AA. Not comparable with 2.0. TB 4.1 includes regraded saved outputs and retained 4.0 results. API task costs use provider token counts and typical measured cache hit rates, not subscription prices.",
+            "zh": "AA 编程 Agent 指数 2.1：FrontierCode-AA 2.0、Terminal-Bench 4.1、SWE-Atlas-QnA-AA 三项等权，不与 2.0 混比。TB 4.1 包含保存产物重评分及沿用的 4.0 成绩。任务 API 成本按提供商 token 数及典型实测缓存命中率计算，不代表订阅价格。"
+          },
+          "harnessVersions": {
+            "frontiercode-v2.0": {
+              "min": {
+                "version": "1.18.29",
+                "dateReleased": "2026-09-04"
+              },
+              "max": {
+                "version": "1.18.29",
+                "dateReleased": "2026-09-04"
+              }
+            },
+            "swe-atlas-qna": {
+              "min": {
+                "version": "1.18.29",
+                "dateReleased": "2026-09-04"
+              },
+              "max": {
+                "version": "1.18.29",
+                "dateReleased": "2026-09-04"
+              }
+            },
+            "terminal-bench-v4": {
+              "min": {
+                "version": "1.18.29",
+                "dateReleased": "2026-09-04"
+              },
+              "max": {
+                "version": "1.18.29",
+                "dateReleased": "2026-09-04"
+              }
+            }
+          },
+          "unavailable": false,
+          "components": [
+            {
+              "sourceKey": "frontiercode-v2.0",
+              "weight": 0.333333333333333
+            },
+            {
+              "sourceKey": "swe-atlas-qna",
+              "weight": 0.333333333333333
+            },
+            {
+              "sourceKey": "terminal-bench-v4",
+              "weight": 0.333333333333333
+            }
+          ],
+          "fallbackAttemptCount": 0,
+          "attemptCount": 966,
           "model": "glm-5.3",
           "exclusion": null
         },
         {
-          "identity": "Gemini 4 Carbon",
-          "sourceId": "615aa2e21916e4843210a552131d95b7",
-          "label": "Antigravity CLI - Gemini 4 Carbon (High)",
-          "score": 59.40490257412841,
-          "harness": "Antigravity CLI",
-          "router": false,
-          "effort": "high",
-          "fallback": false,
-          "fallbackEnabled": false,
-          "meanCost": 7.7432202900257,
-          "medianCost": 6.23861773333333,
-          "model": "gemini-4-carbon",
-          "exclusion": null
-        },
-        {
-          "identity": "Mistral Large 4",
-          "sourceId": "730b8ffd93e83875305984c999467c69",
-          "label": "Mistral Vibe - Mistral Large 4 (Medium)",
-          "score": 35.4072051699794,
-          "harness": "Mistral Vibe",
-          "router": false,
-          "effort": "medium",
-          "fallback": false,
-          "fallbackEnabled": false,
-          "meanCost": 0.782666187098099,
-          "medianCost": 0.288543546666667,
-          "model": "mistral-large-4",
-          "exclusion": null
-        },
-        {
-          "identity": "GPT-6.1 Sol",
-          "sourceId": "3897d72a57138fd2e2353367570b4b37",
-          "label": "Codex - GPT-6.1 Sol (Max)",
-          "score": 54.1279798631476,
-          "harness": "Codex",
-          "router": false,
-          "effort": "max",
-          "fallback": false,
-          "fallbackEnabled": false,
-          "meanCost": 1.5046389983744,
-          "medianCost": 0.95482085,
-          "model": "gpt-6.1-sol",
-          "exclusion": null
-        },
-        {
-          "identity": "GPT-6.1 Terra",
-          "sourceId": "5bc9ed9064c8cd589bfd3aaad4bbebf8",
-          "label": "Codex - GPT-6.1 Terra (Max)",
-          "score": 48.1004244053438,
-          "harness": "Codex",
-          "router": false,
-          "effort": "max",
-          "fallback": false,
-          "fallbackEnabled": false,
-          "meanCost": 1.24038465572461,
-          "medianCost": 0.880652016666667,
-          "model": "gpt-6.1-terra",
-          "exclusion": null
-        },
-        {
-          "identity": "Muse Ember",
-          "sourceId": "9f9935acf5ec3f55d1752fd01ff30de9",
-          "label": "Muse Code - Muse Ember (Xhigh)",
-          "score": 39.8415900727707,
-          "harness": "Muse Code",
-          "router": false,
-          "effort": "xhigh",
-          "fallback": false,
-          "fallbackEnabled": false,
-          "meanCost": null,
-          "medianCost": null,
-          "model": "muse-ember",
-          "exclusion": null
-        },
-        {
-          "identity": "Beam 1.0",
-          "sourceId": "accfbb12d349c0f2c93547ce814534b2",
-          "label": "Mirror - Beam 1.0",
-          "score": 20.478987379168,
-          "harness": "Mirror",
-          "router": false,
-          "effort": null,
-          "fallback": false,
-          "fallbackEnabled": false,
-          "meanCost": 0.319490234063365,
-          "medianCost": 0.181565053333333,
-          "model": "beam-1.0",
-          "exclusion": null
-        },
-        {
-          "identity": "Muse Ember",
-          "sourceId": "1566a99a00883bdb3cbdb4894e95ca1f",
-          "label": "Muse Code - Muse Ember (Max)",
-          "score": 45.9457786466818,
-          "harness": "Muse Code",
-          "router": false,
-          "effort": "max",
-          "fallback": false,
-          "fallbackEnabled": false,
-          "meanCost": null,
-          "medianCost": null,
-          "model": "muse-ember",
-          "exclusion": null
-        },
-        {
-          "identity": "Devin Fusion CLI - GPT-6 Astra XHigh + SWE-2 Medium",
-          "sourceId": "dabb064c01568bc018ba730cc39c4a96",
-          "label": "Devin Fusion CLI - GPT-6 Astra XHigh + SWE-2 Medium",
-          "score": 53.076973476702506,
-          "harness": "Devin Fusion CLI",
-          "router": true,
-          "effort": null,
-          "fallback": true,
-          "fallbackEnabled": false,
-          "meanCost": 4.33822148437056,
-          "medianCost": 3.18414842,
-          "model": null,
-          "exclusion": "router"
-        },
-        {
-          "identity": "Devin Fusion CLI - Claude Fable 5.1 XHigh + SWE-2 Medium",
-          "sourceId": "fe6df4d0f0b5360790e73d6d8830d7a0",
-          "label": "Devin Fusion CLI - Claude Fable 5.1 XHigh + SWE-2 Medium",
-          "score": 58.661903095470805,
-          "harness": "Devin Fusion CLI",
-          "router": true,
-          "effort": null,
-          "fallback": true,
-          "fallbackEnabled": false,
-          "meanCost": 8.19825160322711,
-          "medianCost": 5.48723944166667,
-          "model": null,
-          "exclusion": "router"
-        },
-        {
-          "identity": "Gemini 4 Argon",
-          "sourceId": "ee454ece0aab8dacb7127770643dcb6b",
-          "label": "Antigravity CLI - Gemini 4 Argon (High)",
-          "score": 53.2462665363311,
-          "harness": "Antigravity CLI",
-          "router": false,
-          "effort": "high",
-          "fallback": false,
-          "fallbackEnabled": false,
-          "meanCost": 11.7318632341125,
-          "medianCost": 7.44099162766667,
-          "model": "gemini-4-argon",
-          "exclusion": null
-        },
-        {
-          "identity": "Gemini 3.8 Flash",
-          "sourceId": "e17ee3a79eab160154a92f31c6c2b1fa",
-          "label": "Antigravity SDK - Gemini 3.8 Flash (High)",
-          "score": 33.272301118714,
-          "harness": "Antigravity SDK v0.1.12",
-          "router": false,
-          "effort": "high",
-          "fallback": false,
-          "fallbackEnabled": false,
-          "meanCost": 2.51071545979138,
-          "medianCost": 1.9975381875,
-          "model": "gemini-3.8-flash",
-          "exclusion": null
-        },
-        {
-          "identity": "GitHub Copilot - Copilot Fusion (max)",
-          "sourceId": "24cd2ab21d1cf5161ddd831f0949bff4",
-          "label": "GitHub Copilot - Copilot Fusion (max)",
-          "score": 59.8570672857608,
-          "harness": "GitHub Copilot",
-          "router": true,
-          "effort": null,
-          "fallback": false,
-          "fallbackEnabled": false,
-          "meanCost": 5.58738499550885,
-          "medianCost": 3.899995,
-          "model": null,
-          "exclusion": "router"
-        },
-        {
-          "identity": "Claude Fable 5.1",
-          "sourceId": "5c82a7985b08f35190cc0db574fd1773",
-          "label": "Claude Code - Claude Fable 5.1 (Max, Default Fallback)",
-          "score": 57.6200245682633,
-          "harness": "Claude Code",
-          "router": false,
-          "effort": "max",
-          "fallback": true,
-          "fallbackEnabled": true,
-          "meanCost": 11.5301045391259,
-          "medianCost": 8.248714375,
-          "model": "claude-fable-5.1",
-          "exclusion": "multi-model-fallback"
-        },
-        {
-          "identity": "Claude Haiku 5.5",
-          "sourceId": "2a2fed494e0d1343b14efe96e6bc3669",
-          "label": "Claude Code - Claude Haiku 5.5 (Max)",
-          "score": 37.349605072227696,
-          "harness": "Claude Code",
-          "router": false,
-          "effort": "max",
-          "fallback": true,
-          "fallbackEnabled": false,
-          "meanCost": 2.67388407176395,
-          "medianCost": 2.150492865,
-          "model": "claude-haiku-5.5",
-          "exclusion": "multi-model-fallback"
-        },
-        {
-          "identity": "Claude Opus 5.5",
-          "sourceId": "f8b3c23615b8b60e23364c27e8494d6d",
-          "label": "Claude Code - Claude Opus 5.5 (Max, Default Fallback)",
-          "score": 61.6528649505811,
-          "harness": "Claude Code",
-          "router": false,
-          "effort": "max",
-          "fallback": true,
-          "fallbackEnabled": true,
-          "meanCost": 11.4227202144224,
-          "medianCost": 8.256333,
-          "model": "claude-opus-5.5",
-          "exclusion": "multi-model-fallback"
-        },
-        {
-          "identity": "Qwen3.8 Max",
-          "sourceId": "1630d319b5e4dc5183cb88a2b2af1646",
-          "label": "Claude Code - Qwen3.8 Max",
-          "score": 39.2199207885305,
-          "harness": "Claude Code",
-          "router": false,
-          "effort": null,
-          "fallback": false,
-          "fallbackEnabled": false,
-          "meanCost": 3.79584401482699,
-          "medianCost": 2.5953255,
-          "model": "qwen3.8-max",
-          "exclusion": null
-        },
-        {
-          "identity": "Claude Sonnet 5.5",
-          "sourceId": "9983e10d68576074ad63407d0ca81e4b",
-          "label": "Claude Code - Claude Sonnet 5.5 (Max, Default Fallback)",
-          "score": 59.3374426631911,
-          "harness": "Claude Code",
-          "router": false,
-          "effort": "max",
-          "fallback": true,
-          "fallbackEnabled": true,
-          "meanCost": 13.3015082635468,
-          "medianCost": 11.621403,
-          "model": "claude-sonnet-5.5",
-          "exclusion": "multi-model-fallback"
-        },
-        {
-          "identity": "Step 5 Preview",
-          "sourceId": "06c2cfad6e3aba9000f2dd5e429d4407",
-          "label": "Claude Code - Step 5 Preview",
-          "score": 43.1274491691105,
-          "harness": "Claude Code",
-          "router": false,
-          "effort": null,
-          "fallback": false,
-          "fallbackEnabled": false,
-          "meanCost": 1.84006320525524,
-          "medianCost": 0.950752583333333,
-          "model": "step-5-preview",
-          "exclusion": null
-        },
-        {
-          "identity": "DeepSeek V4.1 Flash",
-          "sourceId": "ef847aa89b4f0471ffe5275ba2f11771",
-          "label": "Codex - DeepSeek V4.1 Flash (Max)",
-          "score": 47.3001334419464,
-          "harness": "Codex",
-          "router": false,
-          "effort": "max",
-          "fallback": false,
-          "fallbackEnabled": false,
-          "meanCost": 0.38619359563592,
-          "medianCost": 0.2094009,
-          "model": "deepseek-v4.1-flash",
-          "exclusion": null
-        },
-        {
-          "identity": "GPT-6 Luna",
-          "sourceId": "c54a3c8e7e89d5a784e98211605eaa53",
-          "label": "Codex - GPT-6 Luna (Max)",
-          "score": 31.2156308460954,
-          "harness": "Codex",
-          "router": false,
-          "effort": "max",
-          "fallback": false,
-          "fallbackEnabled": false,
-          "meanCost": 0.156271419158149,
-          "medianCost": 0.0924018583333334,
-          "model": "gpt-6-luna",
-          "exclusion": null
-        },
-        {
-          "identity": "DeepSeek V4.1 Flash 1017",
-          "sourceId": "24c98f188d41522a849006ac453fdebe",
-          "label": "DeepSeek Harness - DeepSeek V4.1 Flash 1017 (Max)",
-          "score": 46.305195753231196,
-          "harness": "DeepSeek Harness",
-          "router": false,
-          "effort": "max",
-          "fallback": false,
-          "fallbackEnabled": false,
-          "meanCost": 0.29627468390668,
-          "medianCost": 0.200217452,
-          "model": "deepseek-v4.1-flash-1017",
-          "exclusion": null
-        },
-        {
-          "identity": "Devin Fusion CLI - Claude Opus 5.5 Max + GPT-6 Luna High",
-          "sourceId": "736e1c6006fd243c9cc384b61c478e97",
-          "label": "Devin Fusion CLI - Claude Opus 5.5 Max + GPT-6 Luna High",
-          "score": 61.511721950689704,
-          "harness": "Devin Fusion CLI",
-          "router": true,
-          "effort": null,
-          "fallback": false,
-          "fallbackEnabled": false,
-          "meanCost": 7.99768820548534,
-          "medianCost": 6.39283098583333,
-          "model": null,
-          "exclusion": "router"
-        },
-        {
-          "identity": "Kimi K3",
-          "sourceId": "88c83705811535bca8ee000bfd3a256c",
-          "label": "Kimi Code CLI - Kimi K3 (Max)",
-          "score": 41.417319257087,
+          "identity": "Kimi K3.1 Pro",
+          "sourceId": "291529f5989be92da6395f4bb93da395",
+          "label": "Kimi Code CLI - Kimi K3.1 Pro",
+          "score": 48.638030574562805,
           "harness": "Kimi Code CLI",
           "router": false,
           "effort": "max",
           "fallback": false,
           "fallbackEnabled": false,
-          "meanCost": 5.16526976917945,
-          "medianCost": 2.78907719,
-          "model": "kimi-k3",
+          "meanCost": 2.9446441852492624,
+          "medianCost": 1.9005676854936142,
+          "recordNote": {
+            "en": "AA Coding Agent Index 2.1: equal-weight FrontierCode-AA 2.0, Terminal-Bench 4.1 and SWE-Atlas-QnA-AA. Not comparable with 2.0. TB 4.1 includes regraded saved outputs and retained 4.0 results. API task costs use provider token counts and typical measured cache hit rates, not subscription prices.",
+            "zh": "AA 编程 Agent 指数 2.1：FrontierCode-AA 2.0、Terminal-Bench 4.1、SWE-Atlas-QnA-AA 三项等权，不与 2.0 混比。TB 4.1 包含保存产物重评分及沿用的 4.0 成绩。任务 API 成本按提供商 token 数及典型实测缓存命中率计算，不代表订阅价格。"
+          },
+          "harnessVersions": {
+            "frontiercode-v2.0": {
+              "min": {
+                "version": "2.5.1",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "2.5.1",
+                "dateReleased": null
+              }
+            },
+            "swe-atlas-qna": {
+              "min": {
+                "version": "2.5.1",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "2.5.1",
+                "dateReleased": null
+              }
+            },
+            "terminal-bench-v4": {
+              "min": {
+                "version": "2.5.1",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "2.5.1",
+                "dateReleased": null
+              }
+            }
+          },
+          "unavailable": false,
+          "components": [
+            {
+              "sourceKey": "frontiercode-v2.0",
+              "weight": 0.333333333333333
+            },
+            {
+              "sourceKey": "swe-atlas-qna",
+              "weight": 0.333333333333333
+            },
+            {
+              "sourceKey": "terminal-bench-v4",
+              "weight": 0.333333333333333
+            }
+          ],
+          "fallbackAttemptCount": 0,
+          "attemptCount": 966,
+          "model": "kimi-k3.1-pro",
           "exclusion": null
         },
         {
-          "identity": "Muse Spark 1.3",
-          "sourceId": "f09fd629724ff1b103982a6158d00183",
-          "label": "Muse Code - Muse Spark 1.3 (Max)",
-          "score": 45.7077885630498,
-          "harness": "Muse Code",
-          "router": false,
-          "effort": "max",
-          "fallback": false,
-          "fallbackEnabled": false,
-          "meanCost": 3.91029139020419,
-          "medianCost": 1.283562,
-          "model": "muse-spark-1.3",
-          "exclusion": null
-        },
-        {
-          "identity": "Muse Spark Open",
-          "sourceId": "d843fce803ff4f84ababc47040306116",
-          "label": "Muse Code - Muse Spark Open (Xhigh)",
-          "score": 26.300702389486304,
-          "harness": "Muse Code",
-          "router": false,
-          "effort": "xhigh",
-          "fallback": false,
-          "fallbackEnabled": false,
-          "meanCost": 3.54324946048794,
-          "medianCost": 1.50236314166667,
-          "model": "muse-spark-open",
-          "exclusion": null
-        },
-        {
-          "identity": "Muse Wonder",
-          "sourceId": "52f72f7f3393c5edf92b32326e7a678d",
-          "label": "Muse Code - Muse Wonder (Max)",
-          "score": 51.9768236993592,
-          "harness": "Muse Code",
-          "router": false,
-          "effort": "max",
-          "fallback": false,
-          "fallbackEnabled": false,
-          "meanCost": 8.04811220428196,
-          "medianCost": 4.21125933333333,
-          "model": "muse-wonder",
-          "exclusion": null
-        },
-        {
-          "identity": "GPT-6.1 Terra",
-          "sourceId": "41bcc9881ff1465f62e417e5a7535e20",
-          "label": "Codex - GPT-6.1 Terra (High)",
-          "score": 46.2787772238514,
-          "harness": "Codex",
+          "identity": "Gemini 4 Carbon",
+          "sourceId": "7814cb87040ea234c69eca79cd85486d",
+          "label": "Antigravity CLI - Gemini 4 Carbon (High)",
+          "score": 55.465927826653605,
+          "harness": "Antigravity CLI",
           "router": false,
           "effort": "high",
           "fallback": false,
           "fallbackEnabled": false,
-          "meanCost": 0.544031579042956,
-          "medianCost": 0.320868575,
-          "model": "gpt-6.1-terra",
+          "meanCost": 7.126967178108669,
+          "medianCost": 5.2811126761008325,
+          "recordNote": {
+            "en": "AA Coding Agent Index 2.1: equal-weight FrontierCode-AA 2.0, Terminal-Bench 4.1 and SWE-Atlas-QnA-AA. Not comparable with 2.0. TB 4.1 includes regraded saved outputs and retained 4.0 results. API task costs use provider token counts and typical measured cache hit rates, not subscription prices.",
+            "zh": "AA 编程 Agent 指数 2.1：FrontierCode-AA 2.0、Terminal-Bench 4.1、SWE-Atlas-QnA-AA 三项等权，不与 2.0 混比。TB 4.1 包含保存产物重评分及沿用的 4.0 成绩。任务 API 成本按提供商 token 数及典型实测缓存命中率计算，不代表订阅价格。"
+          },
+          "harnessVersions": {
+            "frontiercode-v2.0": {
+              "min": {
+                "version": "1.4.3",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "1.4.3",
+                "dateReleased": null
+              }
+            },
+            "swe-atlas-qna": {
+              "min": {
+                "version": "1.4.3",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "1.4.3",
+                "dateReleased": null
+              }
+            },
+            "terminal-bench-v4": {
+              "min": {
+                "version": "1.4.3",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "1.4.3",
+                "dateReleased": null
+              }
+            }
+          },
+          "unavailable": false,
+          "components": [
+            {
+              "sourceKey": "frontiercode-v2.0",
+              "weight": 0.333333333333333
+            },
+            {
+              "sourceKey": "swe-atlas-qna",
+              "weight": 0.333333333333333
+            },
+            {
+              "sourceKey": "terminal-bench-v4",
+              "weight": 0.333333333333333
+            }
+          ],
+          "fallbackAttemptCount": 0,
+          "attemptCount": 966,
+          "model": "gemini-4-carbon",
           "exclusion": null
         },
         {
-          "identity": "GPT-6.1 Terra",
-          "sourceId": "b54e883be1cff7a6a43a737ee106011c",
-          "label": "Codex - GPT-6.1 Terra (Low)",
-          "score": 34.85683422396,
+          "identity": "GPT-6 Luna",
+          "sourceId": "44059b1749b7773326c3ee04acbfaba2",
+          "label": "Codex - GPT-6 Luna (Max)",
+          "score": 25.893788421853,
           "harness": "Codex",
           "router": false,
-          "effort": "low",
+          "effort": "max",
           "fallback": false,
           "fallbackEnabled": false,
-          "meanCost": 0.198820047696481,
-          "medianCost": 0.133640266666667,
-          "model": "gpt-6.1-terra",
+          "meanCost": 0.19217143913196935,
+          "medianCost": 0.11250934257540701,
+          "recordNote": {
+            "en": "AA Coding Agent Index 2.1: equal-weight FrontierCode-AA 2.0, Terminal-Bench 4.1 and SWE-Atlas-QnA-AA. Not comparable with 2.0. TB 4.1 includes regraded saved outputs and retained 4.0 results. API task costs use provider token counts and typical measured cache hit rates, not subscription prices.",
+            "zh": "AA 编程 Agent 指数 2.1：FrontierCode-AA 2.0、Terminal-Bench 4.1、SWE-Atlas-QnA-AA 三项等权，不与 2.0 混比。TB 4.1 包含保存产物重评分及沿用的 4.0 成绩。任务 API 成本按提供商 token 数及典型实测缓存命中率计算，不代表订阅价格。"
+          },
+          "harnessVersions": {
+            "frontiercode-v2.0": {
+              "min": {
+                "version": "0.154.0",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "0.154.0",
+                "dateReleased": null
+              }
+            },
+            "swe-atlas-qna": {
+              "min": {
+                "version": "0.154.0",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "0.154.0",
+                "dateReleased": null
+              }
+            },
+            "terminal-bench-v4": {
+              "min": {
+                "version": "0.154.0",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "0.154.0",
+                "dateReleased": null
+              }
+            }
+          },
+          "unavailable": false,
+          "components": [
+            {
+              "sourceKey": "frontiercode-v2.0",
+              "weight": 0.333333333333333
+            },
+            {
+              "sourceKey": "swe-atlas-qna",
+              "weight": 0.333333333333333
+            },
+            {
+              "sourceKey": "terminal-bench-v4",
+              "weight": 0.333333333333333
+            }
+          ],
+          "fallbackAttemptCount": 0,
+          "attemptCount": 966,
+          "model": "gpt-6-luna",
           "exclusion": null
         },
         {
-          "identity": "GPT-6.1 Terra",
-          "sourceId": "a3eeef492929228973b8da75e051291d",
-          "label": "Codex - GPT-6.1 Terra (Medium)",
-          "score": 42.0492375909634,
-          "harness": "Codex",
-          "router": false,
-          "effort": "medium",
-          "fallback": false,
-          "fallbackEnabled": false,
-          "meanCost": 0.394994482142174,
-          "medianCost": 0.2338406,
-          "model": "gpt-6.1-terra",
-          "exclusion": null
-        },
-        {
-          "identity": "GPT-6.1 Terra",
-          "sourceId": "ee13e548b65eeee544cd5b0c6068a4f5",
-          "label": "Codex - GPT-6.1 Terra (Non-reasoning)",
-          "score": 39.215161464103396,
-          "harness": "Codex",
+          "identity": "Step 5 Preview",
+          "sourceId": "b4fbcf18275aad4049cd12448d37af9f",
+          "label": "Claude Code - Step 5 Preview",
+          "score": 35.7861713913327,
+          "harness": "Claude Code",
           "router": false,
           "effort": null,
           "fallback": false,
           "fallbackEnabled": false,
-          "meanCost": 0.454255643441512,
-          "medianCost": 0.246047841666667,
-          "model": "gpt-6.1-terra",
+          "meanCost": 3.5462938292167023,
+          "medianCost": 1.907056878480014,
+          "recordNote": {
+            "en": "AA Coding Agent Index 2.1: equal-weight FrontierCode-AA 2.0, Terminal-Bench 4.1 and SWE-Atlas-QnA-AA. Not comparable with 2.0. TB 4.1 includes regraded saved outputs and retained 4.0 results. API task costs use provider token counts and typical measured cache hit rates, not subscription prices.",
+            "zh": "AA 编程 Agent 指数 2.1：FrontierCode-AA 2.0、Terminal-Bench 4.1、SWE-Atlas-QnA-AA 三项等权，不与 2.0 混比。TB 4.1 包含保存产物重评分及沿用的 4.0 成绩。任务 API 成本按提供商 token 数及典型实测缓存命中率计算，不代表订阅价格。"
+          },
+          "harnessVersions": {
+            "frontiercode-v2.0": {
+              "min": {
+                "version": "2.1.220",
+                "dateReleased": "2026-07-24"
+              },
+              "max": {
+                "version": "2.1.220",
+                "dateReleased": "2026-07-24"
+              }
+            },
+            "swe-atlas-qna": {
+              "min": {
+                "version": "2.1.220",
+                "dateReleased": "2026-07-24"
+              },
+              "max": {
+                "version": "2.1.220",
+                "dateReleased": "2026-07-24"
+              }
+            },
+            "terminal-bench-v4": {
+              "min": {
+                "version": "2.1.220",
+                "dateReleased": "2026-07-24"
+              },
+              "max": {
+                "version": "2.1.220",
+                "dateReleased": "2026-07-24"
+              }
+            }
+          },
+          "unavailable": false,
+          "components": [
+            {
+              "sourceKey": "frontiercode-v2.0",
+              "weight": 0.333333333333333
+            },
+            {
+              "sourceKey": "swe-atlas-qna",
+              "weight": 0.333333333333333
+            },
+            {
+              "sourceKey": "terminal-bench-v4",
+              "weight": 0.333333333333333
+            }
+          ],
+          "fallbackAttemptCount": 0,
+          "attemptCount": 964,
+          "model": "step-5-preview",
+          "exclusion": null
+        },
+        {
+          "identity": "Claude Sonnet 5.5",
+          "sourceId": "4d278d53a18fbdcb5138d11466ea0b1b",
+          "label": "Claude Code - Claude Sonnet 5.5 (Max, Default Fallback)",
+          "score": 56.3314945150429,
+          "harness": "Claude Code",
+          "router": false,
+          "effort": "max",
+          "fallback": true,
+          "fallbackEnabled": true,
+          "meanCost": 11.39857189877927,
+          "medianCost": 8.579667932484544,
+          "recordNote": {
+            "en": "AA Coding Agent Index 2.1: equal-weight FrontierCode-AA 2.0, Terminal-Bench 4.1 and SWE-Atlas-QnA-AA. Not comparable with 2.0. TB 4.1 includes regraded saved outputs and retained 4.0 results. API task costs use provider token counts and typical measured cache hit rates, not subscription prices.",
+            "zh": "AA 编程 Agent 指数 2.1：FrontierCode-AA 2.0、Terminal-Bench 4.1、SWE-Atlas-QnA-AA 三项等权，不与 2.0 混比。TB 4.1 包含保存产物重评分及沿用的 4.0 成绩。任务 API 成本按提供商 token 数及典型实测缓存命中率计算，不代表订阅价格。"
+          },
+          "harnessVersions": {
+            "frontiercode-v2.0": {
+              "min": {
+                "version": "2.1.280",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "2.1.280",
+                "dateReleased": null
+              }
+            },
+            "swe-atlas-qna": {
+              "min": {
+                "version": "2.1.280",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "2.1.280",
+                "dateReleased": null
+              }
+            },
+            "terminal-bench-v4": {
+              "min": {
+                "version": "2.1.280",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "2.1.280",
+                "dateReleased": null
+              }
+            }
+          },
+          "unavailable": false,
+          "components": [
+            {
+              "sourceKey": "frontiercode-v2.0",
+              "weight": 0.333333333333333
+            },
+            {
+              "sourceKey": "swe-atlas-qna",
+              "weight": 0.333333333333333
+            },
+            {
+              "sourceKey": "terminal-bench-v4",
+              "weight": 0.333333333333333
+            }
+          ],
+          "fallbackAttemptCount": 45,
+          "attemptCount": 966,
+          "model": "claude-sonnet-5.5",
+          "exclusion": "multi-model-fallback"
+        },
+        {
+          "identity": "Qwen3.8 Max",
+          "sourceId": "6e872dc3aa0bc90635d8ae831e28f074",
+          "label": "Claude Code - Qwen3.8 Max",
+          "score": 32.7277079939177,
+          "harness": "Claude Code",
+          "router": false,
+          "effort": null,
+          "fallback": false,
+          "fallbackEnabled": false,
+          "meanCost": 4.02533866949029,
+          "medianCost": 2.71393925,
+          "recordNote": {
+            "en": "AA Coding Agent Index 2.1: equal-weight FrontierCode-AA 2.0, Terminal-Bench 4.1 and SWE-Atlas-QnA-AA. Not comparable with 2.0. TB 4.1 includes regraded saved outputs and retained 4.0 results. API task costs use provider token counts and typical measured cache hit rates, not subscription prices.",
+            "zh": "AA 编程 Agent 指数 2.1：FrontierCode-AA 2.0、Terminal-Bench 4.1、SWE-Atlas-QnA-AA 三项等权，不与 2.0 混比。TB 4.1 包含保存产物重评分及沿用的 4.0 成绩。任务 API 成本按提供商 token 数及典型实测缓存命中率计算，不代表订阅价格。"
+          },
+          "harnessVersions": {
+            "frontiercode-v2.0": {
+              "min": {
+                "version": "2.1.266",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "2.1.266",
+                "dateReleased": null
+              }
+            },
+            "swe-atlas-qna": {
+              "min": {
+                "version": "2.1.224",
+                "dateReleased": "2026-08-07"
+              },
+              "max": {
+                "version": "2.1.236",
+                "dateReleased": "2026-08-19"
+              }
+            },
+            "terminal-bench-v4": {
+              "min": {
+                "version": "2.1.261",
+                "dateReleased": "2026-09-04"
+              },
+              "max": {
+                "version": "2.1.261",
+                "dateReleased": "2026-09-04"
+              }
+            }
+          },
+          "unavailable": false,
+          "components": [
+            {
+              "sourceKey": "frontiercode-v2.0",
+              "weight": 0.333333333333333
+            },
+            {
+              "sourceKey": "swe-atlas-qna",
+              "weight": 0.333333333333333
+            },
+            {
+              "sourceKey": "terminal-bench-v4",
+              "weight": 0.333333333333333
+            }
+          ],
+          "fallbackAttemptCount": 0,
+          "attemptCount": 965,
+          "model": "qwen3.8-max",
+          "exclusion": null
+        },
+        {
+          "identity": "Claude Opus 5.5",
+          "sourceId": "e594775f1aa1026d8fa9385fa35f68b4",
+          "label": "Claude Code - Claude Opus 5.5 (Max, Default Fallback)",
+          "score": 58.158632290648406,
+          "harness": "Claude Code",
+          "router": false,
+          "effort": "max",
+          "fallback": true,
+          "fallbackEnabled": true,
+          "meanCost": 12.613182516098568,
+          "medianCost": 9.660007977060918,
+          "recordNote": {
+            "en": "AA Coding Agent Index 2.1: equal-weight FrontierCode-AA 2.0, Terminal-Bench 4.1 and SWE-Atlas-QnA-AA. Not comparable with 2.0. TB 4.1 includes regraded saved outputs and retained 4.0 results. API task costs use provider token counts and typical measured cache hit rates, not subscription prices.",
+            "zh": "AA 编程 Agent 指数 2.1：FrontierCode-AA 2.0、Terminal-Bench 4.1、SWE-Atlas-QnA-AA 三项等权，不与 2.0 混比。TB 4.1 包含保存产物重评分及沿用的 4.0 成绩。任务 API 成本按提供商 token 数及典型实测缓存命中率计算，不代表订阅价格。"
+          },
+          "harnessVersions": {
+            "frontiercode-v2.0": {
+              "min": {
+                "version": "2.1.280",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "2.1.280",
+                "dateReleased": null
+              }
+            },
+            "swe-atlas-qna": {
+              "min": {
+                "version": "2.1.280",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "2.1.280",
+                "dateReleased": null
+              }
+            },
+            "terminal-bench-v4": {
+              "min": {
+                "version": "2.1.280",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "2.1.280",
+                "dateReleased": null
+              }
+            }
+          },
+          "unavailable": false,
+          "components": [
+            {
+              "sourceKey": "frontiercode-v2.0",
+              "weight": 0.333333333333333
+            },
+            {
+              "sourceKey": "swe-atlas-qna",
+              "weight": 0.333333333333333
+            },
+            {
+              "sourceKey": "terminal-bench-v4",
+              "weight": 0.333333333333333
+            }
+          ],
+          "fallbackAttemptCount": 77,
+          "attemptCount": 966,
+          "model": "claude-opus-5.5",
+          "exclusion": "multi-model-fallback"
+        },
+        {
+          "identity": "Claude Haiku 5.5",
+          "sourceId": "2b8b120200b4dc63bb579d5a53b52b70",
+          "label": "Claude Code - Claude Haiku 5.5 (Max)",
+          "score": 29.5910380688606,
+          "harness": "Claude Code",
+          "router": false,
+          "effort": "max",
+          "fallback": true,
+          "fallbackEnabled": false,
+          "meanCost": 2.25403965932735,
+          "medianCost": 1.66728056333333,
+          "recordNote": {
+            "en": "AA Coding Agent Index 2.1: equal-weight FrontierCode-AA 2.0, Terminal-Bench 4.1 and SWE-Atlas-QnA-AA. Not comparable with 2.0. TB 4.1 includes regraded saved outputs and retained 4.0 results. API task costs use provider token counts and typical measured cache hit rates, not subscription prices.",
+            "zh": "AA 编程 Agent 指数 2.1：FrontierCode-AA 2.0、Terminal-Bench 4.1、SWE-Atlas-QnA-AA 三项等权，不与 2.0 混比。TB 4.1 包含保存产物重评分及沿用的 4.0 成绩。任务 API 成本按提供商 token 数及典型实测缓存命中率计算，不代表订阅价格。"
+          },
+          "harnessVersions": {
+            "frontiercode-v2.0": {
+              "min": {
+                "version": "2.1.289",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "2.1.289",
+                "dateReleased": null
+              }
+            },
+            "swe-atlas-qna": {
+              "min": {
+                "version": "2.1.289",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "2.1.289",
+                "dateReleased": null
+              }
+            },
+            "terminal-bench-v4": {
+              "min": {
+                "version": "2.1.289",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "2.1.289",
+                "dateReleased": null
+              }
+            }
+          },
+          "unavailable": false,
+          "components": [
+            {
+              "sourceKey": "frontiercode-v2.0",
+              "weight": 0.333333333333333
+            },
+            {
+              "sourceKey": "swe-atlas-qna",
+              "weight": 0.333333333333333
+            },
+            {
+              "sourceKey": "terminal-bench-v4",
+              "weight": 0.333333333333333
+            }
+          ],
+          "fallbackAttemptCount": 3,
+          "attemptCount": 966,
+          "model": "claude-haiku-5.5",
+          "exclusion": "multi-model-fallback"
+        },
+        {
+          "identity": "Claude Fable 5.1",
+          "sourceId": "98e53b1f02eee089dc8221078e300b3e",
+          "label": "Claude Code - Claude Fable 5.1 (Max, Default Fallback)",
+          "score": 52.489956554795306,
+          "harness": "Claude Code",
+          "router": false,
+          "effort": "max",
+          "fallback": true,
+          "fallbackEnabled": true,
+          "meanCost": 11.704592829641319,
+          "medianCost": 8.99502027819251,
+          "recordNote": {
+            "en": "AA Coding Agent Index 2.1: equal-weight FrontierCode-AA 2.0, Terminal-Bench 4.1 and SWE-Atlas-QnA-AA. Not comparable with 2.0. TB 4.1 includes regraded saved outputs and retained 4.0 results. API task costs use provider token counts and typical measured cache hit rates, not subscription prices.",
+            "zh": "AA 编程 Agent 指数 2.1：FrontierCode-AA 2.0、Terminal-Bench 4.1、SWE-Atlas-QnA-AA 三项等权，不与 2.0 混比。TB 4.1 包含保存产物重评分及沿用的 4.0 成绩。任务 API 成本按提供商 token 数及典型实测缓存命中率计算，不代表订阅价格。"
+          },
+          "harnessVersions": {
+            "frontiercode-v2.0": {
+              "min": {
+                "version": "2.1.263",
+                "dateReleased": "2026-09-06"
+              },
+              "max": {
+                "version": "2.1.263",
+                "dateReleased": "2026-09-06"
+              }
+            },
+            "swe-atlas-qna": {
+              "min": {
+                "version": "2.1.259",
+                "dateReleased": "2026-09-02"
+              },
+              "max": {
+                "version": "2.1.259",
+                "dateReleased": "2026-09-02"
+              }
+            },
+            "terminal-bench-v4": {
+              "min": {
+                "version": "2.1.263",
+                "dateReleased": "2026-09-06"
+              },
+              "max": {
+                "version": "2.1.263",
+                "dateReleased": "2026-09-06"
+              }
+            }
+          },
+          "unavailable": false,
+          "components": [
+            {
+              "sourceKey": "frontiercode-v2.0",
+              "weight": 0.333333333333333
+            },
+            {
+              "sourceKey": "swe-atlas-qna",
+              "weight": 0.333333333333333
+            },
+            {
+              "sourceKey": "terminal-bench-v4",
+              "weight": 0.333333333333333
+            }
+          ],
+          "fallbackAttemptCount": 79,
+          "attemptCount": 966,
+          "model": "claude-fable-5.1",
+          "exclusion": "multi-model-fallback"
+        },
+        {
+          "identity": "Mistral Large 4",
+          "sourceId": "da3088d1680debe97b7b536e6908c548",
+          "label": "Mistral Vibe - Mistral Large 4 (Medium)",
+          "score": 29.6112186379928,
+          "harness": "Mistral Vibe",
+          "router": false,
+          "effort": "medium",
+          "fallback": false,
+          "fallbackEnabled": false,
+          "meanCost": 1.02273104493918,
+          "medianCost": 0.491846926666667,
+          "recordNote": {
+            "en": "AA Coding Agent Index 2.1: equal-weight FrontierCode-AA 2.0, Terminal-Bench 4.1 and SWE-Atlas-QnA-AA. Not comparable with 2.0. TB 4.1 includes regraded saved outputs and retained 4.0 results. API task costs use provider token counts and typical measured cache hit rates, not subscription prices.",
+            "zh": "AA 编程 Agent 指数 2.1：FrontierCode-AA 2.0、Terminal-Bench 4.1、SWE-Atlas-QnA-AA 三项等权，不与 2.0 混比。TB 4.1 包含保存产物重评分及沿用的 4.0 成绩。任务 API 成本按提供商 token 数及典型实测缓存命中率计算，不代表订阅价格。"
+          },
+          "harnessVersions": {
+            "frontiercode-v2.0": {
+              "min": {
+                "version": "3.0.0-v14",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "3.0.0-v14",
+                "dateReleased": null
+              }
+            },
+            "swe-atlas-qna": {
+              "min": {
+                "version": "3.0.0-v14",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "3.0.0-v14",
+                "dateReleased": null
+              }
+            },
+            "terminal-bench-v4": {
+              "min": {
+                "version": "3.0.0-v14",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "3.0.0-v14",
+                "dateReleased": null
+              }
+            }
+          },
+          "unavailable": false,
+          "components": [
+            {
+              "sourceKey": "frontiercode-v2.0",
+              "weight": 0.333333333333333
+            },
+            {
+              "sourceKey": "swe-atlas-qna",
+              "weight": 0.333333333333333
+            },
+            {
+              "sourceKey": "terminal-bench-v4",
+              "weight": 0.333333333333333
+            }
+          ],
+          "fallbackAttemptCount": 0,
+          "attemptCount": 966,
+          "model": "mistral-large-4",
+          "exclusion": null
+        },
+        {
+          "identity": "GPT-6.1 Sol",
+          "sourceId": "5146f276cbceb4e9fdeb5834609f805b",
+          "label": "Codex - GPT-6.1 Sol (Max)",
+          "score": 52.159890300858,
+          "harness": "Codex",
+          "router": false,
+          "effort": "max",
+          "fallback": false,
+          "fallbackEnabled": false,
+          "meanCost": 1.5065869065928608,
+          "medianCost": 1.0401192585038634,
+          "recordNote": {
+            "en": "AA Coding Agent Index 2.1: equal-weight FrontierCode-AA 2.0, Terminal-Bench 4.1 and SWE-Atlas-QnA-AA. Not comparable with 2.0. TB 4.1 includes regraded saved outputs and retained 4.0 results. API task costs use provider token counts and typical measured cache hit rates, not subscription prices.",
+            "zh": "AA 编程 Agent 指数 2.1：FrontierCode-AA 2.0、Terminal-Bench 4.1、SWE-Atlas-QnA-AA 三项等权，不与 2.0 混比。TB 4.1 包含保存产物重评分及沿用的 4.0 成绩。任务 API 成本按提供商 token 数及典型实测缓存命中率计算，不代表订阅价格。"
+          },
+          "harnessVersions": {
+            "frontiercode-v2.0": {
+              "min": {
+                "version": "0.154.0",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "0.154.0",
+                "dateReleased": null
+              }
+            },
+            "swe-atlas-qna": {
+              "min": {
+                "version": "0.154.0",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "0.154.0",
+                "dateReleased": null
+              }
+            },
+            "terminal-bench-v4": {
+              "min": {
+                "version": "0.154.0",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "0.154.0",
+                "dateReleased": null
+              }
+            }
+          },
+          "unavailable": false,
+          "components": [
+            {
+              "sourceKey": "frontiercode-v2.0",
+              "weight": 0.333333333333333
+            },
+            {
+              "sourceKey": "swe-atlas-qna",
+              "weight": 0.333333333333333
+            },
+            {
+              "sourceKey": "terminal-bench-v4",
+              "weight": 0.333333333333333
+            }
+          ],
+          "fallbackAttemptCount": 0,
+          "attemptCount": 966,
+          "model": "gpt-6.1-sol",
           "exclusion": null
         },
         {
           "identity": "GPT-6.1 Terra",
-          "sourceId": "9b52f0eb016964fb4421a352b9c9518c",
-          "label": "Codex - GPT-6.1 Terra (Xhigh)",
-          "score": 48.223834495492504,
+          "sourceId": "1fece3eef716cd9668b972cced54606c",
+          "label": "Codex - GPT-6.1 Terra (Max)",
+          "score": 48.6481600955794,
           "harness": "Codex",
           "router": false,
-          "effort": "xhigh",
+          "effort": "max",
           "fallback": false,
           "fallbackEnabled": false,
-          "meanCost": 0.690844449567775,
-          "medianCost": 0.441727341666667,
+          "meanCost": 1.5308471982459535,
+          "medianCost": 1.0205265626383249,
+          "recordNote": {
+            "en": "AA Coding Agent Index 2.1: equal-weight FrontierCode-AA 2.0, Terminal-Bench 4.1 and SWE-Atlas-QnA-AA. Not comparable with 2.0. TB 4.1 includes regraded saved outputs and retained 4.0 results. API task costs use provider token counts and typical measured cache hit rates, not subscription prices.",
+            "zh": "AA 编程 Agent 指数 2.1：FrontierCode-AA 2.0、Terminal-Bench 4.1、SWE-Atlas-QnA-AA 三项等权，不与 2.0 混比。TB 4.1 包含保存产物重评分及沿用的 4.0 成绩。任务 API 成本按提供商 token 数及典型实测缓存命中率计算，不代表订阅价格。"
+          },
+          "harnessVersions": {
+            "frontiercode-v2.0": {
+              "min": {
+                "version": "0.166.0",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "0.166.0",
+                "dateReleased": null
+              }
+            },
+            "swe-atlas-qna": {
+              "min": {
+                "version": "0.163.0",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "0.163.0",
+                "dateReleased": null
+              }
+            },
+            "terminal-bench-v4": {
+              "min": {
+                "version": "0.163.0",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "0.163.0",
+                "dateReleased": null
+              }
+            }
+          },
+          "unavailable": false,
+          "components": [
+            {
+              "sourceKey": "frontiercode-v2.0",
+              "weight": 0.333333333333333
+            },
+            {
+              "sourceKey": "swe-atlas-qna",
+              "weight": 0.333333333333333
+            },
+            {
+              "sourceKey": "terminal-bench-v4",
+              "weight": 0.333333333333333
+            }
+          ],
+          "fallbackAttemptCount": 0,
+          "attemptCount": 966,
           "model": "gpt-6.1-terra",
+          "exclusion": null
+        },
+        {
+          "identity": "Claude Fable 5.2",
+          "sourceId": "78442b1eea1f0b696ab08b6d12ec9354",
+          "label": "Claude Code - Claude Fable 5.2 (Max, Default Fallback)",
+          "score": 55.7395478983382,
+          "harness": "Claude Code",
+          "router": false,
+          "effort": "max",
+          "fallback": true,
+          "fallbackEnabled": true,
+          "meanCost": 44.22449825671103,
+          "medianCost": 39.46746793765314,
+          "recordNote": {
+            "en": "AA Coding Agent Index 2.1: equal-weight FrontierCode-AA 2.0, Terminal-Bench 4.1 and SWE-Atlas-QnA-AA. Not comparable with 2.0. TB 4.1 includes regraded saved outputs and retained 4.0 results. API task costs use provider token counts and typical measured cache hit rates, not subscription prices.",
+            "zh": "AA 编程 Agent 指数 2.1：FrontierCode-AA 2.0、Terminal-Bench 4.1、SWE-Atlas-QnA-AA 三项等权，不与 2.0 混比。TB 4.1 包含保存产物重评分及沿用的 4.0 成绩。任务 API 成本按提供商 token 数及典型实测缓存命中率计算，不代表订阅价格。"
+          },
+          "harnessVersions": {
+            "frontiercode-v2.0": {
+              "min": {
+                "version": "2.1.291",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "2.1.291",
+                "dateReleased": null
+              }
+            },
+            "swe-atlas-qna": {
+              "min": {
+                "version": "2.1.291",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "2.1.291",
+                "dateReleased": null
+              }
+            },
+            "terminal-bench-v4": {
+              "min": {
+                "version": "2.1.291",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "2.1.291",
+                "dateReleased": null
+              }
+            }
+          },
+          "unavailable": false,
+          "components": [
+            {
+              "sourceKey": "frontiercode-v2.0",
+              "weight": 0.333333333333333
+            },
+            {
+              "sourceKey": "swe-atlas-qna",
+              "weight": 0.333333333333333
+            },
+            {
+              "sourceKey": "terminal-bench-v4",
+              "weight": 0.333333333333333
+            }
+          ],
+          "fallbackAttemptCount": 63,
+          "attemptCount": 966,
+          "model": "claude-fable-5.2",
+          "exclusion": "multi-model-fallback"
+        },
+        {
+          "identity": "Muse Ember",
+          "sourceId": "ab4f6cb89f990484067eca06109875b3",
+          "label": "Muse Code - Muse Ember (Max)",
+          "score": 39.6886187140219,
+          "harness": "Muse Code",
+          "router": false,
+          "effort": "max",
+          "fallback": false,
+          "fallbackEnabled": false,
+          "meanCost": 0.21644309772897935,
+          "medianCost": 0.11648142933866655,
+          "recordNote": {
+            "en": "AA Coding Agent Index 2.1: equal-weight FrontierCode-AA 2.0, Terminal-Bench 4.1 and SWE-Atlas-QnA-AA. Not comparable with 2.0. TB 4.1 includes regraded saved outputs and retained 4.0 results. API task costs use provider token counts and typical measured cache hit rates, not subscription prices.",
+            "zh": "AA 编程 Agent 指数 2.1：FrontierCode-AA 2.0、Terminal-Bench 4.1、SWE-Atlas-QnA-AA 三项等权，不与 2.0 混比。TB 4.1 包含保存产物重评分及沿用的 4.0 成绩。任务 API 成本按提供商 token 数及典型实测缓存命中率计算，不代表订阅价格。"
+          },
+          "harnessVersions": {
+            "frontiercode-v2.0": {
+              "min": {
+                "version": "1.4.14-R7309.1",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "1.4.14-R7309.1",
+                "dateReleased": null
+              }
+            },
+            "swe-atlas-qna": {
+              "min": {
+                "version": "1.4.14-R7309.1",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "1.4.14-R7309.1",
+                "dateReleased": null
+              }
+            },
+            "terminal-bench-v4": {
+              "min": {
+                "version": "1.4.14-R7309.1",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "1.4.14-R7309.1",
+                "dateReleased": null
+              }
+            }
+          },
+          "unavailable": false,
+          "components": [
+            {
+              "sourceKey": "frontiercode-v2.0",
+              "weight": 0.333333333333333
+            },
+            {
+              "sourceKey": "swe-atlas-qna",
+              "weight": 0.333333333333333
+            },
+            {
+              "sourceKey": "terminal-bench-v4",
+              "weight": 0.333333333333333
+            }
+          ],
+          "fallbackAttemptCount": 0,
+          "attemptCount": 966,
+          "model": "muse-ember",
+          "exclusion": null
+        },
+        {
+          "identity": "Claude Fable 5.2",
+          "sourceId": "b02d0ed1020688cc426aebb910ee1cd8",
+          "label": "Claude Code - Claude Fable 5.2 (Medium, Default Fallback)",
+          "score": 53.04187058759639,
+          "harness": "Claude Code",
+          "router": false,
+          "effort": "medium",
+          "fallback": true,
+          "fallbackEnabled": true,
+          "meanCost": 2.89038509425835,
+          "medianCost": 1.6652557983185072,
+          "recordNote": {
+            "en": "AA Coding Agent Index 2.1: equal-weight FrontierCode-AA 2.0, Terminal-Bench 4.1 and SWE-Atlas-QnA-AA. Not comparable with 2.0. TB 4.1 includes regraded saved outputs and retained 4.0 results. API task costs use provider token counts and typical measured cache hit rates, not subscription prices.",
+            "zh": "AA 编程 Agent 指数 2.1：FrontierCode-AA 2.0、Terminal-Bench 4.1、SWE-Atlas-QnA-AA 三项等权，不与 2.0 混比。TB 4.1 包含保存产物重评分及沿用的 4.0 成绩。任务 API 成本按提供商 token 数及典型实测缓存命中率计算，不代表订阅价格。"
+          },
+          "harnessVersions": {
+            "frontiercode-v2.0": {
+              "min": {
+                "version": "2.1.291",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "2.1.291",
+                "dateReleased": null
+              }
+            },
+            "swe-atlas-qna": {
+              "min": {
+                "version": "2.1.291",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "2.1.291",
+                "dateReleased": null
+              }
+            },
+            "terminal-bench-v4": {
+              "min": {
+                "version": "2.1.291",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "2.1.291",
+                "dateReleased": null
+              }
+            }
+          },
+          "unavailable": false,
+          "components": [
+            {
+              "sourceKey": "frontiercode-v2.0",
+              "weight": 0.333333333333333
+            },
+            {
+              "sourceKey": "swe-atlas-qna",
+              "weight": 0.333333333333333
+            },
+            {
+              "sourceKey": "terminal-bench-v4",
+              "weight": 0.333333333333333
+            }
+          ],
+          "fallbackAttemptCount": 44,
+          "attemptCount": 965,
+          "model": "claude-fable-5.2",
+          "exclusion": "multi-model-fallback"
+        },
+        {
+          "identity": "Beam 1.0",
+          "sourceId": "e00a520b90336304cd56ead289bb59f2",
+          "label": "Mirror - Beam 1.0",
+          "score": 15.4770250896058,
+          "harness": "Mirror",
+          "router": false,
+          "effort": null,
+          "fallback": false,
+          "fallbackEnabled": false,
+          "meanCost": 0.30843081634837477,
+          "medianCost": 0.18775595376620235,
+          "recordNote": {
+            "en": "AA Coding Agent Index 2.1: equal-weight FrontierCode-AA 2.0, Terminal-Bench 4.1 and SWE-Atlas-QnA-AA. Not comparable with 2.0. TB 4.1 includes regraded saved outputs and retained 4.0 results. API task costs use provider token counts and typical measured cache hit rates, not subscription prices.",
+            "zh": "AA 编程 Agent 指数 2.1：FrontierCode-AA 2.0、Terminal-Bench 4.1、SWE-Atlas-QnA-AA 三项等权，不与 2.0 混比。TB 4.1 包含保存产物重评分及沿用的 4.0 成绩。任务 API 成本按提供商 token 数及典型实测缓存命中率计算，不代表订阅价格。"
+          },
+          "harnessVersions": {
+            "frontiercode-v2.0": {
+              "min": {
+                "version": "0.1.8-aa.1",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "0.1.8-aa.1",
+                "dateReleased": null
+              }
+            },
+            "swe-atlas-qna": {
+              "min": {
+                "version": "0.1.8-aa.1",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "0.1.8-aa.1",
+                "dateReleased": null
+              }
+            },
+            "terminal-bench-v4": {
+              "min": {
+                "version": "0.1.8-aa.1",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "0.1.8-aa.1",
+                "dateReleased": null
+              }
+            }
+          },
+          "unavailable": false,
+          "components": [
+            {
+              "sourceKey": "frontiercode-v2.0",
+              "weight": 0.333333333333333
+            },
+            {
+              "sourceKey": "swe-atlas-qna",
+              "weight": 0.333333333333333
+            },
+            {
+              "sourceKey": "terminal-bench-v4",
+              "weight": 0.333333333333333
+            }
+          ],
+          "fallbackAttemptCount": 0,
+          "attemptCount": 966,
+          "model": "beam-1.0",
+          "exclusion": null
+        },
+        {
+          "identity": "Claude Fable 5.2",
+          "sourceId": "09e56f8cd938c59b1a9a600141535ab0",
+          "label": "Claude Code - Claude Fable 5.2 (Low, Default Fallback)",
+          "score": 47.962684913652694,
+          "harness": "Claude Code",
+          "router": false,
+          "effort": "low",
+          "fallback": true,
+          "fallbackEnabled": true,
+          "meanCost": 2.4949967536178352,
+          "medianCost": 1.375754331598802,
+          "recordNote": {
+            "en": "AA Coding Agent Index 2.1: equal-weight FrontierCode-AA 2.0, Terminal-Bench 4.1 and SWE-Atlas-QnA-AA. Not comparable with 2.0. TB 4.1 includes regraded saved outputs and retained 4.0 results. API task costs use provider token counts and typical measured cache hit rates, not subscription prices.",
+            "zh": "AA 编程 Agent 指数 2.1：FrontierCode-AA 2.0、Terminal-Bench 4.1、SWE-Atlas-QnA-AA 三项等权，不与 2.0 混比。TB 4.1 包含保存产物重评分及沿用的 4.0 成绩。任务 API 成本按提供商 token 数及典型实测缓存命中率计算，不代表订阅价格。"
+          },
+          "harnessVersions": {
+            "frontiercode-v2.0": {
+              "min": {
+                "version": "2.1.291",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "2.1.291",
+                "dateReleased": null
+              }
+            },
+            "swe-atlas-qna": {
+              "min": {
+                "version": "2.1.291",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "2.1.291",
+                "dateReleased": null
+              }
+            },
+            "terminal-bench-v4": {
+              "min": {
+                "version": "2.1.291",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "2.1.291",
+                "dateReleased": null
+              }
+            }
+          },
+          "unavailable": false,
+          "components": [
+            {
+              "sourceKey": "frontiercode-v2.0",
+              "weight": 0.333333333333333
+            },
+            {
+              "sourceKey": "swe-atlas-qna",
+              "weight": 0.333333333333333
+            },
+            {
+              "sourceKey": "terminal-bench-v4",
+              "weight": 0.333333333333333
+            }
+          ],
+          "fallbackAttemptCount": 45,
+          "attemptCount": 966,
+          "model": "claude-fable-5.2",
+          "exclusion": "multi-model-fallback"
+        },
+        {
+          "identity": "Claude Fable 5.2",
+          "sourceId": "37d7db5622db33bcc5c6824d564246e7",
+          "label": "Claude Code - Claude Fable 5.2 (High, Default Fallback)",
+          "score": 58.2357078853046,
+          "harness": "Claude Code",
+          "router": false,
+          "effort": "high",
+          "fallback": true,
+          "fallbackEnabled": true,
+          "meanCost": 7.506833848955203,
+          "medianCost": 4.225548556718671,
+          "recordNote": {
+            "en": "AA Coding Agent Index 2.1: equal-weight FrontierCode-AA 2.0, Terminal-Bench 4.1 and SWE-Atlas-QnA-AA. Not comparable with 2.0. TB 4.1 includes regraded saved outputs and retained 4.0 results. API task costs use provider token counts and typical measured cache hit rates, not subscription prices.",
+            "zh": "AA 编程 Agent 指数 2.1：FrontierCode-AA 2.0、Terminal-Bench 4.1、SWE-Atlas-QnA-AA 三项等权，不与 2.0 混比。TB 4.1 包含保存产物重评分及沿用的 4.0 成绩。任务 API 成本按提供商 token 数及典型实测缓存命中率计算，不代表订阅价格。"
+          },
+          "harnessVersions": {
+            "frontiercode-v2.0": {
+              "min": {
+                "version": "2.1.291",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "2.1.291",
+                "dateReleased": null
+              }
+            },
+            "swe-atlas-qna": {
+              "min": {
+                "version": "2.1.291",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "2.1.291",
+                "dateReleased": null
+              }
+            },
+            "terminal-bench-v4": {
+              "min": {
+                "version": "2.1.291",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "2.1.291",
+                "dateReleased": null
+              }
+            }
+          },
+          "unavailable": false,
+          "components": [
+            {
+              "sourceKey": "frontiercode-v2.0",
+              "weight": 0.333333333333333
+            },
+            {
+              "sourceKey": "swe-atlas-qna",
+              "weight": 0.333333333333333
+            },
+            {
+              "sourceKey": "terminal-bench-v4",
+              "weight": 0.333333333333333
+            }
+          ],
+          "fallbackAttemptCount": 51,
+          "attemptCount": 966,
+          "model": "claude-fable-5.2",
+          "exclusion": "multi-model-fallback"
+        },
+        {
+          "identity": "Gemini 4 Argon",
+          "sourceId": "bdeb89e3a86551106e671c63fa1415bc",
+          "label": "Antigravity CLI - Gemini 4 Argon (High)",
+          "score": 45.4992429673075,
+          "harness": "Antigravity CLI",
+          "router": false,
+          "effort": "high",
+          "fallback": false,
+          "fallbackEnabled": false,
+          "meanCost": 6.8350336973915535,
+          "medianCost": 4.5153517353347095,
+          "recordNote": {
+            "en": "AA Coding Agent Index 2.1: equal-weight FrontierCode-AA 2.0, Terminal-Bench 4.1 and SWE-Atlas-QnA-AA. Not comparable with 2.0. TB 4.1 includes regraded saved outputs and retained 4.0 results. API task costs use provider token counts and typical measured cache hit rates, not subscription prices.",
+            "zh": "AA 编程 Agent 指数 2.1：FrontierCode-AA 2.0、Terminal-Bench 4.1、SWE-Atlas-QnA-AA 三项等权，不与 2.0 混比。TB 4.1 包含保存产物重评分及沿用的 4.0 成绩。任务 API 成本按提供商 token 数及典型实测缓存命中率计算，不代表订阅价格。"
+          },
+          "harnessVersions": {
+            "frontiercode-v2.0": {
+              "min": {
+                "version": "1.2.10",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "1.2.10",
+                "dateReleased": null
+              }
+            },
+            "swe-atlas-qna": {
+              "min": {
+                "version": "1.2.10",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "1.2.10",
+                "dateReleased": null
+              }
+            },
+            "terminal-bench-v4": {
+              "min": {
+                "version": "1.2.10",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "1.2.10",
+                "dateReleased": null
+              }
+            }
+          },
+          "unavailable": false,
+          "components": [
+            {
+              "sourceKey": "frontiercode-v2.0",
+              "weight": 0.333333333333333
+            },
+            {
+              "sourceKey": "swe-atlas-qna",
+              "weight": 0.333333333333333
+            },
+            {
+              "sourceKey": "terminal-bench-v4",
+              "weight": 0.333333333333333
+            }
+          ],
+          "fallbackAttemptCount": 0,
+          "attemptCount": 965,
+          "model": "gemini-4-argon",
+          "exclusion": null
+        },
+        {
+          "identity": "DeepSeek V4.1 Flash 1017",
+          "sourceId": "4553886307abc03b6a785a5e0a54bcec",
+          "label": "DeepSeek Harness - DeepSeek V4.1 Flash 1017 (Max)",
+          "score": 36.8337115781471,
+          "harness": "DeepSeek Harness",
+          "router": false,
+          "effort": "max",
+          "fallback": false,
+          "fallbackEnabled": false,
+          "meanCost": 0.320957200254155,
+          "medianCost": 0.17351337,
+          "recordNote": {
+            "en": "AA Coding Agent Index 2.1: equal-weight FrontierCode-AA 2.0, Terminal-Bench 4.1 and SWE-Atlas-QnA-AA. Not comparable with 2.0. TB 4.1 includes regraded saved outputs and retained 4.0 results. API task costs use provider token counts and typical measured cache hit rates, not subscription prices.",
+            "zh": "AA 编程 Agent 指数 2.1：FrontierCode-AA 2.0、Terminal-Bench 4.1、SWE-Atlas-QnA-AA 三项等权，不与 2.0 混比。TB 4.1 包含保存产物重评分及沿用的 4.0 成绩。任务 API 成本按提供商 token 数及典型实测缓存命中率计算，不代表订阅价格。"
+          },
+          "harnessVersions": {
+            "frontiercode-v2.0": {
+              "min": {
+                "version": "0.2.1rc2",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "0.2.1rc2",
+                "dateReleased": null
+              }
+            },
+            "swe-atlas-qna": {
+              "min": {
+                "version": "0.2.1rc2",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "0.2.1rc2",
+                "dateReleased": null
+              }
+            },
+            "terminal-bench-v4": {
+              "min": {
+                "version": "0.2.1rc2",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "0.2.1rc2",
+                "dateReleased": null
+              }
+            }
+          },
+          "unavailable": false,
+          "components": [
+            {
+              "sourceKey": "frontiercode-v2.0",
+              "weight": 0.333333333333333
+            },
+            {
+              "sourceKey": "swe-atlas-qna",
+              "weight": 0.333333333333333
+            },
+            {
+              "sourceKey": "terminal-bench-v4",
+              "weight": 0.333333333333333
+            }
+          ],
+          "fallbackAttemptCount": 0,
+          "attemptCount": 966,
+          "model": "deepseek-v4.1-flash-1017",
+          "exclusion": null
+        },
+        {
+          "identity": "Devin Fusion CLI - Claude Opus 5.5 Max + GPT-6 Luna High",
+          "sourceId": "5dfda0c81da51afcbeb49869c14445b2",
+          "label": "Devin Fusion CLI - Claude Opus 5.5 Max + GPT-6 Luna High",
+          "score": 58.403088954056706,
+          "harness": "Devin Fusion CLI",
+          "router": true,
+          "effort": null,
+          "fallback": true,
+          "fallbackEnabled": false,
+          "meanCost": 8.75258496053315,
+          "medianCost": 7.01761748083333,
+          "recordNote": {
+            "en": "AA Coding Agent Index 2.1: equal-weight FrontierCode-AA 2.0, Terminal-Bench 4.1 and SWE-Atlas-QnA-AA. Not comparable with 2.0. TB 4.1 includes regraded saved outputs and retained 4.0 results. API task costs use provider token counts and typical measured cache hit rates, not subscription prices.",
+            "zh": "AA 编程 Agent 指数 2.1：FrontierCode-AA 2.0、Terminal-Bench 4.1、SWE-Atlas-QnA-AA 三项等权，不与 2.0 混比。TB 4.1 包含保存产物重评分及沿用的 4.0 成绩。任务 API 成本按提供商 token 数及典型实测缓存命中率计算，不代表订阅价格。"
+          },
+          "harnessVersions": {
+            "frontiercode-v2.0": {
+              "min": {
+                "version": "3000.11.34",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "3000.11.34",
+                "dateReleased": null
+              }
+            },
+            "swe-atlas-qna": {
+              "min": {
+                "version": "3000.11.31",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "3000.11.31",
+                "dateReleased": null
+              }
+            },
+            "terminal-bench-v4": {
+              "min": {
+                "version": "3000.11.31",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "3000.11.31",
+                "dateReleased": null
+              }
+            }
+          },
+          "unavailable": false,
+          "components": [
+            {
+              "sourceKey": "frontiercode-v2.0",
+              "weight": 0.333333333333333
+            },
+            {
+              "sourceKey": "swe-atlas-qna",
+              "weight": 0.333333333333333
+            },
+            {
+              "sourceKey": "terminal-bench-v4",
+              "weight": 0.333333333333333
+            }
+          ],
+          "fallbackAttemptCount": 83,
+          "attemptCount": 966,
+          "model": null,
+          "exclusion": "router"
+        },
+        {
+          "identity": "Muse Spark 1.3",
+          "sourceId": "8180f45e6f53fc70033de79909aa3b6c",
+          "label": "Muse Code - Muse Spark 1.3 (Max)",
+          "score": 36.7706495058108,
+          "harness": "Muse Code",
+          "router": false,
+          "effort": "max",
+          "fallback": false,
+          "fallbackEnabled": false,
+          "meanCost": 4.33726857901732,
+          "medianCost": 1.5387689,
+          "recordNote": {
+            "en": "AA Coding Agent Index 2.1: equal-weight FrontierCode-AA 2.0, Terminal-Bench 4.1 and SWE-Atlas-QnA-AA. Not comparable with 2.0. TB 4.1 includes regraded saved outputs and retained 4.0 results. API task costs use provider token counts and typical measured cache hit rates, not subscription prices.",
+            "zh": "AA 编程 Agent 指数 2.1：FrontierCode-AA 2.0、Terminal-Bench 4.1、SWE-Atlas-QnA-AA 三项等权，不与 2.0 混比。TB 4.1 包含保存产物重评分及沿用的 4.0 成绩。任务 API 成本按提供商 token 数及典型实测缓存命中率计算，不代表订阅价格。"
+          },
+          "harnessVersions": {
+            "frontiercode-v2.0": {
+              "min": {
+                "version": "1.0.3-R2198.1",
+                "dateReleased": "2026-09-04"
+              },
+              "max": {
+                "version": "1.0.3-R2198.1",
+                "dateReleased": "2026-09-04"
+              }
+            },
+            "swe-atlas-qna": {
+              "min": {
+                "version": "1.0.3-R2198.1",
+                "dateReleased": "2026-09-04"
+              },
+              "max": {
+                "version": "1.0.3-R2198.1",
+                "dateReleased": "2026-09-04"
+              }
+            },
+            "terminal-bench-v4": {
+              "min": {
+                "version": "1.0.3-R2198.1",
+                "dateReleased": "2026-09-04"
+              },
+              "max": {
+                "version": "1.0.3-R2198.1",
+                "dateReleased": "2026-09-04"
+              }
+            }
+          },
+          "unavailable": false,
+          "components": [
+            {
+              "sourceKey": "frontiercode-v2.0",
+              "weight": 0.333333333333333
+            },
+            {
+              "sourceKey": "swe-atlas-qna",
+              "weight": 0.333333333333333
+            },
+            {
+              "sourceKey": "terminal-bench-v4",
+              "weight": 0.333333333333333
+            }
+          ],
+          "fallbackAttemptCount": 0,
+          "attemptCount": 966,
+          "model": "muse-spark-1.3",
+          "exclusion": null
+        },
+        {
+          "identity": "Muse Wonder",
+          "sourceId": "f83b8dc1b834e06b1dd1142e29bc77fc",
+          "label": "Muse Code - Muse Wonder (Max)",
+          "score": 44.475184642120105,
+          "harness": "Muse Code",
+          "router": false,
+          "effort": "max",
+          "fallback": false,
+          "fallbackEnabled": false,
+          "meanCost": 7.591950058121872,
+          "medianCost": 4.761698527933266,
+          "recordNote": {
+            "en": "AA Coding Agent Index 2.1: equal-weight FrontierCode-AA 2.0, Terminal-Bench 4.1 and SWE-Atlas-QnA-AA. Not comparable with 2.0. TB 4.1 includes regraded saved outputs and retained 4.0 results. API task costs use provider token counts and typical measured cache hit rates, not subscription prices.",
+            "zh": "AA 编程 Agent 指数 2.1：FrontierCode-AA 2.0、Terminal-Bench 4.1、SWE-Atlas-QnA-AA 三项等权，不与 2.0 混比。TB 4.1 包含保存产物重评分及沿用的 4.0 成绩。任务 API 成本按提供商 token 数及典型实测缓存命中率计算，不代表订阅价格。"
+          },
+          "harnessVersions": {
+            "frontiercode-v2.0": {
+              "min": {
+                "version": "1.4.5-R5426.1",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "1.4.5-R5426.1",
+                "dateReleased": null
+              }
+            },
+            "swe-atlas-qna": {
+              "min": {
+                "version": "1.4.5-R5426.1",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "1.4.5-R5426.1",
+                "dateReleased": null
+              }
+            },
+            "terminal-bench-v4": {
+              "min": {
+                "version": "1.4.5-R5426.1",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "1.4.5-R5426.1",
+                "dateReleased": null
+              }
+            }
+          },
+          "unavailable": false,
+          "components": [
+            {
+              "sourceKey": "frontiercode-v2.0",
+              "weight": 0.333333333333333
+            },
+            {
+              "sourceKey": "swe-atlas-qna",
+              "weight": 0.333333333333333
+            },
+            {
+              "sourceKey": "terminal-bench-v4",
+              "weight": 0.333333333333333
+            }
+          ],
+          "fallbackAttemptCount": 0,
+          "attemptCount": 966,
+          "model": "muse-wonder",
           "exclusion": null
         }
       ]
@@ -10463,7 +11899,7 @@
       "id": "open_design_arena_current",
       "version": null,
       "source": "https://open-design.ai/zh/llm-arena-for-design/",
-      "checkedAt": "2026-11-13",
+      "checkedAt": "2026-11-14",
       "sourceUpdatedAt": null,
       "retrievalMethod": "direct-public-source",
       "coverage": "Quality score dataset, not the weighted quality/cost/speed recommendation ranking. No semantic version published on the source page.",
@@ -10682,7 +12118,7 @@
       "id": "deepswe_v1_1",
       "version": "1.1",
       "source": "https://deepswe.datacurve.ai/artifacts/v1.1/leaderboard-live.json",
-      "checkedAt": "2026-11-13",
+      "checkedAt": "2026-11-14",
       "sourceUpdatedAt": "2026-09-22T06:27:15.860279+00:00",
       "retrievalMethod": "direct-public-source",
       "coverage": "Official v1.1 live JSON; excludes upstream additions sourced from vendor self-reports.",

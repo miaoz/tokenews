@@ -8,7 +8,8 @@
       "label": "Gemini 4 Carbon (High)",
       "version": "5.0.1",
       "variant": "high",
-      "effort": "high"
+      "effort": "high",
+      "headingLabel": "Gemini 4 Carbon"
     },
     {
       "adapter": "artificial-analysis",
@@ -34,7 +35,8 @@
       "label": "GPT-6.1 Terra (Max)",
       "version": "5.0.1",
       "variant": "max",
-      "effort": "max"
+      "effort": "max",
+      "headingLabel": "GPT-6.1 Terra"
     },
     {
       "adapter": "artificial-analysis",
@@ -43,7 +45,8 @@
       "label": "Muse Wonder (Max)",
       "version": "5.0.1",
       "variant": "max",
-      "effort": "max"
+      "effort": "max",
+      "headingLabel": "Muse Wonder"
     },
     {
       "adapter": "artificial-analysis",
@@ -52,7 +55,8 @@
       "label": "Muse Wonder Full (Max)",
       "version": "5.0.1",
       "variant": "max",
-      "effort": "max"
+      "effort": "max",
+      "headingLabel": "Muse Wonder Full"
     },
     {
       "adapter": "artificial-analysis",
@@ -61,7 +65,8 @@
       "label": "Muse Spark Open (Xhigh)",
       "version": "5.0.1",
       "variant": "xhigh",
-      "effort": "xhigh"
+      "effort": "xhigh",
+      "headingLabel": "Muse Spark Open"
     },
     {
       "adapter": "artificial-analysis",
@@ -70,12 +75,13 @@
       "label": "DeepSeek V4.1 Flash 1017 (Max)",
       "version": "5.0.1",
       "variant": "max",
-      "effort": "max"
+      "effort": "max",
+      "headingLabel": "DeepSeek V4.1 Flash 1017"
     },
     {
       "adapter": "artificial-analysis",
       "model": "ling-3.1-flash-1019",
-      "url": "https://artificialanalysis.ai/models/ling-3-1-flash-1019",
+      "url": "https://artificialanalysis.ai/models/ling-3-1-flash",
       "label": "Ling 3.1 Flash 1019",
       "version": "5.0.1",
       "variant": "default"
@@ -95,7 +101,8 @@
       "label": "Mistral Large 4 (High)",
       "version": "5.0.1",
       "variant": "high",
-      "effort": "high"
+      "effort": "high",
+      "headingLabel": "Mistral Large 4"
     },
     {
       "adapter": "artificial-analysis",

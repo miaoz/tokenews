@@ -46,9 +46,24 @@ test('health job and deploy depend independently on update; evidence is run-spec
    'rerunning a workflow must not reuse a previous attempt health artifact');
 });
 
-test('main push validation is limited to workflow and collector code, not generated data',()=>{
+test('main push validation includes reviewed source configuration, never generated data',()=>{
  const workflow=readFileSync('.github/workflows/update-leaderboards.yml','utf8');
  const push=workflow.split('  push:')[1].split('  schedule:')[0];
  assert.match(push,/branches: \[main\]/);assert.match(push,/check-leaderboard-health/);
- assert.doesNotMatch(push,/["']data\//);assert.match(workflow,/workflow_dispatch:/);
+ assert.match(push,/data\/leaderboards\/sources\.json/);
+ assert.doesNotMatch(push,/(?:snapshots|current|discovery|refresh-status|individual-refresh-status|audit)\.json|history\//);assert.match(workflow,/workflow_dispatch:/);
+});
+
+test('individual model and discovery failures cannot hide behind successful main-board refreshes',async()=>{
+ const {checkIndividualLeaderboardHealth}=await import('./leaderboard-health.mjs');
+ const targets=[{adapter:'aa',model:'carbon',version:'5',variant:'high',url:'https://example.com/carbon'}];
+ const good={version:1,attemptedAt:'2026-11-14',results:[
+  {id:'aa:carbon:5:high',source:targets[0].url,status:'updated',retainedCheckedAt:'2026-11-14'},
+  {id:'aa-discovery',source:'https://artificialanalysis.ai/models/releases',status:'updated',retainedCheckedAt:'2026-11-14'},
+ ]};
+ assert.equal(checkIndividualLeaderboardHealth(good,targets).healthy,true);
+ for(const mutate of [r=>r.results.pop(),r=>{r.results[0].source='https://other.example/carbon';},r=>{r.results[0].status='retained-previous';r.results[0].retainedCheckedAt='2026-11-12';r.results[0].error='HTTP 403';}]){
+  const bad=structuredClone(good);mutate(bad);assert.equal(checkIndividualLeaderboardHealth(bad,targets).healthy,false);
+ }
+ assert.equal(checkIndividualLeaderboardHealth(null,targets).healthy,false);
 });
