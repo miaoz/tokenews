@@ -6,7 +6,7 @@
       "id": "aa_intelligence_index_v5_0_1",
       "version": "5.0.1",
       "source": "https://artificialanalysis.ai/leaderboards/models",
-      "checkedAt": "2026-11-14",
+      "checkedAt": "2026-11-15",
       "sourceUpdatedAt": null,
       "retrievalMethod": "direct-public-source",
       "coverage": "Current non-deprecated configurations in the public page payload with a non-null score; not all historical releases.",
@@ -1713,7 +1713,7 @@
       "id": "terminal_bench_v4_1",
       "version": "4.1",
       "source": "https://www.tbench.ai/",
-      "checkedAt": "2026-11-14",
+      "checkedAt": "2026-11-15",
       "sourceUpdatedAt": "2026-11-14T06:10:26.015148+00:00",
       "retrievalMethod": "direct-public-source",
       "coverage": "Official TB 4.1 configurations, including all efforts. Includes regraded 4.0 artifacts and retained 4.0 scores; per-row provenance is not disclosed. 官方TB 4.1全部effort配置，包含4.0产物重评分及沿用4.0成绩，逐行来源未披露。",
@@ -3145,7 +3145,7 @@
       "id": "aa_terminal_bench_v4_0",
       "version": "4.0",
       "source": "https://artificialanalysis.ai/leaderboards/models",
-      "checkedAt": "2026-11-14",
+      "checkedAt": "2026-11-15",
       "sourceUpdatedAt": null,
       "retrievalMethod": "direct-public-source",
       "coverage": "Current non-deprecated configurations in the public page payload with a non-null score; not all historical releases.",
@@ -9911,7 +9911,7 @@
       "id": "aa_coding_agent_index_v2_1",
       "version": "2.1",
       "source": "https://artificialanalysis.ai/agents/coding-agents",
-      "checkedAt": "2026-11-14",
+      "checkedAt": "2026-11-15",
       "sourceUpdatedAt": null,
       "retrievalMethod": "direct-public-source",
       "coverage": "Public agent-variant payload, including routers. Routers are not treated as standalone base models.",
@@ -10462,6 +10462,74 @@
           "fallbackAttemptCount": 0,
           "attemptCount": 966,
           "model": "gemini-4-carbon",
+          "exclusion": null
+        },
+        {
+          "identity": "DeepSeek V4.1 Flash 1017",
+          "sourceId": "4553886307abc03b6a785a5e0a54bcec",
+          "label": "DeepSeek Harness - DeepSeek V4.1 Flash 1017 (Max)",
+          "score": 36.8337115781471,
+          "harness": "DeepSeek Harness",
+          "router": false,
+          "effort": "max",
+          "fallback": false,
+          "fallbackEnabled": false,
+          "meanCost": 0.320957200254155,
+          "medianCost": 0.17351337,
+          "recordNote": {
+            "en": "AA Coding Agent Index 2.1: equal-weight FrontierCode-AA 2.0, Terminal-Bench 4.1 and SWE-Atlas-QnA-AA. Not comparable with 2.0. TB 4.1 includes regraded saved outputs and retained 4.0 results. API task costs use provider token counts and typical measured cache hit rates, not subscription prices.",
+            "zh": "AA 编程 Agent 指数 2.1：FrontierCode-AA 2.0、Terminal-Bench 4.1、SWE-Atlas-QnA-AA 三项等权，不与 2.0 混比。TB 4.1 包含保存产物重评分及沿用的 4.0 成绩。任务 API 成本按提供商 token 数及典型实测缓存命中率计算，不代表订阅价格。"
+          },
+          "harnessVersions": {
+            "frontiercode-v2.0": {
+              "min": {
+                "version": "0.2.1rc2",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "0.2.1rc2",
+                "dateReleased": null
+              }
+            },
+            "swe-atlas-qna": {
+              "min": {
+                "version": "0.2.1rc2",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "0.2.1rc2",
+                "dateReleased": null
+              }
+            },
+            "terminal-bench-v4": {
+              "min": {
+                "version": "0.2.1rc2",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "0.2.1rc2",
+                "dateReleased": null
+              }
+            }
+          },
+          "unavailable": false,
+          "components": [
+            {
+              "sourceKey": "frontiercode-v2.0",
+              "weight": 0.333333333333333
+            },
+            {
+              "sourceKey": "swe-atlas-qna",
+              "weight": 0.333333333333333
+            },
+            {
+              "sourceKey": "terminal-bench-v4",
+              "weight": 0.333333333333333
+            }
+          ],
+          "fallbackAttemptCount": 0,
+          "attemptCount": 966,
+          "model": "deepseek-v4.1-flash-1017",
           "exclusion": null
         },
         {
@@ -11349,74 +11417,6 @@
           "exclusion": "multi-model-fallback"
         },
         {
-          "identity": "Beam 1.0",
-          "sourceId": "e00a520b90336304cd56ead289bb59f2",
-          "label": "Mirror - Beam 1.0",
-          "score": 15.4770250896058,
-          "harness": "Mirror",
-          "router": false,
-          "effort": null,
-          "fallback": false,
-          "fallbackEnabled": false,
-          "meanCost": 0.30843081634837477,
-          "medianCost": 0.18775595376620235,
-          "recordNote": {
-            "en": "AA Coding Agent Index 2.1: equal-weight FrontierCode-AA 2.0, Terminal-Bench 4.1 and SWE-Atlas-QnA-AA. Not comparable with 2.0. TB 4.1 includes regraded saved outputs and retained 4.0 results. API task costs use provider token counts and typical measured cache hit rates, not subscription prices.",
-            "zh": "AA 编程 Agent 指数 2.1：FrontierCode-AA 2.0、Terminal-Bench 4.1、SWE-Atlas-QnA-AA 三项等权，不与 2.0 混比。TB 4.1 包含保存产物重评分及沿用的 4.0 成绩。任务 API 成本按提供商 token 数及典型实测缓存命中率计算，不代表订阅价格。"
-          },
-          "harnessVersions": {
-            "frontiercode-v2.0": {
-              "min": {
-                "version": "0.1.8-aa.1",
-                "dateReleased": null
-              },
-              "max": {
-                "version": "0.1.8-aa.1",
-                "dateReleased": null
-              }
-            },
-            "swe-atlas-qna": {
-              "min": {
-                "version": "0.1.8-aa.1",
-                "dateReleased": null
-              },
-              "max": {
-                "version": "0.1.8-aa.1",
-                "dateReleased": null
-              }
-            },
-            "terminal-bench-v4": {
-              "min": {
-                "version": "0.1.8-aa.1",
-                "dateReleased": null
-              },
-              "max": {
-                "version": "0.1.8-aa.1",
-                "dateReleased": null
-              }
-            }
-          },
-          "unavailable": false,
-          "components": [
-            {
-              "sourceKey": "frontiercode-v2.0",
-              "weight": 0.333333333333333
-            },
-            {
-              "sourceKey": "swe-atlas-qna",
-              "weight": 0.333333333333333
-            },
-            {
-              "sourceKey": "terminal-bench-v4",
-              "weight": 0.333333333333333
-            }
-          ],
-          "fallbackAttemptCount": 0,
-          "attemptCount": 966,
-          "model": "beam-1.0",
-          "exclusion": null
-        },
-        {
           "identity": "Claude Fable 5.2",
           "sourceId": "09e56f8cd938c59b1a9a600141535ab0",
           "label": "Claude Code - Claude Fable 5.2 (Low, Default Fallback)",
@@ -11621,74 +11621,6 @@
           "exclusion": null
         },
         {
-          "identity": "DeepSeek V4.1 Flash 1017",
-          "sourceId": "4553886307abc03b6a785a5e0a54bcec",
-          "label": "DeepSeek Harness - DeepSeek V4.1 Flash 1017 (Max)",
-          "score": 36.8337115781471,
-          "harness": "DeepSeek Harness",
-          "router": false,
-          "effort": "max",
-          "fallback": false,
-          "fallbackEnabled": false,
-          "meanCost": 0.320957200254155,
-          "medianCost": 0.17351337,
-          "recordNote": {
-            "en": "AA Coding Agent Index 2.1: equal-weight FrontierCode-AA 2.0, Terminal-Bench 4.1 and SWE-Atlas-QnA-AA. Not comparable with 2.0. TB 4.1 includes regraded saved outputs and retained 4.0 results. API task costs use provider token counts and typical measured cache hit rates, not subscription prices.",
-            "zh": "AA 编程 Agent 指数 2.1：FrontierCode-AA 2.0、Terminal-Bench 4.1、SWE-Atlas-QnA-AA 三项等权，不与 2.0 混比。TB 4.1 包含保存产物重评分及沿用的 4.0 成绩。任务 API 成本按提供商 token 数及典型实测缓存命中率计算，不代表订阅价格。"
-          },
-          "harnessVersions": {
-            "frontiercode-v2.0": {
-              "min": {
-                "version": "0.2.1rc2",
-                "dateReleased": null
-              },
-              "max": {
-                "version": "0.2.1rc2",
-                "dateReleased": null
-              }
-            },
-            "swe-atlas-qna": {
-              "min": {
-                "version": "0.2.1rc2",
-                "dateReleased": null
-              },
-              "max": {
-                "version": "0.2.1rc2",
-                "dateReleased": null
-              }
-            },
-            "terminal-bench-v4": {
-              "min": {
-                "version": "0.2.1rc2",
-                "dateReleased": null
-              },
-              "max": {
-                "version": "0.2.1rc2",
-                "dateReleased": null
-              }
-            }
-          },
-          "unavailable": false,
-          "components": [
-            {
-              "sourceKey": "frontiercode-v2.0",
-              "weight": 0.333333333333333
-            },
-            {
-              "sourceKey": "swe-atlas-qna",
-              "weight": 0.333333333333333
-            },
-            {
-              "sourceKey": "terminal-bench-v4",
-              "weight": 0.333333333333333
-            }
-          ],
-          "fallbackAttemptCount": 0,
-          "attemptCount": 966,
-          "model": "deepseek-v4.1-flash-1017",
-          "exclusion": null
-        },
-        {
           "identity": "Devin Fusion CLI - Claude Opus 5.5 Max + GPT-6 Luna High",
           "sourceId": "5dfda0c81da51afcbeb49869c14445b2",
           "label": "Devin Fusion CLI - Claude Opus 5.5 Max + GPT-6 Luna High",
@@ -11755,6 +11687,74 @@
           "attemptCount": 966,
           "model": null,
           "exclusion": "router"
+        },
+        {
+          "identity": "Beam 1.0",
+          "sourceId": "e00a520b90336304cd56ead289bb59f2",
+          "label": "Mirror - Beam 1.0",
+          "score": 15.4770250896058,
+          "harness": "Mirror",
+          "router": false,
+          "effort": null,
+          "fallback": false,
+          "fallbackEnabled": false,
+          "meanCost": 0.30843081634837477,
+          "medianCost": 0.18775595376620235,
+          "recordNote": {
+            "en": "AA Coding Agent Index 2.1: equal-weight FrontierCode-AA 2.0, Terminal-Bench 4.1 and SWE-Atlas-QnA-AA. Not comparable with 2.0. TB 4.1 includes regraded saved outputs and retained 4.0 results. API task costs use provider token counts and typical measured cache hit rates, not subscription prices.",
+            "zh": "AA 编程 Agent 指数 2.1：FrontierCode-AA 2.0、Terminal-Bench 4.1、SWE-Atlas-QnA-AA 三项等权，不与 2.0 混比。TB 4.1 包含保存产物重评分及沿用的 4.0 成绩。任务 API 成本按提供商 token 数及典型实测缓存命中率计算，不代表订阅价格。"
+          },
+          "harnessVersions": {
+            "frontiercode-v2.0": {
+              "min": {
+                "version": "0.1.8-aa.1",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "0.1.8-aa.1",
+                "dateReleased": null
+              }
+            },
+            "swe-atlas-qna": {
+              "min": {
+                "version": "0.1.8-aa.1",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "0.1.8-aa.1",
+                "dateReleased": null
+              }
+            },
+            "terminal-bench-v4": {
+              "min": {
+                "version": "0.1.8-aa.1",
+                "dateReleased": null
+              },
+              "max": {
+                "version": "0.1.8-aa.1",
+                "dateReleased": null
+              }
+            }
+          },
+          "unavailable": false,
+          "components": [
+            {
+              "sourceKey": "frontiercode-v2.0",
+              "weight": 0.333333333333333
+            },
+            {
+              "sourceKey": "swe-atlas-qna",
+              "weight": 0.333333333333333
+            },
+            {
+              "sourceKey": "terminal-bench-v4",
+              "weight": 0.333333333333333
+            }
+          ],
+          "fallbackAttemptCount": 0,
+          "attemptCount": 966,
+          "model": "beam-1.0",
+          "exclusion": null
         },
         {
           "identity": "Muse Spark 1.3",
@@ -11899,7 +11899,7 @@
       "id": "open_design_arena_current",
       "version": null,
       "source": "https://open-design.ai/zh/llm-arena-for-design/",
-      "checkedAt": "2026-11-14",
+      "checkedAt": "2026-11-15",
       "sourceUpdatedAt": null,
       "retrievalMethod": "direct-public-source",
       "coverage": "Quality score dataset, not the weighted quality/cost/speed recommendation ranking. No semantic version published on the source page.",
@@ -12118,7 +12118,7 @@
       "id": "deepswe_v1_1",
       "version": "1.1",
       "source": "https://deepswe.datacurve.ai/artifacts/v1.1/leaderboard-live.json",
-      "checkedAt": "2026-11-14",
+      "checkedAt": "2026-11-15",
       "sourceUpdatedAt": "2026-09-22T06:27:15.860279+00:00",
       "retrievalMethod": "direct-public-source",
       "coverage": "Official v1.1 live JSON; excludes upstream additions sourced from vendor self-reports.",
