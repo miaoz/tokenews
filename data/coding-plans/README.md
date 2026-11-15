@@ -16,7 +16,7 @@ gaps. Evidence and availability records are published with the site.
 
 Each price record requires an exact catalog model, provider endpoint, identity
 source, bilingual explanation, rates, credits and verification date. Fixed-dollar
-shared plans use the smaller of the shared and per-model caps. GOAT instead uses
+shared plans use the smaller of the shared and per-model caps. GOAT and Pro instead use
 each model's single-model allowance and proportional shared fractions, not a
 universal dollar pool. Monthly tokens equal credits divided
 by workload-weighted USD/MTok, multiplied by one million. Monthly pools are not
@@ -35,6 +35,12 @@ allowances must never be added together.
 through the stated date use the promotion; later builds restore regular rates.
 OpenCode Argon's 50% offer ends November 30, 2026. The daily build/deploy process
 updates the static site; an already built artifact does not change itself.
+
+Capacity-limited boosts use `promoCondition: "capacity-limited"` with an official
+`promoSource`, not an invented `promoUntil` or unverified fallback. Their condition
+appears as a bilingual qualification in listings, details and CSV exports. The
+review date states when the current allowance was observed, not a guarantee of
+how long the boost will last.
 
 ## Preserving history
 
@@ -151,10 +157,31 @@ model has $20/$50. Generated points expose `quota_pool_fractions` and
 `single_model_window_usd` and explain these limits in both languages. The
 up-to-$100 marketing figure is not a flat pool interchangeable across models.
 Extra purchased credits are outside these subscription points; monthly credits
-are not multiplied by four weeks. Other plans retain their existing algorithms.
+are not multiplied by four weeks. At that review, other plans were unchanged;
+the November 15 review below extends the verified proportional mechanism to Pro.
 
 `evidence-2026-11-13.json` retains the previous maintained entry, prior pool
 metadata and unchanged upstream original, along with live official source
 observations and the upstream research-only boost report. Official request
 estimates use their own workload and are not converted directly to our standard
 97% cache-read / 2.5% fresh-input / 0.5% output tokens.
+
+### Command Code allowance follow-up (reviewed 2026-11-15)
+
+The base Ling 3.1 Flash GOAT point now uses its $100 single-model allowance,
+replacing the old effective $70 flat-pool cap while archiving the original. It
+remains distinct from Ling 3.1 Flash 1019. Pro GLM-5.3 (non-Flash) uses $80,
+replacing the maintained $30 value. At the standard workload their estimates
+are $0.00702 and $0.0773 per million tokens, respectively, excluding processing
+fees; they are official-credit calculations, not measured or guaranteed quotas.
+
+Pro shares the monthly 1 / 5-hour 0.2 / 7-day 0.5 normalized fractions across
+all models, including premium models. GLM-5.3 alone has $16/$40 short-window
+usage values; a $110 Flash model has $22/$55. These are alternative uses of
+one pool, not a universal interchangeable $110 balance.
+
+GLM-5.3 Flash on Go/GOAT/Pro retains the already adopted $10/$100/$110 values,
+now visibly qualified as boosted only while capacity lasts. The official terms
+publish no fixed end date. Max is not part of that promotion. The dated evidence
+file preserves previous maintained values, the old Pro pool metadata, the
+upstream Ling observation and current official sources.

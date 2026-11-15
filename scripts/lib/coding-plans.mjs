@@ -16,7 +16,7 @@ export function mergeCodingPlans(data, manifest, {asOf = new Date().toISOString(
   for (const p of plans.values()) {
     if (p.pool === 'proportional') {
       const f=p.poolFractions;
-      if (p.id !== 'command_code_goat' || p.sharedCreditsUsd != null || !f ||
+      if (!['command_code_goat','command_code_pro'].includes(p.id) || p.sharedCreditsUsd != null || !f ||
           f.monthly !== 1 || f.fiveHour !== .2 || f.weekly !== .5 ||
           Object.keys(f).some(k=>!['monthly','fiveHour','weekly'].includes(k))) throw Error('Proportional pool needs review');
     } else if (p.poolFractions != null) throw Error('Unexpected proportional metadata');
@@ -24,6 +24,9 @@ export function mergeCodingPlans(data, manifest, {asOf = new Date().toISOString(
   for (const r of manifest.reviews ?? []) if (!validDate(r.checkedAt) || !https(r.source) || !r.note?.en || !r.note?.zh || !r.models?.length || [...r.models, ...(r.relatedModels ?? [])].some(id=>!models.has(id))) throw Error('Invalid plan availability review');
   const replacements = new Set(), generated = [], ids = new Set();
   for (const record of manifest.entries) {
+    if (record.promoCondition != null && (record.promoCondition !== 'capacity-limited' ||
+        !https(record.promoSource) || record.promoUntil)) throw Error('Conditional promotion needs reviewed terms without an invented expiry');
+    if (record.promoSource != null && !record.promoCondition) throw Error('Unexpected conditional promotion source');
     if (record.promoUntil && (!validDate(record.promoUntil) || !record.postPromoRates || !record.postPromoScope?.en || !record.postPromoScope?.zh)) throw Error('Promotion needs an expiry and reviewed fallback');
     const expired = record.promoUntil && asOf > record.promoUntil;
     const e = expired ? {...record,rates:record.postPromoRates,scope:record.postPromoScope,promoUntil:null} : record;
@@ -62,6 +65,10 @@ export function mergeCodingPlans(data, manifest, {asOf = new Date().toISOString(
       note.zh += ` 仅使用本模型时，5 小时使用价值上限 $${five}、7 天上限 $${week}；混用按各模型月额度占比共同扣减，不是各自独立美元池。`;
       note.en += ` Using only this model, the usage-value caps are $${five} per 5 hours and $${week} per 7 days; mixed models draw proportional shares of one allowance, not independent dollar pools.`;
     }
+    if (e.promoCondition === 'capacity-limited') {
+      note.zh += ' 加额仅在容量允许期间有效，官方未公布固定截止日期；这是核验日额度，不是永久保证。';
+      note.en += ' Boosted credits apply only while capacity lasts. No fixed end date is published; this is the allowance observed on the review date, not a permanent guarantee.';
+    }
     if (e.freshInputBilling === 'cache-write') {
       note.zh += ` 采用缓存写入场景：2.5% 新输入全部按写入费率 $${e.rates.cacheWrite}/百万 token 计算，替代普通输入费率，不重复收费。`;
       note.en += ` Cache-write scenario: all 2.5% fresh input is billed at $${e.rates.cacheWrite}/MTok, replacing ordinary input rather than adding both rates.`;
@@ -80,8 +87,10 @@ export function mergeCodingPlans(data, manifest, {asOf = new Date().toISOString(
       list_price:{cached:e.rates.cache,input:inputRate,output:e.rates.output,currency:'USD'},
       workload:'standard', d:plan.monthlyUsd / credits, confidence:'medium', tier:'main', unmetered:false,
       promo_until:e.promoUntil ?? null, data_date:e.checkedAt, data_date_kind:'official', source:e.source, source_en:e.source,
+      ...(e.promoCondition ? {promo_condition:e.promoCondition} : {}),
       note:note.zh, note_en:note.en, decision_note:note.zh, decision_note_en:note.en,
       evidence:[{label:'Plan pricing and limits',url:e.source},{label:'Served model identity',url:e.identitySource},
+        ...(e.promoSource ? [{label:'Conditional promotion terms',url:e.promoSource}] : []),
         {label:'Reviewed coding plan records',url:'/data/coding-plans.json'},
         ...manifest.evidenceFiles.map(f=>({label:'Archived official observations',url:`/data/evidence/coding-plans-${f}`}))] });
   }

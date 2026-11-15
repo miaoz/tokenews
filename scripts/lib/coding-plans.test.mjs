@@ -173,3 +173,59 @@ test('Command Code Beam retirement preserves other providers, model identity and
  assert.ok(manifest.evidenceFiles.includes('evidence-2026-11-13.json'),'preserve the intervening GOAT review');
  assert.ok(manifest.evidenceFiles.includes('evidence-2026-11-14.json'));
 });
+
+test('GOAT base Ling uses its reviewed $100 allowance without inheriting the 1019 identity',()=>{
+ const id='command_code_goat::ling-3.1-flash';
+ const p=result.points.find(p=>p.id===id);
+ assert.equal(p.model,'ling-3.1-flash');
+ assert.equal(p.data_date,'2026-11-15');
+ assert.ok(Math.abs(p.monthly_tokens-100/.0702*1e6)<1e-6);
+ assert.ok(Math.abs(p.real_usd_per_mtok-.00702)<1e-12);
+ assert.deepEqual(p.single_model_window_usd,{fiveHour:20,weekly:50});
+ assert.deepEqual(result.supersededPoints.find(p=>p.id===id),base.points.find(p=>p.id===id));
+ const d=mergeCurrentLeaderboards(result,read('data/leaderboards/current.json'));
+ const configIds=new Set(d.mappings.filter(m=>m.point_id===id).map(m=>m.configuration_id));
+ assert.ok(d.configurations.filter(c=>configIds.has(c.configuration_id)).every(c=>c.model==='ling-3.1-flash'));
+ assert.equal(result.points.find(p=>p.id===`${id}-1019`).model,'ling-3.1-flash-1019');
+});
+
+test('Pro non-Flash GLM-5.3 uses $80 and all Pro models share proportional windows',()=>{
+ const p=result.points.find(p=>p.id==='command_code_pro::glm-5.3');
+ assert.ok(Math.abs(p.monthly_tokens-80/.3092*1e6)<1e-6);
+ assert.ok(Math.abs(p.real_usd_per_mtok-.0773)<1e-12);
+ assert.deepEqual(p.single_model_window_usd,{fiveHour:16,weekly:40});
+ assert.equal(p.data_date,'2026-11-15');
+ for(const p of result.points.filter(p=>p.plan_id==='command_code_pro')) {
+  assert.equal(p.quota_pool,'proportional');
+  assert.deepEqual(p.quota_pool_fractions,{monthly:1,fiveHour:.2,weekly:.5});
+  assert.doesNotMatch(p.note_en,/shared monthly pool|Shared limits:/);
+  assert.doesNotMatch(p.note,/共享月池上限|共享上限/);
+ }
+ const flash=result.points.find(p=>p.id==='command_code_pro::glm-5.3-flash');
+ assert.deepEqual(flash.single_model_window_usd,{fiveHour:22,weekly:55});
+ assert.equal(40/80+55/110,1);
+ for(const mutate of [p=>p.sharedCreditsUsd=110,p=>p.poolFractions.weekly=.6,p=>delete p.poolFractions]) {
+  const m=structuredClone(manifest);mutate(m.plans.find(p=>p.id==='command_code_pro'));
+  assert.throws(()=>mergeCodingPlans(base,m),/pool/i);
+ }
+ const m=structuredClone(manifest);m.plans.find(p=>p.id==='command_code_pro').id='unreviewed_plan';
+ assert.throws(()=>mergeCodingPlans(base,m),/pool/i);
+});
+
+test('GLM-5.3 Flash capacity boosts preserve prices and have visible conditional terms, not invented expiry dates',()=>{
+ for(const [plan,credits,fee] of [['command_code_go',10,1],['command_code_goat',100,10],['command_code_pro',110,20]]) {
+  const p=result.points.find(p=>p.id===`${plan}::glm-5.3-flash`);
+  assert.equal(p.promo_condition,'capacity-limited');
+  assert.equal(p.promo_until,null);
+  assert.ok(Math.abs(p.monthly_tokens-credits/.03535*1e6)<1e-6);
+  assert.ok(Math.abs(p.real_usd_per_mtok-fee*.03535/credits)<1e-12);
+  assert.match(p.note,/容量允许期间.*未公布固定截止日期/);
+  assert.match(p.note_en,/while capacity lasts.*No fixed end date/);
+  assert.ok(p.evidence.some(e=>e.label==='Conditional promotion terms'&&e.url.startsWith('https://commandcode.ai/')));
+ }
+ assert.equal(result.points.filter(p=>p.promo_condition).length,3);
+ for(const mutate of [e=>e.promoCondition='permanent',e=>delete e.promoSource,e=>e.promoSource='http://example.com',e=>e.promoUntil='2026-12-01',e=>delete e.promoCondition]) {
+  const m=structuredClone(manifest);mutate(m.entries.find(e=>e.id==='command_code_pro::glm-5.3-flash'));
+  assert.throws(()=>mergeCodingPlans(base,m),/promotion/i);
+ }
+});

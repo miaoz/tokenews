@@ -838,6 +838,7 @@ export function referenceTags(rows: Row[], lang: string): string[] {
   const zh = lang === "zh", tags = new Set<string>();
   for (const { point, mapping } of rows) {
     if (point.quota_pool === 'proportional') tags.add(zh ? '比例共享额度 · 不可相加' : 'Proportional shared quota · not additive');
+    if (point.promo_condition === 'capacity-limited') tags.add(zh ? '容量允许期间加额' : 'Boost while capacity lasts');
     const estimated = point.quota_is_estimated ?? (point.price_origin === "maintained-estimate" || point.data_date_kind === "derived");
     if (estimated) {
       const confidence = { low: zh ? "低置信度" : "low confidence", medium: zh ? "中置信度" : "medium confidence", high: zh ? "高置信度" : "high confidence" }[point.confidence];

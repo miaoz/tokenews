@@ -104,6 +104,30 @@ test('GOAT GLM-5.3 current point and bilingual notes use the reviewed proportion
   assert.deepEqual(referenceTags([row], 'zh'), ['比例共享额度 · 不可相加']);
 });
 
+test('Reviewed Ling and Pro costs and conditional Flash tags survive site generation and CSV export', () => {
+  for (const [id, cost, windows] of [
+    ['command_code_goat::ling-3.1-flash', .00702, {fiveHour:20, weekly:50}],
+    ['command_code_pro::glm-5.3', .0773, {fiveHour:16, weekly:40}],
+  ] as const) {
+    const p = data.points.find(p => p.id === id)!;
+    assert.ok(Math.abs(p.real_usd_per_mtok - cost) < 1e-12);
+    assert.equal(p.quota_pool, 'proportional');
+    assert.deepEqual(p.single_model_window_usd, windows);
+    assert.match(p.note!, /不是各自独立美元池/);
+  }
+  assert.equal(data.supersededPoints?.find(p => p.id === 'command_code_goat::ling-3.1-flash')?.monthly_tokens, 997200000);
+  for (const plan of ['command_code_go', 'command_code_goat', 'command_code_pro']) {
+    const p = data.points.find(p => p.id === `${plan}::glm-5.3-flash`)!;
+    const row = {key:p.id, point:p, mapping:null, score:null};
+    assert.ok(referenceTags([row], 'zh').includes('容量允许期间加额'));
+    assert.ok(referenceTags([row], 'en').includes('Boost while capacity lasts'));
+    for (const lang of ['en', 'zh']) {
+      const exported = parse(csv([row], lang), {bom:true, columns:true}) as Record<string,string>[];
+      assert.match(Object.values(exported[0]).join(' '), lang === 'en' ? /Boost while capacity lasts/ : /容量允许期间加额/);
+    }
+  }
+});
+
 test("Packed mappings preserve original fields except superseded model identities", () => {
   const raw = JSON.parse(readFileSync(new URL("../../upstream/derived/benchmark-points.json", import.meta.url), "utf8"));
   const originalPoints = JSON.parse(readFileSync(new URL("../../upstream/derived/points.json", import.meta.url), "utf8")).points as Point[];

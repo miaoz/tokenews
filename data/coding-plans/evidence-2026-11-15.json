@@ -1,0 +1,224 @@
+{
+  "version": 1,
+  "checkedAt": "2026-11-15",
+  "baseCommit": "59fd6cbc3de2b9b6abc07cf4793a26b286e887c2",
+  "scope": "GOAT base Ling allowance, Pro non-Flash GLM-5.3 allowance and proportional pool, and capacity-limited GLM-5.3 Flash boosts. No benchmark identity upgrades, upstream edits or unrelated plan changes.",
+  "sources": [
+    "https://commandcode.ai/docs/plans/goat",
+    "https://commandcode.ai/models/ling-3-1-flash",
+    "https://commandcode.ai/docs/plans/pro",
+    "https://commandcode.ai/docs/resources/usage-limits",
+    "https://commandcode.ai/docs/resources/pricing-limits#glm-5.3-flash-boosted-credits"
+  ],
+  "oldPlanMetadata": {
+    "id": "command_code_pro",
+    "name": "Command Code Pro",
+    "channel": "Command Code",
+    "monthlyUsd": 20,
+    "pool": "shared",
+    "sharedCreditsUsd": 110,
+    "note": {
+      "en": "Shared limits: $22/5 hours, $55/week, $110/month. Premium model caps on Max are lower; use the per-model table. API access is excluded on Go. No separate model or category allowances are added.",
+      "zh": "共享上限 $22/5 小时、$55/周、$110/月；Max 的高价模型有较低专属上限，按逐模型表计算。Go 不含 API 接入。模型及计费分类额度不相加。"
+    }
+  },
+  "oldMaintainedEntries": [
+    {
+      "plan": "command_code_go",
+      "model": "glm-5.3-flash",
+      "endpoint": "z-ai/glm-5.3-flash",
+      "source": "https://commandcode.ai/docs/plans/go",
+      "identitySource": "https://commandcode.ai/changelog",
+      "rates": {
+        "input": 0.15,
+        "output": 0.5,
+        "cache": 0.03
+      },
+      "monthlyCreditsUsd": 10,
+      "checkedAt": "2026-11-04",
+      "id": "command_code_go::glm-5.3-flash",
+      "identityNote": {
+        "en": "The official release notes and current plan table confirm this named version; benchmark scores remain model references.",
+        "zh": "官方更新日志与现行套餐表交叉核对该型号；榜单分数仍为模型参考成绩。"
+      }
+    },
+    {
+      "plan": "command_code_goat",
+      "model": "glm-5.3-flash",
+      "endpoint": "z-ai/glm-5.3-flash",
+      "source": "https://commandcode.ai/docs/plans/goat",
+      "identitySource": "https://commandcode.ai/changelog",
+      "rates": {
+        "input": 0.15,
+        "output": 0.5,
+        "cache": 0.03
+      },
+      "monthlyCreditsUsd": 100,
+      "checkedAt": "2026-11-04",
+      "id": "command_code_goat::glm-5.3-flash",
+      "identityNote": {
+        "en": "The official release notes and current plan table confirm this named version; benchmark scores remain model references.",
+        "zh": "官方更新日志与现行套餐表交叉核对该型号；榜单分数仍为模型参考成绩。"
+      },
+      "replaces": [
+        "command_code_goat::glm-5.3-flash"
+      ]
+    },
+    {
+      "plan": "command_code_pro",
+      "model": "glm-5.3-flash",
+      "endpoint": "z-ai/glm-5.3-flash",
+      "source": "https://commandcode.ai/docs/plans/pro",
+      "identitySource": "https://commandcode.ai/changelog",
+      "rates": {
+        "input": 0.15,
+        "output": 0.5,
+        "cache": 0.03
+      },
+      "monthlyCreditsUsd": 110,
+      "checkedAt": "2026-11-04",
+      "id": "command_code_pro::glm-5.3-flash",
+      "identityNote": {
+        "en": "The official release notes and current plan table confirm this named version; benchmark scores remain model references.",
+        "zh": "官方更新日志与现行套餐表交叉核对该型号；榜单分数仍为模型参考成绩。"
+      }
+    },
+    {
+      "plan": "command_code_pro",
+      "model": "glm-5.3",
+      "endpoint": "zai-org/GLM-5.3",
+      "source": "https://commandcode.ai/docs/plans/pro",
+      "identitySource": "https://commandcode.ai/changelog",
+      "rates": {
+        "input": 1.4,
+        "output": 4.4,
+        "cache": 0.26
+      },
+      "monthlyCreditsUsd": 30,
+      "checkedAt": "2026-11-04",
+      "id": "command_code_pro::glm-5.3",
+      "identityNote": {
+        "en": "The official release notes and current plan table confirm this named version; benchmark scores remain model references.",
+        "zh": "官方更新日志与现行套餐表交叉核对该型号；榜单分数仍为模型参考成绩。"
+      }
+    }
+  ],
+  "oldUpstreamPoint": {
+    "id": "command_code_goat::ling-3.1-flash",
+    "model": "ling-3.1-flash",
+    "monthly_yi": 9.972,
+    "real_usd_per_mtok": 0.010028079,
+    "data_date": "2026-09-30",
+    "source": "https://commandcode.ai/docs/plans/goat official per-model allowance and three-part pricing; https://commandcode.ai/pricing; $10->$70 credits; code-subscriptions-round1-2026-09-06.json; goat-opencode-catalogs-round3-2026-09-30.json"
+  },
+  "officialCurrent": {
+    "goatBaseLing": {
+      "monthlyUsd": 10,
+      "monthlyCreditsUsd": 100,
+      "endpoint": "inclusionai/ling-3.1-flash",
+      "rates": {
+        "input": 0.3,
+        "output": 0.9,
+        "cache": 0.06
+      }
+    },
+    "proGlm53": {
+      "monthlyUsd": 20,
+      "monthlyCreditsUsd": 80,
+      "endpoint": "zai-org/GLM-5.3",
+      "rates": {
+        "input": 1.4,
+        "output": 4.4,
+        "cache": 0.26
+      }
+    },
+    "proPoolFractions": {
+      "monthly": 1,
+      "fiveHour": 0.2,
+      "weekly": 0.5
+    },
+    "flashBoost": {
+      "monthlyCreditsUsd": {
+        "command_code_go": 10,
+        "command_code_goat": 100,
+        "command_code_pro": 110
+      },
+      "condition": "while capacity lasts",
+      "fixedExpiry": null
+    }
+  },
+  "calculation": {
+    "workload": {
+      "cache": 0.97,
+      "input": 0.025,
+      "output": 0.005
+    },
+    "goatBaseLing": {
+      "weightedUsdPerMTok": 0.0702,
+      "monthlyTokens": 1424501424.5014246,
+      "realUsdPerMTok": 0.00702,
+      "singleModelWindowUsd": {
+        "fiveHour": 20,
+        "weekly": 50
+      }
+    },
+    "proGlm53": {
+      "weightedUsdPerMTok": 0.3092,
+      "monthlyTokens": 258732212.160414,
+      "realUsdPerMTok": 0.0773,
+      "singleModelWindowUsd": {
+        "fiveHour": 16,
+        "weekly": 40
+      }
+    }
+  },
+  "notes": [
+    "Official-credit estimates, not measured or guaranteed token quotas; processing fees are not included.",
+    "Mixed-model spending consumes normalized fractions of one monthly allowance, not additive balances. Pro $110 Flash has $22/$55 short windows; Pro $80 GLM-5.3 has $16/$40.",
+    "Capacity-limited boosts have no published fixed end date or reviewed post-promotion allowance. Preserve the observed value with a visible condition; do not invent an expiry or reuse the old October 17 date.",
+    "GOAT GLM-5.3 Flash already used $100; its price remains unchanged. Ling base and 1019 remain distinct.",
+    "Original upstream records remain unchanged and the superseded base Ling point is archived. Prior maintained records and pool metadata are retained above."
+  ],
+  "liveCaptures": [
+    {
+      "url": "https://commandcode.ai/docs/plans/goat",
+      "finalUrl": "https://commandcode.ai/docs/plans/goat",
+      "httpStatus": 200,
+      "capturedAtUtc": "2026-11-15T14:42:45.114Z",
+      "sha256": "357f02536ca6bca397dab4833ab9373103a95b95a35b83d4a93f1d70234d660c",
+      "hashBasis": "Complete decoded HTTP response body, before text extraction."
+    },
+    {
+      "url": "https://commandcode.ai/models/ling-3-1-flash",
+      "finalUrl": "https://commandcode.ai/models/ling-3-1-flash",
+      "httpStatus": 200,
+      "capturedAtUtc": "2026-11-15T14:42:45.219Z",
+      "sha256": "dd8c6f5e6ab9f3d9eb3ab7d02d8906e1b93bf382c61face7b7a6a413ec0787bf",
+      "hashBasis": "Complete decoded HTTP response body, before text extraction."
+    },
+    {
+      "url": "https://commandcode.ai/docs/plans/pro",
+      "finalUrl": "https://commandcode.ai/docs/plans/pro",
+      "httpStatus": 200,
+      "capturedAtUtc": "2026-11-15T14:42:45.129Z",
+      "sha256": "aadaa3874709f2c87e3a9dc58d24b4e9e6d7a58f2fcf4dd41772cc13cdc18f6b",
+      "hashBasis": "Complete decoded HTTP response body, before text extraction."
+    },
+    {
+      "url": "https://commandcode.ai/docs/resources/usage-limits",
+      "finalUrl": "https://commandcode.ai/docs/resources/usage-limits",
+      "httpStatus": 200,
+      "capturedAtUtc": "2026-11-15T14:42:45.091Z",
+      "sha256": "b5c86eeff914a7771924890ef8f8f720e5af61d6258971d91db027173a169bcc",
+      "hashBasis": "Complete decoded HTTP response body, before text extraction."
+    },
+    {
+      "url": "https://commandcode.ai/docs/resources/pricing-limits#glm-5.3-flash-boosted-credits",
+      "finalUrl": "https://commandcode.ai/docs/resources/pricing-limits",
+      "httpStatus": 200,
+      "capturedAtUtc": "2026-11-15T14:42:45.138Z",
+      "sha256": "c28f0c1bd2bc0e57d5c7ab63e373af1275e91286e7940c2a929b4829f1b285a8",
+      "hashBasis": "Complete decoded HTTP response body, before text extraction."
+    }
+  ]
+}

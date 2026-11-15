@@ -35,6 +35,8 @@ export interface Point {
   unmetered?: boolean;
   /** ISO date when a promotional unmetered period ends, if any. */
   promo_until?: string | null;
+  /** Reviewed conditional boost with no published fixed expiry. */
+  promo_condition?: 'capacity-limited';
   list_blended_usd_per_mtok: number | null;
   /** Quota basis: standard | anthropic | lowCache | cacheWrite | measured. */
   workload?: string;
