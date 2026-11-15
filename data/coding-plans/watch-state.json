@@ -6,13 +6,13 @@
       "channel": "OpenCode",
       "url": "https://opencode.ai/v2/docs/console/go/",
       "kind": "tables",
-      "attemptedAt": "2026-11-14T07:52:17.719Z",
-      "lastSuccessAt": "2026-11-14T07:52:17.719Z",
+      "attemptedAt": "2026-11-15T06:50:08.712Z",
+      "lastSuccessAt": "2026-11-15T06:50:08.712Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-14T07:52:17.719Z",
+        "checkedAt": "2026-11-15T06:50:08.712Z",
         "bodySha256": "5ef1e23728efcc568fa6042a81eca38a5d96e2446f4ab87112d0b048c93db504",
         "records": [
           {
@@ -8043,14 +8043,14 @@
       "channel": "OpenCode",
       "url": "https://opencode.ai/changelog",
       "kind": "document",
-      "attemptedAt": "2026-11-14T07:52:17.719Z",
-      "lastSuccessAt": "2026-11-14T07:52:17.719Z",
+      "attemptedAt": "2026-11-15T06:50:08.712Z",
+      "lastSuccessAt": "2026-11-15T06:50:08.712Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-14T07:52:17.719Z",
-        "bodySha256": "d198dba58497e75262328d83f156cc2420dd630e19d55f20ffe303c3b1c97484",
+        "checkedAt": "2026-11-15T06:50:08.712Z",
+        "bodySha256": "fafc5f2910de2aebe024a9085b58518775c810463b15d62e1e53aac8e22f626a",
         "records": [
           {
             "key": "text:bcd0ee5a272da759279f392f5aabbf0aa18696e549eabf5548e4e346a7262ca3",
@@ -8287,13 +8287,13 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/go",
       "kind": "tables",
-      "attemptedAt": "2026-11-14T07:52:17.719Z",
-      "lastSuccessAt": "2026-11-14T07:52:17.719Z",
+      "attemptedAt": "2026-11-15T06:50:08.712Z",
+      "lastSuccessAt": "2026-11-15T06:50:08.712Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-14T07:52:17.719Z",
+        "checkedAt": "2026-11-15T06:50:08.712Z",
         "bodySha256": "9de5b68a8119ae67e56557fe543eb2cefa28f14a7c66b4c441e2c534dd1137d8",
         "records": [
           {
@@ -12942,13 +12942,13 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/goat",
       "kind": "tables",
-      "attemptedAt": "2026-11-14T07:52:17.719Z",
-      "lastSuccessAt": "2026-11-14T07:52:17.719Z",
+      "attemptedAt": "2026-11-15T06:50:08.712Z",
+      "lastSuccessAt": "2026-11-15T06:50:08.712Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-14T07:52:17.719Z",
+        "checkedAt": "2026-11-15T06:50:08.712Z",
         "bodySha256": "357f02536ca6bca397dab4833ab9373103a95b95a35b83d4a93f1d70234d660c",
         "records": [
           {
@@ -18736,13 +18736,13 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/pro",
       "kind": "tables",
-      "attemptedAt": "2026-11-14T07:52:17.719Z",
-      "lastSuccessAt": "2026-11-14T07:52:17.719Z",
+      "attemptedAt": "2026-11-15T06:50:08.712Z",
+      "lastSuccessAt": "2026-11-15T06:50:08.712Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-14T07:52:17.719Z",
+        "checkedAt": "2026-11-15T06:50:08.712Z",
         "bodySha256": "aadaa3874709f2c87e3a9dc58d24b4e9e6d7a58f2fcf4dd41772cc13cdc18f6b",
         "records": [
           {
@@ -25879,13 +25879,13 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/max",
       "kind": "tables",
-      "attemptedAt": "2026-11-14T07:52:17.719Z",
-      "lastSuccessAt": "2026-11-14T07:52:17.719Z",
+      "attemptedAt": "2026-11-15T06:50:08.712Z",
+      "lastSuccessAt": "2026-11-15T06:50:08.712Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-14T07:52:17.719Z",
+        "checkedAt": "2026-11-15T06:50:08.712Z",
         "bodySha256": "47d6cccaf26c98d793f3527c161d508cd3d74ed98b1712bfb56f59b588cd1a16",
         "records": [
           {
@@ -31739,13 +31739,13 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/reference/cli/models",
       "kind": "tables",
-      "attemptedAt": "2026-11-14T07:52:17.719Z",
-      "lastSuccessAt": "2026-11-14T07:52:17.719Z",
+      "attemptedAt": "2026-11-15T06:50:08.712Z",
+      "lastSuccessAt": "2026-11-15T06:50:08.712Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-14T07:52:17.719Z",
+        "checkedAt": "2026-11-15T06:50:08.712Z",
         "bodySha256": "55212cf1af3520e63ae3a7df6292efc82b02dc658bcbbf3bb32651e502e17899",
         "records": [
           {
@@ -34333,13 +34333,13 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/resources/pricing-limits",
       "kind": "tables",
-      "attemptedAt": "2026-11-14T07:52:17.719Z",
-      "lastSuccessAt": "2026-11-14T07:52:17.719Z",
+      "attemptedAt": "2026-11-15T06:50:08.712Z",
+      "lastSuccessAt": "2026-11-15T06:50:08.712Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-14T07:52:17.719Z",
+        "checkedAt": "2026-11-15T06:50:08.712Z",
         "bodySha256": "c28f0c1bd2bc0e57d5c7ab63e373af1275e91286e7940c2a929b4829f1b285a8",
         "records": [
           {
@@ -39404,13 +39404,13 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/changelog",
       "kind": "document",
-      "attemptedAt": "2026-11-14T07:52:17.719Z",
-      "lastSuccessAt": "2026-11-14T07:52:17.719Z",
+      "attemptedAt": "2026-11-15T06:50:08.712Z",
+      "lastSuccessAt": "2026-11-15T06:50:08.712Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-14T07:52:17.719Z",
+        "checkedAt": "2026-11-15T06:50:08.712Z",
         "bodySha256": "32959a8b0ef4398eb5e128d979cfafad1d92153404a34df6b77704475f51d4e9",
         "records": [
           {
@@ -43538,14 +43538,14 @@
       "channel": "Ollama",
       "url": "https://ollama.com/pricing",
       "kind": "tables",
-      "attemptedAt": "2026-11-14T07:52:17.719Z",
-      "lastSuccessAt": "2026-11-14T07:52:17.719Z",
+      "attemptedAt": "2026-11-15T06:50:08.712Z",
+      "lastSuccessAt": "2026-11-15T06:50:08.712Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-14T07:52:17.719Z",
-        "bodySha256": "7ffbd768673a579a511fade50e186f94c3a1274c38576df353900dfbac69fe5b",
+        "checkedAt": "2026-11-15T06:50:08.712Z",
+        "bodySha256": "d2e97afd8e83aee28ed44092b0e1cf7df5584ec1cd6311269f058226a6719de2",
         "records": [
           {
             "key": "text:dfe95783edfef7918760312f94edd764f4ce3ffd38b90c2c955a0cc3b250f040",
@@ -44597,14 +44597,14 @@
       "channel": "Ollama",
       "url": "https://ollama.com/blog",
       "kind": "document",
-      "attemptedAt": "2026-11-14T07:52:17.719Z",
-      "lastSuccessAt": "2026-11-14T07:52:17.719Z",
+      "attemptedAt": "2026-11-15T06:50:08.712Z",
+      "lastSuccessAt": "2026-11-15T06:50:08.712Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-14T07:52:17.719Z",
-        "bodySha256": "2d4edac2121b0a5196d64197806d2e0feec9c3cc9b7059a2c0b6d4c7a9f88a62",
+        "checkedAt": "2026-11-15T06:50:08.712Z",
+        "bodySha256": "b3d10fbda64e5b28a3bc4fbb63ccbc3c3ba45babd0a3ab22ac9cac48a36b9c33",
         "records": [
           {
             "key": "text:5d68e38175ac0eeec7cbf5c22ca2520d5d61efa1755ebba6cdb47e6124c3dd37",
@@ -45186,13 +45186,13 @@
       "channel": "Factory",
       "url": "https://docs.factory.com/models.md",
       "kind": "tables",
-      "attemptedAt": "2026-11-14T07:52:17.719Z",
-      "lastSuccessAt": "2026-11-14T07:52:17.719Z",
+      "attemptedAt": "2026-11-15T06:50:08.712Z",
+      "lastSuccessAt": "2026-11-15T06:50:08.712Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-14T07:52:17.719Z",
+        "checkedAt": "2026-11-15T06:50:08.712Z",
         "bodySha256": "5b78673acafe4ec813738d8653a46a1e67103bc877717f0589f381efaaf0cbaf",
         "records": [
           {
@@ -47037,13 +47037,13 @@
       "channel": "Factory",
       "url": "https://docs.factory.com/pricing/individuals.md",
       "kind": "document",
-      "attemptedAt": "2026-11-14T07:52:17.719Z",
-      "lastSuccessAt": "2026-11-14T07:52:17.719Z",
+      "attemptedAt": "2026-11-15T06:50:08.712Z",
+      "lastSuccessAt": "2026-11-15T06:50:08.712Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-14T07:52:17.719Z",
+        "checkedAt": "2026-11-15T06:50:08.712Z",
         "bodySha256": "7c75704906d429c519fd245576b23b632bf0a2369b5ac3eb16fbdbe3daa5c4c3",
         "records": [
           {
@@ -47292,13 +47292,13 @@
       "channel": "Factory",
       "url": "https://docs.factory.com/changelog/release-notes.md",
       "kind": "document",
-      "attemptedAt": "2026-11-14T07:52:17.719Z",
-      "lastSuccessAt": "2026-11-14T07:52:17.719Z",
+      "attemptedAt": "2026-11-15T06:50:08.712Z",
+      "lastSuccessAt": "2026-11-15T06:50:08.712Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-14T07:52:17.719Z",
+        "checkedAt": "2026-11-15T06:50:08.712Z",
         "bodySha256": "5dda6c99d52b93b13eab5893c9e4f655ec553cc864258e8210d984d0dc25c503",
         "records": [
           {
@@ -52729,14 +52729,14 @@
       "channel": "Cursor",
       "url": "https://cursor.com/docs/models-and-pricing",
       "kind": "tables",
-      "attemptedAt": "2026-11-14T07:52:17.719Z",
-      "lastSuccessAt": "2026-11-14T07:52:17.719Z",
+      "attemptedAt": "2026-11-15T06:50:08.712Z",
+      "lastSuccessAt": "2026-11-15T06:50:08.712Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-14T07:52:17.719Z",
-        "bodySha256": "ce20a363fb978f626a5b4a309ad8eef412773969c3ea76f3f018b5728c8a4d25",
+        "checkedAt": "2026-11-15T06:50:08.712Z",
+        "bodySha256": "9f7f2ee379b844f42aa61a9c4cbf53332c0da123680a6d4ce3489a403c56bf30",
         "records": [
           {
             "key": "text:6c7ad5d1af746cc7ef5c32cb09479f830dfe5d5418e524a762cbb1699cb4e70c",
@@ -55042,14 +55042,14 @@
       "channel": "Cursor",
       "url": "https://cursor.com/changelog",
       "kind": "document",
-      "attemptedAt": "2026-11-14T07:52:17.719Z",
-      "lastSuccessAt": "2026-11-14T07:52:17.719Z",
+      "attemptedAt": "2026-11-15T06:50:08.712Z",
+      "lastSuccessAt": "2026-11-15T06:50:08.712Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-14T07:52:17.719Z",
-        "bodySha256": "37cadd4541562dc15019a703b9c2e3c0baba78e5a3dce0f8f1ba6c942f67040b",
+        "checkedAt": "2026-11-15T06:50:08.712Z",
+        "bodySha256": "f65ae7480a5463fc05cf07af1c94d44208d47e4b85278e0707b35cf76832ad3c",
         "records": [
           {
             "key": "text:ddcce6feab143eda3ac8d33669e14870f201c2f2b5f9b27a875942a90b8bca89",
@@ -55166,14 +55166,14 @@
       "channel": "Devin",
       "url": "https://docs.devin.ai/release-notes/overview",
       "kind": "document",
-      "attemptedAt": "2026-11-14T07:52:17.719Z",
-      "lastSuccessAt": "2026-11-14T07:52:17.719Z",
+      "attemptedAt": "2026-11-15T06:50:08.712Z",
+      "lastSuccessAt": "2026-11-15T06:50:08.712Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-14T07:52:17.719Z",
-        "bodySha256": "b12c3e35fa1ba9a89901172fbf421d9f4def7984566b984e4e7a527bb1c459ad",
+        "checkedAt": "2026-11-15T06:50:08.712Z",
+        "bodySha256": "fe45a9c92c8ccb62ce05e1ca55bf606eab820ca81170df9347eb35884a2aa2d1",
         "records": [
           {
             "key": "text:8f188bc90439c5b341aca73eb4d84c3dd04eb3bbd57acda295334fbde1178a0f",
@@ -55188,6 +55188,16 @@
           {
             "key": "text:577c3ced5608da07b1193b40f7a960606ea7537a0e2888c24696a9fb92b5e7be",
             "hash": "577c3ced5608da07b1193b40f7a960606ea7537a0e2888c24696a9fb92b5e7be",
+            "type": "announcement",
+            "signals": [
+              "availability"
+            ],
+            "models": [],
+            "url": "https://docs.devin.ai/release-notes/overview"
+          },
+          {
+            "key": "text:464e14c5f935b89f02869cbe16f6c50c1fb22b86bde9d20e98445b0d234a9bb6",
+            "hash": "464e14c5f935b89f02869cbe16f6c50c1fb22b86bde9d20e98445b0d234a9bb6",
             "type": "announcement",
             "signals": [
               "availability"
@@ -55949,7 +55959,7 @@
             "url": "https://docs.devin.ai/release-notes/overview"
           }
         ],
-        "hash": "783d7410f1d09a60df58aa0a602ad55c76f67fc303be7ff7f61fefdca29e3319"
+        "hash": "da1e934654db8eb8171f908daa9c20d314bc1b4f9abe8faeb42bec275ddf4a52"
       }
     },
     "alibaba-coding-global": {
@@ -55957,14 +55967,14 @@
       "channel": "Alibaba",
       "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan",
       "kind": "tables",
-      "attemptedAt": "2026-11-14T07:52:17.719Z",
-      "lastSuccessAt": "2026-11-14T07:52:17.719Z",
+      "attemptedAt": "2026-11-15T06:50:08.712Z",
+      "lastSuccessAt": "2026-11-15T06:50:08.712Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-14T07:52:17.719Z",
-        "bodySha256": "e297d34d27838b21550a0472396c8414c8b9a1d6f794e4e90a1024a70a45a86e",
+        "checkedAt": "2026-11-15T06:50:08.712Z",
+        "bodySha256": "085768d409301bb73cf08e563921ca4b17a20fe73a89117abf57d5ab4ad35e44",
         "records": [
           {
             "key": "text:0686d515f782875e3d4496656bed3259cca990eb3f6893deb942abc5bd278f24",
@@ -56464,14 +56474,14 @@
       "channel": "Alibaba",
       "url": "https://help.aliyun.com/zh/model-studio/coding-plan",
       "kind": "tables",
-      "attemptedAt": "2026-11-14T07:52:17.719Z",
-      "lastSuccessAt": "2026-11-14T07:52:17.719Z",
+      "attemptedAt": "2026-11-15T06:50:08.712Z",
+      "lastSuccessAt": "2026-11-15T06:50:08.712Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-14T07:52:17.719Z",
-        "bodySha256": "77a0e934056cf5866bb5faff8b4fb9fc734629ce9068440b7b948e7e600b6cdf",
+        "checkedAt": "2026-11-15T06:50:08.712Z",
+        "bodySha256": "f69ef32cc8bc835d1bda5510961b8b84247259722a60af9ceac9d08d36613eb0",
         "records": [
           {
             "key": "text:775eabf14c55f66ea3e7ef7b3737a001f72434663b87e260b4d68fe798af9495",
@@ -56925,14 +56935,14 @@
       "channel": "Alibaba",
       "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
       "kind": "tables",
-      "attemptedAt": "2026-11-14T07:52:17.719Z",
-      "lastSuccessAt": "2026-11-14T07:52:17.719Z",
+      "attemptedAt": "2026-11-15T06:50:08.712Z",
+      "lastSuccessAt": "2026-11-15T06:50:08.712Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-14T07:52:17.719Z",
-        "bodySha256": "92da7bc64c5f6dc070410d8a9c67945c3538174b96ca1d258425a1fddc902eb6",
+        "checkedAt": "2026-11-15T06:50:08.712Z",
+        "bodySha256": "bd8f81e9367b84819b0a415865284b46b8bcc0149dccda09983b1a69cecef803",
         "records": [
           {
             "key": "text:c6331a8c511a8bcbc3875d6eab0b268db2d55d5b5e18db81347f58611f6c7435",
@@ -57813,8 +57823,8 @@
       "channel": "OpenCode",
       "url": "https://x.com/opencode",
       "kind": "social",
-      "attemptedAt": "2026-11-14T07:52:17.719Z",
-      "lastSuccessAt": "2026-11-14T07:52:17.719Z",
+      "attemptedAt": "2026-11-15T06:50:08.712Z",
+      "lastSuccessAt": "2026-11-15T06:50:08.712Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "official-oembed; discovery may use mirror",
@@ -57970,7 +57980,7 @@
           }
         ],
         "hash": "a8b91dd62a4ab630108a4822391285501308c28b9a700a3a32496679a0901f65",
-        "checkedAt": "2026-11-14T07:52:17.719Z",
+        "checkedAt": "2026-11-15T06:50:08.712Z",
         "discoveredVia": "https://teapawt.net/opencode"
       }
     },
@@ -57979,13 +57989,30 @@
       "channel": "Command Code",
       "url": "https://x.com/CommandCodeAI",
       "kind": "social",
-      "attemptedAt": "2026-11-14T07:52:17.719Z",
-      "lastSuccessAt": "2026-11-14T07:52:17.719Z",
+      "attemptedAt": "2026-11-15T06:50:08.712Z",
+      "lastSuccessAt": "2026-11-15T06:50:08.712Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "official-oembed; discovery may use mirror",
       "snapshot": {
         "records": [
+          {
+            "key": "post:2121804992831250447",
+            "type": "announcement",
+            "hash": "406608aba3d6a5d018c1a98f35859b2c9bcd217c3259b914a08d714bca227fdd",
+            "signals": [
+              "pricing",
+              "availability"
+            ],
+            "models": [
+              "GLM models. In ",
+              "GLM-5.3 Flash ",
+              "GLM-5.3 ",
+              "GLM-5.2 "
+            ],
+            "url": "https://x.com/CommandCodeAI/status/2121804992831250447",
+            "relevant": true
+          },
           {
             "key": "post:2121361772255105197",
             "type": "announcement",
@@ -58104,25 +58131,10 @@
             "models": [],
             "url": "https://x.com/CommandCodeAI/status/2120062778048467315",
             "relevant": false
-          },
-          {
-            "key": "post:2120012859812065735",
-            "type": "announcement",
-            "hash": "9fdd33d2a05186a26fe930b3579496410a08e698d59417120d2e0148b9822891",
-            "signals": [
-              "version",
-              "pricing"
-            ],
-            "models": [
-              "DeepSeek V4.1 Flash 1017",
-              "GLM-5.3 Flash"
-            ],
-            "url": "https://x.com/CommandCodeAI/status/2120012859812065735",
-            "relevant": true
           }
         ],
-        "hash": "eab821706e6e828f09c3dca81f738c6b73cbedb5b4b05bd49131ce897958ffa6",
-        "checkedAt": "2026-11-14T07:52:17.719Z",
+        "hash": "892afb03df4e627a78d7754fd6da71c1f4b1d80d733dfa5886c281158cc6a5f0",
+        "checkedAt": "2026-11-15T06:50:08.712Z",
         "discoveredVia": "https://teapawt.net/CommandCodeAI"
       }
     }
@@ -93209,7 +93221,54 @@
       },
       "after": null,
       "status": "pending"
+    },
+    {
+      "id": "0c32b91c88fb0abe681ee4d52b2b8eea06d5758182cfd50594dec50ec76b5260",
+      "sourceId": "devin-releases",
+      "channel": "Devin",
+      "kind": "announcement",
+      "detectedAt": "2026-11-15T06:50:08.712Z",
+      "url": "https://docs.devin.ai/release-notes/overview",
+      "before": null,
+      "after": {
+        "key": "text:464e14c5f935b89f02869cbe16f6c50c1fb22b86bde9d20e98445b0d234a9bb6",
+        "hash": "464e14c5f935b89f02869cbe16f6c50c1fb22b86bde9d20e98445b0d234a9bb6",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [],
+        "url": "https://docs.devin.ai/release-notes/overview"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "755c30425aeef10916a1fd599f371236ac3034ff74c706926d4799745d914630",
+      "sourceId": "command-code-social",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-15T06:50:08.712Z",
+      "url": "https://x.com/CommandCodeAI/status/2121804992831250447",
+      "before": null,
+      "after": {
+        "key": "post:2121804992831250447",
+        "type": "announcement",
+        "hash": "406608aba3d6a5d018c1a98f35859b2c9bcd217c3259b914a08d714bca227fdd",
+        "signals": [
+          "pricing",
+          "availability"
+        ],
+        "models": [
+          "GLM models. In ",
+          "GLM-5.3 Flash ",
+          "GLM-5.3 ",
+          "GLM-5.2 "
+        ],
+        "url": "https://x.com/CommandCodeAI/status/2121804992831250447",
+        "relevant": true
+      },
+      "status": "pending"
     }
   ],
-  "checkedAt": "2026-11-14T07:52:17.719Z"
+  "checkedAt": "2026-11-15T06:50:08.712Z"
 }
