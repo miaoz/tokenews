@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "checkedAt": "2026-11-15",
-  "baselineCommit": "3d1be6c8bd62a74a3b50c10eeace124b7241a5a9",
+  "checkedAt": "2026-11-16",
+  "baselineCommit": "057882f6b5d1e072648a22856e14a92614de7361",
   "note": "Source audit is separate from publication. Unverified sources are never reported as unchanged. Identity-review rows may be aliases, historical models, or new releases. Scores across changed versions must not be mixed.",
   "results": [
     {
@@ -60,7 +60,8 @@
       ],
       "unresolvedIdentities": [
         "K-EXAONE 2.0",
-        "Tencent Hy4"
+        "Tencent Hy4",
+        "Qwen4 Max"
       ],
       "rows": [
         {
@@ -1114,21 +1115,6 @@
           "status": "missing-from-board"
         },
         {
-          "identity": "Qwen3.8 Max (0902)",
-          "sourceId": "local:aa-configuration:[\"qwen3-8-max\",\"Qwen3.8 Max (0902)\"]",
-          "sourceIdKind": "local-release-name-key",
-          "label": "Qwen3.8 Max (0902)",
-          "score": 33.6545627367888,
-          "fallbackEnabled": false,
-          "maker": "Alibaba",
-          "releaseDate": "2026-09-02",
-          "releaseSlug": "qwen3-8-max",
-          "effort": null,
-          "source": "https://artificialanalysis.ai/models/releases/qwen3-8-max",
-          "model": "qwen3.8-max",
-          "status": "tracked-model"
-        },
-        {
           "identity": "Claude Sonnet 5.5",
           "sourceId": "local:aa-configuration:[\"claude-sonnet-5-5\",\"Claude Sonnet 5.5 (Max, Default Fallback)\"]",
           "sourceIdKind": "local-release-name-key",
@@ -1742,6 +1728,21 @@
           "source": "https://artificialanalysis.ai/models/releases/claude-fable-5-2",
           "model": "claude-fable-5.2",
           "status": "missing-from-board"
+        },
+        {
+          "identity": "Qwen4 Max",
+          "sourceId": "local:aa-configuration:[\"qwen4-max\",\"Qwen4 Max\"]",
+          "sourceIdKind": "local-release-name-key",
+          "label": "Qwen4 Max",
+          "score": 42.8914543287565,
+          "fallbackEnabled": false,
+          "maker": "Alibaba",
+          "releaseDate": "2026-11-16",
+          "releaseSlug": "qwen4-max",
+          "effort": null,
+          "source": "https://artificialanalysis.ai/models/releases/qwen4-max",
+          "model": null,
+          "status": "identity-review"
         },
         {
           "identity": "Muse Wonder",
@@ -3339,7 +3340,6 @@
         "Claude Haiku 5.5 (Medium)",
         "Qwen3.8 27B (Xhigh)",
         "GPT-6.1 Terra (Max)",
-        "Qwen3.8 Max (0902)",
         "Claude Sonnet 5.5 (Max, Default Fallback)",
         "Hy3",
         "GPT-6.1 Sol (Max)",
@@ -3389,6 +3389,7 @@
         "Quasar 438B (Max, Based on GLM-5.2)",
         "Qwen3 Coder Next",
         "Claude Fable 5.2 (High, Default Fallback)",
+        "Qwen4 Max",
         "Muse Wonder (Max)"
       ],
       "missingFromBoard": [
@@ -3467,7 +3468,8 @@
       ],
       "unresolvedIdentities": [
         "K-EXAONE 2.0",
-        "Tencent Hy4"
+        "Tencent Hy4",
+        "Qwen4 Max"
       ],
       "rows": [
         {
@@ -5001,21 +5003,6 @@
           "status": "missing-from-board"
         },
         {
-          "identity": "Qwen3.8 Max (0902)",
-          "sourceId": "local:aa-configuration:[\"qwen3-8-max\",\"Qwen3.8 Max (0902)\"]",
-          "sourceIdKind": "local-release-name-key",
-          "label": "Qwen3.8 Max (0902)",
-          "score": 38.8888888888889,
-          "fallbackEnabled": false,
-          "maker": "Alibaba",
-          "releaseDate": "2026-09-02",
-          "releaseSlug": "qwen3-8-max",
-          "effort": null,
-          "source": "https://artificialanalysis.ai/models/releases/qwen3-8-max",
-          "model": "qwen3.8-max",
-          "status": "tracked-model"
-        },
-        {
           "identity": "Claude Sonnet 5.5",
           "sourceId": "local:aa-configuration:[\"claude-sonnet-5-5\",\"Claude Sonnet 5.5 (Max, Default Fallback)\"]",
           "sourceIdKind": "local-release-name-key",
@@ -5749,6 +5736,21 @@
           "source": "https://artificialanalysis.ai/models/releases/claude-fable-5-2",
           "model": "claude-fable-5.2",
           "status": "missing-from-board"
+        },
+        {
+          "identity": "Qwen4 Max",
+          "sourceId": "local:aa-configuration:[\"qwen4-max\",\"Qwen4 Max\"]",
+          "sourceIdKind": "local-release-name-key",
+          "label": "Qwen4 Max",
+          "score": 48.4848484848485,
+          "fallbackEnabled": false,
+          "maker": "Alibaba",
+          "releaseDate": "2026-11-16",
+          "releaseSlug": "qwen4-max",
+          "effort": null,
+          "source": "https://artificialanalysis.ai/models/releases/qwen4-max",
+          "model": null,
+          "status": "identity-review"
         },
         {
           "identity": "Muse Wonder",
@@ -9098,6 +9100,16 @@
       "source": "https://artificialanalysis.ai/models/releases/kimi-k3-1-pro",
       "catalogModel": "kimi-k3.1-pro",
       "inUpstreamDirectory": true,
+      "inUpstreamBenchmarks": false
+    },
+    {
+      "name": "Qwen4 Max",
+      "slug": "qwen4-max",
+      "maker": "Alibaba",
+      "releaseDate": "2026-11-16",
+      "source": "https://artificialanalysis.ai/models/releases/qwen4-max",
+      "catalogModel": null,
+      "inUpstreamDirectory": false,
       "inUpstreamBenchmarks": false
     },
     {

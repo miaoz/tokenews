@@ -1,11 +1,11 @@
 {
   "version": 1,
-  "attemptedAt": "2026-11-15",
+  "attemptedAt": "2026-11-16",
   "results": [
     {
       "board": "aa_intelligence_index",
       "status": "updated",
-      "reviewRequired": 2,
+      "reviewRequired": 3,
       "identityReview": [
         {
           "label": "K-EXAONE 2.0",
@@ -16,21 +16,26 @@
           "label": "Tencent Hy4",
           "sourceId": "local:aa-configuration:[\"tencent-hy4\",\"Tencent Hy4\"]",
           "releaseSlug": "tencent-hy4"
+        },
+        {
+          "label": "Qwen4 Max",
+          "sourceId": "local:aa-configuration:[\"qwen4-max\",\"Qwen4 Max\"]",
+          "releaseSlug": "qwen4-max"
         }
       ],
-      "retainedCheckedAt": "2026-11-15"
+      "retainedCheckedAt": "2026-11-16"
     },
     {
       "board": "terminal_bench_4",
       "status": "updated",
       "reviewRequired": 0,
       "identityReview": [],
-      "retainedCheckedAt": "2026-11-15"
+      "retainedCheckedAt": "2026-11-16"
     },
     {
       "board": "aa_terminal_bench_4",
       "status": "updated",
-      "reviewRequired": 2,
+      "reviewRequired": 3,
       "identityReview": [
         {
           "label": "K-EXAONE 2.0",
@@ -41,9 +46,14 @@
           "label": "Tencent Hy4",
           "sourceId": "local:aa-configuration:[\"tencent-hy4\",\"Tencent Hy4\"]",
           "releaseSlug": "tencent-hy4"
+        },
+        {
+          "label": "Qwen4 Max",
+          "sourceId": "local:aa-configuration:[\"qwen4-max\",\"Qwen4 Max\"]",
+          "releaseSlug": "qwen4-max"
         }
       ],
-      "retainedCheckedAt": "2026-11-15"
+      "retainedCheckedAt": "2026-11-16"
     },
     {
       "board": "arena_code",
@@ -62,21 +72,21 @@
       "status": "updated",
       "reviewRequired": 0,
       "identityReview": [],
-      "retainedCheckedAt": "2026-11-15"
+      "retainedCheckedAt": "2026-11-16"
     },
     {
       "board": "open_design_arena",
       "status": "updated",
       "reviewRequired": 0,
       "identityReview": [],
-      "retainedCheckedAt": "2026-11-15"
+      "retainedCheckedAt": "2026-11-16"
     },
     {
       "board": "deepswe_1_1",
       "status": "updated",
       "reviewRequired": 0,
       "identityReview": [],
-      "retainedCheckedAt": "2026-11-15"
+      "retainedCheckedAt": "2026-11-16"
     }
   ]
 }
