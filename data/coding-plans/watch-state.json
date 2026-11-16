@@ -6,14 +6,14 @@
       "channel": "OpenCode",
       "url": "https://opencode.ai/v2/docs/console/go/",
       "kind": "tables",
-      "attemptedAt": "2026-11-15T06:50:08.712Z",
-      "lastSuccessAt": "2026-11-15T06:50:08.712Z",
+      "attemptedAt": "2026-11-16T06:49:25.500Z",
+      "lastSuccessAt": "2026-11-16T06:49:25.500Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-15T06:50:08.712Z",
-        "bodySha256": "5ef1e23728efcc568fa6042a81eca38a5d96e2446f4ab87112d0b048c93db504",
+        "checkedAt": "2026-11-16T06:49:25.500Z",
+        "bodySha256": "79a47b6a07226269b06dfbf58a02fbfd54f12d61e4f90da36d80e448bcb29f83",
         "records": [
           {
             "key": "text:0ab61f7fc122a5631bc29248a6fa6ab7421ee026fdde6d50271dd4ad9afce488",
@@ -420,6 +420,16 @@
               "Muse Spark 1.2 Contributor "
             ],
             "url": "https://ai.developer.meta.com/legal/geographic-use-policy"
+          },
+          {
+            "key": "text:d8001f6b5d107c7b493ef28206c197aebdf4ba8cc058f2a9d35e9543a15d3a04",
+            "hash": "d8001f6b5d107c7b493ef28206c197aebdf4ba8cc058f2a9d35e9543a15d3a04",
+            "type": "announcement",
+            "signals": [],
+            "models": [
+              "Qwen4 Max"
+            ],
+            "url": "https://opencode.ai/v2/docs/console/go/"
           },
           {
             "key": "text:99bc575a61712da20df23d52e3e4cbb5fb3a3e504303d6708edfb2b2165b2948",
@@ -1360,6 +1370,33 @@
             ],
             "url": "https://opencode.ai/v2/docs/console/go/",
             "hash": "b092b35140690066fbb017cc284e58caff7f1f0a7cdf4d1167b13e6688c2d54c"
+          },
+          {
+            "key": "row:v2:493dad6d570d86e5:0:Qwen4 Max:0",
+            "type": "table-row",
+            "label": "Qwen4 Max",
+            "heading": "Usage limits",
+            "columns": [
+              "Model",
+              "Input",
+              "Output",
+              "Cached Read",
+              "Cached Write",
+              "Monthly limit"
+            ],
+            "cells": [
+              "Qwen4 Max",
+              "$1.50",
+              "$4.50",
+              "$0.075",
+              "$1.875",
+              "$15"
+            ],
+            "signals": [
+              "pricing"
+            ],
+            "url": "https://opencode.ai/v2/docs/console/go/",
+            "hash": "69affec51f86d92907f03784c668f7f1915d3c1621f6067652180ae21df15001"
           },
           {
             "key": "row:v2:493dad6d570d86e5:0:Qwen3.8 Max:0",
@@ -2445,6 +2482,33 @@
             "hash": "c8b313e0c8a482455d6761ed0e8b7cea124fa7e01a9a0b0be6e511da3abec75c"
           },
           {
+            "key": "row:v2:493dad6d570d86e5:1:Qwen4 Max:0",
+            "type": "table-row",
+            "label": "Qwen4 Max",
+            "heading": "Usage limits",
+            "columns": [
+              "Model",
+              "Input",
+              "Output",
+              "Cached Read",
+              "Cached Write",
+              "Monthly limit"
+            ],
+            "cells": [
+              "Qwen4 Max",
+              "$1.50",
+              "$4.50",
+              "$0.075",
+              "$1.875",
+              "$60"
+            ],
+            "signals": [
+              "pricing"
+            ],
+            "url": "https://opencode.ai/v2/docs/console/go/",
+            "hash": "2b0c9241c530d08f78f87fd98cf43732f397bcea55c292bad0f360c917482d53"
+          },
+          {
             "key": "row:v2:493dad6d570d86e5:1:Qwen3.8 Max:0",
             "type": "table-row",
             "label": "Qwen3.8 Max",
@@ -3528,6 +3592,33 @@
             "hash": "021914cb5a30375820c0d89624b59922b8aec6c4f7423cc519435974bff85d60"
           },
           {
+            "key": "row:v2:493dad6d570d86e5:2:Qwen4 Max:0",
+            "type": "table-row",
+            "label": "Qwen4 Max",
+            "heading": "Usage limits",
+            "columns": [
+              "Model",
+              "Input",
+              "Output",
+              "Cached Read",
+              "Cached Write",
+              "Monthly limit"
+            ],
+            "cells": [
+              "Qwen4 Max",
+              "$1.50",
+              "$4.50",
+              "$0.075",
+              "$1.875",
+              "$20"
+            ],
+            "signals": [
+              "pricing"
+            ],
+            "url": "https://opencode.ai/v2/docs/console/go/",
+            "hash": "84abdc4ee9fc9b1afb0858d8db25e5756d0b050601da967b267db13450bcc79f"
+          },
+          {
             "key": "row:v2:493dad6d570d86e5:2:Qwen3.8 Max:0",
             "type": "table-row",
             "label": "Qwen3.8 Max",
@@ -4547,6 +4638,27 @@
             "hash": "4de550d49f19470ea56953ff8cfb9ce72a89c8993e50eefda97536b7a3278f55"
           },
           {
+            "key": "row:v2:dd56a09c91a78cb9:0:Qwen4 Max:0",
+            "type": "table-row",
+            "label": "Qwen4 Max",
+            "heading": "Estimated requests",
+            "columns": [
+              "Model",
+              "Requests per 5 hours",
+              "Requests per week",
+              "Requests per month"
+            ],
+            "cells": [
+              "Qwen4 Max",
+              "460",
+              "1,160",
+              "2,310"
+            ],
+            "signals": [],
+            "url": "https://opencode.ai/v2/docs/console/go/",
+            "hash": "55dccf5e69fd050d416509de6d7e7b984f68f8e08fbe582bb58751465e09cca5"
+          },
+          {
             "key": "row:v2:dd56a09c91a78cb9:0:Qwen3.8 Max:0",
             "type": "table-row",
             "label": "Qwen3.8 Max",
@@ -5226,6 +5338,27 @@
             "signals": [],
             "url": "https://opencode.ai/v2/docs/console/go/",
             "hash": "b43f2dda1f7313b34659d99dfcf361c2a44d131c9059b287df62521ad2cf0e8f"
+          },
+          {
+            "key": "row:v2:dd56a09c91a78cb9:1:Qwen4 Max:0",
+            "type": "table-row",
+            "label": "Qwen4 Max",
+            "heading": "Estimated requests",
+            "columns": [
+              "Model",
+              "Requests per 5 hours",
+              "Requests per week",
+              "Requests per month"
+            ],
+            "cells": [
+              "Qwen4 Max",
+              "1,840",
+              "4,640",
+              "9,240"
+            ],
+            "signals": [],
+            "url": "https://opencode.ai/v2/docs/console/go/",
+            "hash": "8934b05249d98184a6fac20aeb6f699cf7ec5eb1860e2b20dd188a9e318f0259"
           },
           {
             "key": "row:v2:dd56a09c91a78cb9:1:Qwen3.8 Max:0",
@@ -5909,6 +6042,27 @@
             "hash": "bf5dfd8ed55494c996802f137ee539030a61214eb96066d5ea9ceb9c3a0ca930"
           },
           {
+            "key": "row:v2:dd56a09c91a78cb9:2:Qwen4 Max:0",
+            "type": "table-row",
+            "label": "Qwen4 Max",
+            "heading": "Estimated requests",
+            "columns": [
+              "Model",
+              "Requests per 5 hours",
+              "Requests per week",
+              "Requests per month"
+            ],
+            "cells": [
+              "Qwen4 Max",
+              "613",
+              "1,550",
+              "3,080"
+            ],
+            "signals": [],
+            "url": "https://opencode.ai/v2/docs/console/go/",
+            "hash": "aca2d94b73e879b0847fd5499cc16b55ea92179da1b0f32e09a423d130a449fc"
+          },
+          {
             "key": "row:v2:dd56a09c91a78cb9:2:Qwen3.8 Max:0",
             "type": "table-row",
             "label": "Qwen3.8 Max",
@@ -6394,6 +6548,16 @@
             "signals": [],
             "models": [
               "MiMo-V2.5-Pro "
+            ],
+            "url": "https://opencode.ai/v2/docs/console/go/"
+          },
+          {
+            "key": "text:6fa315c5aed769dc21e9eb72c146959e19831d9ac4b6e0b69b52bb5bfa1193a3",
+            "hash": "6fa315c5aed769dc21e9eb72c146959e19831d9ac4b6e0b69b52bb5bfa1193a3",
+            "type": "announcement",
+            "signals": [],
+            "models": [
+              "Qwen4 Max "
             ],
             "url": "https://opencode.ai/v2/docs/console/go/"
           },
@@ -7017,6 +7181,27 @@
             "hash": "04138a709fc497f1e396b9d7e2d60aa64254f64f491869bcb70066df42445b4c"
           },
           {
+            "key": "row:v2:869c0b8f4f229c2f:0:Qwen4 Max:0",
+            "type": "table-row",
+            "label": "Qwen4 Max",
+            "heading": "Endpoints",
+            "columns": [
+              "Model",
+              "Model ID",
+              "Endpoint",
+              "AI SDK Package"
+            ],
+            "cells": [
+              "Qwen4 Max",
+              "qwen4-max",
+              "https://opencode.ai/inference/go/anthropic/v1/messages",
+              "@ai-sdk/anthropic"
+            ],
+            "signals": [],
+            "url": "https://opencode.ai/v2/docs/console/go/",
+            "hash": "9ffaab834a798f3a5b7748e6b491c845277c990093fe700605af69d40f67bd63"
+          },
+          {
             "key": "row:v2:869c0b8f4f229c2f:0:Qwen3.8 Max:0",
             "type": "table-row",
             "label": "Qwen3.8 Max",
@@ -7557,6 +7742,25 @@
             "hash": "eeef93e2ed8d2ff37237276bf3ea8c6fd3d3760ee8b5373478242a8171c2ca5f"
           },
           {
+            "key": "row:v2:572bd409ebc86d3f:0:Qwen4 Max:0",
+            "type": "table-row",
+            "label": "Qwen4 Max",
+            "heading": "Privacy",
+            "columns": [
+              "Model",
+              "Model training",
+              "Data retention"
+            ],
+            "cells": [
+              "Qwen4 Max",
+              "Not used",
+              "0 days"
+            ],
+            "signals": [],
+            "url": "https://opencode.ai/v2/docs/console/go/",
+            "hash": "d4c5e728031fa6ee81257d23b0e446e9b431244e2643f92b45718d0dbc9ce32c"
+          },
+          {
             "key": "row:v2:572bd409ebc86d3f:0:Qwen3.8 Max:0",
             "type": "table-row",
             "label": "Qwen3.8 Max",
@@ -8035,7 +8239,7 @@
             "url": "https://opencode.ai/v2/docs/console/go/"
           }
         ],
-        "hash": "dcce2912b09dfa8d6c52b703c858afce06b4f074164eb81f4c76f01a69eda1c3"
+        "hash": "6c944ef32669bbe4058fb70cf85a0d26721c8ebb13cb6cffa7f6d6b3dae100ca"
       }
     },
     "opencode-releases": {
@@ -8043,14 +8247,14 @@
       "channel": "OpenCode",
       "url": "https://opencode.ai/changelog",
       "kind": "document",
-      "attemptedAt": "2026-11-15T06:50:08.712Z",
-      "lastSuccessAt": "2026-11-15T06:50:08.712Z",
+      "attemptedAt": "2026-11-16T06:49:25.500Z",
+      "lastSuccessAt": "2026-11-16T06:49:25.500Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-15T06:50:08.712Z",
-        "bodySha256": "fafc5f2910de2aebe024a9085b58518775c810463b15d62e1e53aac8e22f626a",
+        "checkedAt": "2026-11-16T06:49:25.500Z",
+        "bodySha256": "b4e05d8c2a5f4cacd9e5950f7c5b710ae7b13d1d199c94e093c5f0e769fdd0a2",
         "records": [
           {
             "key": "text:bcd0ee5a272da759279f392f5aabbf0aa18696e549eabf5548e4e346a7262ca3",
@@ -8287,14 +8491,14 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/go",
       "kind": "tables",
-      "attemptedAt": "2026-11-15T06:50:08.712Z",
-      "lastSuccessAt": "2026-11-15T06:50:08.712Z",
+      "attemptedAt": "2026-11-16T06:49:25.500Z",
+      "lastSuccessAt": "2026-11-16T06:49:25.500Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-15T06:50:08.712Z",
-        "bodySha256": "9de5b68a8119ae67e56557fe543eb2cefa28f14a7c66b4c441e2c534dd1137d8",
+        "checkedAt": "2026-11-16T06:49:25.500Z",
+        "bodySha256": "9bc21ed31b88a90cdea04ec0ecca15ac27d0526d595c92e4821e609345a40029",
         "records": [
           {
             "key": "text:b605350bc00209520b7cd8f546322663356ba630708f71bbf30aead6b3dd608e",
@@ -8485,14 +8689,43 @@
             "url": "https://commandcode.ai/docs/plans/goat"
           },
           {
-            "key": "text:e6e6e70721abd9d011221ba0edd46b0898bd11e7868bbe3a4ba1a316241279f2",
-            "hash": "e6e6e70721abd9d011221ba0edd46b0898bd11e7868bbe3a4ba1a316241279f2",
+            "key": "text:3f3b0244aeecb656220fb84f44919023bc55587e00976dd79252ae6be3ba6954",
+            "hash": "3f3b0244aeecb656220fb84f44919023bc55587e00976dd79252ae6be3ba6954",
             "type": "announcement",
             "signals": [
               "promotion"
             ],
             "models": [],
             "url": "https://commandcode.ai/docs/plans/go"
+          },
+          {
+            "key": "row:v2:e9602f4baf5bb37d:0:Qwen 4 Max:0",
+            "type": "table-row",
+            "label": "Qwen 4 Max",
+            "heading": "Models included",
+            "columns": [
+              "Model ↕",
+              "Context ↕",
+              "Input ↕",
+              "Output ↕",
+              "Cache read ↕",
+              "Cache write ↕",
+              "Caps"
+            ],
+            "cells": [
+              "Qwen 4 Max",
+              "1M",
+              "$1.50",
+              "$4.50",
+              "$0.075",
+              "$1.875",
+              "+ 1"
+            ],
+            "signals": [
+              "pricing"
+            ],
+            "url": "https://commandcode.ai/docs/plans/go",
+            "hash": "c1def69ea1a4154e67eaee7b671c9976fec5bb51711779d29c8e76870e45a8f5"
           },
           {
             "key": "row:v2:e9602f4baf5bb37d:0:Inkling 2 Small Free:0",
@@ -10178,8 +10411,8 @@
             "hash": "7c12b5f472ef6a5905482e80a798fc3aa488b62504e104ccb2baca674e066b37"
           },
           {
-            "key": "text:5014a647fae8f4ee8fc97fbbd4add1df0a6540601faa7cf20080c4f03db2d35b",
-            "hash": "5014a647fae8f4ee8fc97fbbd4add1df0a6540601faa7cf20080c4f03db2d35b",
+            "key": "text:ceb20dc79da5f5726de86642b93db0acda7f39a6ba81440170a546ba149483c8",
+            "hash": "ceb20dc79da5f5726de86642b93db0acda7f39a6ba81440170a546ba149483c8",
             "type": "announcement",
             "signals": [
               "pricing",
@@ -10742,6 +10975,27 @@
             "signals": [],
             "url": "https://commandcode.ai/docs/plans/go",
             "hash": "ee9a20d415dd0fc22942e3bfdd5e88a60ddad7bccf1c70eae0e6edffe3a0dbef"
+          },
+          {
+            "key": "row:v2:0630e53ae39d0083:0:Qwen 4 Max:0",
+            "type": "table-row",
+            "label": "Qwen 4 Max",
+            "heading": "Usage limits",
+            "columns": [
+              "Model",
+              "Requests / 5 hours",
+              "Requests / week",
+              "Requests / month"
+            ],
+            "cells": [
+              "Qwen 4 Max",
+              "308",
+              "615",
+              "1,030"
+            ],
+            "signals": [],
+            "url": "https://commandcode.ai/docs/plans/go",
+            "hash": "7f1b7094633d0120c8c9b77e851cbf22ae221fb89e7b5e73734128c12700bbd2"
           },
           {
             "key": "row:v2:0630e53ae39d0083:0:Qwen 3.8 Omni Flash:0",
@@ -12031,6 +12285,33 @@
             "hash": "31d883be09e27ded0c5929a0f8ae83b95b5839d0b1f3feb4777dd28b0c872b29"
           },
           {
+            "key": "row:v2:0630e53ae39d0083:2:Qwen 4 Max:0",
+            "type": "table-row",
+            "label": "Qwen 4 Max",
+            "heading": "Usage limits",
+            "columns": [
+              "Model",
+              "Input",
+              "Output",
+              "Cache Read",
+              "Cache Write",
+              "Monthly credits"
+            ],
+            "cells": [
+              "Qwen 4 Max",
+              "$1.50",
+              "$4.50",
+              "$0.075",
+              "$1.875",
+              "$6"
+            ],
+            "signals": [
+              "pricing"
+            ],
+            "url": "https://commandcode.ai/docs/plans/go",
+            "hash": "7690fd49dcf4798dea9a0c7ced89781046e1b49dbe61a4850d54f768b7118481"
+          },
+          {
             "key": "row:v2:0630e53ae39d0083:2:Qwen 3.8 Omni Flash:0",
             "type": "table-row",
             "label": "Qwen 3.8 Omni Flash",
@@ -12934,7 +13215,7 @@
             "url": "https://commandcode.ai/docs/resources/zdr#what-zdr-costs"
           }
         ],
-        "hash": "2ef0c0ce710099abed677e42031c9f22f18bd8e6cea9fc32048ef9c21eab805f"
+        "hash": "01de28eebbc31f24bb8a3b832be9ba69b8a99286512d858766062d6b9f79ac7a"
       }
     },
     "command-code-goat": {
@@ -12942,14 +13223,14 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/goat",
       "kind": "tables",
-      "attemptedAt": "2026-11-15T06:50:08.712Z",
-      "lastSuccessAt": "2026-11-15T06:50:08.712Z",
+      "attemptedAt": "2026-11-16T06:49:25.500Z",
+      "lastSuccessAt": "2026-11-16T06:49:25.500Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-15T06:50:08.712Z",
-        "bodySha256": "357f02536ca6bca397dab4833ab9373103a95b95a35b83d4a93f1d70234d660c",
+        "checkedAt": "2026-11-16T06:49:25.500Z",
+        "bodySha256": "5c23bcef320b7e3540ffd08deb2cd485245a8cc2ec3889d90576366899cf96f0",
         "records": [
           {
             "key": "text:b605350bc00209520b7cd8f546322663356ba630708f71bbf30aead6b3dd608e",
@@ -13186,14 +13467,43 @@
             "url": "https://commandcode.ai/docs/plans/pro"
           },
           {
-            "key": "text:334a27311fc09bacb4d0e6da4912f7d1c2da38a408dfa4089a4b104e5a7f94c9",
-            "hash": "334a27311fc09bacb4d0e6da4912f7d1c2da38a408dfa4089a4b104e5a7f94c9",
+            "key": "text:afb72a1babf030ed5d874384ecb937bc8e943a63f6e8a7848053985cbb466861",
+            "hash": "afb72a1babf030ed5d874384ecb937bc8e943a63f6e8a7848053985cbb466861",
             "type": "announcement",
             "signals": [
               "promotion"
             ],
             "models": [],
             "url": "https://commandcode.ai/docs/plans/goat"
+          },
+          {
+            "key": "row:v2:5fc247816328732d:0:Qwen 4 Max:0",
+            "type": "table-row",
+            "label": "Qwen 4 Max",
+            "heading": "Models included",
+            "columns": [
+              "Model ↕",
+              "Context ↕",
+              "Input ↕",
+              "Output ↕",
+              "Cache read ↕",
+              "Cache write ↕",
+              "Caps"
+            ],
+            "cells": [
+              "Qwen 4 Max",
+              "1M",
+              "$1.50",
+              "$4.50",
+              "$0.075",
+              "$1.875",
+              "+ 1"
+            ],
+            "signals": [
+              "pricing"
+            ],
+            "url": "https://commandcode.ai/docs/plans/goat",
+            "hash": "c1def69ea1a4154e67eaee7b671c9976fec5bb51711779d29c8e76870e45a8f5"
           },
           {
             "key": "row:v2:5fc247816328732d:0:Inkling 2 Small Free:0",
@@ -15287,8 +15597,8 @@
             "hash": "7c12b5f472ef6a5905482e80a798fc3aa488b62504e104ccb2baca674e066b37"
           },
           {
-            "key": "text:eb34e0bf0448abfc762abc438e6d923846facf84205efe5fa1ff2570ca8639f9",
-            "hash": "eb34e0bf0448abfc762abc438e6d923846facf84205efe5fa1ff2570ca8639f9",
+            "key": "text:30acac760bedb488a28211c86118484594f58820dbaf9b1ffb413ec841c6c78b",
+            "hash": "30acac760bedb488a28211c86118484594f58820dbaf9b1ffb413ec841c6c78b",
             "type": "announcement",
             "signals": [
               "pricing",
@@ -15926,6 +16236,27 @@
             "signals": [],
             "url": "https://commandcode.ai/docs/plans/goat",
             "hash": "29fbf1da7b90884931ec4f3814a7fcf0003522ba1230e5cd36b225908c45acf7"
+          },
+          {
+            "key": "row:v2:ba75eaf2cac81cb2:0:Qwen 4 Max:0",
+            "type": "table-row",
+            "label": "Qwen 4 Max",
+            "heading": "Usage limits",
+            "columns": [
+              "Model",
+              "Requests / 5 hours",
+              "Requests / week",
+              "Requests / month"
+            ],
+            "cells": [
+              "Qwen 4 Max",
+              "513",
+              "1,280",
+              "2,560"
+            ],
+            "signals": [],
+            "url": "https://commandcode.ai/docs/plans/goat",
+            "hash": "649aec8de495e85d43d230735f16f996d7c8d8c3af0b05f4b59aef089cee040c"
           },
           {
             "key": "row:v2:ba75eaf2cac81cb2:0:Qwen 3.8 Omni Flash:0",
@@ -17330,15 +17661,17 @@
             "hash": "230f8fdb5745d1d2cc5c27e33f3dddbe1786e4d6c027a2095166072862e0d6ee"
           },
           {
-            "key": "text:f080617e846c01ce4337057ef777c11b079457be2239a8041b6a36faa494293b",
-            "hash": "f080617e846c01ce4337057ef777c11b079457be2239a8041b6a36faa494293b",
+            "key": "text:689b79e03aa29a98fab7751ad861326aba6fe50bc7d65d8ba642cc7812d70875",
+            "hash": "689b79e03aa29a98fab7751ad861326aba6fe50bc7d65d8ba642cc7812d70875",
             "type": "announcement",
             "signals": [
               "pricing",
               "promotion",
               "availability"
             ],
-            "models": [],
+            "models": [
+              "Qwen 4 Max starts at "
+            ],
             "url": "https://commandcode.ai/docs/plans/goat"
           },
           {
@@ -17448,6 +17781,33 @@
             ],
             "url": "https://commandcode.ai/docs/plans/goat",
             "hash": "5c824b6eb0da918031dda9204c917ae17cfbb90e9d0c5ebf416df7af633bfad4"
+          },
+          {
+            "key": "row:v2:ba75eaf2cac81cb2:3:Qwen 4 Max:0",
+            "type": "table-row",
+            "label": "Qwen 4 Max",
+            "heading": "Usage limits",
+            "columns": [
+              "Model",
+              "Input",
+              "Output",
+              "Cache Read",
+              "Cache Write",
+              "Monthly credits"
+            ],
+            "cells": [
+              "Qwen 4 Max",
+              "$1.50",
+              "$4.50",
+              "$0.075",
+              "$1.875",
+              "$15"
+            ],
+            "signals": [
+              "pricing"
+            ],
+            "url": "https://commandcode.ai/docs/plans/goat",
+            "hash": "0a232618ac9fdc798a51476f294f7548af5e5e3698d3f1dabd9eb1e41569372c"
           },
           {
             "key": "row:v2:ba75eaf2cac81cb2:3:Qwen 3.8 Omni Flash:0",
@@ -18728,7 +19088,7 @@
             "url": "https://commandcode.ai/docs/resources/zdr#what-zdr-costs"
           }
         ],
-        "hash": "8daf3c960aa9be1ede097186c3500612e183fed22dc23ca7b67eea96309e90e4"
+        "hash": "905b11509b93608278ba131c7458da5c563229ecba1987407ac075af844f46fd"
       }
     },
     "command-code-pro": {
@@ -18736,14 +19096,14 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/pro",
       "kind": "tables",
-      "attemptedAt": "2026-11-15T06:50:08.712Z",
-      "lastSuccessAt": "2026-11-15T06:50:08.712Z",
+      "attemptedAt": "2026-11-16T06:49:25.500Z",
+      "lastSuccessAt": "2026-11-16T06:49:25.500Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-15T06:50:08.712Z",
-        "bodySha256": "aadaa3874709f2c87e3a9dc58d24b4e9e6d7a58f2fcf4dd41772cc13cdc18f6b",
+        "checkedAt": "2026-11-16T06:49:25.500Z",
+        "bodySha256": "e7cbf8d494af99591b7bfb94a110c3ec4a6929f13c1324d62049ca9c18877559",
         "records": [
           {
             "key": "text:b605350bc00209520b7cd8f546322663356ba630708f71bbf30aead6b3dd608e",
@@ -18998,14 +19358,43 @@
             "url": "https://commandcode.ai/models"
           },
           {
-            "key": "text:e972ce772d86429cd2cb3d2308932470c13c8c47f7925012740710b5d00a51ee",
-            "hash": "e972ce772d86429cd2cb3d2308932470c13c8c47f7925012740710b5d00a51ee",
+            "key": "text:d8f2b56696111f4446576ef02a4bf065b144a0435b7611ae022cb74355371b86",
+            "hash": "d8f2b56696111f4446576ef02a4bf065b144a0435b7611ae022cb74355371b86",
             "type": "announcement",
             "signals": [
               "promotion"
             ],
             "models": [],
             "url": "https://commandcode.ai/docs/plans/pro"
+          },
+          {
+            "key": "row:v2:20d53e007c5a4d72:0:Qwen 4 Max:0",
+            "type": "table-row",
+            "label": "Qwen 4 Max",
+            "heading": "Models included",
+            "columns": [
+              "Model ↕",
+              "Context ↕",
+              "Input ↕",
+              "Output ↕",
+              "Cache read ↕",
+              "Cache write ↕",
+              "Caps"
+            ],
+            "cells": [
+              "Qwen 4 Max",
+              "1M",
+              "$1.50",
+              "$4.50",
+              "$0.075",
+              "$1.875",
+              "+ 1"
+            ],
+            "signals": [
+              "pricing"
+            ],
+            "url": "https://commandcode.ai/docs/plans/pro",
+            "hash": "c1def69ea1a4154e67eaee7b671c9976fec5bb51711779d29c8e76870e45a8f5"
           },
           {
             "key": "row:v2:20d53e007c5a4d72:0:Gemini 4 Carbon:0",
@@ -21592,8 +21981,8 @@
             "hash": "03f581c211c9e38fb50ca42f7a28c6442b7157bad768f52a5874f3758e1d8682"
           },
           {
-            "key": "text:09c50f9302f8c938d637c19bf4fed2b2a72983190637f66a082d04872e91b604",
-            "hash": "09c50f9302f8c938d637c19bf4fed2b2a72983190637f66a082d04872e91b604",
+            "key": "text:fe3da915abc875925ae48bc91dbd4147ec5447cb92e4d1639082639b8ab4fed0",
+            "hash": "fe3da915abc875925ae48bc91dbd4147ec5447cb92e4d1639082639b8ab4fed0",
             "type": "announcement",
             "signals": [
               "pricing",
@@ -22188,6 +22577,27 @@
             "signals": [],
             "url": "https://commandcode.ai/docs/plans/pro",
             "hash": "c7e6421e2b47a3b25aeae594a919198347dd89e91ad99343d296c16be6a3eee1"
+          },
+          {
+            "key": "row:v2:00a20accdbd25290:0:Qwen 4 Max:0",
+            "type": "table-row",
+            "label": "Qwen 4 Max",
+            "heading": "Usage limits",
+            "columns": [
+              "Model",
+              "Requests / 5 hours",
+              "Requests / week",
+              "Requests / month"
+            ],
+            "cells": [
+              "Qwen 4 Max",
+              "855",
+              "2,140",
+              "4,270"
+            ],
+            "signals": [],
+            "url": "https://commandcode.ai/docs/plans/pro",
+            "hash": "5a1773738086ea26ede39344faf7eb7ae95b0e2f3d5afa077a6c9daf2d147c14"
           },
           {
             "key": "row:v2:00a20accdbd25290:0:Qwen 3.8 Omni Flash:0",
@@ -24476,14 +24886,16 @@
             "url": "https://commandcode.ai/docs/plans/pro"
           },
           {
-            "key": "text:98766a88cca8c9eb0f54adf72bf39fb14a3407330217578bf36c11e61e6f0703",
-            "hash": "98766a88cca8c9eb0f54adf72bf39fb14a3407330217578bf36c11e61e6f0703",
+            "key": "text:c74163babbe6e4e9f4342f8623e6e4c59512811ffd35bc3989dd1f4fa5404bc5",
+            "hash": "c74163babbe6e4e9f4342f8623e6e4c59512811ffd35bc3989dd1f4fa5404bc5",
             "type": "announcement",
             "signals": [
               "pricing",
               "availability"
             ],
-            "models": [],
+            "models": [
+              "Qwen 4 Max starts at "
+            ],
             "url": "https://commandcode.ai/docs/plans/pro"
           },
           {
@@ -24593,6 +25005,33 @@
             ],
             "url": "https://commandcode.ai/docs/plans/pro",
             "hash": "d79b4cfbd36ed59fa1aa1c9ccf66e35813f582314c1d8c275b1d80f383adcab4"
+          },
+          {
+            "key": "row:v2:37ebc8270b944870:0:Qwen 4 Max:0",
+            "type": "table-row",
+            "label": "Qwen 4 Max",
+            "heading": "New open models",
+            "columns": [
+              "Model",
+              "Input",
+              "Output",
+              "Cache Read",
+              "Cache Write",
+              "Monthly credits"
+            ],
+            "cells": [
+              "Qwen 4 Max",
+              "$1.50",
+              "$4.50",
+              "$0.075",
+              "$1.875",
+              "$25"
+            ],
+            "signals": [
+              "pricing"
+            ],
+            "url": "https://commandcode.ai/docs/plans/pro",
+            "hash": "6cacec4a4b79f14cdc1976cf21fdb1ed778a22c298d8b7122f6549755f4267eb"
           },
           {
             "key": "row:v2:37ebc8270b944870:0:Qwen 3.8 Omni Flash:0",
@@ -25871,7 +26310,7 @@
             "url": "https://commandcode.ai/billing?plan=pro"
           }
         ],
-        "hash": "024fccb1a01de2822ac8f6c8b794051a468cc6dbdf0602e316f8e36a63814881"
+        "hash": "fc20cca05fdec1283ca52d9a4ec379c17b7bcbf0ef164d25a9ea1f0f969afecb"
       }
     },
     "command-code-max": {
@@ -25879,14 +26318,14 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/max",
       "kind": "tables",
-      "attemptedAt": "2026-11-15T06:50:08.712Z",
-      "lastSuccessAt": "2026-11-15T06:50:08.712Z",
+      "attemptedAt": "2026-11-16T06:49:25.500Z",
+      "lastSuccessAt": "2026-11-16T06:49:25.500Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-15T06:50:08.712Z",
-        "bodySha256": "47d6cccaf26c98d793f3527c161d508cd3d74ed98b1712bfb56f59b588cd1a16",
+        "checkedAt": "2026-11-16T06:49:25.500Z",
+        "bodySha256": "c643fc455b7bef6f30751d994ccf8ead7e2a74ea86e0901f312d248894cc63e6",
         "records": [
           {
             "key": "text:b605350bc00209520b7cd8f546322663356ba630708f71bbf30aead6b3dd608e",
@@ -26269,8 +26708,8 @@
             "url": "https://commandcode.ai/docs/plans/max"
           },
           {
-            "key": "text:0684623836abe51af4f0e132f0b65d71a20cba903260f6ad08bc872cd09f5096",
-            "hash": "0684623836abe51af4f0e132f0b65d71a20cba903260f6ad08bc872cd09f5096",
+            "key": "text:b7a462fad29c165893b7350d669ebc9262865afabecaa1ac9c3f74f3381349b8",
+            "hash": "b7a462fad29c165893b7350d669ebc9262865afabecaa1ac9c3f74f3381349b8",
             "type": "announcement",
             "signals": [
               "availability"
@@ -26997,6 +27436,27 @@
             "signals": [],
             "url": "https://commandcode.ai/docs/plans/max",
             "hash": "12ac1890c4b5244262b372c218b167ff96cf07b941121d85657b6f8feedfa67a"
+          },
+          {
+            "key": "row:v2:49da236506327215:0:Qwen 4 Max:0",
+            "type": "table-row",
+            "label": "Qwen 4 Max",
+            "heading": "Usage limits",
+            "columns": [
+              "Model",
+              "Requests / 5 hours",
+              "Requests / week",
+              "Requests / month"
+            ],
+            "cells": [
+              "Qwen 4 Max",
+              "7,690",
+              "15,400",
+              "25,600"
+            ],
+            "signals": [],
+            "url": "https://commandcode.ai/docs/plans/max",
+            "hash": "4b081db9315f0cacc10d14760bf230411aa5295ac44b0e4ea30faefe9da5f69b"
           },
           {
             "key": "row:v2:49da236506327215:0:Qwen 3.8 Omni Flash:0",
@@ -29355,6 +29815,35 @@
             ],
             "url": "https://commandcode.ai/docs/plans/max",
             "hash": "83a38e772fa73bc79711ba2dbabc0a49d298bcc0ece35b8f26db372f90b1f0c6"
+          },
+          {
+            "key": "row:v2:49da236506327215:1:Qwen 4 Max:0",
+            "type": "table-row",
+            "label": "Qwen 4 Max",
+            "heading": "Usage limits",
+            "columns": [
+              "Model",
+              "Input",
+              "Output",
+              "Cache Read",
+              "Cache Write",
+              "Max 10× credits",
+              "Max 20× credits"
+            ],
+            "cells": [
+              "Qwen 4 Max",
+              "$1.50",
+              "$4.50",
+              "$0.075",
+              "$1.875",
+              "$150",
+              "$300"
+            ],
+            "signals": [
+              "pricing"
+            ],
+            "url": "https://commandcode.ai/docs/plans/max",
+            "hash": "ae8fa1c785d10f8ac276430116e4a3db134718c9fe1ac7cdc210259888ccc76b"
           },
           {
             "key": "row:v2:49da236506327215:1:Qwen 3.8 Omni Flash:0",
@@ -31731,7 +32220,7 @@
             "url": "https://commandcode.ai/billing"
           }
         ],
-        "hash": "b0c4c2b3eb8d4abc0a0ff43254a5913bb14194b7879c3d54bfd70430a9bd7c17"
+        "hash": "20a49fd8e2051f17ddc904a9cb009225702127e5d88dc1cbd92b8bd542d4f70a"
       }
     },
     "command-code-models": {
@@ -31739,14 +32228,14 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/reference/cli/models",
       "kind": "tables",
-      "attemptedAt": "2026-11-15T06:50:08.712Z",
-      "lastSuccessAt": "2026-11-15T06:50:08.712Z",
+      "attemptedAt": "2026-11-16T06:49:25.500Z",
+      "lastSuccessAt": "2026-11-16T06:49:25.500Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-15T06:50:08.712Z",
-        "bodySha256": "55212cf1af3520e63ae3a7df6292efc82b02dc658bcbbf3bb32651e502e17899",
+        "checkedAt": "2026-11-16T06:49:25.500Z",
+        "bodySha256": "5940f70792fabcb2dace695329ad28dfb616347e13e08555982b3689a940af57",
         "records": [
           {
             "key": "text:b605350bc00209520b7cd8f546322663356ba630708f71bbf30aead6b3dd608e",
@@ -32175,6 +32664,29 @@
             ],
             "url": "https://commandcode.ai/docs/reference/cli/models",
             "hash": "176e61cb3e930a53876d28ef32315fd8eb45ad136d2e4fe18be1334539a72190"
+          },
+          {
+            "key": "row:v2:29f2b9e2016cb19c:0:Qwen/Qwen4-Max Copy model id:0",
+            "type": "table-row",
+            "label": "Qwen/Qwen4-Max Copy model id",
+            "heading": "Alibaba",
+            "columns": [
+              "Model ID",
+              "Name",
+              "Capabilities",
+              "Best for"
+            ],
+            "cells": [
+              "Qwen/Qwen4-Max Copy model id",
+              "Qwen 4 Max",
+              "+ 1",
+              "flagship coding, agentic & knowledge work"
+            ],
+            "signals": [
+              "availability"
+            ],
+            "url": "https://commandcode.ai/docs/reference/cli/models",
+            "hash": "577a02f0f5aa3cce798f122200b8505c749f19e0fd11651727b44f0e081798af"
           },
           {
             "key": "row:v2:e7cc43a7cad498b1:0:claude-fable-5 Copy model id:0",
@@ -34325,7 +34837,7 @@
             "url": "https://commandcode.ai/docs/interactive-mode"
           }
         ],
-        "hash": "75499568c8c6eb0530acc6a7fecbde07ce858f95c26323de7666e8b79b385828"
+        "hash": "06d5c09181fb9cd02f28a4c0c8f9cdaf44e3bf9c79516ee5ded2e6c67813723a"
       }
     },
     "command-code-terms": {
@@ -34333,14 +34845,14 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/resources/pricing-limits",
       "kind": "tables",
-      "attemptedAt": "2026-11-15T06:50:08.712Z",
-      "lastSuccessAt": "2026-11-15T06:50:08.712Z",
+      "attemptedAt": "2026-11-16T06:49:25.500Z",
+      "lastSuccessAt": "2026-11-16T06:49:25.500Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-15T06:50:08.712Z",
-        "bodySha256": "c28f0c1bd2bc0e57d5c7ab63e373af1275e91286e7940c2a929b4829f1b285a8",
+        "checkedAt": "2026-11-16T06:49:25.500Z",
+        "bodySha256": "9b67e4e996fc733d7bf6ec50fe4b69ccbf1606ea171eaa9e3d016863f24bdaee",
         "records": [
           {
             "key": "text:b605350bc00209520b7cd8f546322663356ba630708f71bbf30aead6b3dd608e",
@@ -35276,8 +35788,8 @@
             "url": "https://commandcode.ai/docs/resources/pricing-limits"
           },
           {
-            "key": "text:b491319d506ce26874c30014e6106209eb51194095f03f84982a071c6c61b05e",
-            "hash": "b491319d506ce26874c30014e6106209eb51194095f03f84982a071c6c61b05e",
+            "key": "text:e6d73402a77885b00f6be4f71f66d01eef20a1c331fa16d8d5f52959ab61175d",
+            "hash": "e6d73402a77885b00f6be4f71f66d01eef20a1c331fa16d8d5f52959ab61175d",
             "type": "announcement",
             "signals": [],
             "models": [],
@@ -35484,8 +35996,8 @@
             "url": "https://commandcode.ai/docs/resources/pricing-limits"
           },
           {
-            "key": "text:80e893e0d5815451dffe32c3603fc05de28551907f26f488de3c234b2f1c0711",
-            "hash": "80e893e0d5815451dffe32c3603fc05de28551907f26f488de3c234b2f1c0711",
+            "key": "text:2d05661e81c06c15bc3f5cfc371e796350c7cee2985ca0f725bed3e359a5e6fd",
+            "hash": "2d05661e81c06c15bc3f5cfc371e796350c7cee2985ca0f725bed3e359a5e6fd",
             "type": "announcement",
             "signals": [
               "promotion"
@@ -36328,6 +36840,46 @@
           {
             "key": "text:e380deb92750dcea7efc735559846c179f1aa9ab84ab6fb29d11f42c252a7c54",
             "hash": "e380deb92750dcea7efc735559846c179f1aa9ab84ab6fb29d11f42c252a7c54",
+            "type": "announcement",
+            "signals": [
+              "pricing"
+            ],
+            "models": [],
+            "url": "https://commandcode.ai/docs/resources/pricing-limits"
+          },
+          {
+            "key": "text:d130059fa158cf3de6eb0f8bc9ad4e6ed9ddf8b2537bd77f3a968501c534aaf1",
+            "hash": "d130059fa158cf3de6eb0f8bc9ad4e6ed9ddf8b2537bd77f3a968501c534aaf1",
+            "type": "announcement",
+            "signals": [],
+            "models": [
+              "Qwen 4 Max"
+            ],
+            "url": "https://commandcode.ai/docs/resources/pricing-limits"
+          },
+          {
+            "key": "text:9ef0d313d702b84ae4a3072be1ec9b9594aef4737e5407ab39a6a942d58a54c9",
+            "hash": "9ef0d313d702b84ae4a3072be1ec9b9594aef4737e5407ab39a6a942d58a54c9",
+            "type": "announcement",
+            "signals": [
+              "pricing"
+            ],
+            "models": [],
+            "url": "https://commandcode.ai/docs/resources/pricing-limits"
+          },
+          {
+            "key": "text:3cff32a463bc624600049c94f75ab42babeeda358a14498d8388b18f1fef2e6a",
+            "hash": "3cff32a463bc624600049c94f75ab42babeeda358a14498d8388b18f1fef2e6a",
+            "type": "announcement",
+            "signals": [
+              "pricing"
+            ],
+            "models": [],
+            "url": "https://commandcode.ai/docs/resources/pricing-limits"
+          },
+          {
+            "key": "text:ed94cf0c4118360cbd3c0fff67b696f1367dffe1cae9fd5e545da31c3d0cca69",
+            "hash": "ed94cf0c4118360cbd3c0fff67b696f1367dffe1cae9fd5e545da31c3d0cca69",
             "type": "announcement",
             "signals": [
               "pricing"
@@ -37228,16 +37780,6 @@
             "url": "https://commandcode.ai/docs/resources/pricing-limits"
           },
           {
-            "key": "text:3cff32a463bc624600049c94f75ab42babeeda358a14498d8388b18f1fef2e6a",
-            "hash": "3cff32a463bc624600049c94f75ab42babeeda358a14498d8388b18f1fef2e6a",
-            "type": "announcement",
-            "signals": [
-              "pricing"
-            ],
-            "models": [],
-            "url": "https://commandcode.ai/docs/resources/pricing-limits"
-          },
-          {
             "key": "text:a89ee82d1dfe8d5f4dfd0d841ba40a44fa3501a3274e502bc1f222a9d79bdb30",
             "hash": "a89ee82d1dfe8d5f4dfd0d841ba40a44fa3501a3274e502bc1f222a9d79bdb30",
             "type": "announcement",
@@ -37275,16 +37817,6 @@
             "models": [
               "Gemini 3.8 Flash"
             ],
-            "url": "https://commandcode.ai/docs/resources/pricing-limits"
-          },
-          {
-            "key": "text:9ef0d313d702b84ae4a3072be1ec9b9594aef4737e5407ab39a6a942d58a54c9",
-            "hash": "9ef0d313d702b84ae4a3072be1ec9b9594aef4737e5407ab39a6a942d58a54c9",
-            "type": "announcement",
-            "signals": [
-              "pricing"
-            ],
-            "models": [],
             "url": "https://commandcode.ai/docs/resources/pricing-limits"
           },
           {
@@ -37610,8 +38142,8 @@
             "url": "https://commandcode.ai/docs/resources/pricing-limits"
           },
           {
-            "key": "text:d4c27b3fc525f5088723be273360bb6bc7699c08b5a172363ea88ef2ebacd4e0",
-            "hash": "d4c27b3fc525f5088723be273360bb6bc7699c08b5a172363ea88ef2ebacd4e0",
+            "key": "text:51f8b38556f86b293002e6398e68843f959d89fa2b69800034aea49e9d0e2636",
+            "hash": "51f8b38556f86b293002e6398e68843f959d89fa2b69800034aea49e9d0e2636",
             "type": "announcement",
             "signals": [
               "pricing",
@@ -39396,7 +39928,7 @@
             "url": "https://commandcode.ai/docs/resources/pricing-limits"
           }
         ],
-        "hash": "cd44e53a4dfca7be19216e8f45620221dddccf28adaa0427520417ee6e4e1be3"
+        "hash": "97454c0c9485dfdaad66306b359349fd09f6c52a014ffe4561cb1ed5c0e8f3cd"
       }
     },
     "command-code-releases": {
@@ -39404,14 +39936,14 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/changelog",
       "kind": "document",
-      "attemptedAt": "2026-11-15T06:50:08.712Z",
-      "lastSuccessAt": "2026-11-15T06:50:08.712Z",
+      "attemptedAt": "2026-11-16T06:49:25.500Z",
+      "lastSuccessAt": "2026-11-16T06:49:25.500Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-15T06:50:08.712Z",
-        "bodySha256": "32959a8b0ef4398eb5e128d979cfafad1d92153404a34df6b77704475f51d4e9",
+        "checkedAt": "2026-11-16T06:49:25.500Z",
+        "bodySha256": "c48262be3da82bb87ffe53c13b4037e928acc02e94f50564c4463d76e91d2877",
         "records": [
           {
             "key": "text:bd8dd4dffb1815aee0594f932f11f97d5d8c758be925e2b3ca3d2274d31060a6",
@@ -43538,14 +44070,14 @@
       "channel": "Ollama",
       "url": "https://ollama.com/pricing",
       "kind": "tables",
-      "attemptedAt": "2026-11-15T06:50:08.712Z",
-      "lastSuccessAt": "2026-11-15T06:50:08.712Z",
+      "attemptedAt": "2026-11-16T06:49:25.500Z",
+      "lastSuccessAt": "2026-11-16T06:49:25.500Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-15T06:50:08.712Z",
-        "bodySha256": "d2e97afd8e83aee28ed44092b0e1cf7df5584ec1cd6311269f058226a6719de2",
+        "checkedAt": "2026-11-16T06:49:25.500Z",
+        "bodySha256": "f208ec3441627bc3bdbac321e2b48586df46b0d1a58c97e4edf038847dd32a9b",
         "records": [
           {
             "key": "text:dfe95783edfef7918760312f94edd764f4ce3ffd38b90c2c955a0cc3b250f040",
@@ -44597,14 +45129,14 @@
       "channel": "Ollama",
       "url": "https://ollama.com/blog",
       "kind": "document",
-      "attemptedAt": "2026-11-15T06:50:08.712Z",
-      "lastSuccessAt": "2026-11-15T06:50:08.712Z",
+      "attemptedAt": "2026-11-16T06:49:25.500Z",
+      "lastSuccessAt": "2026-11-16T06:49:25.500Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-15T06:50:08.712Z",
-        "bodySha256": "b3d10fbda64e5b28a3bc4fbb63ccbc3c3ba45babd0a3ab22ac9cac48a36b9c33",
+        "checkedAt": "2026-11-16T06:49:25.500Z",
+        "bodySha256": "b32ce8c634c0da266c107131d504eae2a8891933b0652f89217eb512cd1a01bd",
         "records": [
           {
             "key": "text:5d68e38175ac0eeec7cbf5c22ca2520d5d61efa1755ebba6cdb47e6124c3dd37",
@@ -45186,14 +45718,14 @@
       "channel": "Factory",
       "url": "https://docs.factory.com/models.md",
       "kind": "tables",
-      "attemptedAt": "2026-11-15T06:50:08.712Z",
-      "lastSuccessAt": "2026-11-15T06:50:08.712Z",
+      "attemptedAt": "2026-11-16T06:49:25.500Z",
+      "lastSuccessAt": "2026-11-16T06:49:25.500Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-15T06:50:08.712Z",
-        "bodySha256": "5b78673acafe4ec813738d8653a46a1e67103bc877717f0589f381efaaf0cbaf",
+        "checkedAt": "2026-11-16T06:49:25.500Z",
+        "bodySha256": "4c65418ca59045a34578ce85977c3a91be8e2225f9cbfd370b0bce311057f600",
         "records": [
           {
             "key": "text:0b28deb982605f12b721a450cd577fb09cb57b68ebe576202b079d4053c492d0",
@@ -46134,69 +46666,6 @@
             "url": "https://docs.factory.com/models.md"
           },
           {
-            "key": "row:v2:823f3bfa47a96e44:0:Gemini 4 Hydrogen:0",
-            "type": "table-row",
-            "label": "Gemini 4 Hydrogen",
-            "heading": "<span className=\"provider-heading\"><img src=\"/docs-assets/images/model-icons/google.ico\" alt=\"Google logo\" className=\"provider-icon\" />Google</span>",
-            "columns": [
-              "Model",
-              "Model ID",
-              "Multiplier",
-              "Reasoning"
-            ],
-            "cells": [
-              "Gemini 4 Hydrogen",
-              "`gemini-4-hydrogen`",
-              "0.6×",
-              "`low`, `medium`, `high` (default)"
-            ],
-            "signals": [],
-            "url": "https://docs.factory.com/models.md",
-            "hash": "194df19e1eafa029dcdcae4a0104c380f30acbf24ac84ac2735628514fc539fd"
-          },
-          {
-            "key": "row:v2:823f3bfa47a96e44:0:Gemini 4 Carbon<sup>†</sup>:0",
-            "type": "table-row",
-            "label": "Gemini 4 Carbon<sup>†</sup>",
-            "heading": "<span className=\"provider-heading\"><img src=\"/docs-assets/images/model-icons/google.ico\" alt=\"Google logo\" className=\"provider-icon\" />Google</span>",
-            "columns": [
-              "Model",
-              "Model ID",
-              "Multiplier",
-              "Reasoning"
-            ],
-            "cells": [
-              "Gemini 4 Carbon<sup>†</sup>",
-              "`gemini-4-carbon`",
-              "0.8×",
-              "`low`, `medium` (default), `high`"
-            ],
-            "signals": [],
-            "url": "https://docs.factory.com/models.md",
-            "hash": "550d8e12b4f7b57abde49950d78a2a409f8c304dbed425033c10628cc3810409"
-          },
-          {
-            "key": "row:v2:823f3bfa47a96e44:0:Gemini 4 Argon<sup>†</sup>:0",
-            "type": "table-row",
-            "label": "Gemini 4 Argon<sup>†</sup>",
-            "heading": "<span className=\"provider-heading\"><img src=\"/docs-assets/images/model-icons/google.ico\" alt=\"Google logo\" className=\"provider-icon\" />Google</span>",
-            "columns": [
-              "Model",
-              "Model ID",
-              "Multiplier",
-              "Reasoning"
-            ],
-            "cells": [
-              "Gemini 4 Argon<sup>†</sup>",
-              "`gemini-4-argon`",
-              "0.8×",
-              "`low`, `medium` (default), `high`"
-            ],
-            "signals": [],
-            "url": "https://docs.factory.com/models.md",
-            "hash": "90d8b918c3d70286ffa882c2ec49bd1980210b02f6837323088a7b4707bf9b02"
-          },
-          {
             "key": "row:v2:823f3bfa47a96e44:0:Gemini 3.1 Pro:0",
             "type": "table-row",
             "label": "Gemini 3.1 Pro",
@@ -46321,32 +46790,6 @@
             "signals": [],
             "url": "https://docs.factory.com/models.md",
             "hash": "5a030b37a7e59d53302df07def53a5c937acf68ec1c3c7d9a9ac22b3acddcd88"
-          },
-          {
-            "key": "text:9cea05929a61ade0f821b6d95be2b0e66938a735d6b63ad6e5416c72945804a6",
-            "hash": "9cea05929a61ade0f821b6d95be2b0e66938a735d6b63ad6e5416c72945804a6",
-            "type": "announcement",
-            "signals": [
-              "pricing",
-              "promotion"
-            ],
-            "models": [
-              "Gemini 4 Carbon bills at 0.8"
-            ],
-            "url": "https://docs.factory.com/models.md"
-          },
-          {
-            "key": "text:7830851c65f42190deafcb478ad806b084961b0b42d1197a94f675fa90fb6ccd",
-            "hash": "7830851c65f42190deafcb478ad806b084961b0b42d1197a94f675fa90fb6ccd",
-            "type": "announcement",
-            "signals": [
-              "pricing",
-              "promotion"
-            ],
-            "models": [
-              "Gemini 4 Argon bills at 0.8"
-            ],
-            "url": "https://docs.factory.com/models.md"
           },
           {
             "key": "text:a75b72a2fceca6bda2c3f459a51cc2949fa4fc30c4b6e55c4cedcaa305497266",
@@ -47029,7 +47472,7 @@
             "url": "https://docs.factory.com/models.md"
           }
         ],
-        "hash": "4293bb6acf0fdbbf932cb989e2ddc8dd25ac3c094617b26f7b473b1c18cb307a"
+        "hash": "5cc53768b77b14a1223f51322575bfcdce7b09797075c851ebb0853c1878cc17"
       }
     },
     "factory-plans": {
@@ -47037,13 +47480,13 @@
       "channel": "Factory",
       "url": "https://docs.factory.com/pricing/individuals.md",
       "kind": "document",
-      "attemptedAt": "2026-11-15T06:50:08.712Z",
-      "lastSuccessAt": "2026-11-15T06:50:08.712Z",
+      "attemptedAt": "2026-11-16T06:49:25.500Z",
+      "lastSuccessAt": "2026-11-16T06:49:25.500Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-15T06:50:08.712Z",
+        "checkedAt": "2026-11-16T06:49:25.500Z",
         "bodySha256": "7c75704906d429c519fd245576b23b632bf0a2369b5ac3eb16fbdbe3daa5c4c3",
         "records": [
           {
@@ -47292,13 +47735,13 @@
       "channel": "Factory",
       "url": "https://docs.factory.com/changelog/release-notes.md",
       "kind": "document",
-      "attemptedAt": "2026-11-15T06:50:08.712Z",
-      "lastSuccessAt": "2026-11-15T06:50:08.712Z",
+      "attemptedAt": "2026-11-16T06:49:25.500Z",
+      "lastSuccessAt": "2026-11-16T06:49:25.500Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-15T06:50:08.712Z",
+        "checkedAt": "2026-11-16T06:49:25.500Z",
         "bodySha256": "5dda6c99d52b93b13eab5893c9e4f655ec553cc864258e8210d984d0dc25c503",
         "records": [
           {
@@ -52729,14 +53172,14 @@
       "channel": "Cursor",
       "url": "https://cursor.com/docs/models-and-pricing",
       "kind": "tables",
-      "attemptedAt": "2026-11-15T06:50:08.712Z",
-      "lastSuccessAt": "2026-11-15T06:50:08.712Z",
+      "attemptedAt": "2026-11-16T06:49:25.500Z",
+      "lastSuccessAt": "2026-11-16T06:49:25.500Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-15T06:50:08.712Z",
-        "bodySha256": "9f7f2ee379b844f42aa61a9c4cbf53332c0da123680a6d4ce3489a403c56bf30",
+        "checkedAt": "2026-11-16T06:49:25.500Z",
+        "bodySha256": "fcd02bb9f2bf0f2aebc380719674807fa5895e93468214d595219ce15d932102",
         "records": [
           {
             "key": "text:6c7ad5d1af746cc7ef5c32cb09479f830dfe5d5418e524a762cbb1699cb4e70c",
@@ -55042,14 +55485,14 @@
       "channel": "Cursor",
       "url": "https://cursor.com/changelog",
       "kind": "document",
-      "attemptedAt": "2026-11-15T06:50:08.712Z",
-      "lastSuccessAt": "2026-11-15T06:50:08.712Z",
+      "attemptedAt": "2026-11-16T06:49:25.500Z",
+      "lastSuccessAt": "2026-11-16T06:49:25.500Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-15T06:50:08.712Z",
-        "bodySha256": "f65ae7480a5463fc05cf07af1c94d44208d47e4b85278e0707b35cf76832ad3c",
+        "checkedAt": "2026-11-16T06:49:25.500Z",
+        "bodySha256": "0716e09e3e9f23e1f130aff10b60a5743b814a26d593c11f9e2655e5e46865f6",
         "records": [
           {
             "key": "text:ddcce6feab143eda3ac8d33669e14870f201c2f2b5f9b27a875942a90b8bca89",
@@ -55166,14 +55609,14 @@
       "channel": "Devin",
       "url": "https://docs.devin.ai/release-notes/overview",
       "kind": "document",
-      "attemptedAt": "2026-11-15T06:50:08.712Z",
-      "lastSuccessAt": "2026-11-15T06:50:08.712Z",
+      "attemptedAt": "2026-11-16T06:49:25.500Z",
+      "lastSuccessAt": "2026-11-16T06:49:25.500Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-15T06:50:08.712Z",
-        "bodySha256": "fe45a9c92c8ccb62ce05e1ca55bf606eab820ca81170df9347eb35884a2aa2d1",
+        "checkedAt": "2026-11-16T06:49:25.500Z",
+        "bodySha256": "3c15c023db55ab84370d7187c8172e76bb7fb3aad91eceffcbf4bb13df10645b",
         "records": [
           {
             "key": "text:8f188bc90439c5b341aca73eb4d84c3dd04eb3bbd57acda295334fbde1178a0f",
@@ -55967,14 +56410,14 @@
       "channel": "Alibaba",
       "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan",
       "kind": "tables",
-      "attemptedAt": "2026-11-15T06:50:08.712Z",
-      "lastSuccessAt": "2026-11-15T06:50:08.712Z",
+      "attemptedAt": "2026-11-16T06:49:25.500Z",
+      "lastSuccessAt": "2026-11-16T06:49:25.500Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-15T06:50:08.712Z",
-        "bodySha256": "085768d409301bb73cf08e563921ca4b17a20fe73a89117abf57d5ab4ad35e44",
+        "checkedAt": "2026-11-16T06:49:25.500Z",
+        "bodySha256": "060f8e711aba708be9a909d0a29a93f9a5d35fad7930685eecf1c025f9bc0244",
         "records": [
           {
             "key": "text:0686d515f782875e3d4496656bed3259cca990eb3f6893deb942abc5bd278f24",
@@ -56474,14 +56917,14 @@
       "channel": "Alibaba",
       "url": "https://help.aliyun.com/zh/model-studio/coding-plan",
       "kind": "tables",
-      "attemptedAt": "2026-11-15T06:50:08.712Z",
-      "lastSuccessAt": "2026-11-15T06:50:08.712Z",
+      "attemptedAt": "2026-11-16T06:49:25.500Z",
+      "lastSuccessAt": "2026-11-16T06:49:25.500Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-15T06:50:08.712Z",
-        "bodySha256": "f69ef32cc8bc835d1bda5510961b8b84247259722a60af9ceac9d08d36613eb0",
+        "checkedAt": "2026-11-16T06:49:25.500Z",
+        "bodySha256": "84e88ab8ed097cef6b92b1bc8cdfcb147bf7d066aa4c7f48895a505326b7610c",
         "records": [
           {
             "key": "text:775eabf14c55f66ea3e7ef7b3737a001f72434663b87e260b4d68fe798af9495",
@@ -56935,14 +57378,14 @@
       "channel": "Alibaba",
       "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
       "kind": "tables",
-      "attemptedAt": "2026-11-15T06:50:08.712Z",
-      "lastSuccessAt": "2026-11-15T06:50:08.712Z",
+      "attemptedAt": "2026-11-16T06:49:25.500Z",
+      "lastSuccessAt": "2026-11-16T06:49:25.500Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-15T06:50:08.712Z",
-        "bodySha256": "bd8f81e9367b84819b0a415865284b46b8bcc0149dccda09983b1a69cecef803",
+        "checkedAt": "2026-11-16T06:49:25.500Z",
+        "bodySha256": "5dadd677f6805e89b25b9c15994b47199cbbb8095e1ebc67120e8bcff4854161",
         "records": [
           {
             "key": "text:c6331a8c511a8bcbc3875d6eab0b268db2d55d5b5e18db81347f58611f6c7435",
@@ -57128,11 +57571,13 @@
             "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
           },
           {
-            "key": "text:5fcc88c78b2b5873972b9fc40f656289e87a4c66736f7d3c1bdfb066da5935c4",
-            "hash": "5fcc88c78b2b5873972b9fc40f656289e87a4c66736f7d3c1bdfb066da5935c4",
+            "key": "text:361a75a8b52a992ada5e1df66d48bb1e3534347076db739e052bf519d23e6634",
+            "hash": "361a75a8b52a992ada5e1df66d48bb1e3534347076db739e052bf519d23e6634",
             "type": "announcement",
             "signals": [
-              "pricing"
+              "version",
+              "pricing",
+              "availability"
             ],
             "models": [
               "qwen4-max-preview "
@@ -57197,6 +57642,25 @@
             ],
             "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview#千问",
             "hash": "abcaa7ce5535f0e5ce05feff800af4000da69ea18ddd77c4b260718285599850"
+          },
+          {
+            "key": "row:v2:ddd934d1187ba7ff:0:qwen4-max:0",
+            "type": "table-row",
+            "label": "qwen4-max",
+            "heading": "千问",
+            "columns": [
+              "模型 ID（Model ID）",
+              "模型能力"
+            ],
+            "cells": [
+              "qwen4-max",
+              "推理模型、视觉理解、文本生成"
+            ],
+            "signals": [
+              "availability"
+            ],
+            "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview#千问",
+            "hash": "e825ba9d1692b6de5556c15d36ad65a40cdc4d4ddfccf3a7729f5a2f384c5303"
           },
           {
             "key": "row:v2:ddd934d1187ba7ff:0:qwen4-max-preview:0",
@@ -57815,7 +58279,7 @@
             "url": "https://help.aliyun.com/zh/model-studio/token-plan-usage-quota#tpuq-h-reset"
           }
         ],
-        "hash": "f965491aaa22228fe23b12a893f3dc86a78041339c020aff4f9499b4443fe5d1"
+        "hash": "aa7b02072918c5b303644ac05eaf1a0b70c7993c30b3c015da3a26eaac0c3c59"
       }
     },
     "opencode-social": {
@@ -57823,13 +58287,26 @@
       "channel": "OpenCode",
       "url": "https://x.com/opencode",
       "kind": "social",
-      "attemptedAt": "2026-11-15T06:50:08.712Z",
-      "lastSuccessAt": "2026-11-15T06:50:08.712Z",
+      "attemptedAt": "2026-11-16T06:49:25.500Z",
+      "lastSuccessAt": "2026-11-16T06:49:25.500Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "official-oembed; discovery may use mirror",
       "snapshot": {
         "records": [
+          {
+            "key": "post:2122159680462163993",
+            "type": "announcement",
+            "hash": "91b9dfe019a82f50c8c45e45d35ea9bc7cbace3e97552b29a24dd09fe771c78b",
+            "signals": [
+              "availability"
+            ],
+            "models": [
+              "Qwen4 Max is now available in OpenCode Go "
+            ],
+            "url": "https://x.com/opencode/status/2122159680462163993",
+            "relevant": true
+          },
           {
             "key": "post:2120256195017781692",
             "type": "announcement",
@@ -57941,19 +58418,6 @@
             "relevant": true
           },
           {
-            "key": "post:2116209960673800474",
-            "type": "announcement",
-            "hash": "c85ed88ec5dc2ccd988dd00f0d012f666ceeb44e0c4c43581996850a5175937c",
-            "signals": [
-              "pricing"
-            ],
-            "models": [
-              "DeepSeek V4.1 Flash "
-            ],
-            "url": "https://x.com/opencode/status/2116209960673800474",
-            "relevant": true
-          },
-          {
             "key": "post:2116203934033354866",
             "type": "announcement",
             "hash": "47c1e5fce1a6b44d6c2e48563670738b8bdcf51b7aa56300bb0bea84dedfd603",
@@ -57979,8 +58443,8 @@
             "relevant": true
           }
         ],
-        "hash": "a8b91dd62a4ab630108a4822391285501308c28b9a700a3a32496679a0901f65",
-        "checkedAt": "2026-11-15T06:50:08.712Z",
+        "hash": "cb746085d41519cb33783a12a46003e7cf92dc77f67faba6d5d514cadb91641b",
+        "checkedAt": "2026-11-16T06:49:25.500Z",
         "discoveredVia": "https://teapawt.net/opencode"
       }
     },
@@ -57989,13 +58453,49 @@
       "channel": "Command Code",
       "url": "https://x.com/CommandCodeAI",
       "kind": "social",
-      "attemptedAt": "2026-11-15T06:50:08.712Z",
-      "lastSuccessAt": "2026-11-15T06:50:08.712Z",
+      "attemptedAt": "2026-11-16T06:49:25.500Z",
+      "lastSuccessAt": "2026-11-16T06:49:25.500Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "official-oembed; discovery may use mirror",
       "snapshot": {
         "records": [
+          {
+            "key": "post:2122192666939281471",
+            "type": "announcement",
+            "hash": "eadf0267a4ef791cff93301053be00c88d0615049f5d102a706ddb2815398179",
+            "signals": [],
+            "models": [],
+            "url": "https://x.com/CommandCodeAI/status/2122192666939281471",
+            "relevant": false
+          },
+          {
+            "key": "post:2122192665362211239",
+            "type": "announcement",
+            "hash": "ba6f9597350c0d81e7b0e5ad35938082663a2d6ef059a3511cac71dddb34d9b9",
+            "signals": [],
+            "models": [],
+            "url": "https://x.com/CommandCodeAI/status/2122192665362211239",
+            "relevant": false
+          },
+          {
+            "key": "post:2122192652858773675",
+            "type": "announcement",
+            "hash": "14043224045c61f9c746c89d636cf2a2b348e95b1a7120b0a738a8cf3f5143e0",
+            "signals": [
+              "pricing",
+              "promotion",
+              "availability"
+            ],
+            "models": [
+              "GLM-5.3 usage increased to ",
+              "Muse Ember ",
+              "Gemini 4 Carbon ",
+              "Claude Fable 5.2 "
+            ],
+            "url": "https://x.com/CommandCodeAI/status/2122192652858773675",
+            "relevant": true
+          },
           {
             "key": "post:2121804992831250447",
             "type": "announcement",
@@ -58062,41 +58562,12 @@
             "relevant": true
           },
           {
-            "key": "post:2120607963446751518",
-            "type": "announcement",
-            "hash": "7cff5ae32b3a0ed89b34cf310184f3a609c117b9b806542201b676be954708b9",
-            "signals": [],
-            "models": [],
-            "url": "https://x.com/CommandCodeAI/status/2120607963446751518",
-            "relevant": false
-          },
-          {
             "key": "post:2120607961706111070",
             "type": "announcement",
             "hash": "3cf38c9604f0e8b8fb9932c035abccba898848971ccc01cc0fcd79bb95e1c714",
             "signals": [],
             "models": [],
             "url": "https://x.com/CommandCodeAI/status/2120607961706111070",
-            "relevant": false
-          },
-          {
-            "key": "post:2120280401809969571",
-            "type": "announcement",
-            "hash": "ac25e8865637cc5a88a70368f7b8f909475484b81f12a44cb8ab0e44645aeb92",
-            "signals": [],
-            "models": [
-              "Gemini 4 Carbon and Claude Fable 5.2 are now both live in Command Code."
-            ],
-            "url": "https://x.com/CommandCodeAI/status/2120280401809969571",
-            "relevant": true
-          },
-          {
-            "key": "post:2120236117505241325",
-            "type": "announcement",
-            "hash": "45cc02b7d86bb3289c60cf6ca7541fea65053394786bec9c91b38a0d9d91cb62",
-            "signals": [],
-            "models": [],
-            "url": "https://x.com/CommandCodeAI/status/2120236117505241325",
             "relevant": false
           },
           {
@@ -58133,8 +58604,8 @@
             "relevant": false
           }
         ],
-        "hash": "892afb03df4e627a78d7754fd6da71c1f4b1d80d733dfa5886c281158cc6a5f0",
-        "checkedAt": "2026-11-15T06:50:08.712Z",
+        "hash": "9a36b28f138be0b589a6dd59ae2cecff7817f39893a31a2f4009cdd54f33398c",
+        "checkedAt": "2026-11-16T06:49:25.500Z",
         "discoveredVia": "https://teapawt.net/CommandCodeAI"
       }
     }
@@ -93268,7 +93739,1224 @@
         "relevant": true
       },
       "status": "pending"
+    },
+    {
+      "id": "c3b905c9390bf8eed96fe99486f9a899336520c7166727e80951722cb298681b",
+      "sourceId": "opencode-go",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-16T06:49:25.500Z",
+      "url": "https://opencode.ai/v2/docs/console/go/",
+      "before": null,
+      "after": {
+        "key": "text:d8001f6b5d107c7b493ef28206c197aebdf4ba8cc058f2a9d35e9543a15d3a04",
+        "hash": "d8001f6b5d107c7b493ef28206c197aebdf4ba8cc058f2a9d35e9543a15d3a04",
+        "type": "announcement",
+        "signals": [],
+        "models": [
+          "Qwen4 Max"
+        ],
+        "url": "https://opencode.ai/v2/docs/console/go/"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "a14723787c7d28c6e6a130065adc98951218dbd00ed8bc923339d513c36a12d4",
+      "sourceId": "opencode-go",
+      "channel": "OpenCode",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-16T06:49:25.500Z",
+      "url": "https://opencode.ai/v2/docs/console/go/",
+      "before": null,
+      "after": {
+        "key": "row:v2:493dad6d570d86e5:0:Qwen4 Max:0",
+        "type": "table-row",
+        "label": "Qwen4 Max",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Input",
+          "Output",
+          "Cached Read",
+          "Cached Write",
+          "Monthly limit"
+        ],
+        "cells": [
+          "Qwen4 Max",
+          "$1.50",
+          "$4.50",
+          "$0.075",
+          "$1.875",
+          "$15"
+        ],
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://opencode.ai/v2/docs/console/go/",
+        "hash": "69affec51f86d92907f03784c668f7f1915d3c1621f6067652180ae21df15001"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "f2190df2c2a915410c820a2446ca69234dc6ac54b282e6fe5afebd96cc0d67e1",
+      "sourceId": "opencode-go",
+      "channel": "OpenCode",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-16T06:49:25.500Z",
+      "url": "https://opencode.ai/v2/docs/console/go/",
+      "before": null,
+      "after": {
+        "key": "row:v2:493dad6d570d86e5:1:Qwen4 Max:0",
+        "type": "table-row",
+        "label": "Qwen4 Max",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Input",
+          "Output",
+          "Cached Read",
+          "Cached Write",
+          "Monthly limit"
+        ],
+        "cells": [
+          "Qwen4 Max",
+          "$1.50",
+          "$4.50",
+          "$0.075",
+          "$1.875",
+          "$60"
+        ],
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://opencode.ai/v2/docs/console/go/",
+        "hash": "2b0c9241c530d08f78f87fd98cf43732f397bcea55c292bad0f360c917482d53"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "a693428761a0cfc8b2d21791700060c704632663d933e9009869814f66137017",
+      "sourceId": "opencode-go",
+      "channel": "OpenCode",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-16T06:49:25.500Z",
+      "url": "https://opencode.ai/v2/docs/console/go/",
+      "before": null,
+      "after": {
+        "key": "row:v2:493dad6d570d86e5:2:Qwen4 Max:0",
+        "type": "table-row",
+        "label": "Qwen4 Max",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Input",
+          "Output",
+          "Cached Read",
+          "Cached Write",
+          "Monthly limit"
+        ],
+        "cells": [
+          "Qwen4 Max",
+          "$1.50",
+          "$4.50",
+          "$0.075",
+          "$1.875",
+          "$20"
+        ],
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://opencode.ai/v2/docs/console/go/",
+        "hash": "84abdc4ee9fc9b1afb0858d8db25e5756d0b050601da967b267db13450bcc79f"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "10ce81c118928559bc59ca52cf3b801797df9d96113b7a37635ef1f714f198b0",
+      "sourceId": "opencode-go",
+      "channel": "OpenCode",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-16T06:49:25.500Z",
+      "url": "https://opencode.ai/v2/docs/console/go/",
+      "before": null,
+      "after": {
+        "key": "row:v2:dd56a09c91a78cb9:0:Qwen4 Max:0",
+        "type": "table-row",
+        "label": "Qwen4 Max",
+        "heading": "Estimated requests",
+        "columns": [
+          "Model",
+          "Requests per 5 hours",
+          "Requests per week",
+          "Requests per month"
+        ],
+        "cells": [
+          "Qwen4 Max",
+          "460",
+          "1,160",
+          "2,310"
+        ],
+        "signals": [],
+        "url": "https://opencode.ai/v2/docs/console/go/",
+        "hash": "55dccf5e69fd050d416509de6d7e7b984f68f8e08fbe582bb58751465e09cca5"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "3d5bcd0def5aa3f2131901a4ccc733f74224516849e654bd1abd41f2b5ddebf6",
+      "sourceId": "opencode-go",
+      "channel": "OpenCode",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-16T06:49:25.500Z",
+      "url": "https://opencode.ai/v2/docs/console/go/",
+      "before": null,
+      "after": {
+        "key": "row:v2:dd56a09c91a78cb9:1:Qwen4 Max:0",
+        "type": "table-row",
+        "label": "Qwen4 Max",
+        "heading": "Estimated requests",
+        "columns": [
+          "Model",
+          "Requests per 5 hours",
+          "Requests per week",
+          "Requests per month"
+        ],
+        "cells": [
+          "Qwen4 Max",
+          "1,840",
+          "4,640",
+          "9,240"
+        ],
+        "signals": [],
+        "url": "https://opencode.ai/v2/docs/console/go/",
+        "hash": "8934b05249d98184a6fac20aeb6f699cf7ec5eb1860e2b20dd188a9e318f0259"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "74f7de4ffed20e0dc7127a3976eb1c993068dc5dfa1b51b8768feea549df59c9",
+      "sourceId": "opencode-go",
+      "channel": "OpenCode",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-16T06:49:25.500Z",
+      "url": "https://opencode.ai/v2/docs/console/go/",
+      "before": null,
+      "after": {
+        "key": "row:v2:dd56a09c91a78cb9:2:Qwen4 Max:0",
+        "type": "table-row",
+        "label": "Qwen4 Max",
+        "heading": "Estimated requests",
+        "columns": [
+          "Model",
+          "Requests per 5 hours",
+          "Requests per week",
+          "Requests per month"
+        ],
+        "cells": [
+          "Qwen4 Max",
+          "613",
+          "1,550",
+          "3,080"
+        ],
+        "signals": [],
+        "url": "https://opencode.ai/v2/docs/console/go/",
+        "hash": "aca2d94b73e879b0847fd5499cc16b55ea92179da1b0f32e09a423d130a449fc"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "6b2ba012eefbfc070fc46918e4a3fe142613a5b9938ae91239767b030becac1a",
+      "sourceId": "opencode-go",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-16T06:49:25.500Z",
+      "url": "https://opencode.ai/v2/docs/console/go/",
+      "before": null,
+      "after": {
+        "key": "text:6fa315c5aed769dc21e9eb72c146959e19831d9ac4b6e0b69b52bb5bfa1193a3",
+        "hash": "6fa315c5aed769dc21e9eb72c146959e19831d9ac4b6e0b69b52bb5bfa1193a3",
+        "type": "announcement",
+        "signals": [],
+        "models": [
+          "Qwen4 Max "
+        ],
+        "url": "https://opencode.ai/v2/docs/console/go/"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "e83238f2702b283fed6e7397fe7d086d2aa20cc84735dd7ee26051d6081a81d9",
+      "sourceId": "opencode-go",
+      "channel": "OpenCode",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-16T06:49:25.500Z",
+      "url": "https://opencode.ai/v2/docs/console/go/",
+      "before": null,
+      "after": {
+        "key": "row:v2:869c0b8f4f229c2f:0:Qwen4 Max:0",
+        "type": "table-row",
+        "label": "Qwen4 Max",
+        "heading": "Endpoints",
+        "columns": [
+          "Model",
+          "Model ID",
+          "Endpoint",
+          "AI SDK Package"
+        ],
+        "cells": [
+          "Qwen4 Max",
+          "qwen4-max",
+          "https://opencode.ai/inference/go/anthropic/v1/messages",
+          "@ai-sdk/anthropic"
+        ],
+        "signals": [],
+        "url": "https://opencode.ai/v2/docs/console/go/",
+        "hash": "9ffaab834a798f3a5b7748e6b491c845277c990093fe700605af69d40f67bd63"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "db98db83e4ea829f80dd0e1d21bce83333f9bfb5961fa0a2a9e302b401f84673",
+      "sourceId": "opencode-go",
+      "channel": "OpenCode",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-16T06:49:25.500Z",
+      "url": "https://opencode.ai/v2/docs/console/go/",
+      "before": null,
+      "after": {
+        "key": "row:v2:572bd409ebc86d3f:0:Qwen4 Max:0",
+        "type": "table-row",
+        "label": "Qwen4 Max",
+        "heading": "Privacy",
+        "columns": [
+          "Model",
+          "Model training",
+          "Data retention"
+        ],
+        "cells": [
+          "Qwen4 Max",
+          "Not used",
+          "0 days"
+        ],
+        "signals": [],
+        "url": "https://opencode.ai/v2/docs/console/go/",
+        "hash": "d4c5e728031fa6ee81257d23b0e446e9b431244e2643f92b45718d0dbc9ce32c"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "8deec497ab1b5d45b8b46b3763130bada3f19830d677e690338a648d9fe3c719",
+      "sourceId": "command-code-go",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-16T06:49:25.500Z",
+      "url": "https://commandcode.ai/docs/plans/go",
+      "before": null,
+      "after": {
+        "key": "text:3f3b0244aeecb656220fb84f44919023bc55587e00976dd79252ae6be3ba6954",
+        "hash": "3f3b0244aeecb656220fb84f44919023bc55587e00976dd79252ae6be3ba6954",
+        "type": "announcement",
+        "signals": [
+          "promotion"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/docs/plans/go"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "ed0bfb6f9fa0d6645107f11b22d2631544a345d383e6d07a5068a7e49df57d41",
+      "sourceId": "command-code-go",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-16T06:49:25.500Z",
+      "url": "https://commandcode.ai/docs/plans/go",
+      "before": null,
+      "after": {
+        "key": "row:v2:e9602f4baf5bb37d:0:Qwen 4 Max:0",
+        "type": "table-row",
+        "label": "Qwen 4 Max",
+        "heading": "Models included",
+        "columns": [
+          "Model ↕",
+          "Context ↕",
+          "Input ↕",
+          "Output ↕",
+          "Cache read ↕",
+          "Cache write ↕",
+          "Caps"
+        ],
+        "cells": [
+          "Qwen 4 Max",
+          "1M",
+          "$1.50",
+          "$4.50",
+          "$0.075",
+          "$1.875",
+          "+ 1"
+        ],
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://commandcode.ai/docs/plans/go",
+        "hash": "c1def69ea1a4154e67eaee7b671c9976fec5bb51711779d29c8e76870e45a8f5"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "f7581aa3f1993d46658b2fae16fa81a15c7864b86085ee06bfcccbc6df652c51",
+      "sourceId": "command-code-go",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-16T06:49:25.500Z",
+      "url": "https://commandcode.ai/docs/plans/go",
+      "before": null,
+      "after": {
+        "key": "text:ceb20dc79da5f5726de86642b93db0acda7f39a6ba81440170a546ba149483c8",
+        "hash": "ceb20dc79da5f5726de86642b93db0acda7f39a6ba81440170a546ba149483c8",
+        "type": "announcement",
+        "signals": [
+          "pricing",
+          "availability"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/docs/plans/go"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "6fc6a1f64d13e3ec7d55776b2cb3b62ede60803c0de01b0ee4bc0b494c2b8b13",
+      "sourceId": "command-code-go",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-16T06:49:25.500Z",
+      "url": "https://commandcode.ai/docs/plans/go",
+      "before": null,
+      "after": {
+        "key": "row:v2:0630e53ae39d0083:0:Qwen 4 Max:0",
+        "type": "table-row",
+        "label": "Qwen 4 Max",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Requests / 5 hours",
+          "Requests / week",
+          "Requests / month"
+        ],
+        "cells": [
+          "Qwen 4 Max",
+          "308",
+          "615",
+          "1,030"
+        ],
+        "signals": [],
+        "url": "https://commandcode.ai/docs/plans/go",
+        "hash": "7f1b7094633d0120c8c9b77e851cbf22ae221fb89e7b5e73734128c12700bbd2"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "3e17a465e0f8a6c1e6892a101a1eea17f7898035a5f542bf9c0c80f66dbd484d",
+      "sourceId": "command-code-go",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-16T06:49:25.500Z",
+      "url": "https://commandcode.ai/docs/plans/go",
+      "before": null,
+      "after": {
+        "key": "row:v2:0630e53ae39d0083:2:Qwen 4 Max:0",
+        "type": "table-row",
+        "label": "Qwen 4 Max",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Input",
+          "Output",
+          "Cache Read",
+          "Cache Write",
+          "Monthly credits"
+        ],
+        "cells": [
+          "Qwen 4 Max",
+          "$1.50",
+          "$4.50",
+          "$0.075",
+          "$1.875",
+          "$6"
+        ],
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://commandcode.ai/docs/plans/go",
+        "hash": "7690fd49dcf4798dea9a0c7ced89781046e1b49dbe61a4850d54f768b7118481"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "d763a97fd821951cc3842437d418bec581f3095a096736215c49b52a1e6360ed",
+      "sourceId": "command-code-goat",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-16T06:49:25.500Z",
+      "url": "https://commandcode.ai/docs/plans/goat",
+      "before": null,
+      "after": {
+        "key": "text:afb72a1babf030ed5d874384ecb937bc8e943a63f6e8a7848053985cbb466861",
+        "hash": "afb72a1babf030ed5d874384ecb937bc8e943a63f6e8a7848053985cbb466861",
+        "type": "announcement",
+        "signals": [
+          "promotion"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/docs/plans/goat"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "98842103124534bbfb8dafe468400cbcaef0ec334363b82b2507c68131a816d6",
+      "sourceId": "command-code-goat",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-16T06:49:25.500Z",
+      "url": "https://commandcode.ai/docs/plans/goat",
+      "before": null,
+      "after": {
+        "key": "row:v2:5fc247816328732d:0:Qwen 4 Max:0",
+        "type": "table-row",
+        "label": "Qwen 4 Max",
+        "heading": "Models included",
+        "columns": [
+          "Model ↕",
+          "Context ↕",
+          "Input ↕",
+          "Output ↕",
+          "Cache read ↕",
+          "Cache write ↕",
+          "Caps"
+        ],
+        "cells": [
+          "Qwen 4 Max",
+          "1M",
+          "$1.50",
+          "$4.50",
+          "$0.075",
+          "$1.875",
+          "+ 1"
+        ],
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://commandcode.ai/docs/plans/goat",
+        "hash": "c1def69ea1a4154e67eaee7b671c9976fec5bb51711779d29c8e76870e45a8f5"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "9b15bf6c07aedf6ae21af0b54154c00e62ea18a23694176edd5c79a0bfdf42bd",
+      "sourceId": "command-code-goat",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-16T06:49:25.500Z",
+      "url": "https://commandcode.ai/docs/plans/goat",
+      "before": null,
+      "after": {
+        "key": "text:30acac760bedb488a28211c86118484594f58820dbaf9b1ffb413ec841c6c78b",
+        "hash": "30acac760bedb488a28211c86118484594f58820dbaf9b1ffb413ec841c6c78b",
+        "type": "announcement",
+        "signals": [
+          "pricing",
+          "availability"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/docs/plans/goat"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "96004aae65dd3ba832d7c64a5517b5cafa3608ef3fac62e47ce9e0fe61a41429",
+      "sourceId": "command-code-goat",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-16T06:49:25.500Z",
+      "url": "https://commandcode.ai/docs/plans/goat",
+      "before": null,
+      "after": {
+        "key": "row:v2:ba75eaf2cac81cb2:0:Qwen 4 Max:0",
+        "type": "table-row",
+        "label": "Qwen 4 Max",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Requests / 5 hours",
+          "Requests / week",
+          "Requests / month"
+        ],
+        "cells": [
+          "Qwen 4 Max",
+          "513",
+          "1,280",
+          "2,560"
+        ],
+        "signals": [],
+        "url": "https://commandcode.ai/docs/plans/goat",
+        "hash": "649aec8de495e85d43d230735f16f996d7c8d8c3af0b05f4b59aef089cee040c"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "a848a89b99daddbcbf07c8f389ec75c77f459e67183b861b86b3f071092bc5b7",
+      "sourceId": "command-code-goat",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-16T06:49:25.500Z",
+      "url": "https://commandcode.ai/docs/plans/goat",
+      "before": null,
+      "after": {
+        "key": "text:689b79e03aa29a98fab7751ad861326aba6fe50bc7d65d8ba642cc7812d70875",
+        "hash": "689b79e03aa29a98fab7751ad861326aba6fe50bc7d65d8ba642cc7812d70875",
+        "type": "announcement",
+        "signals": [
+          "pricing",
+          "promotion",
+          "availability"
+        ],
+        "models": [
+          "Qwen 4 Max starts at "
+        ],
+        "url": "https://commandcode.ai/docs/plans/goat"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "be3db05e83a3501dacf665aab0287860b8101448b8ba8b4613d4dd2b0e3ac114",
+      "sourceId": "command-code-goat",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-16T06:49:25.500Z",
+      "url": "https://commandcode.ai/docs/plans/goat",
+      "before": null,
+      "after": {
+        "key": "row:v2:ba75eaf2cac81cb2:3:Qwen 4 Max:0",
+        "type": "table-row",
+        "label": "Qwen 4 Max",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Input",
+          "Output",
+          "Cache Read",
+          "Cache Write",
+          "Monthly credits"
+        ],
+        "cells": [
+          "Qwen 4 Max",
+          "$1.50",
+          "$4.50",
+          "$0.075",
+          "$1.875",
+          "$15"
+        ],
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://commandcode.ai/docs/plans/goat",
+        "hash": "0a232618ac9fdc798a51476f294f7548af5e5e3698d3f1dabd9eb1e41569372c"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "9eac485695f89a1a7a2f4ec69efb9767456707ac0ecb77530c7ce2641b4fb1d3",
+      "sourceId": "command-code-pro",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-16T06:49:25.500Z",
+      "url": "https://commandcode.ai/docs/plans/pro",
+      "before": null,
+      "after": {
+        "key": "text:d8f2b56696111f4446576ef02a4bf065b144a0435b7611ae022cb74355371b86",
+        "hash": "d8f2b56696111f4446576ef02a4bf065b144a0435b7611ae022cb74355371b86",
+        "type": "announcement",
+        "signals": [
+          "promotion"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/docs/plans/pro"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "6ede9263f779c77ac0bc342e5a015aa3019e7b829552c462ced527f9d7f40ec6",
+      "sourceId": "command-code-pro",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-16T06:49:25.500Z",
+      "url": "https://commandcode.ai/docs/plans/pro",
+      "before": null,
+      "after": {
+        "key": "row:v2:20d53e007c5a4d72:0:Qwen 4 Max:0",
+        "type": "table-row",
+        "label": "Qwen 4 Max",
+        "heading": "Models included",
+        "columns": [
+          "Model ↕",
+          "Context ↕",
+          "Input ↕",
+          "Output ↕",
+          "Cache read ↕",
+          "Cache write ↕",
+          "Caps"
+        ],
+        "cells": [
+          "Qwen 4 Max",
+          "1M",
+          "$1.50",
+          "$4.50",
+          "$0.075",
+          "$1.875",
+          "+ 1"
+        ],
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://commandcode.ai/docs/plans/pro",
+        "hash": "c1def69ea1a4154e67eaee7b671c9976fec5bb51711779d29c8e76870e45a8f5"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "a73df6fc6fcba4f535449c00d9587d116b961d8d2477b19b02f190eb0f9334fb",
+      "sourceId": "command-code-pro",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-16T06:49:25.500Z",
+      "url": "https://commandcode.ai/docs/plans/pro",
+      "before": null,
+      "after": {
+        "key": "text:fe3da915abc875925ae48bc91dbd4147ec5447cb92e4d1639082639b8ab4fed0",
+        "hash": "fe3da915abc875925ae48bc91dbd4147ec5447cb92e4d1639082639b8ab4fed0",
+        "type": "announcement",
+        "signals": [
+          "pricing",
+          "availability"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/docs/plans/pro"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "9529fe49d6e7234ef6466b341742d02121e302a2c70b095405dbaebc00d16609",
+      "sourceId": "command-code-pro",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-16T06:49:25.500Z",
+      "url": "https://commandcode.ai/docs/plans/pro",
+      "before": null,
+      "after": {
+        "key": "row:v2:00a20accdbd25290:0:Qwen 4 Max:0",
+        "type": "table-row",
+        "label": "Qwen 4 Max",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Requests / 5 hours",
+          "Requests / week",
+          "Requests / month"
+        ],
+        "cells": [
+          "Qwen 4 Max",
+          "855",
+          "2,140",
+          "4,270"
+        ],
+        "signals": [],
+        "url": "https://commandcode.ai/docs/plans/pro",
+        "hash": "5a1773738086ea26ede39344faf7eb7ae95b0e2f3d5afa077a6c9daf2d147c14"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "a7f2721216ea4fa1824c20152884278f31e648dda18ffad5596d2f8c109df9ec",
+      "sourceId": "command-code-pro",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-16T06:49:25.500Z",
+      "url": "https://commandcode.ai/docs/plans/pro",
+      "before": null,
+      "after": {
+        "key": "text:c74163babbe6e4e9f4342f8623e6e4c59512811ffd35bc3989dd1f4fa5404bc5",
+        "hash": "c74163babbe6e4e9f4342f8623e6e4c59512811ffd35bc3989dd1f4fa5404bc5",
+        "type": "announcement",
+        "signals": [
+          "pricing",
+          "availability"
+        ],
+        "models": [
+          "Qwen 4 Max starts at "
+        ],
+        "url": "https://commandcode.ai/docs/plans/pro"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "56d7c0a6a68eb4628f043780d0318c987c3beaccb4f424240a55883afd9e3af2",
+      "sourceId": "command-code-pro",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-16T06:49:25.500Z",
+      "url": "https://commandcode.ai/docs/plans/pro",
+      "before": null,
+      "after": {
+        "key": "row:v2:37ebc8270b944870:0:Qwen 4 Max:0",
+        "type": "table-row",
+        "label": "Qwen 4 Max",
+        "heading": "New open models",
+        "columns": [
+          "Model",
+          "Input",
+          "Output",
+          "Cache Read",
+          "Cache Write",
+          "Monthly credits"
+        ],
+        "cells": [
+          "Qwen 4 Max",
+          "$1.50",
+          "$4.50",
+          "$0.075",
+          "$1.875",
+          "$25"
+        ],
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://commandcode.ai/docs/plans/pro",
+        "hash": "6cacec4a4b79f14cdc1976cf21fdb1ed778a22c298d8b7122f6549755f4267eb"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "d58b8cb3d0f6222f79096ef6005f84657599bbe383b90956b0720e10e493756a",
+      "sourceId": "command-code-max",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-16T06:49:25.500Z",
+      "url": "https://commandcode.ai/models",
+      "before": null,
+      "after": {
+        "key": "text:b7a462fad29c165893b7350d669ebc9262865afabecaa1ac9c3f74f3381349b8",
+        "hash": "b7a462fad29c165893b7350d669ebc9262865afabecaa1ac9c3f74f3381349b8",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [
+          "Claude Opus",
+          "Claude Fable"
+        ],
+        "url": "https://commandcode.ai/models"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "3ae0ee068c6c5322bc35e552864ccffa196d2c1bddaf610ab339ae02f4ac2b2e",
+      "sourceId": "command-code-max",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-16T06:49:25.500Z",
+      "url": "https://commandcode.ai/docs/plans/max",
+      "before": null,
+      "after": {
+        "key": "row:v2:49da236506327215:0:Qwen 4 Max:0",
+        "type": "table-row",
+        "label": "Qwen 4 Max",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Requests / 5 hours",
+          "Requests / week",
+          "Requests / month"
+        ],
+        "cells": [
+          "Qwen 4 Max",
+          "7,690",
+          "15,400",
+          "25,600"
+        ],
+        "signals": [],
+        "url": "https://commandcode.ai/docs/plans/max",
+        "hash": "4b081db9315f0cacc10d14760bf230411aa5295ac44b0e4ea30faefe9da5f69b"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "531236da8ae3a8af50b6a6a24af0d2a05c311a2dbbdffa14e19ddf8335fed0ca",
+      "sourceId": "command-code-max",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-16T06:49:25.500Z",
+      "url": "https://commandcode.ai/docs/plans/max",
+      "before": null,
+      "after": {
+        "key": "row:v2:49da236506327215:1:Qwen 4 Max:0",
+        "type": "table-row",
+        "label": "Qwen 4 Max",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Input",
+          "Output",
+          "Cache Read",
+          "Cache Write",
+          "Max 10× credits",
+          "Max 20× credits"
+        ],
+        "cells": [
+          "Qwen 4 Max",
+          "$1.50",
+          "$4.50",
+          "$0.075",
+          "$1.875",
+          "$150",
+          "$300"
+        ],
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://commandcode.ai/docs/plans/max",
+        "hash": "ae8fa1c785d10f8ac276430116e4a3db134718c9fe1ac7cdc210259888ccc76b"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "a2972a30a9a3951bab7e139b7e79933b2f8ba42e37fdea12a73558987adb7921",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-16T06:49:25.500Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": null,
+      "after": {
+        "key": "row:v2:29f2b9e2016cb19c:0:Qwen/Qwen4-Max Copy model id:0",
+        "type": "table-row",
+        "label": "Qwen/Qwen4-Max Copy model id",
+        "heading": "Alibaba",
+        "columns": [
+          "Model ID",
+          "Name",
+          "Capabilities",
+          "Best for"
+        ],
+        "cells": [
+          "Qwen/Qwen4-Max Copy model id",
+          "Qwen 4 Max",
+          "+ 1",
+          "flagship coding, agentic & knowledge work"
+        ],
+        "signals": [
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models",
+        "hash": "577a02f0f5aa3cce798f122200b8505c749f19e0fd11651727b44f0e081798af"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "63402dc11d9796e38ea9c120f90fda6db5b7b58e5779e9d1e32191e110d85674",
+      "sourceId": "command-code-terms",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-16T06:49:25.500Z",
+      "url": "https://commandcode.ai/docs/resources/pricing-limits",
+      "before": null,
+      "after": {
+        "key": "text:e6d73402a77885b00f6be4f71f66d01eef20a1c331fa16d8d5f52959ab61175d",
+        "hash": "e6d73402a77885b00f6be4f71f66d01eef20a1c331fa16d8d5f52959ab61175d",
+        "type": "announcement",
+        "signals": [],
+        "models": [],
+        "url": "https://commandcode.ai/docs/resources/pricing-limits"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "6661ecfe8e8ca12622f0f2e4a5a61b1dd21e72550ebaf053a2ec9fc5a8bec425",
+      "sourceId": "command-code-terms",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-16T06:49:25.500Z",
+      "url": "https://commandcode.ai/docs/resources/pricing-limits",
+      "before": null,
+      "after": {
+        "key": "text:2d05661e81c06c15bc3f5cfc371e796350c7cee2985ca0f725bed3e359a5e6fd",
+        "hash": "2d05661e81c06c15bc3f5cfc371e796350c7cee2985ca0f725bed3e359a5e6fd",
+        "type": "announcement",
+        "signals": [
+          "promotion"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/docs/resources/pricing-limits"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "8b641bd2556626a4c2ac2f8ca645a928f9f1153992bfb24ec010e3ad8c07635b",
+      "sourceId": "command-code-terms",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-16T06:49:25.500Z",
+      "url": "https://commandcode.ai/docs/resources/pricing-limits",
+      "before": null,
+      "after": {
+        "key": "text:d130059fa158cf3de6eb0f8bc9ad4e6ed9ddf8b2537bd77f3a968501c534aaf1",
+        "hash": "d130059fa158cf3de6eb0f8bc9ad4e6ed9ddf8b2537bd77f3a968501c534aaf1",
+        "type": "announcement",
+        "signals": [],
+        "models": [
+          "Qwen 4 Max"
+        ],
+        "url": "https://commandcode.ai/docs/resources/pricing-limits"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "239d224009595f46cb41c2aa63c3f544d7d5c84bc689a95c82b3007d6ebf14fa",
+      "sourceId": "command-code-terms",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-16T06:49:25.500Z",
+      "url": "https://commandcode.ai/docs/resources/pricing-limits",
+      "before": null,
+      "after": {
+        "key": "text:ed94cf0c4118360cbd3c0fff67b696f1367dffe1cae9fd5e545da31c3d0cca69",
+        "hash": "ed94cf0c4118360cbd3c0fff67b696f1367dffe1cae9fd5e545da31c3d0cca69",
+        "type": "announcement",
+        "signals": [
+          "pricing"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/docs/resources/pricing-limits"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "0cb7c7dc6bf18d1f75dd66eb8fe7fdbb3f74d8b0638d9317d348fca8d3478fb4",
+      "sourceId": "command-code-terms",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-16T06:49:25.500Z",
+      "url": "https://commandcode.ai/docs/resources/pricing-limits",
+      "before": null,
+      "after": {
+        "key": "text:51f8b38556f86b293002e6398e68843f959d89fa2b69800034aea49e9d0e2636",
+        "hash": "51f8b38556f86b293002e6398e68843f959d89fa2b69800034aea49e9d0e2636",
+        "type": "announcement",
+        "signals": [
+          "pricing",
+          "availability"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/docs/resources/pricing-limits"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "8d0dcbf2fd94234932fd83321b2fdb9056a7f6c81199808420f8fa39a1b66419",
+      "sourceId": "factory-models",
+      "channel": "Factory",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-16T06:49:25.500Z",
+      "url": "https://docs.factory.com/models.md",
+      "before": {
+        "key": "row:v2:823f3bfa47a96e44:0:Gemini 4 Hydrogen:0",
+        "type": "table-row",
+        "label": "Gemini 4 Hydrogen",
+        "heading": "<span className=\"provider-heading\"><img src=\"/docs-assets/images/model-icons/google.ico\" alt=\"Google logo\" className=\"provider-icon\" />Google</span>",
+        "columns": [
+          "Model",
+          "Model ID",
+          "Multiplier",
+          "Reasoning"
+        ],
+        "cells": [
+          "Gemini 4 Hydrogen",
+          "`gemini-4-hydrogen`",
+          "0.6×",
+          "`low`, `medium`, `high` (default)"
+        ],
+        "signals": [],
+        "url": "https://docs.factory.com/models.md",
+        "hash": "194df19e1eafa029dcdcae4a0104c380f30acbf24ac84ac2735628514fc539fd"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "fc1c37bf08c838ed368071643cea12a10e90f6a031d507ea70fbce0e619a2257",
+      "sourceId": "factory-models",
+      "channel": "Factory",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-16T06:49:25.500Z",
+      "url": "https://docs.factory.com/models.md",
+      "before": {
+        "key": "row:v2:823f3bfa47a96e44:0:Gemini 4 Carbon<sup>†</sup>:0",
+        "type": "table-row",
+        "label": "Gemini 4 Carbon<sup>†</sup>",
+        "heading": "<span className=\"provider-heading\"><img src=\"/docs-assets/images/model-icons/google.ico\" alt=\"Google logo\" className=\"provider-icon\" />Google</span>",
+        "columns": [
+          "Model",
+          "Model ID",
+          "Multiplier",
+          "Reasoning"
+        ],
+        "cells": [
+          "Gemini 4 Carbon<sup>†</sup>",
+          "`gemini-4-carbon`",
+          "0.8×",
+          "`low`, `medium` (default), `high`"
+        ],
+        "signals": [],
+        "url": "https://docs.factory.com/models.md",
+        "hash": "550d8e12b4f7b57abde49950d78a2a409f8c304dbed425033c10628cc3810409"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "c1639346d2681cc39131454026b15ed534295d6f8f4cc29ac51a4606eafc443d",
+      "sourceId": "factory-models",
+      "channel": "Factory",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-16T06:49:25.500Z",
+      "url": "https://docs.factory.com/models.md",
+      "before": {
+        "key": "row:v2:823f3bfa47a96e44:0:Gemini 4 Argon<sup>†</sup>:0",
+        "type": "table-row",
+        "label": "Gemini 4 Argon<sup>†</sup>",
+        "heading": "<span className=\"provider-heading\"><img src=\"/docs-assets/images/model-icons/google.ico\" alt=\"Google logo\" className=\"provider-icon\" />Google</span>",
+        "columns": [
+          "Model",
+          "Model ID",
+          "Multiplier",
+          "Reasoning"
+        ],
+        "cells": [
+          "Gemini 4 Argon<sup>†</sup>",
+          "`gemini-4-argon`",
+          "0.8×",
+          "`low`, `medium` (default), `high`"
+        ],
+        "signals": [],
+        "url": "https://docs.factory.com/models.md",
+        "hash": "90d8b918c3d70286ffa882c2ec49bd1980210b02f6837323088a7b4707bf9b02"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "087708b5235ef6a3fa3a083c64d5722454e9c0942f6046288f79186e97a12c25",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "announcement",
+      "detectedAt": "2026-11-16T06:49:25.500Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": null,
+      "after": {
+        "key": "text:361a75a8b52a992ada5e1df66d48bb1e3534347076db739e052bf519d23e6634",
+        "hash": "361a75a8b52a992ada5e1df66d48bb1e3534347076db739e052bf519d23e6634",
+        "type": "announcement",
+        "signals": [
+          "version",
+          "pricing",
+          "availability"
+        ],
+        "models": [
+          "qwen4-max-preview "
+        ],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "8eb1f3954cfc4188219994248d04c7aa042b4d5bda136f51d323f51f89fd96bd",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-16T06:49:25.500Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview#千问",
+      "before": null,
+      "after": {
+        "key": "row:v2:ddd934d1187ba7ff:0:qwen4-max:0",
+        "type": "table-row",
+        "label": "qwen4-max",
+        "heading": "千问",
+        "columns": [
+          "模型 ID（Model ID）",
+          "模型能力"
+        ],
+        "cells": [
+          "qwen4-max",
+          "推理模型、视觉理解、文本生成"
+        ],
+        "signals": [
+          "availability"
+        ],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview#千问",
+        "hash": "e825ba9d1692b6de5556c15d36ad65a40cdc4d4ddfccf3a7729f5a2f384c5303"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "afb45f5d60195c49745294b13d3bd1342cf62ec813343bbbb30efaa221cc5946",
+      "sourceId": "opencode-social",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-16T06:49:25.500Z",
+      "url": "https://x.com/opencode/status/2122159680462163993",
+      "before": null,
+      "after": {
+        "key": "post:2122159680462163993",
+        "type": "announcement",
+        "hash": "91b9dfe019a82f50c8c45e45d35ea9bc7cbace3e97552b29a24dd09fe771c78b",
+        "signals": [
+          "availability"
+        ],
+        "models": [
+          "Qwen4 Max is now available in OpenCode Go "
+        ],
+        "url": "https://x.com/opencode/status/2122159680462163993",
+        "relevant": true
+      },
+      "status": "pending"
+    },
+    {
+      "id": "5e4a39bf0089bb14e3b6a982dedc048312476309579cc1dd56099d2aac9f320e",
+      "sourceId": "command-code-social",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-16T06:49:25.500Z",
+      "url": "https://x.com/CommandCodeAI/status/2122192652858773675",
+      "before": null,
+      "after": {
+        "key": "post:2122192652858773675",
+        "type": "announcement",
+        "hash": "14043224045c61f9c746c89d636cf2a2b348e95b1a7120b0a738a8cf3f5143e0",
+        "signals": [
+          "pricing",
+          "promotion",
+          "availability"
+        ],
+        "models": [
+          "GLM-5.3 usage increased to ",
+          "Muse Ember ",
+          "Gemini 4 Carbon ",
+          "Claude Fable 5.2 "
+        ],
+        "url": "https://x.com/CommandCodeAI/status/2122192652858773675",
+        "relevant": true
+      },
+      "status": "pending"
     }
   ],
-  "checkedAt": "2026-11-15T06:50:08.712Z"
+  "checkedAt": "2026-11-16T06:49:25.500Z"
 }
