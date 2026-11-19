@@ -6,10 +6,10 @@
       "channel": "OpenCode",
       "url": "https://opencode.ai/v2/docs/console/go/",
       "kind": "tables",
-      "attemptedAt": "2026-11-18T07:43:47.655Z",
+      "attemptedAt": "2026-11-19T07:46:15.049Z",
       "lastSuccessAt": "2026-11-16T06:49:25.500Z",
       "status": "failed",
-      "consecutiveFailures": 2,
+      "consecutiveFailures": 3,
       "retrieval": "http",
       "snapshot": {
         "checkedAt": "2026-11-16T06:49:25.500Z",
@@ -8248,14 +8248,14 @@
       "channel": "OpenCode",
       "url": "https://opencode.ai/changelog",
       "kind": "document",
-      "attemptedAt": "2026-11-18T07:43:47.655Z",
-      "lastSuccessAt": "2026-11-18T07:43:47.655Z",
+      "attemptedAt": "2026-11-19T07:46:15.049Z",
+      "lastSuccessAt": "2026-11-19T07:46:15.049Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-18T07:43:47.655Z",
-        "bodySha256": "a7824f9462389ba965e83cc0a3060506a04aa5575466d3176dc9d46ef19322c9",
+        "checkedAt": "2026-11-19T07:46:15.049Z",
+        "bodySha256": "4ba870da2fb16c0fb1a695e3b7ddc170e2de7160a69162d1ff0d00abd2f6b7dd",
         "records": [
           {
             "key": "text:fc91dbe16f57f6d1e5686ac0710cc340f13eb25677b1d2d83756ee5eb744ebb3",
@@ -8470,14 +8470,14 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/go",
       "kind": "tables",
-      "attemptedAt": "2026-11-18T07:43:47.655Z",
-      "lastSuccessAt": "2026-11-18T07:43:47.655Z",
+      "attemptedAt": "2026-11-19T07:46:15.049Z",
+      "lastSuccessAt": "2026-11-19T07:46:15.049Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-18T07:43:47.655Z",
-        "bodySha256": "4235eec28e5d5c819f70b1a98b3c8931296c4a4c971f2a9d1f4bac407ea71c5c",
+        "checkedAt": "2026-11-19T07:46:15.049Z",
+        "bodySha256": "948375ba54e8f784769537e8c0538ccc83d52a5ffec2dc74de275c8436c12e77",
         "records": [
           {
             "key": "text:b605350bc00209520b7cd8f546322663356ba630708f71bbf30aead6b3dd608e",
@@ -8668,8 +8668,8 @@
             "url": "https://commandcode.ai/docs/plans/goat"
           },
           {
-            "key": "text:bfa306e7099149f0529367b8b144b248a8428465295cd5b846c3ee7f0d674471",
-            "hash": "bfa306e7099149f0529367b8b144b248a8428465295cd5b846c3ee7f0d674471",
+            "key": "text:32d6ab919724f50b81b31b7094912eba44bb8b9a105d795af4d4aa7ea4f98963",
+            "hash": "32d6ab919724f50b81b31b7094912eba44bb8b9a105d795af4d4aa7ea4f98963",
             "type": "announcement",
             "signals": [
               "promotion"
@@ -10477,8 +10477,8 @@
             "hash": "7c12b5f472ef6a5905482e80a798fc3aa488b62504e104ccb2baca674e066b37"
           },
           {
-            "key": "text:92f9894e5750d6a81a07a0937183e9888dae20c2d2124cbeecc2fbb908e37363",
-            "hash": "92f9894e5750d6a81a07a0937183e9888dae20c2d2124cbeecc2fbb908e37363",
+            "key": "text:08b27c93d35a34b1e5246a23acea5cf2724b228db175eaea344cafa325440c54",
+            "hash": "08b27c93d35a34b1e5246a23acea5cf2724b228db175eaea344cafa325440c54",
             "type": "announcement",
             "signals": [
               "pricing",
@@ -13377,7 +13377,7 @@
             "url": "https://commandcode.ai/docs/resources/zdr#what-zdr-costs"
           }
         ],
-        "hash": "4cc572c289030c3941ce87b74953c6f2b59f244b0d3fc8d18e560c78b6ad7748"
+        "hash": "621abf322e98c2a16d0458e4fab662c5689f2ad33faff879a7b96c383fdce4ba"
       }
     },
     "command-code-goat": {
@@ -13385,14 +13385,14 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/goat",
       "kind": "tables",
-      "attemptedAt": "2026-11-18T07:43:47.655Z",
-      "lastSuccessAt": "2026-11-18T07:43:47.655Z",
+      "attemptedAt": "2026-11-19T07:46:15.049Z",
+      "lastSuccessAt": "2026-11-19T07:46:15.049Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-18T07:43:47.655Z",
-        "bodySha256": "4cf1576d5bac28ee1e9a344927f09d3a50e6542710417d015ce4623ee0cd3207",
+        "checkedAt": "2026-11-19T07:46:15.049Z",
+        "bodySha256": "0c3920052f96149d1adeeaad4ff406a99972ee1528ced0c9034e6f6c203900ba",
         "records": [
           {
             "key": "text:b605350bc00209520b7cd8f546322663356ba630708f71bbf30aead6b3dd608e",
@@ -13629,8 +13629,8 @@
             "url": "https://commandcode.ai/docs/plans/pro"
           },
           {
-            "key": "text:7cb9878b74502317224b37a55a5dc5ac8cd1077d48c3bace177f0aa809d9de13",
-            "hash": "7cb9878b74502317224b37a55a5dc5ac8cd1077d48c3bace177f0aa809d9de13",
+            "key": "text:211b175645ded93930aba09b2ec77c17827d9f49076e635cb82f8f589f0cf5ec",
+            "hash": "211b175645ded93930aba09b2ec77c17827d9f49076e635cb82f8f589f0cf5ec",
             "type": "announcement",
             "signals": [
               "promotion"
@@ -15846,8 +15846,8 @@
             "hash": "7c12b5f472ef6a5905482e80a798fc3aa488b62504e104ccb2baca674e066b37"
           },
           {
-            "key": "text:855c2b225817e10b61e155efa3bf149ef6f5842457df8838f51939d45638960f",
-            "hash": "855c2b225817e10b61e155efa3bf149ef6f5842457df8838f51939d45638960f",
+            "key": "text:38e46e8c697f1a71c2a2c394f995c4ea77b0060a38cb212b1dce494840d10b10",
+            "hash": "38e46e8c697f1a71c2a2c394f995c4ea77b0060a38cb212b1dce494840d10b10",
             "type": "announcement",
             "signals": [
               "pricing",
@@ -19433,7 +19433,7 @@
             "url": "https://commandcode.ai/docs/resources/zdr#what-zdr-costs"
           }
         ],
-        "hash": "2a70217e8f0248a074f78e66b5b294022a2d19513e72d2cabfcc0351ef9de21d"
+        "hash": "e88c5ced057464667977d507211a1b502ee7c58281e64c745912766ccde5db2a"
       }
     },
     "command-code-pro": {
@@ -19441,14 +19441,14 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/pro",
       "kind": "tables",
-      "attemptedAt": "2026-11-18T07:43:47.655Z",
-      "lastSuccessAt": "2026-11-18T07:43:47.655Z",
+      "attemptedAt": "2026-11-19T07:46:15.049Z",
+      "lastSuccessAt": "2026-11-19T07:46:15.049Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-18T07:43:47.655Z",
-        "bodySha256": "e32a51029a9b26d6bd80754ddddf201cb7430648a5482603f4c8612951c7c8a1",
+        "checkedAt": "2026-11-19T07:46:15.049Z",
+        "bodySha256": "340ea1ba4047529dd72e63d96a9a8f41f5144f22b3a157d3789cf44ea9e49bc9",
         "records": [
           {
             "key": "text:b605350bc00209520b7cd8f546322663356ba630708f71bbf30aead6b3dd608e",
@@ -19703,14 +19703,43 @@
             "url": "https://commandcode.ai/models"
           },
           {
-            "key": "text:dd076a97e84c0d5e1c114fb9d2b2a44b772614a81d3d53533dbc3d15df1bb44c",
-            "hash": "dd076a97e84c0d5e1c114fb9d2b2a44b772614a81d3d53533dbc3d15df1bb44c",
+            "key": "text:48b1044e2e02d4bf7678f6c3eaae807dcff1ea17e16ed0005c9047c32621f563",
+            "hash": "48b1044e2e02d4bf7678f6c3eaae807dcff1ea17e16ed0005c9047c32621f563",
             "type": "announcement",
             "signals": [
               "promotion"
             ],
             "models": [],
             "url": "https://commandcode.ai/docs/plans/pro"
+          },
+          {
+            "key": "row:v2:20d53e007c5a4d72:0:Gemini 4 Neon:0",
+            "type": "table-row",
+            "label": "Gemini 4 Neon",
+            "heading": "Models included",
+            "columns": [
+              "Model ↕",
+              "Context ↕",
+              "Input ↕",
+              "Output ↕",
+              "Cache read ↕",
+              "Cache write ↕",
+              "Caps"
+            ],
+            "cells": [
+              "Gemini 4 Neon",
+              "1M",
+              "$3.00",
+              "$15.00",
+              "$0.15",
+              "—",
+              "+ 1"
+            ],
+            "signals": [
+              "pricing"
+            ],
+            "url": "https://commandcode.ai/docs/plans/pro",
+            "hash": "7c0601c4fa1a3ee9d3fe5c15bc3582691327704c942f771daa69545c51d02223"
           },
           {
             "key": "row:v2:20d53e007c5a4d72:0:GPT-6.2 Sol:0",
@@ -22442,8 +22471,8 @@
             "hash": "03f581c211c9e38fb50ca42f7a28c6442b7157bad768f52a5874f3758e1d8682"
           },
           {
-            "key": "text:6a2fe8b7d6479e14709c6094fc908189eb7c152b3e512975c91da4f11a64b2ce",
-            "hash": "6a2fe8b7d6479e14709c6094fc908189eb7c152b3e512975c91da4f11a64b2ce",
+            "key": "text:af7c011442ebc3dea90b1bfa7220697f90b7ec841986ce4247ea7d0cec83536b",
+            "hash": "af7c011442ebc3dea90b1bfa7220697f90b7ec841986ce4247ea7d0cec83536b",
             "type": "announcement",
             "signals": [
               "pricing",
@@ -24153,6 +24182,27 @@
             "hash": "f4276bcb58ce654fb6374e0bba78e66a5a20743c3a907c9218bdf3b7c49707ec"
           },
           {
+            "key": "row:v2:00a20accdbd25290:0:Gemini 4 Neon:0",
+            "type": "table-row",
+            "label": "Gemini 4 Neon",
+            "heading": "Usage limits",
+            "columns": [
+              "Model",
+              "Requests / 5 hours",
+              "Requests / week",
+              "Requests / month"
+            ],
+            "cells": [
+              "Gemini 4 Neon",
+              "310",
+              "775",
+              "1,550"
+            ],
+            "signals": [],
+            "url": "https://commandcode.ai/docs/plans/pro",
+            "hash": "619294d7c6dd8fd50d1d6eb77d995c4cbf1245e42c2c4b6958da6ab64e05cbe1"
+          },
+          {
             "key": "row:v2:00a20accdbd25290:0:Gemini 3.6 Flash:0",
             "type": "table-row",
             "label": "Gemini 3.6 Flash",
@@ -25290,6 +25340,33 @@
             ],
             "url": "https://commandcode.ai/docs/plans/pro",
             "hash": "8d3befda227f0e5923e51f06a863443c276f24993a72cef87f766ce195a5d491"
+          },
+          {
+            "key": "row:v2:674840bade3f1b33:0:Gemini 4 Neon:0",
+            "type": "table-row",
+            "label": "Gemini 4 Neon",
+            "heading": "Premium models",
+            "columns": [
+              "Model",
+              "Input",
+              "Output",
+              "Cache Read",
+              "Cache Write",
+              "Monthly credits"
+            ],
+            "cells": [
+              "Gemini 4 Neon",
+              "$3.00",
+              "$15.00",
+              "$0.15",
+              "-",
+              "$20"
+            ],
+            "signals": [
+              "pricing"
+            ],
+            "url": "https://commandcode.ai/docs/plans/pro",
+            "hash": "a690a1207e5ca6065f46ac06568003c2348074d2dea04fe2de3f11c03e95d250"
           },
           {
             "key": "row:v2:674840bade3f1b33:0:Gemini 3.6 Flash:0",
@@ -26915,7 +26992,7 @@
             "url": "https://commandcode.ai/billing?plan=pro"
           }
         ],
-        "hash": "26150206a78eadc58a966ecf1c160c8285dca6f068edca2bbcab3bcbfe746476"
+        "hash": "cf143f55c6e51e7e06d6b54859d789099f0b9f597b8264c230efdb06f78cd18c"
       }
     },
     "command-code-max": {
@@ -26923,14 +27000,14 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/max",
       "kind": "tables",
-      "attemptedAt": "2026-11-18T07:43:47.655Z",
-      "lastSuccessAt": "2026-11-18T07:43:47.655Z",
+      "attemptedAt": "2026-11-19T07:46:15.049Z",
+      "lastSuccessAt": "2026-11-19T07:46:15.049Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-18T07:43:47.655Z",
-        "bodySha256": "1cd032b5f77dbd516b2f3523702fbaf3118c02046045afaf7a9730b4f89a6930",
+        "checkedAt": "2026-11-19T07:46:15.049Z",
+        "bodySha256": "954c9f223a8b49ad97979bea7a2e1a891ac9ef02efc4115d6db13a58b0da3bb1",
         "records": [
           {
             "key": "text:b605350bc00209520b7cd8f546322663356ba630708f71bbf30aead6b3dd608e",
@@ -27323,8 +27400,8 @@
             "url": "https://commandcode.ai/docs/plans/max"
           },
           {
-            "key": "text:c5833717e5e2561319357a0f5261e802cb9fac165a0ad3dddf4528633ce16cc6",
-            "hash": "c5833717e5e2561319357a0f5261e802cb9fac165a0ad3dddf4528633ce16cc6",
+            "key": "text:5dd14ca5c84dd789da3ed81580725042fff4a2718dd9fefa65fa50cd685756f6",
+            "hash": "5dd14ca5c84dd789da3ed81580725042fff4a2718dd9fefa65fa50cd685756f6",
             "type": "announcement",
             "signals": [
               "availability"
@@ -29168,6 +29245,27 @@
             "signals": [],
             "url": "https://commandcode.ai/docs/plans/max",
             "hash": "76ff1a2f9b75eac65e1f80e056850f92e6bfcce2a7b8638ac761a64cc7faa26f"
+          },
+          {
+            "key": "row:v2:49da236506327215:0:Gemini 4 Neon:0",
+            "type": "table-row",
+            "label": "Gemini 4 Neon",
+            "heading": "Usage limits",
+            "columns": [
+              "Model",
+              "Requests / 5 hours",
+              "Requests / week",
+              "Requests / month"
+            ],
+            "cells": [
+              "Gemini 4 Neon",
+              "2,330",
+              "4,650",
+              "7,750"
+            ],
+            "signals": [],
+            "url": "https://commandcode.ai/docs/plans/max",
+            "hash": "0d09588e77e38d4b2129ae2b6048cbaa85b3fb735fc6aae9944fc9c8c97aff80"
           },
           {
             "key": "row:v2:49da236506327215:0:Gemini 4 Argon:0",
@@ -32078,6 +32176,35 @@
             "hash": "d861cd717275852e336cad3bbb6eaf731d6c026ddaf701363b4444f8a7d0690e"
           },
           {
+            "key": "row:v2:49da236506327215:1:Gemini 4 Neon:0",
+            "type": "table-row",
+            "label": "Gemini 4 Neon",
+            "heading": "Usage limits",
+            "columns": [
+              "Model",
+              "Input",
+              "Output",
+              "Cache Read",
+              "Cache Write",
+              "Max 10× credits",
+              "Max 20× credits"
+            ],
+            "cells": [
+              "Gemini 4 Neon",
+              "$3.00",
+              "$15.00",
+              "$0.15",
+              "-",
+              "$100",
+              "$200"
+            ],
+            "signals": [
+              "pricing"
+            ],
+            "url": "https://commandcode.ai/docs/plans/max",
+            "hash": "418f9f18aad0954d1e5414e4bd2d688bcd2791576f268babccf5fcb41a2518ea"
+          },
+          {
             "key": "row:v2:49da236506327215:1:Gemini 4 Argon:0",
             "type": "table-row",
             "label": "Gemini 4 Argon",
@@ -33088,7 +33215,7 @@
             "url": "https://commandcode.ai/billing"
           }
         ],
-        "hash": "85742fdec8d23cc32ecce3c9311c7583f96c5307a5445362ee06282168f9b14f"
+        "hash": "5d170041e50cd5bde16fa594bdbe1f8cc11b094afe6f292eb3a4a9781633aec8"
       }
     },
     "command-code-models": {
@@ -33096,14 +33223,14 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/reference/cli/models",
       "kind": "tables",
-      "attemptedAt": "2026-11-18T07:43:47.655Z",
-      "lastSuccessAt": "2026-11-18T07:43:47.655Z",
+      "attemptedAt": "2026-11-19T07:46:15.049Z",
+      "lastSuccessAt": "2026-11-19T07:46:15.049Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-18T07:43:47.655Z",
-        "bodySha256": "98db91a73802c72b34fb5269ee1fdeca115ba2a841524dbff5b15b8106195110",
+        "checkedAt": "2026-11-19T07:46:15.049Z",
+        "bodySha256": "62b4cd655ce367a90b7a4c848e0aaf41e2c807e007460b83a3ecc20f5b2692e8",
         "records": [
           {
             "key": "text:b605350bc00209520b7cd8f546322663356ba630708f71bbf30aead6b3dd608e",
@@ -34187,6 +34314,29 @@
             ],
             "url": "https://commandcode.ai/docs/reference/cli/models",
             "hash": "fea0c57bf008db053852efab78328b0fbc45c16ec92f6ab6d23cf8500ec0cf5c"
+          },
+          {
+            "key": "row:v2:df78673acdc953f5:0:google/gemini-4-neon Copy model id:0",
+            "type": "table-row",
+            "label": "google/gemini-4-neon Copy model id",
+            "heading": "Google",
+            "columns": [
+              "Model ID",
+              "Name",
+              "Capabilities",
+              "Best for"
+            ],
+            "cells": [
+              "google/gemini-4-neon Copy model id",
+              "Gemini 4 Neon",
+              "+ 1",
+              "fast multimodal reasoning for coding & agents"
+            ],
+            "signals": [
+              "availability"
+            ],
+            "url": "https://commandcode.ai/docs/reference/cli/models",
+            "hash": "d074f73f6f1bc0f77dd3a0bf95d23158352e436575e854a21b553240f1e19247"
           },
           {
             "key": "row:v2:6762615059339692:0:inclusionai/ling-3.1-flash Copy model id:0",
@@ -35822,7 +35972,7 @@
             "url": "https://commandcode.ai/docs/interactive-mode"
           }
         ],
-        "hash": "c0739e372bf79319007e33b823a9217790a38c6bc220fd63a06e0c5848e2fa02"
+        "hash": "8d9097767003c795e170ebb2e899b834d2c32650ee9899962c8210856a483cda"
       }
     },
     "command-code-terms": {
@@ -35830,14 +35980,14 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/resources/pricing-limits",
       "kind": "tables",
-      "attemptedAt": "2026-11-18T07:43:47.655Z",
-      "lastSuccessAt": "2026-11-18T07:43:47.655Z",
+      "attemptedAt": "2026-11-19T07:46:15.049Z",
+      "lastSuccessAt": "2026-11-19T07:46:15.049Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-18T07:43:47.655Z",
-        "bodySha256": "4636f5db1729d1853ba89fc8e4654157f4fdf46908b7c71c31efc6c1e8a6eab9",
+        "checkedAt": "2026-11-19T07:46:15.049Z",
+        "bodySha256": "ef430d0913350ce21b38884fc71601731e77413be2b4ad828f73d303b70d93f3",
         "records": [
           {
             "key": "text:b605350bc00209520b7cd8f546322663356ba630708f71bbf30aead6b3dd608e",
@@ -36991,8 +37141,8 @@
             "url": "https://commandcode.ai/docs/resources/pricing-limits"
           },
           {
-            "key": "text:76e749d2523bba668ee63db2cb931d4e523b3f7d973d339b050a9b84a259dfd3",
-            "hash": "76e749d2523bba668ee63db2cb931d4e523b3f7d973d339b050a9b84a259dfd3",
+            "key": "text:c3ce12afefc2303596cec7e0fa172d2291c7009bd63acb9bb1e04e40709ca4e6",
+            "hash": "c3ce12afefc2303596cec7e0fa172d2291c7009bd63acb9bb1e04e40709ca4e6",
             "type": "announcement",
             "signals": [
               "promotion"
@@ -38835,6 +38985,16 @@
             "url": "https://commandcode.ai/docs/resources/pricing-limits"
           },
           {
+            "key": "text:95fb049b4f5cf76d7d944977f7d9fc818488fd9c7453d42dd8fcc00c532e1e69",
+            "hash": "95fb049b4f5cf76d7d944977f7d9fc818488fd9c7453d42dd8fcc00c532e1e69",
+            "type": "announcement",
+            "signals": [],
+            "models": [
+              "Gemini 4 Neon"
+            ],
+            "url": "https://commandcode.ai/docs/resources/pricing-limits"
+          },
+          {
             "key": "text:4ce5ae17197576b770e7e21d8115c0e0fd268f7ca5a53d5d0eead79e7cf5a541",
             "hash": "4ce5ae17197576b770e7e21d8115c0e0fd268f7ca5a53d5d0eead79e7cf5a541",
             "type": "announcement",
@@ -39177,8 +39337,8 @@
             "url": "https://commandcode.ai/docs/resources/pricing-limits"
           },
           {
-            "key": "text:c2b94d41f5e80a90d017735accdfac816ff5ebf32c7a90aaefa862fe8367b06a",
-            "hash": "c2b94d41f5e80a90d017735accdfac816ff5ebf32c7a90aaefa862fe8367b06a",
+            "key": "text:9b2624b66d9f8bbe264a73b725b36a348e961fda4bc8b2b7dc414a7253733559",
+            "hash": "9b2624b66d9f8bbe264a73b725b36a348e961fda4bc8b2b7dc414a7253733559",
             "type": "announcement",
             "signals": [
               "pricing",
@@ -41042,7 +41202,7 @@
             "url": "https://commandcode.ai/docs/resources/pricing-limits"
           }
         ],
-        "hash": "e20f9c139593d150ac551981ce190a3f82390a5cce4ab6ee8b9a5ee5572ca87c"
+        "hash": "ef19c1c1676ed8c99430f8f552931d52f56c6479fa2b26f984a95c1336daf15d"
       }
     },
     "command-code-releases": {
@@ -41050,14 +41210,14 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/changelog",
       "kind": "document",
-      "attemptedAt": "2026-11-18T07:43:47.655Z",
-      "lastSuccessAt": "2026-11-18T07:43:47.655Z",
+      "attemptedAt": "2026-11-19T07:46:15.049Z",
+      "lastSuccessAt": "2026-11-19T07:46:15.049Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-18T07:43:47.655Z",
-        "bodySha256": "1602c9d622e8c4f859401180e6337228b9f0c270deb5924b3ca2ab57c7698374",
+        "checkedAt": "2026-11-19T07:46:15.049Z",
+        "bodySha256": "cc79b98efaef0841a79a41612aa5e7b118479dacfa5a60f6337f2e2f0f3d79af",
         "records": [
           {
             "key": "text:bd8dd4dffb1815aee0594f932f11f97d5d8c758be925e2b3ca3d2274d31060a6",
@@ -41069,6 +41229,26 @@
             ],
             "models": [],
             "url": "https://commandcode.ai/launch"
+          },
+          {
+            "key": "text:e0934422e5d44bc369a58bd91d0051d0fd4a5cad100d6af9eeaa15214009f131",
+            "hash": "e0934422e5d44bc369a58bd91d0051d0fd4a5cad100d6af9eeaa15214009f131",
+            "type": "announcement",
+            "signals": [
+              "availability"
+            ],
+            "models": [],
+            "url": "https://commandcode.ai/changelog"
+          },
+          {
+            "key": "text:fbd9d891f867e256c461f0d2dbbc8cff05904cafb85db9a9773edb286b144129",
+            "hash": "fbd9d891f867e256c461f0d2dbbc8cff05904cafb85db9a9773edb286b144129",
+            "type": "announcement",
+            "signals": [
+              "promotion"
+            ],
+            "models": [],
+            "url": "https://commandcode.ai/changelog"
           },
           {
             "key": "text:2f94263cf9c84de833d7bb8e2d9e36119123dbdd0dd57254d1882c1620fa43ee",
@@ -45240,7 +45420,7 @@
             "url": "https://commandcode.ai/changelog"
           }
         ],
-        "hash": "addc17e317f76cc2a06637dc8041c671bbb38ccfab4dbd7ab46ec2744cf97851"
+        "hash": "149099060951d761ab15596669d4edad1791c8abb4e72a3bc12fe0f9eb23d72c"
       }
     },
     "ollama-pricing": {
@@ -45248,14 +45428,14 @@
       "channel": "Ollama",
       "url": "https://ollama.com/pricing",
       "kind": "tables",
-      "attemptedAt": "2026-11-18T07:43:47.655Z",
-      "lastSuccessAt": "2026-11-18T07:43:47.655Z",
+      "attemptedAt": "2026-11-19T07:46:15.049Z",
+      "lastSuccessAt": "2026-11-19T07:46:15.049Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-18T07:43:47.655Z",
-        "bodySha256": "5db6fcfe9d200fbee1047df5268c57cf9300a6b035f6edc8e48e47a061304410",
+        "checkedAt": "2026-11-19T07:46:15.049Z",
+        "bodySha256": "03e071147d4617107b689a9c81cbab6fcecb852a61eb23121c70ee39800e3709",
         "records": [
           {
             "key": "text:dfe95783edfef7918760312f94edd764f4ce3ffd38b90c2c955a0cc3b250f040",
@@ -46307,15 +46487,25 @@
       "channel": "Ollama",
       "url": "https://ollama.com/blog",
       "kind": "document",
-      "attemptedAt": "2026-11-18T07:43:47.655Z",
-      "lastSuccessAt": "2026-11-18T07:43:47.655Z",
+      "attemptedAt": "2026-11-19T07:46:15.049Z",
+      "lastSuccessAt": "2026-11-19T07:46:15.049Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-18T07:43:47.655Z",
-        "bodySha256": "6726c9fa158bb87d825715922f690327977ab44c2e9a63520f718eb1ff1a3d97",
+        "checkedAt": "2026-11-19T07:46:15.049Z",
+        "bodySha256": "d351a7486126d11066c194e1a9bbe099a31dfa082351fb122ff467e7657c69af",
         "records": [
+          {
+            "key": "text:ab3c438e769e5ab5a3d07b57c25a52b9c414b88a7334e486dcf6c70f96b0073c",
+            "hash": "ab3c438e769e5ab5a3d07b57c25a52b9c414b88a7334e486dcf6c70f96b0073c",
+            "type": "announcement",
+            "signals": [
+              "availability"
+            ],
+            "models": [],
+            "url": "https://ollama.com/blog/open-models-long-horizon-agents"
+          },
           {
             "key": "text:5d68e38175ac0eeec7cbf5c22ca2520d5d61efa1755ebba6cdb47e6124c3dd37",
             "hash": "5d68e38175ac0eeec7cbf5c22ca2520d5d61efa1755ebba6cdb47e6124c3dd37",
@@ -46888,7 +47078,7 @@
             "url": "https://ollama.com/blog/run-llama2-uncensored-locally"
           }
         ],
-        "hash": "0bbb33937c5d6285f64e917f1ef450ae3092d40db5fd8b800c4f31e6d45c2136"
+        "hash": "595534480124c3e72338c0eed61297c271817fb4e07319c3a0ec224aa0780cb1"
       }
     },
     "factory-models": {
@@ -46896,14 +47086,14 @@
       "channel": "Factory",
       "url": "https://docs.factory.com/models.md",
       "kind": "tables",
-      "attemptedAt": "2026-11-18T07:43:47.655Z",
-      "lastSuccessAt": "2026-11-18T07:43:47.655Z",
+      "attemptedAt": "2026-11-19T07:46:15.049Z",
+      "lastSuccessAt": "2026-11-19T07:46:15.049Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-18T07:43:47.655Z",
-        "bodySha256": "5b78673acafe4ec813738d8653a46a1e67103bc877717f0589f381efaaf0cbaf",
+        "checkedAt": "2026-11-19T07:46:15.049Z",
+        "bodySha256": "1ff0465b3846b7521d290121a577cdbb0a48b5c6f58e2d84b185c8b15ec9e98a",
         "records": [
           {
             "key": "text:0b28deb982605f12b721a450cd577fb09cb57b68ebe576202b079d4053c492d0",
@@ -47346,6 +47536,69 @@
             "url": "https://docs.factory.com/models.md"
           },
           {
+            "key": "row:v2:576cbe8c59cb4b7c:0:GPT-6.2 Astra:0",
+            "type": "table-row",
+            "label": "GPT-6.2 Astra",
+            "heading": "<span className=\"provider-heading\"><img src=\"/docs-assets/images/model-icons/openai.svg\" alt=\"OpenAI logo\" className=\"provider-icon openai-icon\" />Ope",
+            "columns": [
+              "Model",
+              "Model ID",
+              "Multiplier",
+              "Reasoning"
+            ],
+            "cells": [
+              "GPT-6.2 Astra",
+              "`gpt-6.2-astra`",
+              "3.2×",
+              "`low`, `medium` (default), `high`, `xhigh`, `max`"
+            ],
+            "signals": [],
+            "url": "https://docs.factory.com/models.md",
+            "hash": "7d329d23e47bec4f69e298a08077e82573867e4b8ef8af70f2ebea295c16570c"
+          },
+          {
+            "key": "row:v2:576cbe8c59cb4b7c:0:GPT-6.2 Astra Fast:0",
+            "type": "table-row",
+            "label": "GPT-6.2 Astra Fast",
+            "heading": "<span className=\"provider-heading\"><img src=\"/docs-assets/images/model-icons/openai.svg\" alt=\"OpenAI logo\" className=\"provider-icon openai-icon\" />Ope",
+            "columns": [
+              "Model",
+              "Model ID",
+              "Multiplier",
+              "Reasoning"
+            ],
+            "cells": [
+              "GPT-6.2 Astra Fast",
+              "`gpt-6.2-astra-fast`",
+              "6.4×",
+              "`low`, `medium` (default), `high`, `xhigh`, `max`"
+            ],
+            "signals": [],
+            "url": "https://docs.factory.com/models.md",
+            "hash": "7eeb8a6c556266045afe5901f3334e456b4e24e8ee6910f06ae1e19aaaa25599"
+          },
+          {
+            "key": "row:v2:576cbe8c59cb4b7c:0:GPT-6.2 Astra Ultra Fast:0",
+            "type": "table-row",
+            "label": "GPT-6.2 Astra Ultra Fast",
+            "heading": "<span className=\"provider-heading\"><img src=\"/docs-assets/images/model-icons/openai.svg\" alt=\"OpenAI logo\" className=\"provider-icon openai-icon\" />Ope",
+            "columns": [
+              "Model",
+              "Model ID",
+              "Multiplier",
+              "Reasoning"
+            ],
+            "cells": [
+              "GPT-6.2 Astra Ultra Fast",
+              "`gpt-6.2-astra-ultrafast`",
+              "9.6×",
+              "`low`, `medium` (default), `high`, `xhigh`, `max`"
+            ],
+            "signals": [],
+            "url": "https://docs.factory.com/models.md",
+            "hash": "c11d73ea9d6fa4ff8e48d65861d653ab15bcfaf9ac4b35accf31bc833377972a"
+          },
+          {
             "key": "row:v2:576cbe8c59cb4b7c:0:GPT-6 Astra:0",
             "type": "table-row",
             "label": "GPT-6 Astra",
@@ -47365,6 +47618,69 @@
             "signals": [],
             "url": "https://docs.factory.com/models.md",
             "hash": "3b174c8408a507cc71ac8ceda5520921de3bb93c0d280d3b66062a8c03f906fb"
+          },
+          {
+            "key": "row:v2:576cbe8c59cb4b7c:0:GPT-6.2 Sol:0",
+            "type": "table-row",
+            "label": "GPT-6.2 Sol",
+            "heading": "<span className=\"provider-heading\"><img src=\"/docs-assets/images/model-icons/openai.svg\" alt=\"OpenAI logo\" className=\"provider-icon openai-icon\" />Ope",
+            "columns": [
+              "Model",
+              "Model ID",
+              "Multiplier",
+              "Reasoning"
+            ],
+            "cells": [
+              "GPT-6.2 Sol",
+              "`gpt-6.2-sol`",
+              "0.8×",
+              "`low`, `medium` (default), `high`, `xhigh`, `max`"
+            ],
+            "signals": [],
+            "url": "https://docs.factory.com/models.md",
+            "hash": "f8e61525885025758f6d0e62b755e0558e84a0ab3cfd41509687a0ef1080d605"
+          },
+          {
+            "key": "row:v2:576cbe8c59cb4b7c:0:GPT-6.2 Sol Fast:0",
+            "type": "table-row",
+            "label": "GPT-6.2 Sol Fast",
+            "heading": "<span className=\"provider-heading\"><img src=\"/docs-assets/images/model-icons/openai.svg\" alt=\"OpenAI logo\" className=\"provider-icon openai-icon\" />Ope",
+            "columns": [
+              "Model",
+              "Model ID",
+              "Multiplier",
+              "Reasoning"
+            ],
+            "cells": [
+              "GPT-6.2 Sol Fast",
+              "`gpt-6.2-sol-fast`",
+              "1.6×",
+              "`low`, `medium` (default), `high`, `xhigh`, `max`"
+            ],
+            "signals": [],
+            "url": "https://docs.factory.com/models.md",
+            "hash": "b770e7fecaaeae72100bf4cbcda15be2673ed0f32a2cb1d8c85c91ab7e57f5ed"
+          },
+          {
+            "key": "row:v2:576cbe8c59cb4b7c:0:GPT-6.2 Sol Ultra Fast:0",
+            "type": "table-row",
+            "label": "GPT-6.2 Sol Ultra Fast",
+            "heading": "<span className=\"provider-heading\"><img src=\"/docs-assets/images/model-icons/openai.svg\" alt=\"OpenAI logo\" className=\"provider-icon openai-icon\" />Ope",
+            "columns": [
+              "Model",
+              "Model ID",
+              "Multiplier",
+              "Reasoning"
+            ],
+            "cells": [
+              "GPT-6.2 Sol Ultra Fast",
+              "`gpt-6.2-sol-ultrafast`",
+              "2.4×",
+              "`low`, `medium` (default), `high`, `xhigh`, `max`"
+            ],
+            "signals": [],
+            "url": "https://docs.factory.com/models.md",
+            "hash": "610055420fc472925d5707d9a83d9a95c2f03f042ad68eaa81ad2c718b6a169a"
           },
           {
             "key": "row:v2:576cbe8c59cb4b7c:0:GPT-6.1 Sol:0",
@@ -47858,11 +48174,11 @@
               "Gemini 4 Hydrogen",
               "`gemini-4-hydrogen`",
               "0.6×",
-              "`low`, `medium`, `high` (default)"
+              "`low`, `medium`, `high` (default), `xhigh`"
             ],
             "signals": [],
             "url": "https://docs.factory.com/models.md",
-            "hash": "194df19e1eafa029dcdcae4a0104c380f30acbf24ac84ac2735628514fc539fd"
+            "hash": "92929fc8a51c30891204f3781eaa9ba39dc711628a45e664db9c374a483490be"
           },
           {
             "key": "row:v2:823f3bfa47a96e44:0:Gemini 4 Carbon<sup>†</sup>:0",
@@ -48739,7 +49055,7 @@
             "url": "https://docs.factory.com/models.md"
           }
         ],
-        "hash": "4293bb6acf0fdbbf932cb989e2ddc8dd25ac3c094617b26f7b473b1c18cb307a"
+        "hash": "c90c5a163f4a9d4db443f23c680c93f0e4e7d7a19a0b3bf7764327d39314cf36"
       }
     },
     "factory-plans": {
@@ -48747,13 +49063,13 @@
       "channel": "Factory",
       "url": "https://docs.factory.com/pricing/individuals.md",
       "kind": "document",
-      "attemptedAt": "2026-11-18T07:43:47.655Z",
-      "lastSuccessAt": "2026-11-18T07:43:47.655Z",
+      "attemptedAt": "2026-11-19T07:46:15.049Z",
+      "lastSuccessAt": "2026-11-19T07:46:15.049Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-18T07:43:47.655Z",
+        "checkedAt": "2026-11-19T07:46:15.049Z",
         "bodySha256": "7c75704906d429c519fd245576b23b632bf0a2369b5ac3eb16fbdbe3daa5c4c3",
         "records": [
           {
@@ -49002,14 +49318,14 @@
       "channel": "Factory",
       "url": "https://docs.factory.com/changelog/release-notes.md",
       "kind": "document",
-      "attemptedAt": "2026-11-18T07:43:47.655Z",
-      "lastSuccessAt": "2026-11-18T07:43:47.655Z",
+      "attemptedAt": "2026-11-19T07:46:15.049Z",
+      "lastSuccessAt": "2026-11-19T07:46:15.049Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-18T07:43:47.655Z",
-        "bodySha256": "de7d261c4e7dbd45d2a5e2eb7ff8fae446f89d2e211d5421dde575a44eeccd71",
+        "checkedAt": "2026-11-19T07:46:15.049Z",
+        "bodySha256": "17c9920880eab7f440d16e435d225e2c0a5f8a8a95a65a13a62fa7bae60d5600",
         "records": [
           {
             "key": "text:49f3e532357877d7d6116a45f992cfcd290f4689bc9373403427ca96ced2a40e",
@@ -54480,14 +54796,14 @@
       "channel": "Cursor",
       "url": "https://cursor.com/docs/models-and-pricing",
       "kind": "tables",
-      "attemptedAt": "2026-11-18T07:43:47.655Z",
-      "lastSuccessAt": "2026-11-18T07:43:47.655Z",
+      "attemptedAt": "2026-11-19T07:46:15.049Z",
+      "lastSuccessAt": "2026-11-19T07:46:15.049Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-18T07:43:47.655Z",
-        "bodySha256": "0d03656994174b22d1757994ed824f7fab53936d62d362d5fc6efcd05dda8d30",
+        "checkedAt": "2026-11-19T07:46:15.049Z",
+        "bodySha256": "1291111bce88c8b19e5c02e16694dca3e5442840111299e7490d7729172e0a20",
         "records": [
           {
             "key": "text:6c7ad5d1af746cc7ef5c32cb09479f830dfe5d5418e524a762cbb1699cb4e70c",
@@ -54547,6 +54863,16 @@
             "signals": [],
             "models": [
               "Gemini 4 Carbon"
+            ],
+            "url": "https://cursor.com/docs/models-and-pricing"
+          },
+          {
+            "key": "text:95fb049b4f5cf76d7d944977f7d9fc818488fd9c7453d42dd8fcc00c532e1e69",
+            "hash": "95fb049b4f5cf76d7d944977f7d9fc818488fd9c7453d42dd8fcc00c532e1e69",
+            "type": "announcement",
+            "signals": [],
+            "models": [
+              "Gemini 4 Neon"
             ],
             "url": "https://cursor.com/docs/models-and-pricing"
           },
@@ -55468,13 +55794,13 @@
               "-",
               "$ 0.075",
               "$ 3.75",
-              "No"
+              "Yes"
             ],
             "signals": [
               "pricing"
             ],
             "url": "https://cursor.com/docs/models-and-pricing",
-            "hash": "797bd7a5a088c02f604f2d5c60904494ba78bdc15e2db8649e3e9eaad8b01c77"
+            "hash": "bd89972cb7f85aa7ade551d0f2b0db808f59d2bc3b8d810934f66c68c04187a7"
           },
           {
             "key": "row:v2:27831da7cfacf8d7:0:Gemini 4 Argon:0",
@@ -55495,13 +55821,13 @@
               "-",
               "$ 0.1",
               "$ 10",
-              "No"
+              "Yes"
             ],
             "signals": [
               "pricing"
             ],
             "url": "https://cursor.com/docs/models-and-pricing",
-            "hash": "6eedf4fe736e88476f0215e60c7e3afb8c0399ecddd9a65ec6bf8237485110f0"
+            "hash": "b3c441f8c3d95ecfaa303c9860a48ac64dd4ecaa5a732c38e84657f06bd33f35"
           },
           {
             "key": "row:v2:27831da7cfacf8d7:0:Gemini 4 Carbon:0",
@@ -55522,13 +55848,13 @@
               "-",
               "$ 0.1",
               "$ 10",
-              "No"
+              "Yes"
             ],
             "signals": [
               "pricing"
             ],
             "url": "https://cursor.com/docs/models-and-pricing",
-            "hash": "ea83a4c4caa47b9cc8b99a194a4c595216251278b06725027a7675a8464da626"
+            "hash": "8a3729d5bfa219e9dc8e10984ced2c3291488a1969ebd9d08220e5d80823ae04"
           },
           {
             "key": "row:v2:27831da7cfacf8d7:0:Gemini 4 Hydrogen:0",
@@ -55549,13 +55875,40 @@
               "-",
               "$ 0.075",
               "$ 7.5",
-              "No"
+              "Yes"
             ],
             "signals": [
               "pricing"
             ],
             "url": "https://cursor.com/docs/models-and-pricing",
-            "hash": "1ec090fee17b9638a327780e1cdd0a2aad045eb4b31d923f3fbeff90257cbbc5"
+            "hash": "ca3b14717ca85a62ffeb794d1d3e84eef453b700e0b4f9383e7c5542aaec0bb9"
+          },
+          {
+            "key": "row:v2:27831da7cfacf8d7:0:Gemini 4 Neon:0",
+            "type": "table-row",
+            "label": "Gemini 4 Neon",
+            "heading": "Model pricing",
+            "columns": [
+              "Name",
+              "Input",
+              "Cache Write",
+              "Cache Read",
+              "Output",
+              "US Data Residency"
+            ],
+            "cells": [
+              "Gemini 4 Neon",
+              "$ 3",
+              "-",
+              "$ 0.15",
+              "$ 15",
+              "Yes"
+            ],
+            "signals": [
+              "pricing"
+            ],
+            "url": "https://cursor.com/docs/models-and-pricing",
+            "hash": "39f9ece04e956af4c64a304343d55ac89fff9dd6d32d6c389635250478196307"
           },
           {
             "key": "row:v2:27831da7cfacf8d7:0:GPT-5.6 Luna:0",
@@ -56587,13 +56940,13 @@
               "-",
               "$ 0.075",
               "$ 3.75",
-              "No"
+              "Yes"
             ],
             "signals": [
               "pricing"
             ],
             "url": "https://cursor.com/docs/models-and-pricing",
-            "hash": "797bd7a5a088c02f604f2d5c60904494ba78bdc15e2db8649e3e9eaad8b01c77"
+            "hash": "bd89972cb7f85aa7ade551d0f2b0db808f59d2bc3b8d810934f66c68c04187a7"
           },
           {
             "key": "row:v2:27831da7cfacf8d7:1:Gemini 4 Argon:0",
@@ -56614,13 +56967,13 @@
               "-",
               "$ 0.1",
               "$ 10",
-              "No"
+              "Yes"
             ],
             "signals": [
               "pricing"
             ],
             "url": "https://cursor.com/docs/models-and-pricing",
-            "hash": "6eedf4fe736e88476f0215e60c7e3afb8c0399ecddd9a65ec6bf8237485110f0"
+            "hash": "b3c441f8c3d95ecfaa303c9860a48ac64dd4ecaa5a732c38e84657f06bd33f35"
           },
           {
             "key": "row:v2:27831da7cfacf8d7:1:Gemini 4 Carbon:0",
@@ -56641,13 +56994,13 @@
               "-",
               "$ 0.1",
               "$ 10",
-              "No"
+              "Yes"
             ],
             "signals": [
               "pricing"
             ],
             "url": "https://cursor.com/docs/models-and-pricing",
-            "hash": "ea83a4c4caa47b9cc8b99a194a4c595216251278b06725027a7675a8464da626"
+            "hash": "8a3729d5bfa219e9dc8e10984ced2c3291488a1969ebd9d08220e5d80823ae04"
           },
           {
             "key": "row:v2:27831da7cfacf8d7:1:Gemini 4 Hydrogen:0",
@@ -56668,13 +57021,40 @@
               "-",
               "$ 0.075",
               "$ 7.5",
-              "No"
+              "Yes"
             ],
             "signals": [
               "pricing"
             ],
             "url": "https://cursor.com/docs/models-and-pricing",
-            "hash": "1ec090fee17b9638a327780e1cdd0a2aad045eb4b31d923f3fbeff90257cbbc5"
+            "hash": "ca3b14717ca85a62ffeb794d1d3e84eef453b700e0b4f9383e7c5542aaec0bb9"
+          },
+          {
+            "key": "row:v2:27831da7cfacf8d7:1:Gemini 4 Neon:0",
+            "type": "table-row",
+            "label": "Gemini 4 Neon",
+            "heading": "Model pricing",
+            "columns": [
+              "Name",
+              "Input",
+              "Cache Write",
+              "Cache Read",
+              "Output",
+              "US Data Residency"
+            ],
+            "cells": [
+              "Gemini 4 Neon",
+              "$ 3",
+              "-",
+              "$ 0.15",
+              "$ 15",
+              "Yes"
+            ],
+            "signals": [
+              "pricing"
+            ],
+            "url": "https://cursor.com/docs/models-and-pricing",
+            "hash": "39f9ece04e956af4c64a304343d55ac89fff9dd6d32d6c389635250478196307"
           },
           {
             "key": "row:v2:27831da7cfacf8d7:1:GPT-5.6 Luna:0",
@@ -56785,7 +57165,7 @@
             "hash": "1f4bc2212039ec252665b71af069e4e28b42f81ba4f114e8eda1f189bfd56d19"
           }
         ],
-        "hash": "b16f0ad5e7a32543925b9abe5a580fee2bd91faaa14266558ddd77aaae179873"
+        "hash": "5760145ba1751db9986436c7a5fe22bde0555885c7974247628d2d302342fbc4"
       }
     },
     "cursor-releases": {
@@ -56793,14 +57173,14 @@
       "channel": "Cursor",
       "url": "https://cursor.com/changelog",
       "kind": "document",
-      "attemptedAt": "2026-11-18T07:43:47.655Z",
-      "lastSuccessAt": "2026-11-18T07:43:47.655Z",
+      "attemptedAt": "2026-11-19T07:46:15.049Z",
+      "lastSuccessAt": "2026-11-19T07:46:15.049Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-18T07:43:47.655Z",
-        "bodySha256": "43a5aab8ac648c7482b4c8139062da484a6d040041cdfa92a73785a79a29d550",
+        "checkedAt": "2026-11-19T07:46:15.049Z",
+        "bodySha256": "03c3d3201490b7ff457f89c20fc6d90414ef29ce656f40388617386f9bf9477c",
         "records": [
           {
             "key": "text:ddcce6feab143eda3ac8d33669e14870f201c2f2b5f9b27a875942a90b8bca89",
@@ -56917,14 +57297,14 @@
       "channel": "Devin",
       "url": "https://docs.devin.ai/release-notes/overview",
       "kind": "document",
-      "attemptedAt": "2026-11-18T07:43:47.655Z",
-      "lastSuccessAt": "2026-11-18T07:43:47.655Z",
+      "attemptedAt": "2026-11-19T07:46:15.049Z",
+      "lastSuccessAt": "2026-11-19T07:46:15.049Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-18T07:43:47.655Z",
-        "bodySha256": "fe8a3715b8eaef2def17547b877fbe47b1b1c6b279d7571922a6089bdeb1e473",
+        "checkedAt": "2026-11-19T07:46:15.049Z",
+        "bodySha256": "8471160850c1ca3e7c703b9be10e22e5d58781801c28ebc0c6e1e485e8ff0897",
         "records": [
           {
             "key": "text:8f188bc90439c5b341aca73eb4d84c3dd04eb3bbd57acda295334fbde1178a0f",
@@ -57729,14 +58109,14 @@
       "channel": "Alibaba",
       "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan",
       "kind": "tables",
-      "attemptedAt": "2026-11-18T07:43:47.655Z",
-      "lastSuccessAt": "2026-11-18T07:43:47.655Z",
+      "attemptedAt": "2026-11-19T07:46:15.049Z",
+      "lastSuccessAt": "2026-11-19T07:46:15.049Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-18T07:43:47.655Z",
-        "bodySha256": "72bf9cc58d7b54692684a510818681c52938f21dcb13b26c56aae274ae05c0ad",
+        "checkedAt": "2026-11-19T07:46:15.049Z",
+        "bodySha256": "bad4e82d214457251dcbc44015902174bc22dcbda1b8252f534952d4e244c591",
         "records": [
           {
             "key": "text:0686d515f782875e3d4496656bed3259cca990eb3f6893deb942abc5bd278f24",
@@ -58236,14 +58616,14 @@
       "channel": "Alibaba",
       "url": "https://help.aliyun.com/zh/model-studio/coding-plan",
       "kind": "tables",
-      "attemptedAt": "2026-11-18T07:43:47.655Z",
-      "lastSuccessAt": "2026-11-18T07:43:47.655Z",
+      "attemptedAt": "2026-11-19T07:46:15.049Z",
+      "lastSuccessAt": "2026-11-19T07:46:15.049Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-18T07:43:47.655Z",
-        "bodySha256": "7b373f4c012301461bbbb15ab3b65727f0fd8070b37991cb9d748b0d371a9672",
+        "checkedAt": "2026-11-19T07:46:15.049Z",
+        "bodySha256": "15a548b91b7ed959c060de02398966ed18b291908050a8d03ff4c4ab039d4030",
         "records": [
           {
             "key": "text:775eabf14c55f66ea3e7ef7b3737a001f72434663b87e260b4d68fe798af9495",
@@ -58697,14 +59077,14 @@
       "channel": "Alibaba",
       "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
       "kind": "tables",
-      "attemptedAt": "2026-11-18T07:43:47.655Z",
-      "lastSuccessAt": "2026-11-18T07:43:47.655Z",
+      "attemptedAt": "2026-11-19T07:46:15.049Z",
+      "lastSuccessAt": "2026-11-19T07:46:15.049Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-18T07:43:47.655Z",
-        "bodySha256": "820283a99c1a1fd9457a065391280efb99fae5f646282e8c5e66a38adb5d4d7a",
+        "checkedAt": "2026-11-19T07:46:15.049Z",
+        "bodySha256": "e7f36605e2b8751d1e23055f3c2a390962e5d4cd378f1477f677e106435aaf28",
         "records": [
           {
             "key": "text:c6331a8c511a8bcbc3875d6eab0b268db2d55d5b5e18db81347f58611f6c7435",
@@ -59606,13 +59986,79 @@
       "channel": "OpenCode",
       "url": "https://x.com/opencode",
       "kind": "social",
-      "attemptedAt": "2026-11-18T07:43:47.655Z",
-      "lastSuccessAt": "2026-11-17T08:09:05.046Z",
-      "status": "failed",
-      "consecutiveFailures": 1,
+      "attemptedAt": "2026-11-19T07:46:15.049Z",
+      "lastSuccessAt": "2026-11-19T07:46:15.049Z",
+      "status": "checked",
+      "consecutiveFailures": 0,
       "retrieval": "official-oembed; discovery may use mirror",
       "snapshot": {
         "records": [
+          {
+            "key": "post:2123297341679554787",
+            "type": "announcement",
+            "hash": "1a9287eba57b4d83aad7dbed82a08c4ca0912589c158589665400aa1d1e1a6eb",
+            "signals": [
+              "promotion"
+            ],
+            "models": [],
+            "url": "https://x.com/opencode/status/2123297341679554787",
+            "relevant": true
+          },
+          {
+            "key": "post:2123214984389771684",
+            "type": "announcement",
+            "hash": "2d1e140731d3962712935104eb7164a014deb382434f4270645abd5dbf4c7503",
+            "signals": [],
+            "models": [],
+            "url": "https://x.com/opencode/status/2123214984389771684",
+            "relevant": true
+          },
+          {
+            "key": "post:2123106134689206524",
+            "type": "announcement",
+            "hash": "6efcd4461aea2583930347ee54a5e6ad98f7f1a88b1bfb7108d19f686519e736",
+            "signals": [],
+            "models": [],
+            "url": "https://x.com/opencode/status/2123106134689206524",
+            "relevant": false
+          },
+          {
+            "key": "post:2123106127030210786",
+            "type": "announcement",
+            "hash": "1bc8dc8d39c21eaad9319d80022e3c8f1f513c9e9fab1c8a2bb9964fceeae1e5",
+            "signals": [
+              "promotion"
+            ],
+            "models": [],
+            "url": "https://x.com/opencode/status/2123106127030210786",
+            "relevant": true
+          },
+          {
+            "key": "post:2122969474571583885",
+            "type": "announcement",
+            "hash": "93b1d84e4d0983e629dfdec0b3cf17ff2c3188d4c10a25da721bc95c676a9359",
+            "signals": [
+              "pricing"
+            ],
+            "models": [
+              "GLM 5.3 till end of the week https://t.co/4qEZ6YzKgv "
+            ],
+            "url": "https://x.com/opencode/status/2122969474571583885",
+            "relevant": true
+          },
+          {
+            "key": "post:2122763721923559595",
+            "type": "announcement",
+            "hash": "af43cc3c52b25b67e3c6edc60ee68e884129d72c84fb53939e90bc469309a9e3",
+            "signals": [
+              "pricing"
+            ],
+            "models": [
+              "GLM 5.3 usage for "
+            ],
+            "url": "https://x.com/opencode/status/2122763721923559595",
+            "relevant": true
+          },
           {
             "key": "post:2122601201531507042",
             "type": "announcement",
@@ -59682,101 +60128,58 @@
             "models": [],
             "url": "https://x.com/opencode/status/2122231173720224224",
             "relevant": true
-          },
-          {
-            "key": "post:2122159680462163993",
-            "type": "announcement",
-            "hash": "91b9dfe019a82f50c8c45e45d35ea9bc7cbace3e97552b29a24dd09fe771c78b",
-            "signals": [
-              "availability"
-            ],
-            "models": [
-              "Qwen4 Max is now available in OpenCode Go "
-            ],
-            "url": "https://x.com/opencode/status/2122159680462163993",
-            "relevant": true
-          },
-          {
-            "key": "post:2120256195017781692",
-            "type": "announcement",
-            "hash": "070d67f19667509977bd36e137cfdb590721653d5b663128f9c6f9b44aae8754",
-            "signals": [
-              "pricing",
-              "promotion"
-            ],
-            "models": [],
-            "url": "https://x.com/opencode/status/2120256195017781692",
-            "relevant": true
-          },
-          {
-            "key": "post:2120230826898293238",
-            "type": "announcement",
-            "hash": "400170e0d4b5fb83eeb90e5eb1b8888137de026e417f77db1c1ac2f5f05db861",
-            "signals": [
-              "availability"
-            ],
-            "models": [
-              "Gemini 4 Carbon and Claude Fable 5.2 are now available in OpenCode "
-            ],
-            "url": "https://x.com/opencode/status/2120230826898293238",
-            "relevant": true
-          },
-          {
-            "key": "post:2119982381021192354",
-            "type": "announcement",
-            "hash": "99a1a641af99993c338d84f944a949542975cecd730313d24476880442f11dff",
-            "signals": [
-              "promotion"
-            ],
-            "models": [
-              "MiniMax M3.1 Flash is now free in OpenCode "
-            ],
-            "url": "https://x.com/opencode/status/2119982381021192354",
-            "relevant": true
-          },
-          {
-            "key": "post:2119860072134353308",
-            "type": "announcement",
-            "hash": "fc8fd423d7c1555fca7f404c721932626337c8ad8f6cc01f657eb02781416cec",
-            "signals": [
-              "availability"
-            ],
-            "models": [
-              "Muse Ember from Meta is now available in OpenCode "
-            ],
-            "url": "https://x.com/opencode/status/2119860072134353308",
-            "relevant": true
-          },
-          {
-            "key": "post:2119789096503746751",
-            "type": "announcement",
-            "hash": "96288e83aa28cce0e9ee2386188006f9a75ff3886272f1e9e460eff4f9c83640",
-            "signals": [
-              "promotion"
-            ],
-            "models": [],
-            "url": "https://x.com/opencode/status/2119789096503746751",
-            "relevant": true
           }
         ],
-        "hash": "9e90e1c37fc70ab8926098236342d082493a7c34f7c9e9be3f11623015d4781f",
-        "checkedAt": "2026-11-17T08:09:05.046Z",
+        "hash": "893762be48b76978c3da87044bd4b1eff459e49934812b5f4cc72ac663494656",
+        "checkedAt": "2026-11-19T07:46:15.049Z",
         "discoveredVia": "https://teapawt.net/opencode"
-      },
-      "error": "Announcement discovery unavailable; official social coverage is incomplete"
+      }
     },
     "command-code-social": {
       "id": "command-code-social",
       "channel": "Command Code",
       "url": "https://x.com/CommandCodeAI",
       "kind": "social",
-      "attemptedAt": "2026-11-18T07:43:47.655Z",
-      "lastSuccessAt": "2026-11-17T08:09:05.046Z",
-      "status": "failed",
-      "consecutiveFailures": 1,
+      "attemptedAt": "2026-11-19T07:46:15.049Z",
+      "lastSuccessAt": "2026-11-19T07:46:15.049Z",
+      "status": "checked",
+      "consecutiveFailures": 0,
       "retrieval": "official-oembed; discovery may use mirror",
       "snapshot": {
         "records": [
+          {
+            "key": "post:2123193525298995586",
+            "type": "announcement",
+            "hash": "e9d37e41e203db8922a9cc4cfa08b2e119d6eb415a5078277bd369bfd4c1c59f",
+            "signals": [
+              "availability"
+            ],
+            "models": [
+              "Gemini 4 Neon is now live in Command Code. - 1M token context window - "
+            ],
+            "url": "https://x.com/CommandCodeAI/status/2123193525298995586",
+            "relevant": true
+          },
+          {
+            "key": "post:2122997523262705929",
+            "type": "announcement",
+            "hash": "aafdb5280602a28aaa64d1a2d6724b91ec41f652c263feb27f492b7edfe093ca",
+            "signals": [],
+            "models": [],
+            "url": "https://x.com/CommandCodeAI/status/2122997523262705929",
+            "relevant": false
+          },
+          {
+            "key": "post:2122813802345570382",
+            "type": "announcement",
+            "hash": "01222a2073189ca396a8965a08270d1e61eab6054672a603e65139c166115aa9",
+            "signals": [],
+            "models": [
+              "GPT-6.2 Astra and GPT-6.2 Sol are now both live in Command Code. "
+            ],
+            "url": "https://x.com/CommandCodeAI/status/2122813802345570382",
+            "relevant": true
+          },
           {
             "key": "post:2122470637818318952",
             "type": "announcement",
@@ -59860,23 +60263,6 @@
             "relevant": true
           },
           {
-            "key": "post:2121804992831250447",
-            "type": "announcement",
-            "hash": "406608aba3d6a5d018c1a98f35859b2c9bcd217c3259b914a08d714bca227fdd",
-            "signals": [
-              "pricing",
-              "availability"
-            ],
-            "models": [
-              "GLM models. In ",
-              "GLM-5.3 Flash ",
-              "GLM-5.3 ",
-              "GLM-5.2 "
-            ],
-            "url": "https://x.com/CommandCodeAI/status/2121804992831250447",
-            "relevant": true
-          },
-          {
             "key": "post:2121361772255105197",
             "type": "announcement",
             "hash": "ff9d1289ba4d40849947a81446581df6e1103b8f4670d55ea80b3e53d09e09e0",
@@ -59893,37 +60279,12 @@
             "models": [],
             "url": "https://x.com/CommandCodeAI/status/2120607961706111070",
             "relevant": false
-          },
-          {
-            "key": "post:2120236115382980617",
-            "type": "announcement",
-            "hash": "bdc1a5420e849be34469617ff1c7142640bcdbf127cff48df2d83224c3b11a0c",
-            "signals": [
-              "pricing",
-              "promotion",
-              "availability"
-            ],
-            "models": [],
-            "url": "https://x.com/CommandCodeAI/status/2120236115382980617",
-            "relevant": true
-          },
-          {
-            "key": "post:2120157277839556758",
-            "type": "announcement",
-            "hash": "02497fe4f7aa7d9ebc71487e290563a56474c5442c840fb03128b446922855a1",
-            "signals": [
-              "availability"
-            ],
-            "models": [],
-            "url": "https://x.com/CommandCodeAI/status/2120157277839556758",
-            "relevant": true
           }
         ],
-        "hash": "7dc6a41932aa0707b6a232200b75484f34a83805e05809de22c12559fd3bdf62",
-        "checkedAt": "2026-11-17T08:09:05.046Z",
+        "hash": "9118674344229f41a02da8ed1770ddb6f7a51d0e59d29d6311ef6e8ade3b86fd",
+        "checkedAt": "2026-11-19T07:46:15.049Z",
         "discoveredVia": "https://teapawt.net/CommandCodeAI"
-      },
-      "error": "Announcement discovery unavailable; official social coverage is incomplete"
+      }
     }
   },
   "events": [
@@ -99082,7 +99443,1470 @@
         "url": "https://docs.devin.ai/release-notes/overview#sessions-&-workspace"
       },
       "status": "pending"
+    },
+    {
+      "id": "3bee0e4487d5e3b912c069965114aed2533965759b73ec834cdea7c0e2771d61",
+      "sourceId": "command-code-go",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-19T07:46:15.049Z",
+      "url": "https://commandcode.ai/docs/plans/go",
+      "before": null,
+      "after": {
+        "key": "text:32d6ab919724f50b81b31b7094912eba44bb8b9a105d795af4d4aa7ea4f98963",
+        "hash": "32d6ab919724f50b81b31b7094912eba44bb8b9a105d795af4d4aa7ea4f98963",
+        "type": "announcement",
+        "signals": [
+          "promotion"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/docs/plans/go"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "7f003927efb6d688710e6170a1b6e5861ee64898a1678b9f9a8cc1291be6c075",
+      "sourceId": "command-code-go",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-19T07:46:15.049Z",
+      "url": "https://commandcode.ai/docs/plans/go",
+      "before": null,
+      "after": {
+        "key": "text:08b27c93d35a34b1e5246a23acea5cf2724b228db175eaea344cafa325440c54",
+        "hash": "08b27c93d35a34b1e5246a23acea5cf2724b228db175eaea344cafa325440c54",
+        "type": "announcement",
+        "signals": [
+          "pricing",
+          "availability"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/docs/plans/go"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "6b60928c2b291b04be763f88217679745293c42c81ef1c54b7770b13843411c1",
+      "sourceId": "command-code-goat",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-19T07:46:15.049Z",
+      "url": "https://commandcode.ai/docs/plans/goat",
+      "before": null,
+      "after": {
+        "key": "text:211b175645ded93930aba09b2ec77c17827d9f49076e635cb82f8f589f0cf5ec",
+        "hash": "211b175645ded93930aba09b2ec77c17827d9f49076e635cb82f8f589f0cf5ec",
+        "type": "announcement",
+        "signals": [
+          "promotion"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/docs/plans/goat"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "796b00e360c84e9a2f55e1590e3b0e90cf20ed8fcfaea180f6737c19e3e2684b",
+      "sourceId": "command-code-goat",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-19T07:46:15.049Z",
+      "url": "https://commandcode.ai/docs/plans/goat",
+      "before": null,
+      "after": {
+        "key": "text:38e46e8c697f1a71c2a2c394f995c4ea77b0060a38cb212b1dce494840d10b10",
+        "hash": "38e46e8c697f1a71c2a2c394f995c4ea77b0060a38cb212b1dce494840d10b10",
+        "type": "announcement",
+        "signals": [
+          "pricing",
+          "availability"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/docs/plans/goat"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "736672352799f77f3a27fdb2804997bd46d92689b5c13252d6fd651729a4ff74",
+      "sourceId": "command-code-pro",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-19T07:46:15.049Z",
+      "url": "https://commandcode.ai/docs/plans/pro",
+      "before": null,
+      "after": {
+        "key": "text:48b1044e2e02d4bf7678f6c3eaae807dcff1ea17e16ed0005c9047c32621f563",
+        "hash": "48b1044e2e02d4bf7678f6c3eaae807dcff1ea17e16ed0005c9047c32621f563",
+        "type": "announcement",
+        "signals": [
+          "promotion"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/docs/plans/pro"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "35a57387afbf0bfdecef406f9a36ff94aeb3bfa36c5b11d684d1ea790a01c158",
+      "sourceId": "command-code-pro",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-19T07:46:15.049Z",
+      "url": "https://commandcode.ai/docs/plans/pro",
+      "before": null,
+      "after": {
+        "key": "row:v2:20d53e007c5a4d72:0:Gemini 4 Neon:0",
+        "type": "table-row",
+        "label": "Gemini 4 Neon",
+        "heading": "Models included",
+        "columns": [
+          "Model ↕",
+          "Context ↕",
+          "Input ↕",
+          "Output ↕",
+          "Cache read ↕",
+          "Cache write ↕",
+          "Caps"
+        ],
+        "cells": [
+          "Gemini 4 Neon",
+          "1M",
+          "$3.00",
+          "$15.00",
+          "$0.15",
+          "—",
+          "+ 1"
+        ],
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://commandcode.ai/docs/plans/pro",
+        "hash": "7c0601c4fa1a3ee9d3fe5c15bc3582691327704c942f771daa69545c51d02223"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "40361e182b45f7e9aa02d107aaf1ea136e61f7cebed96263b2d04764142a4ce4",
+      "sourceId": "command-code-pro",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-19T07:46:15.049Z",
+      "url": "https://commandcode.ai/docs/plans/pro",
+      "before": null,
+      "after": {
+        "key": "text:af7c011442ebc3dea90b1bfa7220697f90b7ec841986ce4247ea7d0cec83536b",
+        "hash": "af7c011442ebc3dea90b1bfa7220697f90b7ec841986ce4247ea7d0cec83536b",
+        "type": "announcement",
+        "signals": [
+          "pricing",
+          "availability"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/docs/plans/pro"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "059e1c7d7d7911fb24cc00ab2bee80d2e1024d7d7173b9d83811dd238f35bf3b",
+      "sourceId": "command-code-pro",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-19T07:46:15.049Z",
+      "url": "https://commandcode.ai/docs/plans/pro",
+      "before": null,
+      "after": {
+        "key": "row:v2:00a20accdbd25290:0:Gemini 4 Neon:0",
+        "type": "table-row",
+        "label": "Gemini 4 Neon",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Requests / 5 hours",
+          "Requests / week",
+          "Requests / month"
+        ],
+        "cells": [
+          "Gemini 4 Neon",
+          "310",
+          "775",
+          "1,550"
+        ],
+        "signals": [],
+        "url": "https://commandcode.ai/docs/plans/pro",
+        "hash": "619294d7c6dd8fd50d1d6eb77d995c4cbf1245e42c2c4b6958da6ab64e05cbe1"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "fa985bda997ddafe1cb48c87cfb999332a3903317fa01eb91713b162e74881b5",
+      "sourceId": "command-code-pro",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-19T07:46:15.049Z",
+      "url": "https://commandcode.ai/docs/plans/pro",
+      "before": null,
+      "after": {
+        "key": "row:v2:674840bade3f1b33:0:Gemini 4 Neon:0",
+        "type": "table-row",
+        "label": "Gemini 4 Neon",
+        "heading": "Premium models",
+        "columns": [
+          "Model",
+          "Input",
+          "Output",
+          "Cache Read",
+          "Cache Write",
+          "Monthly credits"
+        ],
+        "cells": [
+          "Gemini 4 Neon",
+          "$3.00",
+          "$15.00",
+          "$0.15",
+          "-",
+          "$20"
+        ],
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://commandcode.ai/docs/plans/pro",
+        "hash": "a690a1207e5ca6065f46ac06568003c2348074d2dea04fe2de3f11c03e95d250"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "73fe202a299d6e3c5097cfc1d7f2ce07da51c0937e6204c0f11d11b0f2617830",
+      "sourceId": "command-code-max",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-19T07:46:15.049Z",
+      "url": "https://commandcode.ai/models",
+      "before": null,
+      "after": {
+        "key": "text:5dd14ca5c84dd789da3ed81580725042fff4a2718dd9fefa65fa50cd685756f6",
+        "hash": "5dd14ca5c84dd789da3ed81580725042fff4a2718dd9fefa65fa50cd685756f6",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [
+          "Claude Opus",
+          "Claude Fable"
+        ],
+        "url": "https://commandcode.ai/models"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "21f8e467ea21cf65e044318e61ecfb680f726d38c9a8bab88e60141c68d328c3",
+      "sourceId": "command-code-max",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-19T07:46:15.049Z",
+      "url": "https://commandcode.ai/docs/plans/max",
+      "before": null,
+      "after": {
+        "key": "row:v2:49da236506327215:0:Gemini 4 Neon:0",
+        "type": "table-row",
+        "label": "Gemini 4 Neon",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Requests / 5 hours",
+          "Requests / week",
+          "Requests / month"
+        ],
+        "cells": [
+          "Gemini 4 Neon",
+          "2,330",
+          "4,650",
+          "7,750"
+        ],
+        "signals": [],
+        "url": "https://commandcode.ai/docs/plans/max",
+        "hash": "0d09588e77e38d4b2129ae2b6048cbaa85b3fb735fc6aae9944fc9c8c97aff80"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "cc8fcf4f0c41e2d1714fd104cf044310fd62be836f68980de483b681a9deb3a1",
+      "sourceId": "command-code-max",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-19T07:46:15.049Z",
+      "url": "https://commandcode.ai/docs/plans/max",
+      "before": null,
+      "after": {
+        "key": "row:v2:49da236506327215:1:Gemini 4 Neon:0",
+        "type": "table-row",
+        "label": "Gemini 4 Neon",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Input",
+          "Output",
+          "Cache Read",
+          "Cache Write",
+          "Max 10× credits",
+          "Max 20× credits"
+        ],
+        "cells": [
+          "Gemini 4 Neon",
+          "$3.00",
+          "$15.00",
+          "$0.15",
+          "-",
+          "$100",
+          "$200"
+        ],
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://commandcode.ai/docs/plans/max",
+        "hash": "418f9f18aad0954d1e5414e4bd2d688bcd2791576f268babccf5fcb41a2518ea"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "969e83af02d3fb606401edb90644ea7768de5d0ddab9964db817c435f64c192d",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-19T07:46:15.049Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": null,
+      "after": {
+        "key": "row:v2:df78673acdc953f5:0:google/gemini-4-neon Copy model id:0",
+        "type": "table-row",
+        "label": "google/gemini-4-neon Copy model id",
+        "heading": "Google",
+        "columns": [
+          "Model ID",
+          "Name",
+          "Capabilities",
+          "Best for"
+        ],
+        "cells": [
+          "google/gemini-4-neon Copy model id",
+          "Gemini 4 Neon",
+          "+ 1",
+          "fast multimodal reasoning for coding & agents"
+        ],
+        "signals": [
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models",
+        "hash": "d074f73f6f1bc0f77dd3a0bf95d23158352e436575e854a21b553240f1e19247"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "2b75959d7efc6c3d46c68a5b82cdc75dd60f8f740d582aaac8b40ac79e6a3b86",
+      "sourceId": "command-code-terms",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-19T07:46:15.049Z",
+      "url": "https://commandcode.ai/docs/resources/pricing-limits",
+      "before": null,
+      "after": {
+        "key": "text:c3ce12afefc2303596cec7e0fa172d2291c7009bd63acb9bb1e04e40709ca4e6",
+        "hash": "c3ce12afefc2303596cec7e0fa172d2291c7009bd63acb9bb1e04e40709ca4e6",
+        "type": "announcement",
+        "signals": [
+          "promotion"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/docs/resources/pricing-limits"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "8ae203429a184913f08f84e9407a42ebe807c9ac24620e6259f8d74aac877ebe",
+      "sourceId": "command-code-terms",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-19T07:46:15.049Z",
+      "url": "https://commandcode.ai/docs/resources/pricing-limits",
+      "before": null,
+      "after": {
+        "key": "text:95fb049b4f5cf76d7d944977f7d9fc818488fd9c7453d42dd8fcc00c532e1e69",
+        "hash": "95fb049b4f5cf76d7d944977f7d9fc818488fd9c7453d42dd8fcc00c532e1e69",
+        "type": "announcement",
+        "signals": [],
+        "models": [
+          "Gemini 4 Neon"
+        ],
+        "url": "https://commandcode.ai/docs/resources/pricing-limits"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "7563b10dbcbab2c1ea1a66eb066af2dc941958a0d89d03c344f4aafc3ad48048",
+      "sourceId": "command-code-terms",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-19T07:46:15.049Z",
+      "url": "https://commandcode.ai/docs/resources/pricing-limits",
+      "before": null,
+      "after": {
+        "key": "text:9b2624b66d9f8bbe264a73b725b36a348e961fda4bc8b2b7dc414a7253733559",
+        "hash": "9b2624b66d9f8bbe264a73b725b36a348e961fda4bc8b2b7dc414a7253733559",
+        "type": "announcement",
+        "signals": [
+          "pricing",
+          "availability"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/docs/resources/pricing-limits"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "c2d523a01f1e509dd51f783c7129e48f4257bda3b57e1fc5c2585ad3b8b1657c",
+      "sourceId": "command-code-releases",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-19T07:46:15.049Z",
+      "url": "https://commandcode.ai/changelog",
+      "before": null,
+      "after": {
+        "key": "text:e0934422e5d44bc369a58bd91d0051d0fd4a5cad100d6af9eeaa15214009f131",
+        "hash": "e0934422e5d44bc369a58bd91d0051d0fd4a5cad100d6af9eeaa15214009f131",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/changelog"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "2173f978dbaf3cacbd3dcaf591fcdb5ed6ad4965e7e785cdb1e4ce213cada60c",
+      "sourceId": "command-code-releases",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-19T07:46:15.049Z",
+      "url": "https://commandcode.ai/changelog",
+      "before": null,
+      "after": {
+        "key": "text:fbd9d891f867e256c461f0d2dbbc8cff05904cafb85db9a9773edb286b144129",
+        "hash": "fbd9d891f867e256c461f0d2dbbc8cff05904cafb85db9a9773edb286b144129",
+        "type": "announcement",
+        "signals": [
+          "promotion"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/changelog"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "d06a60c2c2a13eabcee4f4c4487b6685cd7fb0df792085a1a5a0b56f73cc9df3",
+      "sourceId": "ollama-announcements",
+      "channel": "Ollama",
+      "kind": "announcement",
+      "detectedAt": "2026-11-19T07:46:15.049Z",
+      "url": "https://ollama.com/blog/open-models-long-horizon-agents",
+      "before": null,
+      "after": {
+        "key": "text:ab3c438e769e5ab5a3d07b57c25a52b9c414b88a7334e486dcf6c70f96b0073c",
+        "hash": "ab3c438e769e5ab5a3d07b57c25a52b9c414b88a7334e486dcf6c70f96b0073c",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [],
+        "url": "https://ollama.com/blog/open-models-long-horizon-agents"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "c8a06908922ab1de239d82931959300bd8c45f92996f30884decf2f4caad1df4",
+      "sourceId": "factory-models",
+      "channel": "Factory",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-19T07:46:15.049Z",
+      "url": "https://docs.factory.com/models.md",
+      "before": null,
+      "after": {
+        "key": "row:v2:576cbe8c59cb4b7c:0:GPT-6.2 Astra:0",
+        "type": "table-row",
+        "label": "GPT-6.2 Astra",
+        "heading": "<span className=\"provider-heading\"><img src=\"/docs-assets/images/model-icons/openai.svg\" alt=\"OpenAI logo\" className=\"provider-icon openai-icon\" />Ope",
+        "columns": [
+          "Model",
+          "Model ID",
+          "Multiplier",
+          "Reasoning"
+        ],
+        "cells": [
+          "GPT-6.2 Astra",
+          "`gpt-6.2-astra`",
+          "3.2×",
+          "`low`, `medium` (default), `high`, `xhigh`, `max`"
+        ],
+        "signals": [],
+        "url": "https://docs.factory.com/models.md",
+        "hash": "7d329d23e47bec4f69e298a08077e82573867e4b8ef8af70f2ebea295c16570c"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "3fe21c9893332b108236359b9a314b9ca48203ecf8733feb0a65bed6ba7e75e5",
+      "sourceId": "factory-models",
+      "channel": "Factory",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-19T07:46:15.049Z",
+      "url": "https://docs.factory.com/models.md",
+      "before": null,
+      "after": {
+        "key": "row:v2:576cbe8c59cb4b7c:0:GPT-6.2 Astra Fast:0",
+        "type": "table-row",
+        "label": "GPT-6.2 Astra Fast",
+        "heading": "<span className=\"provider-heading\"><img src=\"/docs-assets/images/model-icons/openai.svg\" alt=\"OpenAI logo\" className=\"provider-icon openai-icon\" />Ope",
+        "columns": [
+          "Model",
+          "Model ID",
+          "Multiplier",
+          "Reasoning"
+        ],
+        "cells": [
+          "GPT-6.2 Astra Fast",
+          "`gpt-6.2-astra-fast`",
+          "6.4×",
+          "`low`, `medium` (default), `high`, `xhigh`, `max`"
+        ],
+        "signals": [],
+        "url": "https://docs.factory.com/models.md",
+        "hash": "7eeb8a6c556266045afe5901f3334e456b4e24e8ee6910f06ae1e19aaaa25599"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "0423227ab519607cadb2623dcddc1827f88cce15a4cc0b798244e1c83bbe29b1",
+      "sourceId": "factory-models",
+      "channel": "Factory",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-19T07:46:15.049Z",
+      "url": "https://docs.factory.com/models.md",
+      "before": null,
+      "after": {
+        "key": "row:v2:576cbe8c59cb4b7c:0:GPT-6.2 Astra Ultra Fast:0",
+        "type": "table-row",
+        "label": "GPT-6.2 Astra Ultra Fast",
+        "heading": "<span className=\"provider-heading\"><img src=\"/docs-assets/images/model-icons/openai.svg\" alt=\"OpenAI logo\" className=\"provider-icon openai-icon\" />Ope",
+        "columns": [
+          "Model",
+          "Model ID",
+          "Multiplier",
+          "Reasoning"
+        ],
+        "cells": [
+          "GPT-6.2 Astra Ultra Fast",
+          "`gpt-6.2-astra-ultrafast`",
+          "9.6×",
+          "`low`, `medium` (default), `high`, `xhigh`, `max`"
+        ],
+        "signals": [],
+        "url": "https://docs.factory.com/models.md",
+        "hash": "c11d73ea9d6fa4ff8e48d65861d653ab15bcfaf9ac4b35accf31bc833377972a"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "90918837d0727696a7e0ca8a0b9cbdcc9fe38eecd16a49c2fd2b48ed9bab38c8",
+      "sourceId": "factory-models",
+      "channel": "Factory",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-19T07:46:15.049Z",
+      "url": "https://docs.factory.com/models.md",
+      "before": null,
+      "after": {
+        "key": "row:v2:576cbe8c59cb4b7c:0:GPT-6.2 Sol:0",
+        "type": "table-row",
+        "label": "GPT-6.2 Sol",
+        "heading": "<span className=\"provider-heading\"><img src=\"/docs-assets/images/model-icons/openai.svg\" alt=\"OpenAI logo\" className=\"provider-icon openai-icon\" />Ope",
+        "columns": [
+          "Model",
+          "Model ID",
+          "Multiplier",
+          "Reasoning"
+        ],
+        "cells": [
+          "GPT-6.2 Sol",
+          "`gpt-6.2-sol`",
+          "0.8×",
+          "`low`, `medium` (default), `high`, `xhigh`, `max`"
+        ],
+        "signals": [],
+        "url": "https://docs.factory.com/models.md",
+        "hash": "f8e61525885025758f6d0e62b755e0558e84a0ab3cfd41509687a0ef1080d605"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "7d97a14b55a379aeb774d7d04c89390d718f8c0c9d956dbbca53ca6b273067f8",
+      "sourceId": "factory-models",
+      "channel": "Factory",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-19T07:46:15.049Z",
+      "url": "https://docs.factory.com/models.md",
+      "before": null,
+      "after": {
+        "key": "row:v2:576cbe8c59cb4b7c:0:GPT-6.2 Sol Fast:0",
+        "type": "table-row",
+        "label": "GPT-6.2 Sol Fast",
+        "heading": "<span className=\"provider-heading\"><img src=\"/docs-assets/images/model-icons/openai.svg\" alt=\"OpenAI logo\" className=\"provider-icon openai-icon\" />Ope",
+        "columns": [
+          "Model",
+          "Model ID",
+          "Multiplier",
+          "Reasoning"
+        ],
+        "cells": [
+          "GPT-6.2 Sol Fast",
+          "`gpt-6.2-sol-fast`",
+          "1.6×",
+          "`low`, `medium` (default), `high`, `xhigh`, `max`"
+        ],
+        "signals": [],
+        "url": "https://docs.factory.com/models.md",
+        "hash": "b770e7fecaaeae72100bf4cbcda15be2673ed0f32a2cb1d8c85c91ab7e57f5ed"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "a751ba138448fd24845c5b8770b3244760f26edd513ac049a892e526e7f6d611",
+      "sourceId": "factory-models",
+      "channel": "Factory",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-19T07:46:15.049Z",
+      "url": "https://docs.factory.com/models.md",
+      "before": null,
+      "after": {
+        "key": "row:v2:576cbe8c59cb4b7c:0:GPT-6.2 Sol Ultra Fast:0",
+        "type": "table-row",
+        "label": "GPT-6.2 Sol Ultra Fast",
+        "heading": "<span className=\"provider-heading\"><img src=\"/docs-assets/images/model-icons/openai.svg\" alt=\"OpenAI logo\" className=\"provider-icon openai-icon\" />Ope",
+        "columns": [
+          "Model",
+          "Model ID",
+          "Multiplier",
+          "Reasoning"
+        ],
+        "cells": [
+          "GPT-6.2 Sol Ultra Fast",
+          "`gpt-6.2-sol-ultrafast`",
+          "2.4×",
+          "`low`, `medium` (default), `high`, `xhigh`, `max`"
+        ],
+        "signals": [],
+        "url": "https://docs.factory.com/models.md",
+        "hash": "610055420fc472925d5707d9a83d9a95c2f03f042ad68eaa81ad2c718b6a169a"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "c788cf71bbd52cc16ee302d9ce564ca2827cadacc836754548da5ee905980054",
+      "sourceId": "factory-models",
+      "channel": "Factory",
+      "kind": "terms-changed",
+      "detectedAt": "2026-11-19T07:46:15.049Z",
+      "url": "https://docs.factory.com/models.md",
+      "before": {
+        "key": "row:v2:823f3bfa47a96e44:0:Gemini 4 Hydrogen:0",
+        "type": "table-row",
+        "label": "Gemini 4 Hydrogen",
+        "heading": "<span className=\"provider-heading\"><img src=\"/docs-assets/images/model-icons/google.ico\" alt=\"Google logo\" className=\"provider-icon\" />Google</span>",
+        "columns": [
+          "Model",
+          "Model ID",
+          "Multiplier",
+          "Reasoning"
+        ],
+        "cells": [
+          "Gemini 4 Hydrogen",
+          "`gemini-4-hydrogen`",
+          "0.6×",
+          "`low`, `medium`, `high` (default)"
+        ],
+        "signals": [],
+        "url": "https://docs.factory.com/models.md",
+        "hash": "194df19e1eafa029dcdcae4a0104c380f30acbf24ac84ac2735628514fc539fd"
+      },
+      "after": {
+        "key": "row:v2:823f3bfa47a96e44:0:Gemini 4 Hydrogen:0",
+        "type": "table-row",
+        "label": "Gemini 4 Hydrogen",
+        "heading": "<span className=\"provider-heading\"><img src=\"/docs-assets/images/model-icons/google.ico\" alt=\"Google logo\" className=\"provider-icon\" />Google</span>",
+        "columns": [
+          "Model",
+          "Model ID",
+          "Multiplier",
+          "Reasoning"
+        ],
+        "cells": [
+          "Gemini 4 Hydrogen",
+          "`gemini-4-hydrogen`",
+          "0.6×",
+          "`low`, `medium`, `high` (default), `xhigh`"
+        ],
+        "signals": [],
+        "url": "https://docs.factory.com/models.md",
+        "hash": "92929fc8a51c30891204f3781eaa9ba39dc711628a45e664db9c374a483490be"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "2e77d820c37797f28d32c749158fa76355561d53befbb0706740253fccf53425",
+      "sourceId": "cursor-pricing",
+      "channel": "Cursor",
+      "kind": "announcement",
+      "detectedAt": "2026-11-19T07:46:15.049Z",
+      "url": "https://cursor.com/docs/models-and-pricing",
+      "before": null,
+      "after": {
+        "key": "text:95fb049b4f5cf76d7d944977f7d9fc818488fd9c7453d42dd8fcc00c532e1e69",
+        "hash": "95fb049b4f5cf76d7d944977f7d9fc818488fd9c7453d42dd8fcc00c532e1e69",
+        "type": "announcement",
+        "signals": [],
+        "models": [
+          "Gemini 4 Neon"
+        ],
+        "url": "https://cursor.com/docs/models-and-pricing"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "0f5f1cce731a31e9cd09676b43621f0aa888aabbd75f73d89b066ba67f4704d3",
+      "sourceId": "cursor-pricing",
+      "channel": "Cursor",
+      "kind": "terms-changed",
+      "detectedAt": "2026-11-19T07:46:15.049Z",
+      "url": "https://cursor.com/docs/models-and-pricing",
+      "before": {
+        "key": "row:v2:27831da7cfacf8d7:0:Gemini 3.8 Flash:0",
+        "type": "table-row",
+        "label": "Gemini 3.8 Flash",
+        "heading": "Model pricing",
+        "columns": [
+          "Name",
+          "Input",
+          "Cache Write",
+          "Cache Read",
+          "Output",
+          "US Data Residency"
+        ],
+        "cells": [
+          "Gemini 3.8 Flash",
+          "$ 0.75",
+          "-",
+          "$ 0.075",
+          "$ 3.75",
+          "No"
+        ],
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://cursor.com/docs/models-and-pricing",
+        "hash": "797bd7a5a088c02f604f2d5c60904494ba78bdc15e2db8649e3e9eaad8b01c77"
+      },
+      "after": {
+        "key": "row:v2:27831da7cfacf8d7:0:Gemini 3.8 Flash:0",
+        "type": "table-row",
+        "label": "Gemini 3.8 Flash",
+        "heading": "Model pricing",
+        "columns": [
+          "Name",
+          "Input",
+          "Cache Write",
+          "Cache Read",
+          "Output",
+          "US Data Residency"
+        ],
+        "cells": [
+          "Gemini 3.8 Flash",
+          "$ 0.75",
+          "-",
+          "$ 0.075",
+          "$ 3.75",
+          "Yes"
+        ],
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://cursor.com/docs/models-and-pricing",
+        "hash": "bd89972cb7f85aa7ade551d0f2b0db808f59d2bc3b8d810934f66c68c04187a7"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "3cc033390442681bbe66d5f0afc2d642aeef5a4598a1bb69c6d164573678e66f",
+      "sourceId": "cursor-pricing",
+      "channel": "Cursor",
+      "kind": "terms-changed",
+      "detectedAt": "2026-11-19T07:46:15.049Z",
+      "url": "https://cursor.com/docs/models-and-pricing",
+      "before": {
+        "key": "row:v2:27831da7cfacf8d7:0:Gemini 4 Argon:0",
+        "type": "table-row",
+        "label": "Gemini 4 Argon",
+        "heading": "Model pricing",
+        "columns": [
+          "Name",
+          "Input",
+          "Cache Write",
+          "Cache Read",
+          "Output",
+          "US Data Residency"
+        ],
+        "cells": [
+          "Gemini 4 Argon",
+          "$ 2",
+          "-",
+          "$ 0.1",
+          "$ 10",
+          "No"
+        ],
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://cursor.com/docs/models-and-pricing",
+        "hash": "6eedf4fe736e88476f0215e60c7e3afb8c0399ecddd9a65ec6bf8237485110f0"
+      },
+      "after": {
+        "key": "row:v2:27831da7cfacf8d7:0:Gemini 4 Argon:0",
+        "type": "table-row",
+        "label": "Gemini 4 Argon",
+        "heading": "Model pricing",
+        "columns": [
+          "Name",
+          "Input",
+          "Cache Write",
+          "Cache Read",
+          "Output",
+          "US Data Residency"
+        ],
+        "cells": [
+          "Gemini 4 Argon",
+          "$ 2",
+          "-",
+          "$ 0.1",
+          "$ 10",
+          "Yes"
+        ],
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://cursor.com/docs/models-and-pricing",
+        "hash": "b3c441f8c3d95ecfaa303c9860a48ac64dd4ecaa5a732c38e84657f06bd33f35"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "b6cd69896a148561a5ac025c346ae75c0ed020634793ad500f87dcc89d12a09e",
+      "sourceId": "cursor-pricing",
+      "channel": "Cursor",
+      "kind": "terms-changed",
+      "detectedAt": "2026-11-19T07:46:15.049Z",
+      "url": "https://cursor.com/docs/models-and-pricing",
+      "before": {
+        "key": "row:v2:27831da7cfacf8d7:0:Gemini 4 Carbon:0",
+        "type": "table-row",
+        "label": "Gemini 4 Carbon",
+        "heading": "Model pricing",
+        "columns": [
+          "Name",
+          "Input",
+          "Cache Write",
+          "Cache Read",
+          "Output",
+          "US Data Residency"
+        ],
+        "cells": [
+          "Gemini 4 Carbon",
+          "$ 2",
+          "-",
+          "$ 0.1",
+          "$ 10",
+          "No"
+        ],
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://cursor.com/docs/models-and-pricing",
+        "hash": "ea83a4c4caa47b9cc8b99a194a4c595216251278b06725027a7675a8464da626"
+      },
+      "after": {
+        "key": "row:v2:27831da7cfacf8d7:0:Gemini 4 Carbon:0",
+        "type": "table-row",
+        "label": "Gemini 4 Carbon",
+        "heading": "Model pricing",
+        "columns": [
+          "Name",
+          "Input",
+          "Cache Write",
+          "Cache Read",
+          "Output",
+          "US Data Residency"
+        ],
+        "cells": [
+          "Gemini 4 Carbon",
+          "$ 2",
+          "-",
+          "$ 0.1",
+          "$ 10",
+          "Yes"
+        ],
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://cursor.com/docs/models-and-pricing",
+        "hash": "8a3729d5bfa219e9dc8e10984ced2c3291488a1969ebd9d08220e5d80823ae04"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "4163bfe4d0cba56109542e354cf270fd5a378f459730020b1c61a8283b9ea324",
+      "sourceId": "cursor-pricing",
+      "channel": "Cursor",
+      "kind": "terms-changed",
+      "detectedAt": "2026-11-19T07:46:15.049Z",
+      "url": "https://cursor.com/docs/models-and-pricing",
+      "before": {
+        "key": "row:v2:27831da7cfacf8d7:0:Gemini 4 Hydrogen:0",
+        "type": "table-row",
+        "label": "Gemini 4 Hydrogen",
+        "heading": "Model pricing",
+        "columns": [
+          "Name",
+          "Input",
+          "Cache Write",
+          "Cache Read",
+          "Output",
+          "US Data Residency"
+        ],
+        "cells": [
+          "Gemini 4 Hydrogen",
+          "$ 1.5",
+          "-",
+          "$ 0.075",
+          "$ 7.5",
+          "No"
+        ],
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://cursor.com/docs/models-and-pricing",
+        "hash": "1ec090fee17b9638a327780e1cdd0a2aad045eb4b31d923f3fbeff90257cbbc5"
+      },
+      "after": {
+        "key": "row:v2:27831da7cfacf8d7:0:Gemini 4 Hydrogen:0",
+        "type": "table-row",
+        "label": "Gemini 4 Hydrogen",
+        "heading": "Model pricing",
+        "columns": [
+          "Name",
+          "Input",
+          "Cache Write",
+          "Cache Read",
+          "Output",
+          "US Data Residency"
+        ],
+        "cells": [
+          "Gemini 4 Hydrogen",
+          "$ 1.5",
+          "-",
+          "$ 0.075",
+          "$ 7.5",
+          "Yes"
+        ],
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://cursor.com/docs/models-and-pricing",
+        "hash": "ca3b14717ca85a62ffeb794d1d3e84eef453b700e0b4f9383e7c5542aaec0bb9"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "14921570fd9933e728a0975ca97f795638391c4d8b89e1167fa37151293eba23",
+      "sourceId": "cursor-pricing",
+      "channel": "Cursor",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-19T07:46:15.049Z",
+      "url": "https://cursor.com/docs/models-and-pricing",
+      "before": null,
+      "after": {
+        "key": "row:v2:27831da7cfacf8d7:0:Gemini 4 Neon:0",
+        "type": "table-row",
+        "label": "Gemini 4 Neon",
+        "heading": "Model pricing",
+        "columns": [
+          "Name",
+          "Input",
+          "Cache Write",
+          "Cache Read",
+          "Output",
+          "US Data Residency"
+        ],
+        "cells": [
+          "Gemini 4 Neon",
+          "$ 3",
+          "-",
+          "$ 0.15",
+          "$ 15",
+          "Yes"
+        ],
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://cursor.com/docs/models-and-pricing",
+        "hash": "39f9ece04e956af4c64a304343d55ac89fff9dd6d32d6c389635250478196307"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "72affef61f99bb76b47838ca0438b3328d673ade3196732a591f117eca37f5c6",
+      "sourceId": "cursor-pricing",
+      "channel": "Cursor",
+      "kind": "terms-changed",
+      "detectedAt": "2026-11-19T07:46:15.049Z",
+      "url": "https://cursor.com/docs/models-and-pricing",
+      "before": {
+        "key": "row:v2:27831da7cfacf8d7:1:Gemini 3.8 Flash:0",
+        "type": "table-row",
+        "label": "Gemini 3.8 Flash",
+        "heading": "Model pricing",
+        "columns": [
+          "Name",
+          "Input",
+          "Cache Write",
+          "Cache Read",
+          "Output",
+          "US Data Residency"
+        ],
+        "cells": [
+          "Gemini 3.8 Flash",
+          "$ 0.75",
+          "-",
+          "$ 0.075",
+          "$ 3.75",
+          "No"
+        ],
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://cursor.com/docs/models-and-pricing",
+        "hash": "797bd7a5a088c02f604f2d5c60904494ba78bdc15e2db8649e3e9eaad8b01c77"
+      },
+      "after": {
+        "key": "row:v2:27831da7cfacf8d7:1:Gemini 3.8 Flash:0",
+        "type": "table-row",
+        "label": "Gemini 3.8 Flash",
+        "heading": "Model pricing",
+        "columns": [
+          "Name",
+          "Input",
+          "Cache Write",
+          "Cache Read",
+          "Output",
+          "US Data Residency"
+        ],
+        "cells": [
+          "Gemini 3.8 Flash",
+          "$ 0.75",
+          "-",
+          "$ 0.075",
+          "$ 3.75",
+          "Yes"
+        ],
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://cursor.com/docs/models-and-pricing",
+        "hash": "bd89972cb7f85aa7ade551d0f2b0db808f59d2bc3b8d810934f66c68c04187a7"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "9d9348249ec7bb72ace8a057ca27d25763a5706aca0171a3f0e7d444a7eb8e9e",
+      "sourceId": "cursor-pricing",
+      "channel": "Cursor",
+      "kind": "terms-changed",
+      "detectedAt": "2026-11-19T07:46:15.049Z",
+      "url": "https://cursor.com/docs/models-and-pricing",
+      "before": {
+        "key": "row:v2:27831da7cfacf8d7:1:Gemini 4 Argon:0",
+        "type": "table-row",
+        "label": "Gemini 4 Argon",
+        "heading": "Model pricing",
+        "columns": [
+          "Name",
+          "Input",
+          "Cache Write",
+          "Cache Read",
+          "Output",
+          "US Data Residency"
+        ],
+        "cells": [
+          "Gemini 4 Argon",
+          "$ 2",
+          "-",
+          "$ 0.1",
+          "$ 10",
+          "No"
+        ],
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://cursor.com/docs/models-and-pricing",
+        "hash": "6eedf4fe736e88476f0215e60c7e3afb8c0399ecddd9a65ec6bf8237485110f0"
+      },
+      "after": {
+        "key": "row:v2:27831da7cfacf8d7:1:Gemini 4 Argon:0",
+        "type": "table-row",
+        "label": "Gemini 4 Argon",
+        "heading": "Model pricing",
+        "columns": [
+          "Name",
+          "Input",
+          "Cache Write",
+          "Cache Read",
+          "Output",
+          "US Data Residency"
+        ],
+        "cells": [
+          "Gemini 4 Argon",
+          "$ 2",
+          "-",
+          "$ 0.1",
+          "$ 10",
+          "Yes"
+        ],
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://cursor.com/docs/models-and-pricing",
+        "hash": "b3c441f8c3d95ecfaa303c9860a48ac64dd4ecaa5a732c38e84657f06bd33f35"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "6237124950073f00b4a0b053fc744664169858efc3f95c2da49b537b8edecfd4",
+      "sourceId": "cursor-pricing",
+      "channel": "Cursor",
+      "kind": "terms-changed",
+      "detectedAt": "2026-11-19T07:46:15.049Z",
+      "url": "https://cursor.com/docs/models-and-pricing",
+      "before": {
+        "key": "row:v2:27831da7cfacf8d7:1:Gemini 4 Carbon:0",
+        "type": "table-row",
+        "label": "Gemini 4 Carbon",
+        "heading": "Model pricing",
+        "columns": [
+          "Name",
+          "Input",
+          "Cache Write",
+          "Cache Read",
+          "Output",
+          "US Data Residency"
+        ],
+        "cells": [
+          "Gemini 4 Carbon",
+          "$ 2",
+          "-",
+          "$ 0.1",
+          "$ 10",
+          "No"
+        ],
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://cursor.com/docs/models-and-pricing",
+        "hash": "ea83a4c4caa47b9cc8b99a194a4c595216251278b06725027a7675a8464da626"
+      },
+      "after": {
+        "key": "row:v2:27831da7cfacf8d7:1:Gemini 4 Carbon:0",
+        "type": "table-row",
+        "label": "Gemini 4 Carbon",
+        "heading": "Model pricing",
+        "columns": [
+          "Name",
+          "Input",
+          "Cache Write",
+          "Cache Read",
+          "Output",
+          "US Data Residency"
+        ],
+        "cells": [
+          "Gemini 4 Carbon",
+          "$ 2",
+          "-",
+          "$ 0.1",
+          "$ 10",
+          "Yes"
+        ],
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://cursor.com/docs/models-and-pricing",
+        "hash": "8a3729d5bfa219e9dc8e10984ced2c3291488a1969ebd9d08220e5d80823ae04"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "e8ca5e559183cbd87f3a1993a6499bd4b19c233d907b50d969333dce0fa5a3c5",
+      "sourceId": "cursor-pricing",
+      "channel": "Cursor",
+      "kind": "terms-changed",
+      "detectedAt": "2026-11-19T07:46:15.049Z",
+      "url": "https://cursor.com/docs/models-and-pricing",
+      "before": {
+        "key": "row:v2:27831da7cfacf8d7:1:Gemini 4 Hydrogen:0",
+        "type": "table-row",
+        "label": "Gemini 4 Hydrogen",
+        "heading": "Model pricing",
+        "columns": [
+          "Name",
+          "Input",
+          "Cache Write",
+          "Cache Read",
+          "Output",
+          "US Data Residency"
+        ],
+        "cells": [
+          "Gemini 4 Hydrogen",
+          "$ 1.5",
+          "-",
+          "$ 0.075",
+          "$ 7.5",
+          "No"
+        ],
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://cursor.com/docs/models-and-pricing",
+        "hash": "1ec090fee17b9638a327780e1cdd0a2aad045eb4b31d923f3fbeff90257cbbc5"
+      },
+      "after": {
+        "key": "row:v2:27831da7cfacf8d7:1:Gemini 4 Hydrogen:0",
+        "type": "table-row",
+        "label": "Gemini 4 Hydrogen",
+        "heading": "Model pricing",
+        "columns": [
+          "Name",
+          "Input",
+          "Cache Write",
+          "Cache Read",
+          "Output",
+          "US Data Residency"
+        ],
+        "cells": [
+          "Gemini 4 Hydrogen",
+          "$ 1.5",
+          "-",
+          "$ 0.075",
+          "$ 7.5",
+          "Yes"
+        ],
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://cursor.com/docs/models-and-pricing",
+        "hash": "ca3b14717ca85a62ffeb794d1d3e84eef453b700e0b4f9383e7c5542aaec0bb9"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "a1b5833abd9fbcb296f15b94a7cb5d65594e54bce86ca72c0265fa11c240c8b3",
+      "sourceId": "cursor-pricing",
+      "channel": "Cursor",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-19T07:46:15.049Z",
+      "url": "https://cursor.com/docs/models-and-pricing",
+      "before": null,
+      "after": {
+        "key": "row:v2:27831da7cfacf8d7:1:Gemini 4 Neon:0",
+        "type": "table-row",
+        "label": "Gemini 4 Neon",
+        "heading": "Model pricing",
+        "columns": [
+          "Name",
+          "Input",
+          "Cache Write",
+          "Cache Read",
+          "Output",
+          "US Data Residency"
+        ],
+        "cells": [
+          "Gemini 4 Neon",
+          "$ 3",
+          "-",
+          "$ 0.15",
+          "$ 15",
+          "Yes"
+        ],
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://cursor.com/docs/models-and-pricing",
+        "hash": "39f9ece04e956af4c64a304343d55ac89fff9dd6d32d6c389635250478196307"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "aeebf1a20139975218ed052f45b5ef4b4967c2c778476630a57e6e7c558982ae",
+      "sourceId": "opencode-social",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-19T07:46:15.049Z",
+      "url": "https://x.com/opencode/status/2123297341679554787",
+      "before": null,
+      "after": {
+        "key": "post:2123297341679554787",
+        "type": "announcement",
+        "hash": "1a9287eba57b4d83aad7dbed82a08c4ca0912589c158589665400aa1d1e1a6eb",
+        "signals": [
+          "promotion"
+        ],
+        "models": [],
+        "url": "https://x.com/opencode/status/2123297341679554787",
+        "relevant": true
+      },
+      "status": "pending"
+    },
+    {
+      "id": "0f729279c2f997f7cdacf96060c7a1304a3e398bc77b94b99002c45bda39a2e9",
+      "sourceId": "opencode-social",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-19T07:46:15.049Z",
+      "url": "https://x.com/opencode/status/2123214984389771684",
+      "before": null,
+      "after": {
+        "key": "post:2123214984389771684",
+        "type": "announcement",
+        "hash": "2d1e140731d3962712935104eb7164a014deb382434f4270645abd5dbf4c7503",
+        "signals": [],
+        "models": [],
+        "url": "https://x.com/opencode/status/2123214984389771684",
+        "relevant": true
+      },
+      "status": "pending"
+    },
+    {
+      "id": "ed086dd1775f8b8075c15841cabc006b0c214342fc58cba59d4b7024c9a61ab9",
+      "sourceId": "opencode-social",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-19T07:46:15.049Z",
+      "url": "https://x.com/opencode/status/2123106127030210786",
+      "before": null,
+      "after": {
+        "key": "post:2123106127030210786",
+        "type": "announcement",
+        "hash": "1bc8dc8d39c21eaad9319d80022e3c8f1f513c9e9fab1c8a2bb9964fceeae1e5",
+        "signals": [
+          "promotion"
+        ],
+        "models": [],
+        "url": "https://x.com/opencode/status/2123106127030210786",
+        "relevant": true
+      },
+      "status": "pending"
+    },
+    {
+      "id": "048ed7e2211b6edfc939443d038715acc0a05e48881214af641dd118c06a1ca7",
+      "sourceId": "opencode-social",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-19T07:46:15.049Z",
+      "url": "https://x.com/opencode/status/2122969474571583885",
+      "before": null,
+      "after": {
+        "key": "post:2122969474571583885",
+        "type": "announcement",
+        "hash": "93b1d84e4d0983e629dfdec0b3cf17ff2c3188d4c10a25da721bc95c676a9359",
+        "signals": [
+          "pricing"
+        ],
+        "models": [
+          "GLM 5.3 till end of the week https://t.co/4qEZ6YzKgv "
+        ],
+        "url": "https://x.com/opencode/status/2122969474571583885",
+        "relevant": true
+      },
+      "status": "pending"
+    },
+    {
+      "id": "9e401f48f6e72fa15d60362f03ff42966761008d559c33e66888dc48680f8eeb",
+      "sourceId": "opencode-social",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-19T07:46:15.049Z",
+      "url": "https://x.com/opencode/status/2122763721923559595",
+      "before": null,
+      "after": {
+        "key": "post:2122763721923559595",
+        "type": "announcement",
+        "hash": "af43cc3c52b25b67e3c6edc60ee68e884129d72c84fb53939e90bc469309a9e3",
+        "signals": [
+          "pricing"
+        ],
+        "models": [
+          "GLM 5.3 usage for "
+        ],
+        "url": "https://x.com/opencode/status/2122763721923559595",
+        "relevant": true
+      },
+      "status": "pending"
+    },
+    {
+      "id": "689317632b8f9ac66c18dc3cd4477eea9f409419d3810ed26200e7c80cb4021d",
+      "sourceId": "command-code-social",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-19T07:46:15.049Z",
+      "url": "https://x.com/CommandCodeAI/status/2123193525298995586",
+      "before": null,
+      "after": {
+        "key": "post:2123193525298995586",
+        "type": "announcement",
+        "hash": "e9d37e41e203db8922a9cc4cfa08b2e119d6eb415a5078277bd369bfd4c1c59f",
+        "signals": [
+          "availability"
+        ],
+        "models": [
+          "Gemini 4 Neon is now live in Command Code. - 1M token context window - "
+        ],
+        "url": "https://x.com/CommandCodeAI/status/2123193525298995586",
+        "relevant": true
+      },
+      "status": "pending"
+    },
+    {
+      "id": "2891e939ca866e642317fb099b79185cb183e1efecc386632dec83e9ed16f92e",
+      "sourceId": "command-code-social",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-19T07:46:15.049Z",
+      "url": "https://x.com/CommandCodeAI/status/2122813802345570382",
+      "before": null,
+      "after": {
+        "key": "post:2122813802345570382",
+        "type": "announcement",
+        "hash": "01222a2073189ca396a8965a08270d1e61eab6054672a603e65139c166115aa9",
+        "signals": [],
+        "models": [
+          "GPT-6.2 Astra and GPT-6.2 Sol are now both live in Command Code. "
+        ],
+        "url": "https://x.com/CommandCodeAI/status/2122813802345570382",
+        "relevant": true
+      },
+      "status": "pending"
     }
   ],
-  "checkedAt": "2026-11-18T07:43:47.655Z"
+  "checkedAt": "2026-11-19T07:46:15.049Z"
 }
