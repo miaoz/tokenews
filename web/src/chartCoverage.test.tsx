@@ -116,4 +116,9 @@ test("GPT-6.2 Astra, GPT-6.2 Sol and Gemini 4 Neon publish reviewed prices and c
   assert.ok(data.points.some(p => p.id === "command_code_max_10::gpt-6.2-astra"));
   assert.ok(data.points.some(p => p.id === "command_code_pro::gpt-6.2-sol"));
   assert.ok(data.points.some(p => p.id === "command_code_pro::gemini-4-neon"));
+  assert.ok(data.points.some(p => p.id === "estimate:google-ai-ultra-20x:gemini-4-neon"));
+  assert.ok(data.points.some(p => p.id === "estimate:google-ai-ultra-20x:gemini-4-carbon"));
+  assert.ok(!data.points.some(p => p.id === "estimate:google-ai-pro:gemini-4-carbon"), "Carbon is Ultra-only");
+  assert.ok(data.points.some(p => p.id === "estimate:chatgpt-pro-20x:gpt-6.2-astra"));
+  assert.ok(data.points.some(p => p.id === "estimate:chatgpt-plus:gpt-6.2-sol"));
 });

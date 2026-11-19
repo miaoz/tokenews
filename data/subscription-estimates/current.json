@@ -1,8 +1,9 @@
 {
   "version": 1,
-  "checkedAt": "2026-11-13",
+  "checkedAt": "2026-11-18",
   "evidenceFiles": [
-    "evidence-2026-11-13.json"
+    "evidence-2026-11-13.json",
+    "evidence-2026-11-18.json"
   ],
   "archivedPointIds": [
     {
@@ -127,6 +128,630 @@
         "claude_ultra"
       ],
       "sampleFrom": "Claude Max · claude-fable-5.2"
+    },
+    {
+      "id": "estimate:google-ai-pro:gemini-4-hydrogen",
+      "planId": "google_ai_pro_estimate",
+      "upstreamPlanIds": [
+        "google_ai_pro_us",
+        "google_ai_pro"
+      ],
+      "name": "Google AI Pro",
+      "model": "gemini-4-hydrogen",
+      "monthlyUsd": 19.99,
+      "confidence": "low",
+      "sampleDate": "2026-11-18",
+      "sampleFrom": "Google AI Pro · gemini-3.8-flash",
+      "calibration": {
+        "meter": "anchor-pool",
+        "anchorMode": "worth-ratio",
+        "anchorPointId": "google_ai_pro_us::gemini-3.8-flash",
+        "planRatio": 1,
+        "anchorRates": {
+          "cache": 0.075,
+          "input": 0.75,
+          "output": 3.75
+        }
+      },
+      "rates": {
+        "cache": 0.075,
+        "input": 1.5,
+        "output": 7.5
+      },
+      "sources": [
+        {
+          "label": "Google Antigravity model availability by plan",
+          "url": "https://antigravity.google/docs/models"
+        },
+        {
+          "label": "Google Antigravity plan quota rules",
+          "url": "https://antigravity.google/docs/plans"
+        },
+        {
+          "label": "Gemini Developer API pricing (Hydrogen)",
+          "url": "https://aistudio.google.com/docs/pricing#gemini-4-hydrogen"
+        }
+      ],
+      "note": {
+        "en": "Available on paid Google AI Pro (non-trial) in Antigravity. No independent Hydrogen quota measurement yet; conservatively scaled by API worth from the measured Pro Gemini 3.8 Flash main pool anchor.",
+        "zh": "Antigravity 中面向付费 Google AI Pro（非试用）开放。尚无独立 Hydrogen 实测样本，暂按实测 Pro 3.8 Flash 主池月 API 价值等比折算，属低置信保守估算。"
+      }
+    },
+    {
+      "id": "estimate:google-ai-ultra-5x:gemini-4-hydrogen",
+      "planId": "google_ai_ultra_5x_estimate",
+      "upstreamPlanIds": [
+        "google_ai_ultra_5x_us",
+        "google_ai_ultra_5x"
+      ],
+      "name": "Google AI Ultra 5x",
+      "model": "gemini-4-hydrogen",
+      "monthlyUsd": 99.99,
+      "confidence": "low",
+      "sampleDate": "2026-11-18",
+      "sampleFrom": "Google AI Pro · gemini-3.8-flash",
+      "calibration": {
+        "meter": "anchor-pool",
+        "anchorMode": "worth-ratio",
+        "anchorPointId": "google_ai_pro_us::gemini-3.8-flash",
+        "planRatio": 5,
+        "anchorRates": {
+          "cache": 0.075,
+          "input": 0.75,
+          "output": 3.75
+        }
+      },
+      "rates": {
+        "cache": 0.075,
+        "input": 1.5,
+        "output": 7.5
+      },
+      "sources": [
+        {
+          "label": "Google Antigravity model availability by plan",
+          "url": "https://antigravity.google/docs/models"
+        },
+        {
+          "label": "Google Antigravity plan quota rules",
+          "url": "https://antigravity.google/docs/plans"
+        },
+        {
+          "label": "Gemini Developer API pricing (Hydrogen)",
+          "url": "https://aistudio.google.com/docs/pricing#gemini-4-hydrogen"
+        }
+      ],
+      "note": {
+        "en": "Extrapolated using Google's official 5x Pro token-worth multiplier for Ultra $99.99 and Hydrogen's API rates. Not directly measured on Ultra.",
+        "zh": "按 Google 官方 Ultra $99.99 为 Pro 5 倍 token 价值及 Hydrogen 官方 API 单价折算；未经 Ultra 独立实测。"
+      }
+    },
+    {
+      "id": "estimate:google-ai-ultra-20x:gemini-4-hydrogen",
+      "planId": "google_ai_ultra_20x_estimate",
+      "upstreamPlanIds": [
+        "google_ai_ultra_20x_us",
+        "google_ai_ultra_20x"
+      ],
+      "name": "Google AI Ultra 20x",
+      "model": "gemini-4-hydrogen",
+      "monthlyUsd": 199.99,
+      "confidence": "low",
+      "sampleDate": "2026-11-18",
+      "sampleFrom": "Google AI Pro · gemini-3.8-flash",
+      "calibration": {
+        "meter": "anchor-pool",
+        "anchorMode": "worth-ratio",
+        "anchorPointId": "google_ai_pro_us::gemini-3.8-flash",
+        "planRatio": 20,
+        "anchorRates": {
+          "cache": 0.075,
+          "input": 0.75,
+          "output": 3.75
+        }
+      },
+      "rates": {
+        "cache": 0.075,
+        "input": 1.5,
+        "output": 7.5
+      },
+      "sources": [
+        {
+          "label": "Google Antigravity model availability by plan",
+          "url": "https://antigravity.google/docs/models"
+        },
+        {
+          "label": "Google Antigravity plan quota rules",
+          "url": "https://antigravity.google/docs/plans"
+        },
+        {
+          "label": "Gemini Developer API pricing (Hydrogen)",
+          "url": "https://aistudio.google.com/docs/pricing#gemini-4-hydrogen"
+        }
+      ],
+      "note": {
+        "en": "Extrapolated using Google's official 20x Pro token-worth multiplier for Ultra $199.99 and Hydrogen's API rates. Not directly measured on Ultra.",
+        "zh": "按 Google 官方 Ultra $199.99 为 Pro 20 倍 token 价值及 Hydrogen 官方 API 单价折算；未经 Ultra 独立实测。"
+      }
+    },
+    {
+      "id": "estimate:google-ai-pro:gemini-4-neon",
+      "planId": "google_ai_pro_estimate",
+      "upstreamPlanIds": [
+        "google_ai_pro_us",
+        "google_ai_pro"
+      ],
+      "name": "Google AI Pro",
+      "model": "gemini-4-neon",
+      "monthlyUsd": 19.99,
+      "confidence": "low",
+      "sampleDate": "2026-11-18",
+      "sampleFrom": "Google AI Pro · gemini-3.8-flash",
+      "calibration": {
+        "meter": "anchor-pool",
+        "anchorMode": "worth-ratio",
+        "anchorPointId": "google_ai_pro_us::gemini-3.8-flash",
+        "planRatio": 1,
+        "anchorRates": {
+          "cache": 0.075,
+          "input": 0.75,
+          "output": 3.75
+        }
+      },
+      "rates": {
+        "cache": 0.15,
+        "input": 3,
+        "output": 15
+      },
+      "sources": [
+        {
+          "label": "Google Antigravity model availability by plan",
+          "url": "https://antigravity.google/docs/models"
+        },
+        {
+          "label": "Google Antigravity plan quota rules",
+          "url": "https://antigravity.google/docs/plans"
+        },
+        {
+          "label": "Gemini Developer API pricing (Neon)",
+          "url": "https://aistudio.google.com/docs/pricing#gemini-4-neon"
+        }
+      ],
+      "note": {
+        "en": "Available on paid Google AI Pro (or eligible device trials) in Antigravity. No independent Neon quota measurement yet; conservatively scaled by API worth from the measured Pro Gemini 3.8 Flash main pool anchor.",
+        "zh": "Antigravity 中面向付费 Google AI Pro（及合规设备试用）开放。尚无独立 Neon 实测样本，暂按实测 Pro 3.8 Flash 主池月 API 价值等比折算，属低置信保守估算。"
+      }
+    },
+    {
+      "id": "estimate:google-ai-ultra-5x:gemini-4-neon",
+      "planId": "google_ai_ultra_5x_estimate",
+      "upstreamPlanIds": [
+        "google_ai_ultra_5x_us",
+        "google_ai_ultra_5x"
+      ],
+      "name": "Google AI Ultra 5x",
+      "model": "gemini-4-neon",
+      "monthlyUsd": 99.99,
+      "confidence": "low",
+      "sampleDate": "2026-11-18",
+      "sampleFrom": "Google AI Pro · gemini-3.8-flash",
+      "calibration": {
+        "meter": "anchor-pool",
+        "anchorMode": "worth-ratio",
+        "anchorPointId": "google_ai_pro_us::gemini-3.8-flash",
+        "planRatio": 5,
+        "anchorRates": {
+          "cache": 0.075,
+          "input": 0.75,
+          "output": 3.75
+        }
+      },
+      "rates": {
+        "cache": 0.15,
+        "input": 3,
+        "output": 15
+      },
+      "sources": [
+        {
+          "label": "Google Antigravity model availability by plan",
+          "url": "https://antigravity.google/docs/models"
+        },
+        {
+          "label": "Google Antigravity plan quota rules",
+          "url": "https://antigravity.google/docs/plans"
+        },
+        {
+          "label": "Gemini Developer API pricing (Neon)",
+          "url": "https://aistudio.google.com/docs/pricing#gemini-4-neon"
+        }
+      ],
+      "note": {
+        "en": "Extrapolated using Google's official 5x Pro token-worth multiplier for Ultra $99.99 and Neon's API rates. Not directly measured on Ultra.",
+        "zh": "按 Google 官方 Ultra $99.99 为 Pro 5 倍 token 价值及 Neon 官方 API 单价折算；未经 Ultra 独立实测。"
+      }
+    },
+    {
+      "id": "estimate:google-ai-ultra-20x:gemini-4-neon",
+      "planId": "google_ai_ultra_20x_estimate",
+      "upstreamPlanIds": [
+        "google_ai_ultra_20x_us",
+        "google_ai_ultra_20x"
+      ],
+      "name": "Google AI Ultra 20x",
+      "model": "gemini-4-neon",
+      "monthlyUsd": 199.99,
+      "confidence": "low",
+      "sampleDate": "2026-11-18",
+      "sampleFrom": "Google AI Pro · gemini-3.8-flash",
+      "calibration": {
+        "meter": "anchor-pool",
+        "anchorMode": "worth-ratio",
+        "anchorPointId": "google_ai_pro_us::gemini-3.8-flash",
+        "planRatio": 20,
+        "anchorRates": {
+          "cache": 0.075,
+          "input": 0.75,
+          "output": 3.75
+        }
+      },
+      "rates": {
+        "cache": 0.15,
+        "input": 3,
+        "output": 15
+      },
+      "sources": [
+        {
+          "label": "Google Antigravity model availability by plan",
+          "url": "https://antigravity.google/docs/models"
+        },
+        {
+          "label": "Google Antigravity plan quota rules",
+          "url": "https://antigravity.google/docs/plans"
+        },
+        {
+          "label": "Gemini Developer API pricing (Neon)",
+          "url": "https://aistudio.google.com/docs/pricing#gemini-4-neon"
+        }
+      ],
+      "note": {
+        "en": "Extrapolated using Google's official 20x Pro token-worth multiplier for Ultra $199.99 and Neon's API rates. Not directly measured on Ultra.",
+        "zh": "按 Google 官方 Ultra $199.99 为 Pro 20 倍 token 价值及 Neon 官方 API 单价折算；未经 Ultra 独立实测。"
+      }
+    },
+    {
+      "id": "estimate:google-ai-ultra-5x:gemini-4-carbon",
+      "planId": "google_ai_ultra_5x_estimate",
+      "upstreamPlanIds": [
+        "google_ai_ultra_5x_us",
+        "google_ai_ultra_5x"
+      ],
+      "name": "Google AI Ultra 5x",
+      "model": "gemini-4-carbon",
+      "monthlyUsd": 99.99,
+      "confidence": "low",
+      "sampleDate": "2026-11-18",
+      "sampleFrom": "Google AI Pro · gemini-3.8-flash",
+      "calibration": {
+        "meter": "anchor-pool",
+        "anchorMode": "worth-ratio",
+        "anchorPointId": "google_ai_pro_us::gemini-3.8-flash",
+        "planRatio": 5,
+        "anchorRates": {
+          "cache": 0.075,
+          "input": 0.75,
+          "output": 3.75
+        }
+      },
+      "rates": {
+        "cache": 0.2,
+        "input": 4,
+        "output": 20
+      },
+      "sources": [
+        {
+          "label": "Google Antigravity model availability by plan",
+          "url": "https://antigravity.google/docs/models"
+        },
+        {
+          "label": "Google Antigravity plan quota rules",
+          "url": "https://antigravity.google/docs/plans"
+        },
+        {
+          "label": "Gemini Developer API pricing (Carbon)",
+          "url": "https://aistudio.google.com/docs/pricing#gemini-4-carbon"
+        }
+      ],
+      "note": {
+        "en": "Gemini 4 Carbon requires Google AI Ultra (excluded from Pro). Conservatively valued at Carbon's post-December 1 regular API rates ($4/$20/$0.20) rather than introductory pricing; not directly measured on Ultra.",
+        "zh": "Gemini 4 Carbon 仅限 Google AI Ultra（Pro 不可用）。保守采用 12 月 1 日后的常规 API 单价（$4/$20/$0.20）而非引入价折算；未经 Ultra 独立实测。"
+      }
+    },
+    {
+      "id": "estimate:google-ai-ultra-20x:gemini-4-carbon",
+      "planId": "google_ai_ultra_20x_estimate",
+      "upstreamPlanIds": [
+        "google_ai_ultra_20x_us",
+        "google_ai_ultra_20x"
+      ],
+      "name": "Google AI Ultra 20x",
+      "model": "gemini-4-carbon",
+      "monthlyUsd": 199.99,
+      "confidence": "low",
+      "sampleDate": "2026-11-18",
+      "sampleFrom": "Google AI Pro · gemini-3.8-flash",
+      "calibration": {
+        "meter": "anchor-pool",
+        "anchorMode": "worth-ratio",
+        "anchorPointId": "google_ai_pro_us::gemini-3.8-flash",
+        "planRatio": 20,
+        "anchorRates": {
+          "cache": 0.075,
+          "input": 0.75,
+          "output": 3.75
+        }
+      },
+      "rates": {
+        "cache": 0.2,
+        "input": 4,
+        "output": 20
+      },
+      "sources": [
+        {
+          "label": "Google Antigravity model availability by plan",
+          "url": "https://antigravity.google/docs/models"
+        },
+        {
+          "label": "Google Antigravity plan quota rules",
+          "url": "https://antigravity.google/docs/plans"
+        },
+        {
+          "label": "Gemini Developer API pricing (Carbon)",
+          "url": "https://aistudio.google.com/docs/pricing#gemini-4-carbon"
+        }
+      ],
+      "note": {
+        "en": "Gemini 4 Carbon requires Google AI Ultra (excluded from Pro). Conservatively valued at Carbon's post-December 1 regular API rates ($4/$20/$0.20) rather than introductory pricing; not directly measured on Ultra.",
+        "zh": "Gemini 4 Carbon 仅限 Google AI Ultra（Pro 不可用）。保守采用 12 月 1 日后的常规 API 单价（$4/$20/$0.20）而非引入价折算；未经 Ultra 独立实测。"
+      }
+    },
+    {
+      "id": "estimate:chatgpt-plus:gpt-6.2-sol",
+      "planId": "chatgpt_plus_estimate",
+      "upstreamPlanIds": [
+        "chatgpt_plus"
+      ],
+      "name": "ChatGPT Plus",
+      "model": "gpt-6.2-sol",
+      "monthlyUsd": 20,
+      "confidence": "low",
+      "sampleDate": "2026-11-18",
+      "sampleFrom": "ChatGPT Plus · gpt-6.1-sol",
+      "calibration": {
+        "meter": "anchor-pool",
+        "anchorMode": "same-token-carry",
+        "anchorPointId": "chatgpt_plus::gpt-6.1-sol",
+        "planRatio": 1
+      },
+      "rates": {
+        "cache": 0.1,
+        "input": 2,
+        "cacheWrite": 2.5,
+        "output": 10
+      },
+      "freshInputBilling": "cache-write",
+      "sources": [
+        {
+          "label": "OpenAI GPT-6.2 Sol model documentation",
+          "url": "https://developers.openai.com/api/docs/models/gpt-6.2-sol"
+        },
+        {
+          "label": "OpenAI API pricing",
+          "url": "https://developers.openai.com/api/docs/pricing"
+        }
+      ],
+      "note": {
+        "en": "GPT-6.2 Sol has identical official API rates to GPT-6.1 Sol ($2/$0.10/$2.50/$10). Conservatively carries over the measured ChatGPT Plus GPT-6.1 Sol monthly allowance pending direct GPT-6.2 measurement.",
+        "zh": "GPT-6.2 Sol 官方 API 价格与 GPT-6.1 Sol 完全一致（$2/$0.10/$2.50/$10）。在获得 GPT-6.2 独立实测前，保守沿用实测 ChatGPT Plus GPT-6.1 Sol 月额度。"
+      }
+    },
+    {
+      "id": "estimate:chatgpt-pro-10x:gpt-6.2-sol",
+      "planId": "chatgpt_pro_10x_estimate",
+      "upstreamPlanIds": [
+        "chatgpt_pro_10x"
+      ],
+      "name": "ChatGPT Pro 10x",
+      "model": "gpt-6.2-sol",
+      "monthlyUsd": 100,
+      "confidence": "low",
+      "sampleDate": "2026-11-18",
+      "sampleFrom": "ChatGPT Plus · gpt-6.1-sol",
+      "calibration": {
+        "meter": "anchor-pool",
+        "anchorMode": "same-token-carry",
+        "anchorPointId": "chatgpt_plus::gpt-6.1-sol",
+        "planRatio": 10
+      },
+      "rates": {
+        "cache": 0.1,
+        "input": 2,
+        "cacheWrite": 2.5,
+        "output": 10
+      },
+      "freshInputBilling": "cache-write",
+      "sources": [
+        {
+          "label": "OpenAI GPT-6.2 Sol model documentation",
+          "url": "https://developers.openai.com/api/docs/models/gpt-6.2-sol"
+        },
+        {
+          "label": "OpenAI ChatGPT Pro tiers",
+          "url": "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers"
+        }
+      ],
+      "note": {
+        "en": "Extrapolated from measured ChatGPT Plus GPT-6.1 Sol using OpenAI's official 10x Pro $100 multiplier; not directly measured for GPT-6.2 Sol.",
+        "zh": "基于实测 ChatGPT Plus GPT-6.1 Sol 按官方 Pro $100 的 10 倍档位外推；未经 GPT-6.2 Sol 独立实测。"
+      }
+    },
+    {
+      "id": "estimate:chatgpt-pro-20x:gpt-6.2-sol",
+      "planId": "chatgpt_pro_20x_estimate",
+      "upstreamPlanIds": [
+        "chatgpt_pro_20x"
+      ],
+      "name": "ChatGPT Pro 20x",
+      "model": "gpt-6.2-sol",
+      "monthlyUsd": 200,
+      "confidence": "low",
+      "sampleDate": "2026-11-18",
+      "sampleFrom": "ChatGPT Plus · gpt-6.1-sol",
+      "calibration": {
+        "meter": "anchor-pool",
+        "anchorMode": "same-token-carry",
+        "anchorPointId": "chatgpt_plus::gpt-6.1-sol",
+        "planRatio": 20
+      },
+      "rates": {
+        "cache": 0.1,
+        "input": 2,
+        "cacheWrite": 2.5,
+        "output": 10
+      },
+      "freshInputBilling": "cache-write",
+      "sources": [
+        {
+          "label": "OpenAI GPT-6.2 Sol model documentation",
+          "url": "https://developers.openai.com/api/docs/models/gpt-6.2-sol"
+        },
+        {
+          "label": "OpenAI ChatGPT Pro tiers",
+          "url": "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers"
+        }
+      ],
+      "note": {
+        "en": "Extrapolated from measured ChatGPT Plus GPT-6.1 Sol using OpenAI's official 20x Pro $200 multiplier; not directly measured for GPT-6.2 Sol.",
+        "zh": "基于实测 ChatGPT Plus GPT-6.1 Sol 按官方 Pro $200 的 20 倍档位外推；未经 GPT-6.2 Sol 独立实测。"
+      }
+    },
+    {
+      "id": "estimate:chatgpt-plus:gpt-6.2-astra",
+      "planId": "chatgpt_plus_estimate",
+      "upstreamPlanIds": [
+        "chatgpt_plus"
+      ],
+      "name": "ChatGPT Plus",
+      "model": "gpt-6.2-astra",
+      "monthlyUsd": 20,
+      "confidence": "low",
+      "sampleDate": "2026-11-18",
+      "sampleFrom": "ChatGPT Plus · gpt-6-astra",
+      "calibration": {
+        "meter": "anchor-pool",
+        "anchorMode": "same-token-carry",
+        "anchorPointId": "chatgpt_plus::gpt-6-astra",
+        "planRatio": 1
+      },
+      "rates": {
+        "cache": 0.4,
+        "input": 8,
+        "cacheWrite": 10,
+        "output": 40
+      },
+      "freshInputBilling": "cache-write",
+      "sources": [
+        {
+          "label": "OpenAI GPT-6.2 Astra model documentation",
+          "url": "https://developers.openai.com/api/docs/models/gpt-6.2-astra"
+        },
+        {
+          "label": "OpenAI API pricing",
+          "url": "https://developers.openai.com/api/docs/pricing"
+        }
+      ],
+      "note": {
+        "en": "Conservatively carries over the measured ChatGPT Plus GPT-6 Astra token allowance without crediting GPT-6.2 Astra's 20%-60% API price reduction pending direct measurement.",
+        "zh": "在获得独立实测前，保守沿用实测 ChatGPT Plus GPT-6 Astra 的月 token 额度，不预先计入 GPT-6.2 Astra 的 API 降价红利。"
+      }
+    },
+    {
+      "id": "estimate:chatgpt-pro-10x:gpt-6.2-astra",
+      "planId": "chatgpt_pro_10x_estimate",
+      "upstreamPlanIds": [
+        "chatgpt_pro_10x"
+      ],
+      "name": "ChatGPT Pro 10x",
+      "model": "gpt-6.2-astra",
+      "monthlyUsd": 100,
+      "confidence": "low",
+      "sampleDate": "2026-11-18",
+      "sampleFrom": "ChatGPT Pro 10x · gpt-6-astra",
+      "calibration": {
+        "meter": "anchor-pool",
+        "anchorMode": "same-token-carry",
+        "anchorPointId": "chatgpt_pro_10x::gpt-6-astra",
+        "planRatio": 1
+      },
+      "rates": {
+        "cache": 0.4,
+        "input": 8,
+        "cacheWrite": 10,
+        "output": 40
+      },
+      "freshInputBilling": "cache-write",
+      "sources": [
+        {
+          "label": "OpenAI GPT-6.2 Astra model documentation",
+          "url": "https://developers.openai.com/api/docs/models/gpt-6.2-astra"
+        },
+        {
+          "label": "OpenAI ChatGPT Pro tiers",
+          "url": "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers"
+        }
+      ],
+      "note": {
+        "en": "Conservatively carries over the ChatGPT Pro 10x GPT-6 Astra allowance without crediting GPT-6.2 Astra's API price reduction pending direct measurement.",
+        "zh": "在获得独立实测前，保守沿用 ChatGPT Pro 10x GPT-6 Astra 月额度，不预先计入 GPT-6.2 Astra 的 API 降价红利。"
+      }
+    },
+    {
+      "id": "estimate:chatgpt-pro-20x:gpt-6.2-astra",
+      "planId": "chatgpt_pro_20x_estimate",
+      "upstreamPlanIds": [
+        "chatgpt_pro_20x"
+      ],
+      "name": "ChatGPT Pro 20x",
+      "model": "gpt-6.2-astra",
+      "monthlyUsd": 200,
+      "confidence": "low",
+      "sampleDate": "2026-11-18",
+      "sampleFrom": "ChatGPT Pro 20x · gpt-6-astra",
+      "calibration": {
+        "meter": "anchor-pool",
+        "anchorMode": "same-token-carry",
+        "anchorPointId": "chatgpt_pro_20x::gpt-6-astra",
+        "planRatio": 1
+      },
+      "rates": {
+        "cache": 0.4,
+        "input": 8,
+        "cacheWrite": 10,
+        "output": 40
+      },
+      "freshInputBilling": "cache-write",
+      "sources": [
+        {
+          "label": "OpenAI GPT-6.2 Astra model documentation",
+          "url": "https://developers.openai.com/api/docs/models/gpt-6.2-astra"
+        },
+        {
+          "label": "OpenAI ChatGPT Pro tiers",
+          "url": "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers"
+        }
+      ],
+      "note": {
+        "en": "Conservatively carries over the multi-source measured ChatGPT Pro 20x GPT-6 Astra token allowance without crediting GPT-6.2 Astra's API price reduction pending direct measurement.",
+        "zh": "在获得独立实测前，保守沿用多源实测的 ChatGPT Pro 20x GPT-6 Astra 月 token 额度，不预先计入 GPT-6.2 Astra 的 API 降价红利。"
+      }
     }
   ]
 }

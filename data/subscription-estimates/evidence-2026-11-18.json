@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "checkedAt": "2026-11-18",
+  "scope": "Conservative low-confidence anchor-pool subscription estimates for Google AI Pro/Ultra (Gemini 4 Hydrogen, Neon, Carbon) and ChatGPT Plus/Pro (GPT-6.2 Sol, Astra) pending direct per-model measurements.",
+  "officialEligibility": {
+    "googleAntigravity": {
+      "source": "https://antigravity.google/docs/models",
+      "verifiedAt": "2026-11-18",
+      "gemini-4-carbon": ["Google AI Ultra (5x / 20x)", "Enterprise (excluded from Google AI Pro)"],
+      "gemini-4-neon": ["Google AI Pro (paid / eligible device trial)", "Google AI Ultra (5x / 20x)", "Enterprise"],
+      "gemini-4-hydrogen": ["Google AI Pro (paid non-trial)", "Google AI Ultra (5x / 20x)", "Enterprise"]
+    },
+    "openaiChatgpt": {
+      "source": "https://developers.openai.com/api/docs/models/gpt-6.2-astra",
+      "verifiedAt": "2026-11-18",
+      "gpt-6.2-astra": ["ChatGPT Plus", "ChatGPT Pro 10x", "ChatGPT Pro 20x"],
+      "gpt-6.2-sol": ["ChatGPT Plus", "ChatGPT Pro 10x", "ChatGPT Pro 20x"]
+    }
+  },
+  "methodology": {
+    "google": {
+      "anchorPointId": "google_ai_pro_us::gemini-3.8-flash",
+      "anchorMonthlyTokens": 2581000000,
+      "anchorBlendUsdPerMTok": 0.11025,
+      "proMonthlyWorthUsd": 284.55525,
+      "ultraMultipliers": { "5x": 5, "20x": 20 },
+      "conservatism": [
+        "Marked confidence: low and quota_is_estimated: true.",
+        "Carbon is restricted to Ultra only (omitted from Pro) and valued at post-December 1 regular rates ($4/$20/$0.20, $0.394/MTok) rather than introductory rates.",
+        "Upstream coexistence guard blocks silent double-plotting once upstream adopts direct measurements."
+      ]
+    },
+    "openai": {
+      "gpt-6.2-sol": {
+        "anchorPointId": "chatgpt_plus::gpt-6.1-sol",
+        "anchorMonthlyTokens": 1516000000,
+        "planMultipliers": { "plus": 1, "pro10x": 10, "pro20x": 20 },
+        "rationale": "Identical official API rates ($2/$0.10/$2.50/$10) to GPT-6.1 Sol."
+      },
+      "gpt-6.2-astra": {
+        "anchors": {
+          "plus": "chatgpt_plus::gpt-6-astra (159M/mo)",
+          "pro10x": "chatgpt_pro_10x::gpt-6-astra (1.82B/mo)",
+          "pro20x": "chatgpt_pro_20x::gpt-6-astra (3.812B/mo)"
+        },
+        "rationale": "Conservatively carries over exact GPT-6 Astra measured token allowances without adding any bonus for GPT-6.2 Astra's 20%-60% API price reduction."
+      }
+    }
+  }
+}

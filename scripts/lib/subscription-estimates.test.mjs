@@ -62,3 +62,35 @@ test('same-date archive quota or price corrections require a fresh explicit revi
   const m=clone(manifest);delete m.archivedPointIds[0][field];assert.throws(()=>mergeSubscriptionEstimates(data,m),/invalid archive request/);
  }
 });
+
+test('anchor-pool supports worth-ratio and same-token-carry with strict low confidence and vendor guards',()=>{
+ const d={
+  conventions:{monthWeeks:4,anthropicTokenMix:{cache:.97,cacheWrite:.025,output:.005},standardTokenMix:{cache:.97,input:.025,output:.005}},
+  models:[
+   {id:'gemini-3.8-flash',name:'Gemini 3.8 Flash',maker:'Google'},
+   {id:'gemini-4-neon',name:'Gemini 4 Neon',maker:'Google'},
+   {id:'gpt-6-astra',name:'GPT-6 Astra',maker:'OpenAI'},
+   {id:'gpt-6.2-astra',name:'GPT-6.2 Astra',maker:'OpenAI'},
+  ],
+  points:[
+   {id:'google_ai_pro_us::gemini-3.8-flash',plan_id:'google_ai_pro_us',model:'gemini-3.8-flash',vendor:'Google',billing:'subscription',monthly_tokens:2581e6,real_usd_per_mtok:.0077450601,data_date:'2026-09-27'},
+   {id:'chatgpt_pro_20x::gpt-6-astra',plan_id:'chatgpt_pro_20x',model:'gpt-6-astra',vendor:'OpenAI',billing:'subscription',monthly_tokens:3812e6,real_usd_per_mtok:.052465897,data_date:'2026-09-21'},
+  ],
+  mappings:[],configurations:[],supersededPoints:[],
+ };
+ const m={
+  version:1,checkedAt:'2026-11-18',evidenceFiles:['evidence-2026-11-18.json'],archivedPointIds:[],
+  entries:[
+   {id:'estimate:google-ai-ultra-20x:gemini-4-neon',planId:'google_ai_ultra_20x_estimate',upstreamPlanIds:['google_ai_ultra_20x_us'],name:'Google AI Ultra 20x',model:'gemini-4-neon',monthlyUsd:199.99,confidence:'low',sampleDate:'2026-11-18',sampleFrom:'Google AI Pro · gemini-3.8-flash',calibration:{meter:'anchor-pool',anchorMode:'worth-ratio',anchorPointId:'google_ai_pro_us::gemini-3.8-flash',planRatio:20,anchorRates:{cache:.075,input:.75,output:3.75}},rates:{cache:.15,input:3,output:15},sources:[{label:'Antigravity models',url:'https://antigravity.google/docs/models'}],note:{en:'Derived from Pro main pool.',zh:'基于 Pro 主池折算。'}},
+   {id:'estimate:chatgpt-pro-20x:gpt-6.2-astra',planId:'chatgpt_pro_20x_estimate',upstreamPlanIds:['chatgpt_pro_20x'],name:'ChatGPT Pro 20x',model:'gpt-6.2-astra',monthlyUsd:200,confidence:'low',sampleDate:'2026-11-18',sampleFrom:'ChatGPT Pro 20x · gpt-6-astra',calibration:{meter:'anchor-pool',anchorMode:'same-token-carry',anchorPointId:'chatgpt_pro_20x::gpt-6-astra',planRatio:1},rates:{cache:.4,input:8,cacheWrite:10,output:40},freshInputBilling:'cache-write',sources:[{label:'GPT-6.2 Astra docs',url:'https://developers.openai.com/api/docs/models/gpt-6.2-astra'}],note:{en:'Carries over GPT-6 Astra tokens.',zh:'沿用 GPT-6 Astra 额度。'}},
+  ],
+ };
+ const res=mergeSubscriptionEstimates(d,m);
+ const neon=res.points.find(p=>p.id==='estimate:google-ai-ultra-20x:gemini-4-neon');
+ const astra=res.points.find(p=>p.id==='estimate:chatgpt-pro-20x:gpt-6.2-astra');
+ assert.ok(Math.abs(neon.monthly_yi - (2581*.11025*20/.2955/100)) < 1e-9);
+ assert.equal(neon.workload,'standard');assert.equal(neon.quota_is_estimated,true);assert.equal(neon.confidence,'low');
+ assert.equal(astra.monthly_tokens,3812e6);assert.equal(astra.workload,'cacheWrite');assert.ok(Math.abs(astra.list_blended_usd_per_mtok-.838)<1e-12);
+ const badConf=clone(m);badConf.entries[0].confidence='medium';assert.throws(()=>mergeSubscriptionEstimates(d,badConf),/invalid calibration/);
+ const crossVendor=clone(m);crossVendor.entries[0].calibration.anchorPointId='chatgpt_pro_20x::gpt-6-astra';assert.throws(()=>mergeSubscriptionEstimates(d,crossVendor),/invalid anchor point/);
+});
