@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checkedAt": "2026-11-18",
+  "checkedAt": "2026-11-19",
   "source": "https://artificialanalysis.ai/models/releases",
   "note": "Unmapped source entries requiring identity/configuration review; these may already exist under another catalog ID. Not automatically published.",
   "candidates": [
@@ -32,14 +32,14 @@
     },
     {
       "url": "https://artificialanalysis.ai/models/claude-opus-5-5",
-      "label": "Claude Opus 5.5 Anthropic · Sep 2026 · 5 effort levels Image Healthcare & Medical (#2) Strategy & Ops (#4) Intelligence 59 35–59 Cost / task $0.98 $0.98–$10.04 Context 1M",
+      "label": "Claude Opus 5.5 Anthropic · Sep 2026 · 5 effort levels Image Healthcare & Medical (#3) Strategy & Ops (#4) Intelligence 59 35–59 Cost / task $0.98 $0.98–$10.04 Context 1M",
       "possibleCatalogMatches": [
         "claude-opus-5.5"
       ]
     },
     {
       "url": "https://artificialanalysis.ai/models/claude-sonnet-5-5",
-      "label": "Claude Sonnet 5.5 Anthropic · Sep 2026 · 5 effort levels Image Healthcare & Medical (#5) Strategy & Ops (#7) Intelligence 55 26–55 Cost / task $0.51 $0.51–$10.02 Context 1M",
+      "label": "Claude Sonnet 5.5 Anthropic · Sep 2026 · 5 effort levels Image Healthcare & Medical (#6) Strategy & Ops (#7) Intelligence 55 26–55 Cost / task $0.51 $0.51–$10.02 Context 1M",
       "possibleCatalogMatches": [
         "claude-sonnet-5.5"
       ]
@@ -124,12 +124,12 @@
     },
     {
       "url": "https://artificialanalysis.ai/models/glm-5-3",
-      "label": "GLM-5.3 Z AI · Aug 2026 · 2 effort levels Open weights Healthcare & Medical (#20) Finance & Accounting (#21) Intelligence 32 23–32 Cost / task $1.57 $1.57–$5.01 Context 1M",
+      "label": "GLM-5.3 Z AI · Aug 2026 · 2 effort levels Open weights Finance & Accounting (#21) Strategy & Ops (#21) Intelligence 32 23–32 Cost / task $1.57 $1.57–$5.01 Context 1M",
       "possibleCatalogMatches": []
     },
     {
       "url": "https://artificialanalysis.ai/models/gpt-6-2-astra",
-      "label": "GPT-6.2 Astra OpenAI · Nov 2026 · 5 effort levels Image Strategy & Ops (#3) Healthcare & Medical (#3) Intelligence 62 46–62 Cost / task $0.66 $0.66–$4.00 Context 1M",
+      "label": "GPT-6.2 Astra OpenAI · Nov 2026 · 5 effort levels Image Strategy & Ops (#3) Engineering (#3) Intelligence 62 46–62 Cost / task $0.66 $0.66–$4.00 Context 1M",
       "possibleCatalogMatches": [
         "gpt-6.2-astra"
       ]
@@ -262,7 +262,7 @@
     },
     {
       "url": "https://artificialanalysis.ai/models/muse-ember",
-      "label": "Muse Ember Meta · Nov 2026 · 2 effort levels Image Finance & Accounting (#16) Healthcare & Medical (#17) Intelligence 36 34–36 Cost / task $0.12 $0.12–$0.14 Context 1M",
+      "label": "Muse Ember Meta · Nov 2026 · 2 effort levels Image Finance & Accounting (#16) Engineering (#17) Intelligence 36 34–36 Cost / task $0.12 $0.12–$0.14 Context 1M",
       "possibleCatalogMatches": [
         "muse-ember"
       ]
@@ -407,7 +407,7 @@
     },
     {
       "url": "https://artificialanalysis.ai/models/step-5-preview",
-      "label": "Step 5 Preview StepFun · Sep 2026 · 1 effort level Open weights Image Legal (#19) Healthcare & Medical (#19) Intelligence 29 Cost / task $2.35 Context 1M",
+      "label": "Step 5 Preview StepFun · Sep 2026 · 1 effort level Open weights Image Legal (#19) Healthcare & Medical (#20) Intelligence 29 Cost / task $2.35 Context 1M",
       "possibleCatalogMatches": [
         "step-5-preview"
       ]
@@ -421,7 +421,7 @@
     },
     {
       "url": "https://artificialanalysis.ai/models/tencent-hy4",
-      "label": "Tencent Hy4 Tencent · Nov 2026 · 1 effort level Image Healthcare & Medical (#15) Strategy & Ops (#18) Intelligence 35 Cost / task $1.03 Context 1M",
+      "label": "Tencent Hy4 Tencent · Nov 2026 · 1 effort level Image Healthcare & Medical (#16) Strategy & Ops (#18) Intelligence 35 Cost / task $1.03 Context 1M",
       "possibleCatalogMatches": []
     }
   ]

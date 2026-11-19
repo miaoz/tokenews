@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "checkedAt": "2026-11-18",
-  "baselineCommit": "40cfb4e34ca2263ef4ddf4b06c44cfa578a3d10c",
+  "checkedAt": "2026-11-19",
+  "baselineCommit": "13080beb25054a0ab567ed5b6b60ce37c5c40f1b",
   "note": "Source audit is separate from publication. Unverified sources are never reported as unchanged. Identity-review rows may be aliases, historical models, or new releases. Scores across changed versions must not be mixed.",
   "results": [
     {
