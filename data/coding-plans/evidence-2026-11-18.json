@@ -1,0 +1,81 @@
+{
+  "version": 1,
+  "checkedAt": "2026-11-18",
+  "baseCommit": "ca79cf14df81202fdd6e18218f117280d28ddfad",
+  "scope": "Add reviewed Command Code Pro, Max 10× and Max 20× allowances for OpenAI GPT-6.2 Astra, OpenAI GPT-6.2 Sol, and Google Gemini 4 Neon. No upstream edits or invented quotas.",
+  "sources": [
+    "https://commandcode.ai/docs/plans/pro",
+    "https://commandcode.ai/docs/plans/max",
+    "https://commandcode.ai/docs/reference/cli/models",
+    "https://commandcode.ai/docs/resources/pricing-limits"
+  ],
+  "officialCurrent": {
+    "gpt-6.2-astra": {
+      "endpoint": "gpt-6.2-astra",
+      "plans": {
+        "command_code_max_10": { "monthlyUsd": 100, "monthlyCreditsUsd": 100 },
+        "command_code_max_20": { "monthlyUsd": 200, "monthlyCreditsUsd": 200 }
+      },
+      "shortContextRates": { "input": 8, "output": 40, "cache": 0.4, "cacheWrite": 10 },
+      "longContextRates": { "input": 16, "output": 60, "cache": 0.8, "cacheWrite": 20 }
+    },
+    "gpt-6.2-sol": {
+      "endpoint": "gpt-6.2-sol",
+      "plans": {
+        "command_code_pro": { "monthlyUsd": 20, "monthlyCreditsUsd": 20 },
+        "command_code_max_10": { "monthlyUsd": 100, "monthlyCreditsUsd": 100 },
+        "command_code_max_20": { "monthlyUsd": 200, "monthlyCreditsUsd": 200 }
+      },
+      "shortContextRates": { "input": 2, "output": 10, "cache": 0.1, "cacheWrite": 2.5 },
+      "longContextRates": { "input": 4, "output": 15, "cache": 0.2, "cacheWrite": 5 }
+    },
+    "gemini-4-neon": {
+      "endpoint": "google/gemini-4-neon",
+      "plans": {
+        "command_code_pro": { "monthlyUsd": 20, "monthlyCreditsUsd": 20 },
+        "command_code_max_10": { "monthlyUsd": 100, "monthlyCreditsUsd": 100 },
+        "command_code_max_20": { "monthlyUsd": 200, "monthlyCreditsUsd": 200 }
+      },
+      "rates": { "input": 3, "output": 15, "cache": 0.15 }
+    }
+  },
+  "notes": [
+    "Command Code Pro includes GPT-6.2 Sol ($20 monthly credits) and Gemini 4 Neon ($20 monthly credits); GPT-6.2 Astra is excluded from Pro and included in Max 10× ($100 credits) and Max 20× ($200 credits).",
+    "GPT-6.2 Astra and GPT-6.2 Sol use two context bands (≤272K and >272K) with cache-write billing replacing ordinary input for the 2.5% fresh share.",
+    "Gemini 4 Neon has flat rates across 1M context with no separate cache-write fee."
+  ],
+  "liveCaptures": [
+    {
+      "url": "https://commandcode.ai/docs/plans/pro",
+      "finalUrl": "https://commandcode.ai/docs/plans/pro",
+      "httpStatus": 200,
+      "capturedAtUtc": "2026-11-19T03:08:57.810Z",
+      "sha256": "340ea1ba4047529dd72e63d96a9a8f41f5144f22b3a157d3789cf44ea9e49bc9",
+      "hashBasis": "Complete decoded HTTP response body, before text extraction."
+    },
+    {
+      "url": "https://commandcode.ai/docs/plans/max",
+      "finalUrl": "https://commandcode.ai/docs/plans/max",
+      "httpStatus": 200,
+      "capturedAtUtc": "2026-11-19T03:08:58.101Z",
+      "sha256": "954c9f223a8b49ad97979bea7a2e1a891ac9ef02efc4115d6db13a58b0da3bb1",
+      "hashBasis": "Complete decoded HTTP response body, before text extraction."
+    },
+    {
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "finalUrl": "https://commandcode.ai/docs/reference/cli/models",
+      "httpStatus": 200,
+      "capturedAtUtc": "2026-11-19T03:08:58.401Z",
+      "sha256": "62b4cd655ce367a90b7a4c848e0aaf41e2c807e007460b83a3ecc20f5b2692e8",
+      "hashBasis": "Complete decoded HTTP response body, before text extraction."
+    },
+    {
+      "url": "https://commandcode.ai/docs/resources/pricing-limits",
+      "finalUrl": "https://commandcode.ai/docs/resources/pricing-limits",
+      "httpStatus": 200,
+      "capturedAtUtc": "2026-11-19T03:08:58.714Z",
+      "sha256": "ef430d0913350ce21b38884fc71601731e77413be2b4ad828f73d303b70d93f3",
+      "hashBasis": "Complete decoded HTTP response body, before text extraction."
+    }
+  ]
+}

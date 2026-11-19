@@ -149,3 +149,23 @@ test('a stale November bundle rolls Carbon chart price and mappings forward with
  overlap.apiPointSchedules!.find(s=>s.pointIds.includes(intro.id))!.alternatives[1].validFrom='2026-11-30';
  assert.throws(()=>unpackData(overlap,'2026-11-30'),/Overlapping/);
 });
+
+test('GPT-6.2 Astra, GPT-6.2 Sol and Gemini 4 Neon publish exact official API rates and workloads', () => {
+  const astra = apiPriceReference(data, 'gpt-6.2-astra', '2026-11-18')!;
+  assert.equal(astra.origin, 'maintained');
+  assert.equal(astra.variant.id, 'standard-short-30m');
+  assert.deepEqual(astra.variant.rates, { input: 8, cachedInput: 0.4, cacheWrite: 10, output: 40 });
+  assert.ok(Math.abs(astra.blended! - 0.838) < 1e-12);
+
+  const sol = apiPriceReference(data, 'gpt-6.2-sol', '2026-11-18')!;
+  assert.equal(sol.origin, 'maintained');
+  assert.equal(sol.variant.id, 'standard-short-30m');
+  assert.deepEqual(sol.variant.rates, { input: 2, cachedInput: 0.1, cacheWrite: 2.5, output: 10 });
+  assert.ok(Math.abs(sol.blended! - 0.2095) < 1e-12);
+
+  const neon = apiPriceReference(data, 'gemini-4-neon', '2026-11-18')!;
+  assert.equal(neon.origin, 'maintained');
+  assert.equal(neon.variant.id, 'standard');
+  assert.deepEqual(neon.variant.rates, { input: 3, cachedInput: 0.15, output: 15 });
+  assert.ok(Math.abs(neon.blended! - 0.2955) < 1e-12);
+});

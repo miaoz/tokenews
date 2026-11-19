@@ -1,0 +1,103 @@
+{
+  "checkedAt": "2026-11-18",
+  "scope": "Verify official API pricing and release identities for OpenAI GPT-6.2 Astra, OpenAI GPT-6.2 Sol, and Google Gemini 4 Neon, plus Google Gemini 4 Carbon Batch/Flex/Priority tiers.",
+  "models": [
+    {
+      "model": "gpt-6.2-astra",
+      "releaseDate": "2026-11-17",
+      "status": "reviewed-official-api",
+      "sources": [
+        "https://developers.openai.com/api/docs/models/gpt-6.2-astra",
+        "https://developers.openai.com/api/docs/pricing",
+        "https://developers.openai.com/api/docs/guides/prompt-caching",
+        "https://developers.openai.com/api/docs/changelog"
+      ],
+      "officialTerms": {
+        "endpoint": "gpt-6.2-astra",
+        "contextWindow": 1050000,
+        "longContextThreshold": 272000,
+        "currency": "USD",
+        "unit": "per_million_tokens",
+        "standardShort30m": {
+          "input": 8,
+          "cachedInput": 0.4,
+          "cacheWrite": 10,
+          "output": 40
+        },
+        "standardLong30m": {
+          "input": 16,
+          "cachedInput": 0.8,
+          "cacheWrite": 20,
+          "output": 60
+        },
+        "tiers": ["standard", "batch", "fast", "ultrafast-promo (through 2027-02-28)", "ultrafast-list (from 2027-03-01)"],
+        "flexListed": false,
+        "caching": "Cache-write pricing is not additive; input tokens use uncached-input, cached-input, or cache-write rates."
+      },
+      "workload": "Chart references use 97% cache reads, 2.5% 30m cache writes (replacing ordinary input), and 0.5% output: $0.838/MTok (≤272K) and $1.576/MTok (>272K)."
+    },
+    {
+      "model": "gpt-6.2-sol",
+      "releaseDate": "2026-11-17",
+      "status": "reviewed-official-api",
+      "sources": [
+        "https://developers.openai.com/api/docs/models/gpt-6.2-sol",
+        "https://developers.openai.com/api/docs/pricing",
+        "https://developers.openai.com/api/docs/guides/prompt-caching",
+        "https://developers.openai.com/api/docs/changelog"
+      ],
+      "officialTerms": {
+        "endpoint": "gpt-6.2-sol",
+        "contextWindow": 1050000,
+        "longContextThreshold": 272000,
+        "currency": "USD",
+        "unit": "per_million_tokens",
+        "standardShort30m": {
+          "input": 2,
+          "cachedInput": 0.1,
+          "cacheWrite": 2.5,
+          "output": 10
+        },
+        "standardLong30m": {
+          "input": 4,
+          "cachedInput": 0.2,
+          "cacheWrite": 5,
+          "output": 15
+        },
+        "tiers": ["standard", "batch", "fast", "ultrafast-promo (through 2027-02-28)", "ultrafast-list (from 2027-03-01)"],
+        "flexListed": false,
+        "caching": "Cache-write pricing is not additive; input tokens use uncached-input, cached-input, or cache-write rates."
+      },
+      "workload": "Chart references use 97% cache reads, 2.5% 30m cache writes (replacing ordinary input), and 0.5% output: $0.2095/MTok (≤272K) and $0.394/MTok (>272K)."
+    },
+    {
+      "model": "gemini-4-neon",
+      "releaseDate": "2026-11-18",
+      "status": "reviewed-official-api",
+      "sources": [
+        "https://aistudio.google.com/docs/pricing#gemini-4-neon",
+        "https://aistudio.google.com/docs/models/gemini-4-neon",
+        "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/",
+        "https://aistudio.google.com/docs/changelog"
+      ],
+      "officialTerms": {
+        "endpoint": "gemini-4-neon",
+        "releaseStatus": "Stable",
+        "service": "Gemini Developer API",
+        "contextWindow": 1048576,
+        "currency": "USD",
+        "unit": "per_million_tokens",
+        "standard": {
+          "input": 3,
+          "cachedInput": 0.15,
+          "output": 15
+        },
+        "tiers": ["standard", "batch", "flex", "priority"],
+        "freeTier": false,
+        "caching": "Implicit caching only; explicit caching is not supported.",
+        "output": "Includes thinking tokens."
+      },
+      "workload": "Chart reference assumes 97% implicit cache reads, 2.5% fresh input, and 0.5% output: $0.2955/MTok."
+    }
+  ]
+}

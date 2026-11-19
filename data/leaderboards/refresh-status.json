@@ -1,16 +1,36 @@
 {
   "version": 1,
-  "attemptedAt": "2026-11-16",
+  "attemptedAt": "2026-11-18",
   "results": [
     {
       "board": "aa_intelligence_index",
       "status": "updated",
-      "reviewRequired": 3,
+      "reviewRequired": 7,
       "identityReview": [
         {
           "label": "K-EXAONE 2.0",
           "sourceId": "local:aa-configuration:[\"k-exaone-2-0\",\"K-EXAONE 2.0\"]",
           "releaseSlug": "k-exaone-2-0"
+        },
+        {
+          "label": "LFM3-VL-2B",
+          "sourceId": "local:aa-configuration:[\"lfm3-vl-2b\",\"LFM3-VL-2B\"]",
+          "releaseSlug": "lfm3-vl-2b"
+        },
+        {
+          "label": "JoyAI-VL-Preview",
+          "sourceId": "local:aa-configuration:[\"joyvl2_v27\",\"JoyAI-VL-Preview\"]",
+          "releaseSlug": "joyvl2_v27"
+        },
+        {
+          "label": "K2 Horizon 32B",
+          "sourceId": "local:aa-configuration:[\"k2-horizon-32b\",\"K2 Horizon 32B\"]",
+          "releaseSlug": "k2-horizon-32b"
+        },
+        {
+          "label": "LFM3-1.7B",
+          "sourceId": "local:aa-configuration:[\"lfm3-1-7b\",\"LFM3-1.7B\"]",
+          "releaseSlug": "lfm3-1-7b"
         },
         {
           "label": "Tencent Hy4",
@@ -23,24 +43,60 @@
           "releaseSlug": "qwen4-max"
         }
       ],
-      "retainedCheckedAt": "2026-11-16"
+      "retainedCheckedAt": "2026-11-18"
     },
     {
       "board": "terminal_bench_4",
       "status": "updated",
-      "reviewRequired": 0,
-      "identityReview": [],
-      "retainedCheckedAt": "2026-11-16"
+      "reviewRequired": 3,
+      "identityReview": [
+        {
+          "label": "GitHub Copilot - Copilot Fusion (max)",
+          "sourceId": "9ab09ca7-525a-4724-8d34-ba3510f13591",
+          "releaseSlug": null
+        },
+        {
+          "label": "mini-swe-agent - Ember-1 (none)",
+          "sourceId": "b5ad018e-a9df-4306-8a01-3ea91b3ef5dd",
+          "releaseSlug": null
+        },
+        {
+          "label": "Antigravity CLI - Gemini 3.1 Pro (high)",
+          "sourceId": "ac317001-3cc5-4105-90b0-0437b3893ce1",
+          "releaseSlug": null
+        }
+      ],
+      "retainedCheckedAt": "2026-11-18"
     },
     {
       "board": "aa_terminal_bench_4",
       "status": "updated",
-      "reviewRequired": 3,
+      "reviewRequired": 7,
       "identityReview": [
         {
           "label": "K-EXAONE 2.0",
           "sourceId": "local:aa-configuration:[\"k-exaone-2-0\",\"K-EXAONE 2.0\"]",
           "releaseSlug": "k-exaone-2-0"
+        },
+        {
+          "label": "LFM3-VL-2B",
+          "sourceId": "local:aa-configuration:[\"lfm3-vl-2b\",\"LFM3-VL-2B\"]",
+          "releaseSlug": "lfm3-vl-2b"
+        },
+        {
+          "label": "JoyAI-VL-Preview",
+          "sourceId": "local:aa-configuration:[\"joyvl2_v27\",\"JoyAI-VL-Preview\"]",
+          "releaseSlug": "joyvl2_v27"
+        },
+        {
+          "label": "K2 Horizon 32B",
+          "sourceId": "local:aa-configuration:[\"k2-horizon-32b\",\"K2 Horizon 32B\"]",
+          "releaseSlug": "k2-horizon-32b"
+        },
+        {
+          "label": "LFM3-1.7B",
+          "sourceId": "local:aa-configuration:[\"lfm3-1-7b\",\"LFM3-1.7B\"]",
+          "releaseSlug": "lfm3-1-7b"
         },
         {
           "label": "Tencent Hy4",
@@ -53,7 +109,7 @@
           "releaseSlug": "qwen4-max"
         }
       ],
-      "retainedCheckedAt": "2026-11-16"
+      "retainedCheckedAt": "2026-11-18"
     },
     {
       "board": "arena_code",
@@ -72,21 +128,21 @@
       "status": "updated",
       "reviewRequired": 0,
       "identityReview": [],
-      "retainedCheckedAt": "2026-11-16"
+      "retainedCheckedAt": "2026-11-18"
     },
     {
       "board": "open_design_arena",
       "status": "updated",
       "reviewRequired": 0,
       "identityReview": [],
-      "retainedCheckedAt": "2026-11-16"
+      "retainedCheckedAt": "2026-11-18"
     },
     {
       "board": "deepswe_1_1",
       "status": "updated",
       "reviewRequired": 0,
       "identityReview": [],
-      "retainedCheckedAt": "2026-11-16"
+      "retainedCheckedAt": "2026-11-18"
     }
   ]
 }

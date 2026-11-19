@@ -249,7 +249,10 @@
     "inkling-small-1102-rc17": "inkling-2-small",
     "solar-pro-4": "solar-pro-4",
     "inkling-2-small": "inkling-2-small",
-    "ling-3-1-flash-1001": "ling-3.1-flash"
+    "ling-3-1-flash-1001": "ling-3.1-flash",
+    "gemini-4-neon": "gemini-4-neon",
+    "gpt-6-2-astra": "gpt-6.2-astra",
+    "gpt-6-2-sol": "gpt-6.2-sol"
   },
   "arenaConfigurations": {
     "Claude Opus 5.5 (Max)": "claude-opus-5.5",

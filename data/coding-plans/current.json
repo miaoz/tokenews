@@ -4104,6 +4104,313 @@
       },
       "checkedAt": "2026-11-04",
       "id": "ollama_team_credits::mimo-v2.6-pro"
+    },
+    {
+      "plan": "command_code_pro",
+      "model": "gpt-6.2-sol",
+      "endpoint": "gpt-6.2-sol",
+      "source": "https://commandcode.ai/docs/plans/pro",
+      "identitySource": "https://commandcode.ai/docs/reference/cli/models",
+      "rates": {
+        "input": 2,
+        "output": 10,
+        "cache": 0.1,
+        "cacheWrite": 2.5
+      },
+      "monthlyCreditsUsd": 20,
+      "scope": {
+        "en": "≤272K context; cache-write input",
+        "zh": "≤272K 上下文；新输入按缓存写入计费"
+      },
+      "checkedAt": "2026-11-18",
+      "id": "command_code_pro::gpt-6.2-sol",
+      "identityNote": {
+        "en": "The official model registry and current plan table confirm this exact OpenAI release; benchmark scores remain model references.",
+        "zh": "官方模型目录与现行套餐表交叉核对该 OpenAI 正式型号；榜单分数仍为模型参考成绩。"
+      },
+      "freshInputBilling": "cache-write"
+    },
+    {
+      "plan": "command_code_pro",
+      "model": "gpt-6.2-sol",
+      "endpoint": "gpt-6.2-sol",
+      "source": "https://commandcode.ai/docs/plans/pro",
+      "identitySource": "https://commandcode.ai/docs/reference/cli/models",
+      "rates": {
+        "input": 4,
+        "output": 15,
+        "cache": 0.2,
+        "cacheWrite": 5
+      },
+      "monthlyCreditsUsd": 20,
+      "scope": {
+        "en": ">272K context; cache-write input",
+        "zh": ">272K 上下文；新输入按缓存写入计费"
+      },
+      "checkedAt": "2026-11-18",
+      "id": "command_code_pro::gpt-6.2-sol::long-context",
+      "identityNote": {
+        "en": "The official model registry and current plan table confirm this exact OpenAI release; benchmark scores remain model references.",
+        "zh": "官方模型目录与现行套餐表交叉核对该 OpenAI 正式型号；榜单分数仍为模型参考成绩。"
+      },
+      "freshInputBilling": "cache-write"
+    },
+    {
+      "plan": "command_code_pro",
+      "model": "gemini-4-neon",
+      "endpoint": "google/gemini-4-neon",
+      "source": "https://commandcode.ai/docs/plans/pro",
+      "identitySource": "https://commandcode.ai/docs/reference/cli/models",
+      "rates": {
+        "input": 3,
+        "output": 15,
+        "cache": 0.15
+      },
+      "monthlyCreditsUsd": 20,
+      "checkedAt": "2026-11-18",
+      "id": "command_code_pro::gemini-4-neon",
+      "identityNote": {
+        "en": "The official model registry and current plan table confirm this exact Google release; benchmark scores remain model references.",
+        "zh": "官方模型目录与现行套餐表交叉核对该 Google 正式型号；榜单分数仍为模型参考成绩。"
+      }
+    },
+    {
+      "plan": "command_code_max_10",
+      "model": "gpt-6.2-astra",
+      "endpoint": "gpt-6.2-astra",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/docs/reference/cli/models",
+      "rates": {
+        "input": 8,
+        "output": 40,
+        "cache": 0.4,
+        "cacheWrite": 10
+      },
+      "monthlyCreditsUsd": 100,
+      "scope": {
+        "en": "≤272K context; cache-write input",
+        "zh": "≤272K 上下文；新输入按缓存写入计费"
+      },
+      "checkedAt": "2026-11-18",
+      "id": "command_code_max_10::gpt-6.2-astra",
+      "identityNote": {
+        "en": "The official model registry and current plan table confirm this exact OpenAI release; benchmark scores remain model references.",
+        "zh": "官方模型目录与现行套餐表交叉核对该 OpenAI 正式型号；榜单分数仍为模型参考成绩。"
+      },
+      "freshInputBilling": "cache-write"
+    },
+    {
+      "plan": "command_code_max_10",
+      "model": "gpt-6.2-astra",
+      "endpoint": "gpt-6.2-astra",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/docs/reference/cli/models",
+      "rates": {
+        "input": 16,
+        "output": 60,
+        "cache": 0.8,
+        "cacheWrite": 20
+      },
+      "monthlyCreditsUsd": 100,
+      "scope": {
+        "en": ">272K context; cache-write input",
+        "zh": ">272K 上下文；新输入按缓存写入计费"
+      },
+      "checkedAt": "2026-11-18",
+      "id": "command_code_max_10::gpt-6.2-astra::long-context",
+      "identityNote": {
+        "en": "The official model registry and current plan table confirm this exact OpenAI release; benchmark scores remain model references.",
+        "zh": "官方模型目录与现行套餐表交叉核对该 OpenAI 正式型号；榜单分数仍为模型参考成绩。"
+      },
+      "freshInputBilling": "cache-write"
+    },
+    {
+      "plan": "command_code_max_10",
+      "model": "gpt-6.2-sol",
+      "endpoint": "gpt-6.2-sol",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/docs/reference/cli/models",
+      "rates": {
+        "input": 2,
+        "output": 10,
+        "cache": 0.1,
+        "cacheWrite": 2.5
+      },
+      "monthlyCreditsUsd": 100,
+      "scope": {
+        "en": "≤272K context; cache-write input",
+        "zh": "≤272K 上下文；新输入按缓存写入计费"
+      },
+      "checkedAt": "2026-11-18",
+      "id": "command_code_max_10::gpt-6.2-sol",
+      "identityNote": {
+        "en": "The official model registry and current plan table confirm this exact OpenAI release; benchmark scores remain model references.",
+        "zh": "官方模型目录与现行套餐表交叉核对该 OpenAI 正式型号；榜单分数仍为模型参考成绩。"
+      },
+      "freshInputBilling": "cache-write"
+    },
+    {
+      "plan": "command_code_max_10",
+      "model": "gpt-6.2-sol",
+      "endpoint": "gpt-6.2-sol",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/docs/reference/cli/models",
+      "rates": {
+        "input": 4,
+        "output": 15,
+        "cache": 0.2,
+        "cacheWrite": 5
+      },
+      "monthlyCreditsUsd": 100,
+      "scope": {
+        "en": ">272K context; cache-write input",
+        "zh": ">272K 上下文；新输入按缓存写入计费"
+      },
+      "checkedAt": "2026-11-18",
+      "id": "command_code_max_10::gpt-6.2-sol::long-context",
+      "identityNote": {
+        "en": "The official model registry and current plan table confirm this exact OpenAI release; benchmark scores remain model references.",
+        "zh": "官方模型目录与现行套餐表交叉核对该 OpenAI 正式型号；榜单分数仍为模型参考成绩。"
+      },
+      "freshInputBilling": "cache-write"
+    },
+    {
+      "plan": "command_code_max_10",
+      "model": "gemini-4-neon",
+      "endpoint": "google/gemini-4-neon",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/docs/reference/cli/models",
+      "rates": {
+        "input": 3,
+        "output": 15,
+        "cache": 0.15
+      },
+      "monthlyCreditsUsd": 100,
+      "checkedAt": "2026-11-18",
+      "id": "command_code_max_10::gemini-4-neon",
+      "identityNote": {
+        "en": "The official model registry and current plan table confirm this exact Google release; benchmark scores remain model references.",
+        "zh": "官方模型目录与现行套餐表交叉核对该 Google 正式型号；榜单分数仍为模型参考成绩。"
+      }
+    },
+    {
+      "plan": "command_code_max_20",
+      "model": "gpt-6.2-astra",
+      "endpoint": "gpt-6.2-astra",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/docs/reference/cli/models",
+      "rates": {
+        "input": 8,
+        "output": 40,
+        "cache": 0.4,
+        "cacheWrite": 10
+      },
+      "monthlyCreditsUsd": 200,
+      "scope": {
+        "en": "≤272K context; cache-write input",
+        "zh": "≤272K 上下文；新输入按缓存写入计费"
+      },
+      "checkedAt": "2026-11-18",
+      "id": "command_code_max_20::gpt-6.2-astra",
+      "identityNote": {
+        "en": "The official model registry and current plan table confirm this exact OpenAI release; benchmark scores remain model references.",
+        "zh": "官方模型目录与现行套餐表交叉核对该 OpenAI 正式型号；榜单分数仍为模型参考成绩。"
+      },
+      "freshInputBilling": "cache-write"
+    },
+    {
+      "plan": "command_code_max_20",
+      "model": "gpt-6.2-astra",
+      "endpoint": "gpt-6.2-astra",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/docs/reference/cli/models",
+      "rates": {
+        "input": 16,
+        "output": 60,
+        "cache": 0.8,
+        "cacheWrite": 20
+      },
+      "monthlyCreditsUsd": 200,
+      "scope": {
+        "en": ">272K context; cache-write input",
+        "zh": ">272K 上下文；新输入按缓存写入计费"
+      },
+      "checkedAt": "2026-11-18",
+      "id": "command_code_max_20::gpt-6.2-astra::long-context",
+      "identityNote": {
+        "en": "The official model registry and current plan table confirm this exact OpenAI release; benchmark scores remain model references.",
+        "zh": "官方模型目录与现行套餐表交叉核对该 OpenAI 正式型号；榜单分数仍为模型参考成绩。"
+      },
+      "freshInputBilling": "cache-write"
+    },
+    {
+      "plan": "command_code_max_20",
+      "model": "gpt-6.2-sol",
+      "endpoint": "gpt-6.2-sol",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/docs/reference/cli/models",
+      "rates": {
+        "input": 2,
+        "output": 10,
+        "cache": 0.1,
+        "cacheWrite": 2.5
+      },
+      "monthlyCreditsUsd": 200,
+      "scope": {
+        "en": "≤272K context; cache-write input",
+        "zh": "≤272K 上下文；新输入按缓存写入计费"
+      },
+      "checkedAt": "2026-11-18",
+      "id": "command_code_max_20::gpt-6.2-sol",
+      "identityNote": {
+        "en": "The official model registry and current plan table confirm this exact OpenAI release; benchmark scores remain model references.",
+        "zh": "官方模型目录与现行套餐表交叉核对该 OpenAI 正式型号；榜单分数仍为模型参考成绩。"
+      },
+      "freshInputBilling": "cache-write"
+    },
+    {
+      "plan": "command_code_max_20",
+      "model": "gpt-6.2-sol",
+      "endpoint": "gpt-6.2-sol",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/docs/reference/cli/models",
+      "rates": {
+        "input": 4,
+        "output": 15,
+        "cache": 0.2,
+        "cacheWrite": 5
+      },
+      "monthlyCreditsUsd": 200,
+      "scope": {
+        "en": ">272K context; cache-write input",
+        "zh": ">272K 上下文；新输入按缓存写入计费"
+      },
+      "checkedAt": "2026-11-18",
+      "id": "command_code_max_20::gpt-6.2-sol::long-context",
+      "identityNote": {
+        "en": "The official model registry and current plan table confirm this exact OpenAI release; benchmark scores remain model references.",
+        "zh": "官方模型目录与现行套餐表交叉核对该 OpenAI 正式型号；榜单分数仍为模型参考成绩。"
+      },
+      "freshInputBilling": "cache-write"
+    },
+    {
+      "plan": "command_code_max_20",
+      "model": "gemini-4-neon",
+      "endpoint": "google/gemini-4-neon",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/docs/reference/cli/models",
+      "rates": {
+        "input": 3,
+        "output": 15,
+        "cache": 0.15
+      },
+      "monthlyCreditsUsd": 200,
+      "checkedAt": "2026-11-18",
+      "id": "command_code_max_20::gemini-4-neon",
+      "identityNote": {
+        "en": "The official model registry and current plan table confirm this exact Google release; benchmark scores remain model references.",
+        "zh": "官方模型目录与现行套餐表交叉核对该 Google 正式型号；榜单分数仍为模型参考成绩。"
+      }
     }
   ],
   "legacyPlanIds": [
@@ -4371,6 +4678,7 @@
     "evidence-2026-11-12.json",
     "evidence-2026-11-13.json",
     "evidence-2026-11-14.json",
-    "evidence-2026-11-15.json"
+    "evidence-2026-11-15.json",
+    "evidence-2026-11-18.json"
   ]
 }

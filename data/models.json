@@ -522,6 +522,14 @@
       "releaseDate": "2026-11-12"
     },
     {
+      "id": "gemini-4-neon",
+      "name": "Gemini 4 Neon",
+      "maker": "Google",
+      "source": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/",
+      "checkedAt": "2026-11-18",
+      "releaseDate": "2026-11-18"
+    },
+    {
       "id": "gemma-3-270m",
       "name": "Gemma 3 270M",
       "maker": "Google",
@@ -786,6 +794,22 @@
       "maker": "OpenAI",
       "source": "https://artificialanalysis.ai/models/releases/gpt-6-1-terra",
       "checkedAt": "2026-11-04"
+    },
+    {
+      "id": "gpt-6.2-astra",
+      "name": "GPT-6.2 Astra",
+      "maker": "OpenAI",
+      "source": "https://developers.openai.com/api/docs/models/gpt-6.2-astra",
+      "checkedAt": "2026-11-18",
+      "releaseDate": "2026-11-17"
+    },
+    {
+      "id": "gpt-6.2-sol",
+      "name": "GPT-6.2 Sol",
+      "maker": "OpenAI",
+      "source": "https://developers.openai.com/api/docs/models/gpt-6.2-sol",
+      "checkedAt": "2026-11-18",
+      "releaseDate": "2026-11-17"
     },
     {
       "id": "gpt-oss-120b",

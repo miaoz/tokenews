@@ -97,8 +97,11 @@ test('optional inclusive price-validity dates permit future tiers but reject inv
  const original = {...catalog, models:catalog.models.filter(m=>m.id==='gemini-4-carbon')};
  validatePriceFile(original,'google.json','2026-11-13');
  const carbon = original.models.find(m=>m.id==='gemini-4-carbon');
- assert.deepEqual(carbon.variants.map(v=>[v.validFrom,v.validUntil]),[
-  ['2026-11-13','2026-11-30'],['2026-12-01',undefined]
+ assert.deepEqual(carbon.variants.map(v=>[v.id,v.validFrom,v.validUntil]),[
+  ['standard-intro','2026-11-13','2026-11-30'],['standard-regular','2026-12-01',undefined],
+  ['batch-intro','2026-11-18','2026-11-30'],['batch-regular','2026-12-01',undefined],
+  ['flex-intro','2026-11-18','2026-11-30'],['flex-regular','2026-12-01',undefined],
+  ['priority-intro','2026-11-18','2026-11-30'],['priority-regular','2026-12-01',undefined],
  ]);
  for(const patch of [{validFrom:'2026-02-30'},{validUntil:'tomorrow'},{validFrom:'2026-12-01',validUntil:'2026-11-30'}]){
   const invalid=structuredClone(original);

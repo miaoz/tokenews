@@ -547,6 +547,864 @@
         "https://developers.openai.com/api/docs/guides/prompt-caching"
       ],
       "referenceInput": "cacheWrite"
+    },
+    {
+      "id": "gpt-6.2-astra",
+      "source": "https://developers.openai.com/api/docs/models/gpt-6.2-astra",
+      "checkedAt": "2026-11-18",
+      "defaultVariant": "standard-short-30m",
+      "variants": [
+        {
+          "id": "standard-short-30m",
+          "label": {
+            "en": "OpenAI API · standard · ≤272K input · 30m cache",
+            "zh": "OpenAI API · 标准档 · ≤272K 输入 · 30 分钟缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": 272000
+          },
+          "rates": {
+            "input": 8,
+            "cachedInput": 0.4,
+            "output": 40,
+            "cacheWrite": 10
+          }
+        },
+        {
+          "id": "standard-short-12h",
+          "label": {
+            "en": "OpenAI API · standard · ≤272K input · 12h cache",
+            "zh": "OpenAI API · 标准档 · ≤272K 输入 · 12 小时缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": 272000
+          },
+          "rates": {
+            "input": 8,
+            "cachedInput": 0.4,
+            "output": 40,
+            "cacheWrite": 20
+          }
+        },
+        {
+          "id": "standard-long-30m",
+          "label": {
+            "en": "OpenAI API · standard · >272K input · 30m cache",
+            "zh": "OpenAI API · 标准档 · >272K 输入 · 30 分钟缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": {
+            "min": 272001,
+            "max": null
+          },
+          "rates": {
+            "input": 16,
+            "cachedInput": 0.8,
+            "output": 60,
+            "cacheWrite": 20
+          }
+        },
+        {
+          "id": "standard-long-12h",
+          "label": {
+            "en": "OpenAI API · standard · >272K input · 12h cache",
+            "zh": "OpenAI API · 标准档 · >272K 输入 · 12 小时缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": {
+            "min": 272001,
+            "max": null
+          },
+          "rates": {
+            "input": 16,
+            "cachedInput": 0.8,
+            "output": 60,
+            "cacheWrite": 40
+          }
+        },
+        {
+          "id": "batch-short-30m",
+          "label": {
+            "en": "OpenAI API · batch · ≤272K input · 30m cache",
+            "zh": "OpenAI API · 批处理 · ≤272K 输入 · 30 分钟缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "batch",
+          "context": {
+            "min": 0,
+            "max": 272000
+          },
+          "rates": {
+            "input": 4,
+            "cachedInput": 0.2,
+            "output": 20,
+            "cacheWrite": 5
+          }
+        },
+        {
+          "id": "batch-short-12h",
+          "label": {
+            "en": "OpenAI API · batch · ≤272K input · 12h cache",
+            "zh": "OpenAI API · 批处理 · ≤272K 输入 · 12 小时缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "batch",
+          "context": {
+            "min": 0,
+            "max": 272000
+          },
+          "rates": {
+            "input": 4,
+            "cachedInput": 0.2,
+            "output": 20,
+            "cacheWrite": 10
+          }
+        },
+        {
+          "id": "batch-long-30m",
+          "label": {
+            "en": "OpenAI API · batch · >272K input · 30m cache",
+            "zh": "OpenAI API · 批处理 · >272K 输入 · 30 分钟缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "batch",
+          "context": {
+            "min": 272001,
+            "max": null
+          },
+          "rates": {
+            "input": 8,
+            "cachedInput": 0.4,
+            "output": 30,
+            "cacheWrite": 10
+          }
+        },
+        {
+          "id": "batch-long-12h",
+          "label": {
+            "en": "OpenAI API · batch · >272K input · 12h cache",
+            "zh": "OpenAI API · 批处理 · >272K 输入 · 12 小时缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "batch",
+          "context": {
+            "min": 272001,
+            "max": null
+          },
+          "rates": {
+            "input": 8,
+            "cachedInput": 0.4,
+            "output": 30,
+            "cacheWrite": 20
+          }
+        },
+        {
+          "id": "fast-short-30m",
+          "label": {
+            "en": "OpenAI API · fast · ≤272K input · 30m cache",
+            "zh": "OpenAI API · 快速档 · ≤272K 输入 · 30 分钟缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "fast",
+          "context": {
+            "min": 0,
+            "max": 272000
+          },
+          "rates": {
+            "input": 16,
+            "cachedInput": 0.8,
+            "output": 80,
+            "cacheWrite": 20
+          }
+        },
+        {
+          "id": "fast-short-12h",
+          "label": {
+            "en": "OpenAI API · fast · ≤272K input · 12h cache",
+            "zh": "OpenAI API · 快速档 · ≤272K 输入 · 12 小时缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "fast",
+          "context": {
+            "min": 0,
+            "max": 272000
+          },
+          "rates": {
+            "input": 16,
+            "cachedInput": 0.8,
+            "output": 80,
+            "cacheWrite": 40
+          }
+        },
+        {
+          "id": "fast-long-30m",
+          "label": {
+            "en": "OpenAI API · fast · >272K input · 30m cache",
+            "zh": "OpenAI API · 快速档 · >272K 输入 · 30 分钟缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "fast",
+          "context": {
+            "min": 272001,
+            "max": null
+          },
+          "rates": {
+            "input": 32,
+            "cachedInput": 1.6,
+            "output": 120,
+            "cacheWrite": 40
+          }
+        },
+        {
+          "id": "fast-long-12h",
+          "label": {
+            "en": "OpenAI API · fast · >272K input · 12h cache",
+            "zh": "OpenAI API · 快速档 · >272K 输入 · 12 小时缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "fast",
+          "context": {
+            "min": 272001,
+            "max": null
+          },
+          "rates": {
+            "input": 32,
+            "cachedInput": 1.6,
+            "output": 120,
+            "cacheWrite": 80
+          }
+        },
+        {
+          "id": "ultrafast-promo-short-30m",
+          "label": {
+            "en": "OpenAI API · ultrafast promo · ≤272K input · 30m cache · through 2027-02-28",
+            "zh": "OpenAI API · 极速档促销 · ≤272K 输入 · 30 分钟缓存 · 至 2027-02-28"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "ultrafast",
+          "context": {
+            "min": 0,
+            "max": 272000
+          },
+          "rates": {
+            "input": 24,
+            "cachedInput": 1.2,
+            "output": 120,
+            "cacheWrite": 30
+          },
+          "validFrom": "2026-11-17",
+          "validUntil": "2027-02-28"
+        },
+        {
+          "id": "ultrafast-promo-short-12h",
+          "label": {
+            "en": "OpenAI API · ultrafast promo · ≤272K input · 12h cache · through 2027-02-28",
+            "zh": "OpenAI API · 极速档促销 · ≤272K 输入 · 12 小时缓存 · 至 2027-02-28"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "ultrafast",
+          "context": {
+            "min": 0,
+            "max": 272000
+          },
+          "rates": {
+            "input": 24,
+            "cachedInput": 1.2,
+            "output": 120,
+            "cacheWrite": 60
+          },
+          "validFrom": "2026-11-17",
+          "validUntil": "2027-02-28"
+        },
+        {
+          "id": "ultrafast-promo-long-30m",
+          "label": {
+            "en": "OpenAI API · ultrafast promo · >272K input · 30m cache · through 2027-02-28",
+            "zh": "OpenAI API · 极速档促销 · >272K 输入 · 30 分钟缓存 · 至 2027-02-28"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "ultrafast",
+          "context": {
+            "min": 272001,
+            "max": null
+          },
+          "rates": {
+            "input": 48,
+            "cachedInput": 2.4,
+            "output": 180,
+            "cacheWrite": 60
+          },
+          "validFrom": "2026-11-17",
+          "validUntil": "2027-02-28"
+        },
+        {
+          "id": "ultrafast-promo-long-12h",
+          "label": {
+            "en": "OpenAI API · ultrafast promo · >272K input · 12h cache · through 2027-02-28",
+            "zh": "OpenAI API · 极速档促销 · >272K 输入 · 12 小时缓存 · 至 2027-02-28"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "ultrafast",
+          "context": {
+            "min": 272001,
+            "max": null
+          },
+          "rates": {
+            "input": 48,
+            "cachedInput": 2.4,
+            "output": 180,
+            "cacheWrite": 120
+          },
+          "validFrom": "2026-11-17",
+          "validUntil": "2027-02-28"
+        },
+        {
+          "id": "ultrafast-list-short-30m",
+          "label": {
+            "en": "OpenAI API · ultrafast · ≤272K input · 30m cache · from 2027-03-01",
+            "zh": "OpenAI API · 极速档 · ≤272K 输入 · 30 分钟缓存 · 自 2027-03-01"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "ultrafast",
+          "context": {
+            "min": 0,
+            "max": 272000
+          },
+          "rates": {
+            "input": 48,
+            "cachedInput": 2.4,
+            "output": 240,
+            "cacheWrite": 60
+          },
+          "validFrom": "2027-03-01"
+        },
+        {
+          "id": "ultrafast-list-short-12h",
+          "label": {
+            "en": "OpenAI API · ultrafast · ≤272K input · 12h cache · from 2027-03-01",
+            "zh": "OpenAI API · 极速档 · ≤272K 输入 · 12 小时缓存 · 自 2027-03-01"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "ultrafast",
+          "context": {
+            "min": 0,
+            "max": 272000
+          },
+          "rates": {
+            "input": 48,
+            "cachedInput": 2.4,
+            "output": 240,
+            "cacheWrite": 120
+          },
+          "validFrom": "2027-03-01"
+        },
+        {
+          "id": "ultrafast-list-long-30m",
+          "label": {
+            "en": "OpenAI API · ultrafast · >272K input · 30m cache · from 2027-03-01",
+            "zh": "OpenAI API · 极速档 · >272K 输入 · 30 分钟缓存 · 自 2027-03-01"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "ultrafast",
+          "context": {
+            "min": 272001,
+            "max": null
+          },
+          "rates": {
+            "input": 96,
+            "cachedInput": 4.8,
+            "output": 360,
+            "cacheWrite": 120
+          },
+          "validFrom": "2027-03-01"
+        },
+        {
+          "id": "ultrafast-list-long-12h",
+          "label": {
+            "en": "OpenAI API · ultrafast · >272K input · 12h cache · from 2027-03-01",
+            "zh": "OpenAI API · 极速档 · >272K 输入 · 12 小时缓存 · 自 2027-03-01"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "ultrafast",
+          "context": {
+            "min": 272001,
+            "max": null
+          },
+          "rates": {
+            "input": 96,
+            "cachedInput": 4.8,
+            "output": 360,
+            "cacheWrite": 240
+          },
+          "validFrom": "2027-03-01"
+        }
+      ],
+      "notes": {
+        "en": "Released November 17, 2026 (API ID: gpt-6.2-astra). Reference workload assumes 97% cache reads, 2.5% cache writes and 0.5% output; writes replace ordinary input billing, not an added fee. Default: Standard, ≤272K input, 30m cache. Prompts >272K use long-context rates for the full request. Ultrafast is 3x Standard through February 28, 2027 and 6x starting March 1, 2027 (PT). Flex is not listed; discounted background completion windows (30% off for 2h, 40% off for 8h) are in Responses API public beta. Regional data residency and FedRAMP add 10%; tool fees excluded.",
+        "zh": "2026 年 11 月 17 日发布（API ID：gpt-6.2-astra）。参考负载假设 97% 缓存读取、2.5% 缓存写入、0.5% 输出；写入费替代普通输入费，不重复叠加。默认标准档、输入不超过 272K、30 分钟缓存；超过 272K 整次请求采用长上下文费率。极速档在 2027 年 2 月 28 日前为标准档 3 倍，3 月 1 日（太平洋时间）起为 6 倍。价表未列 Flex 档；Responses API 后台完成窗口（2 小时减 30%、8 小时减 40%）处于公测。区域数据处理与 FedRAMP 加收 10%，工具费用另计。"
+      },
+      "additionalSources": [
+        "https://developers.openai.com/api/docs/pricing",
+        "https://developers.openai.com/api/docs/guides/prompt-caching"
+      ],
+      "referenceInput": "cacheWrite"
+    },
+    {
+      "id": "gpt-6.2-sol",
+      "source": "https://developers.openai.com/api/docs/models/gpt-6.2-sol",
+      "checkedAt": "2026-11-18",
+      "defaultVariant": "standard-short-30m",
+      "variants": [
+        {
+          "id": "standard-short-30m",
+          "label": {
+            "en": "OpenAI API · standard · ≤272K input · 30m cache",
+            "zh": "OpenAI API · 标准档 · ≤272K 输入 · 30 分钟缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": 272000
+          },
+          "rates": {
+            "input": 2,
+            "cachedInput": 0.1,
+            "output": 10,
+            "cacheWrite": 2.5
+          }
+        },
+        {
+          "id": "standard-short-12h",
+          "label": {
+            "en": "OpenAI API · standard · ≤272K input · 12h cache",
+            "zh": "OpenAI API · 标准档 · ≤272K 输入 · 12 小时缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": 272000
+          },
+          "rates": {
+            "input": 2,
+            "cachedInput": 0.1,
+            "output": 10,
+            "cacheWrite": 5
+          }
+        },
+        {
+          "id": "standard-long-30m",
+          "label": {
+            "en": "OpenAI API · standard · >272K input · 30m cache",
+            "zh": "OpenAI API · 标准档 · >272K 输入 · 30 分钟缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": {
+            "min": 272001,
+            "max": null
+          },
+          "rates": {
+            "input": 4,
+            "cachedInput": 0.2,
+            "output": 15,
+            "cacheWrite": 5
+          }
+        },
+        {
+          "id": "standard-long-12h",
+          "label": {
+            "en": "OpenAI API · standard · >272K input · 12h cache",
+            "zh": "OpenAI API · 标准档 · >272K 输入 · 12 小时缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": {
+            "min": 272001,
+            "max": null
+          },
+          "rates": {
+            "input": 4,
+            "cachedInput": 0.2,
+            "output": 15,
+            "cacheWrite": 10
+          }
+        },
+        {
+          "id": "batch-short-30m",
+          "label": {
+            "en": "OpenAI API · batch · ≤272K input · 30m cache",
+            "zh": "OpenAI API · 批处理 · ≤272K 输入 · 30 分钟缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "batch",
+          "context": {
+            "min": 0,
+            "max": 272000
+          },
+          "rates": {
+            "input": 1,
+            "cachedInput": 0.05,
+            "output": 5,
+            "cacheWrite": 1.25
+          }
+        },
+        {
+          "id": "batch-short-12h",
+          "label": {
+            "en": "OpenAI API · batch · ≤272K input · 12h cache",
+            "zh": "OpenAI API · 批处理 · ≤272K 输入 · 12 小时缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "batch",
+          "context": {
+            "min": 0,
+            "max": 272000
+          },
+          "rates": {
+            "input": 1,
+            "cachedInput": 0.05,
+            "output": 5,
+            "cacheWrite": 2.5
+          }
+        },
+        {
+          "id": "batch-long-30m",
+          "label": {
+            "en": "OpenAI API · batch · >272K input · 30m cache",
+            "zh": "OpenAI API · 批处理 · >272K 输入 · 30 分钟缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "batch",
+          "context": {
+            "min": 272001,
+            "max": null
+          },
+          "rates": {
+            "input": 2,
+            "cachedInput": 0.1,
+            "output": 7.5,
+            "cacheWrite": 2.5
+          }
+        },
+        {
+          "id": "batch-long-12h",
+          "label": {
+            "en": "OpenAI API · batch · >272K input · 12h cache",
+            "zh": "OpenAI API · 批处理 · >272K 输入 · 12 小时缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "batch",
+          "context": {
+            "min": 272001,
+            "max": null
+          },
+          "rates": {
+            "input": 2,
+            "cachedInput": 0.1,
+            "output": 7.5,
+            "cacheWrite": 5
+          }
+        },
+        {
+          "id": "fast-short-30m",
+          "label": {
+            "en": "OpenAI API · fast · ≤272K input · 30m cache",
+            "zh": "OpenAI API · 快速档 · ≤272K 输入 · 30 分钟缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "fast",
+          "context": {
+            "min": 0,
+            "max": 272000
+          },
+          "rates": {
+            "input": 4,
+            "cachedInput": 0.2,
+            "output": 20,
+            "cacheWrite": 5
+          }
+        },
+        {
+          "id": "fast-short-12h",
+          "label": {
+            "en": "OpenAI API · fast · ≤272K input · 12h cache",
+            "zh": "OpenAI API · 快速档 · ≤272K 输入 · 12 小时缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "fast",
+          "context": {
+            "min": 0,
+            "max": 272000
+          },
+          "rates": {
+            "input": 4,
+            "cachedInput": 0.2,
+            "output": 20,
+            "cacheWrite": 10
+          }
+        },
+        {
+          "id": "fast-long-30m",
+          "label": {
+            "en": "OpenAI API · fast · >272K input · 30m cache",
+            "zh": "OpenAI API · 快速档 · >272K 输入 · 30 分钟缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "fast",
+          "context": {
+            "min": 272001,
+            "max": null
+          },
+          "rates": {
+            "input": 8,
+            "cachedInput": 0.4,
+            "output": 30,
+            "cacheWrite": 10
+          }
+        },
+        {
+          "id": "fast-long-12h",
+          "label": {
+            "en": "OpenAI API · fast · >272K input · 12h cache",
+            "zh": "OpenAI API · 快速档 · >272K 输入 · 12 小时缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "fast",
+          "context": {
+            "min": 272001,
+            "max": null
+          },
+          "rates": {
+            "input": 8,
+            "cachedInput": 0.4,
+            "output": 30,
+            "cacheWrite": 20
+          }
+        },
+        {
+          "id": "ultrafast-promo-short-30m",
+          "label": {
+            "en": "OpenAI API · ultrafast promo · ≤272K input · 30m cache · through 2027-02-28",
+            "zh": "OpenAI API · 极速档促销 · ≤272K 输入 · 30 分钟缓存 · 至 2027-02-28"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "ultrafast",
+          "context": {
+            "min": 0,
+            "max": 272000
+          },
+          "rates": {
+            "input": 6,
+            "cachedInput": 0.3,
+            "output": 30,
+            "cacheWrite": 7.5
+          },
+          "validFrom": "2026-11-17",
+          "validUntil": "2027-02-28"
+        },
+        {
+          "id": "ultrafast-promo-short-12h",
+          "label": {
+            "en": "OpenAI API · ultrafast promo · ≤272K input · 12h cache · through 2027-02-28",
+            "zh": "OpenAI API · 极速档促销 · ≤272K 输入 · 12 小时缓存 · 至 2027-02-28"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "ultrafast",
+          "context": {
+            "min": 0,
+            "max": 272000
+          },
+          "rates": {
+            "input": 6,
+            "cachedInput": 0.3,
+            "output": 30,
+            "cacheWrite": 15
+          },
+          "validFrom": "2026-11-17",
+          "validUntil": "2027-02-28"
+        },
+        {
+          "id": "ultrafast-promo-long-30m",
+          "label": {
+            "en": "OpenAI API · ultrafast promo · >272K input · 30m cache · through 2027-02-28",
+            "zh": "OpenAI API · 极速档促销 · >272K 输入 · 30 分钟缓存 · 至 2027-02-28"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "ultrafast",
+          "context": {
+            "min": 272001,
+            "max": null
+          },
+          "rates": {
+            "input": 12,
+            "cachedInput": 0.6,
+            "output": 45,
+            "cacheWrite": 15
+          },
+          "validFrom": "2026-11-17",
+          "validUntil": "2027-02-28"
+        },
+        {
+          "id": "ultrafast-promo-long-12h",
+          "label": {
+            "en": "OpenAI API · ultrafast promo · >272K input · 12h cache · through 2027-02-28",
+            "zh": "OpenAI API · 极速档促销 · >272K 输入 · 12 小时缓存 · 至 2027-02-28"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "ultrafast",
+          "context": {
+            "min": 272001,
+            "max": null
+          },
+          "rates": {
+            "input": 12,
+            "cachedInput": 0.6,
+            "output": 45,
+            "cacheWrite": 30
+          },
+          "validFrom": "2026-11-17",
+          "validUntil": "2027-02-28"
+        },
+        {
+          "id": "ultrafast-list-short-30m",
+          "label": {
+            "en": "OpenAI API · ultrafast · ≤272K input · 30m cache · from 2027-03-01",
+            "zh": "OpenAI API · 极速档 · ≤272K 输入 · 30 分钟缓存 · 自 2027-03-01"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "ultrafast",
+          "context": {
+            "min": 0,
+            "max": 272000
+          },
+          "rates": {
+            "input": 12,
+            "cachedInput": 0.6,
+            "output": 60,
+            "cacheWrite": 15
+          },
+          "validFrom": "2027-03-01"
+        },
+        {
+          "id": "ultrafast-list-short-12h",
+          "label": {
+            "en": "OpenAI API · ultrafast · ≤272K input · 12h cache · from 2027-03-01",
+            "zh": "OpenAI API · 极速档 · ≤272K 输入 · 12 小时缓存 · 自 2027-03-01"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "ultrafast",
+          "context": {
+            "min": 0,
+            "max": 272000
+          },
+          "rates": {
+            "input": 12,
+            "cachedInput": 0.6,
+            "output": 60,
+            "cacheWrite": 30
+          },
+          "validFrom": "2027-03-01"
+        },
+        {
+          "id": "ultrafast-list-long-30m",
+          "label": {
+            "en": "OpenAI API · ultrafast · >272K input · 30m cache · from 2027-03-01",
+            "zh": "OpenAI API · 极速档 · >272K 输入 · 30 分钟缓存 · 自 2027-03-01"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "ultrafast",
+          "context": {
+            "min": 272001,
+            "max": null
+          },
+          "rates": {
+            "input": 24,
+            "cachedInput": 1.2,
+            "output": 90,
+            "cacheWrite": 30
+          },
+          "validFrom": "2027-03-01"
+        },
+        {
+          "id": "ultrafast-list-long-12h",
+          "label": {
+            "en": "OpenAI API · ultrafast · >272K input · 12h cache · from 2027-03-01",
+            "zh": "OpenAI API · 极速档 · >272K 输入 · 12 小时缓存 · 自 2027-03-01"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "ultrafast",
+          "context": {
+            "min": 272001,
+            "max": null
+          },
+          "rates": {
+            "input": 24,
+            "cachedInput": 1.2,
+            "output": 90,
+            "cacheWrite": 60
+          },
+          "validFrom": "2027-03-01"
+        }
+      ],
+      "notes": {
+        "en": "Released November 17, 2026 (API ID: gpt-6.2-sol). Reference workload assumes 97% cache reads, 2.5% cache writes and 0.5% output; writes replace ordinary input billing, not an added fee. Default: Standard, ≤272K input, 30m cache. Prompts >272K use long-context rates for the full request. Ultrafast is 3x Standard through February 28, 2027 and 6x starting March 1, 2027 (PT). Flex is not listed; discounted background completion windows (30% off for 2h, 40% off for 8h) are in Responses API public beta. Regional data residency and FedRAMP add 10%; tool fees excluded.",
+        "zh": "2026 年 11 月 17 日发布（API ID：gpt-6.2-sol）。参考负载假设 97% 缓存读取、2.5% 缓存写入、0.5% 输出；写入费替代普通输入费，不重复叠加。默认标准档、输入不超过 272K、30 分钟缓存；超过 272K 整次请求采用长上下文费率。极速档在 2027 年 2 月 28 日前为标准档 3 倍，3 月 1 日（太平洋时间）起为 6 倍。价表未列 Flex 档；Responses API 后台完成窗口（2 小时减 30%、8 小时减 40%）处于公测。区域数据处理与 FedRAMP 加收 10%，工具费用另计。"
+      },
+      "additionalSources": [
+        "https://developers.openai.com/api/docs/pricing",
+        "https://developers.openai.com/api/docs/guides/prompt-caching"
+      ],
+      "referenceInput": "cacheWrite"
     }
   ]
 }

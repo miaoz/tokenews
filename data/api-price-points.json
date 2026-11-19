@@ -85,6 +85,47 @@
       "model": "gemini-4-hydrogen",
       "variant": "standard",
       "inputBilling": "input-only"
+    },
+    {
+      "model": "gemini-4-neon",
+      "variant": "standard",
+      "inputBilling": "input-only"
+    },
+    {
+      "model": "gpt-6.2-astra",
+      "variant": "standard-short-30m",
+      "inputBilling": "cache-write",
+      "context": {
+        "min": 0,
+        "max": 272000
+      }
+    },
+    {
+      "model": "gpt-6.2-astra",
+      "variant": "standard-long-30m",
+      "inputBilling": "cache-write",
+      "context": {
+        "min": 272001,
+        "max": null
+      }
+    },
+    {
+      "model": "gpt-6.2-sol",
+      "variant": "standard-short-30m",
+      "inputBilling": "cache-write",
+      "context": {
+        "min": 0,
+        "max": 272000
+      }
+    },
+    {
+      "model": "gpt-6.2-sol",
+      "variant": "standard-long-30m",
+      "inputBilling": "cache-write",
+      "context": {
+        "min": 272001,
+        "max": null
+      }
     }
   ]
 }

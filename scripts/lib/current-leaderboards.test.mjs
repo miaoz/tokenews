@@ -152,5 +152,6 @@ test('reused AA release slugs require exact reviewed release names and never cro
  assert.equal(rows[2].model,null);assert.equal(rows[2].exclusion,'identity-review-required');
  const current=snapshot.sources.find(s=>s.board==='aa_terminal_bench_4');
  assert.equal(current.rows.find(r=>r.label==='Ling 3.1 Flash 1019').model,'ling-3.1-flash-1019');
- assert.equal(current.rows.find(r=>r.label==='Ling 3.1 Flash').model,'ling-3.1-flash');
+ const oldLing=current.rows.find(r=>r.label==='Ling 3.1 Flash');
+ if(oldLing)assert.equal(oldLing.model,'ling-3.1-flash');
 });

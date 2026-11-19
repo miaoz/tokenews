@@ -67,7 +67,7 @@ test("all eight current boards distinguish published Fable, Carbon and Hydrogen 
   const expected: Record<string, [boolean,boolean,boolean]> = {
     aa_intelligence_index_v5_0_1:[true,true,true], terminal_bench_v4_1:[true,true,true],
     aa_terminal_bench_v4_0:[true,true,true], arena_code_current:[true,true,true],
-    arena_agent_mode_current:[true,true,true], aa_coding_agent_index_v2_1:[false,true,false],
+    arena_agent_mode_current:[true,true,true], aa_coding_agent_index_v2_1:[false,true,true],
     open_design_arena_current:[false,false,false], deepswe_v1_1:[false,false,false],
   };
   assert.deepEqual(new Set(data.currentBoards),new Set(Object.keys(expected)));
@@ -98,4 +98,22 @@ test("AutoEval and TB regrade provenance are visible without mixing different ev
     const tb=renderToStaticMarkup(<LeaderboardCoverage data={data} board="terminal_bench_v4_1" lang={lang}/>);
     assert.match(tb,lang==='en'?/not evidence of a fresh 4.1 run/:/逐行来源未披露/);
   }
+});
+
+test("GPT-6.2 Astra, GPT-6.2 Sol and Gemini 4 Neon publish reviewed prices and current leaderboard coverage", () => {
+  const expected: Record<string, [boolean, boolean, boolean]> = {
+    aa_intelligence_index_v5_0_1: [true, true, true],
+    terminal_bench_v4_1: [true, true, false],
+    aa_terminal_bench_v4_0: [true, true, true],
+    aa_coding_agent_index_v2_1: [true, true, true],
+  };
+  for (const [board, present] of Object.entries(expected)) {
+    const rows = rowsFor(data, { ...state, board });
+    for (const [i, model] of ["gpt-6.2-astra", "gpt-6.2-sol", "gemini-4-neon"].entries()) {
+      assert.equal(rows.some(r => r.point.model === model && r.mapping), present[i], `${board}: ${model}`);
+    }
+  }
+  assert.ok(data.points.some(p => p.id === "command_code_max_10::gpt-6.2-astra"));
+  assert.ok(data.points.some(p => p.id === "command_code_pro::gpt-6.2-sol"));
+  assert.ok(data.points.some(p => p.id === "command_code_pro::gemini-4-neon"));
 });
