@@ -113,15 +113,34 @@
     },
     {
       "board": "arena_code",
-      "status": "retained-previous",
-      "error": "HTTP 403",
-      "retainedCheckedAt": "2026-11-14"
+      "status": "updated",
+      "reviewRequired": 2,
+      "identityReview": [
+        {
+          "label": "Qwen4-Max (xHigh)",
+          "sourceId": "qwen4-max-xhigh-lm5r",
+          "releaseSlug": null
+        },
+        {
+          "label": "U2 Flash",
+          "sourceId": "u2-flash-ia61",
+          "releaseSlug": null
+        }
+      ],
+      "retainedCheckedAt": "2026-11-19"
     },
     {
       "board": "arena_agent_mode",
-      "status": "retained-previous",
-      "error": "HTTP 403",
-      "retainedCheckedAt": "2026-11-14"
+      "status": "updated",
+      "reviewRequired": 1,
+      "identityReview": [
+        {
+          "label": "Qwen4-Max (xHigh)",
+          "sourceId": "qwen4-max-xhigh-lm5r",
+          "releaseSlug": null
+        }
+      ],
+      "retainedCheckedAt": "2026-11-19"
     },
     {
       "board": "aa_coding_agent_index",

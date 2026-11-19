@@ -82,12 +82,12 @@ test("all eight current boards distinguish published Fable, Carbon and Hydrogen 
     }
   }
   assert.equal(Math.max(...data.configurations.filter(c=>c.board==='terminal_bench_v4_1'&&c.model==='claude-fable-5.2').map(c=>c.score)),65.76);
-  assert.equal(Math.max(...data.configurations.filter(c=>c.board==='arena_code_current'&&c.model==='claude-fable-5.2').map(c=>c.score)),1837.808306458596);
+  assert.equal(Math.max(...data.configurations.filter(c=>c.board==='arena_code_current'&&c.model==='claude-fable-5.2').map(c=>c.score)),1824.4634912809768);
 });
 
 test("AutoEval and TB regrade provenance are visible without mixing different evaluation measures", () => {
   const arena=data.leaderboardCoverage!.arena_code_current;
-  assert.equal(arena.observed,157);
+  assert.equal(arena.observed,161);
   assert.equal(arena.excludedSourceRows?.length,1);
   assert.ok(!data.configurations.some(c=>c.board==='arena_code_current'&&c.source_id===arena.excludedSourceRows![0].sourceId));
   assert.ok(unplottedRows(data,'arena_code_current').some(r=>r.reason==='unranked-autoeval'&&r.score===null));
@@ -105,6 +105,8 @@ test("GPT-6.2 Astra, GPT-6.2 Sol and Gemini 4 Neon publish reviewed prices and c
     aa_intelligence_index_v5_0_1: [true, true, true],
     terminal_bench_v4_1: [true, true, false],
     aa_terminal_bench_v4_0: [true, true, true],
+    arena_code_current: [true, true, true],
+    arena_agent_mode_current: [true, true, true],
     aa_coding_agent_index_v2_1: [true, true, true],
   };
   for (const [board, present] of Object.entries(expected)) {
