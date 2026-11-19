@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checkedAt": "2026-11-16",
+  "checkedAt": "2026-11-18",
   "source": "https://artificialanalysis.ai/models/releases",
   "note": "Unmapped source entries requiring identity/configuration review; these may already exist under another catalog ID. Not automatically published.",
   "candidates": [
@@ -12,29 +12,34 @@
       ]
     },
     {
+      "url": "https://artificialanalysis.ai/models/astra-for-law-6-2",
+      "label": "Astra for Law 6.2 OpenAI · Nov 2026 · 1 effort level Image Intelligence — Cost / task — Context 1M",
+      "possibleCatalogMatches": []
+    },
+    {
       "url": "https://artificialanalysis.ai/models/claude-fable-5-2",
-      "label": "Claude Fable 5.2 Anthropic · Nov 2026 · 5 effort levels Image Finance & Accounting (#1) Strategy & Ops (#1) Intelligence 65 54–65 Cost / task $3.10 $3.10–$26.54 Context 1M",
+      "label": "Claude Fable 5.2 Anthropic · Nov 2026 · 5 effort levels Image Strategy & Ops (#1) Healthcare & Medical (#1) Intelligence 65 54–65 Cost / task $3.10 $3.10–$26.54 Context 1M",
       "possibleCatalogMatches": [
         "claude-fable-5.2"
       ]
     },
     {
       "url": "https://artificialanalysis.ai/models/claude-haiku-5-5",
-      "label": "Claude Haiku 5.5 Anthropic · Oct 2026 · 5 effort levels Image Engineering (#14) Economics (#16) Intelligence 36 19–36 Cost / task $0.0438 $0.0438–$0.41 Context 1M",
+      "label": "Claude Haiku 5.5 Anthropic · Oct 2026 · 5 effort levels Image Engineering (#15) Economics (#17) Intelligence 36 19–36 Cost / task $0.0438 $0.0438–$0.41 Context 1M",
       "possibleCatalogMatches": [
         "claude-haiku-5.5"
       ]
     },
     {
       "url": "https://artificialanalysis.ai/models/claude-opus-5-5",
-      "label": "Claude Opus 5.5 Anthropic · Sep 2026 · 5 effort levels Image Strategy & Ops (#2) Healthcare & Medical (#2) Intelligence 59 35–59 Cost / task $0.98 $0.98–$10.04 Context 1M",
+      "label": "Claude Opus 5.5 Anthropic · Sep 2026 · 5 effort levels Image Healthcare & Medical (#2) Strategy & Ops (#4) Intelligence 59 35–59 Cost / task $0.98 $0.98–$10.04 Context 1M",
       "possibleCatalogMatches": [
         "claude-opus-5.5"
       ]
     },
     {
       "url": "https://artificialanalysis.ai/models/claude-sonnet-5-5",
-      "label": "Claude Sonnet 5.5 Anthropic · Sep 2026 · 5 effort levels Image Strategy & Ops (#4) Healthcare & Medical (#4) Intelligence 55 26–55 Cost / task $0.51 $0.51–$10.02 Context 1M",
+      "label": "Claude Sonnet 5.5 Anthropic · Sep 2026 · 5 effort levels Image Healthcare & Medical (#5) Strategy & Ops (#7) Intelligence 55 26–55 Cost / task $0.51 $0.51–$10.02 Context 1M",
       "possibleCatalogMatches": [
         "claude-sonnet-5.5"
       ]
@@ -62,13 +67,6 @@
       ]
     },
     {
-      "url": "https://artificialanalysis.ai/models/exaone-4-0-32b",
-      "label": "EXAONE 4.0 32B LG AI Research · Jul 2025 · 2 effort levels Open weights Intelligence — Cost / task — Context 131k",
-      "possibleCatalogMatches": [
-        "exaone-4.0-32b"
-      ]
-    },
-    {
       "url": "https://artificialanalysis.ai/models/exaone-4-5-33b",
       "label": "EXAONE 4.5 33B LG AI Research · Apr 2026 · 2 effort levels Open weights Image Intelligence — Cost / task — Context 262k",
       "possibleCatalogMatches": [
@@ -76,17 +74,17 @@
       ]
     },
     {
-      "url": "https://artificialanalysis.ai/models/gemini-3-8-flash",
-      "label": "Gemini 3.8 Flash Google · Sep 2026 · 3 effort levels Image Video Audio Legal (#15) Economics (#18) Intelligence 31 23–31 Cost / task $6.26 $6.26–$7.77 Context 1M",
+      "url": "https://artificialanalysis.ai/models/gemini-4-hydrogen",
+      "label": "Gemini 4 Hydrogen Google · Nov 2026 · 4 effort levels Image Video Audio Finance & Accounting (#6) Legal (#6) Intelligence 54 27–54 Cost / task $0.29 $0.29–$3.16 Context 1M",
       "possibleCatalogMatches": [
-        "gemini-3.8-flash"
+        "gemini-4-hydrogen"
       ]
     },
     {
-      "url": "https://artificialanalysis.ai/models/gemini-4-hydrogen",
-      "label": "Gemini 4 Hydrogen Google · Nov 2026 · 4 effort levels Image Video Audio Finance & Accounting (#4) Legal (#4) Intelligence 54 27–54 Cost / task $0.29 $0.29–$3.16 Context 1M",
+      "url": "https://artificialanalysis.ai/models/gemini-4-neon",
+      "label": "Gemini 4 Neon Google · Nov 2026 · 4 effort levels Image Video Audio Finance & Accounting (#1) Legal (#1) Intelligence 61 44–61 Cost / task $0.75 $0.75–$6.44 Context 1M",
       "possibleCatalogMatches": [
-        "gemini-4-hydrogen"
+        "gemini-4-neon"
       ]
     },
     {
@@ -119,33 +117,33 @@
     },
     {
       "url": "https://artificialanalysis.ai/models/gemma-4-e4b",
-      "label": "Gemma 4 E4B Google · Apr 2026 · 2 effort levels Open weights Image Video Audio Intelligence — Cost / task — Context 128k",
+      "label": "Gemma 4 E4B Google · Apr 2026 · 2 effort levels Open weights Image Video Audio Intelligence 5 Cost / task $0.0083 Context 128k",
       "possibleCatalogMatches": [
         "gemma-4-e4b"
       ]
     },
     {
       "url": "https://artificialanalysis.ai/models/glm-5-3",
-      "label": "GLM-5.3 Z AI · Aug 2026 · 2 effort levels Open weights Healthcare & Medical (#19) Strategy & Ops (#20) Intelligence 32 23–32 Cost / task $1.57 $1.57–$5.01 Context 1M",
+      "label": "GLM-5.3 Z AI · Aug 2026 · 2 effort levels Open weights Healthcare & Medical (#20) Finance & Accounting (#21) Intelligence 32 23–32 Cost / task $1.57 $1.57–$5.01 Context 1M",
       "possibleCatalogMatches": []
     },
     {
-      "url": "https://artificialanalysis.ai/models/gpt-6-1-sol",
-      "label": "GPT-6.1 Sol OpenAI · Sep 2026 · 5 effort levels Image Economics (#5) Finance & Accounting (#6) Intelligence 55 35–55 Cost / task $0.16 $0.16–$1.27 Context 1M",
+      "url": "https://artificialanalysis.ai/models/gpt-6-2-astra",
+      "label": "GPT-6.2 Astra OpenAI · Nov 2026 · 5 effort levels Image Strategy & Ops (#3) Healthcare & Medical (#3) Intelligence 62 46–62 Cost / task $0.66 $0.66–$4.00 Context 1M",
       "possibleCatalogMatches": [
-        "gpt-6.1-sol"
+        "gpt-6.2-astra"
       ]
     },
     {
-      "url": "https://artificialanalysis.ai/models/gpt-6-astra",
-      "label": "GPT-6 Astra OpenAI · Sep 2026 · 5 effort levels Image Engineering (#4) Economics (#4) Intelligence 57 43–57 Cost / task $1.42 $1.42–$6.24 Context 1M",
+      "url": "https://artificialanalysis.ai/models/gpt-6-2-sol",
+      "label": "GPT-6.2 Sol OpenAI · Nov 2026 · 5 effort levels Image Strategy & Ops (#6) Engineering (#6) Intelligence 57 41–57 Cost / task $0.18 $0.18–$1.01 Context 1M",
       "possibleCatalogMatches": [
-        "gpt-6-astra"
+        "gpt-6.2-sol"
       ]
     },
     {
       "url": "https://artificialanalysis.ai/models/gpt-6-luna",
-      "label": "GPT-6 Luna OpenAI · Sep 2026 · 6 effort levels Image Engineering (#29) Intelligence 28 9–28 Cost / task $0.0051 $0.0051–$0.15 Context 1M",
+      "label": "GPT-6 Luna OpenAI · Sep 2026 · 6 effort levels Image Engineering (#30) Intelligence 28 9–28 Cost / task $0.0051 $0.0051–$0.15 Context 1M",
       "possibleCatalogMatches": [
         "gpt-6-luna"
       ]
@@ -166,7 +164,7 @@
     },
     {
       "url": "https://artificialanalysis.ai/models/grok-4-7",
-      "label": "Grok 4.7 SpaceXAI · Sep 2026 · 3 effort levels Image Finance & Accounting (#12) Strategy & Ops (#12) Intelligence 35 31–35 Cost / task $2.92 $2.92–$7.77 Context 500k",
+      "label": "Grok 4.7 SpaceXAI · Sep 2026 · 3 effort levels Image Finance & Accounting (#13) Strategy & Ops (#13) Intelligence 35 31–35 Cost / task $2.92 $2.92–$7.77 Context 500k",
       "possibleCatalogMatches": [
         "grok-4.7"
       ]
@@ -187,11 +185,16 @@
     },
     {
       "url": "https://artificialanalysis.ai/models/inkling-2-small",
-      "label": "Inkling 2 Small Thinking Machines · Nov 2026 · 1 effort level Open weights Image Economics (#15) Finance & Accounting (#16) Intelligence 31 Cost / task $1.18 Context 1M",
+      "label": "Inkling 2 Small Thinking Machines · Nov 2026 · 1 effort level Open weights Image Legal (#16) Economics (#16) Intelligence 31 Cost / task $1.18 Context 1M",
       "possibleCatalogMatches": [
         "inkling",
         "inkling-2-small"
       ]
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/joyvl2_v27",
+      "label": "JoyAI-VL-Preview Joy Future Academy · Nov 2026 · 1 effort level Image Video Legal (#23) Strategy & Ops (#24) Intelligence 28 Cost / task — Context 1M",
+      "possibleCatalogMatches": []
     },
     {
       "url": "https://artificialanalysis.ai/models/jt-4-1-flash-236b-a21b",
@@ -208,18 +211,19 @@
       ]
     },
     {
-      "url": "https://artificialanalysis.ai/models/k2-v2",
-      "label": "K2-V2 Institute of Foundation Models · Dec 2025 · 3 effort levels Open weights Intelligence — Cost / task — Context 512k",
-      "possibleCatalogMatches": [
-        "k2-v2"
-      ]
+      "url": "https://artificialanalysis.ai/models/k2-horizon-32b",
+      "label": "K2 Horizon 32B Institute of Foundation Models · Sep 2026 · 1 effort level Open weights Intelligence 14 Cost / task — Context 524k",
+      "possibleCatalogMatches": []
     },
     {
-      "url": "https://artificialanalysis.ai/models/ling-3-1-flash-1001",
-      "label": "Ling 3.1 Flash InclusionAI · Oct 2026 · 1 effort level Open weights Intelligence — Cost / task — Context 1M",
-      "possibleCatalogMatches": [
-        "ling-3.1-flash"
-      ]
+      "url": "https://artificialanalysis.ai/models/lfm3-1-7b",
+      "label": "LFM3-1.7B Liquid AI · Oct 2026 · 1 effort level Open weights Intelligence 6 Cost / task $0.17 Context 262k",
+      "possibleCatalogMatches": []
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/lfm3-vl-2b",
+      "label": "LFM3-VL-2B Liquid AI · Oct 2026 · 1 effort level Open weights Image Video Intelligence 2 Cost / task $0.12 Context 128k",
+      "possibleCatalogMatches": []
     },
     {
       "url": "https://artificialanalysis.ai/models/llama-3-1-nemotron-ultra-253b-v1",
@@ -258,7 +262,7 @@
     },
     {
       "url": "https://artificialanalysis.ai/models/muse-ember",
-      "label": "Muse Ember Meta · Nov 2026 · 2 effort levels Image Finance & Accounting (#15) Healthcare & Medical (#16) Intelligence 36 34–36 Cost / task $0.12 $0.12–$0.14 Context 1M",
+      "label": "Muse Ember Meta · Nov 2026 · 2 effort levels Image Finance & Accounting (#16) Healthcare & Medical (#17) Intelligence 36 34–36 Cost / task $0.12 $0.12–$0.14 Context 1M",
       "possibleCatalogMatches": [
         "muse-ember"
       ]
@@ -384,7 +388,7 @@
     },
     {
       "url": "https://artificialanalysis.ai/models/qwen4-max",
-      "label": "Qwen4 Max Alibaba · Nov 2026 · 1 effort level Image Finance & Accounting (#10) Legal (#10) Intelligence 43 Cost / task $3.27 Context 984k",
+      "label": "Qwen4 Max Alibaba · Nov 2026 · 1 effort level Image Video Finance & Accounting (#11) Legal (#11) Intelligence 43 Cost / task $3.27 Context 984k",
       "possibleCatalogMatches": []
     },
     {
@@ -403,7 +407,7 @@
     },
     {
       "url": "https://artificialanalysis.ai/models/step-5-preview",
-      "label": "Step 5 Preview StepFun · Sep 2026 · 1 effort level Open weights Image Healthcare & Medical (#18) Legal (#19) Intelligence 29 Cost / task $2.35 Context 1M",
+      "label": "Step 5 Preview StepFun · Sep 2026 · 1 effort level Open weights Image Legal (#19) Healthcare & Medical (#19) Intelligence 29 Cost / task $2.35 Context 1M",
       "possibleCatalogMatches": [
         "step-5-preview"
       ]
@@ -417,7 +421,7 @@
     },
     {
       "url": "https://artificialanalysis.ai/models/tencent-hy4",
-      "label": "Tencent Hy4 Tencent · Nov 2026 · 1 effort level Image Healthcare & Medical (#14) Strategy & Ops (#17) Intelligence 35 Cost / task $1.03 Context 1M",
+      "label": "Tencent Hy4 Tencent · Nov 2026 · 1 effort level Image Healthcare & Medical (#15) Strategy & Ops (#18) Intelligence 35 Cost / task $1.03 Context 1M",
       "possibleCatalogMatches": []
     }
   ]
