@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "attemptedAt": "2026-11-19",
+  "attemptedAt": "2026-11-20",
   "results": [
     {
       "board": "aa_intelligence_index",
@@ -43,12 +43,12 @@
           "releaseSlug": "qwen4-max"
         }
       ],
-      "retainedCheckedAt": "2026-11-19"
+      "retainedCheckedAt": "2026-11-20"
     },
     {
       "board": "terminal_bench_4",
       "status": "updated",
-      "reviewRequired": 3,
+      "reviewRequired": 4,
       "identityReview": [
         {
           "label": "GitHub Copilot - Copilot Fusion (max)",
@@ -61,12 +61,17 @@
           "releaseSlug": null
         },
         {
+          "label": "mini-swe-agent - Hy4 Flash (none)",
+          "sourceId": "b6dc23fd-3293-4965-8561-b2b94f773426",
+          "releaseSlug": null
+        },
+        {
           "label": "Antigravity CLI - Gemini 3.1 Pro (high)",
           "sourceId": "ac317001-3cc5-4105-90b0-0437b3893ce1",
           "releaseSlug": null
         }
       ],
-      "retainedCheckedAt": "2026-11-19"
+      "retainedCheckedAt": "2026-11-20"
     },
     {
       "board": "aa_terminal_bench_4",
@@ -109,37 +114,18 @@
           "releaseSlug": "qwen4-max"
         }
       ],
-      "retainedCheckedAt": "2026-11-19"
+      "retainedCheckedAt": "2026-11-20"
     },
     {
       "board": "arena_code",
-      "status": "updated",
-      "reviewRequired": 2,
-      "identityReview": [
-        {
-          "label": "Qwen4-Max (xHigh)",
-          "sourceId": "qwen4-max-xhigh-lm5r",
-          "releaseSlug": null
-        },
-        {
-          "label": "U2 Flash",
-          "sourceId": "u2-flash-ia61",
-          "releaseSlug": null
-        }
-      ],
+      "status": "retained-previous",
+      "error": "HTTP 403",
       "retainedCheckedAt": "2026-11-19"
     },
     {
       "board": "arena_agent_mode",
-      "status": "updated",
-      "reviewRequired": 1,
-      "identityReview": [
-        {
-          "label": "Qwen4-Max (xHigh)",
-          "sourceId": "qwen4-max-xhigh-lm5r",
-          "releaseSlug": null
-        }
-      ],
+      "status": "retained-previous",
+      "error": "HTTP 403",
       "retainedCheckedAt": "2026-11-19"
     },
     {
@@ -147,21 +133,21 @@
       "status": "updated",
       "reviewRequired": 0,
       "identityReview": [],
-      "retainedCheckedAt": "2026-11-19"
+      "retainedCheckedAt": "2026-11-20"
     },
     {
       "board": "open_design_arena",
       "status": "updated",
       "reviewRequired": 0,
       "identityReview": [],
-      "retainedCheckedAt": "2026-11-19"
+      "retainedCheckedAt": "2026-11-20"
     },
     {
       "board": "deepswe_1_1",
       "status": "updated",
       "reviewRequired": 0,
       "identityReview": [],
-      "retainedCheckedAt": "2026-11-19"
+      "retainedCheckedAt": "2026-11-20"
     }
   ]
 }
