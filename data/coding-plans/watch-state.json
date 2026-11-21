@@ -6,10 +6,10 @@
       "channel": "OpenCode",
       "url": "https://opencode.ai/v2/docs/console/go/",
       "kind": "tables",
-      "attemptedAt": "2026-11-20T07:30:07.867Z",
+      "attemptedAt": "2026-11-21T07:26:53.437Z",
       "lastSuccessAt": "2026-11-16T06:49:25.500Z",
       "status": "failed",
-      "consecutiveFailures": 4,
+      "consecutiveFailures": 5,
       "retrieval": "http",
       "snapshot": {
         "checkedAt": "2026-11-16T06:49:25.500Z",
@@ -8248,14 +8248,14 @@
       "channel": "OpenCode",
       "url": "https://opencode.ai/changelog",
       "kind": "document",
-      "attemptedAt": "2026-11-20T07:30:07.867Z",
-      "lastSuccessAt": "2026-11-20T07:30:07.867Z",
+      "attemptedAt": "2026-11-21T07:26:53.437Z",
+      "lastSuccessAt": "2026-11-21T07:26:53.437Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-20T07:30:07.867Z",
-        "bodySha256": "05bb3070d219dad2ec9256ecc986e4fd654cb5b7c34684657a86da9b50dc7330",
+        "checkedAt": "2026-11-21T07:26:53.437Z",
+        "bodySha256": "4ba870da2fb16c0fb1a695e3b7ddc170e2de7160a69162d1ff0d00abd2f6b7dd",
         "records": [
           {
             "key": "text:fc91dbe16f57f6d1e5686ac0710cc340f13eb25677b1d2d83756ee5eb744ebb3",
@@ -8470,14 +8470,14 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/go",
       "kind": "tables",
-      "attemptedAt": "2026-11-20T07:30:07.867Z",
-      "lastSuccessAt": "2026-11-20T07:30:07.867Z",
+      "attemptedAt": "2026-11-21T07:26:53.437Z",
+      "lastSuccessAt": "2026-11-21T07:26:53.437Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-20T07:30:07.867Z",
-        "bodySha256": "bdc591395f519eaaabd9c46c2285ca722ff0f357503e2bf542876f791a254cd4",
+        "checkedAt": "2026-11-21T07:26:53.437Z",
+        "bodySha256": "bba25f1d1636a203fcfdf0f63046900f2d38dd49644e900435a6f9d5c55a5993",
         "records": [
           {
             "key": "text:b605350bc00209520b7cd8f546322663356ba630708f71bbf30aead6b3dd608e",
@@ -8668,8 +8668,8 @@
             "url": "https://commandcode.ai/docs/plans/goat"
           },
           {
-            "key": "text:32d6ab919724f50b81b31b7094912eba44bb8b9a105d795af4d4aa7ea4f98963",
-            "hash": "32d6ab919724f50b81b31b7094912eba44bb8b9a105d795af4d4aa7ea4f98963",
+            "key": "text:166d594781abe44f6216f0874708ed4f6e7057f1a089340056c38032f3b72688",
+            "hash": "166d594781abe44f6216f0874708ed4f6e7057f1a089340056c38032f3b72688",
             "type": "announcement",
             "signals": [
               "promotion"
@@ -8763,35 +8763,6 @@
             ],
             "url": "https://commandcode.ai/docs/plans/go",
             "hash": "c1def69ea1a4154e67eaee7b671c9976fec5bb51711779d29c8e76870e45a8f5"
-          },
-          {
-            "key": "row:v2:e9602f4baf5bb37d:0:Inkling 2 Small Free:0",
-            "type": "table-row",
-            "label": "Inkling 2 Small Free",
-            "heading": "Models included",
-            "columns": [
-              "Model ↕",
-              "Context ↕",
-              "Input ↕",
-              "Output ↕",
-              "Cache read ↕",
-              "Cache write ↕",
-              "Caps"
-            ],
-            "cells": [
-              "Inkling 2 Small Free",
-              "1M",
-              "Free",
-              "Free",
-              "Free",
-              "—",
-              "+ 1"
-            ],
-            "signals": [
-              "promotion"
-            ],
-            "url": "https://commandcode.ai/docs/plans/go",
-            "hash": "b3ac5fb193816e680beb7a464ce255b0ab3a47f0fcfee22f359cae874baea7dd"
           },
           {
             "key": "row:v2:e9602f4baf5bb37d:0:Muse Ember:0",
@@ -10477,8 +10448,8 @@
             "hash": "7c12b5f472ef6a5905482e80a798fc3aa488b62504e104ccb2baca674e066b37"
           },
           {
-            "key": "text:08b27c93d35a34b1e5246a23acea5cf2724b228db175eaea344cafa325440c54",
-            "hash": "08b27c93d35a34b1e5246a23acea5cf2724b228db175eaea344cafa325440c54",
+            "key": "text:36faa66e0662c0fa9b71aa957b670a117f7b70ced604cb6c022e142519ad1767",
+            "hash": "36faa66e0662c0fa9b71aa957b670a117f7b70ced604cb6c022e142519ad1767",
             "type": "announcement",
             "signals": [
               "pricing",
@@ -13377,7 +13348,7 @@
             "url": "https://commandcode.ai/docs/resources/zdr#what-zdr-costs"
           }
         ],
-        "hash": "621abf322e98c2a16d0458e4fab662c5689f2ad33faff879a7b96c383fdce4ba"
+        "hash": "24c770470b5e0b1b84d186387d5de518a8e673d9f957bbd88262dc89585b1c0c"
       }
     },
     "command-code-goat": {
@@ -13385,14 +13356,14 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/goat",
       "kind": "tables",
-      "attemptedAt": "2026-11-20T07:30:07.867Z",
-      "lastSuccessAt": "2026-11-20T07:30:07.867Z",
+      "attemptedAt": "2026-11-21T07:26:53.437Z",
+      "lastSuccessAt": "2026-11-21T07:26:53.437Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-20T07:30:07.867Z",
-        "bodySha256": "0dbaee5c67f5075ca0bc1fcac719c0bad646074802c7d8e878bca01239e621f1",
+        "checkedAt": "2026-11-21T07:26:53.437Z",
+        "bodySha256": "786b53b7734603497b368ff9bdbeb574f3b21347b12e78a01ecc39865cd6f60b",
         "records": [
           {
             "key": "text:b605350bc00209520b7cd8f546322663356ba630708f71bbf30aead6b3dd608e",
@@ -13629,8 +13600,8 @@
             "url": "https://commandcode.ai/docs/plans/pro"
           },
           {
-            "key": "text:211b175645ded93930aba09b2ec77c17827d9f49076e635cb82f8f589f0cf5ec",
-            "hash": "211b175645ded93930aba09b2ec77c17827d9f49076e635cb82f8f589f0cf5ec",
+            "key": "text:db84ea0fe2893c354fc964a6aa5e12c9c3852888a66588c06e0b940be75b1560",
+            "hash": "db84ea0fe2893c354fc964a6aa5e12c9c3852888a66588c06e0b940be75b1560",
             "type": "announcement",
             "signals": [
               "promotion"
@@ -13724,35 +13695,6 @@
             ],
             "url": "https://commandcode.ai/docs/plans/goat",
             "hash": "c1def69ea1a4154e67eaee7b671c9976fec5bb51711779d29c8e76870e45a8f5"
-          },
-          {
-            "key": "row:v2:5fc247816328732d:0:Inkling 2 Small Free:0",
-            "type": "table-row",
-            "label": "Inkling 2 Small Free",
-            "heading": "Models included",
-            "columns": [
-              "Model ↕",
-              "Context ↕",
-              "Input ↕",
-              "Output ↕",
-              "Cache read ↕",
-              "Cache write ↕",
-              "Caps"
-            ],
-            "cells": [
-              "Inkling 2 Small Free",
-              "1M",
-              "Free",
-              "Free",
-              "Free",
-              "—",
-              "+ 1"
-            ],
-            "signals": [
-              "promotion"
-            ],
-            "url": "https://commandcode.ai/docs/plans/goat",
-            "hash": "b3ac5fb193816e680beb7a464ce255b0ab3a47f0fcfee22f359cae874baea7dd"
           },
           {
             "key": "row:v2:5fc247816328732d:0:Muse Ember:0",
@@ -15846,8 +15788,8 @@
             "hash": "7c12b5f472ef6a5905482e80a798fc3aa488b62504e104ccb2baca674e066b37"
           },
           {
-            "key": "text:38e46e8c697f1a71c2a2c394f995c4ea77b0060a38cb212b1dce494840d10b10",
-            "hash": "38e46e8c697f1a71c2a2c394f995c4ea77b0060a38cb212b1dce494840d10b10",
+            "key": "text:0865974336611f69324d3bbd92921cd372ee3a10a0df5e56d158e5a13773a828",
+            "hash": "0865974336611f69324d3bbd92921cd372ee3a10a0df5e56d158e5a13773a828",
             "type": "announcement",
             "signals": [
               "pricing",
@@ -19433,7 +19375,7 @@
             "url": "https://commandcode.ai/docs/resources/zdr#what-zdr-costs"
           }
         ],
-        "hash": "e88c5ced057464667977d507211a1b502ee7c58281e64c745912766ccde5db2a"
+        "hash": "f2657c0c3370e1128a491a25c725f3cbd37937cfa3e56190a05ea0487c167916"
       }
     },
     "command-code-pro": {
@@ -19441,14 +19383,14 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/pro",
       "kind": "tables",
-      "attemptedAt": "2026-11-20T07:30:07.867Z",
-      "lastSuccessAt": "2026-11-20T07:30:07.867Z",
+      "attemptedAt": "2026-11-21T07:26:53.437Z",
+      "lastSuccessAt": "2026-11-21T07:26:53.437Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-20T07:30:07.867Z",
-        "bodySha256": "a7e17149c9e20c6c9d506dd2824d646b6e161032fd3c504a18569526635b894b",
+        "checkedAt": "2026-11-21T07:26:53.437Z",
+        "bodySha256": "b00b6ad06f5c40f3687d30a88f31a9a308297e545c423509333e57142dc14132",
         "records": [
           {
             "key": "text:b605350bc00209520b7cd8f546322663356ba630708f71bbf30aead6b3dd608e",
@@ -19703,8 +19645,8 @@
             "url": "https://commandcode.ai/models"
           },
           {
-            "key": "text:48b1044e2e02d4bf7678f6c3eaae807dcff1ea17e16ed0005c9047c32621f563",
-            "hash": "48b1044e2e02d4bf7678f6c3eaae807dcff1ea17e16ed0005c9047c32621f563",
+            "key": "text:4e33d350b51e20f59eeb353a375a17f8f7303e57720e334c029cc46a5389b50f",
+            "hash": "4e33d350b51e20f59eeb353a375a17f8f7303e57720e334c029cc46a5389b50f",
             "type": "announcement",
             "signals": [
               "promotion"
@@ -19885,35 +19827,6 @@
             ],
             "url": "https://commandcode.ai/docs/plans/pro",
             "hash": "56fbe5503db6f55b7ae02d6159384ef79fa32f0c29a53b38c8b32045d175c489"
-          },
-          {
-            "key": "row:v2:20d53e007c5a4d72:0:Inkling 2 Small Free:0",
-            "type": "table-row",
-            "label": "Inkling 2 Small Free",
-            "heading": "Models included",
-            "columns": [
-              "Model ↕",
-              "Context ↕",
-              "Input ↕",
-              "Output ↕",
-              "Cache read ↕",
-              "Cache write ↕",
-              "Caps"
-            ],
-            "cells": [
-              "Inkling 2 Small Free",
-              "1M",
-              "Free",
-              "Free",
-              "Free",
-              "—",
-              "+ 1"
-            ],
-            "signals": [
-              "promotion"
-            ],
-            "url": "https://commandcode.ai/docs/plans/pro",
-            "hash": "b3ac5fb193816e680beb7a464ce255b0ab3a47f0fcfee22f359cae874baea7dd"
           },
           {
             "key": "row:v2:20d53e007c5a4d72:0:Muse Ember:0",
@@ -22471,8 +22384,8 @@
             "hash": "03f581c211c9e38fb50ca42f7a28c6442b7157bad768f52a5874f3758e1d8682"
           },
           {
-            "key": "text:af7c011442ebc3dea90b1bfa7220697f90b7ec841986ce4247ea7d0cec83536b",
-            "hash": "af7c011442ebc3dea90b1bfa7220697f90b7ec841986ce4247ea7d0cec83536b",
+            "key": "text:6a2fe8b7d6479e14709c6094fc908189eb7c152b3e512975c91da4f11a64b2ce",
+            "hash": "6a2fe8b7d6479e14709c6094fc908189eb7c152b3e512975c91da4f11a64b2ce",
             "type": "announcement",
             "signals": [
               "pricing",
@@ -26992,7 +26905,7 @@
             "url": "https://commandcode.ai/billing?plan=pro"
           }
         ],
-        "hash": "cf143f55c6e51e7e06d6b54859d789099f0b9f597b8264c230efdb06f78cd18c"
+        "hash": "84b51fb2845bd1537f0eb51669818d6546fd1d4e8eae91bc12b547dd66767264"
       }
     },
     "command-code-max": {
@@ -27000,14 +26913,14 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/max",
       "kind": "tables",
-      "attemptedAt": "2026-11-20T07:30:07.867Z",
-      "lastSuccessAt": "2026-11-20T07:30:07.867Z",
+      "attemptedAt": "2026-11-21T07:26:53.437Z",
+      "lastSuccessAt": "2026-11-21T07:26:53.437Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-20T07:30:07.867Z",
-        "bodySha256": "8589efbd8fdaf3548a5bb2732211dee49f074b874b8a16a58297adaca6ecdcc5",
+        "checkedAt": "2026-11-21T07:26:53.437Z",
+        "bodySha256": "76287b4b38abb7e9aac3cd36fff61bd61a5c1963a6456cd692752a0c8dfcd740",
         "records": [
           {
             "key": "text:b605350bc00209520b7cd8f546322663356ba630708f71bbf30aead6b3dd608e",
@@ -27221,16 +27134,6 @@
             "url": "https://commandcode.ai/docs/plans/max#glyph-cluster-free"
           },
           {
-            "key": "text:6eb8028d32a6492d361ce490b78483f370070028494e64c0d5ea44dd3b40ec7c",
-            "hash": "6eb8028d32a6492d361ce490b78483f370070028494e64c0d5ea44dd3b40ec7c",
-            "type": "announcement",
-            "signals": [
-              "promotion"
-            ],
-            "models": [],
-            "url": "https://commandcode.ai/docs/plans/max#inkling-2-small-free"
-          },
-          {
             "key": "text:0ca0981b2877c59caeac6105fcf6afd97dcd0c63cfcf943cff10043203fbfc46",
             "hash": "0ca0981b2877c59caeac6105fcf6afd97dcd0c63cfcf943cff10043203fbfc46",
             "type": "announcement",
@@ -27400,8 +27303,8 @@
             "url": "https://commandcode.ai/docs/plans/max"
           },
           {
-            "key": "text:5dd14ca5c84dd789da3ed81580725042fff4a2718dd9fefa65fa50cd685756f6",
-            "hash": "5dd14ca5c84dd789da3ed81580725042fff4a2718dd9fefa65fa50cd685756f6",
+            "key": "text:c5833717e5e2561319357a0f5261e802cb9fac165a0ad3dddf4528633ce16cc6",
+            "hash": "c5833717e5e2561319357a0f5261e802cb9fac165a0ad3dddf4528633ce16cc6",
             "type": "announcement",
             "signals": [
               "availability"
@@ -27538,29 +27441,6 @@
             ],
             "url": "https://commandcode.ai/docs/plans/max",
             "hash": "d263ebaa8e9bf2c9185611fc2be63c19112f8d9a801e388a4e14964ce84be47d"
-          },
-          {
-            "key": "row:v2:49da236506327215:0:Inkling 2 Small:0",
-            "type": "table-row",
-            "label": "Inkling 2 Small",
-            "heading": "Usage limits",
-            "columns": [
-              "Model",
-              "Requests / 5 hours",
-              "Requests / week",
-              "Requests / month"
-            ],
-            "cells": [
-              "Inkling 2 Small",
-              "Free",
-              "Free",
-              "Free"
-            ],
-            "signals": [
-              "promotion"
-            ],
-            "url": "https://commandcode.ai/docs/plans/max",
-            "hash": "1c63dd5f28c933edc469c7ec6e08cd3d2f60e7d7501878cf213737e82d1b2aad"
           },
           {
             "key": "row:v2:49da236506327215:0:Flint:0",
@@ -29822,36 +29702,6 @@
             ],
             "url": "https://commandcode.ai/docs/plans/max",
             "hash": "7976325ba182b131044e6a091f75f639ca4bb8a6edafaec54a5153beb1fc14ef"
-          },
-          {
-            "key": "row:v2:49da236506327215:1:Inkling 2 Small:0",
-            "type": "table-row",
-            "label": "Inkling 2 Small",
-            "heading": "Usage limits",
-            "columns": [
-              "Model",
-              "Input",
-              "Output",
-              "Cache Read",
-              "Cache Write",
-              "Max 10× credits",
-              "Max 20× credits"
-            ],
-            "cells": [
-              "Inkling 2 Small",
-              "$0.00",
-              "$0.00",
-              "$0.00",
-              "-",
-              "Free",
-              "Free"
-            ],
-            "signals": [
-              "pricing",
-              "promotion"
-            ],
-            "url": "https://commandcode.ai/docs/plans/max",
-            "hash": "57d7c12899982497698567bccf18fbf64456c7e891f42c5b8e96c0e5bbefe597"
           },
           {
             "key": "row:v2:49da236506327215:1:Flint:0",
@@ -33215,7 +33065,7 @@
             "url": "https://commandcode.ai/billing"
           }
         ],
-        "hash": "5d170041e50cd5bde16fa594bdbe1f8cc11b094afe6f292eb3a4a9781633aec8"
+        "hash": "903e91a37f1926893a08f1a94a05fd3661d071de2c326f727da928509b0d2f58"
       }
     },
     "command-code-models": {
@@ -33223,14 +33073,14 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/reference/cli/models",
       "kind": "tables",
-      "attemptedAt": "2026-11-20T07:30:07.867Z",
-      "lastSuccessAt": "2026-11-20T07:30:07.867Z",
+      "attemptedAt": "2026-11-21T07:26:53.437Z",
+      "lastSuccessAt": "2026-11-21T07:26:53.437Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-20T07:30:07.867Z",
-        "bodySha256": "e4b0ff8dcf6683fc67338afbe1428cf9df13b2a5b9c90f8c543f4316da2457b5",
+        "checkedAt": "2026-11-21T07:26:53.437Z",
+        "bodySha256": "faedeb86b7bc0c2f6388a29a1cf23760a92ca16b1e4955b0fbd375ce0ce4265f",
         "records": [
           {
             "key": "text:b605350bc00209520b7cd8f546322663356ba630708f71bbf30aead6b3dd608e",
@@ -35526,30 +35376,6 @@
             "hash": "5d4c6c32aa7a4d9c0323b06b3a99307c80886b662c592a0de449e721f7886499"
           },
           {
-            "key": "row:v2:4891f56ff33e5c92:0:thinkingmachines/inkling-2-small:free Copy model id:0",
-            "type": "table-row",
-            "label": "thinkingmachines/inkling-2-small:free Copy model id",
-            "heading": "Thinking Machines",
-            "columns": [
-              "Model ID",
-              "Name",
-              "Capabilities",
-              "Best for"
-            ],
-            "cells": [
-              "thinkingmachines/inkling-2-small:free Copy model id",
-              "Inkling 2 Small",
-              "+ 1",
-              "multimodal MoE reasoning with 1M context"
-            ],
-            "signals": [
-              "promotion",
-              "availability"
-            ],
-            "url": "https://commandcode.ai/docs/reference/cli/models",
-            "hash": "b4930fb43e2a855f96c2f6b6790a5d4155049651c843b6e2c5adb7579048e486"
-          },
-          {
             "key": "row:v2:4891f56ff33e5c92:0:thinkingmachines/inkling-small Copy model id:0",
             "type": "table-row",
             "label": "thinkingmachines/inkling-small Copy model id",
@@ -35972,7 +35798,7 @@
             "url": "https://commandcode.ai/docs/interactive-mode"
           }
         ],
-        "hash": "8d9097767003c795e170ebb2e899b834d2c32650ee9899962c8210856a483cda"
+        "hash": "b826601adf02861c2f0ed0d0a491fdd31e224fdab830f4ce5861f32062ff1326"
       }
     },
     "command-code-terms": {
@@ -35980,14 +35806,14 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/resources/pricing-limits",
       "kind": "tables",
-      "attemptedAt": "2026-11-20T07:30:07.867Z",
-      "lastSuccessAt": "2026-11-20T07:30:07.867Z",
+      "attemptedAt": "2026-11-21T07:26:53.437Z",
+      "lastSuccessAt": "2026-11-21T07:26:53.437Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-20T07:30:07.867Z",
-        "bodySha256": "abc016c2b7c85932f0627ecc1a68a95bc620954b621628d5518fb11d1620a964",
+        "checkedAt": "2026-11-21T07:26:53.437Z",
+        "bodySha256": "bd300f3bfec3f36d4098675c469f14da7e35541b972dfb47a834b3812d3481eb",
         "records": [
           {
             "key": "text:b605350bc00209520b7cd8f546322663356ba630708f71bbf30aead6b3dd608e",
@@ -36187,16 +36013,6 @@
               "glyph-cluster:free is free"
             ],
             "url": "https://commandcode.ai/docs/resources/pricing-limits#glyph-cluster-free"
-          },
-          {
-            "key": "text:6eb8028d32a6492d361ce490b78483f370070028494e64c0d5ea44dd3b40ec7c",
-            "hash": "6eb8028d32a6492d361ce490b78483f370070028494e64c0d5ea44dd3b40ec7c",
-            "type": "announcement",
-            "signals": [
-              "promotion"
-            ],
-            "models": [],
-            "url": "https://commandcode.ai/docs/resources/pricing-limits#inkling-2-small-free"
           },
           {
             "key": "text:0ca0981b2877c59caeac6105fcf6afd97dcd0c63cfcf943cff10043203fbfc46",
@@ -37141,8 +36957,8 @@
             "url": "https://commandcode.ai/docs/resources/pricing-limits"
           },
           {
-            "key": "text:c3ce12afefc2303596cec7e0fa172d2291c7009bd63acb9bb1e04e40709ca4e6",
-            "hash": "c3ce12afefc2303596cec7e0fa172d2291c7009bd63acb9bb1e04e40709ca4e6",
+            "key": "text:621838905842e3b544cb0d8dc114caeb3f4188eb276da75e7435c3789c6fa726",
+            "hash": "621838905842e3b544cb0d8dc114caeb3f4188eb276da75e7435c3789c6fa726",
             "type": "announcement",
             "signals": [
               "promotion"
@@ -37183,14 +36999,14 @@
             "url": "https://commandcode.ai/docs/resources/pricing-limits"
           },
           {
-            "key": "text:0e65f9638cb8d8b97382ff79ee3048aebb89b9d4eadd1f330dd6031f283766a8",
-            "hash": "0e65f9638cb8d8b97382ff79ee3048aebb89b9d4eadd1f330dd6031f283766a8",
+            "key": "text:1ec18f89dbf7eb6046b82a23170531438d0c00656d7f8da902640a5b86d09a1b",
+            "hash": "1ec18f89dbf7eb6046b82a23170531438d0c00656d7f8da902640a5b86d09a1b",
             "type": "announcement",
             "signals": [
               "promotion"
             ],
             "models": [],
-            "url": "https://commandcode.ai/docs/resources/pricing-limits#inkling-2-small-free"
+            "url": "https://commandcode.ai/docs/resources/pricing-limits#flint-free"
           },
           {
             "key": "text:14e786e133219f4dd7129424b848bc451c3dbfc0d5062c1c57f413155185cf42",
@@ -37201,16 +37017,6 @@
             ],
             "models": [],
             "url": "https://commandcode.ai/docs/resources/pricing-limits"
-          },
-          {
-            "key": "text:1ec18f89dbf7eb6046b82a23170531438d0c00656d7f8da902640a5b86d09a1b",
-            "hash": "1ec18f89dbf7eb6046b82a23170531438d0c00656d7f8da902640a5b86d09a1b",
-            "type": "announcement",
-            "signals": [
-              "promotion"
-            ],
-            "models": [],
-            "url": "https://commandcode.ai/docs/resources/pricing-limits#flint-free"
           },
           {
             "key": "text:895b25d4b267bae29fa1a9919dead74a240772575cfd291323228cc8b7c4d8a2",
@@ -39337,8 +39143,8 @@
             "url": "https://commandcode.ai/docs/resources/pricing-limits"
           },
           {
-            "key": "text:9b2624b66d9f8bbe264a73b725b36a348e961fda4bc8b2b7dc414a7253733559",
-            "hash": "9b2624b66d9f8bbe264a73b725b36a348e961fda4bc8b2b7dc414a7253733559",
+            "key": "text:c2b94d41f5e80a90d017735accdfac816ff5ebf32c7a90aaefa862fe8367b06a",
+            "hash": "c2b94d41f5e80a90d017735accdfac816ff5ebf32c7a90aaefa862fe8367b06a",
             "type": "announcement",
             "signals": [
               "pricing",
@@ -40207,125 +40013,6 @@
             "url": "https://commandcode.ai/docs/resources/pricing-limits"
           },
           {
-            "key": "text:b0508c4ccebfc1c3a0f5315a3f72fdcfa42741e2992bba15274333b7893f7840",
-            "hash": "b0508c4ccebfc1c3a0f5315a3f72fdcfa42741e2992bba15274333b7893f7840",
-            "type": "announcement",
-            "signals": [
-              "promotion"
-            ],
-            "models": [],
-            "url": "https://commandcode.ai/docs/resources/pricing-limits"
-          },
-          {
-            "key": "text:b19fda28c0f18dc11021126fd578a270b02457718fb6184d3b993fd0f4e3257e",
-            "hash": "b19fda28c0f18dc11021126fd578a270b02457718fb6184d3b993fd0f4e3257e",
-            "type": "announcement",
-            "signals": [
-              "availability"
-            ],
-            "models": [],
-            "url": "https://commandcode.ai/docs/resources/pricing-limits"
-          },
-          {
-            "key": "text:8a9cd0d101904505aad575dc04e85d8e492fd55e91410606d90d0cf2d1db939c",
-            "hash": "8a9cd0d101904505aad575dc04e85d8e492fd55e91410606d90d0cf2d1db939c",
-            "type": "announcement",
-            "signals": [
-              "promotion"
-            ],
-            "models": [],
-            "url": "https://commandcode.ai/docs/resources/pricing-limits"
-          },
-          {
-            "key": "text:c1e6013858dfdbc75ac7fed93ba212c8d17164e9564e84e82dc55b5fefddca0a",
-            "hash": "c1e6013858dfdbc75ac7fed93ba212c8d17164e9564e84e82dc55b5fefddca0a",
-            "type": "announcement",
-            "signals": [
-              "promotion"
-            ],
-            "models": [],
-            "url": "https://commandcode.ai/docs/resources/pricing-limits"
-          },
-          {
-            "key": "text:acbf733270ae9f429f8b7dad5d44306ffe70566c98d7eb2f4390a4d3fc8c4b0b",
-            "hash": "acbf733270ae9f429f8b7dad5d44306ffe70566c98d7eb2f4390a4d3fc8c4b0b",
-            "type": "announcement",
-            "signals": [
-              "availability"
-            ],
-            "models": [],
-            "url": "https://commandcode.ai/docs/resources/pricing-limits"
-          },
-          {
-            "key": "text:92538aa5698073c2be67e689df53be85e7593915248d444938bb907194a028ac",
-            "hash": "92538aa5698073c2be67e689df53be85e7593915248d444938bb907194a028ac",
-            "type": "announcement",
-            "signals": [
-              "pricing"
-            ],
-            "models": [],
-            "url": "https://commandcode.ai/docs/resources/pricing-limits"
-          },
-          {
-            "key": "text:1047878436506d4f040d44e68387921d2275348baff1ece0064bb55854bac697",
-            "hash": "1047878436506d4f040d44e68387921d2275348baff1ece0064bb55854bac697",
-            "type": "announcement",
-            "signals": [
-              "pricing"
-            ],
-            "models": [],
-            "url": "https://commandcode.ai/docs/resources/pricing-limits"
-          },
-          {
-            "key": "row:v2:edbd182f3e339fe8:0:Input:0",
-            "type": "table-row",
-            "label": "Input",
-            "heading": "Details",
-            "columns": [
-              "Per 1M tokens",
-              "Price"
-            ],
-            "cells": [
-              "Input",
-              "$0.00"
-            ],
-            "signals": [
-              "pricing"
-            ],
-            "url": "https://commandcode.ai/docs/resources/pricing-limits#inkling-2-small-free",
-            "hash": "b522b3e4da8a1763fd6780ba99d23787c9fd482812c64f7c3eee2ed39e904e55"
-          },
-          {
-            "key": "row:v2:edbd182f3e339fe8:0:Output:0",
-            "type": "table-row",
-            "label": "Output",
-            "heading": "Details",
-            "columns": [
-              "Per 1M tokens",
-              "Price"
-            ],
-            "cells": [
-              "Output",
-              "$0.00"
-            ],
-            "signals": [
-              "pricing"
-            ],
-            "url": "https://commandcode.ai/docs/resources/pricing-limits#inkling-2-small-free",
-            "hash": "626add57041be3ca6b3ef651ffa0ea0f384371efe6552729c5d30e67fbf9dd70"
-          },
-          {
-            "key": "text:01ebd800b87a8f5e4cb270d4fc1186ee0c38d4be51aee3f4cf4d6146002fea9b",
-            "hash": "01ebd800b87a8f5e4cb270d4fc1186ee0c38d4be51aee3f4cf4d6146002fea9b",
-            "type": "announcement",
-            "signals": [
-              "promotion",
-              "availability"
-            ],
-            "models": [],
-            "url": "https://commandcode.ai/docs/resources/pricing-limits"
-          },
-          {
             "key": "text:f36951f6518abd5aae08be7425f01ec8f6e9bff3526e936cf6c9176bc904e220",
             "hash": "f36951f6518abd5aae08be7425f01ec8f6e9bff3526e936cf6c9176bc904e220",
             "type": "announcement",
@@ -40341,6 +40028,16 @@
             "type": "announcement",
             "signals": [
               "availability"
+            ],
+            "models": [],
+            "url": "https://commandcode.ai/docs/resources/pricing-limits"
+          },
+          {
+            "key": "text:8a9cd0d101904505aad575dc04e85d8e492fd55e91410606d90d0cf2d1db939c",
+            "hash": "8a9cd0d101904505aad575dc04e85d8e492fd55e91410606d90d0cf2d1db939c",
+            "type": "announcement",
+            "signals": [
+              "promotion"
             ],
             "models": [],
             "url": "https://commandcode.ai/docs/resources/pricing-limits"
@@ -40362,6 +40059,16 @@
             "signals": [
               "version",
               "availability"
+            ],
+            "models": [],
+            "url": "https://commandcode.ai/docs/resources/pricing-limits"
+          },
+          {
+            "key": "text:92538aa5698073c2be67e689df53be85e7593915248d444938bb907194a028ac",
+            "hash": "92538aa5698073c2be67e689df53be85e7593915248d444938bb907194a028ac",
+            "type": "announcement",
+            "signals": [
+              "pricing"
             ],
             "models": [],
             "url": "https://commandcode.ai/docs/resources/pricing-limits"
@@ -40403,6 +40110,17 @@
             ],
             "url": "https://commandcode.ai/docs/resources/pricing-limits#flint-free",
             "hash": "626add57041be3ca6b3ef651ffa0ea0f384371efe6552729c5d30e67fbf9dd70"
+          },
+          {
+            "key": "text:01ebd800b87a8f5e4cb270d4fc1186ee0c38d4be51aee3f4cf4d6146002fea9b",
+            "hash": "01ebd800b87a8f5e4cb270d4fc1186ee0c38d4be51aee3f4cf4d6146002fea9b",
+            "type": "announcement",
+            "signals": [
+              "promotion",
+              "availability"
+            ],
+            "models": [],
+            "url": "https://commandcode.ai/docs/resources/pricing-limits"
           },
           {
             "key": "text:f897208e7b382235a028e4d99cc23a11982c51c4888cb21fb6d52c91c1046dec",
@@ -41202,7 +40920,7 @@
             "url": "https://commandcode.ai/docs/resources/pricing-limits"
           }
         ],
-        "hash": "ef19c1c1676ed8c99430f8f552931d52f56c6479fa2b26f984a95c1336daf15d"
+        "hash": "f4c51ecd5658b44982d4b7985dc751a93f1c249cdedc84768f5588c34dbd302c"
       }
     },
     "command-code-releases": {
@@ -41210,14 +40928,14 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/changelog",
       "kind": "document",
-      "attemptedAt": "2026-11-20T07:30:07.867Z",
-      "lastSuccessAt": "2026-11-20T07:30:07.867Z",
+      "attemptedAt": "2026-11-21T07:26:53.437Z",
+      "lastSuccessAt": "2026-11-21T07:26:53.437Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-20T07:30:07.867Z",
-        "bodySha256": "cc79b98efaef0841a79a41612aa5e7b118479dacfa5a60f6337f2e2f0f3d79af",
+        "checkedAt": "2026-11-21T07:26:53.437Z",
+        "bodySha256": "a7e0932cae69ff2477cb82e7f61dc1606da8e2ec75785524607f2ba265250910",
         "records": [
           {
             "key": "text:bd8dd4dffb1815aee0594f932f11f97d5d8c758be925e2b3ca3d2274d31060a6",
@@ -45428,14 +45146,14 @@
       "channel": "Ollama",
       "url": "https://ollama.com/pricing",
       "kind": "tables",
-      "attemptedAt": "2026-11-20T07:30:07.867Z",
-      "lastSuccessAt": "2026-11-20T07:30:07.867Z",
+      "attemptedAt": "2026-11-21T07:26:53.437Z",
+      "lastSuccessAt": "2026-11-21T07:26:53.437Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-20T07:30:07.867Z",
-        "bodySha256": "614949c1a2b8902dafc127d821e05543c322727d715904451ed819a3c67da198",
+        "checkedAt": "2026-11-21T07:26:53.437Z",
+        "bodySha256": "eb1a4af0a48743f20386a8aa11d55d0a192b38749c22e4f7e4875150eb7b3bb1",
         "records": [
           {
             "key": "text:dfe95783edfef7918760312f94edd764f4ce3ffd38b90c2c955a0cc3b250f040",
@@ -46487,14 +46205,14 @@
       "channel": "Ollama",
       "url": "https://ollama.com/blog",
       "kind": "document",
-      "attemptedAt": "2026-11-20T07:30:07.867Z",
-      "lastSuccessAt": "2026-11-20T07:30:07.867Z",
+      "attemptedAt": "2026-11-21T07:26:53.437Z",
+      "lastSuccessAt": "2026-11-21T07:26:53.437Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-20T07:30:07.867Z",
-        "bodySha256": "4e752f88f9810643774bd3dd4d98a723518cb8c15afd76030d9790de03d9eadb",
+        "checkedAt": "2026-11-21T07:26:53.437Z",
+        "bodySha256": "b086b1bb923d28ea9a4183c024f2e7797117f8dc8689b7d7576c8cc7a1f7d9d5",
         "records": [
           {
             "key": "text:ab3c438e769e5ab5a3d07b57c25a52b9c414b88a7334e486dcf6c70f96b0073c",
@@ -47086,13 +46804,13 @@
       "channel": "Factory",
       "url": "https://docs.factory.com/models.md",
       "kind": "tables",
-      "attemptedAt": "2026-11-20T07:30:07.867Z",
-      "lastSuccessAt": "2026-11-20T07:30:07.867Z",
+      "attemptedAt": "2026-11-21T07:26:53.437Z",
+      "lastSuccessAt": "2026-11-21T07:26:53.437Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-20T07:30:07.867Z",
+        "checkedAt": "2026-11-21T07:26:53.437Z",
         "bodySha256": "d3ce4bb075d87712cb78fc27a4e9bfcc0d08320fd736a218d81050d5a5f14b4c",
         "records": [
           {
@@ -49084,13 +48802,13 @@
       "channel": "Factory",
       "url": "https://docs.factory.com/pricing/individuals.md",
       "kind": "document",
-      "attemptedAt": "2026-11-20T07:30:07.867Z",
-      "lastSuccessAt": "2026-11-20T07:30:07.867Z",
+      "attemptedAt": "2026-11-21T07:26:53.437Z",
+      "lastSuccessAt": "2026-11-21T07:26:53.437Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-20T07:30:07.867Z",
+        "checkedAt": "2026-11-21T07:26:53.437Z",
         "bodySha256": "7c75704906d429c519fd245576b23b632bf0a2369b5ac3eb16fbdbe3daa5c4c3",
         "records": [
           {
@@ -49339,22 +49057,20 @@
       "channel": "Factory",
       "url": "https://docs.factory.com/changelog/release-notes.md",
       "kind": "document",
-      "attemptedAt": "2026-11-20T07:30:07.867Z",
-      "lastSuccessAt": "2026-11-20T07:30:07.867Z",
+      "attemptedAt": "2026-11-21T07:26:53.437Z",
+      "lastSuccessAt": "2026-11-21T07:26:53.437Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-20T07:30:07.867Z",
-        "bodySha256": "ddfd27ffa817da1d72be9f173fec1e62f791c9ecd040cbd87d084ab0ff6d8cba",
+        "checkedAt": "2026-11-21T07:26:53.437Z",
+        "bodySha256": "a7e089711e8ebd2eff06a63ec735b5f096dc71ea748a84de7e41d85fa06e732a",
         "records": [
           {
-            "key": "text:e57bd3e1df4459112b3f070256b59c659f80c81d6f1efc16e8c82924c642ab72",
-            "hash": "e57bd3e1df4459112b3f070256b59c659f80c81d6f1efc16e8c82924c642ab72",
+            "key": "text:da04cc108e9cb555e9095d7baa458fd97370dd80a1b0191aff93ee4f97098115",
+            "hash": "da04cc108e9cb555e9095d7baa458fd97370dd80a1b0191aff93ee4f97098115",
             "type": "announcement",
-            "signals": [
-              "pricing"
-            ],
+            "signals": [],
             "models": [
               "step titles"
             ],
@@ -49397,16 +49113,6 @@
             "type": "announcement",
             "signals": [
               "availability"
-            ],
-            "models": [],
-            "url": "https://docs.factory.com/changelog/release-notes.md"
-          },
-          {
-            "key": "text:9bb23ec389031217476e40ea0d75d0fa4bc0daeb9fe56539e1b016d2785cdc17",
-            "hash": "9bb23ec389031217476e40ea0d75d0fa4bc0daeb9fe56539e1b016d2785cdc17",
-            "type": "announcement",
-            "signals": [
-              "pricing"
             ],
             "models": [],
             "url": "https://docs.factory.com/changelog/release-notes.md"
@@ -54872,7 +54578,7 @@
             "url": "https://docs.factory.com/changelog/release-notes.md"
           }
         ],
-        "hash": "3890fa086821e900b6198541fdd971cd31d61fb453eb2a098c6933d1642691b7"
+        "hash": "2d0a407ecdf18ee5a2ba3fcc443ca3c98134d5df10657ebb18f43c5af4d4e15d"
       }
     },
     "cursor-pricing": {
@@ -54880,14 +54586,14 @@
       "channel": "Cursor",
       "url": "https://cursor.com/docs/models-and-pricing",
       "kind": "tables",
-      "attemptedAt": "2026-11-20T07:30:07.867Z",
-      "lastSuccessAt": "2026-11-20T07:30:07.867Z",
+      "attemptedAt": "2026-11-21T07:26:53.437Z",
+      "lastSuccessAt": "2026-11-21T07:26:53.437Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-20T07:30:07.867Z",
-        "bodySha256": "9cad47cdce4d9cada88cc4aae98b25731ec236439a4a81e2a03b60fa6a18de4e",
+        "checkedAt": "2026-11-21T07:26:53.437Z",
+        "bodySha256": "c7c6381920b624d7af6c56866fbb92cfffd88a29ba376fc67f8ad96fed8e174d",
         "records": [
           {
             "key": "text:6c7ad5d1af746cc7ef5c32cb09479f830dfe5d5418e524a762cbb1699cb4e70c",
@@ -57257,14 +56963,14 @@
       "channel": "Cursor",
       "url": "https://cursor.com/changelog",
       "kind": "document",
-      "attemptedAt": "2026-11-20T07:30:07.867Z",
-      "lastSuccessAt": "2026-11-20T07:30:07.867Z",
+      "attemptedAt": "2026-11-21T07:26:53.437Z",
+      "lastSuccessAt": "2026-11-21T07:26:53.437Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-20T07:30:07.867Z",
-        "bodySha256": "e1e3543e9b20ea3f17329e01e3270a99a2b7169a5d99193e8a70fb74546c2f13",
+        "checkedAt": "2026-11-21T07:26:53.437Z",
+        "bodySha256": "45ce356a742c38c0f52e8b209bd34d13d7a4ec94edb9fb761c312567f80736eb",
         "records": [
           {
             "key": "text:ddcce6feab143eda3ac8d33669e14870f201c2f2b5f9b27a875942a90b8bca89",
@@ -57381,14 +57087,14 @@
       "channel": "Devin",
       "url": "https://docs.devin.ai/release-notes/overview",
       "kind": "document",
-      "attemptedAt": "2026-11-20T07:30:07.867Z",
-      "lastSuccessAt": "2026-11-20T07:30:07.867Z",
+      "attemptedAt": "2026-11-21T07:26:53.437Z",
+      "lastSuccessAt": "2026-11-21T07:26:53.437Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-20T07:30:07.867Z",
-        "bodySha256": "fbb0ef2156b907c27892fd1ee2b39ea948e7ea4ba1da1a59e8372ec5b1ca3f5f",
+        "checkedAt": "2026-11-21T07:26:53.437Z",
+        "bodySha256": "aadb50df63ebb63e2f3bd395e9bf57ed698fb82e866d0c67262eae5b77c36222",
         "records": [
           {
             "key": "text:8f188bc90439c5b341aca73eb4d84c3dd04eb3bbd57acda295334fbde1178a0f",
@@ -57411,6 +57117,37 @@
             "url": "https://docs.devin.ai/release-notes/overview"
           },
           {
+            "key": "text:b0982dd952daa0a3478d3080c207a3d34abd9930cac7314da9b7cb9f1a0dedd6",
+            "hash": "b0982dd952daa0a3478d3080c207a3d34abd9930cac7314da9b7cb9f1a0dedd6",
+            "type": "announcement",
+            "signals": [
+              "availability"
+            ],
+            "models": [],
+            "url": "https://docs.devin.ai/release-notes/overview#introducing-access-and-sharing"
+          },
+          {
+            "key": "text:50235d407a70688447fc2eeaae1b162773c3786dc2ff416799bbe324029206a5",
+            "hash": "50235d407a70688447fc2eeaae1b162773c3786dc2ff416799bbe324029206a5",
+            "type": "announcement",
+            "signals": [
+              "promotion",
+              "availability"
+            ],
+            "models": [],
+            "url": "https://docs.devin.ai/release-notes/overview#introducing-devin-bots"
+          },
+          {
+            "key": "text:94ad2ac628828d8fdac7894bd426f91eb34dc987bf8f70794d8a1cb4238f48b3",
+            "hash": "94ad2ac628828d8fdac7894bd426f91eb34dc987bf8f70794d8a1cb4238f48b3",
+            "type": "announcement",
+            "signals": [
+              "availability"
+            ],
+            "models": [],
+            "url": "https://docs.devin.ai/release-notes/overview#sessions-&-workspace-3"
+          },
+          {
             "key": "text:7497ad08bfcd2d18461ae3239c58a54330377887b6442830b0d301544a8b29f4",
             "hash": "7497ad08bfcd2d18461ae3239c58a54330377887b6442830b0d301544a8b29f4",
             "type": "announcement",
@@ -57419,7 +57156,7 @@
               "availability"
             ],
             "models": [],
-            "url": "https://docs.devin.ai/release-notes/overview#sessions-&-workspace"
+            "url": "https://docs.devin.ai/release-notes/overview#sessions-&-workspace-5"
           },
           {
             "key": "text:464e14c5f935b89f02869cbe16f6c50c1fb22b86bde9d20e98445b0d234a9bb6",
@@ -57440,7 +57177,7 @@
               "availability"
             ],
             "models": [],
-            "url": "https://docs.devin.ai/release-notes/overview#sessions-&-workspace-2"
+            "url": "https://docs.devin.ai/release-notes/overview#sessions-&-workspace-6"
           },
           {
             "key": "text:a4153734e95e97bb2f87aaad2ac3234dd705623f0ea4666975f2ddeaba757fef",
@@ -58185,7 +57922,7 @@
             "url": "https://docs.devin.ai/release-notes/overview"
           }
         ],
-        "hash": "6bac680954f077367ea7bbfcfc6f6370a26359d6e54e144d93f03cd626543bb3"
+        "hash": "a052aa508c435dbd7963a6e34cc99d2a473522ab153414aaf45d36a480a30d3d"
       }
     },
     "alibaba-coding-global": {
@@ -58193,14 +57930,14 @@
       "channel": "Alibaba",
       "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan",
       "kind": "tables",
-      "attemptedAt": "2026-11-20T07:30:07.867Z",
-      "lastSuccessAt": "2026-11-20T07:30:07.867Z",
+      "attemptedAt": "2026-11-21T07:26:53.437Z",
+      "lastSuccessAt": "2026-11-21T07:26:53.437Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-20T07:30:07.867Z",
-        "bodySha256": "eddb3abfbe05209fdf713f078f9f8ff2a75b23b14755773a83279225135695ba",
+        "checkedAt": "2026-11-21T07:26:53.437Z",
+        "bodySha256": "7dfd25d04828c1b58d9263848ee75a35ec3526983011f982e7440a7aeb4e6c5b",
         "records": [
           {
             "key": "text:0686d515f782875e3d4496656bed3259cca990eb3f6893deb942abc5bd278f24",
@@ -58700,14 +58437,14 @@
       "channel": "Alibaba",
       "url": "https://help.aliyun.com/zh/model-studio/coding-plan",
       "kind": "tables",
-      "attemptedAt": "2026-11-20T07:30:07.867Z",
-      "lastSuccessAt": "2026-11-20T07:30:07.867Z",
+      "attemptedAt": "2026-11-21T07:26:53.437Z",
+      "lastSuccessAt": "2026-11-21T07:26:53.437Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-20T07:30:07.867Z",
-        "bodySha256": "5e0d550a2f71d5a9bef86f356a0ab7eac0f414cc2230347553a0c7460b566c69",
+        "checkedAt": "2026-11-21T07:26:53.437Z",
+        "bodySha256": "64a23ef148667223357dca9f8fac7d886e802c1acc1ed60d2a989cfe8e21be6d",
         "records": [
           {
             "key": "text:775eabf14c55f66ea3e7ef7b3737a001f72434663b87e260b4d68fe798af9495",
@@ -59161,14 +58898,14 @@
       "channel": "Alibaba",
       "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
       "kind": "tables",
-      "attemptedAt": "2026-11-20T07:30:07.867Z",
-      "lastSuccessAt": "2026-11-20T07:30:07.867Z",
+      "attemptedAt": "2026-11-21T07:26:53.437Z",
+      "lastSuccessAt": "2026-11-21T07:26:53.437Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-20T07:30:07.867Z",
-        "bodySha256": "ccec92a869947f909a876218855bf26507e5af4264c7c8f84af2518e58358c62",
+        "checkedAt": "2026-11-21T07:26:53.437Z",
+        "bodySha256": "07f556eb6e8cb4e0560acafe96790794a4f952b388e778d8230205806060c58c",
         "records": [
           {
             "key": "text:c6331a8c511a8bcbc3875d6eab0b268db2d55d5b5e18db81347f58611f6c7435",
@@ -59295,12 +59032,14 @@
             "hash": "557a30bd75404e17779036c7e0ac276e1febbab00c87c6f1b8b93a50a929bad7"
           },
           {
-            "key": "text:219b81111295802f70f833711236c4ebe2fa4611046b627ca0b50ee266f9fae7",
-            "hash": "219b81111295802f70f833711236c4ebe2fa4611046b627ca0b50ee266f9fae7",
+            "key": "text:f53d3e4cc798066f73008ed670e62746e167db176934f180f948d50280fe8815",
+            "hash": "f53d3e4cc798066f73008ed670e62746e167db176934f180f948d50280fe8815",
             "type": "announcement",
-            "signals": [],
+            "signals": [
+              "pricing"
+            ],
             "models": [],
-            "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+            "url": "https://help.aliyun.com/zh/model-studio/token-plan-faq#tpf-h-new-user-promo"
           },
           {
             "key": "text:999a6b12009b1f28d576f1dc5bb060a3fd906690aa53e3ae6951f9860331cbc3",
@@ -60062,7 +59801,7 @@
             "url": "https://help.aliyun.com/zh/model-studio/token-plan-usage-quota#tpuq-h-reset"
           }
         ],
-        "hash": "aa7b02072918c5b303644ac05eaf1a0b70c7993c30b3c015da3a26eaac0c3c59"
+        "hash": "7d1db8f76046d4ac9afed86dbdc470283011daa6556c4e595b5ebe45f62845fa"
       }
     },
     "opencode-social": {
@@ -60070,13 +59809,24 @@
       "channel": "OpenCode",
       "url": "https://x.com/opencode",
       "kind": "social",
-      "attemptedAt": "2026-11-20T07:30:07.867Z",
-      "lastSuccessAt": "2026-11-20T07:30:07.867Z",
+      "attemptedAt": "2026-11-21T07:26:53.437Z",
+      "lastSuccessAt": "2026-11-21T07:26:53.437Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "official-oembed; discovery may use mirror",
       "snapshot": {
         "records": [
+          {
+            "key": "post:2124037654639468759",
+            "type": "announcement",
+            "hash": "4aea34bb8656fb3c11d56e66f2bb19a4ea0e0f8715ff41e436a11b005b8644be",
+            "signals": [
+              "availability"
+            ],
+            "models": [],
+            "url": "https://x.com/opencode/status/2124037654639468759",
+            "relevant": true
+          },
           {
             "key": "post:2123412070636876237",
             "type": "announcement",
@@ -60193,21 +59943,10 @@
             "models": [],
             "url": "https://x.com/opencode/status/2122377719048519773",
             "relevant": false
-          },
-          {
-            "key": "post:2122377687968678258",
-            "type": "announcement",
-            "hash": "0d10e113c89b78367f654e73348f85c4b87ea1a5006fe7efa6d65b14402e08fb",
-            "signals": [
-              "availability"
-            ],
-            "models": [],
-            "url": "https://x.com/opencode/status/2122377687968678258",
-            "relevant": true
           }
         ],
-        "hash": "94598ebec3f9b155fcf1af811ae90cf7759fb84fa90748f08eb522145d19f68a",
-        "checkedAt": "2026-11-20T07:30:07.867Z",
+        "hash": "3905fb86dad274a2c45ae3eeb8c0781508ebab18e41f6d9d9660b5da59890678",
+        "checkedAt": "2026-11-21T07:26:53.437Z",
         "discoveredVia": "https://teapawt.net/opencode"
       }
     },
@@ -60216,13 +59955,28 @@
       "channel": "Command Code",
       "url": "https://x.com/CommandCodeAI",
       "kind": "social",
-      "attemptedAt": "2026-11-20T07:30:07.867Z",
-      "lastSuccessAt": "2026-11-20T07:30:07.867Z",
+      "attemptedAt": "2026-11-21T07:26:53.437Z",
+      "lastSuccessAt": "2026-11-21T07:26:53.437Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "official-oembed; discovery may use mirror",
       "snapshot": {
         "records": [
+          {
+            "key": "post:2123849737321533950",
+            "type": "announcement",
+            "hash": "1b601fa3f7293d99a890c2c2e932f78ced0d58cc0c44f72bda103877250245a5",
+            "signals": [
+              "promotion",
+              "availability"
+            ],
+            "models": [
+              "Glyph Cluster ",
+              "MiniMax M3 "
+            ],
+            "url": "https://x.com/CommandCodeAI/status/2123849737321533950",
+            "relevant": true
+          },
           {
             "key": "post:2123491263286751380",
             "type": "announcement",
@@ -60323,24 +60077,6 @@
             "relevant": true
           },
           {
-            "key": "post:2122192666939281471",
-            "type": "announcement",
-            "hash": "eadf0267a4ef791cff93301053be00c88d0615049f5d102a706ddb2815398179",
-            "signals": [],
-            "models": [],
-            "url": "https://x.com/CommandCodeAI/status/2122192666939281471",
-            "relevant": false
-          },
-          {
-            "key": "post:2122192665362211239",
-            "type": "announcement",
-            "hash": "ba6f9597350c0d81e7b0e5ad35938082663a2d6ef059a3511cac71dddb34d9b9",
-            "signals": [],
-            "models": [],
-            "url": "https://x.com/CommandCodeAI/status/2122192665362211239",
-            "relevant": false
-          },
-          {
             "key": "post:2122192652858773675",
             "type": "announcement",
             "hash": "14043224045c61f9c746c89d636cf2a2b348e95b1a7120b0a738a8cf3f5143e0",
@@ -60357,10 +60093,23 @@
             ],
             "url": "https://x.com/CommandCodeAI/status/2122192652858773675",
             "relevant": true
+          },
+          {
+            "key": "post:2120236115382980617",
+            "type": "announcement",
+            "hash": "bdc1a5420e849be34469617ff1c7142640bcdbf127cff48df2d83224c3b11a0c",
+            "signals": [
+              "pricing",
+              "promotion",
+              "availability"
+            ],
+            "models": [],
+            "url": "https://x.com/CommandCodeAI/status/2120236115382980617",
+            "relevant": true
           }
         ],
-        "hash": "90b1608b4cdc3e5f6732dfced970c125b2b9d4bfd51433ce2c49c8e5e44f8a02",
-        "checkedAt": "2026-11-20T07:30:07.867Z",
+        "hash": "8cf08ddebac0c15e22441bc4dbc47e8ca68ee77bd065c6a7cb4bea48c871dc81",
+        "checkedAt": "2026-11-21T07:26:53.437Z",
         "discoveredVia": "https://teapawt.net/CommandCodeAI"
       }
     }
@@ -101159,7 +100908,646 @@
         "relevant": true
       },
       "status": "pending"
+    },
+    {
+      "id": "b597a7e6703819b3ca3b8ff08d0d61c63daa4c8b47f4643cf0e85d3d8f1a89f3",
+      "sourceId": "command-code-go",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-21T07:26:53.437Z",
+      "url": "https://commandcode.ai/docs/plans/go",
+      "before": null,
+      "after": {
+        "key": "text:166d594781abe44f6216f0874708ed4f6e7057f1a089340056c38032f3b72688",
+        "hash": "166d594781abe44f6216f0874708ed4f6e7057f1a089340056c38032f3b72688",
+        "type": "announcement",
+        "signals": [
+          "promotion"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/docs/plans/go"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "a48b095a5af58e4514432e59e4782e6e8a37c2616d5ba0f4205ffae5306f3bef",
+      "sourceId": "command-code-go",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-21T07:26:53.437Z",
+      "url": "https://commandcode.ai/docs/plans/go",
+      "before": null,
+      "after": {
+        "key": "text:36faa66e0662c0fa9b71aa957b670a117f7b70ced604cb6c022e142519ad1767",
+        "hash": "36faa66e0662c0fa9b71aa957b670a117f7b70ced604cb6c022e142519ad1767",
+        "type": "announcement",
+        "signals": [
+          "pricing",
+          "availability"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/docs/plans/go"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "6a8a88158b0a9251519292b1f7b817629cd4e1cd18bf012b991e246166f53ee9",
+      "sourceId": "command-code-go",
+      "channel": "Command Code",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-21T07:26:53.437Z",
+      "url": "https://commandcode.ai/docs/plans/go",
+      "before": {
+        "key": "row:v2:e9602f4baf5bb37d:0:Inkling 2 Small Free:0",
+        "type": "table-row",
+        "label": "Inkling 2 Small Free",
+        "heading": "Models included",
+        "columns": [
+          "Model ↕",
+          "Context ↕",
+          "Input ↕",
+          "Output ↕",
+          "Cache read ↕",
+          "Cache write ↕",
+          "Caps"
+        ],
+        "cells": [
+          "Inkling 2 Small Free",
+          "1M",
+          "Free",
+          "Free",
+          "Free",
+          "—",
+          "+ 1"
+        ],
+        "signals": [
+          "promotion"
+        ],
+        "url": "https://commandcode.ai/docs/plans/go",
+        "hash": "b3ac5fb193816e680beb7a464ce255b0ab3a47f0fcfee22f359cae874baea7dd"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "f59858f5554cc7c370ff10c3f53da5c397422fdb28b3356cb67bea5b33a1dd0c",
+      "sourceId": "command-code-goat",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-21T07:26:53.437Z",
+      "url": "https://commandcode.ai/docs/plans/goat",
+      "before": null,
+      "after": {
+        "key": "text:db84ea0fe2893c354fc964a6aa5e12c9c3852888a66588c06e0b940be75b1560",
+        "hash": "db84ea0fe2893c354fc964a6aa5e12c9c3852888a66588c06e0b940be75b1560",
+        "type": "announcement",
+        "signals": [
+          "promotion"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/docs/plans/goat"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "afb1892f2c732a8fe08a9b382f2834ed00288473e33389d545416ad03e261460",
+      "sourceId": "command-code-goat",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-21T07:26:53.437Z",
+      "url": "https://commandcode.ai/docs/plans/goat",
+      "before": null,
+      "after": {
+        "key": "text:0865974336611f69324d3bbd92921cd372ee3a10a0df5e56d158e5a13773a828",
+        "hash": "0865974336611f69324d3bbd92921cd372ee3a10a0df5e56d158e5a13773a828",
+        "type": "announcement",
+        "signals": [
+          "pricing",
+          "availability"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/docs/plans/goat"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "3f7c567ec7f1bf04cda344b90b315fd4d041279177ebbcaa4da7cf7af848e842",
+      "sourceId": "command-code-goat",
+      "channel": "Command Code",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-21T07:26:53.437Z",
+      "url": "https://commandcode.ai/docs/plans/goat",
+      "before": {
+        "key": "row:v2:5fc247816328732d:0:Inkling 2 Small Free:0",
+        "type": "table-row",
+        "label": "Inkling 2 Small Free",
+        "heading": "Models included",
+        "columns": [
+          "Model ↕",
+          "Context ↕",
+          "Input ↕",
+          "Output ↕",
+          "Cache read ↕",
+          "Cache write ↕",
+          "Caps"
+        ],
+        "cells": [
+          "Inkling 2 Small Free",
+          "1M",
+          "Free",
+          "Free",
+          "Free",
+          "—",
+          "+ 1"
+        ],
+        "signals": [
+          "promotion"
+        ],
+        "url": "https://commandcode.ai/docs/plans/goat",
+        "hash": "b3ac5fb193816e680beb7a464ce255b0ab3a47f0fcfee22f359cae874baea7dd"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "0ed0901b4126c6cb2c7d14cec2e74ad32dc3c4c565776099644145e0301119b3",
+      "sourceId": "command-code-pro",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-21T07:26:53.437Z",
+      "url": "https://commandcode.ai/docs/plans/pro",
+      "before": null,
+      "after": {
+        "key": "text:4e33d350b51e20f59eeb353a375a17f8f7303e57720e334c029cc46a5389b50f",
+        "hash": "4e33d350b51e20f59eeb353a375a17f8f7303e57720e334c029cc46a5389b50f",
+        "type": "announcement",
+        "signals": [
+          "promotion"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/docs/plans/pro"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "ee8c382182f99d603b0f44fcfa2f7b76e93166e31bca7a0d2fb7522f400fd588",
+      "sourceId": "command-code-pro",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-21T07:26:53.437Z",
+      "url": "https://commandcode.ai/docs/plans/pro",
+      "before": null,
+      "after": {
+        "key": "text:6a2fe8b7d6479e14709c6094fc908189eb7c152b3e512975c91da4f11a64b2ce",
+        "hash": "6a2fe8b7d6479e14709c6094fc908189eb7c152b3e512975c91da4f11a64b2ce",
+        "type": "announcement",
+        "signals": [
+          "pricing",
+          "availability"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/docs/plans/pro"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "066623efddc909816301bcce8886cf3be53374d106c7946db96d078e687d942c",
+      "sourceId": "command-code-pro",
+      "channel": "Command Code",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-21T07:26:53.437Z",
+      "url": "https://commandcode.ai/docs/plans/pro",
+      "before": {
+        "key": "row:v2:20d53e007c5a4d72:0:Inkling 2 Small Free:0",
+        "type": "table-row",
+        "label": "Inkling 2 Small Free",
+        "heading": "Models included",
+        "columns": [
+          "Model ↕",
+          "Context ↕",
+          "Input ↕",
+          "Output ↕",
+          "Cache read ↕",
+          "Cache write ↕",
+          "Caps"
+        ],
+        "cells": [
+          "Inkling 2 Small Free",
+          "1M",
+          "Free",
+          "Free",
+          "Free",
+          "—",
+          "+ 1"
+        ],
+        "signals": [
+          "promotion"
+        ],
+        "url": "https://commandcode.ai/docs/plans/pro",
+        "hash": "b3ac5fb193816e680beb7a464ce255b0ab3a47f0fcfee22f359cae874baea7dd"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "ca10f314fd6dcc569187e9e81afc97f53d47eebab06a847c88f90c22d43f4e48",
+      "sourceId": "command-code-max",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-21T07:26:53.437Z",
+      "url": "https://commandcode.ai/models",
+      "before": null,
+      "after": {
+        "key": "text:c5833717e5e2561319357a0f5261e802cb9fac165a0ad3dddf4528633ce16cc6",
+        "hash": "c5833717e5e2561319357a0f5261e802cb9fac165a0ad3dddf4528633ce16cc6",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [
+          "Claude Opus",
+          "Claude Fable"
+        ],
+        "url": "https://commandcode.ai/models"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "cced2dcd20ad5a7ed8548436fadf6d9946fefd14d8ca195ed5157e0d33b30740",
+      "sourceId": "command-code-max",
+      "channel": "Command Code",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-21T07:26:53.437Z",
+      "url": "https://commandcode.ai/docs/plans/max",
+      "before": {
+        "key": "row:v2:49da236506327215:0:Inkling 2 Small:0",
+        "type": "table-row",
+        "label": "Inkling 2 Small",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Requests / 5 hours",
+          "Requests / week",
+          "Requests / month"
+        ],
+        "cells": [
+          "Inkling 2 Small",
+          "Free",
+          "Free",
+          "Free"
+        ],
+        "signals": [
+          "promotion"
+        ],
+        "url": "https://commandcode.ai/docs/plans/max",
+        "hash": "1c63dd5f28c933edc469c7ec6e08cd3d2f60e7d7501878cf213737e82d1b2aad"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "fd4280936bbf9e816eca5dfb43772cc26ad06b09cb669b8aed2c929a62409b38",
+      "sourceId": "command-code-max",
+      "channel": "Command Code",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-21T07:26:53.437Z",
+      "url": "https://commandcode.ai/docs/plans/max",
+      "before": {
+        "key": "row:v2:49da236506327215:1:Inkling 2 Small:0",
+        "type": "table-row",
+        "label": "Inkling 2 Small",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Input",
+          "Output",
+          "Cache Read",
+          "Cache Write",
+          "Max 10× credits",
+          "Max 20× credits"
+        ],
+        "cells": [
+          "Inkling 2 Small",
+          "$0.00",
+          "$0.00",
+          "$0.00",
+          "-",
+          "Free",
+          "Free"
+        ],
+        "signals": [
+          "pricing",
+          "promotion"
+        ],
+        "url": "https://commandcode.ai/docs/plans/max",
+        "hash": "57d7c12899982497698567bccf18fbf64456c7e891f42c5b8e96c0e5bbefe597"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "63caadd16c6f418d7bf1e241080517de91f39f46a61bce197172501ac0474ce0",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-21T07:26:53.437Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": {
+        "key": "row:v2:4891f56ff33e5c92:0:thinkingmachines/inkling-2-small:free Copy model id:0",
+        "type": "table-row",
+        "label": "thinkingmachines/inkling-2-small:free Copy model id",
+        "heading": "Thinking Machines",
+        "columns": [
+          "Model ID",
+          "Name",
+          "Capabilities",
+          "Best for"
+        ],
+        "cells": [
+          "thinkingmachines/inkling-2-small:free Copy model id",
+          "Inkling 2 Small",
+          "+ 1",
+          "multimodal MoE reasoning with 1M context"
+        ],
+        "signals": [
+          "promotion",
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models",
+        "hash": "b4930fb43e2a855f96c2f6b6790a5d4155049651c843b6e2c5adb7579048e486"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "a7e9a07b4a493b90d24f188a4064b29b0d3ccfa22dba1f92df40984ca7790a23",
+      "sourceId": "command-code-terms",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-21T07:26:53.437Z",
+      "url": "https://commandcode.ai/docs/resources/pricing-limits",
+      "before": null,
+      "after": {
+        "key": "text:621838905842e3b544cb0d8dc114caeb3f4188eb276da75e7435c3789c6fa726",
+        "hash": "621838905842e3b544cb0d8dc114caeb3f4188eb276da75e7435c3789c6fa726",
+        "type": "announcement",
+        "signals": [
+          "promotion"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/docs/resources/pricing-limits"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "58bd22e601a3b3304213b8771f1c2d7f0189c4b96fb036440842fbb3958d9187",
+      "sourceId": "command-code-terms",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-21T07:26:53.437Z",
+      "url": "https://commandcode.ai/docs/resources/pricing-limits",
+      "before": null,
+      "after": {
+        "key": "text:c2b94d41f5e80a90d017735accdfac816ff5ebf32c7a90aaefa862fe8367b06a",
+        "hash": "c2b94d41f5e80a90d017735accdfac816ff5ebf32c7a90aaefa862fe8367b06a",
+        "type": "announcement",
+        "signals": [
+          "pricing",
+          "availability"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/docs/resources/pricing-limits"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "d7bc2a719d628b6bc00a5479ad23dc6f34e39781d6f669afcefc8be03e317e54",
+      "sourceId": "command-code-terms",
+      "channel": "Command Code",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-21T07:26:53.437Z",
+      "url": "https://commandcode.ai/docs/resources/pricing-limits",
+      "before": {
+        "key": "row:v2:edbd182f3e339fe8:0:Input:0",
+        "type": "table-row",
+        "label": "Input",
+        "heading": "Details",
+        "columns": [
+          "Per 1M tokens",
+          "Price"
+        ],
+        "cells": [
+          "Input",
+          "$0.00"
+        ],
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://commandcode.ai/docs/resources/pricing-limits#inkling-2-small-free",
+        "hash": "b522b3e4da8a1763fd6780ba99d23787c9fd482812c64f7c3eee2ed39e904e55"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "5ef0510da85eafc378ebbc4d29cbcf4df9646dd688764895506d77e9678d81b1",
+      "sourceId": "command-code-terms",
+      "channel": "Command Code",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-21T07:26:53.437Z",
+      "url": "https://commandcode.ai/docs/resources/pricing-limits",
+      "before": {
+        "key": "row:v2:edbd182f3e339fe8:0:Output:0",
+        "type": "table-row",
+        "label": "Output",
+        "heading": "Details",
+        "columns": [
+          "Per 1M tokens",
+          "Price"
+        ],
+        "cells": [
+          "Output",
+          "$0.00"
+        ],
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://commandcode.ai/docs/resources/pricing-limits#inkling-2-small-free",
+        "hash": "626add57041be3ca6b3ef651ffa0ea0f384371efe6552729c5d30e67fbf9dd70"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "794d7d168b12f54e5c1c85d018df98c6c5676bf116435e0597d123494f70f236",
+      "sourceId": "factory-releases",
+      "channel": "Factory",
+      "kind": "announcement",
+      "detectedAt": "2026-11-21T07:26:53.437Z",
+      "url": "https://docs.factory.com/changelog/release-notes.md",
+      "before": null,
+      "after": {
+        "key": "text:da04cc108e9cb555e9095d7baa458fd97370dd80a1b0191aff93ee4f97098115",
+        "hash": "da04cc108e9cb555e9095d7baa458fd97370dd80a1b0191aff93ee4f97098115",
+        "type": "announcement",
+        "signals": [],
+        "models": [
+          "step titles"
+        ],
+        "url": "https://docs.factory.com/changelog/release-notes.md"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "b7eb9f3117447119ea3bb3d046c8149f08055e2e6bbf94cfac7f064629a31bd3",
+      "sourceId": "devin-releases",
+      "channel": "Devin",
+      "kind": "announcement",
+      "detectedAt": "2026-11-21T07:26:53.437Z",
+      "url": "https://docs.devin.ai/release-notes/overview#introducing-access-and-sharing",
+      "before": null,
+      "after": {
+        "key": "text:b0982dd952daa0a3478d3080c207a3d34abd9930cac7314da9b7cb9f1a0dedd6",
+        "hash": "b0982dd952daa0a3478d3080c207a3d34abd9930cac7314da9b7cb9f1a0dedd6",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [],
+        "url": "https://docs.devin.ai/release-notes/overview#introducing-access-and-sharing"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "d0b3b8b76c0b76de4f519d47be1271aed57e778b50ec146ff12c1a0f66b9dbb3",
+      "sourceId": "devin-releases",
+      "channel": "Devin",
+      "kind": "announcement",
+      "detectedAt": "2026-11-21T07:26:53.437Z",
+      "url": "https://docs.devin.ai/release-notes/overview#introducing-devin-bots",
+      "before": null,
+      "after": {
+        "key": "text:50235d407a70688447fc2eeaae1b162773c3786dc2ff416799bbe324029206a5",
+        "hash": "50235d407a70688447fc2eeaae1b162773c3786dc2ff416799bbe324029206a5",
+        "type": "announcement",
+        "signals": [
+          "promotion",
+          "availability"
+        ],
+        "models": [],
+        "url": "https://docs.devin.ai/release-notes/overview#introducing-devin-bots"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "030beda98f0ea5f210d7569996f118b123acf5505fa84c660f739a271c73a9dc",
+      "sourceId": "devin-releases",
+      "channel": "Devin",
+      "kind": "announcement",
+      "detectedAt": "2026-11-21T07:26:53.437Z",
+      "url": "https://docs.devin.ai/release-notes/overview#sessions-&-workspace-3",
+      "before": null,
+      "after": {
+        "key": "text:94ad2ac628828d8fdac7894bd426f91eb34dc987bf8f70794d8a1cb4238f48b3",
+        "hash": "94ad2ac628828d8fdac7894bd426f91eb34dc987bf8f70794d8a1cb4238f48b3",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [],
+        "url": "https://docs.devin.ai/release-notes/overview#sessions-&-workspace-3"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "3aa8af3ab7f68312e4ee8f2687eeed034e3aec14da1bfd0491e216480e7ceb39",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "announcement",
+      "detectedAt": "2026-11-21T07:26:53.437Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-faq#tpf-h-new-user-promo",
+      "before": null,
+      "after": {
+        "key": "text:f53d3e4cc798066f73008ed670e62746e167db176934f180f948d50280fe8815",
+        "hash": "f53d3e4cc798066f73008ed670e62746e167db176934f180f948d50280fe8815",
+        "type": "announcement",
+        "signals": [
+          "pricing"
+        ],
+        "models": [],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-faq#tpf-h-new-user-promo"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "f0778a413efe11da92ecf2314042765eb2eb6ceedc629d95985cad7bb49fcfc7",
+      "sourceId": "opencode-social",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-21T07:26:53.437Z",
+      "url": "https://x.com/opencode/status/2124037654639468759",
+      "before": null,
+      "after": {
+        "key": "post:2124037654639468759",
+        "type": "announcement",
+        "hash": "4aea34bb8656fb3c11d56e66f2bb19a4ea0e0f8715ff41e436a11b005b8644be",
+        "signals": [
+          "availability"
+        ],
+        "models": [],
+        "url": "https://x.com/opencode/status/2124037654639468759",
+        "relevant": true
+      },
+      "status": "pending"
+    },
+    {
+      "id": "eb03d59db829b2582337a0c4befc97cb8e9870c2fc138dd1358e1dc7e098ac4f",
+      "sourceId": "command-code-social",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-21T07:26:53.437Z",
+      "url": "https://x.com/CommandCodeAI/status/2123849737321533950",
+      "before": null,
+      "after": {
+        "key": "post:2123849737321533950",
+        "type": "announcement",
+        "hash": "1b601fa3f7293d99a890c2c2e932f78ced0d58cc0c44f72bda103877250245a5",
+        "signals": [
+          "promotion",
+          "availability"
+        ],
+        "models": [
+          "Glyph Cluster ",
+          "MiniMax M3 "
+        ],
+        "url": "https://x.com/CommandCodeAI/status/2123849737321533950",
+        "relevant": true
+      },
+      "status": "pending"
+    },
+    {
+      "id": "1e7ed7aad227da968c36330992cca18ac3384d7f86d4908136b95dc76a703cd0",
+      "sourceId": "command-code-social",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-21T07:26:53.437Z",
+      "url": "https://x.com/CommandCodeAI/status/2120236115382980617",
+      "before": null,
+      "after": {
+        "key": "post:2120236115382980617",
+        "type": "announcement",
+        "hash": "bdc1a5420e849be34469617ff1c7142640bcdbf127cff48df2d83224c3b11a0c",
+        "signals": [
+          "pricing",
+          "promotion",
+          "availability"
+        ],
+        "models": [],
+        "url": "https://x.com/CommandCodeAI/status/2120236115382980617",
+        "relevant": true
+      },
+      "status": "pending"
     }
   ],
-  "checkedAt": "2026-11-20T07:30:07.867Z"
+  "checkedAt": "2026-11-21T07:26:53.437Z"
 }
