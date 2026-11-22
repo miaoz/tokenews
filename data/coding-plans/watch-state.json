@@ -6,10 +6,10 @@
       "channel": "OpenCode",
       "url": "https://opencode.ai/v2/docs/console/go/",
       "kind": "tables",
-      "attemptedAt": "2026-11-21T07:26:53.437Z",
+      "attemptedAt": "2026-11-22T07:07:09.975Z",
       "lastSuccessAt": "2026-11-16T06:49:25.500Z",
       "status": "failed",
-      "consecutiveFailures": 5,
+      "consecutiveFailures": 6,
       "retrieval": "http",
       "snapshot": {
         "checkedAt": "2026-11-16T06:49:25.500Z",
@@ -8241,21 +8241,21 @@
         ],
         "hash": "6c944ef32669bbe4058fb70cf85a0d26721c8ebb13cb6cffa7f6d6b3dae100ca"
       },
-      "error": "Source structure changed: 46 records, expected at least 60; fallback: Source structure changed: 46 records, expected at least 60"
+      "error": "Source structure changed: 48 records, expected at least 60; fallback: Source structure changed: 48 records, expected at least 60"
     },
     "opencode-releases": {
       "id": "opencode-releases",
       "channel": "OpenCode",
       "url": "https://opencode.ai/changelog",
       "kind": "document",
-      "attemptedAt": "2026-11-21T07:26:53.437Z",
-      "lastSuccessAt": "2026-11-21T07:26:53.437Z",
+      "attemptedAt": "2026-11-22T07:07:09.975Z",
+      "lastSuccessAt": "2026-11-22T07:07:09.975Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-21T07:26:53.437Z",
-        "bodySha256": "4ba870da2fb16c0fb1a695e3b7ddc170e2de7160a69162d1ff0d00abd2f6b7dd",
+        "checkedAt": "2026-11-22T07:07:09.975Z",
+        "bodySha256": "a195f1c52c2399a488602e228d6641d096a6db22e8fe0119d4747e921c776f82",
         "records": [
           {
             "key": "text:fc91dbe16f57f6d1e5686ac0710cc340f13eb25677b1d2d83756ee5eb744ebb3",
@@ -8470,13 +8470,13 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/go",
       "kind": "tables",
-      "attemptedAt": "2026-11-21T07:26:53.437Z",
-      "lastSuccessAt": "2026-11-21T07:26:53.437Z",
+      "attemptedAt": "2026-11-22T07:07:09.975Z",
+      "lastSuccessAt": "2026-11-22T07:07:09.975Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-21T07:26:53.437Z",
+        "checkedAt": "2026-11-22T07:07:09.975Z",
         "bodySha256": "bba25f1d1636a203fcfdf0f63046900f2d38dd49644e900435a6f9d5c55a5993",
         "records": [
           {
@@ -13356,13 +13356,13 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/goat",
       "kind": "tables",
-      "attemptedAt": "2026-11-21T07:26:53.437Z",
-      "lastSuccessAt": "2026-11-21T07:26:53.437Z",
+      "attemptedAt": "2026-11-22T07:07:09.975Z",
+      "lastSuccessAt": "2026-11-22T07:07:09.975Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-21T07:26:53.437Z",
+        "checkedAt": "2026-11-22T07:07:09.975Z",
         "bodySha256": "786b53b7734603497b368ff9bdbeb574f3b21347b12e78a01ecc39865cd6f60b",
         "records": [
           {
@@ -19383,13 +19383,13 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/pro",
       "kind": "tables",
-      "attemptedAt": "2026-11-21T07:26:53.437Z",
-      "lastSuccessAt": "2026-11-21T07:26:53.437Z",
+      "attemptedAt": "2026-11-22T07:07:09.975Z",
+      "lastSuccessAt": "2026-11-22T07:07:09.975Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-21T07:26:53.437Z",
+        "checkedAt": "2026-11-22T07:07:09.975Z",
         "bodySha256": "b00b6ad06f5c40f3687d30a88f31a9a308297e545c423509333e57142dc14132",
         "records": [
           {
@@ -26913,13 +26913,13 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/max",
       "kind": "tables",
-      "attemptedAt": "2026-11-21T07:26:53.437Z",
-      "lastSuccessAt": "2026-11-21T07:26:53.437Z",
+      "attemptedAt": "2026-11-22T07:07:09.975Z",
+      "lastSuccessAt": "2026-11-22T07:07:09.975Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-21T07:26:53.437Z",
+        "checkedAt": "2026-11-22T07:07:09.975Z",
         "bodySha256": "76287b4b38abb7e9aac3cd36fff61bd61a5c1963a6456cd692752a0c8dfcd740",
         "records": [
           {
@@ -33073,13 +33073,13 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/reference/cli/models",
       "kind": "tables",
-      "attemptedAt": "2026-11-21T07:26:53.437Z",
-      "lastSuccessAt": "2026-11-21T07:26:53.437Z",
+      "attemptedAt": "2026-11-22T07:07:09.975Z",
+      "lastSuccessAt": "2026-11-22T07:07:09.975Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-21T07:26:53.437Z",
+        "checkedAt": "2026-11-22T07:07:09.975Z",
         "bodySha256": "faedeb86b7bc0c2f6388a29a1cf23760a92ca16b1e4955b0fbd375ce0ce4265f",
         "records": [
           {
@@ -35806,13 +35806,13 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/resources/pricing-limits",
       "kind": "tables",
-      "attemptedAt": "2026-11-21T07:26:53.437Z",
-      "lastSuccessAt": "2026-11-21T07:26:53.437Z",
+      "attemptedAt": "2026-11-22T07:07:09.975Z",
+      "lastSuccessAt": "2026-11-22T07:07:09.975Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-21T07:26:53.437Z",
+        "checkedAt": "2026-11-22T07:07:09.975Z",
         "bodySha256": "bd300f3bfec3f36d4098675c469f14da7e35541b972dfb47a834b3812d3481eb",
         "records": [
           {
@@ -40928,13 +40928,13 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/changelog",
       "kind": "document",
-      "attemptedAt": "2026-11-21T07:26:53.437Z",
-      "lastSuccessAt": "2026-11-21T07:26:53.437Z",
+      "attemptedAt": "2026-11-22T07:07:09.975Z",
+      "lastSuccessAt": "2026-11-22T07:07:09.975Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-21T07:26:53.437Z",
+        "checkedAt": "2026-11-22T07:07:09.975Z",
         "bodySha256": "a7e0932cae69ff2477cb82e7f61dc1606da8e2ec75785524607f2ba265250910",
         "records": [
           {
@@ -45146,14 +45146,14 @@
       "channel": "Ollama",
       "url": "https://ollama.com/pricing",
       "kind": "tables",
-      "attemptedAt": "2026-11-21T07:26:53.437Z",
-      "lastSuccessAt": "2026-11-21T07:26:53.437Z",
+      "attemptedAt": "2026-11-22T07:07:09.975Z",
+      "lastSuccessAt": "2026-11-22T07:07:09.975Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-21T07:26:53.437Z",
-        "bodySha256": "eb1a4af0a48743f20386a8aa11d55d0a192b38749c22e4f7e4875150eb7b3bb1",
+        "checkedAt": "2026-11-22T07:07:09.975Z",
+        "bodySha256": "a743fe1936b03bddc5ae2c397b06c04e3e6fa3cf17e5c3168290800072cafc6c",
         "records": [
           {
             "key": "text:dfe95783edfef7918760312f94edd764f4ce3ffd38b90c2c955a0cc3b250f040",
@@ -45610,6 +45610,29 @@
             ],
             "url": "https://ollama.com/pricing#model-pricing",
             "hash": "34358167519d78fdddd9c8c30acc4a12e4db87bbd5becd421d548c3fc4ae4add"
+          },
+          {
+            "key": "row:v2:c3aa2030d9013733:0:hy4:0",
+            "type": "table-row",
+            "label": "hy4",
+            "heading": "Model pricing",
+            "columns": [
+              "Model",
+              "Input",
+              "Cached input",
+              "Output"
+            ],
+            "cells": [
+              "hy4",
+              "$0.834",
+              "$0.042",
+              "$2.501"
+            ],
+            "signals": [
+              "pricing"
+            ],
+            "url": "https://ollama.com/pricing#model-pricing",
+            "hash": "885634ab82495b11b181f982218cb6242b79abd1f68787f4e1a27576b96f6764"
           },
           {
             "key": "row:v2:c3aa2030d9013733:0:inkling-2-small:0",
@@ -46197,7 +46220,7 @@
             "url": "https://ollama.com/pricing"
           }
         ],
-        "hash": "fcd29166d9dc6224d250171a2d886b221601ed51393b72483d4169c049222562"
+        "hash": "cb8223a408f0c4749043251dfe02af5aa4f4ea7408485e20663d10b0c526edd0"
       }
     },
     "ollama-announcements": {
@@ -46205,13 +46228,13 @@
       "channel": "Ollama",
       "url": "https://ollama.com/blog",
       "kind": "document",
-      "attemptedAt": "2026-11-21T07:26:53.437Z",
-      "lastSuccessAt": "2026-11-21T07:26:53.437Z",
+      "attemptedAt": "2026-11-22T07:07:09.975Z",
+      "lastSuccessAt": "2026-11-22T07:07:09.975Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-21T07:26:53.437Z",
+        "checkedAt": "2026-11-22T07:07:09.975Z",
         "bodySha256": "b086b1bb923d28ea9a4183c024f2e7797117f8dc8689b7d7576c8cc7a1f7d9d5",
         "records": [
           {
@@ -46804,13 +46827,13 @@
       "channel": "Factory",
       "url": "https://docs.factory.com/models.md",
       "kind": "tables",
-      "attemptedAt": "2026-11-21T07:26:53.437Z",
-      "lastSuccessAt": "2026-11-21T07:26:53.437Z",
+      "attemptedAt": "2026-11-22T07:07:09.975Z",
+      "lastSuccessAt": "2026-11-22T07:07:09.975Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-21T07:26:53.437Z",
+        "checkedAt": "2026-11-22T07:07:09.975Z",
         "bodySha256": "d3ce4bb075d87712cb78fc27a4e9bfcc0d08320fd736a218d81050d5a5f14b4c",
         "records": [
           {
@@ -48802,13 +48825,13 @@
       "channel": "Factory",
       "url": "https://docs.factory.com/pricing/individuals.md",
       "kind": "document",
-      "attemptedAt": "2026-11-21T07:26:53.437Z",
-      "lastSuccessAt": "2026-11-21T07:26:53.437Z",
+      "attemptedAt": "2026-11-22T07:07:09.975Z",
+      "lastSuccessAt": "2026-11-22T07:07:09.975Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-21T07:26:53.437Z",
+        "checkedAt": "2026-11-22T07:07:09.975Z",
         "bodySha256": "7c75704906d429c519fd245576b23b632bf0a2369b5ac3eb16fbdbe3daa5c4c3",
         "records": [
           {
@@ -49057,13 +49080,13 @@
       "channel": "Factory",
       "url": "https://docs.factory.com/changelog/release-notes.md",
       "kind": "document",
-      "attemptedAt": "2026-11-21T07:26:53.437Z",
-      "lastSuccessAt": "2026-11-21T07:26:53.437Z",
+      "attemptedAt": "2026-11-22T07:07:09.975Z",
+      "lastSuccessAt": "2026-11-22T07:07:09.975Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-21T07:26:53.437Z",
+        "checkedAt": "2026-11-22T07:07:09.975Z",
         "bodySha256": "a7e089711e8ebd2eff06a63ec735b5f096dc71ea748a84de7e41d85fa06e732a",
         "records": [
           {
@@ -54586,14 +54609,14 @@
       "channel": "Cursor",
       "url": "https://cursor.com/docs/models-and-pricing",
       "kind": "tables",
-      "attemptedAt": "2026-11-21T07:26:53.437Z",
-      "lastSuccessAt": "2026-11-21T07:26:53.437Z",
+      "attemptedAt": "2026-11-22T07:07:09.975Z",
+      "lastSuccessAt": "2026-11-22T07:07:09.975Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-21T07:26:53.437Z",
-        "bodySha256": "c7c6381920b624d7af6c56866fbb92cfffd88a29ba376fc67f8ad96fed8e174d",
+        "checkedAt": "2026-11-22T07:07:09.975Z",
+        "bodySha256": "ec930a754ba37247421ad26ecc9d70ba692c33d67489b4c9d079fb824e7bda76",
         "records": [
           {
             "key": "text:6c7ad5d1af746cc7ef5c32cb09479f830dfe5d5418e524a762cbb1699cb4e70c",
@@ -56963,14 +56986,14 @@
       "channel": "Cursor",
       "url": "https://cursor.com/changelog",
       "kind": "document",
-      "attemptedAt": "2026-11-21T07:26:53.437Z",
-      "lastSuccessAt": "2026-11-21T07:26:53.437Z",
+      "attemptedAt": "2026-11-22T07:07:09.975Z",
+      "lastSuccessAt": "2026-11-22T07:07:09.975Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-21T07:26:53.437Z",
-        "bodySha256": "45ce356a742c38c0f52e8b209bd34d13d7a4ec94edb9fb761c312567f80736eb",
+        "checkedAt": "2026-11-22T07:07:09.975Z",
+        "bodySha256": "458e13056126a268fbb4c5fda7bc84f5c4acc7ee0c1c9bf9b497192c0028608f",
         "records": [
           {
             "key": "text:ddcce6feab143eda3ac8d33669e14870f201c2f2b5f9b27a875942a90b8bca89",
@@ -57087,14 +57110,14 @@
       "channel": "Devin",
       "url": "https://docs.devin.ai/release-notes/overview",
       "kind": "document",
-      "attemptedAt": "2026-11-21T07:26:53.437Z",
-      "lastSuccessAt": "2026-11-21T07:26:53.437Z",
+      "attemptedAt": "2026-11-22T07:07:09.975Z",
+      "lastSuccessAt": "2026-11-22T07:07:09.975Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-21T07:26:53.437Z",
-        "bodySha256": "aadb50df63ebb63e2f3bd395e9bf57ed698fb82e866d0c67262eae5b77c36222",
+        "checkedAt": "2026-11-22T07:07:09.975Z",
+        "bodySha256": "d40a9150a45b99509a255749c51f8b418442356b2f270dddc0148c21c00fbb14",
         "records": [
           {
             "key": "text:8f188bc90439c5b341aca73eb4d84c3dd04eb3bbd57acda295334fbde1178a0f",
@@ -57930,14 +57953,14 @@
       "channel": "Alibaba",
       "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan",
       "kind": "tables",
-      "attemptedAt": "2026-11-21T07:26:53.437Z",
-      "lastSuccessAt": "2026-11-21T07:26:53.437Z",
+      "attemptedAt": "2026-11-22T07:07:09.975Z",
+      "lastSuccessAt": "2026-11-22T07:07:09.975Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-21T07:26:53.437Z",
-        "bodySha256": "7dfd25d04828c1b58d9263848ee75a35ec3526983011f982e7440a7aeb4e6c5b",
+        "checkedAt": "2026-11-22T07:07:09.975Z",
+        "bodySha256": "816905bdd0a49f9863e9ea6e8c5398481ec33eda7464276540f88d452ee623e8",
         "records": [
           {
             "key": "text:0686d515f782875e3d4496656bed3259cca990eb3f6893deb942abc5bd278f24",
@@ -58437,14 +58460,14 @@
       "channel": "Alibaba",
       "url": "https://help.aliyun.com/zh/model-studio/coding-plan",
       "kind": "tables",
-      "attemptedAt": "2026-11-21T07:26:53.437Z",
-      "lastSuccessAt": "2026-11-21T07:26:53.437Z",
+      "attemptedAt": "2026-11-22T07:07:09.975Z",
+      "lastSuccessAt": "2026-11-22T07:07:09.975Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-21T07:26:53.437Z",
-        "bodySha256": "64a23ef148667223357dca9f8fac7d886e802c1acc1ed60d2a989cfe8e21be6d",
+        "checkedAt": "2026-11-22T07:07:09.975Z",
+        "bodySha256": "aa04b8b51e41da6b89f7747f927e2feeaaaa1d13dfcb4b6b53ed9a4390fd68b7",
         "records": [
           {
             "key": "text:775eabf14c55f66ea3e7ef7b3737a001f72434663b87e260b4d68fe798af9495",
@@ -58898,14 +58921,14 @@
       "channel": "Alibaba",
       "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
       "kind": "tables",
-      "attemptedAt": "2026-11-21T07:26:53.437Z",
-      "lastSuccessAt": "2026-11-21T07:26:53.437Z",
+      "attemptedAt": "2026-11-22T07:07:09.975Z",
+      "lastSuccessAt": "2026-11-22T07:07:09.975Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-21T07:26:53.437Z",
-        "bodySha256": "07f556eb6e8cb4e0560acafe96790794a4f952b388e778d8230205806060c58c",
+        "checkedAt": "2026-11-22T07:07:09.975Z",
+        "bodySha256": "1c8137933be4a6f7d099d45bc4e85ae0000a3d657bf23b2e601ad5a8aa34d669",
         "records": [
           {
             "key": "text:c6331a8c511a8bcbc3875d6eab0b268db2d55d5b5e18db81347f58611f6c7435",
@@ -59809,13 +59832,33 @@
       "channel": "OpenCode",
       "url": "https://x.com/opencode",
       "kind": "social",
-      "attemptedAt": "2026-11-21T07:26:53.437Z",
-      "lastSuccessAt": "2026-11-21T07:26:53.437Z",
+      "attemptedAt": "2026-11-22T07:07:09.975Z",
+      "lastSuccessAt": "2026-11-22T07:07:09.975Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "official-oembed; discovery may use mirror",
       "snapshot": {
         "records": [
+          {
+            "key": "post:2124268940226392524",
+            "type": "announcement",
+            "hash": "3366066ac9423b123a6a0406f39d942429ad853a36f33cdeb29ca38d9cec8f71",
+            "signals": [],
+            "models": [],
+            "url": "https://x.com/opencode/status/2124268940226392524",
+            "relevant": false
+          },
+          {
+            "key": "post:2124265178267005017",
+            "type": "announcement",
+            "hash": "6f532ff0f71a9af5d10dbc212666f3f403fc4c626d6aee3c18cf6e9d6029bb20",
+            "signals": [],
+            "models": [
+              "GLM 5.3 and DeepSeek V4.1 Flash are now 60"
+            ],
+            "url": "https://x.com/opencode/status/2124265178267005017",
+            "relevant": true
+          },
           {
             "key": "post:2124037654639468759",
             "type": "announcement",
@@ -59919,34 +59962,10 @@
             "models": [],
             "url": "https://x.com/opencode/status/2122601201531507042",
             "relevant": false
-          },
-          {
-            "key": "post:2122600875562537329",
-            "type": "announcement",
-            "hash": "559aef737ae765eef695b2810e8f3a7c9ec0477f0c9bc166ea18123bf8b66e8d",
-            "signals": [
-              "pricing",
-              "availability"
-            ],
-            "models": [
-              "GLM Phase 1 ",
-              "GLM 5.3 usage for "
-            ],
-            "url": "https://x.com/opencode/status/2122600875562537329",
-            "relevant": true
-          },
-          {
-            "key": "post:2122377719048519773",
-            "type": "announcement",
-            "hash": "f527e2e738b1f4f24e38b6cf762942ce3f1b136cb0ccde5df8c0ef1c225bf124",
-            "signals": [],
-            "models": [],
-            "url": "https://x.com/opencode/status/2122377719048519773",
-            "relevant": false
           }
         ],
-        "hash": "3905fb86dad274a2c45ae3eeb8c0781508ebab18e41f6d9d9660b5da59890678",
-        "checkedAt": "2026-11-21T07:26:53.437Z",
+        "hash": "85343c3ab7588a8b793630adf7e668eb936d3a4439d9ceabaf1320211c0f1bf1",
+        "checkedAt": "2026-11-22T07:07:09.975Z",
         "discoveredVia": "https://teapawt.net/opencode"
       }
     },
@@ -59955,8 +59974,8 @@
       "channel": "Command Code",
       "url": "https://x.com/CommandCodeAI",
       "kind": "social",
-      "attemptedAt": "2026-11-21T07:26:53.437Z",
-      "lastSuccessAt": "2026-11-21T07:26:53.437Z",
+      "attemptedAt": "2026-11-22T07:07:09.975Z",
+      "lastSuccessAt": "2026-11-22T07:07:09.975Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "official-oembed; discovery may use mirror",
@@ -60109,7 +60128,7 @@
           }
         ],
         "hash": "8cf08ddebac0c15e22441bc4dbc47e8ca68ee77bd065c6a7cb4bea48c871dc81",
-        "checkedAt": "2026-11-21T07:26:53.437Z",
+        "checkedAt": "2026-11-22T07:07:09.975Z",
         "discoveredVia": "https://teapawt.net/CommandCodeAI"
       }
     }
@@ -101547,7 +101566,61 @@
         "relevant": true
       },
       "status": "pending"
+    },
+    {
+      "id": "d7feccdeac5e23bfe7b44d21c9b87171bb1ef0372c20f822dce61f1211c63451",
+      "sourceId": "ollama-pricing",
+      "channel": "Ollama",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-22T07:07:09.975Z",
+      "url": "https://ollama.com/pricing#model-pricing",
+      "before": null,
+      "after": {
+        "key": "row:v2:c3aa2030d9013733:0:hy4:0",
+        "type": "table-row",
+        "label": "hy4",
+        "heading": "Model pricing",
+        "columns": [
+          "Model",
+          "Input",
+          "Cached input",
+          "Output"
+        ],
+        "cells": [
+          "hy4",
+          "$0.834",
+          "$0.042",
+          "$2.501"
+        ],
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://ollama.com/pricing#model-pricing",
+        "hash": "885634ab82495b11b181f982218cb6242b79abd1f68787f4e1a27576b96f6764"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "1f06be56b1027cbfadae57841bbb76ed8e835673cf7ea223a52be358f6dac43c",
+      "sourceId": "opencode-social",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-22T07:07:09.975Z",
+      "url": "https://x.com/opencode/status/2124265178267005017",
+      "before": null,
+      "after": {
+        "key": "post:2124265178267005017",
+        "type": "announcement",
+        "hash": "6f532ff0f71a9af5d10dbc212666f3f403fc4c626d6aee3c18cf6e9d6029bb20",
+        "signals": [],
+        "models": [
+          "GLM 5.3 and DeepSeek V4.1 Flash are now 60"
+        ],
+        "url": "https://x.com/opencode/status/2124265178267005017",
+        "relevant": true
+      },
+      "status": "pending"
     }
   ],
-  "checkedAt": "2026-11-21T07:26:53.437Z"
+  "checkedAt": "2026-11-22T07:07:09.975Z"
 }
