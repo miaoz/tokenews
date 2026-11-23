@@ -70,9 +70,14 @@ export function parseAuditSource(adapter, body, board) {
       const match=key.match(/^terminalbench-(\d+)-(\d+)$/);
       return match?[`${match[1]}.${match[2]}`]:[];
     }))].sort((a,b)=>a.localeCompare(b,'en',{numeric:true}));
+    const evaluations = adapter === 'aa-models' && !legacy ? property(flight, 'evaluations') : null;
+    const indexEval = evaluations?.intelligenceIndex
+      ?? evaluations?.generalEvaluations?.find(e => !e.deprecated && e.href === '/evaluations/artificial-analysis-intelligence-index')
+      ?? evaluations?.headlineIndexes?.find(e => !e.deprecated && e.href === '/evaluations/artificial-analysis-intelligence-index');
     const version = adapter === 'aa-models'
       ? (legacy ? flight.match(/Artificial Analysis Intelligence Index v(\d+(?:\.\d+)+)/)?.[1]
-        : property(flight,'evaluations').intelligenceIndex?.name?.match(/^Artificial Analysis Intelligence Index v(\d+(?:\.\d+)+)$/)?.[1]) : terminalVersions.at(-1);
+        : indexEval?.name?.match(/^Artificial Analysis Intelligence Index v(\d+(?:\.\d+)+)$/)?.[1])
+      : terminalVersions.at(-1);
     const rows = initial.filter(m => !m.deprecated).flatMap(m => {
       const score = adapter === 'aa-models' ? m.intelligenceIndex : m.scores?.[`terminalbench-${version?.replaceAll('.','-')}`];
       if (score == null) return [];

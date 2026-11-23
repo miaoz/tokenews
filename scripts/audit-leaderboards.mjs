@@ -1,5 +1,6 @@
 import { readFile, writeFile, rename } from 'node:fs/promises';
 import { pageText } from './lib/leaderboards.mjs';
+import { parseArenaParquet } from './lib/arena.mjs';
 import { parseAuditSource, compareAudit, resolveModel, resolveAAReleaseIdentity } from './lib/leaderboard-audit.mjs';
 const root = new URL('../', import.meta.url);
 if (process.argv.slice(2).some(a=>a!=='--allow-partial')) throw new Error('Usage: node scripts/audit-leaderboards.mjs [--allow-partial]');
@@ -24,7 +25,18 @@ const releaseSince = Object.values(points.boards).map(b=>b.snapshot).sort().at(-
 let releases = [];
 const results = await Promise.all(config.sources.map(async source => {
   try {
-    const parsed = parseAuditSource(source.adapter, await fetchOnce(source.url), source.board);
+    let parsed;
+    try {
+      parsed = parseAuditSource(source.adapter, await fetchOnce(source.url), source.board);
+    } catch (primaryError) {
+      if (source.adapter === 'arena' && source.datasetUrl) {
+        const res = await fetch(source.datasetUrl, {signal:AbortSignal.timeout(45000)});
+        if (!res.ok) throw new Error(`${primaryError.message}; dataset HTTP ${res.status}`);
+        parsed = await parseArenaParquet(await res.arrayBuffer(), source.board);
+      } else {
+        throw primaryError;
+      }
+    }
     if (source.versionCheckUrl) {
       const versions = [...new Set([...pageText(await fetchOnce(source.versionCheckUrl)).matchAll(/\bv(\d+(?:\.\d+)+)/g)].map(m=>m[1]))];
       if (!versions.includes(parsed.version) || versions.some(v=>v.localeCompare(parsed.version, 'en', {numeric:true})>0))
@@ -34,7 +46,10 @@ const results = await Promise.all(config.sources.map(async source => {
     const baselineVersion = points.boards[source.board].name.match(/\bv?(\d+(?:\.\d+)+)/)?.[1] ?? null;
     const aliases = {...config.aliases, ...identities.aliases};
     for (const row of parsed.rows) if (row.releaseSlug && resolveAAReleaseIdentity(row,identities)) aliases[row.identity] = resolveAAReleaseIdentity(row,identities);
-    const identityBySourceId = source.adapter === 'arena' ? identities.arenaSources
+    const identityBySourceId = source.adapter === 'arena'
+      ? (parsed.rows.some(row => row.sourceId.startsWith('hf:'))
+          ? Object.fromEntries(parsed.rows.filter(row => !row.ambiguousConfiguration && identities.arenaConfigurations?.[row.identity]).map(row => [row.sourceId, identities.arenaConfigurations[row.identity]]))
+          : identities.arenaSources)
       : parsed.rows.some(row=>row.releaseSlug) ? Object.fromEntries(parsed.rows.filter(row=>resolveAAReleaseIdentity(row,identities)).map(row=>[row.sourceId,resolveAAReleaseIdentity(row,identities)])) : null;
     return compareAudit({...source, baselineVersion, ...(identityBySourceId ? {identityBySourceId} : {})}, parsed, knownModels, configurations, aliases);
   } catch (error) { return {board:source.board,source:source.url,status:'unverified',error:error.message}; }

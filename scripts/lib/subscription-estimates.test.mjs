@@ -94,3 +94,62 @@ test('anchor-pool supports worth-ratio and same-token-carry with strict low conf
  const badConf=clone(m);badConf.entries[0].confidence='medium';assert.throws(()=>mergeSubscriptionEstimates(d,badConf),/invalid calibration/);
  const crossVendor=clone(m);crossVendor.entries[0].calibration.anchorPointId='chatgpt_pro_20x::gpt-6-astra';assert.throws(()=>mergeSubscriptionEstimates(d,crossVendor),/invalid anchor point/);
 });
+
+test('anchor-pool supports lowCache workloadMix and enforces anchor workload matching',()=>{
+ const d={
+  conventions:{monthWeeks:4,anthropicTokenMix:{cache:.97,cacheWrite:.025,output:.005},standardTokenMix:{cache:.97,input:.025,output:.005},lowCacheTokenMix:{cache:.85,input:.145,output:.005}},
+  models:[
+   {id:'gemini-4-neon',name:'Gemini 4 Neon',maker:'Google'},
+   {id:'gemini-4-carbon',name:'Gemini 4 Carbon',maker:'Google'},
+   {id:'gpt-6.1-sol',name:'GPT-6.1 Sol',maker:'OpenAI'},
+  ],
+  points:[
+   {id:'google_ai_pro_us::gemini-4-neon',plan_id:'google_ai_pro_us',model:'gemini-4-neon',vendor:'Google',billing:'subscription',workload:'lowCache',monthly_tokens:536e6,real_usd_per_mtok:.037294776,data_date:'2026-11-20'},
+   {id:'google_ai_pro_us::gemini-4-argon',plan_id:'google_ai_pro_us',model:'gpt-6.1-sol',vendor:'Google',billing:'subscription',workload:'standard',monthly_tokens:100e6,real_usd_per_mtok:.1,data_date:'2026-10-16'},
+  ],
+  mappings:[],configurations:[],supersededPoints:[],
+ };
+ const m={
+  version:1,checkedAt:'2026-11-22',evidenceFiles:['evidence-2026-11-22.json'],archivedPointIds:[],
+  entries:[
+   {id:'estimate:ultra5x:neon',planId:'google_ai_ultra_5x_estimate',upstreamPlanIds:['google_ai_ultra_5x_us'],name:'Google AI Ultra 5x',model:'gemini-4-neon',monthlyUsd:99.99,confidence:'low',sampleDate:'2026-11-20',sampleFrom:'Google AI Pro · gemini-4-neon',calibration:{meter:'anchor-pool',anchorMode:'same-token-carry',anchorPointId:'google_ai_pro_us::gemini-4-neon',planRatio:5,workloadMix:'lowCache'},rates:{cache:.15,input:3,output:15},sources:[{label:'Issue 248',url:'https://github.com/Fei2411/real-api-pricing/issues/248'}],note:{en:'Low-cache carry.',zh:'低缓存沿用。'}},
+   {id:'estimate:ultra5x:carbon',planId:'google_ai_ultra_5x_estimate',upstreamPlanIds:['google_ai_ultra_5x_us'],name:'Google AI Ultra 5x',model:'gemini-4-carbon',monthlyUsd:99.99,confidence:'low',sampleDate:'2026-11-20',sampleFrom:'Google AI Pro · gemini-4-neon',calibration:{meter:'anchor-pool',anchorMode:'worth-ratio',anchorPointId:'google_ai_pro_us::gemini-4-neon',planRatio:5,workloadMix:'lowCache',anchorRates:{cache:.15,input:3,output:15}},rates:{cache:.2,input:4,output:20},sources:[{label:'Issue 248',url:'https://github.com/Fei2411/real-api-pricing/issues/248'}],note:{en:'Low-cache worth ratio.',zh:'低缓存价值折算。'}},
+  ],
+ };
+ const res=mergeSubscriptionEstimates(d,m);
+ const neon5=res.points.find(p=>p.id==='estimate:ultra5x:neon');
+ const carbon5=res.points.find(p=>p.id==='estimate:ultra5x:carbon');
+ assert.equal(neon5.workload,'lowCache');
+ assert.equal(neon5.monthly_tokens,536e6*5);
+ assert.ok(Math.abs(neon5.list_blended_usd_per_mtok-.6375)<1e-12);
+ assert.equal(carbon5.workload,'lowCache');
+ assert.ok(Math.abs(carbon5.monthly_yi - 20.1)<1e-9);
+ assert.match(carbon5.note_en,/85%\/14\.5%\/0\.5% low-cache mix/);
+ const badAnchorWorkload=clone(m);badAnchorWorkload.entries[0].calibration.anchorPointId='google_ai_pro_us::gemini-4-argon';
+ assert.throws(()=>mergeSubscriptionEstimates(d,badAnchorWorkload),/anchor workload mismatch/);
+ const badWrite=clone(m);badWrite.entries[0].freshInputBilling='cache-write';badWrite.entries[0].rates.cacheWrite=3.75;
+ assert.throws(()=>mergeSubscriptionEstimates(d,badWrite),/invalid freshInputBilling/);
+});
+
+test('direct-weekly supports channel, promoUntil, exact math and upstream coexistence guard',()=>{
+ const d={
+  conventions:{monthWeeks:4,anthropicTokenMix:{cache:.97,cacheWrite:.025,output:.005},standardTokenMix:{cache:.97,input:.025,output:.005},lowCacheTokenMix:{cache:.85,input:.145,output:.005}},
+  models:[{id:'gemini-4-carbon',name:'Gemini 4 Carbon',maker:'Google'}],
+  points:[],mappings:[],configurations:[],supersededPoints:[],
+ };
+ const m={
+  version:1,checkedAt:'2026-11-22',evidenceFiles:['evidence-2026-11-22.json'],archivedPointIds:[],
+  entries:[
+   {id:'estimate:devin-max:gemini-4-carbon',planId:'devin_max_estimate',upstreamPlanIds:['devin_max'],name:'Devin Max',channel:'Devin',model:'gemini-4-carbon',monthlyUsd:200,confidence:'medium',sampleDate:'2026-11-21',promoUntil:'2026-11-30',sampleFrom:'Devin Max · gemini-4-carbon',calibration:{meter:'direct-weekly',weeklyWorthUsd:200,monthWeeks:4,workloadMix:'lowCache'},rates:{cache:.1,input:2,output:10},sources:[{label:'Issue 251',url:'https://github.com/Fei2411/real-api-pricing/issues/251'}],note:{en:'Maintainer sample.',zh:'维护者样本。'}},
+  ],
+ };
+ const res=mergeSubscriptionEstimates(d,m), p=res.points[0];
+ assert.equal(p.channel,'Devin');assert.equal(p.vendor,'Google');
+ assert.equal(p.promo_until,'2026-11-30');assert.equal(p.workload,'lowCache');
+ assert.ok(Math.abs(p.list_blended_usd_per_mtok-.425)<1e-12);
+ assert.ok(Math.abs(p.monthly_yi-(800/.425/100))<1e-9);
+ assert.ok(Math.abs(p.real_usd_per_mtok-(200/(800/.425)))<1e-12);
+ const badPromo=clone(m);badPromo.entries[0].promoUntil='2026-13-01';assert.throws(()=>mergeSubscriptionEstimates(d,badPromo),/invalid entry provenance/);
+ const dup=clone(d);dup.points.push({id:'devin_max::gemini-4-carbon',plan_id:'devin_max',model:'gemini-4-carbon',data_date:'2026-11-21'});
+ assert.throws(()=>mergeSubscriptionEstimates(dup,m),/upstream plan sample requires review/);
+});

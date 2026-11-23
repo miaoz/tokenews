@@ -543,6 +543,9 @@
       "monthlyCreditsUsd": 100.0,
       "checkedAt": "2026-11-04",
       "id": "command_code_goat::ling-3.1-flash-1019",
+      "replaces": [
+        "command_code_goat::ling-3.1-flash-1019"
+      ],
       "identityNote": {
         "en": "The November 3 official announcement replaces the earlier four-day free promotion with paid plan credits. The 1019 endpoint is explicit.",
         "zh": "11 月 3 日官方公告已将此前四天免费活动切换为付费套餐信用额度，明确使用 1019 端点。"
@@ -3253,18 +3256,18 @@
       "model": "glm-5.3",
       "endpoint": "glm-5.3",
       "source": "https://opencode.ai/v2/docs/console/go/",
-      "identitySource": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://opencode.ai/inference/go/v1/models",
       "rates": {
         "input": 1.4,
         "output": 4.4,
         "cache": 0.26
       },
-      "monthlyCreditsUsd": 15.0,
+      "monthlyCreditsUsd": 200.0,
       "identityNote": {
-        "en": "Current official Go table and endpoint list explicitly name this model.",
-        "zh": "现行官方 Go 套餐表和端点列表明确列出该型号。"
+        "en": "Standing $200/month Go limit verified live after the November 22 promotional boost ended; matches the official models API and Go documentation.",
+        "zh": "11 月 22 日促销结束后实测核验恢复为 Go 常设 $200 月额度，与官方 models API 及 Go 文档一致。"
       },
-      "checkedAt": "2026-11-04",
+      "checkedAt": "2026-11-22",
       "id": "opencode_go::glm-5.3",
       "replaces": [
         "opencode_go::glm-5.3"
@@ -3466,18 +3469,18 @@
       "model": "glm-5.3",
       "endpoint": "glm-5.3",
       "source": "https://opencode.ai/v2/docs/console/go/",
-      "identitySource": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://opencode.ai/inference/go/v1/models",
       "rates": {
         "input": 1.4,
         "output": 4.4,
         "cache": 0.26
       },
-      "monthlyCreditsUsd": 120.0,
+      "monthlyCreditsUsd": 400.0,
       "identityNote": {
-        "en": "Current official Go table and endpoint list explicitly name this model.",
-        "zh": "现行官方 Go 套餐表和端点列表明确列出该型号。"
+        "en": "Standing $400/month Go Plus limit verified live after the November 22 promotional boost ended; matches the official models API and Go documentation.",
+        "zh": "11 月 22 日促销结束后实测核验恢复为 Go Plus 常设 $400 月额度，与官方 models API 及 Go 文档一致。"
       },
-      "checkedAt": "2026-11-04",
+      "checkedAt": "2026-11-22",
       "id": "opencode_go_plus::glm-5.3"
     },
     {
@@ -3655,18 +3658,18 @@
       "model": "glm-5.3",
       "endpoint": "glm-5.3",
       "source": "https://opencode.ai/v2/docs/console/go/",
-      "identitySource": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://opencode.ai/inference/go/v1/models",
       "rates": {
         "input": 1.4,
         "output": 4.4,
         "cache": 0.26
       },
-      "monthlyCreditsUsd": 20.0,
+      "monthlyCreditsUsd": 205.0,
       "identityNote": {
-        "en": "Current official Go table and endpoint list explicitly name this model.",
-        "zh": "现行官方 Go 套餐表和端点列表明确列出该型号。"
+        "en": "Standing $205/month Go Teams limit verified live after the November 22 promotional boost ended; matches the official models API.",
+        "zh": "11 月 22 日促销结束后实测核验恢复为 Go Teams 常设 $205 月额度，与官方 models API 一致。"
       },
-      "checkedAt": "2026-11-04",
+      "checkedAt": "2026-11-22",
       "id": "opencode_go_teams::glm-5.3"
     },
     {
@@ -4411,6 +4414,588 @@
         "en": "The official model registry and current plan table confirm this exact Google release; benchmark scores remain model references.",
         "zh": "官方模型目录与现行套餐表交叉核对该 Google 正式型号；榜单分数仍为模型参考成绩。"
       }
+    },
+    {
+      "plan": "opencode_go_plus",
+      "model": "qwen4-max",
+      "endpoint": "qwen4-max",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://opencode.ai/inference/go/v1/models",
+      "rates": {
+        "input": 1.5,
+        "output": 4.5,
+        "cache": 0.075,
+        "cacheWrite": 1.875
+      },
+      "freshInputBilling": "cache-write",
+      "monthlyCreditsUsd": 60,
+      "checkedAt": "2026-11-22",
+      "id": "opencode_go_plus::qwen4-max",
+      "identityNote": {
+        "en": "Official OpenCode Go models API and console documentation list qwen4-max at $60/month on Go Plus with explicit 5m cache-write billing.",
+        "zh": "OpenCode Go 官方 models API 与文档列出 Go Plus 下 qwen4-max 月信用额度 $60，并按 5 分钟显式缓存写入计费。"
+      }
+    },
+    {
+      "plan": "opencode_go_teams",
+      "model": "qwen4-max",
+      "endpoint": "qwen4-max",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://opencode.ai/inference/go/v1/models",
+      "rates": {
+        "input": 1.5,
+        "output": 4.5,
+        "cache": 0.075,
+        "cacheWrite": 1.875
+      },
+      "freshInputBilling": "cache-write",
+      "monthlyCreditsUsd": 20,
+      "checkedAt": "2026-11-22",
+      "id": "opencode_go_teams::qwen4-max",
+      "identityNote": {
+        "en": "Official OpenCode Go models API lists qwen4-max at $20/month per member on Go Teams with explicit 5m cache-write billing.",
+        "zh": "OpenCode Go 官方 models API 列出 Go Teams 下 qwen4-max 每成员月信用额度 $20，按 5 分钟显式缓存写入计费。"
+      }
+    },
+    {
+      "plan": "command_code_go",
+      "model": "qwen4-max",
+      "endpoint": "Qwen/Qwen4-Max",
+      "source": "https://commandcode.ai/docs/plans/go",
+      "identitySource": "https://commandcode.ai/docs/resources/pricing-limits",
+      "rates": {
+        "input": 1.5,
+        "output": 4.5,
+        "cache": 0.075,
+        "cacheWrite": 1.875
+      },
+      "freshInputBilling": "cache-write",
+      "monthlyCreditsUsd": 6,
+      "checkedAt": "2026-11-22",
+      "id": "command_code_go::qwen4-max",
+      "identityNote": {
+        "en": "Command Code pricing-limits and Go plan table list Qwen 4 Max with $6/month credits and 5m cache-write billing.",
+        "zh": "Command Code 定价限额表与 Go 套餐页列出 Qwen 4 Max 月信用额度 $6，并按 5 分钟缓存写入计费。"
+      }
+    },
+    {
+      "plan": "command_code_pro",
+      "model": "qwen4-max",
+      "endpoint": "Qwen/Qwen4-Max",
+      "source": "https://commandcode.ai/docs/plans/pro",
+      "identitySource": "https://commandcode.ai/docs/resources/pricing-limits",
+      "rates": {
+        "input": 1.5,
+        "output": 4.5,
+        "cache": 0.075,
+        "cacheWrite": 1.875
+      },
+      "freshInputBilling": "cache-write",
+      "monthlyCreditsUsd": 25,
+      "checkedAt": "2026-11-22",
+      "id": "command_code_pro::qwen4-max",
+      "identityNote": {
+        "en": "Command Code pricing-limits and Pro plan table list Qwen 4 Max with $25/month proportional allowance and 5m cache-write billing.",
+        "zh": "Command Code 定价限额表与 Pro 套餐页列出 Qwen 4 Max 月额度上限 $25，按比例共享总池并按 5 分钟缓存写入计费。"
+      }
+    },
+    {
+      "plan": "command_code_max_10",
+      "model": "qwen4-max",
+      "endpoint": "Qwen/Qwen4-Max",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/docs/resources/pricing-limits",
+      "rates": {
+        "input": 1.5,
+        "output": 4.5,
+        "cache": 0.075,
+        "cacheWrite": 1.875
+      },
+      "freshInputBilling": "cache-write",
+      "monthlyCreditsUsd": 150,
+      "checkedAt": "2026-11-22",
+      "id": "command_code_max_10::qwen4-max",
+      "identityNote": {
+        "en": "Command Code Max page confirms Qwen 4 Max uses the full $150/month shared pool on Max 10× with 5m cache-write billing.",
+        "zh": "Command Code Max 页确认 Qwen 4 Max 在 Max 10× 享有全额 $150 共享月额度，按 5 分钟缓存写入计费。"
+      }
+    },
+    {
+      "plan": "command_code_max_20",
+      "model": "qwen4-max",
+      "endpoint": "Qwen/Qwen4-Max",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/docs/resources/pricing-limits",
+      "rates": {
+        "input": 1.5,
+        "output": 4.5,
+        "cache": 0.075,
+        "cacheWrite": 1.875
+      },
+      "freshInputBilling": "cache-write",
+      "monthlyCreditsUsd": 300,
+      "checkedAt": "2026-11-22",
+      "id": "command_code_max_20::qwen4-max",
+      "identityNote": {
+        "en": "Command Code Max page confirms Qwen 4 Max uses the full $300/month shared pool on Max 20× with 5m cache-write billing.",
+        "zh": "Command Code Max 页确认 Qwen 4 Max 在 Max 20× 享有全额 $300 共享月额度，按 5 分钟缓存写入计费。"
+      }
+    },
+    {
+      "plan": "opencode_go_plus",
+      "model": "hy4",
+      "endpoint": "hy4",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://opencode.ai/inference/go/v1/models",
+      "rates": {
+        "input": 0.834,
+        "output": 2.501,
+        "cache": 0.042
+      },
+      "monthlyCreditsUsd": 240,
+      "checkedAt": "2026-11-22",
+      "id": "opencode_go_plus::hy4",
+      "identityNote": {
+        "en": "Official OpenCode Go models API lists non-preview hy4 at $240/month on Go Plus ($0.834/$2.501/$0.042).",
+        "zh": "OpenCode Go 官方 models API 列出正式版 hy4 在 Go Plus 月额度 $240（$0.834/$2.501/$0.042）。"
+      }
+    },
+    {
+      "plan": "opencode_go_teams",
+      "model": "hy4",
+      "endpoint": "hy4",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://opencode.ai/inference/go/v1/models",
+      "rates": {
+        "input": 0.834,
+        "output": 2.501,
+        "cache": 0.042
+      },
+      "monthlyCreditsUsd": 65,
+      "checkedAt": "2026-11-22",
+      "id": "opencode_go_teams::hy4",
+      "identityNote": {
+        "en": "Official OpenCode Go models API lists non-preview hy4 at $65/month per member on Go Teams.",
+        "zh": "OpenCode Go 官方 models API 列出正式版 hy4 在 Go Teams 每成员月额度 $65。"
+      }
+    },
+    {
+      "plan": "command_code_go",
+      "model": "hy4",
+      "endpoint": "tencent/hy4",
+      "source": "https://commandcode.ai/docs/plans/go",
+      "identitySource": "https://commandcode.ai/docs/resources/pricing-limits",
+      "rates": {
+        "input": 0.834,
+        "output": 2.501,
+        "cache": 0.042
+      },
+      "monthlyCreditsUsd": 6,
+      "checkedAt": "2026-11-22",
+      "id": "command_code_go::hy4",
+      "identityNote": {
+        "en": "Command Code pricing-limits table lists tencent/hy4 with $6/month credits on Go.",
+        "zh": "Command Code 定价限额表列出 tencent/hy4 在 Go 套餐月信用额度 $6。"
+      }
+    },
+    {
+      "plan": "command_code_pro",
+      "model": "hy4",
+      "endpoint": "tencent/hy4",
+      "source": "https://commandcode.ai/docs/plans/pro",
+      "identitySource": "https://commandcode.ai/docs/resources/pricing-limits",
+      "rates": {
+        "input": 0.834,
+        "output": 2.501,
+        "cache": 0.042
+      },
+      "monthlyCreditsUsd": 30,
+      "checkedAt": "2026-11-22",
+      "id": "command_code_pro::hy4",
+      "identityNote": {
+        "en": "Command Code pricing-limits table lists tencent/hy4 with $30/month proportional allowance on Pro.",
+        "zh": "Command Code 定价限额表列出 tencent/hy4 在 Pro 套餐月额度上限 $30。"
+      }
+    },
+    {
+      "plan": "command_code_max_10",
+      "model": "hy4",
+      "endpoint": "tencent/hy4",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/docs/resources/pricing-limits",
+      "rates": {
+        "input": 0.834,
+        "output": 2.501,
+        "cache": 0.042
+      },
+      "monthlyCreditsUsd": 150,
+      "checkedAt": "2026-11-22",
+      "id": "command_code_max_10::hy4",
+      "identityNote": {
+        "en": "Command Code Max page confirms Tencent Hy4 uses the full $150/month shared pool on Max 10×.",
+        "zh": "Command Code Max 页确认 Tencent Hy4 在 Max 10× 享有全额 $150 共享月额度。"
+      }
+    },
+    {
+      "plan": "command_code_max_20",
+      "model": "hy4",
+      "endpoint": "tencent/hy4",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/docs/resources/pricing-limits",
+      "rates": {
+        "input": 0.834,
+        "output": 2.501,
+        "cache": 0.042
+      },
+      "monthlyCreditsUsd": 300,
+      "checkedAt": "2026-11-22",
+      "id": "command_code_max_20::hy4",
+      "identityNote": {
+        "en": "Command Code Max page confirms Tencent Hy4 uses the full $300/month shared pool on Max 20×.",
+        "zh": "Command Code Max 页确认 Tencent Hy4 在 Max 20× 享有全额 $300 共享月额度。"
+      }
+    },
+    {
+      "plan": "ollama_pro_credits",
+      "model": "hy4",
+      "endpoint": "hy4",
+      "source": "https://ollama.com/pricing",
+      "identitySource": "https://ollama.com/pricing",
+      "rates": {
+        "input": 0.834,
+        "output": 2.501,
+        "cache": 0.042
+      },
+      "monthlyCreditsUsd": 60,
+      "checkedAt": "2026-11-22",
+      "id": "ollama_pro_credits::hy4",
+      "identityNote": {
+        "en": "Official Ollama Cloud pricing table lists hy4 at $0.834/$0.042/$2.501 per MTok against the $60/month Pro credit pool.",
+        "zh": "Ollama Cloud 官方定价表列出 hy4（$0.834/$0.042/$2.501），共享 Pro 每月 $60 信用额度。"
+      }
+    },
+    {
+      "plan": "ollama_max_credits",
+      "model": "hy4",
+      "endpoint": "hy4",
+      "source": "https://ollama.com/pricing",
+      "identitySource": "https://ollama.com/pricing",
+      "rates": {
+        "input": 0.834,
+        "output": 2.501,
+        "cache": 0.042
+      },
+      "monthlyCreditsUsd": 300,
+      "checkedAt": "2026-11-22",
+      "id": "ollama_max_credits::hy4",
+      "identityNote": {
+        "en": "Official Ollama Cloud pricing table lists hy4 at $0.834/$0.042/$2.501 per MTok against the $300/month Max credit pool.",
+        "zh": "Ollama Cloud 官方定价表列出 hy4（$0.834/$0.042/$2.501），共享 Max 每月 $300 信用额度。"
+      }
+    },
+    {
+      "plan": "ollama_team_credits",
+      "model": "hy4",
+      "endpoint": "hy4",
+      "source": "https://ollama.com/pricing",
+      "identitySource": "https://ollama.com/pricing",
+      "rates": {
+        "input": 0.834,
+        "output": 2.501,
+        "cache": 0.042
+      },
+      "monthlyCreditsUsd": 1000,
+      "checkedAt": "2026-11-22",
+      "id": "ollama_team_credits::hy4",
+      "identityNote": {
+        "en": "Official Ollama Cloud pricing table lists hy4 at $0.834/$0.042/$2.501 per MTok against the $1,000/month team-shared credit pool.",
+        "zh": "Ollama Cloud 官方定价表列出 hy4（$0.834/$0.042/$2.501），共享 Team 整团队每月 $1,000 信用额度。"
+      }
+    },
+    {
+      "plan": "command_code_go",
+      "model": "hy4-flash",
+      "endpoint": "tencent/hy4-flash",
+      "source": "https://commandcode.ai/docs/plans/go",
+      "identitySource": "https://commandcode.ai/docs/resources/pricing-limits",
+      "rates": {
+        "input": 0.07,
+        "output": 0.281,
+        "cache": 0.003
+      },
+      "monthlyCreditsUsd": 6,
+      "checkedAt": "2026-11-22",
+      "id": "command_code_go::hy4-flash",
+      "identityNote": {
+        "en": "Command Code pricing-limits table lists tencent/hy4-flash with $6/month credits on Go ($0.07/$0.281/$0.003).",
+        "zh": "Command Code 定价限额表列出 tencent/hy4-flash 在 Go 套餐月信用额度 $6（$0.07/$0.281/$0.003）。"
+      }
+    },
+    {
+      "plan": "command_code_pro",
+      "model": "hy4-flash",
+      "endpoint": "tencent/hy4-flash",
+      "source": "https://commandcode.ai/docs/plans/pro",
+      "identitySource": "https://commandcode.ai/docs/resources/pricing-limits",
+      "rates": {
+        "input": 0.07,
+        "output": 0.281,
+        "cache": 0.003
+      },
+      "monthlyCreditsUsd": 25,
+      "checkedAt": "2026-11-22",
+      "id": "command_code_pro::hy4-flash",
+      "identityNote": {
+        "en": "Command Code pricing-limits table lists tencent/hy4-flash with $25/month proportional allowance on Pro.",
+        "zh": "Command Code 定价限额表列出 tencent/hy4-flash 在 Pro 套餐月额度上限 $25。"
+      }
+    },
+    {
+      "plan": "command_code_max_10",
+      "model": "hy4-flash",
+      "endpoint": "tencent/hy4-flash",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/docs/resources/pricing-limits",
+      "rates": {
+        "input": 0.07,
+        "output": 0.281,
+        "cache": 0.003
+      },
+      "monthlyCreditsUsd": 150,
+      "checkedAt": "2026-11-22",
+      "id": "command_code_max_10::hy4-flash",
+      "identityNote": {
+        "en": "Command Code Max page confirms Tencent Hy4 Flash uses the full $150/month shared pool on Max 10×.",
+        "zh": "Command Code Max 页确认 Tencent Hy4 Flash 在 Max 10× 享有全额 $150 共享月额度。"
+      }
+    },
+    {
+      "plan": "command_code_max_20",
+      "model": "hy4-flash",
+      "endpoint": "tencent/hy4-flash",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/docs/resources/pricing-limits",
+      "rates": {
+        "input": 0.07,
+        "output": 0.281,
+        "cache": 0.003
+      },
+      "monthlyCreditsUsd": 300,
+      "checkedAt": "2026-11-22",
+      "id": "command_code_max_20::hy4-flash",
+      "identityNote": {
+        "en": "Command Code Max page confirms Tencent Hy4 Flash uses the full $300/month shared pool on Max 20×.",
+        "zh": "Command Code Max 页确认 Tencent Hy4 Flash 在 Max 20× 享有全额 $300 共享月额度。"
+      }
+    },
+    {
+      "plan": "command_code_go",
+      "model": "inkling-2-mini",
+      "endpoint": "thinkingmachines/inkling-2-mini",
+      "source": "https://commandcode.ai/docs/plans/go",
+      "identitySource": "https://commandcode.ai/docs/resources/pricing-limits",
+      "rates": {
+        "input": 0.075,
+        "output": 0.3,
+        "cache": 0.015
+      },
+      "monthlyCreditsUsd": 6,
+      "checkedAt": "2026-11-22",
+      "id": "command_code_go::inkling-2-mini",
+      "identityNote": {
+        "en": "Command Code Go plan and pricing-limits tables list Inkling 2 Mini at $0.075/$0.30/$0.015 per MTok with $6/month credits.",
+        "zh": "Command Code Go 套餐与定价限额表列出 Inkling 2 Mini（$0.075/$0.30/$0.015），月信用额度 $6。"
+      }
+    },
+    {
+      "plan": "command_code_goat",
+      "model": "inkling-2-mini",
+      "endpoint": "thinkingmachines/inkling-2-mini",
+      "source": "https://commandcode.ai/docs/plans/goat",
+      "identitySource": "https://commandcode.ai/docs/resources/pricing-limits",
+      "rates": {
+        "input": 0.075,
+        "output": 0.3,
+        "cache": 0.015
+      },
+      "monthlyCreditsUsd": 15,
+      "checkedAt": "2026-11-22",
+      "id": "command_code_goat::inkling-2-mini",
+      "identityNote": {
+        "en": "Command Code GOAT plan and pricing-limits tables list Inkling 2 Mini with $15/month proportional allowance ($0.075/$0.30/$0.015).",
+        "zh": "Command Code GOAT 套餐与定价限额表列出 Inkling 2 Mini 月额度上限 $15（$0.075/$0.30/$0.015）。"
+      }
+    },
+    {
+      "plan": "command_code_pro",
+      "model": "inkling-2-mini",
+      "endpoint": "thinkingmachines/inkling-2-mini",
+      "source": "https://commandcode.ai/docs/plans/pro",
+      "identitySource": "https://commandcode.ai/docs/resources/pricing-limits",
+      "rates": {
+        "input": 0.075,
+        "output": 0.3,
+        "cache": 0.015
+      },
+      "monthlyCreditsUsd": 25,
+      "checkedAt": "2026-11-22",
+      "id": "command_code_pro::inkling-2-mini",
+      "identityNote": {
+        "en": "Command Code Pro plan and pricing-limits tables list Inkling 2 Mini with $25/month proportional allowance.",
+        "zh": "Command Code Pro 套餐与定价限额表列出 Inkling 2 Mini 月额度上限 $25。"
+      }
+    },
+    {
+      "plan": "command_code_max_10",
+      "model": "inkling-2-mini",
+      "endpoint": "thinkingmachines/inkling-2-mini",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/docs/resources/pricing-limits",
+      "rates": {
+        "input": 0.075,
+        "output": 0.3,
+        "cache": 0.015
+      },
+      "monthlyCreditsUsd": 150,
+      "checkedAt": "2026-11-22",
+      "id": "command_code_max_10::inkling-2-mini",
+      "identityNote": {
+        "en": "Command Code Max page confirms Inkling 2 Mini uses the full $150/month shared pool on Max 10×.",
+        "zh": "Command Code Max 页确认 Inkling 2 Mini 在 Max 10× 享有全额 $150 共享月额度。"
+      }
+    },
+    {
+      "plan": "command_code_max_20",
+      "model": "inkling-2-mini",
+      "endpoint": "thinkingmachines/inkling-2-mini",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/docs/resources/pricing-limits",
+      "rates": {
+        "input": 0.075,
+        "output": 0.3,
+        "cache": 0.015
+      },
+      "monthlyCreditsUsd": 300,
+      "checkedAt": "2026-11-22",
+      "id": "command_code_max_20::inkling-2-mini",
+      "identityNote": {
+        "en": "Command Code Max page confirms Inkling 2 Mini uses the full $300/month shared pool on Max 20×.",
+        "zh": "Command Code Max 页确认 Inkling 2 Mini 在 Max 20× 享有全额 $300 共享月额度。"
+      }
+    },
+    {
+      "plan": "opencode_go",
+      "model": "longcat-2.5",
+      "endpoint": "longcat-2.5",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://opencode.ai/inference/go/v1/models",
+      "rates": {
+        "input": 0.3,
+        "output": 1.2,
+        "cache": 0.006
+      },
+      "monthlyCreditsUsd": 60,
+      "checkedAt": "2026-11-22",
+      "id": "opencode_go::longcat-2.5",
+      "identityNote": {
+        "en": "Official OpenCode Go models API lists longcat-2.5 at $60/month on Go ($0.30 input / $1.20 output / $0.006 cache read; cache.write = $0). Docs state China hosting requiring Global regions.",
+        "zh": "OpenCode Go 官方 models API 列出 longcat-2.5 在 Go 月额度 $60（输入 $0.30 / 输出 $1.20 / 缓存读 $0.006，缓存写 $0）；文档注明中国托管并需开启 Global 区域。"
+      }
+    },
+    {
+      "plan": "opencode_go_plus",
+      "model": "longcat-2.5",
+      "endpoint": "longcat-2.5",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://opencode.ai/inference/go/v1/models",
+      "rates": {
+        "input": 0.3,
+        "output": 1.2,
+        "cache": 0.006
+      },
+      "monthlyCreditsUsd": 240,
+      "checkedAt": "2026-11-22",
+      "id": "opencode_go_plus::longcat-2.5",
+      "identityNote": {
+        "en": "Official OpenCode Go models API lists longcat-2.5 at $240/month on Go Plus (cache.write = $0; Global regions required).",
+        "zh": "OpenCode Go 官方 models API 列出 longcat-2.5 在 Go Plus 月额度 $240（缓存写 $0，需开启 Global 区域）。"
+      }
+    },
+    {
+      "plan": "opencode_go_teams",
+      "model": "longcat-2.5",
+      "endpoint": "longcat-2.5",
+      "source": "https://opencode.ai/v2/docs/console/go/",
+      "identitySource": "https://opencode.ai/inference/go/v1/models",
+      "rates": {
+        "input": 0.3,
+        "output": 1.2,
+        "cache": 0.006
+      },
+      "monthlyCreditsUsd": 65,
+      "checkedAt": "2026-11-22",
+      "id": "opencode_go_teams::longcat-2.5",
+      "identityNote": {
+        "en": "Official OpenCode Go models API lists longcat-2.5 at $65/month per member on Go Teams (cache.write = $0; Global regions required).",
+        "zh": "OpenCode Go 官方 models API 列出 longcat-2.5 在 Go Teams 每成员月额度 $65（缓存写 $0，需开启 Global 区域）。"
+      }
+    },
+    {
+      "plan": "command_code_pro",
+      "model": "deepseek-v4.1-flash-ultrafast",
+      "endpoint": "deepseek/deepseek-v4.1-flash-ultrafast",
+      "source": "https://commandcode.ai/docs/plans/pro",
+      "identitySource": "https://commandcode.ai/docs/resources/pricing-limits",
+      "rates": {
+        "input": 2.4,
+        "output": 9.6,
+        "cache": 0.048
+      },
+      "monthlyCreditsUsd": 30,
+      "checkedAt": "2026-11-22",
+      "id": "command_code_pro::deepseek-v4.1-flash-ultrafast",
+      "identityNote": {
+        "en": "Command Code pricing-limits table lists deepseek-v4.1-flash-ultrafast at $30/month proportional allowance on Pro ($2.40/$9.60/$0.048); excluded from Go.",
+        "zh": "Command Code 定价限额表列出 deepseek-v4.1-flash-ultrafast 在 Pro 套餐月额度上限 $30（$2.40/$9.60/$0.048）；不开放给 Go。"
+      }
+    },
+    {
+      "plan": "command_code_max_10",
+      "model": "deepseek-v4.1-flash-ultrafast",
+      "endpoint": "deepseek/deepseek-v4.1-flash-ultrafast",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/docs/resources/pricing-limits",
+      "rates": {
+        "input": 2.4,
+        "output": 9.6,
+        "cache": 0.048
+      },
+      "monthlyCreditsUsd": 150,
+      "checkedAt": "2026-11-22",
+      "id": "command_code_max_10::deepseek-v4.1-flash-ultrafast",
+      "identityNote": {
+        "en": "Command Code Max page confirms DeepSeek V4.1 Flash Ultrafast uses the full $150/month shared pool on Max 10×.",
+        "zh": "Command Code Max 页确认 DeepSeek V4.1 Flash Ultrafast 在 Max 10× 享有全额 $150 共享月额度。"
+      }
+    },
+    {
+      "plan": "command_code_max_20",
+      "model": "deepseek-v4.1-flash-ultrafast",
+      "endpoint": "deepseek/deepseek-v4.1-flash-ultrafast",
+      "source": "https://commandcode.ai/docs/plans/max",
+      "identitySource": "https://commandcode.ai/docs/resources/pricing-limits",
+      "rates": {
+        "input": 2.4,
+        "output": 9.6,
+        "cache": 0.048
+      },
+      "monthlyCreditsUsd": 300,
+      "checkedAt": "2026-11-22",
+      "id": "command_code_max_20::deepseek-v4.1-flash-ultrafast",
+      "identityNote": {
+        "en": "Command Code Max page confirms DeepSeek V4.1 Flash Ultrafast uses the full $300/month shared pool on Max 20×.",
+        "zh": "Command Code Max 页确认 DeepSeek V4.1 Flash Ultrafast 在 Max 20× 享有全额 $300 共享月额度。"
+      }
     }
   ],
   "legacyPlanIds": [
@@ -4679,6 +5264,7 @@
     "evidence-2026-11-13.json",
     "evidence-2026-11-14.json",
     "evidence-2026-11-15.json",
-    "evidence-2026-11-18.json"
+    "evidence-2026-11-18.json",
+    "evidence-2026-11-22.json"
   ]
 }

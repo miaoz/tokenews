@@ -1042,6 +1042,261 @@
         "en": "These are text-token inference rates for qwen3.8-omni-flash, not the separate realtime model or speech output. Implicit caching is supported. Promotions and free quotas are excluded.",
         "zh": "qwen3.8-omni-flash 的文本 token 推理价，不适用于独立 realtime 型号或语音输出。支持隐式缓存；未纳入临时优惠及免费额度。"
       }
+    },
+    {
+      "id": "qwen4-max",
+      "source": "https://www.alibabacloud.com/help/en/model-studio/qwen4-max",
+      "additionalSources": [
+        "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+        "https://platform.qianwenai.com/docs/developer-guides/getting-started/model-prices"
+      ],
+      "checkedAt": "2026-11-22",
+      "defaultVariant": "singapore-implicit",
+      "variants": [
+        {
+          "id": "singapore-implicit",
+          "label": {
+            "en": "Standard · international · implicit cache",
+            "zh": "标准档 · 国际 · 隐式缓存"
+          },
+          "currency": "USD",
+          "region": "SG",
+          "serviceTier": "standard",
+          "context": {
+            "min": 1,
+            "max": 1000000
+          },
+          "rates": {
+            "input": 1.5,
+            "cachedInput": 0.075,
+            "cacheWrite": 1.5,
+            "output": 4.5
+          },
+          "notes": {
+            "en": "Implicit cache creation uses the ordinary input rate ($1.50/MTok); cache hits are billed at $0.075/MTok and are not guaranteed. Thinking and non-thinking modes share the same token rates.",
+            "zh": "隐式缓存创建按普通输入价计费（$1.50/MTok），命中读取 $0.075/MTok，但不保证命中；思考与非思考模式同价。"
+          }
+        },
+        {
+          "id": "singapore-explicit-5m",
+          "label": {
+            "en": "Standard · international · explicit cache (5m)",
+            "zh": "标准档 · 国际 · 显式缓存（5 分钟）"
+          },
+          "currency": "USD",
+          "region": "SG",
+          "serviceTier": "standard",
+          "context": {
+            "min": 1,
+            "max": 1000000
+          },
+          "rates": {
+            "input": 1.5,
+            "cachedInput": 0.075,
+            "cacheWrite": 1.875,
+            "output": 4.5
+          },
+          "notes": {
+            "en": "Explicit 5-minute TTL context cache creation is $1.875/MTok and cache hit read is $0.075/MTok.",
+            "zh": "5 分钟显式缓存创建价 $1.875/MTok，命中读取 $0.075/MTok。"
+          }
+        },
+        {
+          "id": "singapore-explicit-1h",
+          "label": {
+            "en": "Standard · international · explicit cache (1h)",
+            "zh": "标准档 · 国际 · 显式缓存（1 小时）"
+          },
+          "currency": "USD",
+          "region": "SG",
+          "serviceTier": "standard",
+          "context": {
+            "min": 1,
+            "max": 1000000
+          },
+          "rates": {
+            "input": 1.5,
+            "cachedInput": 0.075,
+            "cacheWrite": 3,
+            "output": 4.5
+          },
+          "notes": {
+            "en": "Explicit 1-hour TTL context cache creation is $3.00/MTok and cache hit read is $0.075/MTok.",
+            "zh": "1 小时显式缓存创建价 $3.00/MTok，命中读取 $0.075/MTok。"
+          }
+        },
+        {
+          "id": "beijing-implicit",
+          "label": {
+            "en": "Standard · Beijing / Global · implicit cache",
+            "zh": "标准档 · 北京 / Global · 隐式缓存"
+          },
+          "currency": "USD",
+          "region": "CN-Beijing",
+          "serviceTier": "standard",
+          "context": {
+            "min": 1,
+            "max": 1000000
+          },
+          "rates": {
+            "input": 1.413,
+            "cachedInput": 0.071,
+            "cacheWrite": 1.413,
+            "output": 4.24
+          },
+          "notes": {
+            "en": "International documentation list prices for China (Beijing) and Global deployment scope with implicit caching.",
+            "zh": "国际版文档中北京及 Global 调度档的美元标价及隐式缓存费率。"
+          }
+        },
+        {
+          "id": "beijing-explicit-5m",
+          "label": {
+            "en": "Standard · Beijing / Global · explicit cache (5m)",
+            "zh": "标准档 · 北京 / Global · 显式缓存（5 分钟）"
+          },
+          "currency": "USD",
+          "region": "CN-Beijing",
+          "serviceTier": "standard",
+          "context": {
+            "min": 1,
+            "max": 1000000
+          },
+          "rates": {
+            "input": 1.413,
+            "cachedInput": 0.071,
+            "cacheWrite": 1.767,
+            "output": 4.24
+          },
+          "notes": {
+            "en": "Explicit 5-minute TTL cache creation $1.767/MTok and cache hit read $0.071/MTok for Beijing/Global scope.",
+            "zh": "北京/Global 调度档 5 分钟显式缓存创建 $1.767/MTok，命中读取 $0.071/MTok。"
+          }
+        },
+        {
+          "id": "beijing-explicit-1h",
+          "label": {
+            "en": "Standard · Beijing / Global · explicit cache (1h)",
+            "zh": "标准档 · 北京 / Global · 显式缓存（1 小时）"
+          },
+          "currency": "USD",
+          "region": "CN-Beijing",
+          "serviceTier": "standard",
+          "context": {
+            "min": 1,
+            "max": 1000000
+          },
+          "rates": {
+            "input": 1.413,
+            "cachedInput": 0.071,
+            "cacheWrite": 2.827,
+            "output": 4.24
+          },
+          "notes": {
+            "en": "Explicit 1-hour TTL cache creation $2.827/MTok and cache hit read $0.071/MTok for Beijing/Global scope.",
+            "zh": "北京/Global 调度档 1 小时显式缓存创建 $2.827/MTok，命中读取 $0.071/MTok。"
+          }
+        },
+        {
+          "id": "beijing-batch-file",
+          "label": {
+            "en": "Batch File · Beijing",
+            "zh": "Batch 批处理文件 · 北京"
+          },
+          "currency": "USD",
+          "region": "CN-Beijing",
+          "serviceTier": "batch",
+          "context": {
+            "min": 1,
+            "max": 1000000
+          },
+          "rates": {
+            "input": 0.707,
+            "cachedInput": null,
+            "output": 2.12
+          },
+          "notes": {
+            "en": "Asynchronous Batch File pricing (50% of Beijing realtime list); cache rates are not listed separately on the Batch row.",
+            "zh": "异步 Batch 文件推理价（北京实时价的 50%）；批处理表未单独列出缓存命中费率。"
+          }
+        },
+        {
+          "id": "china-cny-implicit",
+          "label": {
+            "en": "Standard · China Mainland (CNY) · implicit cache",
+            "zh": "标准档 · 中国内地（人民币）· 隐式缓存"
+          },
+          "currency": "CNY",
+          "region": "CN-Beijing",
+          "serviceTier": "standard",
+          "context": {
+            "min": 1,
+            "max": 1000000
+          },
+          "rates": {
+            "input": 10,
+            "cachedInput": 0.5,
+            "cacheWrite": 10,
+            "output": 30
+          },
+          "notes": {
+            "en": "Official domestic Qianwen Model Studio CNY list prices with implicit cache hits at ¥0.50/MTok.",
+            "zh": "千问百炼国内站人民币标准标价，隐式缓存命中读取 ¥0.50/MTok。"
+          }
+        },
+        {
+          "id": "china-cny-explicit-5m",
+          "label": {
+            "en": "Standard · China Mainland (CNY) · explicit cache (5m)",
+            "zh": "标准档 · 中国内地（人民币）· 显式缓存（5 分钟）"
+          },
+          "currency": "CNY",
+          "region": "CN-Beijing",
+          "serviceTier": "standard",
+          "context": {
+            "min": 1,
+            "max": 1000000
+          },
+          "rates": {
+            "input": 10,
+            "cachedInput": 0.5,
+            "cacheWrite": 12.5,
+            "output": 30
+          },
+          "notes": {
+            "en": "Domestic CNY explicit 5-minute TTL cache creation ¥12.50/MTok and cache hit read ¥0.50/MTok.",
+            "zh": "国内站 5 分钟显式缓存创建 ¥12.50/MTok，命中读取 ¥0.50/MTok。"
+          }
+        },
+        {
+          "id": "china-cny-explicit-1h",
+          "label": {
+            "en": "Standard · China Mainland (CNY) · explicit cache (1h)",
+            "zh": "标准档 · 中国内地（人民币）· 显式缓存（1 小时）"
+          },
+          "currency": "CNY",
+          "region": "CN-Beijing",
+          "serviceTier": "standard",
+          "context": {
+            "min": 1,
+            "max": 1000000
+          },
+          "rates": {
+            "input": 10,
+            "cachedInput": 0.5,
+            "cacheWrite": 20,
+            "output": 30
+          },
+          "notes": {
+            "en": "Domestic CNY explicit 1-hour TTL cache creation ¥20.00/MTok and cache hit read ¥0.50/MTok.",
+            "zh": "国内站 1 小时显式缓存创建 ¥20.00/MTok，命中读取 ¥0.50/MTok。"
+          }
+        }
+      ],
+      "notes": {
+        "en": "Comparison default uses Singapore international standard pricing with implicit caching ($1.50/$0.075/$4.50). Single-tier pricing up to 1M context across thinking and non-thinking modes; regional, explicit-cache, batch, and domestic CNY list variants are included separately.",
+        "zh": "对比默认采用新加坡国际标准档及隐式缓存价（$1.50/$0.075/$4.50）。0<Token≤1M 不分阶梯、思考与非思考同价；其余地域、显式缓存 TTL、批处理及国内站人民币标价分档列出。"
+      }
     }
   ]
 }

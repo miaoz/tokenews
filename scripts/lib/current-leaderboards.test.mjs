@@ -40,7 +40,7 @@ test('unpriced models, dated releases and composite agents never borrow another 
  const coverage=merged.leaderboardCoverage.aa_coding_agent_index_v2_1;
  assert.equal(coverage.excluded.filter(r=>r.reason==='router').length,1);
  assert.equal(coverage.excluded.filter(r=>r.reason==='multi-model-fallback').length,9);
- assert.ok(merged.leaderboardCoverage.aa_intelligence_index_v5_0_1.unpriced.some(r=>r.model==='gemini-4-carbon'));
+ assert.ok(merged.leaderboardCoverage.aa_intelligence_index_v5_0_1.unpriced.some(r=>r.model==='muse-wonder-full'));
  assert.notEqual(identities.aaReleases['deepseek-v4-pro'],'deepseek-v4-pro');
  assert.notEqual(identities.arenaConfigurations['NVIDIA-Nemotron-3.5-Super-VL-120B-A12B (NVFP4)'],'nemotron-3.5-super-vl');
 });
@@ -154,4 +154,21 @@ test('reused AA release slugs require exact reviewed release names and never cro
  assert.equal(current.rows.find(r=>r.label==='Ling 3.1 Flash 1019').model,'ling-3.1-flash-1019');
  const oldLing=current.rows.find(r=>r.label==='Ling 3.1 Flash');
  if(oldLing)assert.equal(oldLing.model,'ling-3.1-flash');
+});
+
+test('Official HF Arena rows resolve by arenaConfigurations while unknown or duplicate labels are quarantined',()=>{
+ const source={board:'arena_code',adapter:'arena',url:'https://arena.ai/leaderboard/code/webdev'};
+ const parsed={version:null,sourceUpdatedAt:'2026-11-22',retrievalMethod:'official-hf-dataset',coverage:'HF test',rows:[
+  {identity:'Qwen4-Max (xHigh)',label:'Qwen4-Max (xHigh)',sourceId:'hf:webdev:Qwen4-Max (xHigh)',sourceRank:1,score:1752,scoreLow:1730,scoreHigh:1770,ambiguousConfiguration:false},
+  {identity:'GPT-5.3-Codex (Codex Harness)',label:'GPT-5.3-Codex (Codex Harness)',sourceId:'hf:webdev:GPT-5.3-Codex (Codex Harness)#1',sourceRank:2,score:1406,scoreLow:1392,scoreHigh:1420,ambiguousConfiguration:true},
+  {identity:'Unknown HF Model',label:'Unknown HF Model',sourceId:'hf:webdev:Unknown HF Model',sourceRank:3,score:1300,scoreLow:1280,scoreHigh:1320,ambiguousConfiguration:false},
+ ]};
+ const prepared=prepareCurrentSource(source,parsed,'2026-11-23',catalog,identities);
+ assert.equal(prepared.retrievalMethod,'official-hf-dataset');
+ assert.equal(prepared.rows[0].model,'qwen4-max');assert.equal(prepared.rows[0].exclusion,null);
+ assert.equal(prepared.rows[1].model,'gpt-5.3-codex');assert.equal(prepared.rows[1].exclusion,'ambiguous-configuration');
+ assert.equal(prepared.rows[2].model,null);assert.equal(prepared.rows[2].exclusion,'identity-review-required');
+ const result=mergeCurrentLeaderboards(baseline,{...snapshot,sources:snapshot.sources.map(s=>s.board===source.board?prepared:s)});
+ const ambiguousCfg=result.configurations.find(c=>c.source_id==='hf:webdev:GPT-5.3-Codex (Codex Harness)#1');
+ assert.ok(ambiguousCfg && !result.mappings.some(m=>m.configuration_id===ambiguousCfg.configuration_id));
 });

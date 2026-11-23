@@ -1,6 +1,7 @@
 import {readFile,writeFile,rename,mkdir} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import {parseAuditSource} from './lib/leaderboard-audit.mjs';
+import {parseArenaParquet} from './lib/arena.mjs';
 import {prepareCurrentSource} from './lib/current-leaderboards.mjs';
 import {sourceDate,validateBrowserCapture} from './lib/leaderboard-refresh.mjs';
 const root=new URL('../',import.meta.url);
@@ -24,14 +25,29 @@ const fetches=new Map();
 const get=url=>{if(!fetches.has(url))fetches.set(url,fetch(url,{signal:AbortSignal.timeout(45000)}).then(async r=>{if(!r.ok)throw Error(`HTTP ${r.status}`);return r.text();}));return fetches.get(url);};
 const results=await Promise.all(manifest.sources.map(async source=>{
  try{
-  let body,imported=false,sourceCheckedAt=checkedAt,capturedAt;
+  let body,parsed,imported=false,sourceCheckedAt=checkedAt,capturedAt;
   if(imports.has(source.board)){
    const capture=JSON.parse(await readFile(imports.get(source.board),'utf8'));
    const validated=validateBrowserCapture(capture,source,previous.sources.find(s=>s.board===source.board));
    body=validated.html;sourceCheckedAt=validated.checkedAt;capturedAt=validated.capturedAt;imported=true;
-  }else body=await get(source.url);
-  const parsed=parseAuditSource(source.adapter,body,source.board);
-  if(imported)parsed.retrievalMethod='browser-public-source';
+   parsed=parseAuditSource(source.adapter,body,source.board);
+   parsed.retrievalMethod='browser-public-source';
+  }else{
+   try{
+    body=await get(source.url);
+    parsed=parseAuditSource(source.adapter,body,source.board);
+   }catch(primaryError){
+    if(source.adapter==='arena'&&source.datasetUrl){
+     const prior=previous.sources.find(s=>s.board===source.board);
+     const res=await fetch(source.datasetUrl,{signal:AbortSignal.timeout(45000)});
+     if(!res.ok)throw Error(`${primaryError.message}; dataset HTTP ${res.status}`);
+     parsed=await parseArenaParquet(await res.arrayBuffer(),source.board);
+     if(prior?.sourceUpdatedAt&&parsed.sourceUpdatedAt.slice(0,10)<prior.sourceUpdatedAt.slice(0,10)){
+      throw Error(`Official dataset (${parsed.sourceUpdatedAt}) predates retained snapshot (${prior.sourceUpdatedAt.slice(0,10)})`);
+     }
+    }else throw primaryError;
+   }
+  }
   if(source.versionCheckUrl){
    const text=await get(source.versionCheckUrl);
    const versions=[...text.matchAll(/\bv(\d+(?:\.\d+)+)/g)].map(m=>m[1]);
@@ -43,7 +59,12 @@ const results=await Promise.all(manifest.sources.map(async source=>{
   return {board:source.board,status:'updated',reviewRequired:identityReview.length,identityReview,snapshot};
  }catch(e){
   const prior=previous.sources.find(s=>s.board===source.board);
-  return {board:source.board,status:prior?'retained-previous':'failed',error:e.message,snapshot:prior};
+  let snapshot=prior;
+  if(prior){
+   snapshot=prepareCurrentSource(source,prior,prior.checkedAt,catalog,identities);
+   if(prior.capturedAt)snapshot.capturedAt=prior.capturedAt;
+  }
+  return {board:source.board,status:prior?'retained-previous':'failed',error:e.message,snapshot};
  }
 }));
 const report={version:1,attemptedAt:checkedAt,results:results.map(({snapshot,...r})=>({...r,retainedCheckedAt:snapshot?.checkedAt??null}))};

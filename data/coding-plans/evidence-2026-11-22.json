@@ -1,0 +1,122 @@
+{
+  "version": 1,
+  "checkedAt": "2026-11-22",
+  "baseCommit": "b5e5aac70bd1ec59e06194fd28cb6ba127c27607",
+  "scope": "Reconcile upstream sync collisions (OpenCode Go GLM-5.3 standing limits post-Nov 22 promo and Command Code GOAT ling-3.1-flash-1019) and add live-verified allowances across OpenCode Go, Command Code, and Ollama Cloud for Qwen4 Max, Hy4, Hy4 Flash, Inkling 2 Mini, LongCat 2.5, and DeepSeek V4.1 Flash Ultrafast.",
+  "sources": [
+    "https://opencode.ai/inference/go/v1/models",
+    "https://opencode.ai/v2/docs/console/go/",
+    "https://commandcode.ai/docs/plans/go",
+    "https://commandcode.ai/docs/plans/goat",
+    "https://commandcode.ai/docs/plans/pro",
+    "https://commandcode.ai/docs/plans/max",
+    "https://commandcode.ai/docs/resources/pricing-limits",
+    "https://ollama.com/pricing"
+  ],
+  "officialCurrent": {
+    "glm-5.3": {
+      "provider": "OpenCode Go",
+      "plans": {
+        "opencode_go": { "monthlyUsd": 10, "monthlyCreditsUsd": 200 },
+        "opencode_go_plus": { "monthlyUsd": 40, "monthlyCreditsUsd": 400 },
+        "opencode_go_teams": { "monthlyUsd": 20, "monthlyCreditsUsd": 205 }
+      },
+      "rates": { "input": 1.4, "output": 4.4, "cache": 0.26 },
+      "note": "Reverted to standing $200/$400/$205 monthly limits after the Nov 22 promo ended."
+    },
+    "qwen4-max": {
+      "opencodeGo": {
+        "plans": { "opencode_go_plus": 60, "opencode_go_teams": 20 },
+        "rates": { "input": 1.5, "output": 4.5, "cache": 0.075, "cacheWrite": 1.875 },
+        "freshInputBilling": "cache-write"
+      },
+      "commandCode": {
+        "plans": { "command_code_go": 6, "command_code_pro": 25, "command_code_max_10": 150, "command_code_max_20": 300 },
+        "rates": { "input": 1.5, "output": 4.5, "cache": 0.075, "cacheWrite": 1.875 },
+        "freshInputBilling": "cache-write"
+      }
+    },
+    "hy4": {
+      "opencodeGo": {
+        "plans": { "opencode_go_plus": 240, "opencode_go_teams": 65 },
+        "rates": { "input": 0.834, "output": 2.501, "cache": 0.042 }
+      },
+      "commandCode": {
+        "plans": { "command_code_go": 6, "command_code_pro": 30, "command_code_max_10": 150, "command_code_max_20": 300 },
+        "rates": { "input": 0.834, "output": 2.501, "cache": 0.042 }
+      },
+      "ollamaCloud": {
+        "plans": { "ollama_pro_credits": 60, "ollama_max_credits": 300, "ollama_team_credits": 1000 },
+        "rates": { "input": 0.834, "output": 2.501, "cache": 0.042 }
+      }
+    },
+    "hy4-flash": {
+      "commandCode": {
+        "plans": { "command_code_go": 6, "command_code_pro": 25, "command_code_max_10": 150, "command_code_max_20": 300 },
+        "rates": { "input": 0.07, "output": 0.281, "cache": 0.003 }
+      }
+    },
+    "inkling-2-mini": {
+      "commandCode": {
+        "plans": { "command_code_go": 6, "command_code_goat": 15, "command_code_pro": 25, "command_code_max_10": 150, "command_code_max_20": 300 },
+        "rates": { "input": 0.075, "output": 0.3, "cache": 0.015 }
+      }
+    },
+    "longcat-2.5": {
+      "opencodeGo": {
+        "plans": { "opencode_go": 60, "opencode_go_plus": 240, "opencode_go_teams": 65 },
+        "rates": { "input": 0.3, "output": 1.2, "cache": 0.006 },
+        "note": "Models API reports cache.write = 0; China hosting requires Global regions."
+      }
+    },
+    "deepseek-v4.1-flash-ultrafast": {
+      "commandCode": {
+        "plans": { "command_code_pro": 30, "command_code_max_10": 150, "command_code_max_20": 300 },
+        "rates": { "input": 2.4, "output": 9.6, "cache": 0.048 },
+        "note": "Command Code pricing-limits explicitly marks individual-go: false, so Go is omitted."
+      }
+    }
+  },
+  "liveCaptures": [
+    {
+      "url": "https://opencode.ai/inference/go/v1/models",
+      "finalUrl": "https://opencode.ai/inference/go/v1/models",
+      "httpStatus": 200,
+      "capturedAtUtc": "2026-11-23T05:07:00.203Z",
+      "sha256": "2c764dc27ddd4fcd2f4c3471efea179ad536ab0758668134d66fc22107766151",
+      "hashBasis": "Complete decoded HTTP response body, before text extraction."
+    },
+    {
+      "url": "https://opencode.ai/v2/docs/console/go/",
+      "finalUrl": "https://opencode.ai/docs/console/go/",
+      "httpStatus": 200,
+      "capturedAtUtc": "2026-11-23T05:07:01.128Z",
+      "sha256": "79849218f6933afed74d7783c19e61772c34710f5ce238b47bf31f83fa9ae6fc",
+      "hashBasis": "Complete decoded HTTP response body, before text extraction."
+    },
+    {
+      "url": "https://commandcode.ai/docs/resources/pricing-limits",
+      "finalUrl": "https://commandcode.ai/docs/resources/pricing-limits",
+      "httpStatus": 200,
+      "capturedAtUtc": "2026-11-23T05:07:02.307Z",
+      "sha256": "1a72e4e26215381757d929686976ae530157bc08eb82d2a7f48de07acb9a2fe4",
+      "hashBasis": "Complete decoded HTTP response body, before text extraction."
+    },
+    {
+      "url": "https://commandcode.ai/docs/plans/max",
+      "finalUrl": "https://commandcode.ai/docs/plans/max",
+      "httpStatus": 200,
+      "capturedAtUtc": "2026-11-23T05:07:02.605Z",
+      "sha256": "b155e8e8423702afb65f63016e674a0a8ff7eb720442a4e3d742412a2299acc3",
+      "hashBasis": "Complete decoded HTTP response body, before text extraction."
+    },
+    {
+      "url": "https://ollama.com/pricing",
+      "finalUrl": "https://ollama.com/pricing",
+      "httpStatus": 200,
+      "capturedAtUtc": "2026-11-23T05:07:03.654Z",
+      "sha256": "4b63a39181b470b7b833503074e6ed250715ef1eb9d2118def4de712e729e30f",
+      "hashBasis": "Complete decoded HTTP response body, before text extraction."
+    }
+  ]
+}

@@ -910,6 +910,7 @@ export function displayPlan(plan: string, lang: string): string {
     " 日间": " (Day)",
     " 夜间0.8×": " (Night 0.8x)",
     "促销至 ": "promo until ",
+    "导入价至 ": "introductory price until ",
   };
   return Object.entries(words).reduce(
     (s, [from, to]) => s.replaceAll(from, to),

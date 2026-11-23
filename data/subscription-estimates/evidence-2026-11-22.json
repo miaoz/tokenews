@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "checkedAt": "2026-11-22",
+  "scope": "Upgrade subscription quota evidence: retire estimate:google-ai-pro:gemini-4-neon after upstream PR #249 adopted the real 37pp Google AI Pro Neon weekly measurement (5.36 亿/月, lowCache); re-anchor Google AI Pro/Ultra Gemini 4 estimates under lowCacheTokenMix; add Devin Max × Gemini 4 Carbon medium-confidence maintainer weekly sample (upstream Issue #251 / PR #252); retain audited Claude Fable 5.2 and conservative ChatGPT GPT-6.2 carryover estimates.",
+  "retiredEstimates": [
+    {
+      "id": "estimate:google-ai-pro:gemini-4-neon",
+      "replacedByUpstreamId": "google_ai_pro_us::gemini-4-neon",
+      "upstreamSource": "https://github.com/Fei2411/real-api-pricing/issues/248",
+      "upstreamValue": {
+        "monthlyYi": 5.36,
+        "realUsdPerMTok": 0.037294776,
+        "workload": "lowCache",
+        "confidence": "medium",
+        "dataDate": "2026-11-20"
+      }
+    }
+  ],
+  "methodology": {
+    "google": {
+      "anchorPointId": "google_ai_pro_us::gemini-4-neon",
+      "anchorMonthlyTokens": 536000000,
+      "workloadMix": "lowCache (85% cache read / 14.5% input / 0.5% output)",
+      "anchorLowCacheBlendUsdPerMTok": 0.6375,
+      "proMonthlyWorthUsd": 341.7,
+      "ultraMultipliers": { "5x": 5, "20x": 20 },
+      "derivedTargets": {
+        "google_ai_ultra_5x_estimate::gemini-4-neon": { "monthlyYi": 26.8, "usdPerMTok": 0.03731 },
+        "google_ai_ultra_20x_estimate::gemini-4-neon": { "monthlyYi": 107.2, "usdPerMTok": 0.01866 },
+        "google_ai_ultra_5x_estimate::gemini-4-carbon": { "monthlyYi": 20.1, "usdPerMTok": 0.04975, "rates": "regular post-2026-12-01 ($4/$20/$0.20, $0.85/MTok)" },
+        "google_ai_ultra_20x_estimate::gemini-4-carbon": { "monthlyYi": 80.4, "usdPerMTok": 0.02487, "rates": "regular post-2026-12-01 ($4/$20/$0.20, $0.85/MTok)" },
+        "google_ai_pro_estimate::gemini-4-hydrogen": { "monthlyYi": 10.72, "usdPerMTok": 0.01865 },
+        "google_ai_ultra_5x_estimate::gemini-4-hydrogen": { "monthlyYi": 53.6, "usdPerMTok": 0.01865 },
+        "google_ai_ultra_20x_estimate::gemini-4-hydrogen": { "monthlyYi": 214.4, "usdPerMTok": 0.00933 }
+      },
+      "conservatism": [
+        "All derived Pro/Ultra rows remain marked confidence: low and quota_is_estimated: true.",
+        "Gemini 4 Carbon remains restricted to Google AI Ultra (excluded from Google AI Pro) and valued at post-December 1 regular rates ($4/$20/$0.20)."
+      ]
+    },
+    "devin": {
+      "id": "estimate:devin-max:gemini-4-carbon",
+      "source": "https://github.com/Fei2411/real-api-pricing/issues/251",
+      "pr": "https://github.com/Fei2411/real-api-pricing/pull/252",
+      "weeklyWorthUsd": 200,
+      "monthWeeks": 4,
+      "workloadMix": "lowCache",
+      "introRatesThrough2026-11-30": { "input": 2, "cachedInput": 0.1, "output": 10, "lowCacheBlend": 0.425 },
+      "monthlyYi": 18.82352941,
+      "realUsdPerMTok": 0.10625,
+      "confidence": "medium"
+    },
+    "openai": {
+      "status": "Checked Nov 22: GPT-6.2 Astra and Sol remain conservatively anchored (low confidence) to GPT-6 Astra and GPT-6.1 Sol measured pools; OpenAI transition to unified token-based shared quota begins December 2026, and no single-model GPT-6.2 panel/log telemetry has been adopted upstream yet.",
+      "upstreamResearchRef": "upstream/data/research/official-gpt-62-astra-sol-api-2026-11-19.json"
+    },
+    "anthropic": {
+      "status": "Claude Max (medium confidence) and Claude Ultra (low confidence) for Claude Fable 5.2 remain active from the audited Patrick Lei sample."
+    }
+  }
+}

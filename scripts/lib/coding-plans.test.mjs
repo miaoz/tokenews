@@ -41,8 +41,12 @@ test('New Ollama credits are separate from legacy samples; original source value
 test('New third-party points join current benchmarks by exact identity; officially upgraded aliases join only 1017',()=>{
   const d=mergeCurrentLeaderboards(result,read('data/leaderboards/current.json'));
   for(const id of ['opencode_go::kimi-k3.1-pro','opencode_go_plus::minimax-m3.1-flash','command_code_goat::ling-3.1-flash-1019','command_code_goat::muse-spark-open','ollama_pro_credits::deepseek-v4.1-flash-1017']) assert.ok(d.mappings.some(m=>m.point_id===id),id);
-  const upgraded=result.points.filter(p=>p.price_origin==='maintained-plan'&&['OpenCode','Command Code'].includes(p.channel)&&p.id.includes('::deepseek-v4.1-flash'));
+  const upgraded=result.points.filter(p=>p.price_origin==='maintained-plan'&&['OpenCode','Command Code'].includes(p.channel)&&p.id.includes('::deepseek-v4.1-flash')&&!p.id.endsWith('-ultrafast'));
   assert.equal(upgraded.length,16);
+  const ultrafast=result.points.filter(p=>p.price_origin==='maintained-plan'&&p.id.endsWith('::deepseek-v4.1-flash-ultrafast'));
+  assert.equal(ultrafast.length,3);
+  assert.ok(ultrafast.every(p=>p.model==='deepseek-v4.1-flash-ultrafast'));
+  assert.ok(!result.points.some(p=>p.id==='command_code_go::deepseek-v4.1-flash-ultrafast'));
   for(const p of upgraded){
     assert.equal(p.model,'deepseek-v4.1-flash-1017');
     assert.ok(p.evidence.some(e=>e.url.startsWith('https://x.com/')));

@@ -1,12 +1,14 @@
 {
   "version": 1,
-  "checkedAt": "2026-11-19",
+  "checkedAt": "2026-11-23",
   "aliases": {
     "MiMo 2.6 Flash": "mimo-v2.6-flash",
     "Hunyuan H4 Preview": "hy4-preview",
     "GLM-5.3 Flash-X": "glm-5.3-flashx",
     "Nemotron 3 Ultra 550B A55B": "nemotron-3-ultra",
-    "Inkling Small 2": "inkling-2-small"
+    "Inkling Small 2": "inkling-2-small",
+    "Hy4 Flash": "hy4-flash",
+    "Gemini 3.1 Pro": "gemini-3.1-pro-preview"
   },
   "aaReleases": {
     "gemini-4-carbon": "gemini-4-carbon",
@@ -252,7 +254,16 @@
     "ling-3-1-flash-1001": "ling-3.1-flash",
     "gemini-4-neon": "gemini-4-neon",
     "gpt-6-2-astra": "gpt-6.2-astra",
-    "gpt-6-2-sol": "gpt-6.2-sol"
+    "gpt-6-2-sol": "gpt-6.2-sol",
+    "tencent-hy4": "hy4",
+    "qwen4-max": "qwen4-max",
+    "inkling-2-mini": "inkling-2-mini",
+    "joyai-vl": "joyai-vl-preview",
+    "joyvl2_v27": "joyai-vl-preview",
+    "k-exaone-2-0": "k-exaone-2.0",
+    "k2-horizon-32b": "k2-horizon-32b",
+    "lfm3-vl-2b": "lfm3-vl-2b",
+    "lfm3-1-7b": "lfm3-1.7b"
   },
   "arenaConfigurations": {
     "Claude Opus 5.5 (Max)": "claude-opus-5.5",
@@ -420,7 +431,17 @@
     "Nemotron 3 Ultra": "nemotron-3-ultra",
     "GPT-6.2 Astra (Max)": "gpt-6.2-astra",
     "GPT-6.2 Sol (Max)": "gpt-6.2-sol",
-    "Gemini 4 Neon (High)": "gemini-4-neon"
+    "Gemini 4 Neon (High)": "gemini-4-neon",
+    "Claude Fable 5.2 (xHigh)": "claude-fable-5.2",
+    "Claude Fable 5.2 (Max)": "claude-fable-5.2",
+    "Claude Opus 5.5 (High)": "claude-opus-5.5",
+    "Gemini 4 Hydrogen (High)": "gemini-4-hydrogen",
+    "GPT-6.1 Sol (Medium)": "gpt-6.1-sol",
+    "GPT-6.1 Terra (Medium)": "gpt-6.1-terra",
+    "Qwen4-Max (xHigh)": "qwen4-max",
+    "Inkling 2 Small": "inkling-2-small",
+    "Inkling 2 Mini": "inkling-2-mini",
+    "Muse Ember (Max)": "muse-ember"
   },
   "arenaSources": {
     "contenders/claude-opus-5.5-max-vertex-agent": "claude-opus-5.5",
@@ -863,7 +884,8 @@
     "nemotron-3-ultra-9xyg": "nemotron-3-ultra",
     "nvidia-nemotron-3.5-super-vl-120b-a12b-nvfp4-g60z": "nemotron-3.5-super-vl-nvfp4",
     "inkling-ka5t": "inkling",
-    "solar-pro-4-10ve": "solar-pro-4"
+    "solar-pro-4-10ve": "solar-pro-4",
+    "qwen4-max-xhigh-lm5r": "qwen4-max"
   },
   "aaReleaseNames": {
     "ling-3-1-flash": {

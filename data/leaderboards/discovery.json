@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checkedAt": "2026-11-20",
+  "checkedAt": "2026-11-23",
   "source": "https://artificialanalysis.ai/models/releases",
   "note": "Unmapped source entries requiring identity/configuration review; these may already exist under another catalog ID. Not automatically published.",
   "candidates": [
@@ -184,6 +184,14 @@
       ]
     },
     {
+      "url": "https://artificialanalysis.ai/models/inkling-2-mini",
+      "label": "Inkling 2 Mini Thinking Machines · Nov 2026 · 1 effort level Open weights Image Intelligence 20 Cost / task $0.59 Context 1M",
+      "possibleCatalogMatches": [
+        "inkling",
+        "inkling-2-mini"
+      ]
+    },
+    {
       "url": "https://artificialanalysis.ai/models/inkling-2-small",
       "label": "Inkling 2 Small Thinking Machines · Nov 2026 · 1 effort level Open weights Image Legal (#16) Economics (#16) Intelligence 31 Cost / task $1.18 Context 1M",
       "possibleCatalogMatches": [
@@ -192,9 +200,11 @@
       ]
     },
     {
-      "url": "https://artificialanalysis.ai/models/joyvl2_v27",
+      "url": "https://artificialanalysis.ai/models/joyai-vl",
       "label": "JoyAI-VL-Preview Joy Future Academy · Nov 2026 · 1 effort level Image Video Legal (#23) Strategy & Ops (#24) Intelligence 28 Cost / task — Context 1M",
-      "possibleCatalogMatches": []
+      "possibleCatalogMatches": [
+        "joyai-vl-preview"
+      ]
     },
     {
       "url": "https://artificialanalysis.ai/models/jt-4-1-flash-236b-a21b",
@@ -213,16 +223,27 @@
     {
       "url": "https://artificialanalysis.ai/models/k2-horizon-32b",
       "label": "K2 Horizon 32B Institute of Foundation Models · Sep 2026 · 1 effort level Open weights Intelligence 14 Cost / task — Context 524k",
-      "possibleCatalogMatches": []
+      "possibleCatalogMatches": [
+        "k2-horizon-32b"
+      ]
     },
     {
       "url": "https://artificialanalysis.ai/models/lfm3-1-7b",
       "label": "LFM3-1.7B Liquid AI · Oct 2026 · 1 effort level Open weights Intelligence 6 Cost / task $0.17 Context 262k",
-      "possibleCatalogMatches": []
+      "possibleCatalogMatches": [
+        "lfm3-1.7b"
+      ]
     },
     {
       "url": "https://artificialanalysis.ai/models/lfm3-vl-2b",
       "label": "LFM3-VL-2B Liquid AI · Oct 2026 · 1 effort level Open weights Image Video Intelligence 2 Cost / task $0.12 Context 128k",
+      "possibleCatalogMatches": [
+        "lfm3-vl-2b"
+      ]
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/lingsante-3-1-flash-1119",
+      "label": "LingSante-3.1-flash InclusionAI · Nov 2026 · 1 effort level Open weights Intelligence — Cost / task — Context 1M",
       "possibleCatalogMatches": []
     },
     {
@@ -389,7 +410,9 @@
     {
       "url": "https://artificialanalysis.ai/models/qwen4-max",
       "label": "Qwen4 Max Alibaba · Nov 2026 · 1 effort level Image Video Finance & Accounting (#11) Legal (#11) Intelligence 43 Cost / task $3.27 Context 984k",
-      "possibleCatalogMatches": []
+      "possibleCatalogMatches": [
+        "qwen4-max"
+      ]
     },
     {
       "url": "https://artificialanalysis.ai/models/solar-open-100b",
@@ -421,7 +444,7 @@
     },
     {
       "url": "https://artificialanalysis.ai/models/tencent-hy4",
-      "label": "Tencent Hy4 Tencent · Nov 2026 · 1 effort level Image Healthcare & Medical (#16) Strategy & Ops (#18) Intelligence 35 Cost / task $1.03 Context 1M",
+      "label": "Tencent Hy4 Tencent · Nov 2026 · 1 effort level Open weights Image Healthcare & Medical (#16) Strategy & Ops (#18) Intelligence 35 Cost / task $1.03 Context 1M",
       "possibleCatalogMatches": []
     }
   ]

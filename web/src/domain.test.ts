@@ -93,7 +93,7 @@ test('GOAT GLM-5.3 current point and bilingual notes use the reviewed proportion
   assert.doesNotMatch(p.note_en!, /\$100 shared monthly pool/);
   assert.doesNotMatch(p.note!, /共享月池上限 \$100/);
   const archived = data.supersededPoints?.find(p => p.id === 'command_code_goat::glm-5.3');
-  assert.equal(archived?.monthly_tokens, 64700000);
+  assert.equal(archived?.monthly_tokens, 226400000);
   assert.ok(data.mappings.some(m => m.point_id === p.id));
   const row = {key:p.id, point:p, mapping:null, score:null};
   const exported = parse(csv([row], 'en'), {bom:true, columns:true}) as Record<string,string>[];
@@ -248,12 +248,12 @@ test("Step Plan CN uses official Credit pools and CNY list prices", () => {
   assert.equal(max37.monthly_yi, 858.83);
   assert.equal(accessLine(mini35), "StepFun");
 });
-test("Devin Pro SWE-2 is an unmetered $0 promo point that joins and leads the TB4 frontier on a dedicated slot", () => {
+test("Devin Pro SWE-2 is a standing unmetered $0 point that joins and leads the TB4 frontier on a dedicated slot", () => {
   const p = data.points.find((p) => p.id === "devin_pro::swe-2")!;
   assert.ok(p);
   assert.equal(p.real_usd_per_mtok, 0);
   assert.equal(p.unmetered, true);
-  assert.equal(p.promo_until, "2026-10-31");
+  assert.equal(p.promo_until, null);
   assert.equal(p.monthly_yi, null);
   assert.equal(p.channel, "Devin");
   assert.equal(accessLine(p), "Devin");
@@ -726,7 +726,7 @@ test("Third-party labels reserve room for the maker mini-logo", () => {
 });
 test("Chart search AND-matches plan, channel and model fields and dedupes points", () => {
   const gs = groups(
-    rowsFor(data, { ...defaultState(), board: "aa_intelligence_index", configuration: "all" }),
+    rowsFor(data, { ...defaultState(), board: "arena_code_current", configuration: "all" }),
   );
   // Multi-token AND is order-independent: the plan tier and vendor must both hit.
   const forward = searchMatches(gs, "kimi 199", "en");
@@ -764,7 +764,7 @@ test("Chart search AND-matches plan, channel and model fields and dedupes points
 });
 test("Chart search lock overrides the live match set and reports a missing lock", () => {
   const gs = groups(
-    rowsFor(data, { ...defaultState(), board: "aa_intelligence_index", configuration: "all" }),
+    rowsFor(data, { ...defaultState(), board: "arena_code_current", configuration: "all" }),
   );
   const lockId = "kimi_allegretto_cn::kimi-k3";
   // A point id can map to several configurations, hence several groups.
@@ -901,7 +901,7 @@ test("Model lock labels and coverage are generation-independent", () => {
 });
 test("Point-level candidates and locks keep the generation tag", () => {
   const gs = groups(
-    rowsFor(data, { ...defaultState(), board: "aa_intelligence_index", configuration: "all" }),
+    rowsFor(data, { ...defaultState(), board: "arena_code_current", configuration: "all" }),
   );
   const pointHits = searchHits(
     gs,

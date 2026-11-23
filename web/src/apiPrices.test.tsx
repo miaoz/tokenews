@@ -169,3 +169,17 @@ test('GPT-6.2 Astra, GPT-6.2 Sol and Gemini 4 Neon publish exact official API ra
   assert.deepEqual(neon.variant.rates, { input: 3, cachedInput: 0.15, output: 15 });
   assert.ok(Math.abs(neon.blended! - 0.2955) < 1e-12);
 });
+
+test('Qwen4 Max and Inkling 2 Mini publish exact official API rates', () => {
+  const qwen4 = apiPriceReference(data, 'qwen4-max', '2026-11-22')!;
+  assert.equal(qwen4.origin, 'maintained');
+  assert.equal(qwen4.variant.id, 'singapore-implicit');
+  assert.deepEqual(qwen4.variant.rates, { input: 1.5, cachedInput: 0.075, cacheWrite: 1.5, output: 4.5 });
+  assert.ok(Math.abs(qwen4.blended! - 0.13275) < 1e-12);
+
+  const inkling = apiPriceReference(data, 'inkling-2-mini', '2026-11-22')!;
+  assert.equal(inkling.origin, 'maintained');
+  assert.equal(inkling.variant.id, 'tinker-sampling');
+  assert.deepEqual(inkling.variant.rates, { input: 0.15, cachedInput: 0.015, output: 0.5 });
+  assert.ok(Math.abs(inkling.blended! - 0.0208) < 1e-12);
+});

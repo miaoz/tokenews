@@ -332,6 +332,13 @@
       "checkedAt": "2026-10-19"
     },
     {
+      "id": "deepseek-v4.1-flash-ultrafast",
+      "name": "DeepSeek V4.1 Flash Ultrafast",
+      "maker": "DeepSeek",
+      "source": "https://commandcode.ai/docs/plans/goat",
+      "checkedAt": "2026-11-22"
+    },
+    {
       "id": "devstral-2",
       "name": "Devstral 2",
       "maker": "Mistral",
@@ -987,6 +994,13 @@
       "checkedAt": "2026-11-04"
     },
     {
+      "id": "hy4-flash",
+      "name": "Hy4 Flash",
+      "maker": "Tencent",
+      "source": "https://commandcode.ai/docs/plans/goat",
+      "checkedAt": "2026-11-22"
+    },
+    {
       "id": "hy4-preview",
       "name": "Hy4 Preview",
       "maker": "Tencent",
@@ -1013,6 +1027,14 @@
       "maker": "Thinking Machines Lab",
       "source": "https://arena.ai/leaderboard/code/webdev",
       "checkedAt": "2026-11-04"
+    },
+    {
+      "id": "inkling-2-mini",
+      "name": "Inkling 2 Mini",
+      "maker": "Thinking Machines",
+      "source": "https://thinkingmachines.ai/tinker/pricing/",
+      "checkedAt": "2026-11-22",
+      "releaseDate": "2026-11-20"
     },
     {
       "id": "inkling-2-small",
@@ -1072,6 +1094,14 @@
       "checkedAt": "2026-11-04"
     },
     {
+      "id": "joyai-vl-preview",
+      "name": "JoyAI-VL-Preview",
+      "maker": "Joy Future Academy",
+      "source": "https://artificialanalysis.ai/models/releases/joyai-vl",
+      "checkedAt": "2026-11-22",
+      "releaseDate": "2026-11-17"
+    },
+    {
       "id": "jt-35b-flash",
       "name": "JT-35B-Flash",
       "maker": "China Mobile",
@@ -1112,6 +1142,13 @@
       "maker": "Institute of Foundation Models",
       "source": "https://artificialanalysis.ai/models/releases/k2-horizon-3-7b",
       "checkedAt": "2026-11-04"
+    },
+    {
+      "id": "k2-horizon-32b",
+      "name": "K2 Horizon 32B",
+      "maker": "Institute of Foundation Models",
+      "source": "https://artificialanalysis.ai/models/releases/k2-horizon-32b",
+      "checkedAt": "2026-11-22"
     },
     {
       "id": "k2-horizon-375b-a23b",
@@ -1289,6 +1326,20 @@
       "checkedAt": "2026-11-04"
     },
     {
+      "id": "lfm3-1.7b",
+      "name": "LFM3-1.7B",
+      "maker": "Liquid AI",
+      "source": "https://artificialanalysis.ai/models/releases/lfm3-1-7b",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "id": "lfm3-vl-2b",
+      "name": "LFM3-VL-2B",
+      "maker": "Liquid AI",
+      "source": "https://artificialanalysis.ai/models/releases/lfm3-vl-2b",
+      "checkedAt": "2026-11-22"
+    },
+    {
       "id": "ling-3.0-flash-fin",
       "name": "Ling-3.0-flash-Fin",
       "maker": "inclusionAI",
@@ -1378,6 +1429,14 @@
       "maker": "Meituan",
       "source": "https://github.com/Fei2411/real-api-pricing/tree/0be92b7ce3edf7690672ce5217607032a4bc7c45",
       "checkedAt": "2026-10-19"
+    },
+    {
+      "id": "longcat-2.5",
+      "name": "LongCat 2.5",
+      "maker": "Meituan",
+      "source": "https://opencode.ai/docs/console/go/",
+      "checkedAt": "2026-11-22",
+      "releaseDate": "2026-11-02"
     },
     {
       "id": "longcat-flash-lite",
@@ -2128,6 +2187,14 @@
       "maker": "Alibaba",
       "source": "https://github.com/Fei2411/real-api-pricing/tree/0be92b7ce3edf7690672ce5217607032a4bc7c45",
       "checkedAt": "2026-10-19"
+    },
+    {
+      "id": "qwen4-max",
+      "name": "Qwen4 Max",
+      "maker": "Alibaba",
+      "source": "https://www.alibabacloud.com/help/en/model-studio/qwen4-max",
+      "checkedAt": "2026-11-22",
+      "releaseDate": "2026-11-16"
     },
     {
       "id": "r1-1776",

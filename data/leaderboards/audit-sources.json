@@ -23,13 +23,15 @@
       "board": "arena_code",
       "adapter": "arena",
       "baselineVersion": null,
-      "url": "https://arena.ai/leaderboard/code/webdev"
+      "url": "https://arena.ai/leaderboard/code/webdev",
+      "datasetUrl": "https://huggingface.co/datasets/lmarena-ai/leaderboard-dataset/resolve/main/webdev/latest-00000-of-00001.parquet"
     },
     {
       "board": "arena_agent_mode",
       "adapter": "arena",
       "baselineVersion": null,
-      "url": "https://arena.ai/leaderboard/agent"
+      "url": "https://arena.ai/leaderboard/agent",
+      "datasetUrl": "https://huggingface.co/datasets/lmarena-ai/leaderboard-dataset/resolve/main/agent/latest-00000-of-00001.parquet"
     },
     {
       "board": "aa_coding_agent_index",

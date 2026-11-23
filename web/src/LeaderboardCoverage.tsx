@@ -25,7 +25,8 @@ export default function LeaderboardCoverage({data, board, lang}: {data:SiteData;
       <p>{zh?'非前沿点仍会绘制，默认仅标注前沿名称。已审核的额度推算会单独标识，缺少成绩或型号身份的模型不会强行补点。以下为整个榜单的证据缺口，不随个人筛选改变。':'Non-frontier points are still drawn; only frontier names are labeled by default. Reviewed quota estimates are explicitly labeled; missing scores or model identities are never invented. The gaps below cover the whole leaderboard, independent of your filters.'}</p>
       <p>{zh?'仅按相同模型版本关联价格；评测代理、推理强度与订阅额度并未视为一致。价格仍保留各自采样日期。':'Prices reference the same model version. Agent harness, reasoning effort and subscription quota are not assumed equivalent. Prices retain their own sampling dates.'}</p>
       <p>{zh?'核对日期（美国太平洋时间）：':'Checked (US Pacific date): '}{coverage.checkedAt}{coverage.sourceUpdatedAt?` · ${zh?'来源更新':'Source updated'}: ${coverage.sourceUpdatedAt.slice(0,10)}`:''}
-        {coverage.retrievalMethod==='browser-public-source'?(zh?' · 浏览器读取公开结构化数据。':' · Public structured data retrieved through a browser.'):''}
+        {coverage.retrievalMethod==='browser-public-source'?(zh?' · 浏览器读取公开结构化数据。':' · Public structured data retrieved through a browser.')
+          :coverage.retrievalMethod==='official-hf-dataset'?(zh?' · 读取自 LMArena 官方 Hugging Face 数据集。':' · Retrieved from the official LMArena Hugging Face dataset.'):''}
       </p>
       {!!coverage.excludedSourceRows?.length&&<p>{zh?`另有 ${coverage.excludedSourceRows.length} 个无正式排名的 AutoEval 条目，仅保留原始证据，不混入人工投票榜。`:`${coverage.excludedSourceRows.length} additional unranked AutoEval entries are preserved as source evidence, not mixed into the human-vote leaderboard.`}</p>}
       <label className="coverage-search">{zh?'查找未绘制的模型':'Find a missing model'}<input type="search" value={query} onChange={e=>setQuery(e.target.value)} placeholder={zh?'例如 Fable 5.2':'e.g. Fable 5.2'} /></label>

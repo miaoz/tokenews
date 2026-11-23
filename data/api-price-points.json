@@ -82,16 +82,6 @@
       "inputBilling": "input-only"
     },
     {
-      "model": "gemini-4-hydrogen",
-      "variant": "standard",
-      "inputBilling": "input-only"
-    },
-    {
-      "model": "gemini-4-neon",
-      "variant": "standard",
-      "inputBilling": "input-only"
-    },
-    {
       "model": "gpt-6.2-astra",
       "variant": "standard-short-30m",
       "inputBilling": "cache-write",
@@ -125,6 +115,33 @@
       "context": {
         "min": 272001,
         "max": null
+      }
+    },
+    {
+      "model": "qwen4-max",
+      "variant": "singapore-implicit",
+      "inputBilling": "input-or-cache-write-same-rate",
+      "context": {
+        "min": 1,
+        "max": 1000000
+      }
+    },
+    {
+      "model": "inkling-2-mini",
+      "variant": "tinker-sampling",
+      "inputBilling": "input-only",
+      "context": {
+        "min": 0,
+        "max": 1000000
+      }
+    },
+    {
+      "model": "inkling-2-small",
+      "variant": "serverless-beta",
+      "inputBilling": "input-only",
+      "context": {
+        "min": 0,
+        "max": 262144
       }
     }
   ]

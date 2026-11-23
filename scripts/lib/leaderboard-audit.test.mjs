@@ -117,6 +117,29 @@ test('modern AA payload uses exact release-name keys and real release URLs witho
  const terminal=parseModernAA(modernAA(),'aa-terminal');assert.equal(terminal.version,'4.0');assert.equal(terminal.rows[0].score,53.5353535353535);
  const legacy=parseAuditSource('aa-models',html).rows[0];assert.equal(legacy.sourceId,'example-high');assert.equal(legacy.sourceIdKind,undefined);
 });
+test('modern AA accepts generalEvaluations Intelligence Index metadata and rejects deprecated or missing entries',()=>{
+ const fromGeneral = () => {
+  const payload = modernAA();
+  payload.evaluations = {
+   generalEvaluations: [
+    { href: '/evaluations/artificial-analysis-intelligence-index', deprecated: false, name: 'Artificial Analysis Intelligence Index v5.0.1' },
+   ],
+   headlineIndexes: [],
+  };
+  return payload;
+ };
+ assert.equal(parseModernAA(fromGeneral()).version, '5.0.1');
+ for (const mutate of [
+  v => { v.evaluations.generalEvaluations[0].deprecated = true; },
+  v => { v.evaluations.generalEvaluations[0].name = 'Artificial Analysis Intelligence Index'; },
+  v => { v.evaluations.generalEvaluations = []; },
+ ]) {
+  const payload = fromGeneral();
+  mutate(payload);
+  assert.throws(() => parseModernAA(payload), /AA version missing/);
+ }
+});
+
 test('modern AA rejects missing, conflicting or duplicate identities and missing evaluation metadata',()=>{
  for(const mutate of [
   v=>{delete v.initialModels[0].release;},v=>{v.initialModels[0].release.slug='unknown';},

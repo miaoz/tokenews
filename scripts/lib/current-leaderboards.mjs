@@ -26,7 +26,7 @@ export function prepareCurrentSource(source, parsed, checkedAt, catalog, identit
     // Some source release slugs are reused for a new checkpoint. Where reviewed,
     // require the exact release name too; an unknown name remains quarantined.
     const resolved = row.router ? null : row.releaseSlug ? resolveAAReleaseIdentity(row,identities)
-      : source.adapter === 'arena' ? identities.arenaSources?.[row.sourceId]
+      : source.adapter === 'arena' ? (row.sourceId.startsWith('hf:') ? identities.arenaConfigurations?.[row.identity] : identities.arenaSources?.[row.sourceId])
       : resolveModel(row.identity, catalog.models, identities.aliases);
     const model = resolved && catalog.models.some(m=>m.id===resolved) ? resolved : null;
     const exclusion = row.router ? 'router' : !model ? 'identity-review-required' : row.score === null ? 'unverified-score'

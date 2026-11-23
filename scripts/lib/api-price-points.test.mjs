@@ -91,15 +91,14 @@ test('reviewed same-scope schedules carry both Carbon dates and reject overlappi
  assert.throws(()=>buildApiPointSchedules(base,invalid,manifest),/Overlapping/);
 });
 
-test('Hydrogen has a paid standard API point and exact current benchmark mappings, not a fabricated allowance',()=>{
- const all=addApiPricePoints(base,catalog,manifest,'2026-11-14');
- const points=all.points.filter(p=>p.model==='gemini-4-hydrogen'&&p.price_origin==='maintained-api');
- assert.equal(points.length,1);
- const p=points[0];
+test('Hydrogen uses upstream standard API point without duplication; Qwen4 Max and Inkling 2 Mini emit maintained API points',()=>{
+ const all=addApiPricePoints(base,catalog,manifest,'2026-11-22');
+ assert.equal(all.points.filter(p=>p.model==='gemini-4-hydrogen'&&p.price_origin==='maintained-api').length,0);
+ const p=all.points.find(p=>p.id==='google_ai_hydrogen_api::gemini-4-hydrogen');
+ assert.ok(p);
  assert.ok(Math.abs(p.real_usd_per_mtok-.14775)<1e-12);
  assert.deepEqual(p.list_price,{cached:.075,input:1.5,output:7.5,currency:'USD'});
- assert.equal(p.channel,'Google');assert.equal(p.monthly_tokens,null);assert.equal(p.billing,'metered');
- assert.match(p.note_en,/Implicit caching only/);
+ assert.equal(p.vendor,'Google');assert.equal(p.monthly_yi,null);assert.equal(p.billing,'metered');
  assert.equal(catalog.models['gemini-4-hydrogen'].variants.length,5);
  const joined=mergeCurrentLeaderboards(all,read('data/leaderboards/current.json'));
  const ids=new Set(joined.mappings.filter(m=>m.point_id===p.id).map(m=>m.configuration_id));
@@ -107,5 +106,17 @@ test('Hydrogen has a paid standard API point and exact current benchmark mapping
  assert.ok(configs.length>=10);
  assert.ok(configs.every(c=>c.model==='gemini-4-hydrogen'));
  assert.ok(configs.some(c=>c.board==='aa_intelligence_index_v5_0_1'&&c.reasoning_effort==='xhigh'));
- assert.ok(configs.filter(c=>c.board.startsWith('arena_')).every(c=>c.score_is_preliminary));
+ assert.ok(configs.some(c=>c.board==='arena_code_current')&&configs.some(c=>c.board==='arena_agent_mode_current'));
+ const qwen=all.points.find(pt=>pt.id==='official-api:qwen4-max:singapore-implicit::qwen4-max');
+ assert.ok(qwen && qwen.price_origin==='maintained-api');
+ assert.ok(Math.abs(qwen.real_usd_per_mtok-.13275)<1e-12);
+ assert.deepEqual(qwen.list_price,{cached:.075,input:1.5,output:4.5,currency:'USD'});
+ const qwenCfgs=joined.configurations.filter(c=>joined.mappings.some(m=>m.point_id===qwen.id&&m.configuration_id===c.configuration_id));
+ assert.ok(qwenCfgs.length>=4 && qwenCfgs.every(c=>c.model==='qwen4-max'));
+ const inkling=all.points.find(pt=>pt.id==='official-api:inkling-2-mini:tinker-sampling::inkling-2-mini');
+ assert.ok(inkling && inkling.price_origin==='maintained-api');
+ assert.equal(inkling.channel,'Thinking Machines');
+ assert.ok(Math.abs(inkling.real_usd_per_mtok-.0208)<1e-12);
+ const inkCfgs=joined.configurations.filter(c=>joined.mappings.some(m=>m.point_id===inkling.id&&m.configuration_id===c.configuration_id));
+ assert.ok(inkCfgs.length>=2 && inkCfgs.every(c=>c.model==='inkling-2-mini'));
 });

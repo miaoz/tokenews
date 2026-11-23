@@ -90,6 +90,56 @@
         "en": "Default uses the published regular USD list. The official page also lists a temporary discount without an end date; console prices and billing records prevail.",
         "zh": "默认采用官方美元常规标价。官方同时列有未注明截止日的限时优惠；实际以控制台及账单为准。"
       }
+    },
+    {
+      "id": "longcat-2.5",
+      "source": "https://longcat.chat/platform/docs/pricing/longcat-2.5",
+      "checkedAt": "2026-11-22",
+      "defaultVariant": "usd-promotion",
+      "variants": [
+        {
+          "id": "usd-promotion",
+          "label": {
+            "en": "LongCat API · USD limited-time discount",
+            "zh": "LongCat API · 美元限时优惠"
+          },
+          "currency": "USD",
+          "region": "LongCat API",
+          "serviceTier": "promotion",
+          "context": {
+            "min": 0,
+            "max": 1000000
+          },
+          "rates": {
+            "input": 0.3,
+            "cachedInput": 0.006,
+            "output": 1.2
+          }
+        },
+        {
+          "id": "cny-promotion",
+          "label": {
+            "en": "LongCat API · CNY limited-time discount",
+            "zh": "LongCat API · 人民币限时优惠"
+          },
+          "currency": "CNY",
+          "region": "LongCat API",
+          "serviceTier": "promotion",
+          "context": {
+            "min": 0,
+            "max": 1000000
+          },
+          "rates": {
+            "input": 2,
+            "cachedInput": 0.04,
+            "output": 8
+          }
+        }
+      ],
+      "notes": {
+        "en": "The official LongCat-2.5 pricing page currently publishes only a limited-time discounted table ($0.30 input / $0.006 cached / $1.20 output, or ¥2 / ¥0.04 / ¥8) with no published end date; console prices and billing records are authoritative.",
+        "zh": "LongCat-2.5 官方定价页目前仅公布未注明截止日的限时优惠价（$0.30 输入 / $0.006 缓存 / $1.20 输出，或 ¥2 / ¥0.04 / ¥8），实际以控制台展示与账单为准。"
+      }
     }
   ]
 }

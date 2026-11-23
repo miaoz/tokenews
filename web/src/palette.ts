@@ -5,6 +5,7 @@ export const channelColors: Record<string, string> = {
   ...palette.colors,
   Meta: '#0866FF',
   Baseten: '#198A65',
+  'Thinking Machines': '#6366F1',
 };
 export const FALLBACK_COLOR = palette.fallback;
 export const FRONTIER_COLOR = palette.frontier;

@@ -1,0 +1,117 @@
+{
+  "checkedAt": "2026-11-22",
+  "scope": "Verify official API pricing and release identities for Alibaba Qwen4 Max, Thinking Machines Inkling 2 Mini and Inkling 2 Small, and Meituan LongCat 2.5.",
+  "models": [
+    {
+      "model": "qwen4-max",
+      "releaseDate": "2026-11-16",
+      "status": "reviewed-official-api",
+      "sources": [
+        "https://www.alibabacloud.com/help/en/model-studio/qwen4-max",
+        "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+        "https://platform.qianwenai.com/docs/developer-guides/getting-started/model-prices"
+      ],
+      "officialTerms": {
+        "endpoint": "qwen4-max",
+        "contextWindow": 1000000,
+        "currency": "USD / CNY",
+        "unit": "per_million_tokens",
+        "singaporeImplicit": {
+          "input": 1.5,
+          "cachedInput": 0.075,
+          "cacheWrite": 1.5,
+          "output": 4.5
+        },
+        "singaporeExplicit": {
+          "cachedInput": 0.075,
+          "cacheWrite5m": 1.875,
+          "cacheWrite1h": 3
+        },
+        "beijingGlobalUsd": {
+          "input": 1.413,
+          "cachedInput": 0.071,
+          "cacheWrite5m": 1.767,
+          "cacheWrite1h": 2.827,
+          "output": 4.24,
+          "batchFile": {
+            "input": 0.707,
+            "output": 2.12
+          }
+        },
+        "chinaMainlandCny": {
+          "input": 10,
+          "cachedInput": 0.5,
+          "cacheWrite5m": 12.5,
+          "cacheWrite1h": 20,
+          "output": 30
+        }
+      },
+      "workload": "Comparison API point uses Singapore international implicit cache (97% cached $0.075 + 2.5% input $1.50 + 0.5% output $4.50) = $0.13275/MTok."
+    },
+    {
+      "model": "inkling-2-mini",
+      "releaseDate": "2026-11-20",
+      "status": "reviewed-official-api",
+      "sources": [
+        "https://thinkingmachines.ai/tinker/pricing/",
+        "https://tinker-docs.thinkingmachines.ai/tinker/models/models_and_pricing/"
+      ],
+      "officialTerms": {
+        "endpoint": "thinkingmachines/Inkling-2-Mini",
+        "contextWindow": 1000000,
+        "currency": "USD",
+        "unit": "per_million_tokens",
+        "tinkerSampling": {
+          "input": 0.15,
+          "cachedInput": 0.015,
+          "output": 0.5
+        }
+      },
+      "workload": "Comparison API point uses standard workload (97% cached $0.015 + 2.5% input $0.15 + 0.5% output $0.50) = $0.02080/MTok."
+    },
+    {
+      "model": "inkling-2-small",
+      "releaseDate": "2026-11-05",
+      "status": "reviewed-official-api",
+      "sources": [
+        "https://thinkingmachines.ai/tinker/pricing/",
+        "https://tinker-docs.thinkingmachines.ai/tinker/models/models_and_pricing/"
+      ],
+      "officialTerms": {
+        "endpoint": "thinkingmachines/Inkling-2-Small",
+        "contextWindow": 262144,
+        "currency": "USD",
+        "unit": "per_million_tokens",
+        "serverlessBeta": {
+          "input": 0.3,
+          "cachedInput": 0.03,
+          "output": 1
+        }
+      },
+      "workload": "Comparison API point uses standard workload (97% cached $0.03 + 2.5% input $0.30 + 0.5% output $1.00) = $0.04160/MTok."
+    },
+    {
+      "model": "longcat-2.5",
+      "releaseDate": "2026-11-02",
+      "status": "reviewed-official-reference-only",
+      "sources": [
+        "https://longcat.chat/platform/docs/pricing/longcat-2.5"
+      ],
+      "officialTerms": {
+        "endpoint": "LongCat-2.5",
+        "contextWindow": 1000000,
+        "usdPromotion": {
+          "input": 0.3,
+          "cachedInput": 0.006,
+          "output": 1.2
+        },
+        "cnyPromotion": {
+          "input": 2,
+          "cachedInput": 0.04,
+          "output": 8
+        }
+      },
+      "note": "Limited-time promotional API table without a published end date; recorded as reference price without adding a separate metered chart point."
+    }
+  ]
+}

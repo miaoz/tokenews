@@ -70,6 +70,74 @@
       "additionalSources": [
         "https://tinker-docs.thinkingmachines.ai/tinker/models/models_and_pricing/"
       ]
+    },
+    {
+      "id": "inkling-2-mini",
+      "source": "https://thinkingmachines.ai/tinker/pricing/",
+      "additionalSources": [
+        "https://tinker-docs.thinkingmachines.ai/tinker/models/models_and_pricing/"
+      ],
+      "checkedAt": "2026-11-22",
+      "defaultVariant": "tinker-sampling",
+      "variants": [
+        {
+          "id": "tinker-sampling",
+          "label": {
+            "en": "Tinker API · sampling & prefill",
+            "zh": "Tinker API · 采样与预填充"
+          },
+          "currency": "USD",
+          "region": "Tinker API",
+          "serviceTier": "tinker-sampling",
+          "context": {
+            "min": 0,
+            "max": 1000000
+          },
+          "rates": {
+            "input": 0.15,
+            "cachedInput": 0.015,
+            "output": 0.5
+          }
+        }
+      ],
+      "notes": {
+        "en": "26B total / 5.4B active hybrid vision MoE (`thinkingmachines/Inkling-2-Mini`). Tinker documents prefill $0.15, cached prefill $0.015, and sample $0.50 per MTok with 64K/256K training context and 1M sampling context; fine-tuning/training rates ($0.75 at 64K, $1.50 at 256K) are separate.",
+        "zh": "26B 总参数 / 5.4B 激活参数的混合视觉 MoE（`thinkingmachines/Inkling-2-Mini`）。Tinker 官方公布预填充 $0.15、缓存预填充 $0.015、采样输出 $0.50/MTok，训练支持 64K/256K、采样支持 1M 上下文；微调训练费率（64K $0.75、256K $1.50）另计。"
+      }
+    },
+    {
+      "id": "inkling-2-small",
+      "source": "https://thinkingmachines.ai/tinker/pricing/",
+      "additionalSources": [
+        "https://tinker-docs.thinkingmachines.ai/tinker/models/models_and_pricing/"
+      ],
+      "checkedAt": "2026-11-22",
+      "defaultVariant": "serverless-beta",
+      "variants": [
+        {
+          "id": "serverless-beta",
+          "label": {
+            "en": "Tinker serverless inference · 256K",
+            "zh": "Tinker 无服务器推理 · 256K"
+          },
+          "currency": "USD",
+          "region": "Tinker API",
+          "serviceTier": "serverless-beta",
+          "context": {
+            "min": 0,
+            "max": 262144
+          },
+          "rates": {
+            "input": 0.3,
+            "cachedInput": 0.03,
+            "output": 1
+          }
+        }
+      ],
+      "notes": {
+        "en": "594B total / 17B active hybrid vision MoE (`thinkingmachines/Inkling-2-Small`). Tinker lists $0.30 input, $0.03 cached input, and $1.00 output per MTok on the 256K serverless inference table (Tinker docs also note up to 1M sampling context for 64K/256K training runs); training prices are separate.",
+        "zh": "594B 总参数 / 17B 激活参数的混合视觉 MoE（`thinkingmachines/Inkling-2-Small`）。Tinker 256K 无服务器推理表公布输入 $0.30、缓存输入 $0.03、输出 $1.00/MTok（文档另注明支持最高 1M 采样上下文）；训练费用另计。"
+      }
     }
   ]
 }
