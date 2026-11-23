@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "checkedAt": "2026-11-22T07:07:09.975Z",
+  "checkedAt": "2026-11-23T07:54:09.819Z",
   "intervalHours": 24,
-  "newEvents": 2,
+  "newEvents": 31,
   "pending": [
     {
       "id": "4533c6040aa95efeaf575f7486523b4550c1a1975e7ba1df4f0cfa6f888e5935",
@@ -21575,6 +21575,869 @@
         "relevant": true
       },
       "status": "pending"
+    },
+    {
+      "id": "83d83cbe3ff063fdb748975acd36e28885f212dc76a11605f869e5c7e96b27b4",
+      "sourceId": "command-code-go",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-23T07:54:09.819Z",
+      "url": "https://commandcode.ai/docs/plans/go",
+      "before": null,
+      "after": {
+        "key": "text:0047d407e77d3daedd1bce9275486a095caf8b7733aa5122c9847c2e77740fea",
+        "hash": "0047d407e77d3daedd1bce9275486a095caf8b7733aa5122c9847c2e77740fea",
+        "type": "announcement",
+        "signals": [
+          "promotion"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/docs/plans/go"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "996af8980fa89f3c91b2df6c51f2949e568c629c7e6cfd68a25e8689e91fd319",
+      "sourceId": "command-code-go",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-23T07:54:09.819Z",
+      "url": "https://commandcode.ai/docs/plans/go",
+      "before": null,
+      "after": {
+        "key": "row:v2:e9602f4baf5bb37d:0:Inkling 2 Mini:0",
+        "type": "table-row",
+        "label": "Inkling 2 Mini",
+        "heading": "Models included",
+        "columns": [
+          "Model ↕",
+          "Context ↕",
+          "Input ↕",
+          "Output ↕",
+          "Cache read ↕",
+          "Cache write ↕",
+          "Caps"
+        ],
+        "cells": [
+          "Inkling 2 Mini",
+          "1M",
+          "$0.075",
+          "$0.30",
+          "$0.015",
+          "—",
+          "+ 1"
+        ],
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://commandcode.ai/docs/plans/go",
+        "hash": "0987797250c7d12e50cec19e15b898fcff5958b37338a10ddbc5f91eb88f558f"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "8b6614d696d85cdace5204b0584c4017e221432be5dbffa1d06348f8a653e887",
+      "sourceId": "command-code-go",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-23T07:54:09.819Z",
+      "url": "https://commandcode.ai/docs/plans/go",
+      "before": null,
+      "after": {
+        "key": "text:08b27c93d35a34b1e5246a23acea5cf2724b228db175eaea344cafa325440c54",
+        "hash": "08b27c93d35a34b1e5246a23acea5cf2724b228db175eaea344cafa325440c54",
+        "type": "announcement",
+        "signals": [
+          "pricing",
+          "availability"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/docs/plans/go"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "2479367e13974452d1d1a4c6592570ebb1088a19eaed9136580471f94f2c8bcd",
+      "sourceId": "command-code-go",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-23T07:54:09.819Z",
+      "url": "https://commandcode.ai/docs/plans/go",
+      "before": null,
+      "after": {
+        "key": "row:v2:0630e53ae39d0083:0:Inkling 2 Mini:0",
+        "type": "table-row",
+        "label": "Inkling 2 Mini",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Requests / 5 hours",
+          "Requests / week",
+          "Requests / month"
+        ],
+        "cells": [
+          "Inkling 2 Mini",
+          "2,070",
+          "4,140",
+          "6,900"
+        ],
+        "signals": [],
+        "url": "https://commandcode.ai/docs/plans/go",
+        "hash": "51afbeb2bdb68261f0f9c0ea105f33194e6707655468361bb4371421c04a1e6b"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "1f3f09b076b2fe04e9a52b512643ff1ab00a66f90c3c562c9f3242389f79e5da",
+      "sourceId": "command-code-go",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-23T07:54:09.819Z",
+      "url": "https://commandcode.ai/docs/plans/go",
+      "before": null,
+      "after": {
+        "key": "row:v2:0630e53ae39d0083:2:Inkling 2 Mini:0",
+        "type": "table-row",
+        "label": "Inkling 2 Mini",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Input",
+          "Output",
+          "Cache Read",
+          "Cache Write",
+          "Monthly credits"
+        ],
+        "cells": [
+          "Inkling 2 Mini",
+          "$0.075",
+          "$0.30",
+          "$0.015",
+          "-",
+          "$6"
+        ],
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://commandcode.ai/docs/plans/go",
+        "hash": "e9c8aa8ddbe118b9f2b380268a6d34d4aa50749227e219e34106ab69ff1fbb9f"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "4240ab8ea64aa414bcf7b3d11c12118cf623ecbfe973332d1fa7443ed854d1c3",
+      "sourceId": "command-code-goat",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-23T07:54:09.819Z",
+      "url": "https://commandcode.ai/docs/plans/goat",
+      "before": null,
+      "after": {
+        "key": "text:3cc09ad8e3b021a2284d03e0cd993d42c0d4c84f8fb1f9c567f7e839f2aaf78d",
+        "hash": "3cc09ad8e3b021a2284d03e0cd993d42c0d4c84f8fb1f9c567f7e839f2aaf78d",
+        "type": "announcement",
+        "signals": [
+          "promotion"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/docs/plans/goat"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "d76cbd00173ffa8baae08d6187c0a1b0efa59de2c23df37e82ea5c13090f1e56",
+      "sourceId": "command-code-goat",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-23T07:54:09.819Z",
+      "url": "https://commandcode.ai/docs/plans/goat",
+      "before": null,
+      "after": {
+        "key": "row:v2:5fc247816328732d:0:Inkling 2 Mini:0",
+        "type": "table-row",
+        "label": "Inkling 2 Mini",
+        "heading": "Models included",
+        "columns": [
+          "Model ↕",
+          "Context ↕",
+          "Input ↕",
+          "Output ↕",
+          "Cache read ↕",
+          "Cache write ↕",
+          "Caps"
+        ],
+        "cells": [
+          "Inkling 2 Mini",
+          "1M",
+          "$0.075",
+          "$0.30",
+          "$0.015",
+          "—",
+          "+ 1"
+        ],
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://commandcode.ai/docs/plans/goat",
+        "hash": "0987797250c7d12e50cec19e15b898fcff5958b37338a10ddbc5f91eb88f558f"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "c1c9ed4cb6d8ccb7710229dab432a8ffa8545ef7075a94e1cddc4b0755728f16",
+      "sourceId": "command-code-goat",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-23T07:54:09.819Z",
+      "url": "https://commandcode.ai/docs/plans/goat",
+      "before": null,
+      "after": {
+        "key": "text:38e46e8c697f1a71c2a2c394f995c4ea77b0060a38cb212b1dce494840d10b10",
+        "hash": "38e46e8c697f1a71c2a2c394f995c4ea77b0060a38cb212b1dce494840d10b10",
+        "type": "announcement",
+        "signals": [
+          "pricing",
+          "availability"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/docs/plans/goat"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "38a8adc2c225b0b2c2e5b15f5dfcf3b621f0cd7362e62ae4f01501e110292c13",
+      "sourceId": "command-code-goat",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-23T07:54:09.819Z",
+      "url": "https://commandcode.ai/docs/plans/goat",
+      "before": null,
+      "after": {
+        "key": "row:v2:ba75eaf2cac81cb2:0:Inkling 2 Mini:0",
+        "type": "table-row",
+        "label": "Inkling 2 Mini",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Requests / 5 hours",
+          "Requests / week",
+          "Requests / month"
+        ],
+        "cells": [
+          "Inkling 2 Mini",
+          "3,450",
+          "8,620",
+          "17,200"
+        ],
+        "signals": [],
+        "url": "https://commandcode.ai/docs/plans/goat",
+        "hash": "e7a6065e8646f6a887854fd930958b558a692ed9fb72c9673071c927c7239689"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "ccbacfa726b0188f1d125d8204496b4ba33ffb9d9437f4a27a348f5c80757ff3",
+      "sourceId": "command-code-goat",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-23T07:54:09.819Z",
+      "url": "https://commandcode.ai/docs/plans/goat",
+      "before": null,
+      "after": {
+        "key": "text:3e83c553be1c172a1da1dfe640a46c55cfec0cd9107671f8717e4597ceefb759",
+        "hash": "3e83c553be1c172a1da1dfe640a46c55cfec0cd9107671f8717e4597ceefb759",
+        "type": "announcement",
+        "signals": [
+          "pricing",
+          "promotion",
+          "availability"
+        ],
+        "models": [
+          "Qwen 4 Max "
+        ],
+        "url": "https://commandcode.ai/docs/plans/goat"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "a930cd89524e3b343273354620b606f14f2a66cd658ac7ccff1e07efac479ae8",
+      "sourceId": "command-code-goat",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-23T07:54:09.819Z",
+      "url": "https://commandcode.ai/docs/plans/goat",
+      "before": null,
+      "after": {
+        "key": "row:v2:ba75eaf2cac81cb2:3:Inkling 2 Mini:0",
+        "type": "table-row",
+        "label": "Inkling 2 Mini",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Input",
+          "Output",
+          "Cache Read",
+          "Cache Write",
+          "Monthly credits"
+        ],
+        "cells": [
+          "Inkling 2 Mini",
+          "$0.075",
+          "$0.30",
+          "$0.015",
+          "-",
+          "$15"
+        ],
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://commandcode.ai/docs/plans/goat",
+        "hash": "d36a64da072494761a73f316831b3dde1307bc2b385d0840910c7088d0ed72e8"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "6df91aea3f2be135cd06687601e3ef4d75bdf10cee272a3ee20f454bfb78edc9",
+      "sourceId": "command-code-pro",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-23T07:54:09.819Z",
+      "url": "https://commandcode.ai/docs/plans/pro",
+      "before": null,
+      "after": {
+        "key": "text:7f96facff1566b11e7605991c8bb80137b546dbcedabe5327495a5f076a7edc9",
+        "hash": "7f96facff1566b11e7605991c8bb80137b546dbcedabe5327495a5f076a7edc9",
+        "type": "announcement",
+        "signals": [
+          "promotion"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/docs/plans/pro"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "c972a1fce8ed0896acb2798155d9bc333186b327cbce989ae493b10883635336",
+      "sourceId": "command-code-pro",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-23T07:54:09.819Z",
+      "url": "https://commandcode.ai/docs/plans/pro",
+      "before": null,
+      "after": {
+        "key": "row:v2:20d53e007c5a4d72:0:Inkling 2 Mini:0",
+        "type": "table-row",
+        "label": "Inkling 2 Mini",
+        "heading": "Models included",
+        "columns": [
+          "Model ↕",
+          "Context ↕",
+          "Input ↕",
+          "Output ↕",
+          "Cache read ↕",
+          "Cache write ↕",
+          "Caps"
+        ],
+        "cells": [
+          "Inkling 2 Mini",
+          "1M",
+          "$0.075",
+          "$0.30",
+          "$0.015",
+          "—",
+          "+ 1"
+        ],
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://commandcode.ai/docs/plans/pro",
+        "hash": "0987797250c7d12e50cec19e15b898fcff5958b37338a10ddbc5f91eb88f558f"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "37ceadafd7d5fb45f54de77a41fffd468dd0cf709bea04b10c938f12465e3c31",
+      "sourceId": "command-code-pro",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-23T07:54:09.819Z",
+      "url": "https://commandcode.ai/docs/plans/pro",
+      "before": null,
+      "after": {
+        "key": "text:af7c011442ebc3dea90b1bfa7220697f90b7ec841986ce4247ea7d0cec83536b",
+        "hash": "af7c011442ebc3dea90b1bfa7220697f90b7ec841986ce4247ea7d0cec83536b",
+        "type": "announcement",
+        "signals": [
+          "pricing",
+          "availability"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/docs/plans/pro"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "7380290eb7f877804a82edb4631e079e0d1480d4de426f66edc4d619251057b1",
+      "sourceId": "command-code-pro",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-23T07:54:09.819Z",
+      "url": "https://commandcode.ai/docs/plans/pro",
+      "before": null,
+      "after": {
+        "key": "row:v2:00a20accdbd25290:0:Inkling 2 Mini:0",
+        "type": "table-row",
+        "label": "Inkling 2 Mini",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Requests / 5 hours",
+          "Requests / week",
+          "Requests / month"
+        ],
+        "cells": [
+          "Inkling 2 Mini",
+          "5,750",
+          "14,400",
+          "28,700"
+        ],
+        "signals": [],
+        "url": "https://commandcode.ai/docs/plans/pro",
+        "hash": "0d60e36cd44823978cb23ff9af08e40cf7690dfab1358fd65ac9782a5b00f460"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "1e4f4194a8b145ccde4f6f64bf359fdeb1d339cb9a792069635391ef4d60dfcd",
+      "sourceId": "command-code-pro",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-23T07:54:09.819Z",
+      "url": "https://commandcode.ai/docs/plans/pro",
+      "before": null,
+      "after": {
+        "key": "text:c8cccffc7185eaf96cf073eee3f0bd5215c73aa12b2b7a1422d240d3cdf69c25",
+        "hash": "c8cccffc7185eaf96cf073eee3f0bd5215c73aa12b2b7a1422d240d3cdf69c25",
+        "type": "announcement",
+        "signals": [
+          "pricing",
+          "availability"
+        ],
+        "models": [
+          "Qwen 4 Max "
+        ],
+        "url": "https://commandcode.ai/docs/plans/pro"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "d7f806ed937f90215e1ccc5bb2de1d5321c695ea9afff9dc8bbd42b7dcc5eae2",
+      "sourceId": "command-code-pro",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-23T07:54:09.819Z",
+      "url": "https://commandcode.ai/docs/plans/pro",
+      "before": null,
+      "after": {
+        "key": "row:v2:37ebc8270b944870:0:Inkling 2 Mini:0",
+        "type": "table-row",
+        "label": "Inkling 2 Mini",
+        "heading": "New open models",
+        "columns": [
+          "Model",
+          "Input",
+          "Output",
+          "Cache Read",
+          "Cache Write",
+          "Monthly credits"
+        ],
+        "cells": [
+          "Inkling 2 Mini",
+          "$0.075",
+          "$0.30",
+          "$0.015",
+          "-",
+          "$25"
+        ],
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://commandcode.ai/docs/plans/pro",
+        "hash": "c234e6c0eae8256581636494e5adf1c1704b145febfc7d466305b5e8a8825d08"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "fc5a893fc63769de867537145935ab7d0670635f09b18e6298d41f7d8a876ee9",
+      "sourceId": "command-code-max",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-23T07:54:09.819Z",
+      "url": "https://commandcode.ai/models",
+      "before": null,
+      "after": {
+        "key": "text:5dd14ca5c84dd789da3ed81580725042fff4a2718dd9fefa65fa50cd685756f6",
+        "hash": "5dd14ca5c84dd789da3ed81580725042fff4a2718dd9fefa65fa50cd685756f6",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [
+          "Claude Opus",
+          "Claude Fable"
+        ],
+        "url": "https://commandcode.ai/models"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "98aab0c52fd1cd9b7c83cdbb849f5d0206f0f02de7aa2fd4ad5684daa68582c1",
+      "sourceId": "command-code-max",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-23T07:54:09.819Z",
+      "url": "https://commandcode.ai/docs/plans/max",
+      "before": null,
+      "after": {
+        "key": "row:v2:49da236506327215:0:Inkling 2 Mini:0",
+        "type": "table-row",
+        "label": "Inkling 2 Mini",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Requests / 5 hours",
+          "Requests / week",
+          "Requests / month"
+        ],
+        "cells": [
+          "Inkling 2 Mini",
+          "51,700",
+          "103,000",
+          "172,000"
+        ],
+        "signals": [],
+        "url": "https://commandcode.ai/docs/plans/max",
+        "hash": "6254cec8e43d297fb7a56eb6c1a00c9667007c9d785b6c9801e93aaf18378e4d"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "b67d000b9b3b288e9e3a0932f4087a178452823f9a265af9df0d584657d1b8b1",
+      "sourceId": "command-code-max",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-23T07:54:09.819Z",
+      "url": "https://commandcode.ai/docs/plans/max",
+      "before": null,
+      "after": {
+        "key": "row:v2:49da236506327215:1:Inkling 2 Mini:0",
+        "type": "table-row",
+        "label": "Inkling 2 Mini",
+        "heading": "Usage limits",
+        "columns": [
+          "Model",
+          "Input",
+          "Output",
+          "Cache Read",
+          "Cache Write",
+          "Max 10× credits",
+          "Max 20× credits"
+        ],
+        "cells": [
+          "Inkling 2 Mini",
+          "$0.075",
+          "$0.30",
+          "$0.015",
+          "-",
+          "$150",
+          "$300"
+        ],
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://commandcode.ai/docs/plans/max",
+        "hash": "2d4062c7ba51feec89657537daaefd7b5a1b3f8f65f6fc7a1e9ed25d8bdd5420"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "ec2872a7b7098bd0ccd2f38484355af6734a49b2383d216cdd621e8af45b8d7a",
+      "sourceId": "command-code-models",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-23T07:54:09.819Z",
+      "url": "https://commandcode.ai/docs/reference/cli/models",
+      "before": null,
+      "after": {
+        "key": "row:v2:4891f56ff33e5c92:0:thinkingmachines/inkling-2-mini Copy model id:0",
+        "type": "table-row",
+        "label": "thinkingmachines/inkling-2-mini Copy model id",
+        "heading": "Thinking Machines",
+        "columns": [
+          "Model ID",
+          "Name",
+          "Capabilities",
+          "Best for"
+        ],
+        "cells": [
+          "thinkingmachines/inkling-2-mini Copy model id",
+          "Inkling 2 Mini",
+          "+ 1",
+          "compact multimodal reasoning with 1M context"
+        ],
+        "signals": [
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/reference/cli/models",
+        "hash": "0c159a547842c8496c87a0fdf23bcec79c96a8b338409f54418aff620596e38c"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "de01c5a5a2a71cbca9852e94f026770cc1094d3a8597cfaeb77ef4bde8d5621c",
+      "sourceId": "command-code-terms",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-23T07:54:09.819Z",
+      "url": "https://commandcode.ai/docs/resources/pricing-limits",
+      "before": null,
+      "after": {
+        "key": "text:0e106ee107a211fbd1c5c521e344825dec5b23a9b7d607dc77d2fa875917061e",
+        "hash": "0e106ee107a211fbd1c5c521e344825dec5b23a9b7d607dc77d2fa875917061e",
+        "type": "announcement",
+        "signals": [],
+        "models": [],
+        "url": "https://commandcode.ai/docs/resources/pricing-limits"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "ae2e482a5a94510e9088537b6c8afe2952276e99a9d8188608abd03cc7764e1d",
+      "sourceId": "command-code-terms",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-23T07:54:09.819Z",
+      "url": "https://commandcode.ai/docs/resources/pricing-limits",
+      "before": null,
+      "after": {
+        "key": "text:7b52a00a163958834ffcee7f86e61b54ce8a218aa18f38067da93faaf5dec3d0",
+        "hash": "7b52a00a163958834ffcee7f86e61b54ce8a218aa18f38067da93faaf5dec3d0",
+        "type": "announcement",
+        "signals": [
+          "promotion"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/docs/resources/pricing-limits"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "cd1f1cba69f2b0957335727812d6c8289ac3c07654e39e1ced92f3e2ea5312ee",
+      "sourceId": "command-code-terms",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-23T07:54:09.819Z",
+      "url": "https://commandcode.ai/docs/resources/pricing-limits",
+      "before": null,
+      "after": {
+        "key": "text:9b2624b66d9f8bbe264a73b725b36a348e961fda4bc8b2b7dc414a7253733559",
+        "hash": "9b2624b66d9f8bbe264a73b725b36a348e961fda4bc8b2b7dc414a7253733559",
+        "type": "announcement",
+        "signals": [
+          "pricing",
+          "availability"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/docs/resources/pricing-limits"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "8762f0c31ef1946ce10d3a52c270cbdb38a92c6df178b105599e42835a03abce",
+      "sourceId": "command-code-releases",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-23T07:54:09.819Z",
+      "url": "https://commandcode.ai/changelog",
+      "before": null,
+      "after": {
+        "key": "text:0ae23e64646e953d2235da2dddc739995ae1f0243747305df8de56115d413721",
+        "hash": "0ae23e64646e953d2235da2dddc739995ae1f0243747305df8de56115d413721",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [
+          "DeepSeek now follow "
+        ],
+        "url": "https://commandcode.ai/changelog"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "a7409c92aaeaa46a450bf1cdbd081e7366c8a6245deb8f399bbc3e1e7b5f54b4",
+      "sourceId": "command-code-releases",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-23T07:54:09.819Z",
+      "url": "https://commandcode.ai/changelog",
+      "before": null,
+      "after": {
+        "key": "text:81e8d7301b2f25439a8f95c71608d32f1a6fbdabd735302a489eb934fd054624",
+        "hash": "81e8d7301b2f25439a8f95c71608d32f1a6fbdabd735302a489eb934fd054624",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/changelog"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "1c2c4123bdda6c3813c343aec4de280716a1f00b080e5d56b00734bcfce09ab1",
+      "sourceId": "factory-models",
+      "channel": "Factory",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-23T07:54:09.819Z",
+      "url": "https://docs.factory.com/models.md",
+      "before": null,
+      "after": {
+        "key": "row:v2:576cbe8c59cb4b7c:0:GPT-5.6 Sol:0",
+        "type": "table-row",
+        "label": "GPT-5.6 Sol",
+        "heading": "<span className=\"provider-heading\"><img src=\"/docs-assets/images/model-icons/openai.svg\" alt=\"OpenAI logo\" className=\"provider-icon openai-icon\" />Ope",
+        "columns": [
+          "Model",
+          "Model ID",
+          "Multiplier",
+          "Reasoning"
+        ],
+        "cells": [
+          "GPT-5.6 Sol",
+          "`gpt-5.6-sol`",
+          "2×",
+          "`none`, `low`, `medium` (default), `high`, `xhigh`, `max`"
+        ],
+        "signals": [],
+        "url": "https://docs.factory.com/models.md",
+        "hash": "fd7664c547c854b3d796ec8ec256eb4a589f00a81ec5c75b667eb42e9fb4452e"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "d6ea3482e75954c4d72d8956dfa4fed1276e53eab2a2b6a3ec9a2bdb3f6d0b39",
+      "sourceId": "factory-models",
+      "channel": "Factory",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-23T07:54:09.819Z",
+      "url": "https://docs.factory.com/models.md",
+      "before": null,
+      "after": {
+        "key": "row:v2:576cbe8c59cb4b7c:0:GPT-5.6 Sol Fast:0",
+        "type": "table-row",
+        "label": "GPT-5.6 Sol Fast",
+        "heading": "<span className=\"provider-heading\"><img src=\"/docs-assets/images/model-icons/openai.svg\" alt=\"OpenAI logo\" className=\"provider-icon openai-icon\" />Ope",
+        "columns": [
+          "Model",
+          "Model ID",
+          "Multiplier",
+          "Reasoning"
+        ],
+        "cells": [
+          "GPT-5.6 Sol Fast",
+          "`gpt-5.6-sol-fast`",
+          "4×",
+          "`none`, `low`, `medium` (default), `high`, `xhigh`, `max`"
+        ],
+        "signals": [],
+        "url": "https://docs.factory.com/models.md",
+        "hash": "8c6741d73e83e8e77be1e48eddb14ea14b61df1ad27c895b0aa7ac1bb6b72c34"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "589f5532d2ff1ef639ded761edbb1bc6dd60f2e7f5d5bec7e54b598a0e27b482",
+      "sourceId": "factory-models",
+      "channel": "Factory",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-23T07:54:09.819Z",
+      "url": "https://docs.factory.com/models.md",
+      "before": {
+        "key": "row:v2:576cbe8c59cb4b7c:0:GPT-5.6 Sol<sup>†</sup>:0",
+        "type": "table-row",
+        "label": "GPT-5.6 Sol<sup>†</sup>",
+        "heading": "<span className=\"provider-heading\"><img src=\"/docs-assets/images/model-icons/openai.svg\" alt=\"OpenAI logo\" className=\"provider-icon openai-icon\" />Ope",
+        "columns": [
+          "Model",
+          "Model ID",
+          "Multiplier",
+          "Reasoning"
+        ],
+        "cells": [
+          "GPT-5.6 Sol<sup>†</sup>",
+          "`gpt-5.6-sol`",
+          "1.6×",
+          "`none`, `low`, `medium` (default), `high`, `xhigh`, `max`"
+        ],
+        "signals": [],
+        "url": "https://docs.factory.com/models.md",
+        "hash": "469b40b8dcfc98364a4d1230b72efc5a3efca549ee1df2129ca58d879a22e7b7"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "8d5571c239117790183631afe40545f46c8bc15e6c6d5a935292e6ca73fdc464",
+      "sourceId": "factory-models",
+      "channel": "Factory",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-23T07:54:09.819Z",
+      "url": "https://docs.factory.com/models.md",
+      "before": {
+        "key": "row:v2:576cbe8c59cb4b7c:0:GPT-5.6 Sol Fast<sup>†</sup>:0",
+        "type": "table-row",
+        "label": "GPT-5.6 Sol Fast<sup>†</sup>",
+        "heading": "<span className=\"provider-heading\"><img src=\"/docs-assets/images/model-icons/openai.svg\" alt=\"OpenAI logo\" className=\"provider-icon openai-icon\" />Ope",
+        "columns": [
+          "Model",
+          "Model ID",
+          "Multiplier",
+          "Reasoning"
+        ],
+        "cells": [
+          "GPT-5.6 Sol Fast<sup>†</sup>",
+          "`gpt-5.6-sol-fast`",
+          "3.2×",
+          "`none`, `low`, `medium` (default), `high`, `xhigh`, `max`"
+        ],
+        "signals": [],
+        "url": "https://docs.factory.com/models.md",
+        "hash": "3d96d540d1c93480cd2a86ee5bc2f2b2050305d600322fcdf31b50da1d913237"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "2ab9127191e4c94bb44c0b56857b11e7ebc4da2435218e080b809608fe743f8c",
+      "sourceId": "command-code-social",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-23T07:54:09.819Z",
+      "url": "https://x.com/CommandCodeAI/status/2124705337303568661",
+      "before": null,
+      "after": {
+        "key": "post:2124705337303568661",
+        "type": "announcement",
+        "hash": "78bac5f8e7a2e8c44465aafde4b8575d23e4475aec35251b8a8026c5f66f05a4",
+        "signals": [
+          "availability"
+        ],
+        "models": [],
+        "url": "https://x.com/CommandCodeAI/status/2124705337303568661",
+        "relevant": true
+      },
+      "status": "pending"
     }
   ],
   "resolvedCount": 433,
@@ -21584,12 +22447,12 @@
       "channel": "OpenCode",
       "url": "https://opencode.ai/v2/docs/console/go/",
       "kind": "tables",
-      "attemptedAt": "2026-11-22T07:07:09.975Z",
+      "attemptedAt": "2026-11-23T07:54:09.819Z",
       "lastSuccessAt": "2026-11-16T06:49:25.500Z",
       "status": "failed",
-      "consecutiveFailures": 6,
+      "consecutiveFailures": 7,
       "retrieval": "http",
-      "error": "Source structure changed: 48 records, expected at least 60; fallback: Source structure changed: 48 records, expected at least 60",
+      "error": "Source structure changed: 47 records, expected at least 60; fallback: Source structure changed: 47 records, expected at least 60",
       "recordCount": 419
     },
     {
@@ -21597,8 +22460,8 @@
       "channel": "OpenCode",
       "url": "https://opencode.ai/changelog",
       "kind": "document",
-      "attemptedAt": "2026-11-22T07:07:09.975Z",
-      "lastSuccessAt": "2026-11-22T07:07:09.975Z",
+      "attemptedAt": "2026-11-23T07:54:09.819Z",
+      "lastSuccessAt": "2026-11-23T07:54:09.819Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -21609,68 +22472,68 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/go",
       "kind": "tables",
-      "attemptedAt": "2026-11-22T07:07:09.975Z",
-      "lastSuccessAt": "2026-11-22T07:07:09.975Z",
+      "attemptedAt": "2026-11-23T07:54:09.819Z",
+      "lastSuccessAt": "2026-11-23T07:54:09.819Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 224
+      "recordCount": 227
     },
     {
       "id": "command-code-goat",
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/goat",
       "kind": "tables",
-      "attemptedAt": "2026-11-22T07:07:09.975Z",
-      "lastSuccessAt": "2026-11-22T07:07:09.975Z",
+      "attemptedAt": "2026-11-23T07:54:09.819Z",
+      "lastSuccessAt": "2026-11-23T07:54:09.819Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 271
+      "recordCount": 274
     },
     {
       "id": "command-code-pro",
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/pro",
       "kind": "tables",
-      "attemptedAt": "2026-11-22T07:07:09.975Z",
-      "lastSuccessAt": "2026-11-22T07:07:09.975Z",
+      "attemptedAt": "2026-11-23T07:54:09.819Z",
+      "lastSuccessAt": "2026-11-23T07:54:09.819Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 330
+      "recordCount": 333
     },
     {
       "id": "command-code-max",
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/max",
       "kind": "tables",
-      "attemptedAt": "2026-11-22T07:07:09.975Z",
-      "lastSuccessAt": "2026-11-22T07:07:09.975Z",
+      "attemptedAt": "2026-11-23T07:54:09.819Z",
+      "lastSuccessAt": "2026-11-23T07:54:09.819Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 283
+      "recordCount": 285
     },
     {
       "id": "command-code-models",
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/reference/cli/models",
       "kind": "tables",
-      "attemptedAt": "2026-11-22T07:07:09.975Z",
-      "lastSuccessAt": "2026-11-22T07:07:09.975Z",
+      "attemptedAt": "2026-11-23T07:54:09.819Z",
+      "lastSuccessAt": "2026-11-23T07:54:09.819Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 132
+      "recordCount": 133
     },
     {
       "id": "command-code-terms",
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/resources/pricing-limits",
       "kind": "tables",
-      "attemptedAt": "2026-11-22T07:07:09.975Z",
-      "lastSuccessAt": "2026-11-22T07:07:09.975Z",
+      "attemptedAt": "2026-11-23T07:54:09.819Z",
+      "lastSuccessAt": "2026-11-23T07:54:09.819Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -21681,20 +22544,20 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/changelog",
       "kind": "document",
-      "attemptedAt": "2026-11-22T07:07:09.975Z",
-      "lastSuccessAt": "2026-11-22T07:07:09.975Z",
+      "attemptedAt": "2026-11-23T07:54:09.819Z",
+      "lastSuccessAt": "2026-11-23T07:54:09.819Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 407
+      "recordCount": 409
     },
     {
       "id": "ollama-pricing",
       "channel": "Ollama",
       "url": "https://ollama.com/pricing",
       "kind": "tables",
-      "attemptedAt": "2026-11-22T07:07:09.975Z",
-      "lastSuccessAt": "2026-11-22T07:07:09.975Z",
+      "attemptedAt": "2026-11-23T07:54:09.819Z",
+      "lastSuccessAt": "2026-11-23T07:54:09.819Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -21705,8 +22568,8 @@
       "channel": "Ollama",
       "url": "https://ollama.com/blog",
       "kind": "document",
-      "attemptedAt": "2026-11-22T07:07:09.975Z",
-      "lastSuccessAt": "2026-11-22T07:07:09.975Z",
+      "attemptedAt": "2026-11-23T07:54:09.819Z",
+      "lastSuccessAt": "2026-11-23T07:54:09.819Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -21717,20 +22580,20 @@
       "channel": "Factory",
       "url": "https://docs.factory.com/models.md",
       "kind": "tables",
-      "attemptedAt": "2026-11-22T07:07:09.975Z",
-      "lastSuccessAt": "2026-11-22T07:07:09.975Z",
+      "attemptedAt": "2026-11-23T07:54:09.819Z",
+      "lastSuccessAt": "2026-11-23T07:54:09.819Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 104
+      "recordCount": 102
     },
     {
       "id": "factory-plans",
       "channel": "Factory",
       "url": "https://docs.factory.com/pricing/individuals.md",
       "kind": "document",
-      "attemptedAt": "2026-11-22T07:07:09.975Z",
-      "lastSuccessAt": "2026-11-22T07:07:09.975Z",
+      "attemptedAt": "2026-11-23T07:54:09.819Z",
+      "lastSuccessAt": "2026-11-23T07:54:09.819Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -21741,8 +22604,8 @@
       "channel": "Factory",
       "url": "https://docs.factory.com/changelog/release-notes.md",
       "kind": "document",
-      "attemptedAt": "2026-11-22T07:07:09.975Z",
-      "lastSuccessAt": "2026-11-22T07:07:09.975Z",
+      "attemptedAt": "2026-11-23T07:54:09.819Z",
+      "lastSuccessAt": "2026-11-23T07:54:09.819Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -21753,8 +22616,8 @@
       "channel": "Cursor",
       "url": "https://cursor.com/docs/models-and-pricing",
       "kind": "tables",
-      "attemptedAt": "2026-11-22T07:07:09.975Z",
-      "lastSuccessAt": "2026-11-22T07:07:09.975Z",
+      "attemptedAt": "2026-11-23T07:54:09.819Z",
+      "lastSuccessAt": "2026-11-23T07:54:09.819Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -21765,8 +22628,8 @@
       "channel": "Cursor",
       "url": "https://cursor.com/changelog",
       "kind": "document",
-      "attemptedAt": "2026-11-22T07:07:09.975Z",
-      "lastSuccessAt": "2026-11-22T07:07:09.975Z",
+      "attemptedAt": "2026-11-23T07:54:09.819Z",
+      "lastSuccessAt": "2026-11-23T07:54:09.819Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -21777,8 +22640,8 @@
       "channel": "Devin",
       "url": "https://docs.devin.ai/release-notes/overview",
       "kind": "document",
-      "attemptedAt": "2026-11-22T07:07:09.975Z",
-      "lastSuccessAt": "2026-11-22T07:07:09.975Z",
+      "attemptedAt": "2026-11-23T07:54:09.819Z",
+      "lastSuccessAt": "2026-11-23T07:54:09.819Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -21789,8 +22652,8 @@
       "channel": "Alibaba",
       "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan",
       "kind": "tables",
-      "attemptedAt": "2026-11-22T07:07:09.975Z",
-      "lastSuccessAt": "2026-11-22T07:07:09.975Z",
+      "attemptedAt": "2026-11-23T07:54:09.819Z",
+      "lastSuccessAt": "2026-11-23T07:54:09.819Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -21801,8 +22664,8 @@
       "channel": "Alibaba",
       "url": "https://help.aliyun.com/zh/model-studio/coding-plan",
       "kind": "tables",
-      "attemptedAt": "2026-11-22T07:07:09.975Z",
-      "lastSuccessAt": "2026-11-22T07:07:09.975Z",
+      "attemptedAt": "2026-11-23T07:54:09.819Z",
+      "lastSuccessAt": "2026-11-23T07:54:09.819Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -21813,8 +22676,8 @@
       "channel": "Alibaba",
       "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
       "kind": "tables",
-      "attemptedAt": "2026-11-22T07:07:09.975Z",
-      "lastSuccessAt": "2026-11-22T07:07:09.975Z",
+      "attemptedAt": "2026-11-23T07:54:09.819Z",
+      "lastSuccessAt": "2026-11-23T07:54:09.819Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -21825,8 +22688,8 @@
       "channel": "OpenCode",
       "url": "https://x.com/opencode",
       "kind": "social",
-      "attemptedAt": "2026-11-22T07:07:09.975Z",
-      "lastSuccessAt": "2026-11-22T07:07:09.975Z",
+      "attemptedAt": "2026-11-23T07:54:09.819Z",
+      "lastSuccessAt": "2026-11-23T07:54:09.819Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "official-oembed; discovery may use mirror",
@@ -21837,8 +22700,8 @@
       "channel": "Command Code",
       "url": "https://x.com/CommandCodeAI",
       "kind": "social",
-      "attemptedAt": "2026-11-22T07:07:09.975Z",
-      "lastSuccessAt": "2026-11-22T07:07:09.975Z",
+      "attemptedAt": "2026-11-23T07:54:09.819Z",
+      "lastSuccessAt": "2026-11-23T07:54:09.819Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "official-oembed; discovery may use mirror",
