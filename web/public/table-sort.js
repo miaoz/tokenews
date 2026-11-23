@@ -6,6 +6,7 @@ document.querySelectorAll('table[data-sortable]').forEach((table) => {
   const collator = new Intl.Collator(document.documentElement.lang, { numeric: true });
   heads.forEach((head, column) => {
     const button = head.querySelector('button');
+    if (!button) return;
     button.addEventListener('click', () => {
       const previous = head.getAttribute('aria-sort');
       const direction = previous === 'none' ? button.dataset.defaultDirection
@@ -21,8 +22,10 @@ document.querySelectorAll('table[data-sortable]').forEach((table) => {
       });
       body.append(...rows);
       heads.forEach((h) => {
+        const indicator = h.querySelector('.sort-indicator');
+        if (!indicator) return;
         h.setAttribute('aria-sort', h === head ? direction : 'none');
-        h.querySelector('.sort-indicator').textContent = h === head
+        indicator.textContent = h === head
           ? direction === 'ascending' ? '↑' : '↓' : '↕';
       });
     });

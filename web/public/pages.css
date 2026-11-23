@@ -352,7 +352,7 @@ html[lang="zh-CN"] .kv dt {
   font-family: var(--font-mono);
   font-size: 12px;
 }
-.static-page [data-sortable] td:nth-child(5) {
+.static-page[data-section="models"] [data-sortable] td:nth-child(5) {
   min-width: 16em;
 }
 .static-page tbody th {

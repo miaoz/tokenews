@@ -180,6 +180,7 @@ const planName = (p, lang) => {
     " 日间": " (Day)",
     " 夜间0.8×": " (Night 0.8x)",
     "促销至 ": "promo until ",
+    "导入价至 ": "introductory price until ",
   };
   return Object.entries(words).reduce((s, [a, b]) => s.replaceAll(a, b), plan);
 };
@@ -540,7 +541,7 @@ ${jsonLd(ld)}
 <body>
 <a class="skip-link" href="#main">${t("Skip to content", "跳到正文")}</a>
 ${renderToStaticMarkup(createElement(SiteHeader, { lang, current: section, languageHref: alt ?? U.home(zh ? "en" : "zh") }))}
-<main id="main" class="page static-page">
+<main id="main" class="page static-page" data-section="${esc(section ?? "")}">
 <nav class="crumbs" aria-label="${t("Breadcrumb", "面包屑")}"><ol>${crumbs
     .map(([n, h], i) => (i === crumbs.length - 1 ? `<li aria-current="page">${esc(n)}</li>` : `<li><a href="${h}">${esc(n)}</a></li>`))
     .join("")}</ol></nav>
@@ -554,7 +555,7 @@ ${
   }${body}
 </main>
 ${renderToStaticMarkup(createElement(SiteFooter, { lang }))}
-${PAGE_SCRIPT}
+${PAGE_SCRIPT}${body.includes("data-sortable") ? '\n<script src="/table-sort.js" defer></script>' : ""}
 </body>
 </html>
 `;
@@ -570,11 +571,19 @@ const isFigure = (cell) => FIGURE.test(String(cell).replace(/<[^>]+>/g, "").trim
 const table = (caption, head, rows, sorting) => {
   const num = head.map((_, i) => i > 0 && rows.length > 0 && rows.every((r) => isFigure(r[i])) && rows.some((r) => String(r[i]).replace(/<[^>]+>/g, "").trim() !== "—"));
   const cls = (i) => (num[i] ? ' class="num"' : "");
-  return `<div class="table-wrap"><table${sorting ? ' data-sortable' : ""}><caption>${caption}</caption><thead><tr>${head
-    .map((h, i) => `<th scope="col"${cls(i)}${sorting ? ` aria-sort="${i === sorting.column ? sorting.direction : "none"}"` : ""}>${sorting ? `<button type="button" data-sort-type="${sorting.types[i]}" data-default-direction="${sorting.types[i] === "date" ? "descending" : "ascending"}">${h}<span class="sort-indicator" aria-hidden="true">${i === sorting.column ? "↓" : "↕"}</span></button>` : h}</th>`)
+  const activeSort = sorting && rows.length > 1 ? sorting : null;
+  return `<div class="table-wrap"><table${activeSort ? ' data-sortable' : ""}><caption>${caption}</caption><thead><tr>${head
+    .map((h, i) => {
+      const sortType = activeSort?.types[i];
+      if (!sortType) return `<th scope="col"${cls(i)}>${h}</th>`;
+      const defDir = activeSort.defaultDirections?.[i] ?? (sortType === "date" ? "descending" : "ascending");
+      const dir = i === activeSort.column ? activeSort.direction : "none";
+      const icon = i === activeSort.column ? (activeSort.direction === "ascending" ? "↑" : "↓") : "↕";
+      return `<th scope="col"${cls(i)} aria-sort="${dir}"><button type="button" data-sort-type="${sortType}" data-default-direction="${defDir}">${h}<span class="sort-indicator" aria-hidden="true">${icon}</span></button></th>`;
+    })
     .join("")}</tr></thead><tbody>${rows
     .map((r, row) => `<tr>${r.map((c, i) => {
-      const value = sorting ? ` data-sort-value="${esc(sorting.values[row][i])}"` : "";
+      const value = activeSort?.types[i] ? ` data-sort-value="${esc(activeSort.values[row][i] ?? "")}"` : "";
       return i === 0 ? `<th scope="row"${value}>${c}</th>` : `<td${cls(i)}${value}>${c}</td>`;
     }).join("")}</tr>`)
     .join("")}</tbody></table></div>`;
@@ -601,10 +610,15 @@ const realCell = (p, lang) =>
   unmetered(p)
     ? `≈$0 <small>${esc(unmeteredNote(p, lang))}</small>`
     : `<strong>${usd(p.real_usd_per_mtok)}</strong>${estimateNote(p,lang) ? `<small class="block">${esc(estimateNote(p,lang))}</small>` : ""}`;
-const vsList = (p) =>
+const CONF_RANK = { high: 3, medium: 2, low: 1 };
+const vsListRatio = (p) =>
   !unmetered(p) && p.list_blended_usd_per_mtok && p.billing !== "metered"
-    ? `${fmt(p.list_blended_usd_per_mtok / p.real_usd_per_mtok, "en", 1)}×`
-    : "—";
+    ? p.list_blended_usd_per_mtok / p.real_usd_per_mtok
+    : null;
+const vsList = (p) => {
+  const ratio = vsListRatio(p);
+  return ratio == null ? "—" : `${fmt(ratio, "en", 1)}×`;
+};
 const billingLabel = (p, lang) =>
   p.billing === "metered" ? (lang === "zh" ? "按量 API" : "Metered API") : lang === "zh" ? "订阅" : "Subscription";
 const feeCell = (p, lang) =>
@@ -904,6 +918,23 @@ ${table(
   t(`Every tracked way to use ${m.name}, cheapest first`, `所有可使用 ${m.name} 的套餐，按真实单价从低到高`),
   [t("Plan", "套餐"), t("Provider", "供应商"), t("Billing", "计费"), t("Monthly fee", "月费"), t("Monthly tokens", "月额度"), t("Real $/MTok", "真实单价 $/MTok"), t("vs API", "对比 API"), t("Confidence", "置信度"), t("Data date", "数据日期"), ""],
   planRows,
+  {
+    column: 5, direction: "ascending",
+    types: ["text", "text", "text", "number", "number", "number", "number", "number", "date", null],
+    defaultDirections: ["ascending", "ascending", "ascending", "ascending", "descending", "ascending", "descending", "descending", "descending", null],
+    values: m.points.map((p) => [
+      planName(p, lang),
+      p.channel,
+      billingLabel(p, lang),
+      p.price_usd,
+      p.monthly_tokens,
+      unmetered(p) ? 0 : p.real_usd_per_mtok,
+      vsListRatio(p),
+      CONF_RANK[p.confidence] ?? null,
+      p.data_date ?? null,
+      null,
+    ]),
+  },
 )}</section>
 <section aria-labelledby="evidence"><h2 id="evidence">${t("Behind each number", "每个数字背后的依据")}</h2>
 <p>${t("For every plan: the data date, the exact calculation, the quota basis, how leaderboard scores were mapped, and the original adoption evidence with its sources.", "每个套餐的数据日期、精确计算、额度口径、榜单分数的映射方式，以及原始采用依据与来源。")}</p>
@@ -967,6 +998,17 @@ ${table(
     s.cheapest ? planLink(s.cheapest, lang) : "—",
     String(s.points.length),
   ]),
+  {
+    column: 1, direction: "ascending",
+    types: ["text", "number", "text", "number"],
+    defaultDirections: ["ascending", "ascending", "ascending", "descending"],
+    values: siblings.map((s) => [
+      s.name,
+      s.cheapest ? s.cheapest.real_usd_per_mtok : (s.free.length ? 0 : null),
+      s.cheapest ? planName(s.cheapest, lang) : null,
+      s.points.length,
+    ]),
+  },
 )}</section>`
     : ""
 }`;
@@ -1040,13 +1082,13 @@ function makerPage(v, lang) {
       top ? `${fmt(top.best.score, lang, 1)} <small>${esc(boardName(top.board, lang))}</small>` : "—",
     ];
   });
-  const planRows = v.plans
+  const sortedPlans = v.plans
     .slice()
-    .sort((a, b) => (a.price_usd ?? Infinity) - (b.price_usd ?? Infinity) || planName(a, lang).localeCompare(planName(b, lang)))
-    .map((p) => {
-      const ms = [...new Set(v.points.filter((x) => x.plan_id === p.plan_id).map((x) => x.model))].map((id) => models.get(id));
-      return [planLink(p, lang), providerLink(p.channel, lang), billingLabel(p, lang), feeCell(p, lang), join(ms.map((x) => modelLink(x, lang)), lang)];
-    });
+    .sort((a, b) => (a.price_usd ?? Infinity) - (b.price_usd ?? Infinity) || planName(a, lang).localeCompare(planName(b, lang)));
+  const planRows = sortedPlans.map((p) => {
+    const ms = [...new Set(v.points.filter((x) => x.plan_id === p.plan_id).map((x) => x.model))].map((id) => models.get(id));
+    return [planLink(p, lang), providerLink(p.channel, lang), billingLabel(p, lang), feeCell(p, lang), join(ms.map((x) => modelLink(x, lang)), lang)];
+  });
   const org = {
     "@type": "Organization",
     "@id": `${abs(U.maker(v, "en"))}#org`,
@@ -1091,10 +1133,35 @@ ${table(
   t(`${isOther ? "Models" : v.name + " models"} by lowest real price`, `${vName} 模型，按最低真实单价排序`),
   [t("Model", "模型"), t("Lowest real $/MTok", "最低真实单价 $/MTok"), t("Cheapest plan", "最便宜的套餐"), t("API list (reference mix)", "API 标价（参考负载）"), t("API in / out per MTok", "API 输入 / 输出（每 MTok）"), t("Most monthly tokens", "最多月额度"), t("Plans", "套餐数"), t("Score", "分数")],
   rows,
+  {
+    column: 1, direction: "ascending",
+    types: ["text", "number", "text", "number", "number", "number", "number", null],
+    defaultDirections: ["ascending", "ascending", "ascending", "ascending", "ascending", "descending", "descending", null],
+    values: v.models.map((m) => [
+      m.name,
+      m.cheapest ? m.cheapest.real_usd_per_mtok : (m.free.length ? 0 : null),
+      m.cheapest ? planName(m.cheapest, lang) : null,
+      m.listBlended,
+      m.apiReference?.variant.currency === "USD" ? m.apiReference.prices.input : null,
+      m.mostTokens ? m.mostTokens.monthly_tokens : null,
+      m.points.length,
+      null,
+    ]),
+  },
 )}
 </section>
 ${v.points.length ? `<section aria-labelledby="plans"><h2 id="plans">${t(`Plans that include ${isOther ? "these" : v.name} models`, `包含 ${vName} 模型的套餐`)}</h2>
-${table(t("Subscriptions and APIs, by monthly fee", "订阅与 API，按月费排序"), [t("Plan", "套餐"), t("Provider", "供应商"), t("Billing", "计费"), t("Monthly fee", "月费"), t("Models", "模型")], planRows)}</section>` : `<p class="note">${t("Subscription pricing has not yet been recorded.", "订阅价格尚未收录。")}</p>`}
+${table(
+  t("Subscriptions and APIs, by monthly fee", "订阅与 API，按月费排序"),
+  [t("Plan", "套餐"), t("Provider", "供应商"), t("Billing", "计费"), t("Monthly fee", "月费"), t("Models", "模型")],
+  planRows,
+  {
+    column: 3, direction: "ascending",
+    types: ["text", "text", "text", "number", null],
+    defaultDirections: ["ascending", "ascending", "ascending", "ascending", null],
+    values: sortedPlans.map((p) => [planName(p, lang), p.channel, billingLabel(p, lang), p.price_usd, null]),
+  },
+)}</section>` : `<p class="note">${t("Subscription pricing has not yet been recorded.", "订阅价格尚未收录。")}</p>`}
 ${relatedNews(newsFor.maker(v), lang)}
 ${v.points.length ? `<p><a class="button" href="${
   // The explorer filters by the raw vendor field, which lumps some makers under "other".
@@ -1183,6 +1250,24 @@ ${table(
   t(`Models included in ${name}, cheapest first`, `「${name}」包含的模型，按真实单价从低到高`),
   [t("Model", "模型"), t("Maker", "厂商"), t("Monthly tokens", "月额度"), t("Real $/MTok", "真实单价 $/MTok"), t("vs API", "对比 API"), t("Confidence", "置信度"), t("Data date", "数据日期"), ""],
   rows,
+  {
+    column: 3, direction: "ascending",
+    types: ["text", "text", "number", "number", "number", "number", "date", null],
+    defaultDirections: ["ascending", "ascending", "descending", "ascending", "descending", "descending", "descending", null],
+    values: tier.points.map((p) => {
+      const m = models.get(p.model);
+      return [
+        m.name,
+        makerLabel(makers.get(m.maker), lang),
+        p.monthly_tokens,
+        unmetered(p) ? 0 : p.real_usd_per_mtok,
+        vsListRatio(p),
+        CONF_RANK[p.confidence] ?? null,
+        p.data_date ?? null,
+        null,
+      ];
+    }),
+  },
 )}</section>`;
     })
     .join("\n");
@@ -1220,7 +1305,23 @@ ${overview(
   ],
 )}
 <section aria-labelledby="tiers"><h2 id="tiers">${t(`${pr.name} plans at a glance`, `${pr.name} 套餐一览`)}</h2>
-${table(t("Plans by monthly fee", "套餐，按月费排序"), [t("Plan", "套餐"), t("Billing", "计费"), t("Monthly fee", "月费"), t("Models", "模型数"), t("Lowest real $/MTok", "最低真实单价 $/MTok")], overviewRows)}
+${table(
+  t("Plans by monthly fee", "套餐，按月费排序"),
+  [t("Plan", "套餐"), t("Billing", "计费"), t("Monthly fee", "月费"), t("Models", "模型数"), t("Lowest real $/MTok", "最低真实单价 $/MTok")],
+  overviewRows,
+  {
+    column: null, direction: "ascending",
+    types: ["text", "text", "number", "number", "number"],
+    defaultDirections: ["ascending", "ascending", "ascending", "descending", "ascending"],
+    values: pr.tierList.map((tier) => [
+      tier.name(lang),
+      billingLabel(tier.feePoint, lang),
+      tier.feePoint.price_usd,
+      new Set(tier.points.map((p) => p.model)).size,
+      tier.cheapest ? tier.cheapest.real_usd_per_mtok : (tier.points.some(unmetered) ? 0 : null),
+    ]),
+  },
+)}
 </section>
 <section aria-labelledby="included"><h2 id="included">${t("What each plan includes", "各套餐包含的模型")}</h2>
 <p>${t("Real price = monthly fee ÷ tokens you can actually use in a month, per model. Allowances of different models in one plan are alternatives and must not be added up.", "真实单价 = 月费 ÷ 该模型每月实际可用 token。同一套餐内不同模型的额度为替代关系，不可相加。")}</p>
@@ -1367,6 +1468,18 @@ ${table(
   t(`Plans that include both ${a.name} and ${b.name}`, `同时包含 ${a.name} 和 ${b.name} 的套餐`),
   [t("Plan / provider", "套餐 / 供应商"), t("Monthly fee", "月费"), esc(a.name), esc(b.name), t("Recorded token cost", "记录单价对比")],
   planRows,
+  {
+    column: 1, direction: "ascending",
+    types: ["text", "number", "number", "number", null],
+    defaultDirections: ["ascending", "ascending", "ascending", "ascending", null],
+    values: plans.map(({ a: pa, b: pb }) => [
+      planName(pa, lang),
+      pa.price_usd,
+      unmetered(pa) ? 0 : pa.real_usd_per_mtok,
+      unmetered(pb) ? 0 : pb.real_usd_per_mtok,
+      null,
+    ]),
+  },
 )}</section>
 <section aria-labelledby="bench"><h2 id="bench">${t("Leaderboards head to head", "榜单成绩对比")}</h2>
 <p>${t(
@@ -1634,7 +1747,7 @@ function indexPage({ lang, section, path: [en, zh], title, description, keywords
     kicker: `${t("Directory", "目录")} · ${esc(kicker)}`,
     h1,
     lead: esc(lead),
-    body: table(caption, head, rows, sorting) + (sorting ? '<script src="/table-sort.js" defer></script>' : ""),
+    body: table(caption, head, rows, sorting),
     crumbs: [
       [NAME[lang], U.home(lang)],
       [h1, urlPath],
@@ -1645,22 +1758,25 @@ function indexPage({ lang, section, path: [en, zh], title, description, keywords
 
 const makersIndex = (lang) => {
   const t = (en, cn) => (lang === "zh" ? cn : en);
+  const sorted = [...makerList].sort(
+    (a, b) => (a.name === "Other") - (b.name === "Other") || b.plans.length - a.plans.length || b.models.length - a.models.length || a.name.localeCompare(b.name),
+  );
   return indexPage({
     lang,
     section: "makers",
     path: [U.makers("en"), U.makers("zh")],
-    title: t(`AI Model Makers Compared: Real Pricing for ${makerList.length} Makers`, `AI 模型厂商价格对比：${makerList.length} 家厂商的真实单价`),
+    title: t(`AI Model Makers Compared: Real Pricing for ${sorted.length} Makers`, `AI 模型厂商价格对比：${sorted.length} 家厂商的真实单价`),
     description: t(
-      `Compare ${makerList.length} AI model makers — OpenAI, Anthropic, Google, DeepSeek, Qwen, Kimi, GLM and more — by real cost per million tokens across ${data.points.length} subscriptions and APIs.`,
-      `对比 OpenAI、Anthropic、Google、DeepSeek、通义千问、Kimi、智谱等 ${makerList.length} 家 AI 厂商，覆盖 ${data.points.length} 个订阅与 API 的真实每百万 token 价格。`,
+      `Compare ${sorted.length} AI model makers — OpenAI, Anthropic, Google, DeepSeek, Qwen, Kimi, GLM and more — by real cost per million tokens across ${data.points.length} subscriptions and APIs.`,
+      `对比 OpenAI、Anthropic、Google、DeepSeek、通义千问、Kimi、智谱等 ${sorted.length} 家 AI 厂商，覆盖 ${data.points.length} 个订阅与 API 的真实每百万 token 价格。`,
     ),
-    keywords: [t("AI model makers", "AI 模型厂商"), t("LLM pricing comparison", "大模型价格对比"), ...makerList.map((v) => makerLabel(v, lang))],
+    keywords: [t("AI model makers", "AI 模型厂商"), t("LLM pricing comparison", "大模型价格对比"), ...sorted.map((v) => makerLabel(v, lang))],
     kicker: t(plural(makers.size, "maker"), `${makers.size} 家厂商`),
     h1: t("AI model makers", "AI 模型厂商"),
-    lead: t(`${makerList.length} model makers, ${modelList.length} models and ${data.points.length} plan/model combinations, each priced as monthly fee ÷ tokens you can actually use.`, `${makerList.length} 家厂商、${modelList.length} 个模型、${data.points.length} 个套餐/模型组合，均按「月费 ÷ 实际可用 token」计算真实单价。`),
-    caption: t("Makers by number of plans", "厂商，按套餐数排序"),
+    lead: t(`${sorted.length} model makers, ${modelList.length} models and ${data.points.length} plan/model combinations, each priced as monthly fee ÷ tokens you can actually use. Click a column heading to sort.`, `${sorted.length} 家厂商、${modelList.length} 个模型、${data.points.length} 个套餐/模型组合，均按「月费 ÷ 实际可用 token」计算真实单价；点击表头可切换排序。`),
+    caption: t("Makers · click a column heading to sort", "厂商 · 点击表头切换排序"),
     head: [t("Maker", "厂商"), t("Models", "模型数"), t("Model list", "模型"), t("Lowest real $/MTok", "最低真实单价 $/MTok"), t("Plans", "套餐数")],
-    rows: makerList.map((v) => {
+    rows: sorted.map((v) => {
       const best = v.models.find((m) => m.cheapest);
       return [
         makerLink(v, lang),
@@ -1670,28 +1786,38 @@ const makersIndex = (lang) => {
         String(v.plans.length),
       ];
     }),
-    items: makerList.map((v) => [makerLabel(v, lang), U.maker(v, lang)]),
+    sorting: {
+      column: 4, direction: "descending",
+      types: ["text", "number", null, "number", "number"],
+      defaultDirections: ["ascending", "descending", null, "ascending", "descending"],
+      values: sorted.map((v) => {
+        const best = v.models.find((m) => m.cheapest);
+        return [makerLabel(v, lang), v.models.length, null, best ? best.cheapest.real_usd_per_mtok : (v.points.some(unmetered) ? 0 : null), v.plans.length];
+      }),
+    },
+    items: sorted.map((v) => [makerLabel(v, lang), U.maker(v, lang)]),
   });
 };
 
 const providersIndex = (lang) => {
   const t = (en, cn) => (lang === "zh" ? cn : en);
+  const sorted = [...providerList].sort((a, b) => b.models.length - a.models.length || b.tierList.length - a.tierList.length || a.name.localeCompare(b.name));
   return indexPage({
     lang,
     section: "providers",
     path: [U.providers("en"), U.providers("zh")],
-    title: t(`AI Coding Plans Compared: ${providerList.length} Providers & What Each Plan Includes`, `AI 编程套餐对比：${providerList.length} 家供应商的套餐与包含的模型`),
+    title: t(`AI Coding Plans Compared: ${sorted.length} Providers & What Each Plan Includes`, `AI 编程套餐对比：${sorted.length} 家供应商的套餐与包含的模型`),
     description: t(
-      `AI subscriptions from ${providerList.length} providers — OpenCode, Command Code, Cursor, Claude, ChatGPT, GLM and more: plan fees, included models, real cost per token.`,
-      `对比 OpenCode、Command Code、Cursor、Claude、ChatGPT、GLM 等 ${providerList.length} 家供应商的 AI 订阅：套餐月费、包含的模型与真实每百万 token 价格。`,
+      `AI subscriptions from ${sorted.length} providers — OpenCode, Command Code, Cursor, Claude, ChatGPT, GLM and more: plan fees, included models, real cost per token.`,
+      `对比 OpenCode、Command Code、Cursor、Claude、ChatGPT、GLM 等 ${sorted.length} 家供应商的 AI 订阅：套餐月费、包含的模型与真实每百万 token 价格。`,
     ),
-    keywords: [t("AI coding plan", "AI 编程套餐"), t("AI subscription comparison", "AI 订阅对比"), ...providerList.map((p) => p.name)],
+    keywords: [t("AI coding plan", "AI 编程套餐"), t("AI subscription comparison", "AI 订阅对比"), ...sorted.map((p) => p.name)],
     kicker: t(plural(providers.size, "provider"), `${providers.size} 个供应商`),
     h1: t("AI providers & plans", "AI 供应商与套餐"),
-    lead: t(`${providerList.length} providers sell access to these models through ${[...providers.values()].reduce((n, p) => n + p.tierList.length, 0)} plans and APIs. Each provider page lists its plan tiers and the models every tier includes.`, `${providerList.length} 家供应商通过 ${[...providers.values()].reduce((n, p) => n + p.tierList.length, 0)} 个套餐与 API 提供这些模型。每个供应商页面列出其各档套餐及每档包含的模型。`),
-    caption: t("Providers by number of plan × model combinations", "供应商，按套餐 × 模型组合数排序"),
+    lead: t(`${sorted.length} providers sell access to these models through ${[...providers.values()].reduce((n, p) => n + p.tierList.length, 0)} plans and APIs. Each provider page lists its plan tiers and the models every tier includes. Click a column heading to sort.`, `${sorted.length} 家供应商通过 ${[...providers.values()].reduce((n, p) => n + p.tierList.length, 0)} 个套餐与 API 提供这些模型。每个供应商页面列出其各档套餐及每档包含的模型；点击表头可切换排序。`),
+    caption: t("Providers · click a column heading to sort", "供应商 · 点击表头切换排序"),
     head: [t("Provider", "供应商"), t("Type", "类型"), t("Plans", "套餐数"), t("Models", "模型数"), t("Monthly fee", "月费"), t("Lowest real $/MTok", "最低真实单价 $/MTok")],
-    rows: providerList.map((pr) => [
+    rows: sorted.map((pr) => [
       link(U.provider(pr, lang), pr.name),
       kindLabel(pr, lang),
       String(pr.tierList.length),
@@ -1699,7 +1825,23 @@ const providersIndex = (lang) => {
       feeRange(pr.tierList.filter((x) => x.billing !== "metered").map((x) => x.feePoint)) ?? "—",
       pr.cheapest ? `${usd(pr.cheapest.real_usd_per_mtok)} <small>${esc(models.get(pr.cheapest.model).name)}</small>` : "≈$0",
     ]),
-    items: providerList.map((pr) => [pr.name, U.provider(pr, lang)]),
+    sorting: {
+      column: 3, direction: "descending",
+      types: ["text", "text", "number", "number", "number", "number"],
+      defaultDirections: ["ascending", "ascending", "descending", "descending", "ascending", "ascending"],
+      values: sorted.map((pr) => {
+        const subFees = pr.tierList.filter((x) => x.billing !== "metered").map((x) => x.feePoint.price_usd).filter((x) => x != null);
+        return [
+          pr.name,
+          kindLabel(pr, lang),
+          pr.tierList.length,
+          pr.models.length,
+          subFees.length ? Math.min(...subFees) : null,
+          pr.cheapest ? pr.cheapest.real_usd_per_mtok : (pr.points.some(unmetered) ? 0 : null),
+        ];
+      }),
+    },
+    items: sorted.map((pr) => [pr.name, U.provider(pr, lang)]),
   });
 };
 
@@ -1733,6 +1875,7 @@ const modelsIndex = (lang) => {
     sorting: {
       column: 2, direction: "descending",
       types: ["text", "text", "date", "number", "text", "number", "number"],
+      defaultDirections: ["ascending", "ascending", "descending", "ascending", "ascending", "ascending", "descending"],
       values: sorted.map(m => [m.name, makerLabel(makers.get(m.maker), lang), m.releaseDate,
         m.cheapest?.real_usd_per_mtok ?? (m.free.length ? 0 : null),
         m.cheapest ? planName(m.cheapest, lang) : null, m.listBlended, m.points.length]),
@@ -1749,17 +1892,17 @@ const comparesIndex = (lang) => {
     path: [U.compares("en"), U.compares("zh")],
     title: t(`AI Model Comparisons: ${comparisons.length} Head-to-Head Price & Benchmark Matchups`, `AI 模型对比：${comparisons.length} 组模型的真实单价与榜单成绩`),
     description: t(
-      `${comparisons.length} AI model matchups — Claude vs GPT, Kimi vs GLM, DeepSeek vs Qwen and more — compared on the plans that include both and the leaderboards that score both.`,
-      `Claude 对 GPT、Kimi 对 GLM、DeepSeek 对通义千问等 ${comparisons.length} 组 AI 模型对比：在同时包含两者的套餐和同时收录两者的榜单上逐项比较。`,
+      `${comparisons.length} AI model matchups — GPT-6.2 vs Gemini 4, Claude vs GPT, Kimi vs Qwen, DeepSeek vs GLM and more — compared on the plans that include both and the leaderboards that score both.`,
+      `GPT-6.2 对 Gemini 4、Claude 对 GPT、Kimi 对通义千问、DeepSeek 对 GLM 等 ${comparisons.length} 组 AI 模型对比：在同时包含两者的套餐和同时收录两者的榜单上逐项比较。`,
     ),
     keywords: [t("AI model comparison", "AI 模型对比"), t("LLM comparison", "大模型对比"), ...comparisons.map(compareName)],
     kicker: t(plural(comparisons.length, "comparison"), `${comparisons.length} 组对比`),
     h1: t("AI model comparisons", "AI 模型对比"),
     lead: t(
-      "Curated model pairs with shared subscriptions and leaderboard snapshots. Compare token costs under matching workloads, inspect the recorded allowances, and follow each benchmark's configuration and evidence.",
-      "精选具有共同订阅套餐和榜单快照的模型组合：在相同负载下比较单价，查看记录的额度，并追溯每项成绩的配置与证据。",
+      "Curated model pairs with shared subscriptions and leaderboard snapshots. Compare token costs under matching workloads, inspect the recorded allowances, and follow each benchmark's configuration and evidence. Click a column heading to sort.",
+      "精选具有共同订阅套餐和榜单快照的模型组合：在相同负载下比较单价，查看记录的额度，并追溯每项成绩的配置与证据；点击表头可切换排序。",
     ),
-    caption: t("Comparisons", "全部对比"),
+    caption: t("Comparisons · click a column heading to sort", "全部对比 · 点击表头切换排序"),
     head: [t("Comparison", "对比"), t("Makers", "厂商"), t("Shared subscriptions", "共同订阅"), t("Matching workloads", "同口径套餐"), t("Shared leaderboards", "共同榜单")],
     rows: comparisons.map((c) => [
       compareLink(c, lang),
@@ -1768,6 +1911,18 @@ const comparesIndex = (lang) => {
       String(c.comparablePlans.length),
       String(c.boards.length),
     ]),
+    sorting: {
+      column: null, direction: "descending",
+      types: ["text", "text", "number", "number", "number"],
+      defaultDirections: ["ascending", "ascending", "descending", "descending", "descending"],
+      values: comparisons.map((c) => [
+        compareName(c),
+        c.a.maker === c.b.maker ? makerLabel(makers.get(c.a.maker), lang) : `${makerLabel(makers.get(c.a.maker), lang)} · ${makerLabel(makers.get(c.b.maker), lang)}`,
+        c.plans.length,
+        c.comparablePlans.length,
+        c.boards.length,
+      ]),
+    },
     items: comparisons.map((c) => [compareName(c), U.compare(c, lang)]),
   });
 };

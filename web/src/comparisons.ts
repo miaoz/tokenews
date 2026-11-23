@@ -3,6 +3,39 @@ import type { Configuration, Point } from "./types";
 // Curated comparisons only. A data sync must still leave each pair with a
 // comparable subscription and three shared leaderboard snapshots.
 export const COMPARISON_PAIRS: readonly (readonly [string, string])[] = [
+  ["gpt-6.2-astra", "gemini-4-neon"],
+  ["gpt-6.2-astra", "gpt-6.2-sol"],
+  ["gpt-6.2-sol", "gemini-4-neon"],
+  ["gemini-4-carbon", "gemini-4-neon"],
+  ["gemini-4-carbon", "gemini-4-hydrogen"],
+  ["gemini-4-neon", "gemini-4-hydrogen"],
+  ["gemini-4-neon", "gemini-4-argon"],
+  ["gpt-6.2-astra", "gpt-6.1-terra"],
+  ["gpt-6.2-sol", "gpt-6.1-sol"],
+  ["gpt-6.2-astra", "muse-wonder"],
+  ["gemini-4-neon", "muse-wonder"],
+  ["gpt-6.2-astra", "kimi-k3.1-pro"],
+  ["gpt-6.2-astra", "qwen4-max"],
+  ["gpt-6.2-sol", "kimi-k3.1-pro"],
+  ["gpt-6.2-sol", "qwen4-max"],
+  ["gemini-4-neon", "kimi-k3.1-pro"],
+  ["gemini-4-neon", "qwen4-max"],
+  ["gemini-4-neon", "glm-5.3"],
+  ["kimi-k3.1-pro", "qwen4-max"],
+  ["kimi-k3.1-pro", "glm-5.3"],
+  ["kimi-k3.1-pro", "kimi-k3"],
+  ["kimi-k3.1-pro", "deepseek-v4.1-flash-1017"],
+  ["kimi-k3.1-pro", "muse-wonder"],
+  ["qwen4-max", "glm-5.3"],
+  ["qwen4-max", "deepseek-v4.1-flash-1017"],
+  ["qwen4-max", "hy4"],
+  ["deepseek-v4.1-flash-1017", "glm-5.3"],
+  ["deepseek-v4.1-flash-1017", "minimax-m3.1-flash"],
+  ["minimax-m3.1-flash", "glm-5.3"],
+  ["minimax-m3.1-flash", "mimo-v2.6-flash"],
+  ["hy4", "glm-5.3"],
+  ["mimo-v2.6-pro", "glm-5.3"],
+  ["inkling-2-mini", "deepseek-v4.1-flash-1017"],
   ["claude-opus-5.5", "gpt-6-astra"],
   ["claude-opus-5.5", "claude-sonnet-5.5"],
   ["claude-opus-5.5", "claude-opus-5"],
@@ -26,7 +59,7 @@ export type PriceComparison = {
   ratio: number | null;
   reason: "comparable" | "unmetered" | "workload" | "raw" | "invalid";
 };
-const NORMALIZED_WORKLOADS = new Set(["standard", "anthropic", "lowCache"]);
+const NORMALIZED_WORKLOADS = new Set(["standard", "anthropic", "lowCache", "cacheWrite"]);
 
 /** Compare recorded token costs only when both use the same known workload.
  * Two `measured` records may describe different token mixes, even on one plan.

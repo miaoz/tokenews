@@ -24,9 +24,13 @@ for (const f of files) {
 }
 
 const REQUIRED = ['rel="canonical"', 'name="description"', 'property="og:title"', 'property="og:image"', 'name="twitter:card"', "application/ld+json"];
+const SORTABLE_LIST_PAGES = new Set(["/makers/", "/zh/makers/", "/providers/", "/zh/providers/", "/models/", "/zh/models/", "/compare/", "/zh/compare/"]);
 const titles = new Map();
 const descriptions = new Map();
 for (const [url, { file, html }] of pages) {
+  if (SORTABLE_LIST_PAGES.has(url) && !html.includes("<table data-sortable>")) fail(file, "directory page missing sortable table");
+  if (html.includes("data-sortable") && !html.includes('<script src="/table-sort.js" defer></script>'))
+    fail(file, "sortable page missing /table-sort.js");
   for (const m of html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g))
     try {
       // Google rejects a Dataset whose description is outside 50–5000 characters.

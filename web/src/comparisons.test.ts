@@ -44,6 +44,10 @@ test("Raw totals and mismatched normalized workloads never produce cost winners"
   }
   assert.deepEqual(compareTokenCosts(point({ workload: "anthropic" }), point()),
     { side: null, ratio: null, reason: "workload" });
+  assert.deepEqual(compareTokenCosts(point({ workload: "cacheWrite" }), point({ workload: "cacheWrite", real_usd_per_mtok: 2 })),
+    { side: "a", ratio: 2, reason: "comparable" });
+  assert.deepEqual(compareTokenCosts(point({ workload: "cacheWrite" }), point()),
+    { side: null, ratio: null, reason: "workload" });
 });
 
 test("Unmetered and invalid prices do not become free or infinite-ratio wins", () => {
@@ -84,4 +88,19 @@ test("Unsupported pairs, duplicate orders and inconsistent plan fees stop public
   assert.throws(() => buildComparisons(sparse, pair), /3 common leaderboards/);
   assert.throws(() => buildComparisons(models([point({ workload: "measured" })]), pair), /1 comparable subscription/);
   assert.throws(() => buildComparisons(models(undefined, [point({ model: "b", price_usd: 40 })]), pair), /inconsistent provider or monthly fees/);
+});
+
+test("Curated comparisons include latest GPT-6.2, Gemini 4, Kimi, Qwen4, Hy4 and Inkling pairs", async () => {
+  const { COMPARISON_PAIRS } = await import("./comparisons");
+  const keys = new Set(COMPARISON_PAIRS.map((p) => [...p].sort().join(" ")));
+  for (const [a, b] of [
+    ["gpt-6.2-astra", "gemini-4-neon"],
+    ["gpt-6.2-astra", "gpt-6.2-sol"],
+    ["gemini-4-carbon", "gemini-4-neon"],
+    ["kimi-k3.1-pro", "qwen4-max"],
+    ["qwen4-max", "hy4"],
+    ["inkling-2-mini", "deepseek-v4.1-flash-1017"],
+  ]) {
+    assert.ok(keys.has([a, b].sort().join(" ")), `missing comparison ${a} vs ${b}`);
+  }
 });
