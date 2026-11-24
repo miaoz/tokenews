@@ -6,10 +6,10 @@
       "channel": "OpenCode",
       "url": "https://opencode.ai/v2/docs/console/go/",
       "kind": "tables",
-      "attemptedAt": "2026-11-23T07:54:09.819Z",
+      "attemptedAt": "2026-11-24T10:06:59.120Z",
       "lastSuccessAt": "2026-11-16T06:49:25.500Z",
       "status": "failed",
-      "consecutiveFailures": 7,
+      "consecutiveFailures": 8,
       "retrieval": "http",
       "snapshot": {
         "checkedAt": "2026-11-16T06:49:25.500Z",
@@ -8241,22 +8241,80 @@
         ],
         "hash": "6c944ef32669bbe4058fb70cf85a0d26721c8ebb13cb6cffa7f6d6b3dae100ca"
       },
-      "error": "Source structure changed: 47 records, expected at least 60; fallback: Source structure changed: 47 records, expected at least 60"
+      "error": "Source structure changed: 54 records, expected at least 60; fallback: Source structure changed: 54 records, expected at least 60"
     },
     "opencode-releases": {
       "id": "opencode-releases",
       "channel": "OpenCode",
       "url": "https://opencode.ai/changelog",
       "kind": "document",
-      "attemptedAt": "2026-11-23T07:54:09.819Z",
-      "lastSuccessAt": "2026-11-23T07:54:09.819Z",
+      "attemptedAt": "2026-11-24T10:06:59.120Z",
+      "lastSuccessAt": "2026-11-24T10:06:59.120Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-23T07:54:09.819Z",
-        "bodySha256": "037cacfbea10f3316edd19b3fb2d3b9cf35bca44856c419ca1a0fd9b22ee815a",
+        "checkedAt": "2026-11-24T10:06:59.120Z",
+        "bodySha256": "1337cc852fa99114a18befdd83a1b9082609184ffaadbef68f27f2a16782f07d",
         "records": [
+          {
+            "key": "text:c6e0eb39489f234fc1e2c3e14b08b7ffc319adc230280cc37c5c82bc1819912c",
+            "hash": "c6e0eb39489f234fc1e2c3e14b08b7ffc319adc230280cc37c5c82bc1819912c",
+            "type": "announcement",
+            "signals": [
+              "availability"
+            ],
+            "models": [],
+            "url": "https://opencode.ai/changelog"
+          },
+          {
+            "key": "text:2d3da336f207d9ff56760cee4fabf2812b3308048fd121c065cfe9230a5dc54d",
+            "hash": "2d3da336f207d9ff56760cee4fabf2812b3308048fd121c065cfe9230a5dc54d",
+            "type": "announcement",
+            "signals": [
+              "availability"
+            ],
+            "models": [],
+            "url": "https://github.com/anomalyco/opencode/pull/65793"
+          },
+          {
+            "key": "text:fd649c2605a58acead0cd930271f1cb9479ff200ca9831027556e5485f38965e",
+            "hash": "fd649c2605a58acead0cd930271f1cb9479ff200ca9831027556e5485f38965e",
+            "type": "announcement",
+            "signals": [
+              "availability"
+            ],
+            "models": [],
+            "url": "https://github.com/anomalyco/opencode/pull/65749"
+          },
+          {
+            "key": "text:7691723285a13984558a881069813c9e2f6021c6d23a6918b170b5bdab10e8fa",
+            "hash": "7691723285a13984558a881069813c9e2f6021c6d23a6918b170b5bdab10e8fa",
+            "type": "announcement",
+            "signals": [
+              "pricing"
+            ],
+            "models": [],
+            "url": "https://github.com/anomalyco/opencode/pull/65768"
+          },
+          {
+            "key": "text:d8056bca4c61b0857f85c750ae07d5eed289a546667b9f9fdf133f6e9b2e45b9",
+            "hash": "d8056bca4c61b0857f85c750ae07d5eed289a546667b9f9fdf133f6e9b2e45b9",
+            "type": "announcement",
+            "signals": [],
+            "models": [],
+            "url": "https://github.com/anomalyco/opencode/pull/65441"
+          },
+          {
+            "key": "text:84a995147e9e9f6348f42aa6667031cf903ffd39685662fd24b98b9ec5c3e058",
+            "hash": "84a995147e9e9f6348f42aa6667031cf903ffd39685662fd24b98b9ec5c3e058",
+            "type": "announcement",
+            "signals": [
+              "availability"
+            ],
+            "models": [],
+            "url": "https://github.com/anomalyco/opencode/pull/63666"
+          },
           {
             "key": "text:fc91dbe16f57f6d1e5686ac0710cc340f13eb25677b1d2d83756ee5eb744ebb3",
             "hash": "fc91dbe16f57f6d1e5686ac0710cc340f13eb25677b1d2d83756ee5eb744ebb3",
@@ -8426,43 +8484,9 @@
             "signals": [],
             "models": [],
             "url": "https://github.com/anomalyco/opencode/pull/60329"
-          },
-          {
-            "key": "text:e2e9a593b7ecc36d56dc543ba9abd8711e91ed6cb7f24e77d07bf4a0c38f6381",
-            "hash": "e2e9a593b7ecc36d56dc543ba9abd8711e91ed6cb7f24e77d07bf4a0c38f6381",
-            "type": "announcement",
-            "signals": [],
-            "models": [
-              "Claude Code in OpenCode"
-            ],
-            "url": "https://opencode.ai/changelog"
-          },
-          {
-            "key": "text:cb74d6f6f7b9d4b083a5058668365efe63b7c12e34a76a857a6bad51f7398384",
-            "hash": "cb74d6f6f7b9d4b083a5058668365efe63b7c12e34a76a857a6bad51f7398384",
-            "type": "announcement",
-            "signals": [
-              "availability"
-            ],
-            "models": [
-              "Claude Code",
-              "claude auth login ",
-              "Claude Agent in /connect to use your Claude Code login and models. "
-            ],
-            "url": "https://github.com/anomalyco/opencode/pull/58782"
-          },
-          {
-            "key": "text:ff80c19a952ac555c61bc191fb19bc1cc08a77edf03e45d047963f6cffe95845",
-            "hash": "ff80c19a952ac555c61bc191fb19bc1cc08a77edf03e45d047963f6cffe95845",
-            "type": "announcement",
-            "signals": [
-              "availability"
-            ],
-            "models": [],
-            "url": "https://github.com/anomalyco/opencode/pull/60258"
           }
         ],
-        "hash": "58a83b54c98b832a976c68e07321d13639460487fa8e8e5a691d667458598536"
+        "hash": "9e6c9b309e46d32fa69a87e65412b0928dd95d26a73e979b25c735d45af126a0"
       }
     },
     "command-code-go": {
@@ -8470,13 +8494,13 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/go",
       "kind": "tables",
-      "attemptedAt": "2026-11-23T07:54:09.819Z",
-      "lastSuccessAt": "2026-11-23T07:54:09.819Z",
+      "attemptedAt": "2026-11-24T10:06:59.120Z",
+      "lastSuccessAt": "2026-11-24T10:06:59.120Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-23T07:54:09.819Z",
+        "checkedAt": "2026-11-24T10:06:59.120Z",
         "bodySha256": "19eb2d5138f6a7e864b0c92a35cccd393592f962c4b40c9b5b7725af86b9a6b8",
         "records": [
           {
@@ -13433,13 +13457,13 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/goat",
       "kind": "tables",
-      "attemptedAt": "2026-11-23T07:54:09.819Z",
-      "lastSuccessAt": "2026-11-23T07:54:09.819Z",
+      "attemptedAt": "2026-11-24T10:06:59.120Z",
+      "lastSuccessAt": "2026-11-24T10:06:59.120Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-23T07:54:09.819Z",
+        "checkedAt": "2026-11-24T10:06:59.120Z",
         "bodySha256": "f5c434d344fceb7d9d425b7b3f8e8f8b5b37285033529dbc8baf79b4e122d152",
         "records": [
           {
@@ -19537,13 +19561,13 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/pro",
       "kind": "tables",
-      "attemptedAt": "2026-11-23T07:54:09.819Z",
-      "lastSuccessAt": "2026-11-23T07:54:09.819Z",
+      "attemptedAt": "2026-11-24T10:06:59.120Z",
+      "lastSuccessAt": "2026-11-24T10:06:59.120Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-23T07:54:09.819Z",
+        "checkedAt": "2026-11-24T10:06:59.120Z",
         "bodySha256": "db0b37886edbd87a93e4f9116dab6d5fb864e4222db8a76e1673504fd03f7e06",
         "records": [
           {
@@ -27144,13 +27168,13 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/max",
       "kind": "tables",
-      "attemptedAt": "2026-11-23T07:54:09.819Z",
-      "lastSuccessAt": "2026-11-23T07:54:09.819Z",
+      "attemptedAt": "2026-11-24T10:06:59.120Z",
+      "lastSuccessAt": "2026-11-24T10:06:59.120Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-23T07:54:09.819Z",
+        "checkedAt": "2026-11-24T10:06:59.120Z",
         "bodySha256": "b155e8e8423702afb65f63016e674a0a8ff7eb720442a4e3d742412a2299acc3",
         "records": [
           {
@@ -33354,13 +33378,13 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/reference/cli/models",
       "kind": "tables",
-      "attemptedAt": "2026-11-23T07:54:09.819Z",
-      "lastSuccessAt": "2026-11-23T07:54:09.819Z",
+      "attemptedAt": "2026-11-24T10:06:59.120Z",
+      "lastSuccessAt": "2026-11-24T10:06:59.120Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-23T07:54:09.819Z",
+        "checkedAt": "2026-11-24T10:06:59.120Z",
         "bodySha256": "08f134fd63f7f57d34f00ddc758e143fed2811ff5c8175b88f9348a2e1ce7a3a",
         "records": [
           {
@@ -36110,13 +36134,13 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/resources/pricing-limits",
       "kind": "tables",
-      "attemptedAt": "2026-11-23T07:54:09.819Z",
-      "lastSuccessAt": "2026-11-23T07:54:09.819Z",
+      "attemptedAt": "2026-11-24T10:06:59.120Z",
+      "lastSuccessAt": "2026-11-24T10:06:59.120Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-23T07:54:09.819Z",
+        "checkedAt": "2026-11-24T10:06:59.120Z",
         "bodySha256": "1a72e4e26215381757d929686976ae530157bc08eb82d2a7f48de07acb9a2fe4",
         "records": [
           {
@@ -41232,13 +41256,13 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/changelog",
       "kind": "document",
-      "attemptedAt": "2026-11-23T07:54:09.819Z",
-      "lastSuccessAt": "2026-11-23T07:54:09.819Z",
+      "attemptedAt": "2026-11-24T10:06:59.120Z",
+      "lastSuccessAt": "2026-11-24T10:06:59.120Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-23T07:54:09.819Z",
+        "checkedAt": "2026-11-24T10:06:59.120Z",
         "bodySha256": "ba40aa4026d80a95e7d7d86e28d44f857c0cdc4f24ff763869eee4aaaafe390a",
         "records": [
           {
@@ -45472,14 +45496,14 @@
       "channel": "Ollama",
       "url": "https://ollama.com/pricing",
       "kind": "tables",
-      "attemptedAt": "2026-11-23T07:54:09.819Z",
-      "lastSuccessAt": "2026-11-23T07:54:09.819Z",
+      "attemptedAt": "2026-11-24T10:06:59.120Z",
+      "lastSuccessAt": "2026-11-24T10:06:59.120Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-23T07:54:09.819Z",
-        "bodySha256": "4b63a39181b470b7b833503074e6ed250715ef1eb9d2118def4de712e729e30f",
+        "checkedAt": "2026-11-24T10:06:59.120Z",
+        "bodySha256": "7a9446cbca12118cca5e05d9fc28c0670fd6b38f59f3efd82c1121f41291d7b6",
         "records": [
           {
             "key": "text:dfe95783edfef7918760312f94edd764f4ce3ffd38b90c2c955a0cc3b250f040",
@@ -46554,14 +46578,14 @@
       "channel": "Ollama",
       "url": "https://ollama.com/blog",
       "kind": "document",
-      "attemptedAt": "2026-11-23T07:54:09.819Z",
-      "lastSuccessAt": "2026-11-23T07:54:09.819Z",
+      "attemptedAt": "2026-11-24T10:06:59.120Z",
+      "lastSuccessAt": "2026-11-24T10:06:59.120Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-23T07:54:09.819Z",
-        "bodySha256": "d3c13ff94e520f071dabe3506e5d3072ba5b89b5867cc9549e995b321119b490",
+        "checkedAt": "2026-11-24T10:06:59.120Z",
+        "bodySha256": "dcb3bc1f0440e6144fc388c76b73cbd5b359f84cc68f6b6ebbc67a83a447b219",
         "records": [
           {
             "key": "text:ab3c438e769e5ab5a3d07b57c25a52b9c414b88a7334e486dcf6c70f96b0073c",
@@ -47153,14 +47177,14 @@
       "channel": "Factory",
       "url": "https://docs.factory.com/models.md",
       "kind": "tables",
-      "attemptedAt": "2026-11-23T07:54:09.819Z",
-      "lastSuccessAt": "2026-11-23T07:54:09.819Z",
+      "attemptedAt": "2026-11-24T10:06:59.120Z",
+      "lastSuccessAt": "2026-11-24T10:06:59.120Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-23T07:54:09.819Z",
-        "bodySha256": "4b8fdd0e75984982a580d80225aa0c1fc2b47deb48f50e751ec550eab4bc0674",
+        "checkedAt": "2026-11-24T10:06:59.120Z",
+        "bodySha256": "a22fe831d69a7b5ec6d278561a704f701a8145ef3430c7658e0b44dafdcd9bcd",
         "records": [
           {
             "key": "text:0b28deb982605f12b721a450cd577fb09cb57b68ebe576202b079d4053c492d0",
@@ -47518,9 +47542,9 @@
             "hash": "9be6d464910ec514d9ba8808e947f18fdcb48a77a81887afa6473952e5022b46"
           },
           {
-            "key": "row:v2:ddb49e487a70e9ed:0:Claude Sonnet 4.5:0",
+            "key": "row:v2:ddb49e487a70e9ed:0:Claude Sonnet 4.5<sup>‡</sup>:0",
             "type": "table-row",
-            "label": "Claude Sonnet 4.5",
+            "label": "Claude Sonnet 4.5<sup>‡</sup>",
             "heading": "<span className=\"provider-heading\"><img src=\"/docs-assets/images/model-icons/anthropic.png\" alt=\"Anthropic logo\" className=\"provider-icon anthropic-ic",
             "columns": [
               "Model",
@@ -47529,14 +47553,14 @@
               "Reasoning"
             ],
             "cells": [
-              "Claude Sonnet 4.5",
+              "Claude Sonnet 4.5<sup>‡</sup>",
               "`claude-sonnet-4-5-20250929`",
               "1.2×",
               "`off` (default), `low`, `medium`, `high`"
             ],
             "signals": [],
             "url": "https://docs.factory.com/models.md",
-            "hash": "48bc7ea639e5a2f3e3b722a3c8a9ec350b905e3b37ca3c463c781862db9c329c"
+            "hash": "0368bc6e720b9f4a39167771f2a6d6646e49394f6b8cb49f5fbc5c2b3fd135ac"
           },
           {
             "key": "row:v2:ddb49e487a70e9ed:0:Claude Haiku 5.5:0",
@@ -47589,6 +47613,18 @@
             ],
             "models": [
               "claude.com/en/articles/15425996-data-retention-practices-for-mythos-cla"
+            ],
+            "url": "https://docs.factory.com/models.md"
+          },
+          {
+            "key": "text:a1491469e7f95d40c06a21b7bb1e13d8ab3ca18e05f0d507d1a1c5dbc3c34b13",
+            "hash": "a1491469e7f95d40c06a21b7bb1e13d8ab3ca18e05f0d507d1a1c5dbc3c34b13",
+            "type": "announcement",
+            "signals": [
+              "availability"
+            ],
+            "models": [
+              "Claude Sonnet 4.5 remains available for now and will be removed in a fu"
             ],
             "url": "https://docs.factory.com/models.md"
           },
@@ -48348,9 +48384,9 @@
             "hash": "4c3c24dbec41062ffdcfa80eb1cc39ea09050e9830b593a198fe981f0c24b13c"
           },
           {
-            "key": "row:v2:823f3bfa47a96e44:0:Gemini 3.6 Flash:0",
+            "key": "row:v2:823f3bfa47a96e44:0:Gemini 3.6 Flash<sup>‡</sup>:0",
             "type": "table-row",
-            "label": "Gemini 3.6 Flash",
+            "label": "Gemini 3.6 Flash<sup>‡</sup>",
             "heading": "<span className=\"provider-heading\"><img src=\"/docs-assets/images/model-icons/google.ico\" alt=\"Google logo\" className=\"provider-icon\" />Google</span>",
             "columns": [
               "Model",
@@ -48359,14 +48395,14 @@
               "Reasoning"
             ],
             "cells": [
-              "Gemini 3.6 Flash",
+              "Gemini 3.6 Flash<sup>‡</sup>",
               "`gemini-3.6-flash`",
               "0.6×",
               "`low`, `medium`, `high` (default)"
             ],
             "signals": [],
             "url": "https://docs.factory.com/models.md",
-            "hash": "df60cda3602117c8212a26d7351fe3967d4c3e25a808612e6a7f9d101d380db9"
+            "hash": "0986caf615c4d76a11d82d04b8e29361b1dcbd77cf7f9c48e81fd9af6bc52b34"
           },
           {
             "key": "row:v2:823f3bfa47a96e44:0:Gemini 3.5 Flash:0",
@@ -48459,6 +48495,18 @@
             ],
             "models": [
               "Gemini 3.7 Flash bills at 0.3"
+            ],
+            "url": "https://docs.factory.com/models.md"
+          },
+          {
+            "key": "text:c725080c5e28f74a2c8626f517615ab869444af1ec1a122552bd5f3116e9e0df",
+            "hash": "c725080c5e28f74a2c8626f517615ab869444af1ec1a122552bd5f3116e9e0df",
+            "type": "announcement",
+            "signals": [
+              "availability"
+            ],
+            "models": [
+              "Gemini 3.6 Flash remains available for now and will be removed in a fut"
             ],
             "url": "https://docs.factory.com/models.md"
           },
@@ -49010,59 +49058,15 @@
             "hash": "b8b8d80f52795cb160cd7a94494b9a9543d0c4cade0079779908b1627ce0323d"
           },
           {
-            "key": "row:v2:756de38a724d3e9b:0:Kimi K2.5<sup>‡</sup>:0",
-            "type": "table-row",
-            "label": "Kimi K2.5<sup>‡</sup>",
-            "heading": "<span className=\"provider-heading\"><img src=\"/brand-guidelines/logos/rotor-black.svg\" alt=\"Factory logo\" className=\"provider-icon\" />Droid Core (Open ",
-            "columns": [
-              "Model",
-              "Model ID",
-              "Multiplier",
-              "Reasoning"
-            ],
-            "cells": [
-              "Kimi K2.5<sup>‡</sup>",
-              "`kimi-k2.5`",
-              "0.25×",
-              "`off`, `high` (default)"
-            ],
-            "signals": [],
-            "url": "https://docs.factory.com/models.md",
-            "hash": "236b8c649f07dd6194d6fac6c969744da1c09095043426e9fc9ab82f41057dd3"
-          },
-          {
-            "key": "row:v2:756de38a724d3e9b:0:GLM-5.1<sup>‡</sup>:0",
-            "type": "table-row",
-            "label": "GLM-5.1<sup>‡</sup>",
-            "heading": "<span className=\"provider-heading\"><img src=\"/brand-guidelines/logos/rotor-black.svg\" alt=\"Factory logo\" className=\"provider-icon\" />Droid Core (Open ",
-            "columns": [
-              "Model",
-              "Model ID",
-              "Multiplier",
-              "Reasoning"
-            ],
-            "cells": [
-              "GLM-5.1<sup>‡</sup>",
-              "`glm-5.1`",
-              "0.55×",
-              "`off`, `high` (default)"
-            ],
-            "signals": [],
-            "url": "https://docs.factory.com/models.md",
-            "hash": "a13d4f8b7f4de3dfe90500fb9c34a3461a7bd0c958534862951e208cbe1f57a4"
-          },
-          {
-            "key": "text:820ecdee3340ce74fd990f1fcefa2f566af20bbae4d9abdf3b841b30a295e27d",
-            "hash": "820ecdee3340ce74fd990f1fcefa2f566af20bbae4d9abdf3b841b30a295e27d",
+            "key": "text:343eca18caee6de09965458c578318f695f1fbd6e0eac8d9723e3b0b1e2d6c39",
+            "hash": "343eca18caee6de09965458c578318f695f1fbd6e0eac8d9723e3b0b1e2d6c39",
             "type": "announcement",
             "signals": [
               "availability"
             ],
             "models": [
               "DeepSeek V4 Flash 0731",
-              "DeepSeek V4 Pro",
-              "MiniMax M2.7",
-              "Kimi K2.5 and GLM-5.1 remain available for now and will be removed in"
+              "DeepSeek V4 Pro and MiniMax M2.7 remain available for now and will be rem"
             ],
             "url": "https://docs.factory.com/models.md"
           },
@@ -49117,7 +49121,7 @@
             "url": "https://docs.factory.com/models.md"
           }
         ],
-        "hash": "884fde9ba9fb4f770ace36abe874c1000bdc0ae7b37b692fa016a8395cc2f72f"
+        "hash": "8656ebc328cb4d17fdb528c8d434d835de7f4b5f432614c9621f612d28b25f9b"
       }
     },
     "factory-plans": {
@@ -49125,13 +49129,13 @@
       "channel": "Factory",
       "url": "https://docs.factory.com/pricing/individuals.md",
       "kind": "document",
-      "attemptedAt": "2026-11-23T07:54:09.819Z",
-      "lastSuccessAt": "2026-11-23T07:54:09.819Z",
+      "attemptedAt": "2026-11-24T10:06:59.120Z",
+      "lastSuccessAt": "2026-11-24T10:06:59.120Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-23T07:54:09.819Z",
+        "checkedAt": "2026-11-24T10:06:59.120Z",
         "bodySha256": "7c75704906d429c519fd245576b23b632bf0a2369b5ac3eb16fbdbe3daa5c4c3",
         "records": [
           {
@@ -49380,15 +49384,113 @@
       "channel": "Factory",
       "url": "https://docs.factory.com/changelog/release-notes.md",
       "kind": "document",
-      "attemptedAt": "2026-11-23T07:54:09.819Z",
-      "lastSuccessAt": "2026-11-23T07:54:09.819Z",
+      "attemptedAt": "2026-11-24T10:06:59.120Z",
+      "lastSuccessAt": "2026-11-24T10:06:59.120Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-23T07:54:09.819Z",
-        "bodySha256": "a7e089711e8ebd2eff06a63ec735b5f096dc71ea748a84de7e41d85fa06e732a",
+        "checkedAt": "2026-11-24T10:06:59.120Z",
+        "bodySha256": "a3b3cc513fc3eaa22a1d7c5d3db3f4a3f7134e799ca876a4d2c835270cac4f68",
         "records": [
+          {
+            "key": "text:f0667a8a67a0d68baa932c552c585af059995e72ec90dead06c705cbfc2924f1",
+            "hash": "f0667a8a67a0d68baa932c552c585af059995e72ec90dead06c705cbfc2924f1",
+            "type": "announcement",
+            "signals": [],
+            "models": [
+              "step that blocked sign-in"
+            ],
+            "url": "https://docs.factory.com/changelog/release-notes.md"
+          },
+          {
+            "key": "text:c075e4074570e98d8784de9bbdf3a6d63cb2f527d9fbf53f938b323c6bd9928e",
+            "hash": "c075e4074570e98d8784de9bbdf3a6d63cb2f527d9fbf53f938b323c6bd9928e",
+            "type": "announcement",
+            "signals": [
+              "availability"
+            ],
+            "models": [],
+            "url": "https://docs.factory.com/changelog/release-notes.md"
+          },
+          {
+            "key": "text:40d8cb9d85a2af8899f65aaa63393fc9f91c2588e2de153fa9c2d68ebc498a4e",
+            "hash": "40d8cb9d85a2af8899f65aaa63393fc9f91c2588e2de153fa9c2d68ebc498a4e",
+            "type": "announcement",
+            "signals": [
+              "promotion"
+            ],
+            "models": [],
+            "url": "https://docs.factory.com/changelog/release-notes.md"
+          },
+          {
+            "key": "text:2d887fb3768b5d5b0976301957899e979dab2bcc96f291d7c9edf80613753378",
+            "hash": "2d887fb3768b5d5b0976301957899e979dab2bcc96f291d7c9edf80613753378",
+            "type": "announcement",
+            "signals": [
+              "availability"
+            ],
+            "models": [],
+            "url": "https://docs.factory.com/changelog/release-notes.md"
+          },
+          {
+            "key": "text:679ab8f5fb56193ab5e6628ccadbbd7cb23d8577530526619e725860286ddb44",
+            "hash": "679ab8f5fb56193ab5e6628ccadbbd7cb23d8577530526619e725860286ddb44",
+            "type": "announcement",
+            "signals": [
+              "availability"
+            ],
+            "models": [],
+            "url": "https://docs.factory.com/changelog/release-notes.md"
+          },
+          {
+            "key": "text:6e56dc54517e9e9fae38487d58bb11a4f19d5acec8893746f86c7e8100bb2374",
+            "hash": "6e56dc54517e9e9fae38487d58bb11a4f19d5acec8893746f86c7e8100bb2374",
+            "type": "announcement",
+            "signals": [],
+            "models": [],
+            "url": "https://docs.factory.com/changelog/release-notes.md"
+          },
+          {
+            "key": "text:55778220168324526c3eec70368c7b094ea52ac458e2aa1d15b765a0b4c71fa3",
+            "hash": "55778220168324526c3eec70368c7b094ea52ac458e2aa1d15b765a0b4c71fa3",
+            "type": "announcement",
+            "signals": [
+              "availability"
+            ],
+            "models": [],
+            "url": "https://docs.factory.com/changelog/release-notes.md"
+          },
+          {
+            "key": "text:e95d5e5fba810195e8b696a19165dfc1a3be603c80b0cdc3ea6c7df6c0da6485",
+            "hash": "e95d5e5fba810195e8b696a19165dfc1a3be603c80b0cdc3ea6c7df6c0da6485",
+            "type": "announcement",
+            "signals": [
+              "availability"
+            ],
+            "models": [],
+            "url": "https://docs.factory.com/changelog/release-notes.md"
+          },
+          {
+            "key": "text:e752175c6ac07ca2b37bbcd1fd558f6c3918754d897845f7fa367b4c4e51f365",
+            "hash": "e752175c6ac07ca2b37bbcd1fd558f6c3918754d897845f7fa367b4c4e51f365",
+            "type": "announcement",
+            "signals": [
+              "availability"
+            ],
+            "models": [],
+            "url": "https://docs.factory.com/changelog/release-notes.md"
+          },
+          {
+            "key": "text:0be719ff2e99798644362b91cbb27fd93e00576b46b305cc6725a272bc45826f",
+            "hash": "0be719ff2e99798644362b91cbb27fd93e00576b46b305cc6725a272bc45826f",
+            "type": "announcement",
+            "signals": [
+              "availability"
+            ],
+            "models": [],
+            "url": "https://docs.factory.com/changelog/release-notes.md"
+          },
           {
             "key": "text:da04cc108e9cb555e9095d7baa458fd97370dd80a1b0191aff93ee4f97098115",
             "hash": "da04cc108e9cb555e9095d7baa458fd97370dd80a1b0191aff93ee4f97098115",
@@ -49433,6 +49535,16 @@
           {
             "key": "text:fa244add2c8ac93c8d2a690cac318e2387c2c49ae1f2413518e85e603295419e",
             "hash": "fa244add2c8ac93c8d2a690cac318e2387c2c49ae1f2413518e85e603295419e",
+            "type": "announcement",
+            "signals": [
+              "availability"
+            ],
+            "models": [],
+            "url": "https://docs.factory.com/changelog/release-notes.md"
+          },
+          {
+            "key": "text:0c920ec70da671903bb99f3ae87699f6fe08972d61bfd506c57437f82f19e31f",
+            "hash": "0c920ec70da671903bb99f3ae87699f6fe08972d61bfd506c57437f82f19e31f",
             "type": "announcement",
             "signals": [
               "availability"
@@ -54901,7 +55013,7 @@
             "url": "https://docs.factory.com/changelog/release-notes.md"
           }
         ],
-        "hash": "2d0a407ecdf18ee5a2ba3fcc443ca3c98134d5df10657ebb18f43c5af4d4e15d"
+        "hash": "1bcd7fae171b08c5dcf781f523fe1d46845f97e6b9289a35ad8b79018953906f"
       }
     },
     "cursor-pricing": {
@@ -54909,14 +55021,14 @@
       "channel": "Cursor",
       "url": "https://cursor.com/docs/models-and-pricing",
       "kind": "tables",
-      "attemptedAt": "2026-11-23T07:54:09.819Z",
-      "lastSuccessAt": "2026-11-23T07:54:09.819Z",
+      "attemptedAt": "2026-11-24T10:06:59.120Z",
+      "lastSuccessAt": "2026-11-24T10:06:59.120Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-23T07:54:09.819Z",
-        "bodySha256": "0f0fe78d635e220c2c7672afd2c5b1817ccbb07516c538f08d7e00fe8d4c235c",
+        "checkedAt": "2026-11-24T10:06:59.120Z",
+        "bodySha256": "e3c81d1f45b8b1f5b8aab094c1f7cbbc0817f2dfa16151e0efe935743e10c470",
         "records": [
           {
             "key": "text:6c7ad5d1af746cc7ef5c32cb09479f830dfe5d5418e524a762cbb1699cb4e70c",
@@ -57286,14 +57398,14 @@
       "channel": "Cursor",
       "url": "https://cursor.com/changelog",
       "kind": "document",
-      "attemptedAt": "2026-11-23T07:54:09.819Z",
-      "lastSuccessAt": "2026-11-23T07:54:09.819Z",
+      "attemptedAt": "2026-11-24T10:06:59.120Z",
+      "lastSuccessAt": "2026-11-24T10:06:59.120Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-23T07:54:09.819Z",
-        "bodySha256": "a2658c6eba50233d8068c61aa997c99d20d27677e1d88f8eda33c47001c639b1",
+        "checkedAt": "2026-11-24T10:06:59.120Z",
+        "bodySha256": "f236f78a8b2fd866d6ebc1c7a28a7b9a9067735499a7b47311ec3436ad832d6a",
         "records": [
           {
             "key": "text:ddcce6feab143eda3ac8d33669e14870f201c2f2b5f9b27a875942a90b8bca89",
@@ -57410,14 +57522,14 @@
       "channel": "Devin",
       "url": "https://docs.devin.ai/release-notes/overview",
       "kind": "document",
-      "attemptedAt": "2026-11-23T07:54:09.819Z",
-      "lastSuccessAt": "2026-11-23T07:54:09.819Z",
+      "attemptedAt": "2026-11-24T10:06:59.120Z",
+      "lastSuccessAt": "2026-11-24T10:06:59.120Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-23T07:54:09.819Z",
-        "bodySha256": "04155b2f1a8217cb8e2faa6216f2ba724bffabe9222d740989132c3f5649cdd3",
+        "checkedAt": "2026-11-24T10:06:59.120Z",
+        "bodySha256": "2eaba8a1f13d642bd2b88646f188baf1d5b183177c096e9e6f68e37102cf5127",
         "records": [
           {
             "key": "text:8f188bc90439c5b341aca73eb4d84c3dd04eb3bbd57acda295334fbde1178a0f",
@@ -57468,7 +57580,7 @@
               "availability"
             ],
             "models": [],
-            "url": "https://docs.devin.ai/release-notes/overview#sessions-&-workspace-3"
+            "url": "https://docs.devin.ai/release-notes/overview#sessions-&-workspace-4"
           },
           {
             "key": "text:7497ad08bfcd2d18461ae3239c58a54330377887b6442830b0d301544a8b29f4",
@@ -57479,7 +57591,7 @@
               "availability"
             ],
             "models": [],
-            "url": "https://docs.devin.ai/release-notes/overview#sessions-&-workspace-5"
+            "url": "https://docs.devin.ai/release-notes/overview#sessions-&-workspace-6"
           },
           {
             "key": "text:464e14c5f935b89f02869cbe16f6c50c1fb22b86bde9d20e98445b0d234a9bb6",
@@ -57500,7 +57612,7 @@
               "availability"
             ],
             "models": [],
-            "url": "https://docs.devin.ai/release-notes/overview#sessions-&-workspace-6"
+            "url": "https://docs.devin.ai/release-notes/overview#sessions-&-workspace-7"
           },
           {
             "key": "text:a4153734e95e97bb2f87aaad2ac3234dd705623f0ea4666975f2ddeaba757fef",
@@ -57534,6 +57646,14 @@
             "models": [
               "step-by-step instructions for getting it. Redesigned Share Artifact D"
             ],
+            "url": "https://docs.devin.ai/release-notes/overview"
+          },
+          {
+            "key": "text:de2f7885673aebc27016593e512fae8ac1d4a7d36f94449a475250efc25fe0c4",
+            "hash": "de2f7885673aebc27016593e512fae8ac1d4a7d36f94449a475250efc25fe0c4",
+            "type": "announcement",
+            "signals": [],
+            "models": [],
             "url": "https://docs.devin.ai/release-notes/overview"
           },
           {
@@ -58245,7 +58365,7 @@
             "url": "https://docs.devin.ai/release-notes/overview"
           }
         ],
-        "hash": "a052aa508c435dbd7963a6e34cc99d2a473522ab153414aaf45d36a480a30d3d"
+        "hash": "5b8485bf1988405c16ab3d96d9d01d41fa71368c9b8cf28ef074783dc138c092"
       }
     },
     "alibaba-coding-global": {
@@ -58253,14 +58373,14 @@
       "channel": "Alibaba",
       "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan",
       "kind": "tables",
-      "attemptedAt": "2026-11-23T07:54:09.819Z",
-      "lastSuccessAt": "2026-11-23T07:54:09.819Z",
+      "attemptedAt": "2026-11-24T10:06:59.120Z",
+      "lastSuccessAt": "2026-11-24T10:06:59.120Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-23T07:54:09.819Z",
-        "bodySha256": "e62bf6da63cb9c946be45efb4285d46036a330cb25fb7f7f76fb6c87732a4616",
+        "checkedAt": "2026-11-24T10:06:59.120Z",
+        "bodySha256": "c7e96eee96aeff53f22e007920288d039f0a869d6779235e376c4f6dd7c76f77",
         "records": [
           {
             "key": "text:0686d515f782875e3d4496656bed3259cca990eb3f6893deb942abc5bd278f24",
@@ -58760,14 +58880,14 @@
       "channel": "Alibaba",
       "url": "https://help.aliyun.com/zh/model-studio/coding-plan",
       "kind": "tables",
-      "attemptedAt": "2026-11-23T07:54:09.819Z",
-      "lastSuccessAt": "2026-11-23T07:54:09.819Z",
+      "attemptedAt": "2026-11-24T10:06:59.120Z",
+      "lastSuccessAt": "2026-11-24T10:06:59.120Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-23T07:54:09.819Z",
-        "bodySha256": "dd07fb05312af9c1452c65332b8bd9d5480697b7dd57352ddeeed0cb3df93741",
+        "checkedAt": "2026-11-24T10:06:59.120Z",
+        "bodySha256": "704682572054900028162b9e17215cbf0cadc8c63e82e265d4ce5cfed2c87da1",
         "records": [
           {
             "key": "text:775eabf14c55f66ea3e7ef7b3737a001f72434663b87e260b4d68fe798af9495",
@@ -59221,14 +59341,14 @@
       "channel": "Alibaba",
       "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
       "kind": "tables",
-      "attemptedAt": "2026-11-23T07:54:09.819Z",
-      "lastSuccessAt": "2026-11-23T07:54:09.819Z",
+      "attemptedAt": "2026-11-24T10:06:59.120Z",
+      "lastSuccessAt": "2026-11-24T10:06:59.120Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
       "snapshot": {
-        "checkedAt": "2026-11-23T07:54:09.819Z",
-        "bodySha256": "f44b9ec4458957a6c9d5b1f8295f01a036072ad28c53541803a950c94264222a",
+        "checkedAt": "2026-11-24T10:06:59.120Z",
+        "bodySha256": "e70ca1f0e82c6f66638e1ed54aa5fdb0a8d1ff6dca62b87b84026435fc822fe8",
         "records": [
           {
             "key": "text:c6331a8c511a8bcbc3875d6eab0b268db2d55d5b5e18db81347f58611f6c7435",
@@ -59247,6 +59367,14 @@
             "signals": [
               "version"
             ],
+            "models": [],
+            "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+          },
+          {
+            "key": "text:9be77b2f28f5330be56cd657397b4ae045a19c5a275541271619fd4f80051dbb",
+            "hash": "9be77b2f28f5330be56cd657397b4ae045a19c5a275541271619fd4f80051dbb",
+            "type": "announcement",
+            "signals": [],
             "models": [],
             "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
           },
@@ -60124,7 +60252,7 @@
             "url": "https://help.aliyun.com/zh/model-studio/token-plan-usage-quota#tpuq-h-reset"
           }
         ],
-        "hash": "7d1db8f76046d4ac9afed86dbdc470283011daa6556c4e595b5ebe45f62845fa"
+        "hash": "6a1e38f3b129e1ebe971654d24fe1466b171477fdcad7bdbf5e0c643debeae40"
       }
     },
     "opencode-social": {
@@ -60132,13 +60260,34 @@
       "channel": "OpenCode",
       "url": "https://x.com/opencode",
       "kind": "social",
-      "attemptedAt": "2026-11-23T07:54:09.819Z",
-      "lastSuccessAt": "2026-11-23T07:54:09.819Z",
+      "attemptedAt": "2026-11-24T10:06:59.120Z",
+      "lastSuccessAt": "2026-11-24T10:06:59.120Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "official-oembed; discovery may use mirror",
       "snapshot": {
         "records": [
+          {
+            "key": "post:2125062647846694979",
+            "type": "announcement",
+            "hash": "2e0b4f40d11b199ff6ecd0db228ad9d78fae1ecff439fea9c04f51625cdc9b9b",
+            "signals": [
+              "promotion",
+              "availability"
+            ],
+            "models": [],
+            "url": "https://x.com/opencode/status/2125062647846694979",
+            "relevant": true
+          },
+          {
+            "key": "post:2124886266835505473",
+            "type": "announcement",
+            "hash": "56001ab18c1155bcb6819933addc546b4e5d19eb90751540d6d19294bad8b182",
+            "signals": [],
+            "models": [],
+            "url": "https://x.com/opencode/status/2124886266835505473",
+            "relevant": false
+          },
           {
             "key": "post:2124268940226392524",
             "type": "announcement",
@@ -60240,32 +60389,10 @@
             ],
             "url": "https://x.com/opencode/status/2122969474571583885",
             "relevant": true
-          },
-          {
-            "key": "post:2122763721923559595",
-            "type": "announcement",
-            "hash": "af43cc3c52b25b67e3c6edc60ee68e884129d72c84fb53939e90bc469309a9e3",
-            "signals": [
-              "pricing"
-            ],
-            "models": [
-              "GLM 5.3 usage for "
-            ],
-            "url": "https://x.com/opencode/status/2122763721923559595",
-            "relevant": true
-          },
-          {
-            "key": "post:2122601201531507042",
-            "type": "announcement",
-            "hash": "c645e46c45871f4967853190582a2773be0d0819581ab2c9d3a70adba08ebc11",
-            "signals": [],
-            "models": [],
-            "url": "https://x.com/opencode/status/2122601201531507042",
-            "relevant": false
           }
         ],
-        "hash": "85343c3ab7588a8b793630adf7e668eb936d3a4439d9ceabaf1320211c0f1bf1",
-        "checkedAt": "2026-11-23T07:54:09.819Z",
+        "hash": "3a98516438598fe5acdd30dbca7c4ad313f1156f0fffd9e4b4e91b5e59030eda",
+        "checkedAt": "2026-11-24T10:06:59.120Z",
         "discoveredVia": "https://teapawt.net/opencode"
       }
     },
@@ -60274,13 +60401,89 @@
       "channel": "Command Code",
       "url": "https://x.com/CommandCodeAI",
       "kind": "social",
-      "attemptedAt": "2026-11-23T07:54:09.819Z",
-      "lastSuccessAt": "2026-11-23T07:54:09.819Z",
+      "attemptedAt": "2026-11-24T10:06:59.120Z",
+      "lastSuccessAt": "2026-11-24T10:06:59.120Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "official-oembed; discovery may use mirror",
       "snapshot": {
         "records": [
+          {
+            "key": "post:2125059389669466165",
+            "type": "announcement",
+            "hash": "3b3db980d22faef8e1e841cb651f91da43f7550d53dd4cf756e088f5592023a8",
+            "signals": [],
+            "models": [],
+            "url": "https://x.com/CommandCodeAI/status/2125059389669466165",
+            "relevant": false
+          },
+          {
+            "key": "post:2125059387844952075",
+            "type": "announcement",
+            "hash": "3ae0d5ce999dba50c09b9ba92830fa26243492dcc264d2bc04762784ae8253ca",
+            "signals": [],
+            "models": [],
+            "url": "https://x.com/CommandCodeAI/status/2125059387844952075",
+            "relevant": false
+          },
+          {
+            "key": "post:2125059378130866506",
+            "type": "announcement",
+            "hash": "a6f926ee87acb3c7206a80bd65cd4907b28f882152a83fb5ca0674c283be4b83",
+            "signals": [
+              "promotion",
+              "availability"
+            ],
+            "models": [
+              "Qwen4 Max ",
+              "Gemini 4 Neon ",
+              "GPT-6.2 Astra and GPT-6.2 Sol "
+            ],
+            "url": "https://x.com/CommandCodeAI/status/2125059378130866506",
+            "relevant": true
+          },
+          {
+            "key": "post:2124891253749973035",
+            "type": "announcement",
+            "hash": "07c33ef820292c611727dfd280cb92755d5f015483cb05222779290cf1433987",
+            "signals": [
+              "availability"
+            ],
+            "models": [],
+            "url": "https://x.com/CommandCodeAI/status/2124891253749973035",
+            "relevant": false
+          },
+          {
+            "key": "post:2124891252214948165",
+            "type": "announcement",
+            "hash": "380442ae030c75f801189edbd571a675b662bb8e63470b867165dc3d73f0e035",
+            "signals": [],
+            "models": [],
+            "url": "https://x.com/CommandCodeAI/status/2124891252214948165",
+            "relevant": false
+          },
+          {
+            "key": "post:2124891250138730562",
+            "type": "announcement",
+            "hash": "9fff96a739d736b3f05f27ad6fb947f10eebf27fce997b5634731f4a0d2d6677",
+            "signals": [
+              "availability"
+            ],
+            "models": [],
+            "url": "https://x.com/CommandCodeAI/status/2124891250138730562",
+            "relevant": false
+          },
+          {
+            "key": "post:2124782553202925633",
+            "type": "announcement",
+            "hash": "f52c723102e74c2e61e3aecce1329946be9037b9c86514cc36c26be9daafdaa4",
+            "signals": [],
+            "models": [
+              "GLM 5.4 "
+            ],
+            "url": "https://x.com/CommandCodeAI/status/2124782553202925633",
+            "relevant": true
+          },
           {
             "key": "post:2124705337303568661",
             "type": "announcement",
@@ -60308,15 +60511,6 @@
             "relevant": true
           },
           {
-            "key": "post:2123491263286751380",
-            "type": "announcement",
-            "hash": "1accdc6d558a91fb79b6b92bf6f406b05ebff908b8532f44b0bd8837bc0e04ba",
-            "signals": [],
-            "models": [],
-            "url": "https://x.com/CommandCodeAI/status/2123491263286751380",
-            "relevant": false
-          },
-          {
             "key": "post:2123491261147701446",
             "type": "announcement",
             "hash": "76aa00791389bc786aa34695cddcf3032968d1dcac62f523e568b1aaa43ecb6a",
@@ -60325,19 +60519,6 @@
             ],
             "models": [],
             "url": "https://x.com/CommandCodeAI/status/2123491261147701446",
-            "relevant": true
-          },
-          {
-            "key": "post:2123193525298995586",
-            "type": "announcement",
-            "hash": "e9d37e41e203db8922a9cc4cfa08b2e119d6eb415a5078277bd369bfd4c1c59f",
-            "signals": [
-              "availability"
-            ],
-            "models": [
-              "Gemini 4 Neon is now live in Command Code. - 1M token context window - "
-            ],
-            "url": "https://x.com/CommandCodeAI/status/2123193525298995586",
             "relevant": true
           },
           {
@@ -60359,69 +60540,10 @@
             ],
             "url": "https://x.com/CommandCodeAI/status/2122813802345570382",
             "relevant": true
-          },
-          {
-            "key": "post:2122470637818318952",
-            "type": "announcement",
-            "hash": "8e29781d8440cc1be40783aec3f163fe2dcc6505836a7b20e19aeb9299df8aae",
-            "signals": [
-              "promotion",
-              "availability"
-            ],
-            "models": [],
-            "url": "https://x.com/CommandCodeAI/status/2122470637818318952",
-            "relevant": true
-          },
-          {
-            "key": "post:2122401360520110277",
-            "type": "announcement",
-            "hash": "02347addff86b477789e005fb8844a193bb3ae2e1a8ee74b66d658ff21e4ffa3",
-            "signals": [
-              "availability"
-            ],
-            "models": [],
-            "url": "https://x.com/CommandCodeAI/status/2122401360520110277",
-            "relevant": true
-          },
-          {
-            "key": "post:2122235651978662024",
-            "type": "announcement",
-            "hash": "86ec11ff421445f62abbd50eddf6c044154dccf69a552479503f2534c5997f14",
-            "signals": [
-              "pricing"
-            ],
-            "models": [],
-            "url": "https://x.com/CommandCodeAI/status/2122235651978662024",
-            "relevant": true
-          },
-          {
-            "key": "post:2122222181308617200",
-            "type": "announcement",
-            "hash": "1523d785bf153762b4039938fd970e7d17701b454f714fab2cd838136cf78c77",
-            "signals": [],
-            "models": [
-              "Qwen4 Max is now live in Command Code on all plans. - 1M token contex",
-              "Qwen3.8 Max "
-            ],
-            "url": "https://x.com/CommandCodeAI/status/2122222181308617200",
-            "relevant": true
-          },
-          {
-            "key": "post:2120236115382980617",
-            "type": "announcement",
-            "hash": "bdc1a5420e849be34469617ff1c7142640bcdbf127cff48df2d83224c3b11a0c",
-            "signals": [
-              "pricing",
-              "promotion",
-              "availability"
-            ],
-            "models": [],
-            "url": "https://x.com/CommandCodeAI/status/2120236115382980617",
-            "relevant": true
           }
         ],
-        "hash": "99aa62ecf480f48ed90fa8f0fc21e7d8c80620f0c703e206ab53ba726d427902",
-        "checkedAt": "2026-11-23T07:54:09.819Z",
+        "hash": "ff0e1b3d456ac3eab20339ab53e1d68fb87cf1f618a57a4c1699b8616adb8233",
+        "checkedAt": "2026-11-24T10:06:59.120Z",
         "discoveredVia": "https://teapawt.net/CommandCodeAI"
       }
     }
@@ -102776,7 +102898,749 @@
         "relevant": true
       },
       "status": "pending"
+    },
+    {
+      "id": "008e58bc46785ec6d0e03e69868718c83d3451681d2cabb2f0cf8f279d41d2b1",
+      "sourceId": "opencode-releases",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://opencode.ai/changelog",
+      "before": null,
+      "after": {
+        "key": "text:c6e0eb39489f234fc1e2c3e14b08b7ffc319adc230280cc37c5c82bc1819912c",
+        "hash": "c6e0eb39489f234fc1e2c3e14b08b7ffc319adc230280cc37c5c82bc1819912c",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [],
+        "url": "https://opencode.ai/changelog"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "e063270b4c7bde1e70213fa0d13baa3e50f393f666724179a2f5ed1715b3f855",
+      "sourceId": "opencode-releases",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://github.com/anomalyco/opencode/pull/65793",
+      "before": null,
+      "after": {
+        "key": "text:2d3da336f207d9ff56760cee4fabf2812b3308048fd121c065cfe9230a5dc54d",
+        "hash": "2d3da336f207d9ff56760cee4fabf2812b3308048fd121c065cfe9230a5dc54d",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [],
+        "url": "https://github.com/anomalyco/opencode/pull/65793"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "5e2d612c49bb89387f0d466c1c8ae5228e2cac66242efe69e762176c321e6db7",
+      "sourceId": "opencode-releases",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://github.com/anomalyco/opencode/pull/65749",
+      "before": null,
+      "after": {
+        "key": "text:fd649c2605a58acead0cd930271f1cb9479ff200ca9831027556e5485f38965e",
+        "hash": "fd649c2605a58acead0cd930271f1cb9479ff200ca9831027556e5485f38965e",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [],
+        "url": "https://github.com/anomalyco/opencode/pull/65749"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "0160544585e18a3520d4278e57fc0cd836d3aae87656022db0a29b65b3ff9cd7",
+      "sourceId": "opencode-releases",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://github.com/anomalyco/opencode/pull/65768",
+      "before": null,
+      "after": {
+        "key": "text:7691723285a13984558a881069813c9e2f6021c6d23a6918b170b5bdab10e8fa",
+        "hash": "7691723285a13984558a881069813c9e2f6021c6d23a6918b170b5bdab10e8fa",
+        "type": "announcement",
+        "signals": [
+          "pricing"
+        ],
+        "models": [],
+        "url": "https://github.com/anomalyco/opencode/pull/65768"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "9892bbcc300a758bd16d7323b12d217090f6835ee5793fd5b1ee663b6a0451f4",
+      "sourceId": "opencode-releases",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://github.com/anomalyco/opencode/pull/65441",
+      "before": null,
+      "after": {
+        "key": "text:d8056bca4c61b0857f85c750ae07d5eed289a546667b9f9fdf133f6e9b2e45b9",
+        "hash": "d8056bca4c61b0857f85c750ae07d5eed289a546667b9f9fdf133f6e9b2e45b9",
+        "type": "announcement",
+        "signals": [],
+        "models": [],
+        "url": "https://github.com/anomalyco/opencode/pull/65441"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "e58d11feed92b0365549959875e8458b63089fa30faeadcd65387f2c9689aa04",
+      "sourceId": "opencode-releases",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://github.com/anomalyco/opencode/pull/63666",
+      "before": null,
+      "after": {
+        "key": "text:84a995147e9e9f6348f42aa6667031cf903ffd39685662fd24b98b9ec5c3e058",
+        "hash": "84a995147e9e9f6348f42aa6667031cf903ffd39685662fd24b98b9ec5c3e058",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [],
+        "url": "https://github.com/anomalyco/opencode/pull/63666"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "1a5851c72865ab56492a034479fb48d155a58aa239101c96d0663e5930a62e6a",
+      "sourceId": "factory-models",
+      "channel": "Factory",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://docs.factory.com/models.md",
+      "before": null,
+      "after": {
+        "key": "row:v2:ddb49e487a70e9ed:0:Claude Sonnet 4.5<sup>‡</sup>:0",
+        "type": "table-row",
+        "label": "Claude Sonnet 4.5<sup>‡</sup>",
+        "heading": "<span className=\"provider-heading\"><img src=\"/docs-assets/images/model-icons/anthropic.png\" alt=\"Anthropic logo\" className=\"provider-icon anthropic-ic",
+        "columns": [
+          "Model",
+          "Model ID",
+          "Multiplier",
+          "Reasoning"
+        ],
+        "cells": [
+          "Claude Sonnet 4.5<sup>‡</sup>",
+          "`claude-sonnet-4-5-20250929`",
+          "1.2×",
+          "`off` (default), `low`, `medium`, `high`"
+        ],
+        "signals": [],
+        "url": "https://docs.factory.com/models.md",
+        "hash": "0368bc6e720b9f4a39167771f2a6d6646e49394f6b8cb49f5fbc5c2b3fd135ac"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "2948a1345e6509eb2b6c4f5a4d3599ed15903368313e5874509ecddfed8c3695",
+      "sourceId": "factory-models",
+      "channel": "Factory",
+      "kind": "announcement",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://docs.factory.com/models.md",
+      "before": null,
+      "after": {
+        "key": "text:a1491469e7f95d40c06a21b7bb1e13d8ab3ca18e05f0d507d1a1c5dbc3c34b13",
+        "hash": "a1491469e7f95d40c06a21b7bb1e13d8ab3ca18e05f0d507d1a1c5dbc3c34b13",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [
+          "Claude Sonnet 4.5 remains available for now and will be removed in a fu"
+        ],
+        "url": "https://docs.factory.com/models.md"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "c7e3498ff0a8ba2646f35f71356c5b05bbdf64def57a8c8a6fc6797880986b67",
+      "sourceId": "factory-models",
+      "channel": "Factory",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://docs.factory.com/models.md",
+      "before": null,
+      "after": {
+        "key": "row:v2:823f3bfa47a96e44:0:Gemini 3.6 Flash<sup>‡</sup>:0",
+        "type": "table-row",
+        "label": "Gemini 3.6 Flash<sup>‡</sup>",
+        "heading": "<span className=\"provider-heading\"><img src=\"/docs-assets/images/model-icons/google.ico\" alt=\"Google logo\" className=\"provider-icon\" />Google</span>",
+        "columns": [
+          "Model",
+          "Model ID",
+          "Multiplier",
+          "Reasoning"
+        ],
+        "cells": [
+          "Gemini 3.6 Flash<sup>‡</sup>",
+          "`gemini-3.6-flash`",
+          "0.6×",
+          "`low`, `medium`, `high` (default)"
+        ],
+        "signals": [],
+        "url": "https://docs.factory.com/models.md",
+        "hash": "0986caf615c4d76a11d82d04b8e29361b1dcbd77cf7f9c48e81fd9af6bc52b34"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "0ae6c68c4b6a46bc4a992eb33c59620af5a2c3be95b6ab02edc017ea361b86ff",
+      "sourceId": "factory-models",
+      "channel": "Factory",
+      "kind": "announcement",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://docs.factory.com/models.md",
+      "before": null,
+      "after": {
+        "key": "text:c725080c5e28f74a2c8626f517615ab869444af1ec1a122552bd5f3116e9e0df",
+        "hash": "c725080c5e28f74a2c8626f517615ab869444af1ec1a122552bd5f3116e9e0df",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [
+          "Gemini 3.6 Flash remains available for now and will be removed in a fut"
+        ],
+        "url": "https://docs.factory.com/models.md"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "afda4145873016b206e5dfe98c0cf0dda2a63555e8c19354b10667e5389b36cd",
+      "sourceId": "factory-models",
+      "channel": "Factory",
+      "kind": "announcement",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://docs.factory.com/models.md",
+      "before": null,
+      "after": {
+        "key": "text:343eca18caee6de09965458c578318f695f1fbd6e0eac8d9723e3b0b1e2d6c39",
+        "hash": "343eca18caee6de09965458c578318f695f1fbd6e0eac8d9723e3b0b1e2d6c39",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [
+          "DeepSeek V4 Flash 0731",
+          "DeepSeek V4 Pro and MiniMax M2.7 remain available for now and will be rem"
+        ],
+        "url": "https://docs.factory.com/models.md"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "95c765c62c0b1d23046ff49f6c0c8b0d0d97fe7d7f0faa611936528278ca58e6",
+      "sourceId": "factory-models",
+      "channel": "Factory",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://docs.factory.com/models.md",
+      "before": {
+        "key": "row:v2:ddb49e487a70e9ed:0:Claude Sonnet 4.5:0",
+        "type": "table-row",
+        "label": "Claude Sonnet 4.5",
+        "heading": "<span className=\"provider-heading\"><img src=\"/docs-assets/images/model-icons/anthropic.png\" alt=\"Anthropic logo\" className=\"provider-icon anthropic-ic",
+        "columns": [
+          "Model",
+          "Model ID",
+          "Multiplier",
+          "Reasoning"
+        ],
+        "cells": [
+          "Claude Sonnet 4.5",
+          "`claude-sonnet-4-5-20250929`",
+          "1.2×",
+          "`off` (default), `low`, `medium`, `high`"
+        ],
+        "signals": [],
+        "url": "https://docs.factory.com/models.md",
+        "hash": "48bc7ea639e5a2f3e3b722a3c8a9ec350b905e3b37ca3c463c781862db9c329c"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "6ae0e05ffca4a059fbaa09892214a2edaa789e09a7bbf463ac65ab3b3abcf371",
+      "sourceId": "factory-models",
+      "channel": "Factory",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://docs.factory.com/models.md",
+      "before": {
+        "key": "row:v2:823f3bfa47a96e44:0:Gemini 3.6 Flash:0",
+        "type": "table-row",
+        "label": "Gemini 3.6 Flash",
+        "heading": "<span className=\"provider-heading\"><img src=\"/docs-assets/images/model-icons/google.ico\" alt=\"Google logo\" className=\"provider-icon\" />Google</span>",
+        "columns": [
+          "Model",
+          "Model ID",
+          "Multiplier",
+          "Reasoning"
+        ],
+        "cells": [
+          "Gemini 3.6 Flash",
+          "`gemini-3.6-flash`",
+          "0.6×",
+          "`low`, `medium`, `high` (default)"
+        ],
+        "signals": [],
+        "url": "https://docs.factory.com/models.md",
+        "hash": "df60cda3602117c8212a26d7351fe3967d4c3e25a808612e6a7f9d101d380db9"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "62f2ea0d6f586c5941382d72ee39a3304ae4c002d5ca04a1355050b353b9b556",
+      "sourceId": "factory-models",
+      "channel": "Factory",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://docs.factory.com/models.md",
+      "before": {
+        "key": "row:v2:756de38a724d3e9b:0:Kimi K2.5<sup>‡</sup>:0",
+        "type": "table-row",
+        "label": "Kimi K2.5<sup>‡</sup>",
+        "heading": "<span className=\"provider-heading\"><img src=\"/brand-guidelines/logos/rotor-black.svg\" alt=\"Factory logo\" className=\"provider-icon\" />Droid Core (Open ",
+        "columns": [
+          "Model",
+          "Model ID",
+          "Multiplier",
+          "Reasoning"
+        ],
+        "cells": [
+          "Kimi K2.5<sup>‡</sup>",
+          "`kimi-k2.5`",
+          "0.25×",
+          "`off`, `high` (default)"
+        ],
+        "signals": [],
+        "url": "https://docs.factory.com/models.md",
+        "hash": "236b8c649f07dd6194d6fac6c969744da1c09095043426e9fc9ab82f41057dd3"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "260167690fafe439aec884db6e77a4732534866c26e9a9af491150a1e020068f",
+      "sourceId": "factory-models",
+      "channel": "Factory",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://docs.factory.com/models.md",
+      "before": {
+        "key": "row:v2:756de38a724d3e9b:0:GLM-5.1<sup>‡</sup>:0",
+        "type": "table-row",
+        "label": "GLM-5.1<sup>‡</sup>",
+        "heading": "<span className=\"provider-heading\"><img src=\"/brand-guidelines/logos/rotor-black.svg\" alt=\"Factory logo\" className=\"provider-icon\" />Droid Core (Open ",
+        "columns": [
+          "Model",
+          "Model ID",
+          "Multiplier",
+          "Reasoning"
+        ],
+        "cells": [
+          "GLM-5.1<sup>‡</sup>",
+          "`glm-5.1`",
+          "0.55×",
+          "`off`, `high` (default)"
+        ],
+        "signals": [],
+        "url": "https://docs.factory.com/models.md",
+        "hash": "a13d4f8b7f4de3dfe90500fb9c34a3461a7bd0c958534862951e208cbe1f57a4"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "c60237f11e76ead5fc9cea701b31750676a6e9196c5ba61b01ae1096d2d2dc71",
+      "sourceId": "factory-releases",
+      "channel": "Factory",
+      "kind": "announcement",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://docs.factory.com/changelog/release-notes.md",
+      "before": null,
+      "after": {
+        "key": "text:f0667a8a67a0d68baa932c552c585af059995e72ec90dead06c705cbfc2924f1",
+        "hash": "f0667a8a67a0d68baa932c552c585af059995e72ec90dead06c705cbfc2924f1",
+        "type": "announcement",
+        "signals": [],
+        "models": [
+          "step that blocked sign-in"
+        ],
+        "url": "https://docs.factory.com/changelog/release-notes.md"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "f269c42276fd3e7d73b3b8f81e2b675448b1d8e816d0ae1cb1899c02de6a6b85",
+      "sourceId": "factory-releases",
+      "channel": "Factory",
+      "kind": "announcement",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://docs.factory.com/changelog/release-notes.md",
+      "before": null,
+      "after": {
+        "key": "text:c075e4074570e98d8784de9bbdf3a6d63cb2f527d9fbf53f938b323c6bd9928e",
+        "hash": "c075e4074570e98d8784de9bbdf3a6d63cb2f527d9fbf53f938b323c6bd9928e",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [],
+        "url": "https://docs.factory.com/changelog/release-notes.md"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "872f9db11f698dc6b006b66b7b99f9c15fce80ebb8b2e85ce93063994bef9bf6",
+      "sourceId": "factory-releases",
+      "channel": "Factory",
+      "kind": "announcement",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://docs.factory.com/changelog/release-notes.md",
+      "before": null,
+      "after": {
+        "key": "text:40d8cb9d85a2af8899f65aaa63393fc9f91c2588e2de153fa9c2d68ebc498a4e",
+        "hash": "40d8cb9d85a2af8899f65aaa63393fc9f91c2588e2de153fa9c2d68ebc498a4e",
+        "type": "announcement",
+        "signals": [
+          "promotion"
+        ],
+        "models": [],
+        "url": "https://docs.factory.com/changelog/release-notes.md"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "06af4098c28ccd3a8bde4e023f6e167676b090015f0fa0bacf595f49935cb94b",
+      "sourceId": "factory-releases",
+      "channel": "Factory",
+      "kind": "announcement",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://docs.factory.com/changelog/release-notes.md",
+      "before": null,
+      "after": {
+        "key": "text:2d887fb3768b5d5b0976301957899e979dab2bcc96f291d7c9edf80613753378",
+        "hash": "2d887fb3768b5d5b0976301957899e979dab2bcc96f291d7c9edf80613753378",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [],
+        "url": "https://docs.factory.com/changelog/release-notes.md"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "25d71b46e92cd33edf241bf9bbd5f56596f59e07c74557f3ff16c5120858b1bc",
+      "sourceId": "factory-releases",
+      "channel": "Factory",
+      "kind": "announcement",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://docs.factory.com/changelog/release-notes.md",
+      "before": null,
+      "after": {
+        "key": "text:679ab8f5fb56193ab5e6628ccadbbd7cb23d8577530526619e725860286ddb44",
+        "hash": "679ab8f5fb56193ab5e6628ccadbbd7cb23d8577530526619e725860286ddb44",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [],
+        "url": "https://docs.factory.com/changelog/release-notes.md"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "35951d30c08c26bc0badcf26b4af6046d9e23de0028467a3444665476dba690c",
+      "sourceId": "factory-releases",
+      "channel": "Factory",
+      "kind": "announcement",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://docs.factory.com/changelog/release-notes.md",
+      "before": null,
+      "after": {
+        "key": "text:6e56dc54517e9e9fae38487d58bb11a4f19d5acec8893746f86c7e8100bb2374",
+        "hash": "6e56dc54517e9e9fae38487d58bb11a4f19d5acec8893746f86c7e8100bb2374",
+        "type": "announcement",
+        "signals": [],
+        "models": [],
+        "url": "https://docs.factory.com/changelog/release-notes.md"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "2195dd164ed7d19da3aa23eaac9d7394fab53338dca51b026f059f8e672d467b",
+      "sourceId": "factory-releases",
+      "channel": "Factory",
+      "kind": "announcement",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://docs.factory.com/changelog/release-notes.md",
+      "before": null,
+      "after": {
+        "key": "text:55778220168324526c3eec70368c7b094ea52ac458e2aa1d15b765a0b4c71fa3",
+        "hash": "55778220168324526c3eec70368c7b094ea52ac458e2aa1d15b765a0b4c71fa3",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [],
+        "url": "https://docs.factory.com/changelog/release-notes.md"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "d75f3c686915cea254928a76061f2140094c2016686d6b6f85bb00d32983947f",
+      "sourceId": "factory-releases",
+      "channel": "Factory",
+      "kind": "announcement",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://docs.factory.com/changelog/release-notes.md",
+      "before": null,
+      "after": {
+        "key": "text:e95d5e5fba810195e8b696a19165dfc1a3be603c80b0cdc3ea6c7df6c0da6485",
+        "hash": "e95d5e5fba810195e8b696a19165dfc1a3be603c80b0cdc3ea6c7df6c0da6485",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [],
+        "url": "https://docs.factory.com/changelog/release-notes.md"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "e7127ed16bd0280b96a1b9e21c760d1a8914ad7869bd8eba2e14ce7ec3afcf4f",
+      "sourceId": "factory-releases",
+      "channel": "Factory",
+      "kind": "announcement",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://docs.factory.com/changelog/release-notes.md",
+      "before": null,
+      "after": {
+        "key": "text:e752175c6ac07ca2b37bbcd1fd558f6c3918754d897845f7fa367b4c4e51f365",
+        "hash": "e752175c6ac07ca2b37bbcd1fd558f6c3918754d897845f7fa367b4c4e51f365",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [],
+        "url": "https://docs.factory.com/changelog/release-notes.md"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "ed8e248c5dc8b27ffe6eaddd59a6f6ea2107a5a5b01e07f2418dc89b490c2dff",
+      "sourceId": "factory-releases",
+      "channel": "Factory",
+      "kind": "announcement",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://docs.factory.com/changelog/release-notes.md",
+      "before": null,
+      "after": {
+        "key": "text:0be719ff2e99798644362b91cbb27fd93e00576b46b305cc6725a272bc45826f",
+        "hash": "0be719ff2e99798644362b91cbb27fd93e00576b46b305cc6725a272bc45826f",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [],
+        "url": "https://docs.factory.com/changelog/release-notes.md"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "4abb82755cf8738be8b514c713a0e0f02be927401ae1aca6b70b8623575c9dc9",
+      "sourceId": "factory-releases",
+      "channel": "Factory",
+      "kind": "announcement",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://docs.factory.com/changelog/release-notes.md",
+      "before": null,
+      "after": {
+        "key": "text:0c920ec70da671903bb99f3ae87699f6fe08972d61bfd506c57437f82f19e31f",
+        "hash": "0c920ec70da671903bb99f3ae87699f6fe08972d61bfd506c57437f82f19e31f",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [],
+        "url": "https://docs.factory.com/changelog/release-notes.md"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "cae7547cec8307a7284dc4d202323e2ad2f5aa261715cd00cbafb66992ab31a6",
+      "sourceId": "devin-releases",
+      "channel": "Devin",
+      "kind": "announcement",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://docs.devin.ai/release-notes/overview",
+      "before": null,
+      "after": {
+        "key": "text:de2f7885673aebc27016593e512fae8ac1d4a7d36f94449a475250efc25fe0c4",
+        "hash": "de2f7885673aebc27016593e512fae8ac1d4a7d36f94449a475250efc25fe0c4",
+        "type": "announcement",
+        "signals": [],
+        "models": [],
+        "url": "https://docs.devin.ai/release-notes/overview"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "bfd56c93f5658451b391e9a1d1f64e15f0b430456fe11f55c3c020232bb7e598",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "announcement",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": null,
+      "after": {
+        "key": "text:9be77b2f28f5330be56cd657397b4ae045a19c5a275541271619fd4f80051dbb",
+        "hash": "9be77b2f28f5330be56cd657397b4ae045a19c5a275541271619fd4f80051dbb",
+        "type": "announcement",
+        "signals": [],
+        "models": [],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "6101bf5e0890ac41bc1e5836767308c64dc538764827c13003c0c0522aeaaf34",
+      "sourceId": "opencode-social",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://x.com/opencode/status/2125062647846694979",
+      "before": null,
+      "after": {
+        "key": "post:2125062647846694979",
+        "type": "announcement",
+        "hash": "2e0b4f40d11b199ff6ecd0db228ad9d78fae1ecff439fea9c04f51625cdc9b9b",
+        "signals": [
+          "promotion",
+          "availability"
+        ],
+        "models": [],
+        "url": "https://x.com/opencode/status/2125062647846694979",
+        "relevant": true
+      },
+      "status": "pending"
+    },
+    {
+      "id": "08727ef6905fb1fd0c3c5d2b6c21dff2b57afb9b571f7602fc15c5a890fd3e71",
+      "sourceId": "command-code-social",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://x.com/CommandCodeAI/status/2125059378130866506",
+      "before": null,
+      "after": {
+        "key": "post:2125059378130866506",
+        "type": "announcement",
+        "hash": "a6f926ee87acb3c7206a80bd65cd4907b28f882152a83fb5ca0674c283be4b83",
+        "signals": [
+          "promotion",
+          "availability"
+        ],
+        "models": [
+          "Qwen4 Max ",
+          "Gemini 4 Neon ",
+          "GPT-6.2 Astra and GPT-6.2 Sol "
+        ],
+        "url": "https://x.com/CommandCodeAI/status/2125059378130866506",
+        "relevant": true
+      },
+      "status": "pending"
+    },
+    {
+      "id": "34eb159d8188295bbbcc63c93db8c41b6cf494034aa2d4c7a737939aaadb4a1d",
+      "sourceId": "command-code-social",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://x.com/CommandCodeAI/status/2124782553202925633",
+      "before": null,
+      "after": {
+        "key": "post:2124782553202925633",
+        "type": "announcement",
+        "hash": "f52c723102e74c2e61e3aecce1329946be9037b9c86514cc36c26be9daafdaa4",
+        "signals": [],
+        "models": [
+          "GLM 5.4 "
+        ],
+        "url": "https://x.com/CommandCodeAI/status/2124782553202925633",
+        "relevant": true
+      },
+      "status": "pending"
+    },
+    {
+      "id": "ed80c01573898bd03b3322e1dd8ab0f8135a9bcdc05f057f6585ed903d86f595",
+      "sourceId": "promotion-calendar",
+      "channel": "OpenCode",
+      "kind": "promotion-expiring",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://opencode.ai/v2/docs/console/go/",
+      "before": null,
+      "after": {
+        "hash": "28c81635dd79b6ea07b0d742c9a5dd576c116955a526fa9bd12eb08fb1ed0920",
+        "label": "gemini-4-argon",
+        "expiresAt": "2026-11-30",
+        "url": "https://opencode.ai/v2/docs/console/go/"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "87a77d676963eb5cd45b2a037eb5629174694487979bec6d60d64f02d02c135c",
+      "sourceId": "promotion-calendar",
+      "channel": "OpenCode",
+      "kind": "promotion-expiring",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://opencode.ai/v2/docs/console/go/",
+      "before": null,
+      "after": {
+        "hash": "f909c7375d11aabf8732142bf16e8e04a94c8e9775e97e06b25a62086b24e41f",
+        "label": "gemini-4-argon",
+        "expiresAt": "2026-11-30",
+        "url": "https://opencode.ai/v2/docs/console/go/"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "ff654e1c5f88800e79c93b7a6aa05acd989a1f5e2c31b30915ae5789f6a9e6f8",
+      "sourceId": "promotion-calendar",
+      "channel": "OpenCode",
+      "kind": "promotion-expiring",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://opencode.ai/v2/docs/console/go/",
+      "before": null,
+      "after": {
+        "hash": "5c9d55d3476ff4775db16841ecb7a7f381bae80c645c29b790eea252eb7dfce9",
+        "label": "gemini-4-argon",
+        "expiresAt": "2026-11-30",
+        "url": "https://opencode.ai/v2/docs/console/go/"
+      },
+      "status": "pending"
     }
   ],
-  "checkedAt": "2026-11-23T07:54:09.819Z"
+  "checkedAt": "2026-11-24T10:06:59.120Z"
 }

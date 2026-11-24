@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "checkedAt": "2026-11-23T07:54:09.819Z",
+  "checkedAt": "2026-11-24T10:06:59.120Z",
   "intervalHours": 24,
-  "newEvents": 31,
+  "newEvents": 34,
   "pending": [
     {
       "id": "4533c6040aa95efeaf575f7486523b4550c1a1975e7ba1df4f0cfa6f888e5935",
@@ -22438,6 +22438,748 @@
         "relevant": true
       },
       "status": "pending"
+    },
+    {
+      "id": "008e58bc46785ec6d0e03e69868718c83d3451681d2cabb2f0cf8f279d41d2b1",
+      "sourceId": "opencode-releases",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://opencode.ai/changelog",
+      "before": null,
+      "after": {
+        "key": "text:c6e0eb39489f234fc1e2c3e14b08b7ffc319adc230280cc37c5c82bc1819912c",
+        "hash": "c6e0eb39489f234fc1e2c3e14b08b7ffc319adc230280cc37c5c82bc1819912c",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [],
+        "url": "https://opencode.ai/changelog"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "e063270b4c7bde1e70213fa0d13baa3e50f393f666724179a2f5ed1715b3f855",
+      "sourceId": "opencode-releases",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://github.com/anomalyco/opencode/pull/65793",
+      "before": null,
+      "after": {
+        "key": "text:2d3da336f207d9ff56760cee4fabf2812b3308048fd121c065cfe9230a5dc54d",
+        "hash": "2d3da336f207d9ff56760cee4fabf2812b3308048fd121c065cfe9230a5dc54d",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [],
+        "url": "https://github.com/anomalyco/opencode/pull/65793"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "5e2d612c49bb89387f0d466c1c8ae5228e2cac66242efe69e762176c321e6db7",
+      "sourceId": "opencode-releases",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://github.com/anomalyco/opencode/pull/65749",
+      "before": null,
+      "after": {
+        "key": "text:fd649c2605a58acead0cd930271f1cb9479ff200ca9831027556e5485f38965e",
+        "hash": "fd649c2605a58acead0cd930271f1cb9479ff200ca9831027556e5485f38965e",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [],
+        "url": "https://github.com/anomalyco/opencode/pull/65749"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "0160544585e18a3520d4278e57fc0cd836d3aae87656022db0a29b65b3ff9cd7",
+      "sourceId": "opencode-releases",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://github.com/anomalyco/opencode/pull/65768",
+      "before": null,
+      "after": {
+        "key": "text:7691723285a13984558a881069813c9e2f6021c6d23a6918b170b5bdab10e8fa",
+        "hash": "7691723285a13984558a881069813c9e2f6021c6d23a6918b170b5bdab10e8fa",
+        "type": "announcement",
+        "signals": [
+          "pricing"
+        ],
+        "models": [],
+        "url": "https://github.com/anomalyco/opencode/pull/65768"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "9892bbcc300a758bd16d7323b12d217090f6835ee5793fd5b1ee663b6a0451f4",
+      "sourceId": "opencode-releases",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://github.com/anomalyco/opencode/pull/65441",
+      "before": null,
+      "after": {
+        "key": "text:d8056bca4c61b0857f85c750ae07d5eed289a546667b9f9fdf133f6e9b2e45b9",
+        "hash": "d8056bca4c61b0857f85c750ae07d5eed289a546667b9f9fdf133f6e9b2e45b9",
+        "type": "announcement",
+        "signals": [],
+        "models": [],
+        "url": "https://github.com/anomalyco/opencode/pull/65441"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "e58d11feed92b0365549959875e8458b63089fa30faeadcd65387f2c9689aa04",
+      "sourceId": "opencode-releases",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://github.com/anomalyco/opencode/pull/63666",
+      "before": null,
+      "after": {
+        "key": "text:84a995147e9e9f6348f42aa6667031cf903ffd39685662fd24b98b9ec5c3e058",
+        "hash": "84a995147e9e9f6348f42aa6667031cf903ffd39685662fd24b98b9ec5c3e058",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [],
+        "url": "https://github.com/anomalyco/opencode/pull/63666"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "1a5851c72865ab56492a034479fb48d155a58aa239101c96d0663e5930a62e6a",
+      "sourceId": "factory-models",
+      "channel": "Factory",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://docs.factory.com/models.md",
+      "before": null,
+      "after": {
+        "key": "row:v2:ddb49e487a70e9ed:0:Claude Sonnet 4.5<sup>‡</sup>:0",
+        "type": "table-row",
+        "label": "Claude Sonnet 4.5<sup>‡</sup>",
+        "heading": "<span className=\"provider-heading\"><img src=\"/docs-assets/images/model-icons/anthropic.png\" alt=\"Anthropic logo\" className=\"provider-icon anthropic-ic",
+        "columns": [
+          "Model",
+          "Model ID",
+          "Multiplier",
+          "Reasoning"
+        ],
+        "cells": [
+          "Claude Sonnet 4.5<sup>‡</sup>",
+          "`claude-sonnet-4-5-20250929`",
+          "1.2×",
+          "`off` (default), `low`, `medium`, `high`"
+        ],
+        "signals": [],
+        "url": "https://docs.factory.com/models.md",
+        "hash": "0368bc6e720b9f4a39167771f2a6d6646e49394f6b8cb49f5fbc5c2b3fd135ac"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "2948a1345e6509eb2b6c4f5a4d3599ed15903368313e5874509ecddfed8c3695",
+      "sourceId": "factory-models",
+      "channel": "Factory",
+      "kind": "announcement",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://docs.factory.com/models.md",
+      "before": null,
+      "after": {
+        "key": "text:a1491469e7f95d40c06a21b7bb1e13d8ab3ca18e05f0d507d1a1c5dbc3c34b13",
+        "hash": "a1491469e7f95d40c06a21b7bb1e13d8ab3ca18e05f0d507d1a1c5dbc3c34b13",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [
+          "Claude Sonnet 4.5 remains available for now and will be removed in a fu"
+        ],
+        "url": "https://docs.factory.com/models.md"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "c7e3498ff0a8ba2646f35f71356c5b05bbdf64def57a8c8a6fc6797880986b67",
+      "sourceId": "factory-models",
+      "channel": "Factory",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://docs.factory.com/models.md",
+      "before": null,
+      "after": {
+        "key": "row:v2:823f3bfa47a96e44:0:Gemini 3.6 Flash<sup>‡</sup>:0",
+        "type": "table-row",
+        "label": "Gemini 3.6 Flash<sup>‡</sup>",
+        "heading": "<span className=\"provider-heading\"><img src=\"/docs-assets/images/model-icons/google.ico\" alt=\"Google logo\" className=\"provider-icon\" />Google</span>",
+        "columns": [
+          "Model",
+          "Model ID",
+          "Multiplier",
+          "Reasoning"
+        ],
+        "cells": [
+          "Gemini 3.6 Flash<sup>‡</sup>",
+          "`gemini-3.6-flash`",
+          "0.6×",
+          "`low`, `medium`, `high` (default)"
+        ],
+        "signals": [],
+        "url": "https://docs.factory.com/models.md",
+        "hash": "0986caf615c4d76a11d82d04b8e29361b1dcbd77cf7f9c48e81fd9af6bc52b34"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "0ae6c68c4b6a46bc4a992eb33c59620af5a2c3be95b6ab02edc017ea361b86ff",
+      "sourceId": "factory-models",
+      "channel": "Factory",
+      "kind": "announcement",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://docs.factory.com/models.md",
+      "before": null,
+      "after": {
+        "key": "text:c725080c5e28f74a2c8626f517615ab869444af1ec1a122552bd5f3116e9e0df",
+        "hash": "c725080c5e28f74a2c8626f517615ab869444af1ec1a122552bd5f3116e9e0df",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [
+          "Gemini 3.6 Flash remains available for now and will be removed in a fut"
+        ],
+        "url": "https://docs.factory.com/models.md"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "afda4145873016b206e5dfe98c0cf0dda2a63555e8c19354b10667e5389b36cd",
+      "sourceId": "factory-models",
+      "channel": "Factory",
+      "kind": "announcement",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://docs.factory.com/models.md",
+      "before": null,
+      "after": {
+        "key": "text:343eca18caee6de09965458c578318f695f1fbd6e0eac8d9723e3b0b1e2d6c39",
+        "hash": "343eca18caee6de09965458c578318f695f1fbd6e0eac8d9723e3b0b1e2d6c39",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [
+          "DeepSeek V4 Flash 0731",
+          "DeepSeek V4 Pro and MiniMax M2.7 remain available for now and will be rem"
+        ],
+        "url": "https://docs.factory.com/models.md"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "95c765c62c0b1d23046ff49f6c0c8b0d0d97fe7d7f0faa611936528278ca58e6",
+      "sourceId": "factory-models",
+      "channel": "Factory",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://docs.factory.com/models.md",
+      "before": {
+        "key": "row:v2:ddb49e487a70e9ed:0:Claude Sonnet 4.5:0",
+        "type": "table-row",
+        "label": "Claude Sonnet 4.5",
+        "heading": "<span className=\"provider-heading\"><img src=\"/docs-assets/images/model-icons/anthropic.png\" alt=\"Anthropic logo\" className=\"provider-icon anthropic-ic",
+        "columns": [
+          "Model",
+          "Model ID",
+          "Multiplier",
+          "Reasoning"
+        ],
+        "cells": [
+          "Claude Sonnet 4.5",
+          "`claude-sonnet-4-5-20250929`",
+          "1.2×",
+          "`off` (default), `low`, `medium`, `high`"
+        ],
+        "signals": [],
+        "url": "https://docs.factory.com/models.md",
+        "hash": "48bc7ea639e5a2f3e3b722a3c8a9ec350b905e3b37ca3c463c781862db9c329c"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "6ae0e05ffca4a059fbaa09892214a2edaa789e09a7bbf463ac65ab3b3abcf371",
+      "sourceId": "factory-models",
+      "channel": "Factory",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://docs.factory.com/models.md",
+      "before": {
+        "key": "row:v2:823f3bfa47a96e44:0:Gemini 3.6 Flash:0",
+        "type": "table-row",
+        "label": "Gemini 3.6 Flash",
+        "heading": "<span className=\"provider-heading\"><img src=\"/docs-assets/images/model-icons/google.ico\" alt=\"Google logo\" className=\"provider-icon\" />Google</span>",
+        "columns": [
+          "Model",
+          "Model ID",
+          "Multiplier",
+          "Reasoning"
+        ],
+        "cells": [
+          "Gemini 3.6 Flash",
+          "`gemini-3.6-flash`",
+          "0.6×",
+          "`low`, `medium`, `high` (default)"
+        ],
+        "signals": [],
+        "url": "https://docs.factory.com/models.md",
+        "hash": "df60cda3602117c8212a26d7351fe3967d4c3e25a808612e6a7f9d101d380db9"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "62f2ea0d6f586c5941382d72ee39a3304ae4c002d5ca04a1355050b353b9b556",
+      "sourceId": "factory-models",
+      "channel": "Factory",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://docs.factory.com/models.md",
+      "before": {
+        "key": "row:v2:756de38a724d3e9b:0:Kimi K2.5<sup>‡</sup>:0",
+        "type": "table-row",
+        "label": "Kimi K2.5<sup>‡</sup>",
+        "heading": "<span className=\"provider-heading\"><img src=\"/brand-guidelines/logos/rotor-black.svg\" alt=\"Factory logo\" className=\"provider-icon\" />Droid Core (Open ",
+        "columns": [
+          "Model",
+          "Model ID",
+          "Multiplier",
+          "Reasoning"
+        ],
+        "cells": [
+          "Kimi K2.5<sup>‡</sup>",
+          "`kimi-k2.5`",
+          "0.25×",
+          "`off`, `high` (default)"
+        ],
+        "signals": [],
+        "url": "https://docs.factory.com/models.md",
+        "hash": "236b8c649f07dd6194d6fac6c969744da1c09095043426e9fc9ab82f41057dd3"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "260167690fafe439aec884db6e77a4732534866c26e9a9af491150a1e020068f",
+      "sourceId": "factory-models",
+      "channel": "Factory",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://docs.factory.com/models.md",
+      "before": {
+        "key": "row:v2:756de38a724d3e9b:0:GLM-5.1<sup>‡</sup>:0",
+        "type": "table-row",
+        "label": "GLM-5.1<sup>‡</sup>",
+        "heading": "<span className=\"provider-heading\"><img src=\"/brand-guidelines/logos/rotor-black.svg\" alt=\"Factory logo\" className=\"provider-icon\" />Droid Core (Open ",
+        "columns": [
+          "Model",
+          "Model ID",
+          "Multiplier",
+          "Reasoning"
+        ],
+        "cells": [
+          "GLM-5.1<sup>‡</sup>",
+          "`glm-5.1`",
+          "0.55×",
+          "`off`, `high` (default)"
+        ],
+        "signals": [],
+        "url": "https://docs.factory.com/models.md",
+        "hash": "a13d4f8b7f4de3dfe90500fb9c34a3461a7bd0c958534862951e208cbe1f57a4"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "c60237f11e76ead5fc9cea701b31750676a6e9196c5ba61b01ae1096d2d2dc71",
+      "sourceId": "factory-releases",
+      "channel": "Factory",
+      "kind": "announcement",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://docs.factory.com/changelog/release-notes.md",
+      "before": null,
+      "after": {
+        "key": "text:f0667a8a67a0d68baa932c552c585af059995e72ec90dead06c705cbfc2924f1",
+        "hash": "f0667a8a67a0d68baa932c552c585af059995e72ec90dead06c705cbfc2924f1",
+        "type": "announcement",
+        "signals": [],
+        "models": [
+          "step that blocked sign-in"
+        ],
+        "url": "https://docs.factory.com/changelog/release-notes.md"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "f269c42276fd3e7d73b3b8f81e2b675448b1d8e816d0ae1cb1899c02de6a6b85",
+      "sourceId": "factory-releases",
+      "channel": "Factory",
+      "kind": "announcement",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://docs.factory.com/changelog/release-notes.md",
+      "before": null,
+      "after": {
+        "key": "text:c075e4074570e98d8784de9bbdf3a6d63cb2f527d9fbf53f938b323c6bd9928e",
+        "hash": "c075e4074570e98d8784de9bbdf3a6d63cb2f527d9fbf53f938b323c6bd9928e",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [],
+        "url": "https://docs.factory.com/changelog/release-notes.md"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "872f9db11f698dc6b006b66b7b99f9c15fce80ebb8b2e85ce93063994bef9bf6",
+      "sourceId": "factory-releases",
+      "channel": "Factory",
+      "kind": "announcement",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://docs.factory.com/changelog/release-notes.md",
+      "before": null,
+      "after": {
+        "key": "text:40d8cb9d85a2af8899f65aaa63393fc9f91c2588e2de153fa9c2d68ebc498a4e",
+        "hash": "40d8cb9d85a2af8899f65aaa63393fc9f91c2588e2de153fa9c2d68ebc498a4e",
+        "type": "announcement",
+        "signals": [
+          "promotion"
+        ],
+        "models": [],
+        "url": "https://docs.factory.com/changelog/release-notes.md"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "06af4098c28ccd3a8bde4e023f6e167676b090015f0fa0bacf595f49935cb94b",
+      "sourceId": "factory-releases",
+      "channel": "Factory",
+      "kind": "announcement",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://docs.factory.com/changelog/release-notes.md",
+      "before": null,
+      "after": {
+        "key": "text:2d887fb3768b5d5b0976301957899e979dab2bcc96f291d7c9edf80613753378",
+        "hash": "2d887fb3768b5d5b0976301957899e979dab2bcc96f291d7c9edf80613753378",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [],
+        "url": "https://docs.factory.com/changelog/release-notes.md"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "25d71b46e92cd33edf241bf9bbd5f56596f59e07c74557f3ff16c5120858b1bc",
+      "sourceId": "factory-releases",
+      "channel": "Factory",
+      "kind": "announcement",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://docs.factory.com/changelog/release-notes.md",
+      "before": null,
+      "after": {
+        "key": "text:679ab8f5fb56193ab5e6628ccadbbd7cb23d8577530526619e725860286ddb44",
+        "hash": "679ab8f5fb56193ab5e6628ccadbbd7cb23d8577530526619e725860286ddb44",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [],
+        "url": "https://docs.factory.com/changelog/release-notes.md"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "35951d30c08c26bc0badcf26b4af6046d9e23de0028467a3444665476dba690c",
+      "sourceId": "factory-releases",
+      "channel": "Factory",
+      "kind": "announcement",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://docs.factory.com/changelog/release-notes.md",
+      "before": null,
+      "after": {
+        "key": "text:6e56dc54517e9e9fae38487d58bb11a4f19d5acec8893746f86c7e8100bb2374",
+        "hash": "6e56dc54517e9e9fae38487d58bb11a4f19d5acec8893746f86c7e8100bb2374",
+        "type": "announcement",
+        "signals": [],
+        "models": [],
+        "url": "https://docs.factory.com/changelog/release-notes.md"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "2195dd164ed7d19da3aa23eaac9d7394fab53338dca51b026f059f8e672d467b",
+      "sourceId": "factory-releases",
+      "channel": "Factory",
+      "kind": "announcement",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://docs.factory.com/changelog/release-notes.md",
+      "before": null,
+      "after": {
+        "key": "text:55778220168324526c3eec70368c7b094ea52ac458e2aa1d15b765a0b4c71fa3",
+        "hash": "55778220168324526c3eec70368c7b094ea52ac458e2aa1d15b765a0b4c71fa3",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [],
+        "url": "https://docs.factory.com/changelog/release-notes.md"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "d75f3c686915cea254928a76061f2140094c2016686d6b6f85bb00d32983947f",
+      "sourceId": "factory-releases",
+      "channel": "Factory",
+      "kind": "announcement",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://docs.factory.com/changelog/release-notes.md",
+      "before": null,
+      "after": {
+        "key": "text:e95d5e5fba810195e8b696a19165dfc1a3be603c80b0cdc3ea6c7df6c0da6485",
+        "hash": "e95d5e5fba810195e8b696a19165dfc1a3be603c80b0cdc3ea6c7df6c0da6485",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [],
+        "url": "https://docs.factory.com/changelog/release-notes.md"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "e7127ed16bd0280b96a1b9e21c760d1a8914ad7869bd8eba2e14ce7ec3afcf4f",
+      "sourceId": "factory-releases",
+      "channel": "Factory",
+      "kind": "announcement",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://docs.factory.com/changelog/release-notes.md",
+      "before": null,
+      "after": {
+        "key": "text:e752175c6ac07ca2b37bbcd1fd558f6c3918754d897845f7fa367b4c4e51f365",
+        "hash": "e752175c6ac07ca2b37bbcd1fd558f6c3918754d897845f7fa367b4c4e51f365",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [],
+        "url": "https://docs.factory.com/changelog/release-notes.md"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "ed8e248c5dc8b27ffe6eaddd59a6f6ea2107a5a5b01e07f2418dc89b490c2dff",
+      "sourceId": "factory-releases",
+      "channel": "Factory",
+      "kind": "announcement",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://docs.factory.com/changelog/release-notes.md",
+      "before": null,
+      "after": {
+        "key": "text:0be719ff2e99798644362b91cbb27fd93e00576b46b305cc6725a272bc45826f",
+        "hash": "0be719ff2e99798644362b91cbb27fd93e00576b46b305cc6725a272bc45826f",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [],
+        "url": "https://docs.factory.com/changelog/release-notes.md"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "4abb82755cf8738be8b514c713a0e0f02be927401ae1aca6b70b8623575c9dc9",
+      "sourceId": "factory-releases",
+      "channel": "Factory",
+      "kind": "announcement",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://docs.factory.com/changelog/release-notes.md",
+      "before": null,
+      "after": {
+        "key": "text:0c920ec70da671903bb99f3ae87699f6fe08972d61bfd506c57437f82f19e31f",
+        "hash": "0c920ec70da671903bb99f3ae87699f6fe08972d61bfd506c57437f82f19e31f",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [],
+        "url": "https://docs.factory.com/changelog/release-notes.md"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "cae7547cec8307a7284dc4d202323e2ad2f5aa261715cd00cbafb66992ab31a6",
+      "sourceId": "devin-releases",
+      "channel": "Devin",
+      "kind": "announcement",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://docs.devin.ai/release-notes/overview",
+      "before": null,
+      "after": {
+        "key": "text:de2f7885673aebc27016593e512fae8ac1d4a7d36f94449a475250efc25fe0c4",
+        "hash": "de2f7885673aebc27016593e512fae8ac1d4a7d36f94449a475250efc25fe0c4",
+        "type": "announcement",
+        "signals": [],
+        "models": [],
+        "url": "https://docs.devin.ai/release-notes/overview"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "bfd56c93f5658451b391e9a1d1f64e15f0b430456fe11f55c3c020232bb7e598",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "announcement",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": null,
+      "after": {
+        "key": "text:9be77b2f28f5330be56cd657397b4ae045a19c5a275541271619fd4f80051dbb",
+        "hash": "9be77b2f28f5330be56cd657397b4ae045a19c5a275541271619fd4f80051dbb",
+        "type": "announcement",
+        "signals": [],
+        "models": [],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "6101bf5e0890ac41bc1e5836767308c64dc538764827c13003c0c0522aeaaf34",
+      "sourceId": "opencode-social",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://x.com/opencode/status/2125062647846694979",
+      "before": null,
+      "after": {
+        "key": "post:2125062647846694979",
+        "type": "announcement",
+        "hash": "2e0b4f40d11b199ff6ecd0db228ad9d78fae1ecff439fea9c04f51625cdc9b9b",
+        "signals": [
+          "promotion",
+          "availability"
+        ],
+        "models": [],
+        "url": "https://x.com/opencode/status/2125062647846694979",
+        "relevant": true
+      },
+      "status": "pending"
+    },
+    {
+      "id": "08727ef6905fb1fd0c3c5d2b6c21dff2b57afb9b571f7602fc15c5a890fd3e71",
+      "sourceId": "command-code-social",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://x.com/CommandCodeAI/status/2125059378130866506",
+      "before": null,
+      "after": {
+        "key": "post:2125059378130866506",
+        "type": "announcement",
+        "hash": "a6f926ee87acb3c7206a80bd65cd4907b28f882152a83fb5ca0674c283be4b83",
+        "signals": [
+          "promotion",
+          "availability"
+        ],
+        "models": [
+          "Qwen4 Max ",
+          "Gemini 4 Neon ",
+          "GPT-6.2 Astra and GPT-6.2 Sol "
+        ],
+        "url": "https://x.com/CommandCodeAI/status/2125059378130866506",
+        "relevant": true
+      },
+      "status": "pending"
+    },
+    {
+      "id": "34eb159d8188295bbbcc63c93db8c41b6cf494034aa2d4c7a737939aaadb4a1d",
+      "sourceId": "command-code-social",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://x.com/CommandCodeAI/status/2124782553202925633",
+      "before": null,
+      "after": {
+        "key": "post:2124782553202925633",
+        "type": "announcement",
+        "hash": "f52c723102e74c2e61e3aecce1329946be9037b9c86514cc36c26be9daafdaa4",
+        "signals": [],
+        "models": [
+          "GLM 5.4 "
+        ],
+        "url": "https://x.com/CommandCodeAI/status/2124782553202925633",
+        "relevant": true
+      },
+      "status": "pending"
+    },
+    {
+      "id": "ed80c01573898bd03b3322e1dd8ab0f8135a9bcdc05f057f6585ed903d86f595",
+      "sourceId": "promotion-calendar",
+      "channel": "OpenCode",
+      "kind": "promotion-expiring",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://opencode.ai/v2/docs/console/go/",
+      "before": null,
+      "after": {
+        "hash": "28c81635dd79b6ea07b0d742c9a5dd576c116955a526fa9bd12eb08fb1ed0920",
+        "label": "gemini-4-argon",
+        "expiresAt": "2026-11-30",
+        "url": "https://opencode.ai/v2/docs/console/go/"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "87a77d676963eb5cd45b2a037eb5629174694487979bec6d60d64f02d02c135c",
+      "sourceId": "promotion-calendar",
+      "channel": "OpenCode",
+      "kind": "promotion-expiring",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://opencode.ai/v2/docs/console/go/",
+      "before": null,
+      "after": {
+        "hash": "f909c7375d11aabf8732142bf16e8e04a94c8e9775e97e06b25a62086b24e41f",
+        "label": "gemini-4-argon",
+        "expiresAt": "2026-11-30",
+        "url": "https://opencode.ai/v2/docs/console/go/"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "ff654e1c5f88800e79c93b7a6aa05acd989a1f5e2c31b30915ae5789f6a9e6f8",
+      "sourceId": "promotion-calendar",
+      "channel": "OpenCode",
+      "kind": "promotion-expiring",
+      "detectedAt": "2026-11-24T10:06:59.120Z",
+      "url": "https://opencode.ai/v2/docs/console/go/",
+      "before": null,
+      "after": {
+        "hash": "5c9d55d3476ff4775db16841ecb7a7f381bae80c645c29b790eea252eb7dfce9",
+        "label": "gemini-4-argon",
+        "expiresAt": "2026-11-30",
+        "url": "https://opencode.ai/v2/docs/console/go/"
+      },
+      "status": "pending"
     }
   ],
   "resolvedCount": 433,
@@ -22447,12 +23189,12 @@
       "channel": "OpenCode",
       "url": "https://opencode.ai/v2/docs/console/go/",
       "kind": "tables",
-      "attemptedAt": "2026-11-23T07:54:09.819Z",
+      "attemptedAt": "2026-11-24T10:06:59.120Z",
       "lastSuccessAt": "2026-11-16T06:49:25.500Z",
       "status": "failed",
-      "consecutiveFailures": 7,
+      "consecutiveFailures": 8,
       "retrieval": "http",
-      "error": "Source structure changed: 47 records, expected at least 60; fallback: Source structure changed: 47 records, expected at least 60",
+      "error": "Source structure changed: 54 records, expected at least 60; fallback: Source structure changed: 54 records, expected at least 60",
       "recordCount": 419
     },
     {
@@ -22460,20 +23202,20 @@
       "channel": "OpenCode",
       "url": "https://opencode.ai/changelog",
       "kind": "document",
-      "attemptedAt": "2026-11-23T07:54:09.819Z",
-      "lastSuccessAt": "2026-11-23T07:54:09.819Z",
+      "attemptedAt": "2026-11-24T10:06:59.120Z",
+      "lastSuccessAt": "2026-11-24T10:06:59.120Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 19
+      "recordCount": 22
     },
     {
       "id": "command-code-go",
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/go",
       "kind": "tables",
-      "attemptedAt": "2026-11-23T07:54:09.819Z",
-      "lastSuccessAt": "2026-11-23T07:54:09.819Z",
+      "attemptedAt": "2026-11-24T10:06:59.120Z",
+      "lastSuccessAt": "2026-11-24T10:06:59.120Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -22484,8 +23226,8 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/goat",
       "kind": "tables",
-      "attemptedAt": "2026-11-23T07:54:09.819Z",
-      "lastSuccessAt": "2026-11-23T07:54:09.819Z",
+      "attemptedAt": "2026-11-24T10:06:59.120Z",
+      "lastSuccessAt": "2026-11-24T10:06:59.120Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -22496,8 +23238,8 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/pro",
       "kind": "tables",
-      "attemptedAt": "2026-11-23T07:54:09.819Z",
-      "lastSuccessAt": "2026-11-23T07:54:09.819Z",
+      "attemptedAt": "2026-11-24T10:06:59.120Z",
+      "lastSuccessAt": "2026-11-24T10:06:59.120Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -22508,8 +23250,8 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/max",
       "kind": "tables",
-      "attemptedAt": "2026-11-23T07:54:09.819Z",
-      "lastSuccessAt": "2026-11-23T07:54:09.819Z",
+      "attemptedAt": "2026-11-24T10:06:59.120Z",
+      "lastSuccessAt": "2026-11-24T10:06:59.120Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -22520,8 +23262,8 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/reference/cli/models",
       "kind": "tables",
-      "attemptedAt": "2026-11-23T07:54:09.819Z",
-      "lastSuccessAt": "2026-11-23T07:54:09.819Z",
+      "attemptedAt": "2026-11-24T10:06:59.120Z",
+      "lastSuccessAt": "2026-11-24T10:06:59.120Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -22532,8 +23274,8 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/resources/pricing-limits",
       "kind": "tables",
-      "attemptedAt": "2026-11-23T07:54:09.819Z",
-      "lastSuccessAt": "2026-11-23T07:54:09.819Z",
+      "attemptedAt": "2026-11-24T10:06:59.120Z",
+      "lastSuccessAt": "2026-11-24T10:06:59.120Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -22544,8 +23286,8 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/changelog",
       "kind": "document",
-      "attemptedAt": "2026-11-23T07:54:09.819Z",
-      "lastSuccessAt": "2026-11-23T07:54:09.819Z",
+      "attemptedAt": "2026-11-24T10:06:59.120Z",
+      "lastSuccessAt": "2026-11-24T10:06:59.120Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -22556,8 +23298,8 @@
       "channel": "Ollama",
       "url": "https://ollama.com/pricing",
       "kind": "tables",
-      "attemptedAt": "2026-11-23T07:54:09.819Z",
-      "lastSuccessAt": "2026-11-23T07:54:09.819Z",
+      "attemptedAt": "2026-11-24T10:06:59.120Z",
+      "lastSuccessAt": "2026-11-24T10:06:59.120Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -22568,8 +23310,8 @@
       "channel": "Ollama",
       "url": "https://ollama.com/blog",
       "kind": "document",
-      "attemptedAt": "2026-11-23T07:54:09.819Z",
-      "lastSuccessAt": "2026-11-23T07:54:09.819Z",
+      "attemptedAt": "2026-11-24T10:06:59.120Z",
+      "lastSuccessAt": "2026-11-24T10:06:59.120Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -22580,8 +23322,8 @@
       "channel": "Factory",
       "url": "https://docs.factory.com/models.md",
       "kind": "tables",
-      "attemptedAt": "2026-11-23T07:54:09.819Z",
-      "lastSuccessAt": "2026-11-23T07:54:09.819Z",
+      "attemptedAt": "2026-11-24T10:06:59.120Z",
+      "lastSuccessAt": "2026-11-24T10:06:59.120Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -22592,8 +23334,8 @@
       "channel": "Factory",
       "url": "https://docs.factory.com/pricing/individuals.md",
       "kind": "document",
-      "attemptedAt": "2026-11-23T07:54:09.819Z",
-      "lastSuccessAt": "2026-11-23T07:54:09.819Z",
+      "attemptedAt": "2026-11-24T10:06:59.120Z",
+      "lastSuccessAt": "2026-11-24T10:06:59.120Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -22604,20 +23346,20 @@
       "channel": "Factory",
       "url": "https://docs.factory.com/changelog/release-notes.md",
       "kind": "document",
-      "attemptedAt": "2026-11-23T07:54:09.819Z",
-      "lastSuccessAt": "2026-11-23T07:54:09.819Z",
+      "attemptedAt": "2026-11-24T10:06:59.120Z",
+      "lastSuccessAt": "2026-11-24T10:06:59.120Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 543
+      "recordCount": 554
     },
     {
       "id": "cursor-pricing",
       "channel": "Cursor",
       "url": "https://cursor.com/docs/models-and-pricing",
       "kind": "tables",
-      "attemptedAt": "2026-11-23T07:54:09.819Z",
-      "lastSuccessAt": "2026-11-23T07:54:09.819Z",
+      "attemptedAt": "2026-11-24T10:06:59.120Z",
+      "lastSuccessAt": "2026-11-24T10:06:59.120Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -22628,8 +23370,8 @@
       "channel": "Cursor",
       "url": "https://cursor.com/changelog",
       "kind": "document",
-      "attemptedAt": "2026-11-23T07:54:09.819Z",
-      "lastSuccessAt": "2026-11-23T07:54:09.819Z",
+      "attemptedAt": "2026-11-24T10:06:59.120Z",
+      "lastSuccessAt": "2026-11-24T10:06:59.120Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -22640,20 +23382,20 @@
       "channel": "Devin",
       "url": "https://docs.devin.ai/release-notes/overview",
       "kind": "document",
-      "attemptedAt": "2026-11-23T07:54:09.819Z",
-      "lastSuccessAt": "2026-11-23T07:54:09.819Z",
+      "attemptedAt": "2026-11-24T10:06:59.120Z",
+      "lastSuccessAt": "2026-11-24T10:06:59.120Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 75
+      "recordCount": 76
     },
     {
       "id": "alibaba-coding-global",
       "channel": "Alibaba",
       "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan",
       "kind": "tables",
-      "attemptedAt": "2026-11-23T07:54:09.819Z",
-      "lastSuccessAt": "2026-11-23T07:54:09.819Z",
+      "attemptedAt": "2026-11-24T10:06:59.120Z",
+      "lastSuccessAt": "2026-11-24T10:06:59.120Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -22664,8 +23406,8 @@
       "channel": "Alibaba",
       "url": "https://help.aliyun.com/zh/model-studio/coding-plan",
       "kind": "tables",
-      "attemptedAt": "2026-11-23T07:54:09.819Z",
-      "lastSuccessAt": "2026-11-23T07:54:09.819Z",
+      "attemptedAt": "2026-11-24T10:06:59.120Z",
+      "lastSuccessAt": "2026-11-24T10:06:59.120Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -22676,20 +23418,20 @@
       "channel": "Alibaba",
       "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
       "kind": "tables",
-      "attemptedAt": "2026-11-23T07:54:09.819Z",
-      "lastSuccessAt": "2026-11-23T07:54:09.819Z",
+      "attemptedAt": "2026-11-24T10:06:59.120Z",
+      "lastSuccessAt": "2026-11-24T10:06:59.120Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 57
+      "recordCount": 58
     },
     {
       "id": "opencode-social",
       "channel": "OpenCode",
       "url": "https://x.com/opencode",
       "kind": "social",
-      "attemptedAt": "2026-11-23T07:54:09.819Z",
-      "lastSuccessAt": "2026-11-23T07:54:09.819Z",
+      "attemptedAt": "2026-11-24T10:06:59.120Z",
+      "lastSuccessAt": "2026-11-24T10:06:59.120Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "official-oembed; discovery may use mirror",
@@ -22700,8 +23442,8 @@
       "channel": "Command Code",
       "url": "https://x.com/CommandCodeAI",
       "kind": "social",
-      "attemptedAt": "2026-11-23T07:54:09.819Z",
-      "lastSuccessAt": "2026-11-23T07:54:09.819Z",
+      "attemptedAt": "2026-11-24T10:06:59.120Z",
+      "lastSuccessAt": "2026-11-24T10:06:59.120Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "official-oembed; discovery may use mirror",
