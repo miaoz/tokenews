@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "checkedAt": "2026-11-24T10:06:59.120Z",
+  "checkedAt": "2026-11-25T08:52:08.994Z",
   "intervalHours": 24,
-  "newEvents": 34,
+  "newEvents": 7,
   "pending": [
     {
       "id": "4533c6040aa95efeaf575f7486523b4550c1a1975e7ba1df4f0cfa6f888e5935",
@@ -23180,6 +23180,169 @@
         "url": "https://opencode.ai/v2/docs/console/go/"
       },
       "status": "pending"
+    },
+    {
+      "id": "0e9c4ba8615f4791b3b4a1507b67bd7ab93d4345971c89b1537d05428b47c59d",
+      "sourceId": "factory-plans",
+      "channel": "Factory",
+      "kind": "announcement",
+      "detectedAt": "2026-11-25T08:52:08.994Z",
+      "url": "https://docs.factory.com/pricing/individuals.md",
+      "before": null,
+      "after": {
+        "key": "text:265e579e94af1f9dc8cb61b857e8205777da90a867ad483a62364d741ed1e83d",
+        "hash": "265e579e94af1f9dc8cb61b857e8205777da90a867ad483a62364d741ed1e83d",
+        "type": "announcement",
+        "signals": [
+          "promotion"
+        ],
+        "models": [],
+        "url": "https://docs.factory.com/pricing/individuals.md"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "8dbf020f32279ce1fed555a70891983fa49d2ffcf8c5695ddd13767000c8035f",
+      "sourceId": "factory-releases",
+      "channel": "Factory",
+      "kind": "announcement",
+      "detectedAt": "2026-11-25T08:52:08.994Z",
+      "url": "https://docs.factory.com/changelog/release-notes.md",
+      "before": null,
+      "after": {
+        "key": "text:86633f81b5f21a0e414199804d8ee4ca2f00af7972191ed6754508dc6a257e77",
+        "hash": "86633f81b5f21a0e414199804d8ee4ca2f00af7972191ed6754508dc6a257e77",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [],
+        "url": "https://docs.factory.com/changelog/release-notes.md"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "3e8697fa55195885577bbd41fb910eca09782becda66e47f16f38a6a372b1dbe",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "announcement",
+      "detectedAt": "2026-11-25T08:52:08.994Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": null,
+      "after": {
+        "key": "text:488d8f8929bb03d676862a80c727da5f37c13a6faa334ef760f690f88740d540",
+        "hash": "488d8f8929bb03d676862a80c727da5f37c13a6faa334ef760f690f88740d540",
+        "type": "announcement",
+        "signals": [
+          "pricing",
+          "availability"
+        ],
+        "models": [
+          "qwen4-max-preview ",
+          "qwen4-max",
+          "qwen4-max "
+        ],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "4330dd7d4b2bbabb9b60d9d2c79da5f9921958b23739fbbf2d465021d74f5b86",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-25T08:52:08.994Z",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "before": {
+        "key": "row:v2:ddd934d1187ba7ff:0:qwen4-max-preview:0",
+        "type": "table-row",
+        "label": "qwen4-max-preview",
+        "heading": "千问",
+        "columns": [
+          "模型 ID（Model ID）",
+          "模型能力"
+        ],
+        "cells": [
+          "qwen4-max-preview",
+          "推理模型、视觉理解、文本生成"
+        ],
+        "signals": [
+          "availability"
+        ],
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview#千问",
+        "hash": "6c8a0d00fe5c6d96ddf6b06afeeb3d5243f6d303a71ac0f214eae8e092773c5b"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "c3cc21de01c64eba13885e5436f5045d42f3274ff140d81fda09e949b3542c55",
+      "sourceId": "opencode-social",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-25T08:52:08.994Z",
+      "url": "https://x.com/opencode/status/2125413495629926551",
+      "before": null,
+      "after": {
+        "key": "post:2125413495629926551",
+        "type": "announcement",
+        "hash": "ee2bd0addf30ec2730a3dd7f42b7c26fd1a2af8a893916d89f9b4ef028be4a15",
+        "signals": [
+          "pricing",
+          "availability"
+        ],
+        "models": [
+          "Kimi Phase 1 ",
+          "Kimi K3.1 Pro usage for "
+        ],
+        "url": "https://x.com/opencode/status/2125413495629926551",
+        "relevant": true
+      },
+      "status": "pending"
+    },
+    {
+      "id": "0d72da5cf453ba68eb6d21a5197d1e769ac218ad728ab5071369330c950f0bc7",
+      "sourceId": "opencode-social",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-25T08:52:08.994Z",
+      "url": "https://x.com/opencode/status/2125307449951604860",
+      "before": null,
+      "after": {
+        "key": "post:2125307449951604860",
+        "type": "announcement",
+        "hash": "fd87e78d7b9118f4caa99fb0a902c4edf2be363602119bf4ff16f16a42d888a4",
+        "signals": [
+          "availability"
+        ],
+        "models": [
+          "Gemini 4 Neon is available in OpenCode Console it"
+        ],
+        "url": "https://x.com/opencode/status/2125307449951604860",
+        "relevant": true
+      },
+      "status": "pending"
+    },
+    {
+      "id": "3418e440198f68b28ce66bbecd70f8574f30664fac4ed298e39c6bd33608ee15",
+      "sourceId": "command-code-social",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-25T08:52:08.994Z",
+      "url": "https://x.com/CommandCodeAI/status/2125432630225347052",
+      "before": null,
+      "after": {
+        "key": "post:2125432630225347052",
+        "type": "announcement",
+        "hash": "7eb1031309a36cb8328ee721e8830efbb11e42638e64ff31859f5f2594f3d9e0",
+        "signals": [],
+        "models": [
+          "DeepSeek V4.1 Flash vs GLM 5.3 Flash vs Kimi K3.1 Pro "
+        ],
+        "url": "https://x.com/CommandCodeAI/status/2125432630225347052",
+        "relevant": true
+      },
+      "status": "pending"
     }
   ],
   "resolvedCount": 433,
@@ -23189,10 +23352,10 @@
       "channel": "OpenCode",
       "url": "https://opencode.ai/v2/docs/console/go/",
       "kind": "tables",
-      "attemptedAt": "2026-11-24T10:06:59.120Z",
+      "attemptedAt": "2026-11-25T08:52:08.994Z",
       "lastSuccessAt": "2026-11-16T06:49:25.500Z",
       "status": "failed",
-      "consecutiveFailures": 8,
+      "consecutiveFailures": 9,
       "retrieval": "http",
       "error": "Source structure changed: 54 records, expected at least 60; fallback: Source structure changed: 54 records, expected at least 60",
       "recordCount": 419
@@ -23202,8 +23365,8 @@
       "channel": "OpenCode",
       "url": "https://opencode.ai/changelog",
       "kind": "document",
-      "attemptedAt": "2026-11-24T10:06:59.120Z",
-      "lastSuccessAt": "2026-11-24T10:06:59.120Z",
+      "attemptedAt": "2026-11-25T08:52:08.994Z",
+      "lastSuccessAt": "2026-11-25T08:52:08.994Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -23214,8 +23377,8 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/go",
       "kind": "tables",
-      "attemptedAt": "2026-11-24T10:06:59.120Z",
-      "lastSuccessAt": "2026-11-24T10:06:59.120Z",
+      "attemptedAt": "2026-11-25T08:52:08.994Z",
+      "lastSuccessAt": "2026-11-25T08:52:08.994Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -23226,8 +23389,8 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/goat",
       "kind": "tables",
-      "attemptedAt": "2026-11-24T10:06:59.120Z",
-      "lastSuccessAt": "2026-11-24T10:06:59.120Z",
+      "attemptedAt": "2026-11-25T08:52:08.994Z",
+      "lastSuccessAt": "2026-11-25T08:52:08.994Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -23238,8 +23401,8 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/pro",
       "kind": "tables",
-      "attemptedAt": "2026-11-24T10:06:59.120Z",
-      "lastSuccessAt": "2026-11-24T10:06:59.120Z",
+      "attemptedAt": "2026-11-25T08:52:08.994Z",
+      "lastSuccessAt": "2026-11-25T08:52:08.994Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -23250,8 +23413,8 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/max",
       "kind": "tables",
-      "attemptedAt": "2026-11-24T10:06:59.120Z",
-      "lastSuccessAt": "2026-11-24T10:06:59.120Z",
+      "attemptedAt": "2026-11-25T08:52:08.994Z",
+      "lastSuccessAt": "2026-11-25T08:52:08.994Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -23262,8 +23425,8 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/reference/cli/models",
       "kind": "tables",
-      "attemptedAt": "2026-11-24T10:06:59.120Z",
-      "lastSuccessAt": "2026-11-24T10:06:59.120Z",
+      "attemptedAt": "2026-11-25T08:52:08.994Z",
+      "lastSuccessAt": "2026-11-25T08:52:08.994Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -23274,8 +23437,8 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/resources/pricing-limits",
       "kind": "tables",
-      "attemptedAt": "2026-11-24T10:06:59.120Z",
-      "lastSuccessAt": "2026-11-24T10:06:59.120Z",
+      "attemptedAt": "2026-11-25T08:52:08.994Z",
+      "lastSuccessAt": "2026-11-25T08:52:08.994Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -23286,8 +23449,8 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/changelog",
       "kind": "document",
-      "attemptedAt": "2026-11-24T10:06:59.120Z",
-      "lastSuccessAt": "2026-11-24T10:06:59.120Z",
+      "attemptedAt": "2026-11-25T08:52:08.994Z",
+      "lastSuccessAt": "2026-11-25T08:52:08.994Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -23298,8 +23461,8 @@
       "channel": "Ollama",
       "url": "https://ollama.com/pricing",
       "kind": "tables",
-      "attemptedAt": "2026-11-24T10:06:59.120Z",
-      "lastSuccessAt": "2026-11-24T10:06:59.120Z",
+      "attemptedAt": "2026-11-25T08:52:08.994Z",
+      "lastSuccessAt": "2026-11-25T08:52:08.994Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -23310,8 +23473,8 @@
       "channel": "Ollama",
       "url": "https://ollama.com/blog",
       "kind": "document",
-      "attemptedAt": "2026-11-24T10:06:59.120Z",
-      "lastSuccessAt": "2026-11-24T10:06:59.120Z",
+      "attemptedAt": "2026-11-25T08:52:08.994Z",
+      "lastSuccessAt": "2026-11-25T08:52:08.994Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -23322,8 +23485,8 @@
       "channel": "Factory",
       "url": "https://docs.factory.com/models.md",
       "kind": "tables",
-      "attemptedAt": "2026-11-24T10:06:59.120Z",
-      "lastSuccessAt": "2026-11-24T10:06:59.120Z",
+      "attemptedAt": "2026-11-25T08:52:08.994Z",
+      "lastSuccessAt": "2026-11-25T08:52:08.994Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -23334,8 +23497,8 @@
       "channel": "Factory",
       "url": "https://docs.factory.com/pricing/individuals.md",
       "kind": "document",
-      "attemptedAt": "2026-11-24T10:06:59.120Z",
-      "lastSuccessAt": "2026-11-24T10:06:59.120Z",
+      "attemptedAt": "2026-11-25T08:52:08.994Z",
+      "lastSuccessAt": "2026-11-25T08:52:08.994Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -23346,20 +23509,20 @@
       "channel": "Factory",
       "url": "https://docs.factory.com/changelog/release-notes.md",
       "kind": "document",
-      "attemptedAt": "2026-11-24T10:06:59.120Z",
-      "lastSuccessAt": "2026-11-24T10:06:59.120Z",
+      "attemptedAt": "2026-11-25T08:52:08.994Z",
+      "lastSuccessAt": "2026-11-25T08:52:08.994Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 554
+      "recordCount": 555
     },
     {
       "id": "cursor-pricing",
       "channel": "Cursor",
       "url": "https://cursor.com/docs/models-and-pricing",
       "kind": "tables",
-      "attemptedAt": "2026-11-24T10:06:59.120Z",
-      "lastSuccessAt": "2026-11-24T10:06:59.120Z",
+      "attemptedAt": "2026-11-25T08:52:08.994Z",
+      "lastSuccessAt": "2026-11-25T08:52:08.994Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -23370,8 +23533,8 @@
       "channel": "Cursor",
       "url": "https://cursor.com/changelog",
       "kind": "document",
-      "attemptedAt": "2026-11-24T10:06:59.120Z",
-      "lastSuccessAt": "2026-11-24T10:06:59.120Z",
+      "attemptedAt": "2026-11-25T08:52:08.994Z",
+      "lastSuccessAt": "2026-11-25T08:52:08.994Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -23382,8 +23545,8 @@
       "channel": "Devin",
       "url": "https://docs.devin.ai/release-notes/overview",
       "kind": "document",
-      "attemptedAt": "2026-11-24T10:06:59.120Z",
-      "lastSuccessAt": "2026-11-24T10:06:59.120Z",
+      "attemptedAt": "2026-11-25T08:52:08.994Z",
+      "lastSuccessAt": "2026-11-25T08:52:08.994Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -23394,8 +23557,8 @@
       "channel": "Alibaba",
       "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan",
       "kind": "tables",
-      "attemptedAt": "2026-11-24T10:06:59.120Z",
-      "lastSuccessAt": "2026-11-24T10:06:59.120Z",
+      "attemptedAt": "2026-11-25T08:52:08.994Z",
+      "lastSuccessAt": "2026-11-25T08:52:08.994Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -23406,8 +23569,8 @@
       "channel": "Alibaba",
       "url": "https://help.aliyun.com/zh/model-studio/coding-plan",
       "kind": "tables",
-      "attemptedAt": "2026-11-24T10:06:59.120Z",
-      "lastSuccessAt": "2026-11-24T10:06:59.120Z",
+      "attemptedAt": "2026-11-25T08:52:08.994Z",
+      "lastSuccessAt": "2026-11-25T08:52:08.994Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -23418,20 +23581,20 @@
       "channel": "Alibaba",
       "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
       "kind": "tables",
-      "attemptedAt": "2026-11-24T10:06:59.120Z",
-      "lastSuccessAt": "2026-11-24T10:06:59.120Z",
+      "attemptedAt": "2026-11-25T08:52:08.994Z",
+      "lastSuccessAt": "2026-11-25T08:52:08.994Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 58
+      "recordCount": 56
     },
     {
       "id": "opencode-social",
       "channel": "OpenCode",
       "url": "https://x.com/opencode",
       "kind": "social",
-      "attemptedAt": "2026-11-24T10:06:59.120Z",
-      "lastSuccessAt": "2026-11-24T10:06:59.120Z",
+      "attemptedAt": "2026-11-25T08:52:08.994Z",
+      "lastSuccessAt": "2026-11-25T08:52:08.994Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "official-oembed; discovery may use mirror",
@@ -23442,8 +23605,8 @@
       "channel": "Command Code",
       "url": "https://x.com/CommandCodeAI",
       "kind": "social",
-      "attemptedAt": "2026-11-24T10:06:59.120Z",
-      "lastSuccessAt": "2026-11-24T10:06:59.120Z",
+      "attemptedAt": "2026-11-25T08:52:08.994Z",
+      "lastSuccessAt": "2026-11-25T08:52:08.994Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "official-oembed; discovery may use mirror",
