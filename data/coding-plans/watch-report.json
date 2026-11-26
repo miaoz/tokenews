@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "checkedAt": "2026-11-25T08:52:08.994Z",
+  "checkedAt": "2026-11-26T08:38:34.794Z",
   "intervalHours": 24,
-  "newEvents": 7,
+  "newEvents": 35,
   "pending": [
     {
       "id": "4533c6040aa95efeaf575f7486523b4550c1a1975e7ba1df4f0cfa6f888e5935",
@@ -23343,6 +23343,923 @@
         "relevant": true
       },
       "status": "pending"
+    },
+    {
+      "id": "21d448a7927bcaf7228a761eddd89f8734236701662f54d3a27e79493f16ddf2",
+      "sourceId": "opencode-releases",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-26T08:38:34.794Z",
+      "url": "https://opencode.ai/changelog",
+      "before": null,
+      "after": {
+        "key": "text:2d987246e07edf376593de73790206b2037c35912cdea9b6b8adf6a25f278083",
+        "hash": "2d987246e07edf376593de73790206b2037c35912cdea9b6b8adf6a25f278083",
+        "type": "announcement",
+        "signals": [],
+        "models": [
+          "GPT-6.2 System Prompt"
+        ],
+        "url": "https://opencode.ai/changelog"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "7f88550de628be1b06650407bbaff9aeee0ce61c8b2fc5ff8e01c6a31d38e04c",
+      "sourceId": "opencode-releases",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-26T08:38:34.794Z",
+      "url": "https://github.com/anomalyco/opencode/pull/66297",
+      "before": null,
+      "after": {
+        "key": "text:9e2203073abdfe954469c06404720fcd116600dbd3ce77cefe9701ebc04129c6",
+        "hash": "9e2203073abdfe954469c06404720fcd116600dbd3ce77cefe9701ebc04129c6",
+        "type": "announcement",
+        "signals": [
+          "version"
+        ],
+        "models": [
+          "GPT-6.2 Sol and Astra",
+          "gpt-latest aliases",
+          "GPT-6.2. "
+        ],
+        "url": "https://github.com/anomalyco/opencode/pull/66297"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "d68191fdea51c030d923499e208ebdace2173fb78558281017eb67bb31cd26c6",
+      "sourceId": "opencode-releases",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-26T08:38:34.794Z",
+      "url": "https://github.com/anomalyco/opencode/pull/66363",
+      "before": null,
+      "after": {
+        "key": "text:dcf54bb2a4aa0c8c649e40acc3f9103be5c5f960cb52c916e5576908117e7677",
+        "hash": "dcf54bb2a4aa0c8c649e40acc3f9103be5c5f960cb52c916e5576908117e7677",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [],
+        "url": "https://github.com/anomalyco/opencode/pull/66363"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "2c5917d483f7c486d7f7391a1fbf9b4371579eae7313215ccc58166f041cf2ef",
+      "sourceId": "opencode-releases",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-26T08:38:34.794Z",
+      "url": "https://github.com/anomalyco/opencode/pull/65505",
+      "before": null,
+      "after": {
+        "key": "text:1f9da2f8fc555d63a9b9c2172cf2a2248fdc77b943030286fea1ab222779baf3",
+        "hash": "1f9da2f8fc555d63a9b9c2172cf2a2248fdc77b943030286fea1ab222779baf3",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [],
+        "url": "https://github.com/anomalyco/opencode/pull/65505"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "f7550096b0cc11afe1a5c1a21e49776ae8ce555b48b88b707954a2fe50389835",
+      "sourceId": "command-code-go",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-26T08:38:34.794Z",
+      "url": "https://commandcode.ai/docs/plans/goat",
+      "before": null,
+      "after": {
+        "key": "text:bb5935150fe6b5882397cc1a42ef4ce0e76c7cf7a629ebf4a9c008fe08b132de",
+        "hash": "bb5935150fe6b5882397cc1a42ef4ce0e76c7cf7a629ebf4a9c008fe08b132de",
+        "type": "announcement",
+        "signals": [
+          "pricing",
+          "availability"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/docs/plans/goat"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "f0278790d930ab16d0e18a1f2d488375d782bf66f89414c7e721e378753bde3d",
+      "sourceId": "command-code-go",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-26T08:38:34.794Z",
+      "url": "https://commandcode.ai/docs/provider",
+      "before": null,
+      "after": {
+        "key": "text:b28aa1e34a4a702fd26bcba8d332ecc9ba2d3ead3d9d9a3b09e99f477f3ce647",
+        "hash": "b28aa1e34a4a702fd26bcba8d332ecc9ba2d3ead3d9d9a3b09e99f477f3ce647",
+        "type": "announcement",
+        "signals": [
+          "pricing"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/docs/provider"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "ff3b0d681807fcbf3d5ae3e2758e533848350f27a02faf184d06255ef3716dac",
+      "sourceId": "command-code-goat",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-26T08:38:34.794Z",
+      "url": "https://commandcode.ai/docs/plans/goat",
+      "before": null,
+      "after": {
+        "key": "row:v2:5fc247816328732d:0:Jev 1.14.0 Decision model · headless (cmd -p) and the API only, not in /model:0",
+        "type": "table-row",
+        "label": "Jev 1.14.0 Decision model · headless (cmd -p) and the API only, not in /model",
+        "heading": "Models included",
+        "columns": [
+          "Model ↕",
+          "Context ↕",
+          "Input ↕",
+          "Output ↕",
+          "Cache read ↕",
+          "Cache write ↕",
+          "Caps"
+        ],
+        "cells": [
+          "Jev 1.14.0 Decision model · headless (cmd -p) and the API only, not in /model",
+          "32K",
+          "$0.042",
+          "$0.00",
+          "$0.00",
+          "—",
+          ""
+        ],
+        "signals": [
+          "pricing",
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/plans/goat",
+        "hash": "5caa8357171c4900aef462b674c69dc7b297c1d013226afedf40649bbff88708"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "b8619ee1a5d412e2945552b1a3385a657d22eee2a7918717f52ea30dfb6a6efb",
+      "sourceId": "command-code-goat",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-26T08:38:34.794Z",
+      "url": "https://commandcode.ai/docs/plans/goat",
+      "before": null,
+      "after": {
+        "key": "row:v2:5fc247816328732d:0:Jev Decision model · headless (cmd -p) and the API only, not in /model:0",
+        "type": "table-row",
+        "label": "Jev Decision model · headless (cmd -p) and the API only, not in /model",
+        "heading": "Models included",
+        "columns": [
+          "Model ↕",
+          "Context ↕",
+          "Input ↕",
+          "Output ↕",
+          "Cache read ↕",
+          "Cache write ↕",
+          "Caps"
+        ],
+        "cells": [
+          "Jev Decision model · headless (cmd -p) and the API only, not in /model",
+          "32K",
+          "$0.042",
+          "$0.00",
+          "$0.00",
+          "—",
+          ""
+        ],
+        "signals": [
+          "pricing",
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/plans/goat",
+        "hash": "2f5a1a42aa3e11c6f4bdf7e6847207c1902e7eb3b69b8c41860bbe087e367cf5"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "52e0a487caec8add369aed3ef55781eef7e0fd05869064ca73103488ea01f124",
+      "sourceId": "command-code-goat",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-26T08:38:34.794Z",
+      "url": "https://commandcode.ai/billing",
+      "before": null,
+      "after": {
+        "key": "text:64b8aeb543d2a695fcc5b6c241e3541c1ba978078ce82139a0d9a7e18ad278d2",
+        "hash": "64b8aeb543d2a695fcc5b6c241e3541c1ba978078ce82139a0d9a7e18ad278d2",
+        "type": "announcement",
+        "signals": [
+          "pricing"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/billing"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "717c5d4edf50a3096584ab3d219363fc2a88072395ff4011cd630252d5b03e4f",
+      "sourceId": "command-code-goat",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-26T08:38:34.794Z",
+      "url": "https://commandcode.ai/docs/provider",
+      "before": null,
+      "after": {
+        "key": "text:ab62f948b09cd876de4ed7f70398fd642aed1364a8f97e6145d0331981a5bd6f",
+        "hash": "ab62f948b09cd876de4ed7f70398fd642aed1364a8f97e6145d0331981a5bd6f",
+        "type": "announcement",
+        "signals": [
+          "pricing",
+          "promotion"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/docs/provider"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "b2bd6efdfc9e7d3e75e9fffb8cd8b29ec05027d04e551ee241c18b358eb441f2",
+      "sourceId": "command-code-goat",
+      "channel": "Command Code",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-26T08:38:34.794Z",
+      "url": "https://commandcode.ai/docs/plans/goat",
+      "before": {
+        "key": "row:v2:5fc247816328732d:0:Jev 1.14.0 Decision model · headless (cmd -p) and Provider API only, not in /model:0",
+        "type": "table-row",
+        "label": "Jev 1.14.0 Decision model · headless (cmd -p) and Provider API only, not in /model",
+        "heading": "Models included",
+        "columns": [
+          "Model ↕",
+          "Context ↕",
+          "Input ↕",
+          "Output ↕",
+          "Cache read ↕",
+          "Cache write ↕",
+          "Caps"
+        ],
+        "cells": [
+          "Jev 1.14.0 Decision model · headless (cmd -p) and Provider API only, not in /model",
+          "32K",
+          "$0.042",
+          "$0.00",
+          "$0.00",
+          "—",
+          ""
+        ],
+        "signals": [
+          "pricing",
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/plans/goat",
+        "hash": "011d7121422cc761ca123e4e106b737a916a74df19028505ab6b509cd389d51e"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "cf695a0de5df52f5746aac55711631de8cd6e2dff00d5b73bab7740159fb0de6",
+      "sourceId": "command-code-goat",
+      "channel": "Command Code",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-26T08:38:34.794Z",
+      "url": "https://commandcode.ai/docs/plans/goat",
+      "before": {
+        "key": "row:v2:5fc247816328732d:0:Jev Decision model · headless (cmd -p) and Provider API only, not in /model:0",
+        "type": "table-row",
+        "label": "Jev Decision model · headless (cmd -p) and Provider API only, not in /model",
+        "heading": "Models included",
+        "columns": [
+          "Model ↕",
+          "Context ↕",
+          "Input ↕",
+          "Output ↕",
+          "Cache read ↕",
+          "Cache write ↕",
+          "Caps"
+        ],
+        "cells": [
+          "Jev Decision model · headless (cmd -p) and Provider API only, not in /model",
+          "32K",
+          "$0.042",
+          "$0.00",
+          "$0.00",
+          "—",
+          ""
+        ],
+        "signals": [
+          "pricing",
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/plans/goat",
+        "hash": "fe200171716c6bf7debd74d308cc4c67fdaffb0587fdd1a0ba2e3bc5559c7229"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "67e8a426028f09ab7d3567647e84b865c1bfc4756bb20bf21cd91f1fa8c38b7c",
+      "sourceId": "command-code-pro",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-26T08:38:34.794Z",
+      "url": "https://commandcode.ai/docs/plans/pro",
+      "before": null,
+      "after": {
+        "key": "row:v2:20d53e007c5a4d72:0:Jev 1.14.0 Decision model · headless (cmd -p) and the API only, not in /model:0",
+        "type": "table-row",
+        "label": "Jev 1.14.0 Decision model · headless (cmd -p) and the API only, not in /model",
+        "heading": "Models included",
+        "columns": [
+          "Model ↕",
+          "Context ↕",
+          "Input ↕",
+          "Output ↕",
+          "Cache read ↕",
+          "Cache write ↕",
+          "Caps"
+        ],
+        "cells": [
+          "Jev 1.14.0 Decision model · headless (cmd -p) and the API only, not in /model",
+          "32K",
+          "$0.042",
+          "$0.00",
+          "$0.00",
+          "—",
+          ""
+        ],
+        "signals": [
+          "pricing",
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/plans/pro",
+        "hash": "5caa8357171c4900aef462b674c69dc7b297c1d013226afedf40649bbff88708"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "58922f91bc588d70a75663a5db252e1bbb7a90dfa2a98c4993d765c910b6cc0f",
+      "sourceId": "command-code-pro",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-26T08:38:34.794Z",
+      "url": "https://commandcode.ai/docs/plans/pro",
+      "before": null,
+      "after": {
+        "key": "row:v2:20d53e007c5a4d72:0:Jev Decision model · headless (cmd -p) and the API only, not in /model:0",
+        "type": "table-row",
+        "label": "Jev Decision model · headless (cmd -p) and the API only, not in /model",
+        "heading": "Models included",
+        "columns": [
+          "Model ↕",
+          "Context ↕",
+          "Input ↕",
+          "Output ↕",
+          "Cache read ↕",
+          "Cache write ↕",
+          "Caps"
+        ],
+        "cells": [
+          "Jev Decision model · headless (cmd -p) and the API only, not in /model",
+          "32K",
+          "$0.042",
+          "$0.00",
+          "$0.00",
+          "—",
+          ""
+        ],
+        "signals": [
+          "pricing",
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/plans/pro",
+        "hash": "2f5a1a42aa3e11c6f4bdf7e6847207c1902e7eb3b69b8c41860bbe087e367cf5"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "94b10b554f5a6c1cea7b839e1b87c5edda014321e183d920a4797bd2286810a4",
+      "sourceId": "command-code-pro",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-26T08:38:34.794Z",
+      "url": "https://commandcode.ai/billing?plan=pro",
+      "before": null,
+      "after": {
+        "key": "text:5dcce85d9b30ad86a5012b2682fcc8a6d1b1e89ff1548e43698bf2881b1cee75",
+        "hash": "5dcce85d9b30ad86a5012b2682fcc8a6d1b1e89ff1548e43698bf2881b1cee75",
+        "type": "announcement",
+        "signals": [
+          "pricing"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/billing?plan=pro"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "b2e87c550785deb799ad4901a421bf538008ddf64fba5d4ae8329b87e96126c6",
+      "sourceId": "command-code-pro",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-26T08:38:34.794Z",
+      "url": "https://commandcode.ai/docs/provider",
+      "before": null,
+      "after": {
+        "key": "text:21293506133f5a897222dc143e365ac33eb505f4d95ce5adc601f7fa88b71b0f",
+        "hash": "21293506133f5a897222dc143e365ac33eb505f4d95ce5adc601f7fa88b71b0f",
+        "type": "announcement",
+        "signals": [
+          "pricing",
+          "promotion"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/docs/provider"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "28602a1a3c0f27ec15059a69f90819f2ea7b4b22e5287eea8287b6b0a27fe8f9",
+      "sourceId": "command-code-pro",
+      "channel": "Command Code",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-26T08:38:34.794Z",
+      "url": "https://commandcode.ai/docs/plans/pro",
+      "before": {
+        "key": "row:v2:20d53e007c5a4d72:0:Jev 1.14.0 Decision model · headless (cmd -p) and Provider API only, not in /model:0",
+        "type": "table-row",
+        "label": "Jev 1.14.0 Decision model · headless (cmd -p) and Provider API only, not in /model",
+        "heading": "Models included",
+        "columns": [
+          "Model ↕",
+          "Context ↕",
+          "Input ↕",
+          "Output ↕",
+          "Cache read ↕",
+          "Cache write ↕",
+          "Caps"
+        ],
+        "cells": [
+          "Jev 1.14.0 Decision model · headless (cmd -p) and Provider API only, not in /model",
+          "32K",
+          "$0.042",
+          "$0.00",
+          "$0.00",
+          "—",
+          ""
+        ],
+        "signals": [
+          "pricing",
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/plans/pro",
+        "hash": "011d7121422cc761ca123e4e106b737a916a74df19028505ab6b509cd389d51e"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "dffe4b0204637bfa265f9b7e40ab23b343fc3ba542c94454647df900b951ce08",
+      "sourceId": "command-code-pro",
+      "channel": "Command Code",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-26T08:38:34.794Z",
+      "url": "https://commandcode.ai/docs/plans/pro",
+      "before": {
+        "key": "row:v2:20d53e007c5a4d72:0:Jev Decision model · headless (cmd -p) and Provider API only, not in /model:0",
+        "type": "table-row",
+        "label": "Jev Decision model · headless (cmd -p) and Provider API only, not in /model",
+        "heading": "Models included",
+        "columns": [
+          "Model ↕",
+          "Context ↕",
+          "Input ↕",
+          "Output ↕",
+          "Cache read ↕",
+          "Cache write ↕",
+          "Caps"
+        ],
+        "cells": [
+          "Jev Decision model · headless (cmd -p) and Provider API only, not in /model",
+          "32K",
+          "$0.042",
+          "$0.00",
+          "$0.00",
+          "—",
+          ""
+        ],
+        "signals": [
+          "pricing",
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/plans/pro",
+        "hash": "fe200171716c6bf7debd74d308cc4c67fdaffb0587fdd1a0ba2e3bc5559c7229"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "884092a047e92a396b9d0aeb367fd1698db9dce85cdd66714155d412377ff272",
+      "sourceId": "command-code-max",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-26T08:38:34.794Z",
+      "url": "https://commandcode.ai/billing",
+      "before": null,
+      "after": {
+        "key": "text:5c28cfb95c0fbdb02887dcedfd0fc92824e4470079f5a685c92bbdfc1cb51ee3",
+        "hash": "5c28cfb95c0fbdb02887dcedfd0fc92824e4470079f5a685c92bbdfc1cb51ee3",
+        "type": "announcement",
+        "signals": [
+          "pricing"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/billing"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "e239860b145bbbadf9bfe31453dadc8e5c938b407258a321525f2a59ca30ab7a",
+      "sourceId": "command-code-max",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-26T08:38:34.794Z",
+      "url": "https://commandcode.ai/docs/provider",
+      "before": null,
+      "after": {
+        "key": "text:6b80f7c20dd3e99aa1965addf178a9ec74b23dba60e9ca12756a55bec89887e4",
+        "hash": "6b80f7c20dd3e99aa1965addf178a9ec74b23dba60e9ca12756a55bec89887e4",
+        "type": "announcement",
+        "signals": [
+          "pricing",
+          "promotion"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/docs/provider"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "979c3cb019a63f298ebec9506e4105f2716a8d95bc8c6eaac036f5f605177f72",
+      "sourceId": "command-code-terms",
+      "channel": "Command Code",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-26T08:38:34.794Z",
+      "url": "https://commandcode.ai/docs/resources/pricing-limits",
+      "before": null,
+      "after": {
+        "key": "row:v2:c7700e6282344010:0:MOAT:0",
+        "type": "table-row",
+        "label": "MOAT",
+        "heading": "Individual plans",
+        "columns": [
+          "Plan",
+          "Price/mo",
+          "Credits/mo",
+          "Included LLM Usage",
+          "Models"
+        ],
+        "cells": [
+          "MOAT",
+          "$10",
+          "Pay as you go",
+          "Discounted prices on credits, CLI and Provider API",
+          "MOAT models"
+        ],
+        "signals": [
+          "pricing",
+          "promotion",
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/resources/pricing-limits",
+        "hash": "ea6075946f30d729396f56ef1235b503e017fba7539bb1a0608413001fd7cfc2"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "80f33dcd39e9274168b931131f870d915eda45638bac165cc081f44c5f7c6b85",
+      "sourceId": "command-code-terms",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-26T08:38:34.794Z",
+      "url": "https://commandcode.ai/docs/resources/pricing-limits",
+      "before": null,
+      "after": {
+        "key": "text:998c0461e0d03bc927b00506408264485fd3843ae3791e0598261a9b1a85db94",
+        "hash": "998c0461e0d03bc927b00506408264485fd3843ae3791e0598261a9b1a85db94",
+        "type": "announcement",
+        "signals": [
+          "pricing",
+          "promotion"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/docs/resources/pricing-limits"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "a09022c96c4f620872c0e48f565b5c234db0e8b72e5f3f608eabf50ac576872d",
+      "sourceId": "command-code-terms",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-26T08:38:34.794Z",
+      "url": "https://commandcode.ai/docs/moat",
+      "before": null,
+      "after": {
+        "key": "text:64e61d84d6212e82eba909bc9c11cc288ee6d18229ee2bac216709b27f7cf77b",
+        "hash": "64e61d84d6212e82eba909bc9c11cc288ee6d18229ee2bac216709b27f7cf77b",
+        "type": "announcement",
+        "signals": [
+          "pricing",
+          "promotion",
+          "availability"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/docs/moat"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "440283a3d5597925a0d3b930e5c39cc24506ffbb02d5fedbe0b211ba0865519d",
+      "sourceId": "command-code-terms",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-26T08:38:34.794Z",
+      "url": "https://commandcode.ai/docs/provider",
+      "before": null,
+      "after": {
+        "key": "text:414157d769cf825d9c8a3e1087a6c3990c68a9d21963965fb6fcd0d0ab008cd6",
+        "hash": "414157d769cf825d9c8a3e1087a6c3990c68a9d21963965fb6fcd0d0ab008cd6",
+        "type": "announcement",
+        "signals": [
+          "pricing",
+          "promotion",
+          "availability"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/docs/provider"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "2aa7d52ba181870644b41a37a2025137cf44c55042f3db3a0af0233bf5c13d32",
+      "sourceId": "command-code-terms",
+      "channel": "Command Code",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-26T08:38:34.794Z",
+      "url": "https://commandcode.ai/docs/resources/pricing-limits",
+      "before": {
+        "key": "row:v2:c7700e6282344010:0:Provider:0",
+        "type": "table-row",
+        "label": "Provider",
+        "heading": "Individual plans",
+        "columns": [
+          "Plan",
+          "Price/mo",
+          "Credits/mo",
+          "Included LLM Usage",
+          "Models"
+        ],
+        "cells": [
+          "Provider",
+          "$15",
+          "Pay as you go",
+          "Provider API access",
+          "Open-source + premium models"
+        ],
+        "signals": [
+          "pricing",
+          "availability"
+        ],
+        "url": "https://commandcode.ai/docs/resources/pricing-limits",
+        "hash": "5e0a81c1f6f248f81841b6aaf11ffb44761d119f3cb1711c3911f482185c6098"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "b2fa7243dc2b769d871a1a2531edf8bf4051c38a246cc8063ff725ade2e6cb50",
+      "sourceId": "command-code-releases",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-26T08:38:34.794Z",
+      "url": "https://commandcode.ai/changelog",
+      "before": null,
+      "after": {
+        "key": "text:dfb85e4c32ef4a5f82d8c53ba0c5a128aee51f9810962f117c057525fbcd6b36",
+        "hash": "dfb85e4c32ef4a5f82d8c53ba0c5a128aee51f9810962f117c057525fbcd6b36",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [
+          "DeepSeek V4.1 Flash now show their effort levels in /effort"
+        ],
+        "url": "https://commandcode.ai/changelog"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "6c6624014a7e34f7aac7aebce3a05d888917bd2a68aba80df3ac61bf39579090",
+      "sourceId": "command-code-releases",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-26T08:38:34.794Z",
+      "url": "https://commandcode.ai/changelog",
+      "before": null,
+      "after": {
+        "key": "text:376915430c0ab9e311db25fecbe19b9554e8042513d9ff249984038ea5e893e9",
+        "hash": "376915430c0ab9e311db25fecbe19b9554e8042513d9ff249984038ea5e893e9",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [],
+        "url": "https://commandcode.ai/changelog"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "1668912e18c8744dda18cdd57b998ff1e3112d6c3659c59dcbbb9b6752dc4da0",
+      "sourceId": "factory-releases",
+      "channel": "Factory",
+      "kind": "announcement",
+      "detectedAt": "2026-11-26T08:38:34.794Z",
+      "url": "https://docs.factory.com/changelog/release-notes.md",
+      "before": null,
+      "after": {
+        "key": "text:2ca04428bfd97d52e57909cdcb5e00c65699937d1d397006e29b1bc24fc7fa4e",
+        "hash": "2ca04428bfd97d52e57909cdcb5e00c65699937d1d397006e29b1bc24fc7fa4e",
+        "type": "announcement",
+        "signals": [],
+        "models": [
+          "step",
+          "step now says it is checking your code host connection"
+        ],
+        "url": "https://docs.factory.com/changelog/release-notes.md"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "f3f77a09082d67d82c6c25ce226095604276795d44574ed4267ea4322a4da258",
+      "sourceId": "cursor-pricing",
+      "channel": "Cursor",
+      "kind": "announcement",
+      "detectedAt": "2026-11-26T08:38:34.794Z",
+      "url": "https://cursor.com/docs/models-and-pricing",
+      "before": null,
+      "after": {
+        "key": "text:87e0f64c6d59d8c78d0313d2173bd3ec9e19663b213afc65919c709f09327780",
+        "hash": "87e0f64c6d59d8c78d0313d2173bd3ec9e19663b213afc65919c709f09327780",
+        "type": "announcement",
+        "signals": [],
+        "models": [],
+        "url": "https://cursor.com/docs/models-and-pricing"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "c32b083129a1ab6f3d44e532e2dc42b04bfa5e7f55708428ba310162eb700165",
+      "sourceId": "devin-releases",
+      "channel": "Devin",
+      "kind": "announcement",
+      "detectedAt": "2026-11-26T08:38:34.794Z",
+      "url": "https://docs.devin.ai/release-notes/overview#apps",
+      "before": null,
+      "after": {
+        "key": "text:83c37669a2dd16d4301a3c63d131dc2d1329f216e26e070a2cf0c359c9292045",
+        "hash": "83c37669a2dd16d4301a3c63d131dc2d1329f216e26e070a2cf0c359c9292045",
+        "type": "announcement",
+        "signals": [
+          "pricing"
+        ],
+        "models": [],
+        "url": "https://docs.devin.ai/release-notes/overview#apps"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "0bc8a6ba6b7ac200bdb14acac27a70516578a14fcaeba7149b4e1f2512d7813e",
+      "sourceId": "devin-releases",
+      "channel": "Devin",
+      "kind": "announcement",
+      "detectedAt": "2026-11-26T08:38:34.794Z",
+      "url": "https://docs.devin.ai/release-notes/overview#sessions-&-workspace",
+      "before": null,
+      "after": {
+        "key": "text:d1bb63a9aaf9706bf912e83bd48eb1ba051203f2aaf49ae33c97fea6ee61c48d",
+        "hash": "d1bb63a9aaf9706bf912e83bd48eb1ba051203f2aaf49ae33c97fea6ee61c48d",
+        "type": "announcement",
+        "signals": [
+          "pricing",
+          "availability"
+        ],
+        "models": [],
+        "url": "https://docs.devin.ai/release-notes/overview#sessions-&-workspace"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "10b498d91a5a22a489087275aea31251b58d16fc4787fc7cee1070f527ad6468",
+      "sourceId": "alibaba-coding-global",
+      "channel": "Alibaba",
+      "kind": "announcement",
+      "detectedAt": "2026-11-26T08:38:34.794Z",
+      "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan",
+      "before": null,
+      "after": {
+        "key": "text:b3796227e33c8c914802247dac0c6e54b5939cb11fb3fc6c91561c576570be7f",
+        "hash": "b3796227e33c8c914802247dac0c6e54b5939cb11fb3fc6c91561c576570be7f",
+        "type": "announcement",
+        "signals": [],
+        "models": [],
+        "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "177438a6d6ab9667c73da52b6887e8da3e353f808e19d3cb853227223646cc9a",
+      "sourceId": "alibaba-token-personal",
+      "channel": "Alibaba",
+      "kind": "announcement",
+      "detectedAt": "2026-11-26T08:38:34.794Z",
+      "url": "https://www.aliyun.com/notice/118887",
+      "before": null,
+      "after": {
+        "key": "text:21d30ab5d2739f9364e39c02b0b4ca76db82f346ecc74663f25a7c88edb19fb4",
+        "hash": "21d30ab5d2739f9364e39c02b0b4ca76db82f346ecc74663f25a7c88edb19fb4",
+        "type": "announcement",
+        "signals": [
+          "version",
+          "pricing",
+          "availability"
+        ],
+        "models": [
+          "qwen4-max-preview ",
+          "qwen4-max",
+          "qwen4-max "
+        ],
+        "url": "https://www.aliyun.com/notice/118887"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "cf7154df511a6579798e58207b5e34b64577bc22e0b8b8c404d04f6e4be49d2f",
+      "sourceId": "opencode-social",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-26T08:38:34.794Z",
+      "url": "https://x.com/opencode/status/2125737965871681587",
+      "before": null,
+      "after": {
+        "key": "post:2125737965871681587",
+        "type": "announcement",
+        "hash": "0b1d67481b0ee81c9018446d50c85bd2a489862decedee76b36008b6c6112c6d",
+        "signals": [
+          "availability"
+        ],
+        "models": [
+          "grok imagine and gemini omni you can use it to make stuff like this p"
+        ],
+        "url": "https://x.com/opencode/status/2125737965871681587",
+        "relevant": true
+      },
+      "status": "pending"
+    },
+    {
+      "id": "26c7e7a63b7dbbb68c3770234892a09ba8d11d2cc21e747998818e032a78a687",
+      "sourceId": "command-code-social",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-26T08:38:34.794Z",
+      "url": "https://x.com/CommandCodeAI/status/2125609220020293896",
+      "before": null,
+      "after": {
+        "key": "post:2125609220020293896",
+        "type": "announcement",
+        "hash": "fd188997f0f7648893e2afe6cf846a2f5607f4e0c933195a53d41349814cb935",
+        "signals": [
+          "pricing",
+          "availability"
+        ],
+        "models": [],
+        "url": "https://x.com/CommandCodeAI/status/2125609220020293896",
+        "relevant": true
+      },
+      "status": "pending"
     }
   ],
   "resolvedCount": 433,
@@ -23352,10 +24269,10 @@
       "channel": "OpenCode",
       "url": "https://opencode.ai/v2/docs/console/go/",
       "kind": "tables",
-      "attemptedAt": "2026-11-25T08:52:08.994Z",
+      "attemptedAt": "2026-11-26T08:38:34.794Z",
       "lastSuccessAt": "2026-11-16T06:49:25.500Z",
       "status": "failed",
-      "consecutiveFailures": 9,
+      "consecutiveFailures": 10,
       "retrieval": "http",
       "error": "Source structure changed: 54 records, expected at least 60; fallback: Source structure changed: 54 records, expected at least 60",
       "recordCount": 419
@@ -23365,32 +24282,32 @@
       "channel": "OpenCode",
       "url": "https://opencode.ai/changelog",
       "kind": "document",
-      "attemptedAt": "2026-11-25T08:52:08.994Z",
-      "lastSuccessAt": "2026-11-25T08:52:08.994Z",
+      "attemptedAt": "2026-11-26T08:38:34.794Z",
+      "lastSuccessAt": "2026-11-26T08:38:34.794Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 22
+      "recordCount": 21
     },
     {
       "id": "command-code-go",
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/go",
       "kind": "tables",
-      "attemptedAt": "2026-11-25T08:52:08.994Z",
-      "lastSuccessAt": "2026-11-25T08:52:08.994Z",
+      "attemptedAt": "2026-11-26T08:38:34.794Z",
+      "lastSuccessAt": "2026-11-26T08:38:34.794Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 227
+      "recordCount": 228
     },
     {
       "id": "command-code-goat",
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/goat",
       "kind": "tables",
-      "attemptedAt": "2026-11-25T08:52:08.994Z",
-      "lastSuccessAt": "2026-11-25T08:52:08.994Z",
+      "attemptedAt": "2026-11-26T08:38:34.794Z",
+      "lastSuccessAt": "2026-11-26T08:38:34.794Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -23401,8 +24318,8 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/pro",
       "kind": "tables",
-      "attemptedAt": "2026-11-25T08:52:08.994Z",
-      "lastSuccessAt": "2026-11-25T08:52:08.994Z",
+      "attemptedAt": "2026-11-26T08:38:34.794Z",
+      "lastSuccessAt": "2026-11-26T08:38:34.794Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -23413,8 +24330,8 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/max",
       "kind": "tables",
-      "attemptedAt": "2026-11-25T08:52:08.994Z",
-      "lastSuccessAt": "2026-11-25T08:52:08.994Z",
+      "attemptedAt": "2026-11-26T08:38:34.794Z",
+      "lastSuccessAt": "2026-11-26T08:38:34.794Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -23425,8 +24342,8 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/reference/cli/models",
       "kind": "tables",
-      "attemptedAt": "2026-11-25T08:52:08.994Z",
-      "lastSuccessAt": "2026-11-25T08:52:08.994Z",
+      "attemptedAt": "2026-11-26T08:38:34.794Z",
+      "lastSuccessAt": "2026-11-26T08:38:34.794Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -23437,32 +24354,32 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/resources/pricing-limits",
       "kind": "tables",
-      "attemptedAt": "2026-11-25T08:52:08.994Z",
-      "lastSuccessAt": "2026-11-25T08:52:08.994Z",
+      "attemptedAt": "2026-11-26T08:38:34.794Z",
+      "lastSuccessAt": "2026-11-26T08:38:34.794Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 449
+      "recordCount": 451
     },
     {
       "id": "command-code-releases",
       "channel": "Command Code",
       "url": "https://commandcode.ai/changelog",
       "kind": "document",
-      "attemptedAt": "2026-11-25T08:52:08.994Z",
-      "lastSuccessAt": "2026-11-25T08:52:08.994Z",
+      "attemptedAt": "2026-11-26T08:38:34.794Z",
+      "lastSuccessAt": "2026-11-26T08:38:34.794Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 409
+      "recordCount": 411
     },
     {
       "id": "ollama-pricing",
       "channel": "Ollama",
       "url": "https://ollama.com/pricing",
       "kind": "tables",
-      "attemptedAt": "2026-11-25T08:52:08.994Z",
-      "lastSuccessAt": "2026-11-25T08:52:08.994Z",
+      "attemptedAt": "2026-11-26T08:38:34.794Z",
+      "lastSuccessAt": "2026-11-26T08:38:34.794Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -23473,8 +24390,8 @@
       "channel": "Ollama",
       "url": "https://ollama.com/blog",
       "kind": "document",
-      "attemptedAt": "2026-11-25T08:52:08.994Z",
-      "lastSuccessAt": "2026-11-25T08:52:08.994Z",
+      "attemptedAt": "2026-11-26T08:38:34.794Z",
+      "lastSuccessAt": "2026-11-26T08:38:34.794Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -23485,8 +24402,8 @@
       "channel": "Factory",
       "url": "https://docs.factory.com/models.md",
       "kind": "tables",
-      "attemptedAt": "2026-11-25T08:52:08.994Z",
-      "lastSuccessAt": "2026-11-25T08:52:08.994Z",
+      "attemptedAt": "2026-11-26T08:38:34.794Z",
+      "lastSuccessAt": "2026-11-26T08:38:34.794Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -23497,8 +24414,8 @@
       "channel": "Factory",
       "url": "https://docs.factory.com/pricing/individuals.md",
       "kind": "document",
-      "attemptedAt": "2026-11-25T08:52:08.994Z",
-      "lastSuccessAt": "2026-11-25T08:52:08.994Z",
+      "attemptedAt": "2026-11-26T08:38:34.794Z",
+      "lastSuccessAt": "2026-11-26T08:38:34.794Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -23509,32 +24426,32 @@
       "channel": "Factory",
       "url": "https://docs.factory.com/changelog/release-notes.md",
       "kind": "document",
-      "attemptedAt": "2026-11-25T08:52:08.994Z",
-      "lastSuccessAt": "2026-11-25T08:52:08.994Z",
+      "attemptedAt": "2026-11-26T08:38:34.794Z",
+      "lastSuccessAt": "2026-11-26T08:38:34.794Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 555
+      "recordCount": 556
     },
     {
       "id": "cursor-pricing",
       "channel": "Cursor",
       "url": "https://cursor.com/docs/models-and-pricing",
       "kind": "tables",
-      "attemptedAt": "2026-11-25T08:52:08.994Z",
-      "lastSuccessAt": "2026-11-25T08:52:08.994Z",
+      "attemptedAt": "2026-11-26T08:38:34.794Z",
+      "lastSuccessAt": "2026-11-26T08:38:34.794Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 130
+      "recordCount": 131
     },
     {
       "id": "cursor-releases",
       "channel": "Cursor",
       "url": "https://cursor.com/changelog",
       "kind": "document",
-      "attemptedAt": "2026-11-25T08:52:08.994Z",
-      "lastSuccessAt": "2026-11-25T08:52:08.994Z",
+      "attemptedAt": "2026-11-26T08:38:34.794Z",
+      "lastSuccessAt": "2026-11-26T08:38:34.794Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -23545,44 +24462,44 @@
       "channel": "Devin",
       "url": "https://docs.devin.ai/release-notes/overview",
       "kind": "document",
-      "attemptedAt": "2026-11-25T08:52:08.994Z",
-      "lastSuccessAt": "2026-11-25T08:52:08.994Z",
+      "attemptedAt": "2026-11-26T08:38:34.794Z",
+      "lastSuccessAt": "2026-11-26T08:38:34.794Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 76
+      "recordCount": 78
     },
     {
       "id": "alibaba-coding-global",
       "channel": "Alibaba",
       "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan",
       "kind": "tables",
-      "attemptedAt": "2026-11-25T08:52:08.994Z",
-      "lastSuccessAt": "2026-11-25T08:52:08.994Z",
+      "attemptedAt": "2026-11-26T08:38:34.794Z",
+      "lastSuccessAt": "2026-11-26T08:38:34.794Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 42
+      "recordCount": 41
     },
     {
       "id": "alibaba-coding-cn",
       "channel": "Alibaba",
       "url": "https://help.aliyun.com/zh/model-studio/coding-plan",
       "kind": "tables",
-      "attemptedAt": "2026-11-25T08:52:08.994Z",
-      "lastSuccessAt": "2026-11-25T08:52:08.994Z",
+      "attemptedAt": "2026-11-26T08:38:34.794Z",
+      "lastSuccessAt": "2026-11-26T08:38:34.794Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 39
+      "recordCount": 38
     },
     {
       "id": "alibaba-token-personal",
       "channel": "Alibaba",
       "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
       "kind": "tables",
-      "attemptedAt": "2026-11-25T08:52:08.994Z",
-      "lastSuccessAt": "2026-11-25T08:52:08.994Z",
+      "attemptedAt": "2026-11-26T08:38:34.794Z",
+      "lastSuccessAt": "2026-11-26T08:38:34.794Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -23593,8 +24510,8 @@
       "channel": "OpenCode",
       "url": "https://x.com/opencode",
       "kind": "social",
-      "attemptedAt": "2026-11-25T08:52:08.994Z",
-      "lastSuccessAt": "2026-11-25T08:52:08.994Z",
+      "attemptedAt": "2026-11-26T08:38:34.794Z",
+      "lastSuccessAt": "2026-11-26T08:38:34.794Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "official-oembed; discovery may use mirror",
@@ -23605,8 +24522,8 @@
       "channel": "Command Code",
       "url": "https://x.com/CommandCodeAI",
       "kind": "social",
-      "attemptedAt": "2026-11-25T08:52:08.994Z",
-      "lastSuccessAt": "2026-11-25T08:52:08.994Z",
+      "attemptedAt": "2026-11-26T08:38:34.794Z",
+      "lastSuccessAt": "2026-11-26T08:38:34.794Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "official-oembed; discovery may use mirror",
