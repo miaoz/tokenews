@@ -319,6 +319,661 @@
         "https://www.anthropic.com/claude-fable-and-mythos-5-2",
         "https://support.claude.com/en/articles/14604842-cyber-verification-program"
       ]
+    },
+    {
+      "id": "claude-opus-5.5",
+      "source": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "additionalSources": [
+        "https://platform.claude.com/docs/en/about-claude/models/overview"
+      ],
+      "checkedAt": "2026-11-26",
+      "defaultVariant": "standard-5m",
+      "variants": [
+        {
+          "id": "standard-5m",
+          "label": {
+            "en": "Standard · 5m cache",
+            "zh": "标准档 · 5 分钟缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 4,
+            "cachedInput": 0.2,
+            "cacheWrite": 5,
+            "output": 20
+          }
+        },
+        {
+          "id": "standard-1h",
+          "label": {
+            "en": "Standard · 1h cache",
+            "zh": "标准档 · 1 小时缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 4,
+            "cachedInput": 0.2,
+            "cacheWrite": 8,
+            "output": 20
+          }
+        },
+        {
+          "id": "us-only-5m",
+          "label": {
+            "en": "US-only · 5m cache",
+            "zh": "仅限美国推理 · 5 分钟缓存"
+          },
+          "currency": "USD",
+          "region": "US",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 4.4,
+            "cachedInput": 0.22,
+            "cacheWrite": 5.5,
+            "output": 22
+          }
+        },
+        {
+          "id": "us-only-1h",
+          "label": {
+            "en": "US-only · 1h cache",
+            "zh": "仅限美国推理 · 1 小时缓存"
+          },
+          "currency": "USD",
+          "region": "US",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 4.4,
+            "cachedInput": 0.22,
+            "cacheWrite": 8.8,
+            "output": 22
+          }
+        },
+        {
+          "id": "fast-5m",
+          "label": {
+            "en": "Fast mode · 5m cache",
+            "zh": "快速模式 · 5 分钟缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "fast",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 8,
+            "cachedInput": 0.4,
+            "cacheWrite": 10,
+            "output": 40
+          },
+          "notes": {
+            "en": "Up to 2.5× output speed; prompt caching multipliers stack on top of Fast mode base rates ($8/$40).",
+            "zh": "输出速度提升最高 2.5 倍；缓存倍率叠加在 Fast 模式基价（$8/$40）之上。"
+          }
+        },
+        {
+          "id": "batch",
+          "label": {
+            "en": "Batch",
+            "zh": "批处理"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "batch",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 2,
+            "cachedInput": null,
+            "output": 10
+          },
+          "notes": {
+            "en": "Batch input/output rates; cache charges are not included in this row.",
+            "zh": "本档为批处理输入／输出价，未计入缓存费用。"
+          }
+        }
+      ],
+      "notes": {
+        "en": "Claude API ID: claude-opus-5-5. Released September 22, 2026; 1M context with no long-context premium. US-only inference adds 10% across all token categories; Fast mode is 2× base pricing. Tools billed separately.",
+        "zh": "Claude API 调用 ID：claude-opus-5-5。2026 年 9 月 22 日发布，1M 上下文无长上下文加价。仅限美国推理加收 10%；Fast 模式为基价 2 倍；工具调用另计。"
+      }
+    },
+    {
+      "id": "claude-sonnet-5.5",
+      "source": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "additionalSources": [
+        "https://platform.claude.com/docs/en/about-claude/models/overview"
+      ],
+      "checkedAt": "2026-11-26",
+      "defaultVariant": "standard-5m",
+      "variants": [
+        {
+          "id": "standard-5m",
+          "label": {
+            "en": "Standard · 5m cache",
+            "zh": "标准档 · 5 分钟缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 2,
+            "cachedInput": 0.1,
+            "cacheWrite": 2.5,
+            "output": 10
+          }
+        },
+        {
+          "id": "standard-1h",
+          "label": {
+            "en": "Standard · 1h cache",
+            "zh": "标准档 · 1 小时缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 2,
+            "cachedInput": 0.1,
+            "cacheWrite": 4,
+            "output": 10
+          }
+        },
+        {
+          "id": "us-only-5m",
+          "label": {
+            "en": "US-only · 5m cache",
+            "zh": "仅限美国推理 · 5 分钟缓存"
+          },
+          "currency": "USD",
+          "region": "US",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 2.2,
+            "cachedInput": 0.11,
+            "cacheWrite": 2.75,
+            "output": 11
+          }
+        },
+        {
+          "id": "us-only-1h",
+          "label": {
+            "en": "US-only · 1h cache",
+            "zh": "仅限美国推理 · 1 小时缓存"
+          },
+          "currency": "USD",
+          "region": "US",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 2.2,
+            "cachedInput": 0.11,
+            "cacheWrite": 4.4,
+            "output": 11
+          }
+        },
+        {
+          "id": "batch",
+          "label": {
+            "en": "Batch",
+            "zh": "批处理"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "batch",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 1,
+            "cachedInput": null,
+            "output": 5
+          },
+          "notes": {
+            "en": "Batch input/output rates; cache charges are not included in this row.",
+            "zh": "本档为批处理输入／输出价，未计入缓存费用。"
+          }
+        }
+      ],
+      "notes": {
+        "en": "Claude API ID: claude-sonnet-5-5. Released September 28, 2026; 1M context with no long-context premium. US-only inference adds 10% across all token categories; tools billed separately.",
+        "zh": "Claude API 调用 ID：claude-sonnet-5-5。2026 年 9 月 28 日发布，1M 上下文无长上下文加价。仅限美国推理加收 10%；工具调用另计。"
+      }
+    },
+    {
+      "id": "claude-haiku-5.5",
+      "source": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "additionalSources": [
+        "https://platform.claude.com/docs/en/about-claude/models/overview"
+      ],
+      "checkedAt": "2026-11-26",
+      "defaultVariant": "standard-short-5m",
+      "variants": [
+        {
+          "id": "standard-short-5m",
+          "label": {
+            "en": "Standard · ≤100K input · 5m cache",
+            "zh": "标准档 · ≤100K 输入 · 5 分钟缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": 100000
+          },
+          "rates": {
+            "input": 0.1,
+            "cachedInput": 0.01,
+            "cacheWrite": 0.125,
+            "output": 0.5
+          }
+        },
+        {
+          "id": "standard-short-1h",
+          "label": {
+            "en": "Standard · ≤100K input · 1h cache",
+            "zh": "标准档 · ≤100K 输入 · 1 小时缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": 100000
+          },
+          "rates": {
+            "input": 0.1,
+            "cachedInput": 0.01,
+            "cacheWrite": 0.2,
+            "output": 0.5
+          }
+        },
+        {
+          "id": "standard-long-5m",
+          "label": {
+            "en": "Standard · >100K input · 5m cache",
+            "zh": "标准档 · >100K 输入 · 5 分钟缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": {
+            "min": 100001,
+            "max": null
+          },
+          "rates": {
+            "input": 0.5,
+            "cachedInput": 0.05,
+            "cacheWrite": 0.625,
+            "output": 2.5
+          }
+        },
+        {
+          "id": "standard-long-1h",
+          "label": {
+            "en": "Standard · >100K input · 1h cache",
+            "zh": "标准档 · >100K 输入 · 1 小时缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": {
+            "min": 100001,
+            "max": null
+          },
+          "rates": {
+            "input": 0.5,
+            "cachedInput": 0.05,
+            "cacheWrite": 1,
+            "output": 2.5
+          }
+        },
+        {
+          "id": "us-only-short-5m",
+          "label": {
+            "en": "US-only · ≤100K input · 5m cache",
+            "zh": "仅限美国推理 · ≤100K 输入 · 5 分钟缓存"
+          },
+          "currency": "USD",
+          "region": "US",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": 100000
+          },
+          "rates": {
+            "input": 0.11,
+            "cachedInput": 0.011,
+            "cacheWrite": 0.1375,
+            "output": 0.55
+          }
+        },
+        {
+          "id": "batch-short",
+          "label": {
+            "en": "Batch · ≤100K input",
+            "zh": "批处理 · ≤100K 输入"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "batch",
+          "context": {
+            "min": 0,
+            "max": 100000
+          },
+          "rates": {
+            "input": 0.05,
+            "cachedInput": null,
+            "output": 0.25
+          }
+        },
+        {
+          "id": "batch-long",
+          "label": {
+            "en": "Batch · >100K input",
+            "zh": "批处理 · >100K 输入"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "batch",
+          "context": {
+            "min": 100001,
+            "max": null
+          },
+          "rates": {
+            "input": 0.25,
+            "cachedInput": null,
+            "output": 1.25
+          }
+        }
+      ],
+      "notes": {
+        "en": "Claude API ID: claude-haiku-5-5. Released October 7, 2026. Prompts ≤100,000 tokens pay $0.10/$0.50; prompts >100,000 tokens pay $0.50/$2.50 across the full request. US-only inference adds 10% across all categories.",
+        "zh": "Claude API 调用 ID：claude-haiku-5-5。2026 年 10 月 7 日发布。输入 ≤100,000 tokens 为 $0.10/$0.50；超过 100,000 tokens 整次请求按 $0.50/$2.50 计费。仅限美国推理加收 10%。"
+      }
+    },
+    {
+      "id": "claude-opus-5",
+      "source": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "additionalSources": [
+        "https://platform.claude.com/docs/en/release-notes/overview"
+      ],
+      "checkedAt": "2026-11-26",
+      "defaultVariant": "standard-5m",
+      "variants": [
+        {
+          "id": "standard-5m",
+          "label": {
+            "en": "Standard · 5m cache",
+            "zh": "标准档 · 5 分钟缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 5,
+            "cachedInput": 0.5,
+            "cacheWrite": 6.25,
+            "output": 25
+          }
+        },
+        {
+          "id": "standard-1h",
+          "label": {
+            "en": "Standard · 1h cache",
+            "zh": "标准档 · 1 小时缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 5,
+            "cachedInput": 0.5,
+            "cacheWrite": 10,
+            "output": 25
+          }
+        },
+        {
+          "id": "fast-5m",
+          "label": {
+            "en": "Fast mode (preview) · 5m cache",
+            "zh": "快速模式（预览） · 5 分钟缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "fast",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 10,
+            "cachedInput": 1,
+            "cacheWrite": 12.5,
+            "output": 50
+          }
+        },
+        {
+          "id": "batch",
+          "label": {
+            "en": "Batch",
+            "zh": "批处理"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "batch",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 2.5,
+            "cachedInput": null,
+            "output": 12.5
+          }
+        }
+      ],
+      "notes": {
+        "en": "Claude API ID: claude-opus-5. Released July 24, 2026; 1M context. Listed under Additional/Legacy models on the official pricing table.",
+        "zh": "Claude API 调用 ID：claude-opus-5。2026 年 7 月 24 日发布，1M 上下文。"
+      }
+    },
+    {
+      "id": "claude-sonnet-5",
+      "source": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "additionalSources": [
+        "https://platform.claude.com/docs/en/release-notes/overview"
+      ],
+      "checkedAt": "2026-11-26",
+      "defaultVariant": "standard-5m",
+      "variants": [
+        {
+          "id": "standard-5m",
+          "label": {
+            "en": "Standard · 5m cache",
+            "zh": "标准档 · 5 分钟缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 2,
+            "cachedInput": 0.2,
+            "cacheWrite": 2.5,
+            "output": 10
+          }
+        },
+        {
+          "id": "standard-1h",
+          "label": {
+            "en": "Standard · 1h cache",
+            "zh": "标准档 · 1 小时缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 2,
+            "cachedInput": 0.2,
+            "cacheWrite": 4,
+            "output": 10
+          }
+        },
+        {
+          "id": "batch",
+          "label": {
+            "en": "Batch",
+            "zh": "批处理"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "batch",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 1,
+            "cachedInput": null,
+            "output": 5
+          }
+        }
+      ],
+      "notes": {
+        "en": "Claude API ID: claude-sonnet-5. Released June 30, 2026; $2/$10 was confirmed permanent standard pricing on August 10, 2026.",
+        "zh": "Claude API 调用 ID：claude-sonnet-5。2026 年 6 月 30 日发布；2026 年 8 月 10 日公告确认 $2/$10 为长期标准价。"
+      }
+    },
+    {
+      "id": "claude-fable-5",
+      "source": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "additionalSources": [
+        "https://platform.claude.com/docs/en/release-notes/overview"
+      ],
+      "checkedAt": "2026-11-26",
+      "defaultVariant": "standard-5m",
+      "variants": [
+        {
+          "id": "standard-5m",
+          "label": {
+            "en": "Standard · 5m cache",
+            "zh": "标准档 · 5 分钟缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 10,
+            "cachedInput": 1,
+            "cacheWrite": 12.5,
+            "output": 50
+          }
+        },
+        {
+          "id": "standard-1h",
+          "label": {
+            "en": "Standard · 1h cache",
+            "zh": "标准档 · 1 小时缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 10,
+            "cachedInput": 1,
+            "cacheWrite": 20,
+            "output": 50
+          }
+        },
+        {
+          "id": "batch",
+          "label": {
+            "en": "Batch",
+            "zh": "批处理"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "batch",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 5,
+            "cachedInput": null,
+            "output": 25
+          }
+        }
+      ],
+      "notes": {
+        "en": "Claude API ID: claude-fable-5. Released June 9, 2026. Listed under Additional/Legacy models on the official pricing table.",
+        "zh": "Claude API 调用 ID：claude-fable-5。2026 年 6 月 9 日发布。"
+      }
     }
   ]
 }

@@ -36,6 +36,173 @@
       }
     },
     {
+      "id": "minimax-m3",
+      "source": "https://platform.minimax.io/docs/guides/pricing-paygo",
+      "additionalSources": [
+        "https://platform.minimaxi.com/docs/guides/pricing-paygo"
+      ],
+      "checkedAt": "2026-11-26",
+      "defaultVariant": "standard-short",
+      "variants": [
+        {
+          "id": "standard-short",
+          "label": {
+            "en": "MiniMax API · international · Standard · ≤512K",
+            "zh": "MiniMax API · 国际版 · 标准档 · ≤512K"
+          },
+          "currency": "USD",
+          "region": "MiniMax international API",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": 512000
+          },
+          "rates": {
+            "input": 0.3,
+            "cachedInput": 0.06,
+            "output": 1.2
+          }
+        },
+        {
+          "id": "standard-long",
+          "label": {
+            "en": "MiniMax API · international · Standard · >512K",
+            "zh": "MiniMax API · 国际版 · 标准档 · >512K"
+          },
+          "currency": "USD",
+          "region": "MiniMax international API",
+          "serviceTier": "standard",
+          "context": {
+            "min": 512001,
+            "max": null
+          },
+          "rates": {
+            "input": 0.6,
+            "cachedInput": 0.12,
+            "output": 2.4
+          }
+        },
+        {
+          "id": "priority-short",
+          "label": {
+            "en": "MiniMax API · international · Priority · ≤512K",
+            "zh": "MiniMax API · 国际版 · 优先档 · ≤512K"
+          },
+          "currency": "USD",
+          "region": "MiniMax international API",
+          "serviceTier": "priority",
+          "context": {
+            "min": 0,
+            "max": 512000
+          },
+          "rates": {
+            "input": 0.45,
+            "cachedInput": 0.09,
+            "output": 1.8
+          }
+        },
+        {
+          "id": "priority-long",
+          "label": {
+            "en": "MiniMax API · international · Priority · >512K",
+            "zh": "MiniMax API · 国际版 · 优先档 · >512K"
+          },
+          "currency": "USD",
+          "region": "MiniMax international API",
+          "serviceTier": "priority",
+          "context": {
+            "min": 512001,
+            "max": null
+          },
+          "rates": {
+            "input": 0.9,
+            "cachedInput": 0.18,
+            "output": 3.6
+          }
+        },
+        {
+          "id": "china-standard-short",
+          "label": {
+            "en": "MiniMax API · China · Standard · ≤512K",
+            "zh": "MiniMax API · 国内版 · 标准档 · ≤512K"
+          },
+          "currency": "CNY",
+          "region": "CN",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": 512000
+          },
+          "rates": {
+            "input": 2.1,
+            "cachedInput": 0.42,
+            "output": 8.4
+          }
+        },
+        {
+          "id": "china-standard-long",
+          "label": {
+            "en": "MiniMax API · China · Standard · >512K",
+            "zh": "MiniMax API · 国内版 · 标准档 · >512K"
+          },
+          "currency": "CNY",
+          "region": "CN",
+          "serviceTier": "standard",
+          "context": {
+            "min": 512001,
+            "max": null
+          },
+          "rates": {
+            "input": 4.2,
+            "cachedInput": 0.84,
+            "output": 16.8
+          }
+        },
+        {
+          "id": "china-priority-short",
+          "label": {
+            "en": "MiniMax API · China · Priority · ≤512K",
+            "zh": "MiniMax API · 国内版 · 优先档 · ≤512K"
+          },
+          "currency": "CNY",
+          "region": "CN",
+          "serviceTier": "priority",
+          "context": {
+            "min": 0,
+            "max": 512000
+          },
+          "rates": {
+            "input": 3.15,
+            "cachedInput": 0.63,
+            "output": 12.6
+          }
+        },
+        {
+          "id": "china-priority-long",
+          "label": {
+            "en": "MiniMax API · China · Priority · >512K",
+            "zh": "MiniMax API · 国内版 · 优先档 · >512K"
+          },
+          "currency": "CNY",
+          "region": "CN",
+          "serviceTier": "priority",
+          "context": {
+            "min": 512001,
+            "max": null
+          },
+          "rates": {
+            "input": 6.3,
+            "cachedInput": 1.26,
+            "output": 25.2
+          }
+        }
+      ],
+      "notes": {
+        "en": "Released June 1, 2026 (API ID: MiniMax-M3). Official pay-as-you-go table marks all M3 rows 'Permanent 50% off'; listed numbers show the active permanent rates. Priority is 1.5× Standard; prompts >512K use 2× rates. No separate cache-write fee published.",
+        "zh": "2026 年 6 月 1 日发布（API ID：MiniMax-M3）。官方价表注明「永久五折」，以上均为当前生效的永久五折后价格。优先档为标准档 1.5 倍；>512K 输入翻倍。未单列缓存写入费。"
+      }
+    },
+    {
       "id": "minimax-m3.1-flash",
       "source": "https://platform.minimax.io/docs/pricing/overview",
       "checkedAt": "2026-11-04",
@@ -59,6 +226,25 @@
             "cachedInput": 0.015,
             "output": 0.6
           }
+        },
+        {
+          "id": "china-standard",
+          "label": {
+            "en": "MiniMax API · China · Standard",
+            "zh": "MiniMax API · 国内版 · 标准档"
+          },
+          "currency": "CNY",
+          "region": "CN",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 1,
+            "cachedInput": 0.1,
+            "output": 4
+          }
         }
       ],
       "notes": {
@@ -66,7 +252,8 @@
         "zh": "精确端点 MiniMax-M3.1-Flash，不是早期 Preview。官方列出统一 token 费率，此模型不支持 Priority 档；思考 tokens 计入输出。"
       },
       "additionalSources": [
-        "https://platform.minimax.io/docs/api-reference/text-anthropic-api"
+        "https://platform.minimax.io/docs/api-reference/text-anthropic-api",
+        "https://platform.minimaxi.com/docs/guides/pricing-paygo"
       ]
     }
   ]

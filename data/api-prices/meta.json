@@ -172,6 +172,97 @@
       "additionalSources": [
         "https://dev.meta.ai/docs/models"
       ]
+    },
+    {
+      "id": "muse-ember",
+      "source": "https://dev.meta.ai/docs/pricing-rate-limits",
+      "additionalSources": [
+        "https://dev.meta.ai/docs/models"
+      ],
+      "checkedAt": "2026-11-26",
+      "defaultVariant": "standard-short",
+      "variants": [
+        {
+          "id": "standard-short",
+          "label": {
+            "en": "Meta Model API · Standard · ≤200K input",
+            "zh": "Meta Model API · 标准档 · ≤200K 输入"
+          },
+          "currency": "USD",
+          "region": "Meta Model API",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": 200000
+          },
+          "rates": {
+            "input": 0.1,
+            "cachedInput": 0.004,
+            "output": 0.5
+          }
+        },
+        {
+          "id": "standard-long",
+          "label": {
+            "en": "Meta Model API · Standard · >200K input",
+            "zh": "Meta Model API · 标准档 · >200K 输入"
+          },
+          "currency": "USD",
+          "region": "Meta Model API",
+          "serviceTier": "standard",
+          "context": {
+            "min": 200001,
+            "max": null
+          },
+          "rates": {
+            "input": 0.3,
+            "cachedInput": 0.012,
+            "output": 1.5
+          },
+          "notes": {
+            "en": "Requests >200K input tokens (including cached tokens) use the long-context rate for the full request.",
+            "zh": "单次请求总输入（含缓存 tokens）>200K 时，整次请求均按长上下文费率计费。"
+          }
+        }
+      ],
+      "notes": {
+        "en": "Released November 9, 2026 (endpoint muse-ember-1.0). Standard mode only; Contributor mode is unavailable for Muse Ember on Model API. Web search grounding costs $2.50 per 1,000 queries.",
+        "zh": "2026 年 11 月 9 日发布（端点 muse-ember-1.0）。仅标准档，Model API 不提供 Contributor 档。联网搜索按 $2.50 / 千次查询另计。"
+      }
+    },
+    {
+      "id": "muse-spark-1.1",
+      "source": "https://dev.meta.ai/docs/pricing-rate-limits",
+      "additionalSources": [
+        "https://dev.meta.ai/docs/models"
+      ],
+      "checkedAt": "2026-11-26",
+      "defaultVariant": "standard",
+      "variants": [
+        {
+          "id": "standard",
+          "label": {
+            "en": "Meta Model API · Standard",
+            "zh": "Meta Model API · 标准档"
+          },
+          "currency": "USD",
+          "region": "Meta Model API",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 1.25,
+            "cachedInput": 0.15,
+            "output": 4.25
+          }
+        }
+      ],
+      "notes": {
+        "en": "Endpoint muse-spark-1.1. Standard mode only; Contributor tier is only available for Muse Spark 1.2 and 1.3. No long-context surcharge; web search grounding costs $2.50 per 1,000 queries.",
+        "zh": "端点 muse-spark-1.1，仅提供标准档（Contributor 档仅支持 Muse Spark 1.2 与 1.3）。无长上下文加价；联网搜索另计 $2.50 / 千次。"
+      }
     }
   ]
 }

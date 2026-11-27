@@ -48,7 +48,7 @@ test("The explicit default wins over a cheaper tier, cache prices are exact, and
 test("Uncovered models retain upstream references, and genuinely missing models stay missing", () => {
   const without = { ...data, apiPrices: undefined };
   assert.equal(apiPriceReference(without, "gpt-6-astra"), null);
-  assert.equal(apiPriceReference(data, "claude-opus-5.5")!.origin, "upstream");
+  assert.equal(apiPriceReference(data, "claude-opus-4.8")!.origin, "upstream");
   assert.equal(apiPriceReference(data, "not-a-model"), null);
   for (const pair of COMPARISON_PAIRS) for (const model of pair)
     assert.ok(apiPriceReference(data, model), `${model} in a curated comparison needs an API reference`);
@@ -182,4 +182,56 @@ test('Qwen4 Max and Inkling 2 Mini publish exact official API rates', () => {
   assert.equal(inkling.variant.id, 'tinker-sampling');
   assert.deepEqual(inkling.variant.rates, { input: 0.15, cachedInput: 0.015, output: 0.5 });
   assert.ok(Math.abs(inkling.blended! - 0.0208) < 1e-12);
+});
+
+test('Multi-maker 2026-11-26 enrichment records exact official rates across flagships and fast tiers', () => {
+  const opus55 = apiPriceReference(data, 'claude-opus-5.5', '2026-11-26')!;
+  assert.equal(opus55.origin, 'maintained');
+  assert.deepEqual(opus55.variant.rates, { input: 4, cachedInput: 0.2, cacheWrite: 5, output: 20 });
+
+  const haiku55 = apiPriceReference(data, 'claude-haiku-5.5', '2026-11-26')!;
+  assert.equal(haiku55.origin, 'maintained');
+  assert.equal(haiku55.variant.context?.max, 100000);
+  assert.deepEqual(haiku55.variant.rates, { input: 0.1, cachedInput: 0.01, cacheWrite: 0.125, output: 0.5 });
+
+  const glm53 = apiPriceReference(data, 'glm-5.3', '2026-11-26')!;
+  assert.equal(glm53.origin, 'maintained');
+  assert.deepEqual(glm53.variant.rates, { input: 1.4, cachedInput: 0.26, output: 4.4 });
+
+  const grok47 = apiPriceReference(data, 'grok-4.7', '2026-11-26')!;
+  assert.equal(grok47.origin, 'maintained');
+  assert.deepEqual(grok47.variant.rates, { input: 2, cachedInput: 0.5, output: 6 });
+
+  const m3 = apiPriceReference(data, 'minimax-m3', '2026-11-26')!;
+  assert.equal(m3.origin, 'maintained');
+  assert.deepEqual(m3.variant.rates, { input: 0.3, cachedInput: 0.06, output: 1.2 });
+
+  const v4pro = apiPriceReference(data, 'deepseek-v4-pro-0813', '2026-11-26')!;
+  assert.equal(v4pro.origin, 'maintained');
+  assert.deepEqual(v4pro.variant.rates, { input: 1.32, cachedInput: 0.044, output: 3.96 });
+
+  const step5 = apiPriceReference(data, 'step-5-preview', '2026-11-26')!;
+  assert.equal(step5.origin, 'maintained');
+  assert.deepEqual(step5.variant.rates, { input: 1, cachedInput: 0.1, cacheWrite: 1, output: 2.7 });
+
+  const hy4 = apiPriceReference(data, 'hy4', '2026-11-26')!;
+  assert.equal(hy4.origin, 'maintained');
+  assert.equal(hy4.variant.currency, 'CNY');
+  assert.deepEqual(hy4.variant.rates, { input: 6, cachedInput: 0.3, output: 18 });
+
+  const ember = apiPriceReference(data, 'muse-ember', '2026-11-26')!;
+  assert.equal(ember.origin, 'maintained');
+  assert.deepEqual(ember.variant.rates, { input: 0.1, cachedInput: 0.004, output: 0.5 });
+
+  const gem35l = apiPriceReference(data, 'gemini-3.5-flash-lite', '2026-11-26')!;
+  assert.equal(gem35l.origin, 'maintained');
+  assert.deepEqual(gem35l.variant.rates, { input: 0.3, cachedInput: 0.03, output: 2.5 });
+
+  const gpt56 = apiPriceReference(data, 'gpt-5.6-sol', '2026-11-26')!;
+  assert.equal(gpt56.origin, 'maintained');
+  assert.deepEqual(gpt56.variant.rates, { input: 4, cachedInput: 0.4, cacheWrite: 5, output: 20 });
+
+  const solar4 = apiPriceReference(data, 'solar-pro-4', '2026-11-26')!;
+  assert.equal(solar4.origin, 'maintained');
+  assert.deepEqual(solar4.variant.rates, { input: 0.3, cachedInput: 0.06, output: 1.2 });
 });

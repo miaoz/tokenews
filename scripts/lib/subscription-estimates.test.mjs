@@ -153,3 +153,37 @@ test('direct-weekly supports channel, promoUntil, exact math and upstream coexis
  const dup=clone(d);dup.points.push({id:'devin_max::gemini-4-carbon',plan_id:'devin_max',model:'gemini-4-carbon',data_date:'2026-11-21'});
  assert.throws(()=>mergeSubscriptionEstimates(dup,m),/upstream plan sample requires review/);
 });
+
+test('anchor-pool and direct-weekly support gemini workloadMix and enforce anchor workload matching',()=>{
+ const d={
+  conventions:{monthWeeks:4,anthropicTokenMix:{cache:.97,cacheWrite:.025,output:.005},standardTokenMix:{cache:.97,input:.025,output:.005},lowCacheTokenMix:{cache:.85,input:.145,output:.005},geminiTokenMix:{cache:.9,input:.095,output:.005}},
+  models:[
+   {id:'gemini-4-neon',name:'Gemini 4 Neon',maker:'Google'},
+   {id:'gemini-4-hydrogen',name:'Gemini 4 Hydrogen',maker:'Google'},
+   {id:'gemini-4-carbon',name:'Gemini 4 Carbon',maker:'Google'},
+  ],
+  points:[
+   {id:'google_ai_pro_us::gemini-4-neon',plan_id:'google_ai_pro_us',model:'gemini-4-neon',vendor:'Google',billing:'subscription',workload:'gemini',monthly_tokens:691e6,real_usd_per_mtok:.028929088,data_date:'2026-11-20'},
+   {id:'google_ai_pro_us::gemini-3.6-flash',plan_id:'google_ai_pro_us',model:'gemini-4-neon',vendor:'Google',billing:'subscription',workload:'lowCache',monthly_tokens:500e6,real_usd_per_mtok:.04,data_date:'2026-09-20'},
+  ],
+  mappings:[],configurations:[],supersededPoints:[],
+ };
+ const m={
+  version:1,checkedAt:'2026-11-26',evidenceFiles:['evidence-2026-11-26.json'],archivedPointIds:[],
+  entries:[
+   {id:'estimate:pro:hydrogen',planId:'google_ai_pro_estimate',upstreamPlanIds:['google_ai_pro_us'],name:'Google AI Pro',model:'gemini-4-hydrogen',monthlyUsd:19.99,confidence:'low',sampleDate:'2026-11-20',sampleFrom:'Google AI Pro · gemini-4-neon',calibration:{meter:'anchor-pool',anchorMode:'worth-ratio',anchorPointId:'google_ai_pro_us::gemini-4-neon',planRatio:1,workloadMix:'gemini',anchorRates:{cache:.15,input:3,output:15}},rates:{cache:.075,input:1.5,output:7.5},sources:[{label:'Gemini mix',url:'https://github.com/Fei2411/real-api-pricing'}],note:{en:'Gemini mix.',zh:'Gemini 负载。'}},
+   {id:'estimate:devin-max:carbon',planId:'devin_max_estimate',upstreamPlanIds:['devin_max'],name:'Devin Max',channel:'Devin',model:'gemini-4-carbon',monthlyUsd:200,confidence:'medium',sampleDate:'2026-11-21',sampleFrom:'Devin Max · gemini-4-carbon',calibration:{meter:'direct-weekly',weeklyWorthUsd:200,monthWeeks:4,workloadMix:'gemini'},rates:{cache:.2,input:4,output:20},sources:[{label:'Gemini mix',url:'https://github.com/Fei2411/real-api-pricing'}],note:{en:'Gemini direct.',zh:'Gemini 直算。'}},
+  ],
+ };
+ const res=mergeSubscriptionEstimates(d,m);
+ const h=res.points.find(p=>p.id==='estimate:pro:hydrogen');
+ const c=res.points.find(p=>p.id==='estimate:devin-max:carbon');
+ assert.equal(h.workload,'gemini');
+ assert.ok(Math.abs(h.list_blended_usd_per_mtok-.2475)<1e-12);
+ assert.ok(Math.abs(h.monthly_yi-(6.91*.495/.2475))<1e-9);
+ assert.match(h.note_en,/90%\/9\.5%\/0\.5% Gemini workload mix/);
+ assert.equal(c.workload,'gemini');
+ assert.ok(Math.abs(c.list_blended_usd_per_mtok-.66)<1e-12);
+ const badAnchor=clone(m);badAnchor.entries[0].calibration.anchorPointId='google_ai_pro_us::gemini-3.6-flash';
+ assert.throws(()=>mergeSubscriptionEstimates(d,badAnchor),/anchor workload mismatch/);
+});

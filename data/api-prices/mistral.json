@@ -280,6 +280,130 @@
         "https://docs.mistral.ai/models/mistral-large-4-0",
         "https://mistral.ai/news/mistral-large-4-oss/"
       ]
+    },
+    {
+      "id": "mistral-small-4",
+      "source": "https://docs.mistral.ai/inference/pricing",
+      "checkedAt": "2026-11-26",
+      "defaultVariant": "standard",
+      "variants": [
+        {
+          "id": "standard",
+          "label": {
+            "en": "Mistral API · USD Standard",
+            "zh": "Mistral API · USD 标准档"
+          },
+          "currency": "USD",
+          "region": "Mistral API",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 0.15,
+            "cachedInput": null,
+            "output": 0.6
+          }
+        }
+      ],
+      "notes": {
+        "en": "Endpoint mistral-small-4-0-26-03. Official inference pricing lists '-' for cached input, so cachedInput remains null (unknown).",
+        "zh": "端点 mistral-small-4-0-26-03。官方价表未公布缓存读单价（显示 -），故 cachedInput 保留未知。"
+      }
+    },
+    {
+      "id": "ministral-3-14b",
+      "source": "https://docs.mistral.ai/inference/pricing",
+      "checkedAt": "2026-11-26",
+      "defaultVariant": "standard",
+      "variants": [
+        {
+          "id": "standard",
+          "label": {
+            "en": "Mistral API · USD Standard",
+            "zh": "Mistral API · USD 标准档"
+          },
+          "currency": "USD",
+          "region": "Mistral API",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 0.2,
+            "cachedInput": null,
+            "output": 0.2
+          }
+        }
+      ],
+      "notes": {
+        "en": "Endpoint ministral-3-14b-25-12. Official inference pricing lists '-' for cached input, so cachedInput remains null.",
+        "zh": "端点 ministral-3-14b-25-12。官方价表未公布缓存读单价（显示 -），故 cachedInput 保留未知。"
+      }
+    },
+    {
+      "id": "ministral-3-8b",
+      "source": "https://docs.mistral.ai/inference/pricing",
+      "checkedAt": "2026-11-26",
+      "defaultVariant": "standard",
+      "variants": [
+        {
+          "id": "standard",
+          "label": {
+            "en": "Mistral API · USD Standard",
+            "zh": "Mistral API · USD 标准档"
+          },
+          "currency": "USD",
+          "region": "Mistral API",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 0.15,
+            "cachedInput": null,
+            "output": 0.15
+          }
+        }
+      ],
+      "notes": {
+        "en": "Endpoint ministral-3-8b-25-12. Official inference pricing lists '-' for cached input, so cachedInput remains null.",
+        "zh": "端点 ministral-3-8b-25-12。官方价表未公布缓存读单价（显示 -），故 cachedInput 保留未知。"
+      }
+    },
+    {
+      "id": "ministral-3-3b",
+      "source": "https://docs.mistral.ai/inference/pricing",
+      "checkedAt": "2026-11-26",
+      "defaultVariant": "standard",
+      "variants": [
+        {
+          "id": "standard",
+          "label": {
+            "en": "Mistral API · USD Standard",
+            "zh": "Mistral API · USD 标准档"
+          },
+          "currency": "USD",
+          "region": "Mistral API",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 0.1,
+            "cachedInput": null,
+            "output": 0.1
+          }
+        }
+      ],
+      "notes": {
+        "en": "Endpoint ministral-3-3b-25-12. Official inference pricing lists '-' for cached input, so cachedInput remains null.",
+        "zh": "端点 ministral-3-3b-25-12。官方价表未公布缓存读单价（显示 -），故 cachedInput 保留未知。"
+      }
     }
   ]
 }

@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "provider": "Upstage",
+  "unit": "per_million_tokens",
+  "models": [
+    {
+      "id": "solar-pro-4",
+      "source": "https://www.upstage.ai/pricing",
+      "checkedAt": "2026-11-26",
+      "defaultVariant": "standard",
+      "variants": [
+        {
+          "id": "standard",
+          "label": {
+            "en": "Upstage API · Standard",
+            "zh": "Upstage API · 标准档"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 0.3,
+            "cachedInput": 0.06,
+            "output": 1.2
+          }
+        }
+      ],
+      "notes": {
+        "en": "Standard Upstage API list pricing ($0.30 input / $0.06 cached input / $1.20 output per 1M tokens) after launch promotional phases ended October 10, 2026 UTC. Separate cache-write fee is not published on the pricing page.",
+        "zh": "2026 年 10 月 10 日（UTC）发布期促销结束后的 Upstage API 官方常规标价（$0.30 输入 / $0.06 缓存输入 / $1.20 输出每百万 tokens）。定价页未单列缓存写入费率。"
+      }
+    },
+    {
+      "id": "solar-mini-4",
+      "source": "https://www.upstage.ai/pricing",
+      "checkedAt": "2026-11-26",
+      "defaultVariant": "standard",
+      "variants": [
+        {
+          "id": "standard",
+          "label": {
+            "en": "Upstage API · Standard",
+            "zh": "Upstage API · 标准档"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 0.1,
+            "cachedInput": 0.01,
+            "output": 0.4
+          }
+        },
+        {
+          "id": "promo-half-off",
+          "label": {
+            "en": "Upstage API · 50% discount phase (from 2026-10-11)",
+            "zh": "Upstage API · 五折促销档（2026-10-11 起）"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "promotion",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 0.05,
+            "cachedInput": 0.005,
+            "output": 0.2
+          },
+          "validFrom": "2026-10-11"
+        }
+      ],
+      "notes": {
+        "en": "Standard list is $0.10 / $0.01 cached / $0.40 per 1M tokens; Upstage Pricing applies an ongoing 50% discount phase ($0.05 / $0.005 / $0.20) starting October 11, 2026 UTC with no published end date.",
+        "zh": "常规标价为 $0.10 / $0.01（缓存） / $0.40 每百万 tokens；Upstage 官网自 2026 年 10 月 11 日（UTC）起执行无明确截止日的五折优惠（$0.05 / $0.005 / $0.20）。"
+      }
+    }
+  ]
+}

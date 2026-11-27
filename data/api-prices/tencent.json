@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "provider": "Tencent",
+  "unit": "per_million_tokens",
+  "models": [
+    {
+      "id": "hy4",
+      "source": "https://cloud.tencent.com/product/tokenhub",
+      "additionalSources": [
+        "https://cloud.tencent.com/tokenhub/hy4"
+      ],
+      "checkedAt": "2026-11-26",
+      "defaultVariant": "cny-standard",
+      "variants": [
+        {
+          "id": "cny-standard",
+          "label": {
+            "en": "Tencent Cloud TokenHub · CNY standard",
+            "zh": "腾讯云 TokenHub · 人民币标准档"
+          },
+          "currency": "CNY",
+          "region": "CN",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 6,
+            "cachedInput": 0.3,
+            "output": 18
+          }
+        }
+      ],
+      "notes": {
+        "en": "Official Tencent Cloud TokenHub CNY list prices (¥6 input / ¥0.30 cache hit / ¥18 output per MTok). Retained in original CNY currency; no USD official TokenHub list rate is published here. Does not represent third-party OpenCode/GO USD catalogs.",
+        "zh": "腾讯云 TokenHub 官方人民币刊例价（输入 6 元 / 缓存命中 0.3 元 / 输出 18 元每百万 tokens）。保留原始人民币币种，未擅自换算或替代第三方美元目录价。"
+      }
+    },
+    {
+      "id": "hy4-flash",
+      "source": "https://cloud.tencent.com/product/tokenhub",
+      "additionalSources": [
+        "https://cloud.tencent.com/tokenhub/hy4-flash"
+      ],
+      "checkedAt": "2026-11-26",
+      "defaultVariant": "cny-standard",
+      "variants": [
+        {
+          "id": "cny-standard",
+          "label": {
+            "en": "Tencent Cloud TokenHub · CNY standard",
+            "zh": "腾讯云 TokenHub · 人民币标准档"
+          },
+          "currency": "CNY",
+          "region": "CN",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 0.5,
+            "cachedInput": 0.02,
+            "output": 2
+          }
+        }
+      ],
+      "notes": {
+        "en": "Official Tencent Cloud TokenHub CNY list prices (¥0.50 input / ¥0.02 cache hit / ¥2 output per MTok). Retained in original CNY currency; new-user 1M free trial quota excluded.",
+        "zh": "腾讯云 TokenHub 官方人民币刊例价（输入 0.5 元 / 缓存命中 0.02 元 / 输出 2 元每百万 tokens）。保留原始人民币币种，未计入新用户 100 万免费体验包。"
+      }
+    }
+  ]
+}

@@ -1,96 +1,109 @@
 {
   "version": 1,
-  "attemptedAt": "2026-11-23",
+  "attemptedAt": "2026-11-26",
   "results": [
     {
       "id": "artificial-analysis:gemini-4-carbon:5.0.1:high",
       "source": "https://artificialanalysis.ai/models/gemini-4-carbon",
-      "status": "updated",
-      "retainedCheckedAt": "2026-11-23"
+      "status": "retained-previous",
+      "retainedCheckedAt": "2026-11-23",
+      "error": "Score/layout/version changed for gemini-4-carbon: expected 5.0.1, found 5.0.2"
     },
     {
       "id": "artificial-analysis:kimi-k3.1-pro:5.0.1:default",
       "source": "https://artificialanalysis.ai/models/kimi-k3-1-pro",
-      "status": "updated",
-      "retainedCheckedAt": "2026-11-23"
+      "status": "retained-previous",
+      "retainedCheckedAt": "2026-11-23",
+      "error": "Score/layout/version changed for kimi-k3.1-pro: expected 5.0.1, found 5.0.2"
     },
     {
       "id": "crusader-bench:kimi-k3.1-pro:1.7:high",
       "source": "https://crusbench.com/models/kimi-1021-preview/",
       "status": "updated",
-      "retainedCheckedAt": "2026-11-23"
+      "retainedCheckedAt": "2026-11-26"
     },
     {
       "id": "artificial-analysis:gpt-6.1-terra:5.0.1:max",
       "source": "https://artificialanalysis.ai/models/gpt-6-1-terra",
-      "status": "updated",
-      "retainedCheckedAt": "2026-11-23"
+      "status": "retained-previous",
+      "retainedCheckedAt": "2026-11-23",
+      "error": "Score/layout/version changed for gpt-6.1-terra: expected 5.0.1, found 5.0.2"
     },
     {
       "id": "artificial-analysis:muse-wonder:5.0.1:max",
       "source": "https://artificialanalysis.ai/models/muse-wonder",
-      "status": "updated",
-      "retainedCheckedAt": "2026-11-23"
+      "status": "retained-previous",
+      "retainedCheckedAt": "2026-11-23",
+      "error": "Score/layout/version changed for muse-wonder: expected 5.0.1, found 5.0.2"
     },
     {
       "id": "artificial-analysis:muse-wonder-full:5.0.1:max",
       "source": "https://artificialanalysis.ai/models/muse-wonder-full",
-      "status": "updated",
-      "retainedCheckedAt": "2026-11-23"
+      "status": "retained-previous",
+      "retainedCheckedAt": "2026-11-23",
+      "error": "Score/layout/version changed for muse-wonder-full: expected 5.0.1, found 5.0.2"
     },
     {
       "id": "artificial-analysis:muse-spark-open:5.0.1:xhigh",
       "source": "https://artificialanalysis.ai/models/muse-spark-open",
-      "status": "updated",
-      "retainedCheckedAt": "2026-11-23"
+      "status": "retained-previous",
+      "retainedCheckedAt": "2026-11-23",
+      "error": "Score/layout/version changed for muse-spark-open: expected 5.0.1, found 5.0.2"
     },
     {
       "id": "artificial-analysis:deepseek-v4.1-flash-1017:5.0.1:max",
       "source": "https://artificialanalysis.ai/models/deepseek-v4-1-flash-1017",
-      "status": "updated",
-      "retainedCheckedAt": "2026-11-23"
+      "status": "retained-previous",
+      "retainedCheckedAt": "2026-11-23",
+      "error": "Score/layout/version changed for deepseek-v4.1-flash-1017: expected 5.0.1, found 5.0.2"
     },
     {
       "id": "artificial-analysis:ling-3.1-flash-1019:5.0.1:default",
       "source": "https://artificialanalysis.ai/models/ling-3-1-flash",
-      "status": "updated",
-      "retainedCheckedAt": "2026-11-23"
+      "status": "retained-previous",
+      "retainedCheckedAt": "2026-11-23",
+      "error": "Score/layout/version changed for ling-3.1-flash-1019: expected 5.0.1, found 5.0.2"
     },
     {
       "id": "artificial-analysis:minimax-m3.1-flash:5.0.1:default",
       "source": "https://artificialanalysis.ai/models/minimax-m3-1-flash",
-      "status": "updated",
-      "retainedCheckedAt": "2026-11-23"
+      "status": "retained-previous",
+      "retainedCheckedAt": "2026-11-23",
+      "error": "Score/layout/version changed for minimax-m3.1-flash: expected 5.0.1, found 5.0.2"
     },
     {
       "id": "artificial-analysis:mistral-large-4:5.0.1:high",
       "source": "https://artificialanalysis.ai/models/mistral-large-4",
-      "status": "updated",
-      "retainedCheckedAt": "2026-11-23"
+      "status": "retained-previous",
+      "retainedCheckedAt": "2026-11-23",
+      "error": "Score/layout/version changed for mistral-large-4: expected 5.0.1, found 5.0.2"
     },
     {
       "id": "artificial-analysis:nanbeige4.3-33b:5.0.1:default",
       "source": "https://artificialanalysis.ai/models/nanbeige4-3-33b",
-      "status": "updated",
-      "retainedCheckedAt": "2026-11-23"
+      "status": "retained-previous",
+      "retainedCheckedAt": "2026-11-23",
+      "error": "Score/layout/version changed for nanbeige4.3-33b: expected 5.0.1, found 5.0.2"
     },
     {
       "id": "artificial-analysis:beam-1.0:5.0.1:default",
       "source": "https://artificialanalysis.ai/models/reflection-beam",
-      "status": "updated",
-      "retainedCheckedAt": "2026-11-23"
+      "status": "retained-previous",
+      "retainedCheckedAt": "2026-11-23",
+      "error": "Score/layout/version changed for beam-1.0: expected 5.0.1, found 5.0.2"
     },
     {
       "id": "artificial-analysis:nemotron-3.5-super-vl:5.0.1:default",
       "source": "https://artificialanalysis.ai/models/nemotron-3-5-super-vl",
-      "status": "updated",
-      "retainedCheckedAt": "2026-11-23"
+      "status": "retained-previous",
+      "retainedCheckedAt": "2026-11-23",
+      "error": "Score/layout/version changed for nemotron-3.5-super-vl: expected 5.0.1, found 5.0.2"
     },
     {
       "id": "aa-discovery",
       "source": "https://artificialanalysis.ai/models/releases",
       "status": "updated",
-      "retainedCheckedAt": "2026-11-23"
+      "retainedCheckedAt": "2026-11-26"
     }
   ]
 }

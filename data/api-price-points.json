@@ -143,6 +143,166 @@
         "min": 0,
         "max": 262144
       }
+    },
+    {
+      "model": "muse-ember",
+      "variant": "standard-short",
+      "inputBilling": "input-only",
+      "context": {
+        "min": 0,
+        "max": 200000
+      }
+    },
+    {
+      "model": "muse-ember",
+      "variant": "standard-long",
+      "inputBilling": "input-only",
+      "context": {
+        "min": 200001,
+        "max": null
+      }
+    },
+    {
+      "model": "muse-spark-1.1",
+      "variant": "standard",
+      "inputBilling": "input-only"
+    },
+    {
+      "model": "minimax-m3",
+      "variant": "standard-short",
+      "inputBilling": "input-only",
+      "context": {
+        "min": 0,
+        "max": 512000
+      }
+    },
+    {
+      "model": "minimax-m3",
+      "variant": "standard-long",
+      "inputBilling": "input-only",
+      "context": {
+        "min": 512001,
+        "max": null
+      }
+    },
+    {
+      "model": "deepseek-v4-pro-0813",
+      "variant": "peak",
+      "inputBilling": "input-only"
+    },
+    {
+      "model": "deepseek-v4-pro-0813",
+      "variant": "off-peak",
+      "inputBilling": "input-only"
+    },
+    {
+      "model": "grok-4.5",
+      "variant": "standard-short",
+      "inputBilling": "input-only",
+      "context": {
+        "min": 0,
+        "max": 199999
+      }
+    },
+    {
+      "model": "grok-4.5",
+      "variant": "standard-long",
+      "inputBilling": "input-only",
+      "context": {
+        "min": 200000,
+        "max": 500000
+      }
+    },
+    {
+      "model": "grok-4.3",
+      "variant": "standard-short",
+      "inputBilling": "input-only",
+      "context": {
+        "min": 0,
+        "max": 199999
+      }
+    },
+    {
+      "model": "grok-4.3",
+      "variant": "standard-long",
+      "inputBilling": "input-only",
+      "context": {
+        "min": 200000,
+        "max": 1000000
+      }
+    },
+    {
+      "model": "step-5-preview",
+      "variant": "usd-standard",
+      "inputBilling": "input-or-cache-write-same-rate",
+      "context": {
+        "min": 0,
+        "max": 1000000
+      }
+    },
+    {
+      "model": "gemini-3.5-flash-lite",
+      "variant": "standard",
+      "inputBilling": "input-only"
+    },
+    {
+      "model": "gemini-3.1-pro-preview",
+      "variant": "standard-short",
+      "inputBilling": "input-only",
+      "context": {
+        "min": 0,
+        "max": 200000
+      }
+    },
+    {
+      "model": "gemini-3.1-pro-preview",
+      "variant": "standard-long",
+      "inputBilling": "input-only",
+      "context": {
+        "min": 200001,
+        "max": null
+      }
+    },
+    {
+      "model": "gpt-5.5",
+      "variant": "standard-short",
+      "inputBilling": "input-only",
+      "context": {
+        "min": 0,
+        "max": 271999
+      }
+    },
+    {
+      "model": "gpt-5.5",
+      "variant": "standard-long",
+      "inputBilling": "input-only",
+      "context": {
+        "min": 272000,
+        "max": 1000000
+      }
+    },
+    {
+      "model": "gpt-5.4",
+      "variant": "standard-short",
+      "inputBilling": "input-only",
+      "context": {
+        "min": 0,
+        "max": 271999
+      }
+    },
+    {
+      "model": "gpt-5.4",
+      "variant": "standard-long",
+      "inputBilling": "input-only",
+      "context": {
+        "min": 272000,
+        "max": 1000000
+      }
+    },
+    {
+      "model": "gpt-5.4-mini",
+      "variant": "standard",
+      "inputBilling": "input-only"
     }
   ]
 }

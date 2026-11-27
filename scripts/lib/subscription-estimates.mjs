@@ -57,10 +57,12 @@ export function mergeSubscriptionEstimates(data, manifest) {
       const std = data.conventions?.standardTokenMix;
       if (std?.cache !== .97 || std.input !== .025 || std.output !== .005) fail('normalization conventions changed');
       const workloadMix = c.workloadMix ?? 'standard';
-      if (!['standard','lowCache'].includes(workloadMix)) fail(`invalid workloadMix: ${e.id}`);
+      if (!['standard','lowCache','gemini'].includes(workloadMix)) fail(`invalid workloadMix: ${e.id}`);
       const lowMix = workloadMix === 'lowCache' ? data.conventions?.lowCacheTokenMix : null;
       if (workloadMix === 'lowCache' && (lowMix?.cache !== .85 || lowMix.input !== .145 || lowMix.output !== .005)) fail('normalization conventions changed');
-      const mixSpec = workloadMix === 'lowCache' ? lowMix : std;
+      const gemMix = workloadMix === 'gemini' ? data.conventions?.geminiTokenMix : null;
+      if (workloadMix === 'gemini' && (gemMix?.cache !== .9 || gemMix.input !== .095 || gemMix.output !== .005)) fail('normalization conventions changed');
+      const mixSpec = workloadMix === 'lowCache' ? lowMix : workloadMix === 'gemini' ? gemMix : std;
       if (e.confidence !== 'low' || !text(c.anchorPointId) || !positive(c.planRatio) || !['worth-ratio','same-token-carry'].includes(c.anchorMode)) fail(`invalid calibration: ${e.id}`);
       const allowedCal = c.anchorMode === 'worth-ratio'
         ? ['meter','anchorMode','anchorPointId','planRatio','anchorRates','workloadMix']
@@ -69,17 +71,17 @@ export function mergeSubscriptionEstimates(data, manifest) {
       const anchor = data.points.find(p=>p.id===c.anchorPointId);
       if (!anchor || archiveIds.has(anchor.id) || anchor.billing !== 'subscription' || anchor.vendor !== model.maker || !positive(anchor.monthly_tokens))
         fail(`invalid anchor point: ${e.id}`);
-      if (workloadMix === 'lowCache' && anchor.workload !== 'lowCache') fail(`anchor workload mismatch: ${e.id}`);
+      if (workloadMix !== 'standard' && anchor.workload !== workloadMix) fail(`anchor workload mismatch: ${e.id}`);
       if (!rates || !nonNeg(rates.cache) || !nonNeg(rates.input) || !nonNeg(rates.output) ||
           (rates.cacheWrite !== undefined && !positive(rates.cacheWrite)) ||
           Object.keys(rates).some(k=>!['cache','input','cacheWrite','output'].includes(k))) fail(`rates need review: ${e.id}`);
       const usesWrite = e.freshInputBilling === 'cache-write';
-      if (e.freshInputBilling !== undefined && (!usesWrite || workloadMix === 'lowCache')) fail(`invalid freshInputBilling: ${e.id}`);
+      if (e.freshInputBilling !== undefined && (!usesWrite || workloadMix !== 'standard')) fail(`invalid freshInputBilling: ${e.id}`);
       if (usesWrite ? !positive(rates.cacheWrite) : rates.cacheWrite !== undefined) fail(`cacheWrite mismatch: ${e.id}`);
       blend = mixSpec.cache * rates.cache + mixSpec.input * (usesWrite ? rates.cacheWrite : rates.input) + mixSpec.output * rates.output;
       if (!positive(blend)) fail(`non-positive target blend: ${e.id}`);
-      const mixEn = workloadMix === 'lowCache' ? '85%/14.5%/0.5% low-cache mix' : '97%/2.5%/0.5% standard mix';
-      const mixZh = workloadMix === 'lowCache' ? '85%/14.5%/0.5% 低缓存负载' : '97%/2.5%/0.5% 标准负载';
+      const mixEn = workloadMix === 'lowCache' ? '85%/14.5%/0.5% low-cache mix' : workloadMix === 'gemini' ? '90%/9.5%/0.5% Gemini workload mix' : '97%/2.5%/0.5% standard mix';
+      const mixZh = workloadMix === 'lowCache' ? '85%/14.5%/0.5% 低缓存负载' : workloadMix === 'gemini' ? '90%/9.5%/0.5% Gemini 负载' : '97%/2.5%/0.5% 标准负载';
       if (c.anchorMode === 'worth-ratio') {
         const ar = c.anchorRates;
         if (!ar || !nonNeg(ar.cache) || !nonNeg(ar.input) || !nonNeg(ar.output) || Object.keys(ar).some(k=>!['cache','input','output'].includes(k))) fail(`anchor rates need review: ${e.id}`);
@@ -95,27 +97,29 @@ export function mergeSubscriptionEstimates(data, manifest) {
         const monthlyMt = tokens / 1e6;
         worth = monthlyMt * blend;
         price = e.monthlyUsd / monthlyMt;
-        const carryMixEn = workloadMix === 'lowCache' ? '85% cache reads, 14.5% fresh input, 0.5% output' : `97% cache reads, 2.5% ${usesWrite ? '30m cache writes' : 'fresh input'}, 0.5% output`;
-        const carryMixZh = workloadMix === 'lowCache' ? '85% 缓存读、14.5% 新输入、0.5% 输出' : `97% 缓存读、2.5% ${usesWrite ? '30 分钟缓存写' : '新输入'}、0.5% 输出`;
+        const carryMixEn = workloadMix === 'lowCache' ? '85% cache reads, 14.5% fresh input, 0.5% output' : workloadMix === 'gemini' ? '90% cache reads, 9.5% fresh input, 0.5% output' : `97% cache reads, 2.5% ${usesWrite ? '30m cache writes' : 'fresh input'}, 0.5% output`;
+        const carryMixZh = workloadMix === 'lowCache' ? '85% 缓存读、14.5% 新输入、0.5% 输出' : workloadMix === 'gemini' ? '90% 缓存读、9.5% 新输入、0.5% 输出' : `97% 缓存读、2.5% ${usesWrite ? '30 分钟缓存写' : '新输入'}、0.5% 输出`;
         en = `Conservative token-carry quota estimate (not directly measured for this model or guaranteed). Carries over ${c.anchorPointId} (${(anchor.monthly_tokens/1e8).toFixed(2)}×10⁸ tokens/mo × plan ratio ${c.planRatio}) without assuming any extra allowance from API price cuts. Reference mix: ${carryMixEn} ($${blend.toFixed(5)}/MTok). ${e.note.en}`;
         zh = `保守沿用 token 量估算额度（非本模型直接实测，亦非官方保证）。沿用同系列锚点 ${c.anchorPointId}（月 ${(anchor.monthly_tokens/1e8).toFixed(2)} 亿 tokens × 套餐倍率 ${c.planRatio}），不额外计入降价红利。参考负载：${carryMixZh}（$${blend.toFixed(5)}/MTok）。${e.note.zh}`;
       }
-      workload = workloadMix === 'lowCache' ? 'lowCache' : (usesWrite ? 'cacheWrite' : 'standard');
+      workload = workloadMix === 'standard' ? (usesWrite ? 'cacheWrite' : 'standard') : workloadMix;
     } else if (c?.meter === 'direct-weekly') {
-      if (!positive(c.weeklyWorthUsd) || c.monthWeeks !== 4 || !['standard','lowCache'].includes(c.workloadMix)) fail(`invalid calibration: ${e.id}`);
+      if (!positive(c.weeklyWorthUsd) || c.monthWeeks !== 4 || !['standard','lowCache','gemini'].includes(c.workloadMix)) fail(`invalid calibration: ${e.id}`);
       if (Object.keys(c).some(k=>!['meter','weeklyWorthUsd','monthWeeks','workloadMix'].includes(k))) fail(`unreviewed calibration field: ${e.id}`);
       if (e.freshInputBilling !== undefined) fail(`invalid freshInputBilling: ${e.id}`);
       if (!rates || !nonNeg(rates.cache) || !nonNeg(rates.input) || !nonNeg(rates.output) || Object.keys(rates).some(k=>!['cache','input','output'].includes(k))) fail(`rates need review: ${e.id}`);
-      const std = data.conventions?.standardTokenMix, low = data.conventions?.lowCacheTokenMix;
-      if (c.workloadMix === 'lowCache' ? (low?.cache !== .85 || low.input !== .145 || low.output !== .005) : (std?.cache !== .97 || std.input !== .025 || std.output !== .005)) fail('normalization conventions changed');
-      const mixSpec = c.workloadMix === 'lowCache' ? low : std;
+      const std = data.conventions?.standardTokenMix, low = data.conventions?.lowCacheTokenMix, gem = data.conventions?.geminiTokenMix;
+      if (c.workloadMix === 'lowCache' ? (low?.cache !== .85 || low.input !== .145 || low.output !== .005)
+        : c.workloadMix === 'gemini' ? (gem?.cache !== .9 || gem.input !== .095 || gem.output !== .005)
+        : (std?.cache !== .97 || std.input !== .025 || std.output !== .005)) fail('normalization conventions changed');
+      const mixSpec = c.workloadMix === 'lowCache' ? low : c.workloadMix === 'gemini' ? gem : std;
       blend = mixSpec.cache * rates.cache + mixSpec.input * rates.input + mixSpec.output * rates.output;
       if (!positive(blend)) fail(`non-positive target blend: ${e.id}`);
       worth = c.weeklyWorthUsd * c.monthWeeks;
       const monthlyMt = worth / blend;
       tokens = monthlyMt * 1e6; price = e.monthlyUsd / monthlyMt; workload = c.workloadMix;
-      const mixEn = c.workloadMix === 'lowCache' ? '85%/14.5%/0.5% low-cache mix' : '97%/2.5%/0.5% standard mix';
-      const mixZh = c.workloadMix === 'lowCache' ? '85%/14.5%/0.5% 低缓存负载' : '97%/2.5%/0.5% 标准负载';
+      const mixEn = c.workloadMix === 'lowCache' ? '85%/14.5%/0.5% low-cache mix' : c.workloadMix === 'gemini' ? '90%/9.5%/0.5% Gemini workload mix' : '97%/2.5%/0.5% standard mix';
+      const mixZh = c.workloadMix === 'lowCache' ? '85%/14.5%/0.5% 低缓存负载' : c.workloadMix === 'gemini' ? '90%/9.5%/0.5% Gemini 负载' : '97%/2.5%/0.5% 标准负载';
       en = `Sample-based weekly quota estimate, not an official or guaranteed allowance. Monthly normalized tokens = weekly API worth $${c.weeklyWorthUsd} × ${c.monthWeeks} weeks / $${blend.toFixed(5)}/MTok × 1,000,000 under the ${mixEn}. ${e.note.en}`;
       zh = `基于周度实测样本的推算额度，不是官方或保证额度。月标准 token = 周 API 等价 $${c.weeklyWorthUsd} × ${c.monthWeeks} 周 ÷ $${blend.toFixed(5)}/MTok × 1,000,000（${mixZh}）。${e.note.zh}`;
     } else {

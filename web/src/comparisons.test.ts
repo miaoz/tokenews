@@ -97,10 +97,23 @@ test("Curated comparisons include latest GPT-6.2, Gemini 4, Kimi, Qwen4, Hy4 and
     ["gpt-6.2-astra", "gemini-4-neon"],
     ["gpt-6.2-astra", "gpt-6.2-sol"],
     ["gemini-4-carbon", "gemini-4-neon"],
+    ["gemini-4-neon", "gemini-4-hydrogen"],
     ["kimi-k3.1-pro", "qwen4-max"],
     ["qwen4-max", "hy4"],
     ["inkling-2-mini", "deepseek-v4.1-flash-1017"],
   ]) {
     assert.ok(keys.has([a, b].sort().join(" ")), `missing comparison ${a} vs ${b}`);
   }
+});
+
+test("Equivalent upstream and reviewed estimate plan IDs pair on matching fee, channel and workload", () => {
+  const aa = [point({ id: "google_ai_pro_us::a", plan_id: "google_ai_pro_us", channel: "Google", price_usd: 19.99, workload: "gemini", real_usd_per_mtok: 0.0289 })];
+  const bb = [point({ id: "estimate:google-ai-pro:b", plan_id: "google_ai_pro_estimate", channel: "Google", model: "b", price_usd: 19.99, workload: "gemini", real_usd_per_mtok: 0.01445, quota_is_estimated: true })];
+  const [c] = buildComparisons(models(aa, bb), pair);
+  assert.equal(c.plans.length, 1);
+  assert.equal(c.comparablePlans.length, 1);
+  assert.equal(c.plans[0].win.side, "b");
+  assert.ok(Math.abs(c.plans[0].win.ratio! - 2) < 1e-12);
+  const badFee = [point({ id: "estimate:google-ai-pro:b", plan_id: "google_ai_pro_estimate", channel: "Google", model: "b", price_usd: 20, workload: "gemini" })];
+  assert.throws(() => buildComparisons(models(aa, badFee), pair), /inconsistent provider or monthly fees/);
 });

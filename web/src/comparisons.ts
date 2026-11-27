@@ -59,7 +59,7 @@ export type PriceComparison = {
   ratio: number | null;
   reason: "comparable" | "unmetered" | "workload" | "raw" | "invalid";
 };
-const NORMALIZED_WORKLOADS = new Set(["standard", "anthropic", "lowCache", "cacheWrite"]);
+const NORMALIZED_WORKLOADS = new Set(["standard", "anthropic", "lowCache", "gemini", "cacheWrite"]);
 
 /** Compare recorded token costs only when both use the same known workload.
  * Two `measured` records may describe different token mixes, even on one plan.
@@ -85,6 +85,18 @@ interface ComparisonModel {
   benchmarks: { board: string; best: Configuration }[];
 }
 
+const COMPARABLE_PLAN_ALIASES: Record<string, string> = {
+  google_ai_pro_estimate: "google_ai_pro_us",
+  google_ai_ultra_5x_estimate: "google_ai_ultra_5x_us",
+  google_ai_ultra_20x_estimate: "google_ai_ultra_20x_us",
+  chatgpt_plus_estimate: "chatgpt_plus",
+  chatgpt_pro_10x_estimate: "chatgpt_pro_10x",
+  chatgpt_pro_20x_estimate: "chatgpt_pro_20x",
+  claude_max_estimate: "claude_max_5x",
+  claude_ultra_estimate: "claude_max_20x",
+};
+const sharedPlanKey = (p: Point) => COMPARABLE_PLAN_ALIASES[p.plan_id] ?? p.plan_id;
+
 /** Works with the static generator's model aggregates without copying data or
  * mixing leaderboard versions. Throws before publication if a pair gets thin.
  */
@@ -105,17 +117,17 @@ export function buildComparisons<T extends ComparisonModel>(
     const aa = subscriptions(a);
     const bb = subscriptions(b);
     const cheapest = (ps: Point[]) => ps.slice().sort((x, y) => x.real_usd_per_mtok - y.real_usd_per_mtok || x.id.localeCompare(y.id))[0];
-    const plans = [...new Set(aa.map((p) => p.plan_id))]
-      .filter((id) => bb.some((p) => p.plan_id === id))
+    const plans = [...new Set(aa.map(sharedPlanKey))]
+      .filter((id) => bb.some((p) => sharedPlanKey(p) === id))
       .map((id) => {
-        const pa = cheapest(aa.filter((p) => p.plan_id === id));
-        const pb = cheapest(bb.filter((p) => p.plan_id === id));
+        const pa = cheapest(aa.filter((p) => sharedPlanKey(p) === id));
+        const pb = cheapest(bb.filter((p) => sharedPlanKey(p) === id));
         if (pa.channel !== pb.channel || pa.price_usd == null || pb.price_usd == null ||
           !Number.isFinite(pa.price_usd) || pa.price_usd < 0 || pa.price_usd !== pb.price_usd)
           throw new Error(`Shared plan ${id} has inconsistent provider or monthly fees`);
         return { a: pa, b: pb, win: compareTokenCosts(pa, pb) };
       })
-      .sort((x, y) => x.a.price_usd! - y.a.price_usd! || x.a.plan_id.localeCompare(y.a.plan_id));
+      .sort((x, y) => x.a.price_usd! - y.a.price_usd! || sharedPlanKey(x.a).localeCompare(sharedPlanKey(y.a)));
     const boards = a.benchmarks.flatMap((x) => {
       const y = b.benchmarks.find((z) => z.board === x.board);
       if (!y) return [];

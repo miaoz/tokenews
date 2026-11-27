@@ -1,0 +1,484 @@
+{
+  "schemaVersion": 1,
+  "provider": "SpaceXAI",
+  "unit": "per_million_tokens",
+  "models": [
+    {
+      "id": "grok-4.7",
+      "source": "https://docs.x.ai/developers/pricing",
+      "additionalSources": [
+        "https://docs.x.ai/developers/models/grok-4.7",
+        "https://docs.x.ai/developers/advanced-api-usage/regions"
+      ],
+      "checkedAt": "2026-11-26",
+      "defaultVariant": "standard-short",
+      "variants": [
+        {
+          "id": "standard-short",
+          "label": {
+            "en": "xAI API · global · standard · <200K input",
+            "zh": "xAI API · 全球 · 标准档 · <200K 输入"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": 199999
+          },
+          "rates": {
+            "input": 2,
+            "cachedInput": 0.5,
+            "output": 6
+          }
+        },
+        {
+          "id": "standard-long",
+          "label": {
+            "en": "xAI API · global · standard · ≥200K input",
+            "zh": "xAI API · 全球 · 标准档 · ≥200K 输入"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": {
+            "min": 200000,
+            "max": 500000
+          },
+          "rates": {
+            "input": 4,
+            "cachedInput": 1,
+            "output": 12
+          },
+          "notes": {
+            "en": "Prompts ≥200K tokens are billed at the long-context rate for all tokens in the request.",
+            "zh": "单次请求输入 ≥200K tokens 时，整次请求均按长上下文费率计费。"
+          }
+        },
+        {
+          "id": "batch-short",
+          "label": {
+            "en": "xAI API · global · batch · <200K input",
+            "zh": "xAI API · 全球 · 批处理 · <200K 输入"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "batch",
+          "context": {
+            "min": 0,
+            "max": 199999
+          },
+          "rates": {
+            "input": 1.6,
+            "cachedInput": 0.4,
+            "output": 4.8
+          }
+        },
+        {
+          "id": "batch-long",
+          "label": {
+            "en": "xAI API · global · batch · ≥200K input",
+            "zh": "xAI API · 全球 · 批处理 · ≥200K 输入"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "batch",
+          "context": {
+            "min": 200000,
+            "max": 500000
+          },
+          "rates": {
+            "input": 3.2,
+            "cachedInput": 0.8,
+            "output": 9.6
+          }
+        },
+        {
+          "id": "priority-short",
+          "label": {
+            "en": "xAI API · global · priority · <200K input",
+            "zh": "xAI API · 全球 · 优先档 · <200K 输入"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "priority",
+          "context": {
+            "min": 0,
+            "max": 199999
+          },
+          "rates": {
+            "input": 4,
+            "cachedInput": 1,
+            "output": 12
+          }
+        },
+        {
+          "id": "priority-long",
+          "label": {
+            "en": "xAI API · global · priority · ≥200K input",
+            "zh": "xAI API · 全球 · 优先档 · ≥200K 输入"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "priority",
+          "context": {
+            "min": 200000,
+            "max": 500000
+          },
+          "rates": {
+            "input": 8,
+            "cachedInput": 2,
+            "output": 24
+          }
+        },
+        {
+          "id": "us-standard-short",
+          "label": {
+            "en": "xAI API · US regional · standard · <200K input",
+            "zh": "xAI API · 美国区域 · 标准档 · <200K 输入"
+          },
+          "currency": "USD",
+          "region": "US",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": 199999
+          },
+          "rates": {
+            "input": 2.2,
+            "cachedInput": 0.55,
+            "output": 6.6
+          }
+        },
+        {
+          "id": "us-standard-long",
+          "label": {
+            "en": "xAI API · US regional · standard · ≥200K input",
+            "zh": "xAI API · 美国区域 · 标准档 · ≥200K 输入"
+          },
+          "currency": "USD",
+          "region": "US",
+          "serviceTier": "standard",
+          "context": {
+            "min": 200000,
+            "max": 500000
+          },
+          "rates": {
+            "input": 4.4,
+            "cachedInput": 1.1,
+            "output": 13.2
+          }
+        }
+      ],
+      "notes": {
+        "en": "Released September 21, 2026 (API ID: grok-4.7; 500K context window). Prompts ≥200K trigger 2× long-context rates for the full request; Batch gives 20% off; Priority processing is 2×; US regional endpoint adds 10%. Prompt caching documents automatic prefix cache hits with no separate cache-write fee. Server-side tool invocations cost extra. Grok 4.7 Fast is Cursor/Grok Build plan-only.",
+        "zh": "2026 年 9 月 21 日发布（API ID：grok-4.7，500K 上下文窗口）。输入 ≥200K 全单按 2 倍长上下文计费；批处理减 20%；优先档 2 倍；美国区域端点加收 10%。提示词缓存文档仅列缓存命中单价、未另收缓存写入费；服务端工具调用另计。Grok 4.7 Fast 仅限 Cursor 与 Grok Build 订阅计划。"
+      }
+    },
+    {
+      "id": "grok-4.6",
+      "source": "https://docs.x.ai/developers/pricing",
+      "additionalSources": [
+        "https://docs.x.ai/developers/advanced-api-usage/regions"
+      ],
+      "checkedAt": "2026-11-26",
+      "defaultVariant": "standard-short",
+      "variants": [
+        {
+          "id": "standard-short",
+          "label": {
+            "en": "xAI API · global · standard · <200K input",
+            "zh": "xAI API · 全球 · 标准档 · <200K 输入"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": 199999
+          },
+          "rates": {
+            "input": 2,
+            "cachedInput": 0.5,
+            "output": 6
+          }
+        },
+        {
+          "id": "standard-long",
+          "label": {
+            "en": "xAI API · global · standard · ≥200K input",
+            "zh": "xAI API · 全球 · 标准档 · ≥200K 输入"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": {
+            "min": 200000,
+            "max": 500000
+          },
+          "rates": {
+            "input": 4,
+            "cachedInput": 1,
+            "output": 12
+          }
+        },
+        {
+          "id": "batch-short",
+          "label": {
+            "en": "xAI API · global · batch · <200K input",
+            "zh": "xAI API · 全球 · 批处理 · <200K 输入"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "batch",
+          "context": {
+            "min": 0,
+            "max": 199999
+          },
+          "rates": {
+            "input": 1.6,
+            "cachedInput": 0.4,
+            "output": 4.8
+          }
+        },
+        {
+          "id": "batch-long",
+          "label": {
+            "en": "xAI API · global · batch · ≥200K input",
+            "zh": "xAI API · 全球 · 批处理 · ≥200K 输入"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "batch",
+          "context": {
+            "min": 200000,
+            "max": 500000
+          },
+          "rates": {
+            "input": 3.2,
+            "cachedInput": 0.8,
+            "output": 9.6
+          }
+        },
+        {
+          "id": "priority-short",
+          "label": {
+            "en": "xAI API · global · priority · <200K input",
+            "zh": "xAI API · 全球 · 优先档 · <200K 输入"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "priority",
+          "context": {
+            "min": 0,
+            "max": 199999
+          },
+          "rates": {
+            "input": 4,
+            "cachedInput": 1,
+            "output": 12
+          }
+        },
+        {
+          "id": "us-standard-short",
+          "label": {
+            "en": "xAI API · US regional · standard · <200K input",
+            "zh": "xAI API · 美国区域 · 标准档 · <200K 输入"
+          },
+          "currency": "USD",
+          "region": "US",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": 199999
+          },
+          "rates": {
+            "input": 2.2,
+            "cachedInput": 0.55,
+            "output": 6.6
+          }
+        }
+      ],
+      "notes": {
+        "en": "Released August 12, 2026 (API ID: grok-4.6; 500K context window). Prompts ≥200K trigger 2× long-context rates; Batch gives 20% off; Priority processing is 2×; US regional endpoint adds 10%. No separate cache-write fee published; server-side tools cost extra.",
+        "zh": "2026 年 8 月 12 日发布（API ID：grok-4.6，500K 上下文窗口）。输入 ≥200K 按 2 倍长上下文计费；批处理减 20%；优先档 2 倍；美国区域端点加收 10%。未另收缓存写入费；服务端工具调用另计。"
+      }
+    },
+    {
+      "id": "grok-4.5",
+      "source": "https://docs.x.ai/developers/pricing",
+      "checkedAt": "2026-11-26",
+      "defaultVariant": "standard-short",
+      "variants": [
+        {
+          "id": "standard-short",
+          "label": {
+            "en": "xAI API · global · standard · <200K input",
+            "zh": "xAI API · 全球 · 标准档 · <200K 输入"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": 199999
+          },
+          "rates": {
+            "input": 2,
+            "cachedInput": 0.3,
+            "output": 6
+          }
+        },
+        {
+          "id": "standard-long",
+          "label": {
+            "en": "xAI API · global · standard · ≥200K input",
+            "zh": "xAI API · 全球 · 标准档 · ≥200K 输入"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": {
+            "min": 200000,
+            "max": 500000
+          },
+          "rates": {
+            "input": 4,
+            "cachedInput": 0.6,
+            "output": 12
+          }
+        },
+        {
+          "id": "batch-short",
+          "label": {
+            "en": "xAI API · global · batch · <200K input",
+            "zh": "xAI API · 全球 · 批处理 · <200K 输入"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "batch",
+          "context": {
+            "min": 0,
+            "max": 199999
+          },
+          "rates": {
+            "input": 1.6,
+            "cachedInput": 0.24,
+            "output": 4.8
+          }
+        },
+        {
+          "id": "priority-short",
+          "label": {
+            "en": "xAI API · global · priority · <200K input",
+            "zh": "xAI API · 全球 · 优先档 · <200K 输入"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "priority",
+          "context": {
+            "min": 0,
+            "max": 199999
+          },
+          "rates": {
+            "input": 4,
+            "cachedInput": 0.6,
+            "output": 12
+          }
+        }
+      ],
+      "notes": {
+        "en": "Released July 16, 2026 (API ID: grok-4.5; 500K context window). Prompts ≥200K trigger 2× long-context rates; Batch gives 20% off; Priority processing is 2×. No separate cache-write fee published; server-side tools cost extra.",
+        "zh": "2026 年 7 月 16 日发布（API ID：grok-4.5，500K 上下文窗口）。输入 ≥200K 按 2 倍长上下文计费；批处理减 20%；优先档 2 倍。未另收缓存写入费；服务端工具调用另计。"
+      }
+    },
+    {
+      "id": "grok-4.3",
+      "source": "https://docs.x.ai/developers/pricing",
+      "checkedAt": "2026-11-26",
+      "defaultVariant": "standard-short",
+      "variants": [
+        {
+          "id": "standard-short",
+          "label": {
+            "en": "xAI API · global · standard · <200K input",
+            "zh": "xAI API · 全球 · 标准档 · <200K 输入"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": 199999
+          },
+          "rates": {
+            "input": 1.25,
+            "cachedInput": 0.2,
+            "output": 2.5
+          }
+        },
+        {
+          "id": "standard-long",
+          "label": {
+            "en": "xAI API · global · standard · ≥200K input",
+            "zh": "xAI API · 全球 · 标准档 · ≥200K 输入"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": {
+            "min": 200000,
+            "max": 1000000
+          },
+          "rates": {
+            "input": 2.5,
+            "cachedInput": 0.4,
+            "output": 5
+          }
+        },
+        {
+          "id": "batch-short",
+          "label": {
+            "en": "xAI API · global · batch · <200K input",
+            "zh": "xAI API · 全球 · 批处理 · <200K 输入"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "batch",
+          "context": {
+            "min": 0,
+            "max": 199999
+          },
+          "rates": {
+            "input": 1,
+            "cachedInput": 0.16,
+            "output": 2
+          }
+        },
+        {
+          "id": "priority-short",
+          "label": {
+            "en": "xAI API · global · priority · <200K input",
+            "zh": "xAI API · 全球 · 优先档 · <200K 输入"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "priority",
+          "context": {
+            "min": 0,
+            "max": 199999
+          },
+          "rates": {
+            "input": 2.5,
+            "cachedInput": 0.4,
+            "output": 5
+          }
+        }
+      ],
+      "notes": {
+        "en": "API ID: grok-4.3 (1M context window). Also serves retired May 15, 2026 fast slugs (grok-4-fast, grok-4.1-fast, grok-code-fast-1) via automatic redirect. Prompts ≥200K trigger 2× long-context rates; Batch gives 20% off; Priority processing is 2×.",
+        "zh": "API ID：grok-4.3（1M 上下文窗口）。2026 年 5 月 15 日退役的早期 fast 系列端点已自动重定向至本模型。输入 ≥200K 按 2 倍长上下文计费；批处理减 20%；优先档 2 倍。"
+      }
+    }
+  ]
+}

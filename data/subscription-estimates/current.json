@@ -1,10 +1,11 @@
 {
   "version": 1,
-  "checkedAt": "2026-11-22",
+  "checkedAt": "2026-11-26",
   "evidenceFiles": [
     "evidence-2026-11-13.json",
     "evidence-2026-11-18.json",
-    "evidence-2026-11-22.json"
+    "evidence-2026-11-22.json",
+    "evidence-2026-11-26.json"
   ],
   "archivedPointIds": [
     {
@@ -148,7 +149,7 @@
         "anchorMode": "worth-ratio",
         "anchorPointId": "google_ai_pro_us::gemini-4-neon",
         "planRatio": 1,
-        "workloadMix": "lowCache",
+        "workloadMix": "gemini",
         "anchorRates": {
           "cache": 0.15,
           "input": 3,
@@ -179,8 +180,8 @@
         }
       ],
       "note": {
-        "en": "Available on paid Google AI Pro (non-trial) in Antigravity. Re-anchored to the directly measured Google AI Pro Gemini 4 Neon weekly sample (536M low-cache tokens/mo, $341.70/mo worth) scaled by API worth under the 85/14.5/0.5 low-cache mix; not directly measured on Hydrogen.",
-        "zh": "Antigravity 中面向付费 Google AI Pro（非试用）开放。已改锚为 Google AI Pro Gemini 4 Neon 实测周样本（低缓存 5.36 亿/月、月价值 $341.70），按 85/14.5/0.5 低缓存负载与官方 API 单价等比折算；尚未独立实测 Hydrogen。"
+        "en": "Available on paid Google AI Pro (non-trial) in Antigravity. Anchored to the directly measured Google AI Pro Gemini 4 Neon weekly sample (691M Gemini-mix tokens/mo, $342.05/mo worth under 90/9.5/0.5 mix) scaled by API worth under the 90/9.5/0.5 Gemini workload mix; not directly measured on Hydrogen.",
+        "zh": "Antigravity 中面向付费 Google AI Pro（非试用）开放。以实测 Google AI Pro Gemini 4 Neon 周样本（90/9.5/0.5 Gemini 负载下月 6.91 亿 tokens、月价值 $342.05）为锚，按 90/9.5/0.5 Gemini 负载与官方 API 单价等比折算；尚未独立实测 Hydrogen。"
       }
     },
     {
@@ -194,14 +195,14 @@
       "model": "gemini-4-hydrogen",
       "monthlyUsd": 99.99,
       "confidence": "low",
-      "sampleDate": "2026-11-20",
-      "sampleFrom": "Google AI Pro · gemini-4-neon",
+      "sampleDate": "2026-11-25",
+      "sampleFrom": "Google AI Ultra 5x · gemini-4-neon",
       "calibration": {
         "meter": "anchor-pool",
         "anchorMode": "worth-ratio",
-        "anchorPointId": "google_ai_pro_us::gemini-4-neon",
-        "planRatio": 5,
-        "workloadMix": "lowCache",
+        "anchorPointId": "google_ai_ultra_5x_us::gemini-4-neon",
+        "planRatio": 1,
+        "workloadMix": "gemini",
         "anchorRates": {
           "cache": 0.15,
           "input": 3,
@@ -215,8 +216,8 @@
       },
       "sources": [
         {
-          "label": "Upstream Issue #248: Google AI Pro Gemini 4 Neon 37pp week sample",
-          "url": "https://github.com/Fei2411/real-api-pricing/issues/248"
+          "label": "Upstream geminiTokenMix adoption (google_ai_ultra_5x_us::gemini-4-neon)",
+          "url": "https://github.com/Fei2411/real-api-pricing/blob/cce3f28a1e02/data/research/gemini-token-mix-round1-2026-11-24.json"
         },
         {
           "label": "Google Antigravity model availability by plan",
@@ -232,8 +233,8 @@
         }
       ],
       "note": {
-        "en": "Extrapolated from the measured Google AI Pro Gemini 4 Neon weekly sample using Google's official 5x Pro multiplier for Ultra $99.99 and Hydrogen's low-cache API blend. Not directly measured on Ultra.",
-        "zh": "基于实测 Google AI Pro Gemini 4 Neon 周样本，按 Google 官方 Ultra $99.99 为 Pro 5 倍配额及 Hydrogen 低缓存负载单价折算；未经 Ultra 独立实测。"
+        "en": "Directly anchored to the upstream-adopted Google AI Ultra 5x Gemini 4 Neon measurement (4,306M Gemini-mix tokens/mo) without cross-plan 5x scaling, converted by API worth under the 90/9.5/0.5 Gemini workload mix; not directly measured on Hydrogen.",
+        "zh": "直接以并入上游的 Google AI Ultra 5x Gemini 4 Neon 实测（月 43.06 亿 Gemini 负载 tokens）为锚，按 90/9.5/0.5 Gemini 负载与官方 API 单价等比折算（不再跨套餐 5 倍外推）；未经 Hydrogen 独立实测。"
       }
     },
     {
@@ -247,14 +248,14 @@
       "model": "gemini-4-hydrogen",
       "monthlyUsd": 199.99,
       "confidence": "low",
-      "sampleDate": "2026-11-20",
-      "sampleFrom": "Google AI Pro · gemini-4-neon",
+      "sampleDate": "2026-11-25",
+      "sampleFrom": "Google AI Ultra 20x · gemini-4-neon",
       "calibration": {
         "meter": "anchor-pool",
         "anchorMode": "worth-ratio",
-        "anchorPointId": "google_ai_pro_us::gemini-4-neon",
-        "planRatio": 20,
-        "workloadMix": "lowCache",
+        "anchorPointId": "google_ai_ultra_20x_us::gemini-4-neon",
+        "planRatio": 1,
+        "workloadMix": "gemini",
         "anchorRates": {
           "cache": 0.15,
           "input": 3,
@@ -268,8 +269,8 @@
       },
       "sources": [
         {
-          "label": "Upstream Issue #248: Google AI Pro Gemini 4 Neon 37pp week sample",
-          "url": "https://github.com/Fei2411/real-api-pricing/issues/248"
+          "label": "Upstream geminiTokenMix adoption (google_ai_ultra_20x_us::gemini-4-neon)",
+          "url": "https://github.com/Fei2411/real-api-pricing/blob/cce3f28a1e02/data/research/gemini-token-mix-round1-2026-11-24.json"
         },
         {
           "label": "Google Antigravity model availability by plan",
@@ -285,104 +286,8 @@
         }
       ],
       "note": {
-        "en": "Extrapolated from the measured Google AI Pro Gemini 4 Neon weekly sample using Google's official 20x Pro multiplier for Ultra $199.99 and Hydrogen's low-cache API blend. Not directly measured on Ultra.",
-        "zh": "基于实测 Google AI Pro Gemini 4 Neon 周样本，按 Google 官方 Ultra $199.99 为 Pro 20 倍配额及 Hydrogen 低缓存负载单价折算；未经 Ultra 独立实测。"
-      }
-    },
-    {
-      "id": "estimate:google-ai-ultra-5x:gemini-4-neon",
-      "planId": "google_ai_ultra_5x_estimate",
-      "upstreamPlanIds": [
-        "google_ai_ultra_5x_us",
-        "google_ai_ultra_5x"
-      ],
-      "name": "Google AI Ultra 5x",
-      "model": "gemini-4-neon",
-      "monthlyUsd": 99.99,
-      "confidence": "low",
-      "sampleDate": "2026-11-20",
-      "sampleFrom": "Google AI Pro · gemini-4-neon",
-      "calibration": {
-        "meter": "anchor-pool",
-        "anchorMode": "same-token-carry",
-        "anchorPointId": "google_ai_pro_us::gemini-4-neon",
-        "planRatio": 5,
-        "workloadMix": "lowCache"
-      },
-      "rates": {
-        "cache": 0.15,
-        "input": 3,
-        "output": 15
-      },
-      "sources": [
-        {
-          "label": "Upstream Issue #248: Google AI Pro Gemini 4 Neon 37pp week sample",
-          "url": "https://github.com/Fei2411/real-api-pricing/issues/248"
-        },
-        {
-          "label": "Google Antigravity model availability by plan",
-          "url": "https://antigravity.google/docs/models"
-        },
-        {
-          "label": "Google Antigravity plan quota rules",
-          "url": "https://antigravity.google/docs/plans"
-        },
-        {
-          "label": "Gemini Developer API pricing (Neon)",
-          "url": "https://aistudio.google.com/docs/pricing#gemini-4-neon"
-        }
-      ],
-      "note": {
-        "en": "Extrapolated by carrying 5x the directly measured Google AI Pro Gemini 4 Neon low-cache monthly token allowance for Ultra $99.99. Not directly measured on Ultra.",
-        "zh": "按 Google 官方 Ultra $99.99 为 Pro 5 倍配额，直接放大实测 Google AI Pro Gemini 4 Neon 低缓存月额度；未经 Ultra 独立实测。"
-      }
-    },
-    {
-      "id": "estimate:google-ai-ultra-20x:gemini-4-neon",
-      "planId": "google_ai_ultra_20x_estimate",
-      "upstreamPlanIds": [
-        "google_ai_ultra_20x_us",
-        "google_ai_ultra_20x"
-      ],
-      "name": "Google AI Ultra 20x",
-      "model": "gemini-4-neon",
-      "monthlyUsd": 199.99,
-      "confidence": "low",
-      "sampleDate": "2026-11-20",
-      "sampleFrom": "Google AI Pro · gemini-4-neon",
-      "calibration": {
-        "meter": "anchor-pool",
-        "anchorMode": "same-token-carry",
-        "anchorPointId": "google_ai_pro_us::gemini-4-neon",
-        "planRatio": 20,
-        "workloadMix": "lowCache"
-      },
-      "rates": {
-        "cache": 0.15,
-        "input": 3,
-        "output": 15
-      },
-      "sources": [
-        {
-          "label": "Upstream Issue #248: Google AI Pro Gemini 4 Neon 37pp week sample",
-          "url": "https://github.com/Fei2411/real-api-pricing/issues/248"
-        },
-        {
-          "label": "Google Antigravity model availability by plan",
-          "url": "https://antigravity.google/docs/models"
-        },
-        {
-          "label": "Google Antigravity plan quota rules",
-          "url": "https://antigravity.google/docs/plans"
-        },
-        {
-          "label": "Gemini Developer API pricing (Neon)",
-          "url": "https://aistudio.google.com/docs/pricing#gemini-4-neon"
-        }
-      ],
-      "note": {
-        "en": "Extrapolated by carrying 20x the directly measured Google AI Pro Gemini 4 Neon low-cache monthly token allowance for Ultra $199.99. Not directly measured on Ultra.",
-        "zh": "按 Google 官方 Ultra $199.99 为 Pro 20 倍配额，直接放大实测 Google AI Pro Gemini 4 Neon 低缓存月额度；未经 Ultra 独立实测。"
+        "en": "Directly anchored to the upstream-adopted Google AI Ultra 20x Gemini 4 Neon measurement (14,155M Gemini-mix tokens/mo) without cross-plan 20x scaling, converted by API worth under the 90/9.5/0.5 Gemini workload mix; not directly measured on Hydrogen.",
+        "zh": "直接以并入上游的 Google AI Ultra 20x Gemini 4 Neon 实测（月 141.55 亿 Gemini 负载 tokens）为锚，按 90/9.5/0.5 Gemini 负载与官方 API 单价等比折算（不再跨套餐 20 倍外推）；未经 Hydrogen 独立实测。"
       }
     },
     {
@@ -396,14 +301,14 @@
       "model": "gemini-4-carbon",
       "monthlyUsd": 99.99,
       "confidence": "low",
-      "sampleDate": "2026-11-20",
-      "sampleFrom": "Google AI Pro · gemini-4-neon",
+      "sampleDate": "2026-11-25",
+      "sampleFrom": "Google AI Ultra 5x · gemini-4-neon",
       "calibration": {
         "meter": "anchor-pool",
         "anchorMode": "worth-ratio",
-        "anchorPointId": "google_ai_pro_us::gemini-4-neon",
-        "planRatio": 5,
-        "workloadMix": "lowCache",
+        "anchorPointId": "google_ai_ultra_5x_us::gemini-4-neon",
+        "planRatio": 1,
+        "workloadMix": "gemini",
         "anchorRates": {
           "cache": 0.15,
           "input": 3,
@@ -417,8 +322,8 @@
       },
       "sources": [
         {
-          "label": "Upstream Issue #248: Google AI Pro Gemini 4 Neon 37pp week sample",
-          "url": "https://github.com/Fei2411/real-api-pricing/issues/248"
+          "label": "Upstream geminiTokenMix adoption (google_ai_ultra_5x_us::gemini-4-neon)",
+          "url": "https://github.com/Fei2411/real-api-pricing/blob/cce3f28a1e02/data/research/gemini-token-mix-round1-2026-11-24.json"
         },
         {
           "label": "Google Antigravity model availability by plan",
@@ -434,8 +339,8 @@
         }
       ],
       "note": {
-        "en": "Gemini 4 Carbon requires Google AI Ultra (excluded from Pro). Re-anchored to the measured Google AI Pro Gemini 4 Neon low-cache sample (5x Pro pool) and conservatively valued at Carbon's post-December 1 regular API rates ($4/$20/$0.20) rather than introductory pricing; not directly measured on Ultra.",
-        "zh": "Gemini 4 Carbon 仅限 Google AI Ultra（Pro 不可用）。已改锚为实测 Google AI Pro Gemini 4 Neon 低缓存周样本（按 Ultra 5x 等比放大），并保守采用 12 月 1 日后的常规 API 单价（$4/$20/$0.20）而非引入价折算；未经 Ultra 独立实测。"
+        "en": "Gemini 4 Carbon requires Google AI Ultra (excluded from Pro). Directly anchored to the upstream-adopted Google AI Ultra 5x Gemini 4 Neon measurement (4,306M Gemini-mix tokens/mo) without cross-plan scaling, and conservatively valued at Carbon's post-December 1 regular API rates ($4/$20/$0.20) under 90/9.5/0.5 mix rather than introductory pricing; not directly measured on Carbon Ultra 5x.",
+        "zh": "Gemini 4 Carbon 仅限 Google AI Ultra（Pro 不可用）。直接以并入上游的 Google AI Ultra 5x Gemini 4 Neon 实测（月 43.06 亿 Gemini 负载 tokens）为锚，按 90/9.5/0.5 Gemini 负载保守采用 12 月 1 日后的常规 API 单价（$4/$20/$0.20）而非引入价折算（不再跨套餐放大）；未经 Ultra 5x Carbon 独立实测。"
       }
     },
     {
@@ -449,14 +354,14 @@
       "model": "gemini-4-carbon",
       "monthlyUsd": 199.99,
       "confidence": "low",
-      "sampleDate": "2026-11-20",
-      "sampleFrom": "Google AI Pro · gemini-4-neon",
+      "sampleDate": "2026-11-25",
+      "sampleFrom": "Google AI Ultra 20x · gemini-4-neon",
       "calibration": {
         "meter": "anchor-pool",
         "anchorMode": "worth-ratio",
-        "anchorPointId": "google_ai_pro_us::gemini-4-neon",
-        "planRatio": 20,
-        "workloadMix": "lowCache",
+        "anchorPointId": "google_ai_ultra_20x_us::gemini-4-neon",
+        "planRatio": 1,
+        "workloadMix": "gemini",
         "anchorRates": {
           "cache": 0.15,
           "input": 3,
@@ -470,8 +375,8 @@
       },
       "sources": [
         {
-          "label": "Upstream Issue #248: Google AI Pro Gemini 4 Neon 37pp week sample",
-          "url": "https://github.com/Fei2411/real-api-pricing/issues/248"
+          "label": "Upstream geminiTokenMix adoption (google_ai_ultra_20x_us::gemini-4-neon)",
+          "url": "https://github.com/Fei2411/real-api-pricing/blob/cce3f28a1e02/data/research/gemini-token-mix-round1-2026-11-24.json"
         },
         {
           "label": "Google Antigravity model availability by plan",
@@ -487,52 +392,8 @@
         }
       ],
       "note": {
-        "en": "Gemini 4 Carbon requires Google AI Ultra (excluded from Pro). Re-anchored to the measured Google AI Pro Gemini 4 Neon low-cache sample (20x Pro pool) and conservatively valued at Carbon's post-December 1 regular API rates ($4/$20/$0.20) rather than introductory pricing; not directly measured on Ultra.",
-        "zh": "Gemini 4 Carbon 仅限 Google AI Ultra（Pro 不可用）。已改锚为实测 Google AI Pro Gemini 4 Neon 低缓存周样本（按 Ultra 20x 等比放大），并保守采用 12 月 1 日后的常规 API 单价（$4/$20/$0.20）而非引入价折算；未经 Ultra 独立实测。"
-      }
-    },
-    {
-      "id": "estimate:devin-max:gemini-4-carbon",
-      "planId": "devin_max_estimate",
-      "upstreamPlanIds": [
-        "devin_max"
-      ],
-      "name": "Devin Max",
-      "channel": "Devin",
-      "model": "gemini-4-carbon",
-      "monthlyUsd": 200,
-      "confidence": "medium",
-      "sampleDate": "2026-11-21",
-      "promoUntil": "2026-11-30",
-      "sampleFrom": "Devin Max · gemini-4-carbon (Issue #251)",
-      "calibration": {
-        "meter": "direct-weekly",
-        "weeklyWorthUsd": 200,
-        "monthWeeks": 4,
-        "workloadMix": "lowCache"
-      },
-      "rates": {
-        "cache": 0.1,
-        "input": 2,
-        "output": 10
-      },
-      "sources": [
-        {
-          "label": "Upstream Issue #251: Devin Max × Gemini 4 Carbon $200/week sample",
-          "url": "https://github.com/Fei2411/real-api-pricing/issues/251"
-        },
-        {
-          "label": "Upstream PR #252: Adopt Devin Max × Gemini 4 Carbon week sample",
-          "url": "https://github.com/Fei2411/real-api-pricing/pull/252"
-        },
-        {
-          "label": "Gemini Developer API pricing (Carbon intro through 2026-11-30)",
-          "url": "https://aistudio.google.com/docs/pricing#gemini-4-carbon"
-        }
-      ],
-      "note": {
-        "en": "Devin Max ($200/month; distinct from Devin Pro) maintainer week sample with weekly API equivalent set to $200 between two full-week Carbon High stretches (7% and 9%). Uses low-cache mix (85/14.5/0.5) at Carbon introductory API rates ($2/$10/$0.10, valid through November 30, 2026; regular $4/$20/$0.20 pricing from December 1 halves the token yield for the same dollar equivalent). Will be retired once upstream merges PR #252.",
-        "zh": "基于 Devin Max（$200/月，非 Devin Pro）维护者周样本：在两次整周 Carbon High 拉伸（7% 与 9%）之间将周 API 等价定为 $200，按 85/14.5/0.5 低缓存负载与 Carbon 引入期标价（$2/$10/$0.10，截至 2026-11-30；12 月 1 日起常规价翻倍至 $4/$20/$0.20 将使等美元折算 token 减半）计算；待上游合并 PR #252 后退役本条预估算。"
+        "en": "Gemini 4 Carbon requires Google AI Ultra (excluded from Pro). Directly anchored to the upstream-adopted Google AI Ultra 20x Gemini 4 Neon measurement (14,155M Gemini-mix tokens/mo) without cross-plan scaling, and conservatively valued at Carbon's post-December 1 regular API rates ($4/$20/$0.20) under 90/9.5/0.5 mix rather than introductory pricing; not directly measured on Carbon Ultra 20x.",
+        "zh": "Gemini 4 Carbon 仅限 Google AI Ultra（Pro 不可用）。直接以并入上游的 Google AI Ultra 20x Gemini 4 Neon 实测（月 141.55 亿 Gemini 负载 tokens）为锚，按 90/9.5/0.5 Gemini 负载保守采用 12 月 1 日后的常规 API 单价（$4/$20/$0.20）而非引入价折算（不再跨套餐放大）；未经 Ultra 20x Carbon 独立实测。"
       }
     },
     {

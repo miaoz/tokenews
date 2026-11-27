@@ -97,6 +97,74 @@
       }
     },
     {
+      "id": "glm-5.3",
+      "source": "https://docs.z.ai/guides/overview/pricing",
+      "additionalSources": [
+        "https://docs.z.ai/guides/llm/glm-5.3"
+      ],
+      "checkedAt": "2026-11-26",
+      "defaultVariant": "standard",
+      "variants": [
+        {
+          "id": "standard",
+          "label": {
+            "en": "Z.AI API · standard",
+            "zh": "Z.AI API · 标准档"
+          },
+          "currency": "USD",
+          "region": "Z.AI international API",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 1.4,
+            "cachedInput": 0.26,
+            "output": 4.4
+          }
+        }
+      ],
+      "notes": {
+        "en": "Released August 18, 2026. USD rates for the Z.AI API. Cache storage is temporarily free; the price table does not publish a separate cache-write token rate. Web search is billed separately ($0.01/use).",
+        "zh": "2026 年 8 月 18 日发布。Z.AI API 美元价。缓存存储限时免费；价表未列出独立的缓存写入 token 价，保留未知。联网搜索另计（$0.01/次）。"
+      }
+    },
+    {
+      "id": "glm-5.3-flash",
+      "source": "https://docs.z.ai/guides/overview/pricing",
+      "additionalSources": [
+        "https://docs.z.ai/guides/vlm/glm-5.3-flash"
+      ],
+      "checkedAt": "2026-11-26",
+      "defaultVariant": "standard",
+      "variants": [
+        {
+          "id": "standard",
+          "label": {
+            "en": "Z.AI API · standard",
+            "zh": "Z.AI API · 标准档"
+          },
+          "currency": "USD",
+          "region": "Z.AI international API",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": null
+          },
+          "rates": {
+            "input": 0.15,
+            "cachedInput": 0.03,
+            "output": 0.5
+          }
+        }
+      ],
+      "notes": {
+        "en": "Released August 26, 2026. USD rates for the Z.AI API. Cache storage is temporarily free; the price table does not publish a separate cache-write token rate. Web search is billed separately ($0.01/use).",
+        "zh": "2026 年 8 月 26 日发布。Z.AI API 美元价。缓存存储限时免费；价表未列出独立的缓存写入 token 价，保留未知。联网搜索另计（$0.01/次）。"
+      }
+    },
+    {
       "id": "glm-5.3-flashx",
       "source": "https://docs.z.ai/guides/overview/pricing",
       "checkedAt": "2026-10-19",

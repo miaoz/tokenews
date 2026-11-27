@@ -1,0 +1,171 @@
+{
+  "schemaVersion": 1,
+  "provider": "StepFun",
+  "unit": "per_million_tokens",
+  "models": [
+    {
+      "id": "step-5-preview",
+      "source": "https://platform.stepfun.ai/docs/en/pricing/details",
+      "additionalSources": [
+        "https://platform.stepfun.com/docs/zh/pricing/details",
+        "https://platform.stepfun.ai/docs/en/guides/models/step-5-preview"
+      ],
+      "checkedAt": "2026-11-26",
+      "defaultVariant": "usd-standard",
+      "variants": [
+        {
+          "id": "usd-standard",
+          "label": {
+            "en": "StepFun International API · USD",
+            "zh": "阶跃星辰国际 API · 美元"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": 1000000
+          },
+          "rates": {
+            "input": 1,
+            "cachedInput": 0.1,
+            "cacheWrite": 1,
+            "output": 2.7
+          }
+        },
+        {
+          "id": "cny-standard",
+          "label": {
+            "en": "StepFun China API · CNY",
+            "zh": "阶跃星辰国内 API · 人民币"
+          },
+          "currency": "CNY",
+          "region": "CN",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": 1000000
+          },
+          "rates": {
+            "input": 7,
+            "cachedInput": 0.7,
+            "cacheWrite": 7,
+            "output": 20
+          }
+        }
+      ],
+      "notes": {
+        "en": "API ID: step-5-preview (1M context). Official docs state cache-miss input includes writing new content to cache (same rate as ordinary input, not an extra charge). Output tokens include reasoning tokens.",
+        "zh": "API 调用 ID：step-5-preview（1M 上下文）。官方文档注明缓存未命中输入价已包含将新内容写入缓存的费用（不重复收费）。输出 tokens 包含推理过程。"
+      }
+    },
+    {
+      "id": "step-3.7-flash",
+      "source": "https://platform.stepfun.ai/docs/en/pricing/details",
+      "additionalSources": [
+        "https://platform.stepfun.com/docs/zh/pricing/details",
+        "https://platform.stepfun.ai/docs/en/guides/models/step-3.7-flash"
+      ],
+      "checkedAt": "2026-11-26",
+      "defaultVariant": "usd-standard",
+      "variants": [
+        {
+          "id": "usd-standard",
+          "label": {
+            "en": "StepFun International API · USD",
+            "zh": "阶跃星辰国际 API · 美元"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": 262144
+          },
+          "rates": {
+            "input": 0.2,
+            "cachedInput": 0.04,
+            "output": 1.15
+          }
+        },
+        {
+          "id": "cny-standard",
+          "label": {
+            "en": "StepFun China API · CNY",
+            "zh": "阶跃星辰国内 API · 人民币"
+          },
+          "currency": "CNY",
+          "region": "CN",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": 262144
+          },
+          "rates": {
+            "input": 1.35,
+            "cachedInput": 0.27,
+            "output": 8.1
+          }
+        }
+      ],
+      "notes": {
+        "en": "API ID: step-3.7-flash (256K context). Official pricing lists cache-miss input, cache-hit input, and output rates; separate cache-write terms are not published in that row.",
+        "zh": "API 调用 ID：step-3.7-flash（256K 上下文）。官方价表列出缓存未命中输入、缓存命中输入及输出单价；该行未单独说明缓存写入计费条款。"
+      }
+    },
+    {
+      "id": "step-3.5-flash",
+      "source": "https://platform.stepfun.ai/docs/en/pricing/details",
+      "additionalSources": [
+        "https://platform.stepfun.com/docs/zh/pricing/details",
+        "https://platform.stepfun.ai/docs/en/guides/models/step-3.5-flash"
+      ],
+      "checkedAt": "2026-11-26",
+      "defaultVariant": "usd-standard",
+      "variants": [
+        {
+          "id": "usd-standard",
+          "label": {
+            "en": "StepFun International API · USD",
+            "zh": "阶跃星辰国际 API · 美元"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": 262144
+          },
+          "rates": {
+            "input": 0.1,
+            "cachedInput": 0.02,
+            "output": 0.3
+          }
+        },
+        {
+          "id": "cny-standard",
+          "label": {
+            "en": "StepFun China API · CNY",
+            "zh": "阶跃星辰国内 API · 人民币"
+          },
+          "currency": "CNY",
+          "region": "CN",
+          "serviceTier": "standard",
+          "context": {
+            "min": 0,
+            "max": 262144
+          },
+          "rates": {
+            "input": 0.7,
+            "cachedInput": 0.14,
+            "output": 2.1
+          }
+        }
+      ],
+      "notes": {
+        "en": "API ID: step-3.5-flash (256K context). Official pricing lists cache-miss input, cache-hit input, and output rates; separate cache-write terms are not published in that row.",
+        "zh": "API 调用 ID：step-3.5-flash（256K 上下文）。官方价表列出缓存未命中输入、缓存命中输入及输出单价；该行未单独说明缓存写入计费条款。"
+      }
+    }
+  ]
+}

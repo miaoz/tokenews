@@ -733,6 +733,12 @@ export function workloadLine(
       ? `低缓存负载：缓存读 ${pct(m.cache)} / 输入 ${pct(m.input)} / 输出 ${pct(m.output)}`
       : `Low-cache workload: ${pct(m.cache)} cache reads / ${pct(m.input)} input / ${pct(m.output)} output`;
   }
+  if (p.workload === "gemini") {
+    const m = conventions.geminiTokenMix ?? { cache: 0.9, input: 0.095, output: 0.005 };
+    return zh
+      ? `Gemini 负载：缓存读 ${pct(m.cache)} / 输入 ${pct(m.input)} / 输出 ${pct(m.output)}`
+      : `Gemini workload: ${pct(m.cache)} cache reads / ${pct(m.input)} input / ${pct(m.output)} output`;
+  }
   if (p.workload === "anthropic") {
     const m = conventions.anthropicTokenMix;
     return zh

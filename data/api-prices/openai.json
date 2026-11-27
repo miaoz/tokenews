@@ -1405,6 +1405,453 @@
         "https://developers.openai.com/api/docs/guides/prompt-caching"
       ],
       "referenceInput": "cacheWrite"
+    },
+    {
+      "id": "gpt-5.6-sol",
+      "source": "https://developers.openai.com/api/docs/pricing",
+      "additionalSources": [
+        "https://developers.openai.com/api/docs/changelog"
+      ],
+      "checkedAt": "2026-11-26",
+      "defaultVariant": "standard-short-30m",
+      "variants": [
+        {
+          "id": "standard-short-30m",
+          "label": {
+            "en": "OpenAI API · standard · ≤272K input · 30m cache",
+            "zh": "OpenAI API · 标准档 · ≤272K 输入 · 30 分钟缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": { "min": 0, "max": 272000 },
+          "rates": { "input": 4, "cachedInput": 0.4, "cacheWrite": 5, "output": 20 }
+        },
+        {
+          "id": "standard-short-12h",
+          "label": {
+            "en": "OpenAI API · standard · ≤272K input · 12h cache",
+            "zh": "OpenAI API · 标准档 · ≤272K 输入 · 12 小时缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": { "min": 0, "max": 272000 },
+          "rates": { "input": 4, "cachedInput": 0.4, "cacheWrite": 10, "output": 20 }
+        },
+        {
+          "id": "standard-long-30m",
+          "label": {
+            "en": "OpenAI API · standard · >272K input · 30m cache",
+            "zh": "OpenAI API · 标准档 · >272K 输入 · 30 分钟缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": { "min": 272001, "max": null },
+          "rates": { "input": 8, "cachedInput": 0.8, "cacheWrite": 10, "output": 30 }
+        },
+        {
+          "id": "standard-long-12h",
+          "label": {
+            "en": "OpenAI API · standard · >272K input · 12h cache",
+            "zh": "OpenAI API · 标准档 · >272K 输入 · 12 小时缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": { "min": 272001, "max": null },
+          "rates": { "input": 8, "cachedInput": 0.8, "cacheWrite": 20, "output": 30 }
+        },
+        {
+          "id": "batch-short-30m",
+          "label": {
+            "en": "OpenAI API · batch · ≤272K input · 30m cache",
+            "zh": "OpenAI API · 批处理 · ≤272K 输入 · 30 分钟缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "batch",
+          "context": { "min": 0, "max": 272000 },
+          "rates": { "input": 2, "cachedInput": 0.2, "cacheWrite": 2.5, "output": 10 }
+        },
+        {
+          "id": "flex-short-30m",
+          "label": {
+            "en": "OpenAI API · flex · ≤272K input · 30m cache",
+            "zh": "OpenAI API · Flex · ≤272K 输入 · 30 分钟缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "flex",
+          "context": { "min": 0, "max": 272000 },
+          "rates": { "input": 2, "cachedInput": 0.2, "cacheWrite": 2.5, "output": 10 }
+        },
+        {
+          "id": "fast-short-30m",
+          "label": {
+            "en": "OpenAI API · Fast mode · ≤272K input · 30m cache",
+            "zh": "OpenAI API · Fast 模式 · ≤272K 输入 · 30 分钟缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "fast",
+          "context": { "min": 0, "max": 272000 },
+          "rates": { "input": 8, "cachedInput": 0.8, "cacheWrite": 10, "output": 40 }
+        }
+      ],
+      "referenceInput": "cacheWrite",
+      "notes": {
+        "en": "Official promotional pricing since August 21, 2026 ($4/$20/MTok short context; pricing doc notes promo runs until November 30, 2026). Reference workload uses 30m cache writes in place of fresh input; Batch/Flex are 50% off and Fast mode is 2× Standard.",
+        "zh": "2026 年 8 月 21 日起的官方促销定价（短上下文 $4/$20/MTok；定价页注明促销截至 2026-11-30）。参考负载按 30 分钟缓存写计新增输入；Batch 与 Flex 为半价，Fast 模式为标准档 2 倍。"
+      }
+    },
+    {
+      "id": "gpt-5.6-terra",
+      "source": "https://developers.openai.com/api/docs/pricing",
+      "additionalSources": [
+        "https://developers.openai.com/api/docs/changelog"
+      ],
+      "checkedAt": "2026-11-26",
+      "defaultVariant": "standard-short-30m",
+      "variants": [
+        {
+          "id": "standard-short-30m",
+          "label": {
+            "en": "OpenAI API · standard · ≤272K input · 30m cache",
+            "zh": "OpenAI API · 标准档 · ≤272K 输入 · 30 分钟缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": { "min": 0, "max": 272000 },
+          "rates": { "input": 2, "cachedInput": 0.2, "cacheWrite": 2.5, "output": 12 }
+        },
+        {
+          "id": "standard-short-12h",
+          "label": {
+            "en": "OpenAI API · standard · ≤272K input · 12h cache",
+            "zh": "OpenAI API · 标准档 · ≤272K 输入 · 12 小时缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": { "min": 0, "max": 272000 },
+          "rates": { "input": 2, "cachedInput": 0.2, "cacheWrite": 5, "output": 12 }
+        },
+        {
+          "id": "standard-long-30m",
+          "label": {
+            "en": "OpenAI API · standard · >272K input · 30m cache",
+            "zh": "OpenAI API · 标准档 · >272K 输入 · 30 分钟缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": { "min": 272001, "max": null },
+          "rates": { "input": 4, "cachedInput": 0.4, "cacheWrite": 5, "output": 18 }
+        },
+        {
+          "id": "batch-short-30m",
+          "label": {
+            "en": "OpenAI API · batch · ≤272K input · 30m cache",
+            "zh": "OpenAI API · 批处理 · ≤272K 输入 · 30 分钟缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "batch",
+          "context": { "min": 0, "max": 272000 },
+          "rates": { "input": 1, "cachedInput": 0.1, "cacheWrite": 1.25, "output": 6 }
+        },
+        {
+          "id": "flex-short-30m",
+          "label": {
+            "en": "OpenAI API · flex · ≤272K input · 30m cache",
+            "zh": "OpenAI API · Flex · ≤272K 输入 · 30 分钟缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "flex",
+          "context": { "min": 0, "max": 272000 },
+          "rates": { "input": 1, "cachedInput": 0.1, "cacheWrite": 1.25, "output": 6 }
+        },
+        {
+          "id": "fast-short-30m",
+          "label": {
+            "en": "OpenAI API · Fast mode · ≤272K input · 30m cache",
+            "zh": "OpenAI API · Fast 模式 · ≤272K 输入 · 30 分钟缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "fast",
+          "context": { "min": 0, "max": 272000 },
+          "rates": { "input": 4, "cachedInput": 0.4, "cacheWrite": 5, "output": 24 }
+        }
+      ],
+      "referenceInput": "cacheWrite",
+      "notes": {
+        "en": "API ID: gpt-5.6-terra. Standard rate since July 30, 2026 ($2/$12/MTok short context; 30m cache write $2.50, 12h $5.00). Prompts >272K scale input 2× and output 1.5×; Batch/Flex 50% off; Fast mode 2×.",
+        "zh": "API ID：gpt-5.6-terra。2026 年 7 月 30 日调价后标准价（≤272K $2/$12，30m 缓存写 $2.50）。>272K 全单输入翻倍、输出 1.5 倍；Batch/Flex 半价；Fast 2 倍。"
+      }
+    },
+    {
+      "id": "gpt-5.6-luna",
+      "source": "https://developers.openai.com/api/docs/pricing",
+      "additionalSources": [
+        "https://developers.openai.com/api/docs/changelog"
+      ],
+      "checkedAt": "2026-11-26",
+      "defaultVariant": "standard-short-30m",
+      "variants": [
+        {
+          "id": "standard-short-30m",
+          "label": {
+            "en": "OpenAI API · standard · ≤272K input · 30m cache",
+            "zh": "OpenAI API · 标准档 · ≤272K 输入 · 30 分钟缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": { "min": 0, "max": 272000 },
+          "rates": { "input": 0.2, "cachedInput": 0.02, "cacheWrite": 0.25, "output": 1.2 }
+        },
+        {
+          "id": "standard-short-12h",
+          "label": {
+            "en": "OpenAI API · standard · ≤272K input · 12h cache",
+            "zh": "OpenAI API · 标准档 · ≤272K 输入 · 12 小时缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": { "min": 0, "max": 272000 },
+          "rates": { "input": 0.2, "cachedInput": 0.02, "cacheWrite": 0.5, "output": 1.2 }
+        },
+        {
+          "id": "standard-long-30m",
+          "label": {
+            "en": "OpenAI API · standard · >272K input · 30m cache",
+            "zh": "OpenAI API · 标准档 · >272K 输入 · 30 分钟缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": { "min": 272001, "max": null },
+          "rates": { "input": 0.4, "cachedInput": 0.04, "cacheWrite": 0.5, "output": 1.8 }
+        },
+        {
+          "id": "batch-short-30m",
+          "label": {
+            "en": "OpenAI API · batch · ≤272K input · 30m cache",
+            "zh": "OpenAI API · 批处理 · ≤272K 输入 · 30 分钟缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "batch",
+          "context": { "min": 0, "max": 272000 },
+          "rates": { "input": 0.1, "cachedInput": 0.01, "cacheWrite": 0.125, "output": 0.6 }
+        },
+        {
+          "id": "flex-short-30m",
+          "label": {
+            "en": "OpenAI API · flex · ≤272K input · 30m cache",
+            "zh": "OpenAI API · Flex · ≤272K 输入 · 30 分钟缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "flex",
+          "context": { "min": 0, "max": 272000 },
+          "rates": { "input": 0.1, "cachedInput": 0.01, "cacheWrite": 0.125, "output": 0.6 }
+        },
+        {
+          "id": "fast-short-30m",
+          "label": {
+            "en": "OpenAI API · Fast mode · ≤272K input · 30m cache",
+            "zh": "OpenAI API · Fast 模式 · ≤272K 输入 · 30 分钟缓存"
+          },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "fast",
+          "context": { "min": 0, "max": 272000 },
+          "rates": { "input": 0.4, "cachedInput": 0.04, "cacheWrite": 0.5, "output": 2.4 }
+        }
+      ],
+      "referenceInput": "cacheWrite",
+      "notes": {
+        "en": "API ID: gpt-5.6-luna. Standard rate since July 30, 2026 ($0.20/$1.20/MTok short context; 30m cache write $0.25, 12h $0.50). Prompts >272K scale input 2× and output 1.5×; Batch/Flex 50% off; Fast mode 2×.",
+        "zh": "API ID：gpt-5.6-luna。2026 年 7 月 30 日起降价至 $0.20/$1.20（≤272K，30m 缓存写 $0.25）。>272K 全单输入翻倍、输出 1.5 倍；Batch/Flex 半价；Fast 2 倍。"
+      }
+    },
+    {
+      "id": "gpt-5.5",
+      "source": "https://developers.openai.com/api/docs/pricing",
+      "additionalSources": [
+        "https://developers.openai.com/api/docs/changelog"
+      ],
+      "checkedAt": "2026-11-26",
+      "defaultVariant": "standard-short",
+      "variants": [
+        {
+          "id": "standard-short",
+          "label": { "en": "OpenAI API · standard · <272K input", "zh": "OpenAI API · 标准档 · <272K 输入" },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": { "min": 0, "max": 271999 },
+          "rates": { "input": 5, "cachedInput": 0.5, "output": 30 }
+        },
+        {
+          "id": "standard-long",
+          "label": { "en": "OpenAI API · standard · ≥272K input", "zh": "OpenAI API · 标准档 · ≥272K 输入" },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": { "min": 272000, "max": 1000000 },
+          "rates": { "input": 10, "cachedInput": 1, "output": 45 }
+        },
+        {
+          "id": "batch-short",
+          "label": { "en": "OpenAI API · batch · <272K input", "zh": "OpenAI API · 批处理 · <272K 输入" },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "batch",
+          "context": { "min": 0, "max": 271999 },
+          "rates": { "input": 2.5, "cachedInput": 0.25, "output": 15 }
+        },
+        {
+          "id": "flex-short",
+          "label": { "en": "OpenAI API · flex · <272K input", "zh": "OpenAI API · Flex · <272K 输入" },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "flex",
+          "context": { "min": 0, "max": 271999 },
+          "rates": { "input": 2.5, "cachedInput": 0.25, "output": 15 }
+        },
+        {
+          "id": "fast-short",
+          "label": { "en": "OpenAI API · Fast mode · <272K input", "zh": "OpenAI API · Fast 模式 · <272K 输入" },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "fast",
+          "context": { "min": 0, "max": 271999 },
+          "rates": { "input": 12.5, "cachedInput": 1.25, "output": 75 }
+        }
+      ],
+      "notes": {
+        "en": "Released April 24, 2026 (API ID: gpt-5.5; 1M context). Pricing table lists '-' for 30m/12h cache-write fees (extended prompt caching only; no separate cache-write fee published).",
+        "zh": "2026 年 4 月 24 日发布（API ID：gpt-5.5，1M 上下文）。官方价表 30 分钟／12 小时缓存写入栏为空，不另收缓存写入费。"
+      }
+    },
+    {
+      "id": "gpt-5.4",
+      "source": "https://developers.openai.com/api/docs/pricing",
+      "additionalSources": [
+        "https://developers.openai.com/api/docs/changelog"
+      ],
+      "checkedAt": "2026-11-26",
+      "defaultVariant": "standard-short",
+      "variants": [
+        {
+          "id": "standard-short",
+          "label": { "en": "OpenAI API · standard · <272K input", "zh": "OpenAI API · 标准档 · <272K 输入" },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": { "min": 0, "max": 271999 },
+          "rates": { "input": 2.5, "cachedInput": 0.25, "output": 15 }
+        },
+        {
+          "id": "standard-long",
+          "label": { "en": "OpenAI API · standard · ≥272K input", "zh": "OpenAI API · 标准档 · ≥272K 输入" },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": { "min": 272000, "max": 1000000 },
+          "rates": { "input": 5, "cachedInput": 0.5, "output": 22.5 }
+        },
+        {
+          "id": "batch-short",
+          "label": { "en": "OpenAI API · batch · <272K input", "zh": "OpenAI API · 批处理 · <272K 输入" },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "batch",
+          "context": { "min": 0, "max": 271999 },
+          "rates": { "input": 1.25, "cachedInput": 0.13, "output": 7.5 }
+        },
+        {
+          "id": "flex-short",
+          "label": { "en": "OpenAI API · flex · <272K input", "zh": "OpenAI API · Flex · <272K 输入" },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "flex",
+          "context": { "min": 0, "max": 271999 },
+          "rates": { "input": 1.25, "cachedInput": 0.13, "output": 7.5 }
+        },
+        {
+          "id": "fast-short",
+          "label": { "en": "OpenAI API · Fast mode · <272K input", "zh": "OpenAI API · Fast 模式 · <272K 输入" },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "fast",
+          "context": { "min": 0, "max": 271999 },
+          "rates": { "input": 5, "cachedInput": 0.5, "output": 30 }
+        }
+      ],
+      "notes": {
+        "en": "Released March 5, 2026 (API ID: gpt-5.4). Pricing table lists '-' for 30m/12h cache-write fees; prompts ≥272K scale input 2× and output 1.5×.",
+        "zh": "2026 年 3 月 5 日发布（API ID：gpt-5.4）。官方价表未单列缓存写入费；≥272K 输入翻倍、输出 1.5 倍。"
+      }
+    },
+    {
+      "id": "gpt-5.4-mini",
+      "source": "https://developers.openai.com/api/docs/pricing",
+      "additionalSources": [
+        "https://developers.openai.com/api/docs/changelog"
+      ],
+      "checkedAt": "2026-11-26",
+      "defaultVariant": "standard",
+      "variants": [
+        {
+          "id": "standard",
+          "label": { "en": "OpenAI API · standard", "zh": "OpenAI API · 标准档" },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "standard",
+          "context": { "min": 0, "max": null },
+          "rates": { "input": 0.75, "cachedInput": 0.075, "output": 4.5 }
+        },
+        {
+          "id": "batch",
+          "label": { "en": "OpenAI API · batch", "zh": "OpenAI API · 批处理" },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "batch",
+          "context": { "min": 0, "max": null },
+          "rates": { "input": 0.375, "cachedInput": 0.0375, "output": 2.25 }
+        },
+        {
+          "id": "flex",
+          "label": { "en": "OpenAI API · flex", "zh": "OpenAI API · Flex" },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "flex",
+          "context": { "min": 0, "max": null },
+          "rates": { "input": 0.375, "cachedInput": 0.0375, "output": 2.25 }
+        },
+        {
+          "id": "fast",
+          "label": { "en": "OpenAI API · Fast mode", "zh": "OpenAI API · Fast 模式" },
+          "currency": "USD",
+          "region": "global",
+          "serviceTier": "fast",
+          "context": { "min": 0, "max": null },
+          "rates": { "input": 1.5, "cachedInput": 0.15, "output": 9 }
+        }
+      ],
+      "notes": {
+        "en": "Released March 17, 2026 (API ID: gpt-5.4-mini). Flat rates across context window; no separate cache-write fee published.",
+        "zh": "2026 年 3 月 17 日发布（API ID：gpt-5.4-mini）。全上下文窗口统一费率；未单列缓存写入费。"
+      }
     }
   ]
 }

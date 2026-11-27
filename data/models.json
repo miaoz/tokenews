@@ -70,21 +70,24 @@
       "name": "Claude Fable 5",
       "maker": "Anthropic",
       "source": "https://github.com/Fei2411/real-api-pricing/tree/0be92b7ce3edf7690672ce5217607032a4bc7c45",
-      "checkedAt": "2026-10-19"
+      "checkedAt": "2026-10-19",
+      "releaseDate": "2026-06-09"
     },
     {
       "id": "claude-fable-5.1",
       "name": "Claude Fable 5.1",
       "maker": "Anthropic",
       "source": "https://github.com/Fei2411/real-api-pricing/tree/0be92b7ce3edf7690672ce5217607032a4bc7c45",
-      "checkedAt": "2026-10-19"
+      "checkedAt": "2026-10-19",
+      "releaseDate": "2026-09-01"
     },
     {
       "id": "claude-fable-5.2",
       "name": "Claude Fable 5.2",
       "maker": "Anthropic",
       "source": "https://platform.claude.com/docs/en/models/fable-5-2/overview",
-      "checkedAt": "2026-11-10"
+      "checkedAt": "2026-11-10",
+      "releaseDate": "2026-11-09"
     },
     {
       "id": "claude-haiku-4.5-20251001",
@@ -98,14 +101,16 @@
       "name": "Claude Haiku 5.5",
       "maker": "Anthropic",
       "source": "https://github.com/Fei2411/real-api-pricing/tree/0be92b7ce3edf7690672ce5217607032a4bc7c45",
-      "checkedAt": "2026-10-19"
+      "checkedAt": "2026-10-19",
+      "releaseDate": "2026-10-07"
     },
     {
       "id": "claude-mythos-5.2",
       "name": "Claude Mythos 5.2",
       "maker": "Anthropic",
       "source": "https://platform.claude.com/docs/en/models/mythos-5-2/overview",
-      "checkedAt": "2026-11-10"
+      "checkedAt": "2026-11-10",
+      "releaseDate": "2026-11-09"
     },
     {
       "id": "claude-opus-4.1-20250805",
@@ -140,21 +145,24 @@
       "name": "Claude Opus 4.8",
       "maker": "Anthropic",
       "source": "https://github.com/Fei2411/real-api-pricing/tree/0be92b7ce3edf7690672ce5217607032a4bc7c45",
-      "checkedAt": "2026-10-19"
+      "checkedAt": "2026-10-19",
+      "releaseDate": "2026-05-28"
     },
     {
       "id": "claude-opus-5",
       "name": "Claude Opus 5",
       "maker": "Anthropic",
       "source": "https://github.com/Fei2411/real-api-pricing/tree/0be92b7ce3edf7690672ce5217607032a4bc7c45",
-      "checkedAt": "2026-10-19"
+      "checkedAt": "2026-10-19",
+      "releaseDate": "2026-07-24"
     },
     {
       "id": "claude-opus-5.5",
       "name": "Claude Opus 5.5",
       "maker": "Anthropic",
       "source": "https://github.com/Fei2411/real-api-pricing/tree/0be92b7ce3edf7690672ce5217607032a4bc7c45",
-      "checkedAt": "2026-10-19"
+      "checkedAt": "2026-10-19",
+      "releaseDate": "2026-09-22"
     },
     {
       "id": "claude-sonnet-4.5-20250929",
@@ -175,14 +183,16 @@
       "name": "Claude Sonnet 5",
       "maker": "Anthropic",
       "source": "https://github.com/Fei2411/real-api-pricing/tree/0be92b7ce3edf7690672ce5217607032a4bc7c45",
-      "checkedAt": "2026-10-19"
+      "checkedAt": "2026-10-19",
+      "releaseDate": "2026-06-30"
     },
     {
       "id": "claude-sonnet-5.5",
       "name": "Claude Sonnet 5.5",
       "maker": "Anthropic",
       "source": "https://github.com/Fei2411/real-api-pricing/tree/0be92b7ce3edf7690672ce5217607032a4bc7c45",
-      "checkedAt": "2026-10-19"
+      "checkedAt": "2026-10-19",
+      "releaseDate": "2026-09-28"
     },
     {
       "id": "clef",
@@ -462,49 +472,56 @@
       "name": "Gemini 3.1 Pro Preview",
       "maker": "Google",
       "source": "https://artificialanalysis.ai/models/releases/gemini-3-1-pro-preview",
-      "checkedAt": "2026-11-04"
+      "checkedAt": "2026-11-04",
+      "releaseDate": "2026-02-19"
     },
     {
       "id": "gemini-3.5-flash",
       "name": "Gemini 3.5 Flash",
       "maker": "Google",
       "source": "https://artificialanalysis.ai/models/releases/gemini-3-5-flash",
-      "checkedAt": "2026-11-04"
+      "checkedAt": "2026-11-04",
+      "releaseDate": "2026-05-19"
     },
     {
       "id": "gemini-3.5-flash-lite",
       "name": "Gemini 3.5 Flash-Lite",
       "maker": "Google",
       "source": "https://artificialanalysis.ai/models/releases/gemini-3-5-flash-lite",
-      "checkedAt": "2026-11-04"
+      "checkedAt": "2026-11-04",
+      "releaseDate": "2026-07-21"
     },
     {
       "id": "gemini-3.6-flash",
       "name": "Gemini 3.6 Flash",
       "maker": "Google",
       "source": "https://github.com/Fei2411/real-api-pricing/tree/0be92b7ce3edf7690672ce5217607032a4bc7c45",
-      "checkedAt": "2026-10-19"
+      "checkedAt": "2026-10-19",
+      "releaseDate": "2026-07-21"
     },
     {
       "id": "gemini-3.7-flash",
       "name": "Gemini 3.7 Flash",
       "maker": "Google",
       "source": "https://github.com/Fei2411/real-api-pricing/tree/0be92b7ce3edf7690672ce5217607032a4bc7c45",
-      "checkedAt": "2026-10-19"
+      "checkedAt": "2026-10-19",
+      "releaseDate": "2026-08-13"
     },
     {
       "id": "gemini-3.8-flash",
       "name": "Gemini 3.8 Flash",
       "maker": "Google",
       "source": "https://github.com/Fei2411/real-api-pricing/tree/0be92b7ce3edf7690672ce5217607032a4bc7c45",
-      "checkedAt": "2026-10-19"
+      "checkedAt": "2026-10-19",
+      "releaseDate": "2026-09-02"
     },
     {
       "id": "gemini-4-argon",
       "name": "Gemini 4 Argon",
       "maker": "Google",
       "source": "https://github.com/Fei2411/real-api-pricing/tree/0be92b7ce3edf7690672ce5217607032a4bc7c45",
-      "checkedAt": "2026-10-19"
+      "checkedAt": "2026-10-19",
+      "releaseDate": "2026-10-13"
     },
     {
       "id": "gemini-4-argon-contributor",
@@ -518,7 +535,8 @@
       "name": "Gemini 4 Carbon",
       "maker": "Google",
       "source": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
-      "checkedAt": "2026-11-04"
+      "checkedAt": "2026-11-04",
+      "releaseDate": "2026-11-10"
     },
     {
       "id": "gemini-4-hydrogen",
@@ -597,21 +615,24 @@
       "name": "GLM 5",
       "maker": "Zhipu",
       "source": "https://github.com/Fei2411/real-api-pricing/tree/0be92b7ce3edf7690672ce5217607032a4bc7c45",
-      "checkedAt": "2026-10-19"
+      "checkedAt": "2026-10-19",
+      "releaseDate": "2026-02-12"
     },
     {
       "id": "glm-5.1",
       "name": "GLM 5.1",
       "maker": "Zhipu",
       "source": "https://github.com/Fei2411/real-api-pricing/tree/0be92b7ce3edf7690672ce5217607032a4bc7c45",
-      "checkedAt": "2026-10-19"
+      "checkedAt": "2026-10-19",
+      "releaseDate": "2026-04-07"
     },
     {
       "id": "glm-5.2",
       "name": "GLM 5.2",
       "maker": "Zhipu",
       "source": "https://github.com/Fei2411/real-api-pricing/tree/0be92b7ce3edf7690672ce5217607032a4bc7c45",
-      "checkedAt": "2026-10-19"
+      "checkedAt": "2026-10-19",
+      "releaseDate": "2026-06-16"
     },
     {
       "id": "glm-5.2-fast",
@@ -625,14 +646,16 @@
       "name": "GLM 5.3",
       "maker": "Zhipu",
       "source": "https://github.com/Fei2411/real-api-pricing/tree/0be92b7ce3edf7690672ce5217607032a4bc7c45",
-      "checkedAt": "2026-10-19"
+      "checkedAt": "2026-10-19",
+      "releaseDate": "2026-08-18"
     },
     {
       "id": "glm-5.3-flash",
       "name": "GLM 5.3 Flash",
       "maker": "Zhipu",
       "source": "https://github.com/Fei2411/real-api-pricing/tree/0be92b7ce3edf7690672ce5217607032a4bc7c45",
-      "checkedAt": "2026-10-19"
+      "checkedAt": "2026-10-19",
+      "releaseDate": "2026-08-26"
     },
     {
       "id": "glm-5.3-flashx",
@@ -667,7 +690,8 @@
       "name": "GPT-5.1",
       "maker": "OpenAI",
       "source": "https://artificialanalysis.ai/models/releases/gpt-5-1",
-      "checkedAt": "2026-11-04"
+      "checkedAt": "2026-11-04",
+      "releaseDate": "2025-11-13"
     },
     {
       "id": "gpt-5.1-codex",
@@ -688,7 +712,8 @@
       "name": "GPT-5.2",
       "maker": "OpenAI",
       "source": "https://artificialanalysis.ai/models/releases/gpt-5-2",
-      "checkedAt": "2026-11-04"
+      "checkedAt": "2026-11-04",
+      "releaseDate": "2025-12-11"
     },
     {
       "id": "gpt-5.2-codex",
@@ -716,21 +741,24 @@
       "name": "GPT-5.4",
       "maker": "OpenAI",
       "source": "https://artificialanalysis.ai/models/releases/gpt-5-4",
-      "checkedAt": "2026-11-04"
+      "checkedAt": "2026-11-04",
+      "releaseDate": "2026-03-05"
     },
     {
       "id": "gpt-5.4-mini",
       "name": "GPT-5.4 mini",
       "maker": "OpenAI",
       "source": "https://artificialanalysis.ai/models/releases/gpt-5-4-mini",
-      "checkedAt": "2026-11-04"
+      "checkedAt": "2026-11-04",
+      "releaseDate": "2026-03-17"
     },
     {
       "id": "gpt-5.5",
       "name": "GPT 5.5",
       "maker": "OpenAI",
       "source": "https://github.com/Fei2411/real-api-pricing/tree/0be92b7ce3edf7690672ce5217607032a4bc7c45",
-      "checkedAt": "2026-10-19"
+      "checkedAt": "2026-10-19",
+      "releaseDate": "2026-04-24"
     },
     {
       "id": "gpt-5.5-instant-june-2026",
@@ -772,35 +800,40 @@
       "name": "GPT-6 Astra",
       "maker": "OpenAI",
       "source": "https://github.com/Fei2411/real-api-pricing/tree/0be92b7ce3edf7690672ce5217607032a4bc7c45",
-      "checkedAt": "2026-10-19"
+      "checkedAt": "2026-10-19",
+      "releaseDate": "2026-09-03"
     },
     {
       "id": "gpt-6-luna",
       "name": "GPT-6 Luna",
       "maker": "OpenAI",
       "source": "https://github.com/Fei2411/real-api-pricing/tree/0be92b7ce3edf7690672ce5217607032a4bc7c45",
-      "checkedAt": "2026-10-19"
+      "checkedAt": "2026-10-19",
+      "releaseDate": "2026-09-22"
     },
     {
       "id": "gpt-6-sol",
       "name": "GPT-6 Sol",
       "maker": "OpenAI",
       "source": "https://github.com/Fei2411/real-api-pricing/tree/0be92b7ce3edf7690672ce5217607032a4bc7c45",
-      "checkedAt": "2026-10-19"
+      "checkedAt": "2026-10-19",
+      "releaseDate": "2026-09-22"
     },
     {
       "id": "gpt-6.1-sol",
       "name": "GPT-6.1 Sol",
       "maker": "OpenAI",
       "source": "https://github.com/Fei2411/real-api-pricing/tree/0be92b7ce3edf7690672ce5217607032a4bc7c45",
-      "checkedAt": "2026-10-19"
+      "checkedAt": "2026-10-19",
+      "releaseDate": "2026-09-29"
     },
     {
       "id": "gpt-6.1-terra",
       "name": "GPT-6.1 Terra",
       "maker": "OpenAI",
       "source": "https://artificialanalysis.ai/models/releases/gpt-6-1-terra",
-      "checkedAt": "2026-11-04"
+      "checkedAt": "2026-11-04",
+      "releaseDate": "2026-10-26"
     },
     {
       "id": "gpt-6.2-astra",
@@ -935,21 +968,24 @@
       "name": "Grok 4.5",
       "maker": "SpaceXAI",
       "source": "https://github.com/Fei2411/real-api-pricing/tree/0be92b7ce3edf7690672ce5217607032a4bc7c45",
-      "checkedAt": "2026-10-19"
+      "checkedAt": "2026-10-19",
+      "releaseDate": "2026-07-16"
     },
     {
       "id": "grok-4.6",
       "name": "Grok 4.6",
       "maker": "SpaceXAI",
       "source": "https://github.com/Fei2411/real-api-pricing/tree/0be92b7ce3edf7690672ce5217607032a4bc7c45",
-      "checkedAt": "2026-10-19"
+      "checkedAt": "2026-10-19",
+      "releaseDate": "2026-08-12"
     },
     {
       "id": "grok-4.7",
       "name": "Grok 4.7",
       "maker": "SpaceXAI",
       "source": "https://github.com/Fei2411/real-api-pricing/tree/0be92b7ce3edf7690672ce5217607032a4bc7c45",
-      "checkedAt": "2026-10-19"
+      "checkedAt": "2026-10-19",
+      "releaseDate": "2026-09-21"
     },
     {
       "id": "grok-code-fast-1",
@@ -1576,21 +1612,24 @@
       "name": "MiniMax M2.7",
       "maker": "MiniMax",
       "source": "https://github.com/Fei2411/real-api-pricing/tree/0be92b7ce3edf7690672ce5217607032a4bc7c45",
-      "checkedAt": "2026-10-19"
+      "checkedAt": "2026-10-19",
+      "releaseDate": "2026-03-18"
     },
     {
       "id": "minimax-m3",
       "name": "MiniMax M3",
       "maker": "MiniMax",
       "source": "https://github.com/Fei2411/real-api-pricing/tree/0be92b7ce3edf7690672ce5217607032a4bc7c45",
-      "checkedAt": "2026-10-19"
+      "checkedAt": "2026-10-19",
+      "releaseDate": "2026-06-01"
     },
     {
       "id": "minimax-m3.1-flash",
       "name": "MiniMax-M3.1-Flash",
       "maker": "MiniMax",
       "source": "https://artificialanalysis.ai/models/releases/minimax-m3-1-flash",
-      "checkedAt": "2026-11-04"
+      "checkedAt": "2026-11-04",
+      "releaseDate": "2026-10-19"
     },
     {
       "id": "minimax-m3.1-flash-preview",
@@ -2271,7 +2310,8 @@
       "name": "Solar Pro 4",
       "maker": "Upstage",
       "source": "https://artificialanalysis.ai/models/releases/solar-pro-4-2026-09-18",
-      "checkedAt": "2026-11-04"
+      "checkedAt": "2026-11-04",
+      "releaseDate": "2026-08-06"
     },
     {
       "id": "spark-x2.6",

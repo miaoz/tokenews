@@ -38,7 +38,7 @@ export interface Point {
   /** Reviewed conditional boost with no published fixed expiry. */
   promo_condition?: 'capacity-limited';
   list_blended_usd_per_mtok: number | null;
-  /** Quota basis: standard | anthropic | lowCache | cacheWrite | measured. */
+  /** Quota basis: standard | anthropic | lowCache | gemini | cacheWrite | measured. */
   workload?: string;
   /** Plan generation tag for legacy plans, e.g. "v2" on GLM existing-customer tiers. */
   plan_gen?: string;
@@ -175,6 +175,7 @@ export interface SiteData {
     };
     standardTokenMix: { cache: number; input: number; output: number };
     lowCacheTokenMix: { cache: number; input: number; output: number };
+    geminiTokenMix?: { cache: number; input: number; output: number };
     anthropicTokenMix: { cache: number; cacheWrite: number; output: number };
   };
 }

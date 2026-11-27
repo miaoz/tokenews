@@ -1589,6 +1589,7 @@ const workloadName = (p, lang) => ({
   standard: ["Standard workload", "标准负载"],
   anthropic: ["Anthropic workload", "Anthropic 负载"],
   lowCache: ["Low-cache workload", "低缓存负载"],
+  gemini: ["Gemini workload", "Gemini 负载"],
   cacheWrite: ["Cache-write workload", "缓存写入负载"],
 }[p.workload]?.[lang === "zh" ? 1 : 0] ?? (lang === "zh" ? "未归一化" : "Not normalized"));
 
@@ -1624,7 +1625,7 @@ function comparePage(c, lang) {
   const priceCell = (p) => `${realLink(p, lang)}<small> /MTok</small>
 <small class="block">${tokens(p, lang)} ${t("tokens/month", "token/月")}</small>
 <small class="block"><a href="#basis">${workloadName(p, lang)}</a>${unmetered(p) ? ` · ${esc(unmeteredNote(p, lang))}` : ""}</small>
-<small class="block">${esc(dataDateLine(p, lang) || t("Date unavailable", "日期未提供"))} · ${t("confidence", "置信度")} ${esc(conf(p.confidence, lang))}</small>`;
+<small class="block">${esc(dataDateLine(p, lang) || t("Date unavailable", "日期未提供"))} · ${t("confidence", "置信度")} ${esc(conf(p.confidence, lang))}${p.quota_is_estimated ? ` · ${t("estimate", "估算")}` : ""}</small>`;
   const priceResult = (win) => {
     if (win.reason !== "comparable") return ({
       raw: t("Unnormalized records", "未归一化记录"),
@@ -1636,13 +1637,17 @@ function comparePage(c, lang) {
       ? `${esc(side(win.side).name)} ${t("lower", "较低")}<small class="block">${times(win.ratio, lang)} ${t("price ratio (higher/lower)", "单价比（高/低）")}</small>`
       : t("Equal recorded cost", "记录单价相同");
   };
-  const planRows = plans.map(({ a: pa, b: pb, win }) => [
-    `${planLink(pa, lang)}<small class="block">${providerLink(pa.channel, lang)}</small>`,
-    feeCell(pa, lang),
-    priceCell(pa),
-    priceCell(pb),
-    priceResult(win),
-  ]);
+  const canonicalPlanPoint = (pa, pb) => (pa.quota_is_estimated && !pb.quota_is_estimated ? pb : pa);
+  const planRows = plans.map(({ a: pa, b: pb, win }) => {
+    const planPoint = canonicalPlanPoint(pa, pb);
+    return [
+      `${planLink(planPoint, lang)}<small class="block">${providerLink(planPoint.channel, lang)}</small>`,
+      feeCell(planPoint, lang),
+      priceCell(pa),
+      priceCell(pb),
+      priceResult(win),
+    ];
+  });
   const scoreCell = (x) => {
     const v = x.best;
     const source = safeUrl(v.archive_url ?? "") ?? safeUrl(firstUrl(v.source) ?? "");
@@ -1695,13 +1700,16 @@ ${table(
     column: 1, direction: "ascending",
     types: ["text", "number", "number", "number", null],
     defaultDirections: ["ascending", "ascending", "ascending", "ascending", null],
-    values: plans.map(({ a: pa, b: pb }) => [
-      planName(pa, lang),
-      pa.price_usd,
-      unmetered(pa) ? 0 : pa.real_usd_per_mtok,
-      unmetered(pb) ? 0 : pb.real_usd_per_mtok,
-      null,
-    ]),
+    values: plans.map(({ a: pa, b: pb }) => {
+      const planPoint = canonicalPlanPoint(pa, pb);
+      return [
+        planName(planPoint, lang),
+        planPoint.price_usd,
+        unmetered(pa) ? 0 : pa.real_usd_per_mtok,
+        unmetered(pb) ? 0 : pb.real_usd_per_mtok,
+        null,
+      ];
+    }),
   },
 )}</section>
 <section aria-labelledby="bench"><h2 id="bench">${t("Leaderboards head to head", "榜单成绩对比")}</h2>

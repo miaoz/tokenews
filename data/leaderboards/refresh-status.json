@@ -1,12 +1,11 @@
 {
   "version": 1,
-  "attemptedAt": "2026-11-23",
+  "attemptedAt": "2026-11-26",
   "results": [
     {
       "board": "aa_intelligence_index",
-      "status": "updated",
-      "reviewRequired": 0,
-      "identityReview": [],
+      "status": "retained-previous",
+      "error": "Methodology review required: aa_intelligence_index 5.0.2",
       "retainedCheckedAt": "2026-11-23"
     },
     {
@@ -25,13 +24,12 @@
           "releaseSlug": null
         }
       ],
-      "retainedCheckedAt": "2026-11-23"
+      "retainedCheckedAt": "2026-11-26"
     },
     {
       "board": "aa_terminal_bench_4",
-      "status": "updated",
-      "reviewRequired": 0,
-      "identityReview": [],
+      "status": "retained-previous",
+      "error": "Methodology review required: aa_terminal_bench_4 4.1",
       "retainedCheckedAt": "2026-11-23"
     },
     {
@@ -45,20 +43,19 @@
           "releaseSlug": null
         }
       ],
-      "retainedCheckedAt": "2026-11-23"
+      "retainedCheckedAt": "2026-11-26"
     },
     {
       "board": "arena_agent_mode",
       "status": "updated",
       "reviewRequired": 0,
       "identityReview": [],
-      "retainedCheckedAt": "2026-11-23"
+      "retainedCheckedAt": "2026-11-26"
     },
     {
       "board": "aa_coding_agent_index",
-      "status": "updated",
-      "reviewRequired": 0,
-      "identityReview": [],
+      "status": "retained-previous",
+      "error": "AA 2.1 model identity missing",
       "retainedCheckedAt": "2026-11-23"
     },
     {
@@ -66,14 +63,14 @@
       "status": "updated",
       "reviewRequired": 0,
       "identityReview": [],
-      "retainedCheckedAt": "2026-11-23"
+      "retainedCheckedAt": "2026-11-26"
     },
     {
       "board": "deepswe_1_1",
       "status": "updated",
       "reviewRequired": 0,
       "identityReview": [],
-      "retainedCheckedAt": "2026-11-23"
+      "retainedCheckedAt": "2026-11-26"
     }
   ]
 }

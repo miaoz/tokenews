@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "checkedAt": "2026-11-26",
+  "scope": "Reconcile upstream sync cce3f28a1e02 (2026-11-25): adopt geminiTokenMix (90% cache read / 9.5% fresh input / 0.5% output); retire estimate:google-ai-ultra-5x:gemini-4-neon, estimate:google-ai-ultra-20x:gemini-4-neon, and estimate:devin-max:gemini-4-carbon now directly adopted upstream; re-anchor Google AI Pro Hydrogen and Ultra 5x/20x Hydrogen/Carbon estimates under workloadMix: gemini directly to the corresponding Neon plan measurements.",
+  "retiredEstimates": [
+    {
+      "id": "estimate:google-ai-ultra-5x:gemini-4-neon",
+      "replacedByUpstreamId": "google_ai_ultra_5x_us::gemini-4-neon",
+      "upstreamSource": "https://github.com/Fei2411/real-api-pricing/blob/cce3f28a1e02/data/research/gemini-token-mix-round1-2026-11-24.json",
+      "upstreamValue": {
+        "monthlyYi": 43.06,
+        "realUsdPerMTok": 0.023221087,
+        "workload": "gemini",
+        "confidence": "medium",
+        "dataDate": "2026-11-23~2026-11-25"
+      }
+    },
+    {
+      "id": "estimate:google-ai-ultra-20x:gemini-4-neon",
+      "replacedByUpstreamId": "google_ai_ultra_20x_us::gemini-4-neon",
+      "upstreamSource": "https://github.com/Fei2411/real-api-pricing/blob/cce3f28a1e02/data/research/gemini-token-mix-round1-2026-11-24.json",
+      "upstreamValue": {
+        "monthlyYi": 141.55,
+        "realUsdPerMTok": 0.014128576,
+        "workload": "gemini",
+        "confidence": "medium",
+        "dataDate": "2026-11-23~2026-11-25"
+      }
+    },
+    {
+      "id": "estimate:devin-max:gemini-4-carbon",
+      "replacedByUpstreamId": "devin_max::gemini-4-carbon",
+      "upstreamSource": "https://github.com/Fei2411/real-api-pricing/blob/cce3f28a1e02/data/adopted.csv",
+      "upstreamValue": {
+        "monthlyYi": 24.24,
+        "realUsdPerMTok": 0.082508251,
+        "workload": "gemini",
+        "confidence": "medium",
+        "dataDate": "2026-11-20~2026-11-21"
+      }
+    }
+  ],
+  "methodology": {
+    "google": {
+      "workloadMix": "gemini (90% cache read / 9.5% input / 0.5% output)",
+      "anchors": {
+        "google_ai_pro_us::gemini-4-neon": {
+          "monthlyYi": 6.91,
+          "geminiBlendUsdPerMTok": 0.495,
+          "monthlyWorthUsd": 342.045
+        },
+        "google_ai_ultra_5x_us::gemini-4-neon": {
+          "monthlyYi": 43.06,
+          "geminiBlendUsdPerMTok": 0.495
+        },
+        "google_ai_ultra_20x_us::gemini-4-neon": {
+          "monthlyYi": 141.55,
+          "geminiBlendUsdPerMTok": 0.495
+        }
+      },
+      "derivedTargets": {
+        "google_ai_pro_estimate::gemini-4-hydrogen": { "monthlyYi": 13.82, "usdPerMTok": 0.01446 },
+        "google_ai_ultra_5x_estimate::gemini-4-hydrogen": { "monthlyYi": 86.12, "usdPerMTok": 0.01161 },
+        "google_ai_ultra_20x_estimate::gemini-4-hydrogen": { "monthlyYi": 283.1, "usdPerMTok": 0.00706 },
+        "google_ai_ultra_5x_estimate::gemini-4-carbon": { "monthlyYi": 32.295, "usdPerMTok": 0.03096, "rates": "regular post-2026-12-01 ($4/$20/$0.20, $0.66/MTok)" },
+        "google_ai_ultra_20x_estimate::gemini-4-carbon": { "monthlyYi": 106.1625, "usdPerMTok": 0.01884, "rates": "regular post-2026-12-01 ($4/$20/$0.20, $0.66/MTok)" }
+      },
+      "conservatism": [
+        "All derived Pro/Ultra rows remain marked confidence: low and quota_is_estimated: true.",
+        "Ultra 5x and Ultra 20x Hydrogen/Carbon estimates now anchor directly to Ultra 5x/20x Neon upstream measurements (planRatio: 1) rather than 5x/20x Pro scaling.",
+        "Gemini 4 Carbon remains restricted to Google AI Ultra (excluded from Google AI Pro) and valued at post-December 1 regular rates ($4/$20/$0.20)."
+      ]
+    },
+    "anthropic": {
+      "status": "Upstream cce3f28a1e02 also adopted devin_max::claude-fable-5.2 (12.42 亿/月, $0.1610306/MTok, anthropic mix). Claude Max and Claude Ultra Fable 5.2 estimates remain active."
+    }
+  }
+}
