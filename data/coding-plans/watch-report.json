@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "checkedAt": "2026-11-26T08:38:34.794Z",
+  "checkedAt": "2026-11-27T05:40:52.193Z",
   "intervalHours": 24,
-  "newEvents": 35,
+  "newEvents": 41,
   "pending": [
     {
       "id": "4533c6040aa95efeaf575f7486523b4550c1a1975e7ba1df4f0cfa6f888e5935",
@@ -24260,6 +24260,988 @@
         "relevant": true
       },
       "status": "pending"
+    },
+    {
+      "id": "e2b115e58cd277ac0ad8f5baac8830a88f6d231562a1e91f766c52932d511db6",
+      "sourceId": "command-code-releases",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-27T05:40:52.193Z",
+      "url": "https://commandcode.ai/changelog",
+      "before": null,
+      "after": {
+        "key": "text:5e79ac15688aaf728f94154e99f417fc7a63389d7fbe37032de1d1496d2e9149",
+        "hash": "5e79ac15688aaf728f94154e99f417fc7a63389d7fbe37032de1d1496d2e9149",
+        "type": "announcement",
+        "signals": [],
+        "models": [],
+        "url": "https://commandcode.ai/changelog"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "ddebc4f89efeeb103488c26b3aea18f3cc1af66f951450344600a3e6cf6f154a",
+      "sourceId": "alibaba-coding-global",
+      "channel": "Alibaba",
+      "kind": "announcement",
+      "detectedAt": "2026-11-27T05:40:52.193Z",
+      "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan",
+      "before": null,
+      "after": {
+        "key": "text:58e0ad5256100b39697d8a6c95b3b4ab02bc832f19ece0b2758079d5699ee693",
+        "hash": "58e0ad5256100b39697d8a6c95b3b4ab02bc832f19ece0b2758079d5699ee693",
+        "type": "announcement",
+        "signals": [],
+        "models": [],
+        "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "7de1b754708341a5ee20c839817e3655ae7dd739f1aabc1f57f0c7debf1122e1",
+      "sourceId": "alibaba-coding-global",
+      "channel": "Alibaba",
+      "kind": "announcement",
+      "detectedAt": "2026-11-27T05:40:52.193Z",
+      "url": "https://www.alibabacloud.com/en/notice/detail?_p_lc=1&id=1781",
+      "before": null,
+      "after": {
+        "key": "text:886c16e71799618f14f9072cbe5ace756f988ee2ab346ba8ce5c71c8c9659bf8",
+        "hash": "886c16e71799618f14f9072cbe5ace756f988ee2ab346ba8ce5c71c8c9659bf8",
+        "type": "announcement",
+        "signals": [
+          "version"
+        ],
+        "models": [],
+        "url": "https://www.alibabacloud.com/en/notice/detail?_p_lc=1&id=1781"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "e0ed1552982c1efe3a3b99c8fbd6217a98313f3adae5fc5de3ee8298aabcac74",
+      "sourceId": "alibaba-coding-global",
+      "channel": "Alibaba",
+      "kind": "announcement",
+      "detectedAt": "2026-11-27T05:40:52.193Z",
+      "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan",
+      "before": null,
+      "after": {
+        "key": "text:c8832175d4e251a1836a67ba67d7f99fc34421f116b15e28e9a6c6301624f39d",
+        "hash": "c8832175d4e251a1836a67ba67d7f99fc34421f116b15e28e9a6c6301624f39d",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [
+          "Qwen",
+          "GLM",
+          "Kimi",
+          "MiniMax"
+        ],
+        "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "221ae0395b4c37254a20648cf8f903e28dccc5737c5956a765c4ac731f80ae96",
+      "sourceId": "alibaba-coding-global",
+      "channel": "Alibaba",
+      "kind": "terms-changed",
+      "detectedAt": "2026-11-27T05:40:52.193Z",
+      "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan#products",
+      "before": {
+        "key": "row:v2:f804326d606ffbc0:0:Supported models:0",
+        "type": "table-row",
+        "label": "Supported models",
+        "heading": "Plan details",
+        "columns": [
+          "",
+          "Pro"
+        ],
+        "cells": [
+          "Supported models",
+          "Only the following exact model versions are supported: Recommended models: qwen3.7-plus (vision), qwen3.6-plus (vision), kimi-k2.5 (vision), glm-5 , and MiniMax-M2.5 More models: qwen3.5-plus (vision) Models not listed above are not supported."
+        ],
+        "signals": [
+          "availability"
+        ],
+        "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan#products",
+        "hash": "0b1c81826edece6d83d86686359b9a388d98d8c4444560765a3f34c9dccbb642"
+      },
+      "after": {
+        "key": "row:v2:f804326d606ffbc0:0:Supported models:0",
+        "type": "table-row",
+        "label": "Supported models",
+        "heading": "Plan details",
+        "columns": [
+          "",
+          "Pro Plan"
+        ],
+        "cells": [
+          "Supported models",
+          "Featured Models: qwen3.7-plus (supports image understanding), qwen3.6-plus (supports image understanding), kimi-k2.5 (supports image understanding), glm-5 , MiniMax-M2.5 More Models: qwen3.5-plus (supports image understanding) Models not listed above are not supported."
+        ],
+        "signals": [
+          "availability"
+        ],
+        "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan#products",
+        "hash": "8a30145e3f090af0bfcfc1839905be96435a2ac65d3ff7f31f168532d78f4d83"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "fa8faff52858cbf90b9a4c18f9de5505b30adad2f32e89f3a60193c11a56b2cf",
+      "sourceId": "alibaba-coding-global",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-27T05:40:52.193Z",
+      "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan#products",
+      "before": null,
+      "after": {
+        "key": "row:v2:f804326d606ffbc0:0:Pricing:0",
+        "type": "table-row",
+        "label": "Pricing",
+        "heading": "Plan details",
+        "columns": [
+          "",
+          "Pro Plan"
+        ],
+        "cells": [
+          "Pricing",
+          "$ 50 /Month(s)"
+        ],
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan#products",
+        "hash": "c2d6be1fad67fdacb12ef2d8780ae8f41dbfc23fba12516be975270050091489"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "46087db479d0c1a892db43708493cf6a35d9feb95247dbf28625201b06cdb788",
+      "sourceId": "alibaba-coding-global",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-27T05:40:52.193Z",
+      "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan#products",
+      "before": null,
+      "after": {
+        "key": "row:v2:f804326d606ffbc0:0:Usage limits:0",
+        "type": "table-row",
+        "label": "Usage limits",
+        "heading": "Plan details",
+        "columns": [
+          "",
+          "Pro Plan"
+        ],
+        "cells": [
+          "Usage limits",
+          "6,000 requests every 5 hours 45,000 requests per week 90,000 requests per month"
+        ],
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan#products",
+        "hash": "4f4363db03dc9c1e2248df3dfa92a234741608b5814bc28a5c188e987ce19b21"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "ffa023cafc94bf83af1c9f57a3928496371339a2427b4434afb832f3aff86ff6",
+      "sourceId": "alibaba-coding-global",
+      "channel": "Alibaba",
+      "kind": "announcement",
+      "detectedAt": "2026-11-27T05:40:52.193Z",
+      "url": "https://common-buy-intl.alibabacloud.com/coding-plan/",
+      "before": null,
+      "after": {
+        "key": "text:be94ca858680a8c321e52053fe3fe805a3a91c7fa6cc4cebbceeb04802bcbeac",
+        "hash": "be94ca858680a8c321e52053fe3fe805a3a91c7fa6cc4cebbceeb04802bcbeac",
+        "type": "announcement",
+        "signals": [
+          "pricing"
+        ],
+        "models": [],
+        "url": "https://common-buy-intl.alibabacloud.com/coding-plan/"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "30b43bda83bcb735f4d600060cae5cefca47d4ec6e949a8798e22a003d89cc8a",
+      "sourceId": "alibaba-coding-global",
+      "channel": "Alibaba",
+      "kind": "announcement",
+      "detectedAt": "2026-11-27T05:40:52.193Z",
+      "url": "https://modelstudio.console.alibabacloud.com/ap-southeast-1/subscription/coding-plan",
+      "before": null,
+      "after": {
+        "key": "text:6f3f59c983247a0317df2b1fd6309a6f859b4f041d1b6483f5d79a287a71bf51",
+        "hash": "6f3f59c983247a0317df2b1fd6309a6f859b4f041d1b6483f5d79a287a71bf51",
+        "type": "announcement",
+        "signals": [
+          "pricing",
+          "availability"
+        ],
+        "models": [],
+        "url": "https://modelstudio.console.alibabacloud.com/ap-southeast-1/subscription/coding-plan"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "c39314c03fd9712a4177ca3c1a6ec6b16e0cde2c84aaf7a424f8f49f6c1256eb",
+      "sourceId": "alibaba-coding-global",
+      "channel": "Alibaba",
+      "kind": "announcement",
+      "detectedAt": "2026-11-27T05:40:52.193Z",
+      "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan",
+      "before": null,
+      "after": {
+        "key": "text:589e9ef17adaad2b10539bc03d500b4c4c8086f5ffee43c20d5517a1c5c36d25",
+        "hash": "589e9ef17adaad2b10539bc03d500b4c4c8086f5ffee43c20d5517a1c5c36d25",
+        "type": "announcement",
+        "signals": [
+          "pricing"
+        ],
+        "models": [],
+        "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "8122d768b220708a6807eac98a515345dadda2f7459ad56cb05574af2d2c33c0",
+      "sourceId": "alibaba-coding-global",
+      "channel": "Alibaba",
+      "kind": "announcement",
+      "detectedAt": "2026-11-27T05:40:52.193Z",
+      "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan",
+      "before": null,
+      "after": {
+        "key": "text:60d7040a4e089ae80fc3b644700c96899def93442e9cca81fe5a5695984292c6",
+        "hash": "60d7040a4e089ae80fc3b644700c96899def93442e9cca81fe5a5695984292c6",
+        "type": "announcement",
+        "signals": [
+          "pricing",
+          "availability"
+        ],
+        "models": [],
+        "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "3d4f9c66bdc4f373bb5f7b180fcfe3844d9660e5929a3458c874a3f604ab7ce3",
+      "sourceId": "alibaba-coding-global",
+      "channel": "Alibaba",
+      "kind": "announcement",
+      "detectedAt": "2026-11-27T05:40:52.193Z",
+      "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan",
+      "before": null,
+      "after": {
+        "key": "text:57d98d2e0ae109cf8caaba1043167e521c8cf166d13db4df216422d22ae1dea9",
+        "hash": "57d98d2e0ae109cf8caaba1043167e521c8cf166d13db4df216422d22ae1dea9",
+        "type": "announcement",
+        "signals": [
+          "pricing"
+        ],
+        "models": [],
+        "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "a4d563ba73da767ca9b762d089f55b360ddcf965fda9773af367b406da9d96c6",
+      "sourceId": "alibaba-coding-global",
+      "channel": "Alibaba",
+      "kind": "announcement",
+      "detectedAt": "2026-11-27T05:40:52.193Z",
+      "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan",
+      "before": null,
+      "after": {
+        "key": "text:8abb825845f3b877b38f965e453ec95c9b11c61f7a8c08aaf8148c2a03fffd85",
+        "hash": "8abb825845f3b877b38f965e453ec95c9b11c61f7a8c08aaf8148c2a03fffd85",
+        "type": "announcement",
+        "signals": [
+          "pricing"
+        ],
+        "models": [],
+        "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "229e788d49b62c41425b3029a02d7fd9e8bdf1d32a7ce015bac0c28132061e57",
+      "sourceId": "alibaba-coding-global",
+      "channel": "Alibaba",
+      "kind": "announcement",
+      "detectedAt": "2026-11-27T05:40:52.193Z",
+      "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan",
+      "before": null,
+      "after": {
+        "key": "text:5d841a7cf27896a00983a7837d2c51cd2b84b44e5896055451c1ff442ab1aaad",
+        "hash": "5d841a7cf27896a00983a7837d2c51cd2b84b44e5896055451c1ff442ab1aaad",
+        "type": "announcement",
+        "signals": [],
+        "models": [
+          "Step 1: Subscribe to the Coding Plan"
+        ],
+        "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "44cefbcc4c5b27a4f263ea747d95d1f4a38ed2a618e5165144bfc8fddefd34c8",
+      "sourceId": "alibaba-coding-global",
+      "channel": "Alibaba",
+      "kind": "announcement",
+      "detectedAt": "2026-11-27T05:40:52.193Z",
+      "url": "https://common-buy-intl.alibabacloud.com/coding-plan/",
+      "before": null,
+      "after": {
+        "key": "text:92f1b0a9606fbe31283ceba1791d42786f598f061a60a0636a1ae416e482028e",
+        "hash": "92f1b0a9606fbe31283ceba1791d42786f598f061a60a0636a1ae416e482028e",
+        "type": "announcement",
+        "signals": [],
+        "models": [],
+        "url": "https://common-buy-intl.alibabacloud.com/coding-plan/"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "21e6d2fead820c39f8e22ab54f43e1438a3ebe52f3ad690ddb66cf4bc0f6f5c5",
+      "sourceId": "alibaba-coding-global",
+      "channel": "Alibaba",
+      "kind": "announcement",
+      "detectedAt": "2026-11-27T05:40:52.193Z",
+      "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan",
+      "before": null,
+      "after": {
+        "key": "text:27417de29091e30240ca8d68ad6a0e2edaf402d5dd196b4e2b7fbb6281fd0402",
+        "hash": "27417de29091e30240ca8d68ad6a0e2edaf402d5dd196b4e2b7fbb6281fd0402",
+        "type": "announcement",
+        "signals": [],
+        "models": [
+          "Step 2: Obtain the plan API Key and Base URL"
+        ],
+        "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "c3c85f84ebf77b1c32da20a8b8818ac469c6c7e12d2fc02eba43769fb7ec8110",
+      "sourceId": "alibaba-coding-global",
+      "channel": "Alibaba",
+      "kind": "announcement",
+      "detectedAt": "2026-11-27T05:40:52.193Z",
+      "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan",
+      "before": null,
+      "after": {
+        "key": "text:0e3c613b5ff4b46fdff92d7a1c0207b2d502357b7daf07733211c71cddfd4e8a",
+        "hash": "0e3c613b5ff4b46fdff92d7a1c0207b2d502357b7daf07733211c71cddfd4e8a",
+        "type": "announcement",
+        "signals": [
+          "pricing"
+        ],
+        "models": [],
+        "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "5aa3597c38df6110b066673faf376bf0486b77f121f8e7cf7cc5e10890bd81a2",
+      "sourceId": "alibaba-coding-global",
+      "channel": "Alibaba",
+      "kind": "announcement",
+      "detectedAt": "2026-11-27T05:40:52.193Z",
+      "url": "https://modelstudio.console.alibabacloud.com/ap-southeast-1/subscription/coding-plan",
+      "before": null,
+      "after": {
+        "key": "text:ea99ed90ee7370e93ad8d153df7c4b85e55680575dc180906b81f938a1a066e1",
+        "hash": "ea99ed90ee7370e93ad8d153df7c4b85e55680575dc180906b81f938a1a066e1",
+        "type": "announcement",
+        "signals": [],
+        "models": [],
+        "url": "https://modelstudio.console.alibabacloud.com/ap-southeast-1/subscription/coding-plan"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "bb67a80df36c7c6669b89847fb5e4cd022b5bc1632de1e31c67ea8095987a4b8",
+      "sourceId": "alibaba-coding-global",
+      "channel": "Alibaba",
+      "kind": "announcement",
+      "detectedAt": "2026-11-27T05:40:52.193Z",
+      "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan",
+      "before": null,
+      "after": {
+        "key": "text:4ce8cc4104707fcdb346293a40530afd37255aada80391ff1a9c3286e90cec9d",
+        "hash": "4ce8cc4104707fcdb346293a40530afd37255aada80391ff1a9c3286e90cec9d",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [],
+        "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "37e3b0960fae4e46efa51aaef48e15042c6810aec151089e5915f96da219a3b0",
+      "sourceId": "alibaba-coding-global",
+      "channel": "Alibaba",
+      "kind": "announcement",
+      "detectedAt": "2026-11-27T05:40:52.193Z",
+      "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan",
+      "before": null,
+      "after": {
+        "key": "text:cdaf75d6ee775eb47353e05a2fc60e8e42caf0ed0c1a31928d7ae58317ec5dc8",
+        "hash": "cdaf75d6ee775eb47353e05a2fc60e8e42caf0ed0c1a31928d7ae58317ec5dc8",
+        "type": "announcement",
+        "signals": [],
+        "models": [
+          "Step 3: Connect an AI tool"
+        ],
+        "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "c953d4d48686ef99c9be59be0565f49b7043f566dd54b8483675bec66caa910c",
+      "sourceId": "alibaba-coding-global",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-27T05:40:52.193Z",
+      "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan#products",
+      "before": null,
+      "after": {
+        "key": "row:v2:77ecdb0c29c33783:0:OpenCode Open-source AI coding agent tool:0",
+        "type": "table-row",
+        "label": "OpenCode Open-source AI coding agent tool",
+        "heading": "Step 3: Connect an AI tool",
+        "columns": [
+          "OpenClaw Open-source, self-hosted personal AI assistant",
+          "Hermes Agent Open-source AI agent framework with a built-in self-learning loop",
+          "Claude Code Terminal AI coding assistant that supports natural language programming"
+        ],
+        "cells": [
+          "OpenCode Open-source AI coding agent tool",
+          "Cursor AI-native code editor",
+          "Codex Command-line coding tool released by OpenAI"
+        ],
+        "signals": [
+          "availability"
+        ],
+        "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan#products",
+        "hash": "75c7b72ae61fe48b66de02c97dded4d9a1311b0e77bc1100ed5b117ca5c5c1e6"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "e557368bf80f6404d354ffd0bb2ed5e2c0a464d271fcc8dbaa75494b378dab16",
+      "sourceId": "alibaba-coding-global",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-27T05:40:52.193Z",
+      "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan#products",
+      "before": null,
+      "after": {
+        "key": "row:v2:77ecdb0c29c33783:0:Qwen Code Open-source command-line AI coding tool:0",
+        "type": "table-row",
+        "label": "Qwen Code Open-source command-line AI coding tool",
+        "heading": "Step 3: Connect an AI tool",
+        "columns": [
+          "OpenClaw Open-source, self-hosted personal AI assistant",
+          "Hermes Agent Open-source AI agent framework with a built-in self-learning loop",
+          "Claude Code Terminal AI coding assistant that supports natural language programming"
+        ],
+        "cells": [
+          "Qwen Code Open-source command-line AI coding tool",
+          "QwenPaw Open-source personal AI assistant that supports both local and cloud deployment",
+          "Cherry Studio Multi-model desktop client"
+        ],
+        "signals": [
+          "availability"
+        ],
+        "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan#products",
+        "hash": "4df7ccb435adbd0c41cdb7375be2c4274ce986da88c437ce8251b1cc90fa918f"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "e72d3751374c5b31a90ff62ae9573ae8b763dac47104e964bf09500b07f3eeb4",
+      "sourceId": "alibaba-coding-global",
+      "channel": "Alibaba",
+      "kind": "terms-changed",
+      "detectedAt": "2026-11-27T05:40:52.193Z",
+      "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan#products",
+      "before": {
+        "key": "row:v2:77ecdb0c29c33783:0:Chatbox Cross-platform AI desktop client:0",
+        "type": "table-row",
+        "label": "Chatbox Cross-platform AI desktop client",
+        "heading": "Step 3: Integrate with an AI tool",
+        "columns": [
+          "OpenClaw Open-source, self-hosted personal AI assistant",
+          "Hermes Agent Open-source AI agent framework with built-in self-learning loop",
+          "Claude Code AI terminal coding assistant that supports natural language programming"
+        ],
+        "cells": [
+          "Chatbox Cross-platform AI desktop client",
+          "Cline VS Code extension for intelligent code completion and debugging",
+          "Qoder Agentic coding platform for real-world software development"
+        ],
+        "signals": [],
+        "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan#products",
+        "hash": "6f4b0ac70eeedc618d903a43e7fa8a1ef850f2ccad500fbd8e5f52b5c11cb97b"
+      },
+      "after": {
+        "key": "row:v2:77ecdb0c29c33783:0:Chatbox Cross-platform AI desktop client:0",
+        "type": "table-row",
+        "label": "Chatbox Cross-platform AI desktop client",
+        "heading": "Step 3: Connect an AI tool",
+        "columns": [
+          "OpenClaw Open-source, self-hosted personal AI assistant",
+          "Hermes Agent Open-source AI agent framework with a built-in self-learning loop",
+          "Claude Code Terminal AI coding assistant that supports natural language programming"
+        ],
+        "cells": [
+          "Chatbox Cross-platform AI desktop client",
+          "Cline VS Code extension with intelligent code completion and debugging",
+          "Qoder Agentic coding platform for real-world software development"
+        ],
+        "signals": [],
+        "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan#products",
+        "hash": "7bbd79c321a3901607548fd91114f231ba7ba99e8ffe3a1dd9e3fcf7f0b5bbf9"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "1a2d5eccf89c907bdfc37c084b36613ef1afdf9c3268abd33b1cb2a31efee8bc",
+      "sourceId": "alibaba-coding-global",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-27T05:40:52.193Z",
+      "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan#products",
+      "before": null,
+      "after": {
+        "key": "row:v2:77ecdb0c29c33783:0:Kilo CLI Lightweight, high-performance command-line coding tool:0",
+        "type": "table-row",
+        "label": "Kilo CLI Lightweight, high-performance command-line coding tool",
+        "heading": "Step 3: Connect an AI tool",
+        "columns": [
+          "OpenClaw Open-source, self-hosted personal AI assistant",
+          "Hermes Agent Open-source AI agent framework with a built-in self-learning loop",
+          "Claude Code Terminal AI coding assistant that supports natural language programming"
+        ],
+        "cells": [
+          "Kilo CLI Lightweight, high-performance command-line coding tool",
+          "WorkBuddy Desktop AI Agent Dashboard"
+        ],
+        "signals": [
+          "version"
+        ],
+        "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan#products",
+        "hash": "4156fca9eb7030b262c354b8f083e0c66d9609f12c8a46e6a10147be044ec01c"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "c6115ca6e63c7ede101ef71c7ffc21d7cfe7dd81883cd45df1cb2e54bd313557",
+      "sourceId": "alibaba-coding-global",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-added",
+      "detectedAt": "2026-11-27T05:40:52.193Z",
+      "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan#products",
+      "before": null,
+      "after": {
+        "key": "row:v2:77ecdb0c29c33783:0:More tools Other coding tools:0",
+        "type": "table-row",
+        "label": "More tools Other coding tools",
+        "heading": "Step 3: Connect an AI tool",
+        "columns": [
+          "OpenClaw Open-source, self-hosted personal AI assistant",
+          "Hermes Agent Open-source AI agent framework with a built-in self-learning loop",
+          "Claude Code Terminal AI coding assistant that supports natural language programming"
+        ],
+        "cells": [
+          "More tools Other coding tools"
+        ],
+        "signals": [],
+        "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan#products",
+        "hash": "b4c1c379d7c3e3937fe493c2bf3a78e5db222a6004c165a2404c8381c520cc9a"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "cf1998eb78275ea2944b4f27a9e2a2f32b1c7be5a1a8a640f02782643f3ae54b",
+      "sourceId": "alibaba-coding-global",
+      "channel": "Alibaba",
+      "kind": "announcement",
+      "detectedAt": "2026-11-27T05:40:52.193Z",
+      "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan",
+      "before": null,
+      "after": {
+        "key": "text:2eec00a3c440963d85df87309965d56246ffddcf3ded8952cbe5bd7c6012b7fa",
+        "hash": "2eec00a3c440963d85df87309965d56246ffddcf3ded8952cbe5bd7c6012b7fa",
+        "type": "announcement",
+        "signals": [],
+        "models": [
+          "Step 4: Get Started"
+        ],
+        "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "09f2873c5d9cc63eb18ad24df56e0fcf5a7cd2b34d1960dc751f42add9fc7d29",
+      "sourceId": "alibaba-coding-global",
+      "channel": "Alibaba",
+      "kind": "announcement",
+      "detectedAt": "2026-11-27T05:40:52.193Z",
+      "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan",
+      "before": null,
+      "after": {
+        "key": "text:789f522338a842f727fc41e5666861380e9a644b697b10fcd3ad4ced3a0efa67",
+        "hash": "789f522338a842f727fc41e5666861380e9a644b697b10fcd3ad4ced3a0efa67",
+        "type": "announcement",
+        "signals": [],
+        "models": [],
+        "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "44db0b5bc8869c064b7b5b354e0a2e7afb240fa608beb65c46cafc58a1239fe5",
+      "sourceId": "alibaba-coding-global",
+      "channel": "Alibaba",
+      "kind": "announcement",
+      "detectedAt": "2026-11-27T05:40:52.193Z",
+      "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan",
+      "before": null,
+      "after": {
+        "key": "text:e632cae15dc849e1f90b32e252afa96c6ddfbc38935a600def3baf3977aed604",
+        "hash": "e632cae15dc849e1f90b32e252afa96c6ddfbc38935a600def3baf3977aed604",
+        "type": "announcement",
+        "signals": [],
+        "models": [
+          "Claude Code"
+        ],
+        "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "7738afcaabb98fc075abc47b747f1af1d48096b2f1749c8d407d32b949a22e75",
+      "sourceId": "alibaba-coding-global",
+      "channel": "Alibaba",
+      "kind": "announcement",
+      "detectedAt": "2026-11-27T05:40:52.193Z",
+      "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan",
+      "before": null,
+      "after": {
+        "key": "text:a2ec7af14f6f78dcbaef2c4c6addc62fdcb7b295ec87c01a387df4d87bac53a4",
+        "hash": "a2ec7af14f6f78dcbaef2c4c6addc62fdcb7b295ec87c01a387df4d87bac53a4",
+        "type": "announcement",
+        "signals": [],
+        "models": [],
+        "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "f844416ca700f819c892ae592ef60fed55d3e731a27d4b1372f3bd93918712f6",
+      "sourceId": "alibaba-coding-global",
+      "channel": "Alibaba",
+      "kind": "announcement",
+      "detectedAt": "2026-11-27T05:40:52.193Z",
+      "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan",
+      "before": null,
+      "after": {
+        "key": "text:6ecf5c6eba10ee64d4e3e15006f83faf602139e5e63b8711c235149556d950b4",
+        "hash": "6ecf5c6eba10ee64d4e3e15006f83faf602139e5e63b8711c235149556d950b4",
+        "type": "announcement",
+        "signals": [],
+        "models": [],
+        "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "c4fd6f5ed5b4a8c11fabf77c1547e36edc3d973bf67714856be8436cb39a8797",
+      "sourceId": "alibaba-coding-global",
+      "channel": "Alibaba",
+      "kind": "announcement",
+      "detectedAt": "2026-11-27T05:40:52.193Z",
+      "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan#2531c37fd64f9",
+      "before": null,
+      "after": {
+        "key": "text:54b86b29d56989c2cb19731ff6b73f641506c5fe8c988747aa2d0bce021427ff",
+        "hash": "54b86b29d56989c2cb19731ff6b73f641506c5fe8c988747aa2d0bce021427ff",
+        "type": "announcement",
+        "signals": [
+          "availability"
+        ],
+        "models": [],
+        "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan#2531c37fd64f9"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "3a53d3625f1df6c591f9438ec88fcd02dd7a3ba761e7c7000c5d1842514a748c",
+      "sourceId": "alibaba-coding-global",
+      "channel": "Alibaba",
+      "kind": "announcement",
+      "detectedAt": "2026-11-27T05:40:52.193Z",
+      "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan",
+      "before": null,
+      "after": {
+        "key": "text:67024aa0e1fc6295d6fbb15daf626ce043513b924aa6c4aa67c08510eb238be6",
+        "hash": "67024aa0e1fc6295d6fbb15daf626ce043513b924aa6c4aa67c08510eb238be6",
+        "type": "announcement",
+        "signals": [],
+        "models": [],
+        "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "2eb8ba7e811e89e346e07397b6b4070e7bbd2008025ba070799008af68eb3d48",
+      "sourceId": "alibaba-coding-global",
+      "channel": "Alibaba",
+      "kind": "announcement",
+      "detectedAt": "2026-11-27T05:40:52.193Z",
+      "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan",
+      "before": null,
+      "after": {
+        "key": "text:d2c59a25e92973a8f42669cec6856dc631cb00788c2f1af7d461a856f6508a92",
+        "hash": "d2c59a25e92973a8f42669cec6856dc631cb00788c2f1af7d461a856f6508a92",
+        "type": "announcement",
+        "signals": [],
+        "models": [],
+        "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "f3aab3decaff4ac29d17bf23c9809c4b8e8a14444e08a82cccb99118c222c550",
+      "sourceId": "alibaba-coding-global",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-27T05:40:52.193Z",
+      "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan",
+      "before": {
+        "key": "row:v2:f804326d606ffbc0:0:Price:0",
+        "type": "table-row",
+        "label": "Price",
+        "heading": "Plan details",
+        "columns": [
+          "",
+          "Pro"
+        ],
+        "cells": [
+          "Price",
+          "$ 50 /month"
+        ],
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan#products",
+        "hash": "700996dbd2dba2fa83117278eaeb1d781eee6b32def16a7c4778b4b4a5a092da"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "c3361173fab01c8ac1f96d1ff6f858ec418e3ad5a44137a8bfbc7dcc08864314",
+      "sourceId": "alibaba-coding-global",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-27T05:40:52.193Z",
+      "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan",
+      "before": {
+        "key": "row:v2:f804326d606ffbc0:0:Quota:0",
+        "type": "table-row",
+        "label": "Quota",
+        "heading": "Plan details",
+        "columns": [
+          "",
+          "Pro"
+        ],
+        "cells": [
+          "Quota",
+          "Up to 6,000 requests per 5 hours Up to 45,000 requests per week Up to 90,000 requests per month"
+        ],
+        "signals": [
+          "pricing"
+        ],
+        "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan#products",
+        "hash": "4a6414aad1257ded934b15fd8a7bca358a4ab6473510678e07b01a342324b2c6"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "a6205219fd2938220b13b336afb75781ad8c2062fa5e46908c9545702e66659d",
+      "sourceId": "alibaba-coding-global",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-27T05:40:52.193Z",
+      "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan",
+      "before": {
+        "key": "row:v2:77ecdb0c29c33783:0:OpenCode Open-source AI programming agent tool:0",
+        "type": "table-row",
+        "label": "OpenCode Open-source AI programming agent tool",
+        "heading": "Step 3: Integrate with an AI tool",
+        "columns": [
+          "OpenClaw Open-source, self-hosted personal AI assistant",
+          "Hermes Agent Open-source AI agent framework with built-in self-learning loop",
+          "Claude Code AI terminal coding assistant that supports natural language programming"
+        ],
+        "cells": [
+          "OpenCode Open-source AI programming agent tool",
+          "Cursor AI-native code editor",
+          "Codex Command-line programming tool from OpenAI"
+        ],
+        "signals": [],
+        "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan#products",
+        "hash": "657e9547dc1cf7b6eed6762c49f44ebae705522717d1d703afdafa36819e86e4"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "40576d993dc3232c28007090d27430d72102ce269284aae63f8395c6d6313508",
+      "sourceId": "alibaba-coding-global",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-27T05:40:52.193Z",
+      "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan",
+      "before": {
+        "key": "row:v2:77ecdb0c29c33783:0:Qwen Code Open-source CLI coding tool:0",
+        "type": "table-row",
+        "label": "Qwen Code Open-source CLI coding tool",
+        "heading": "Step 3: Integrate with an AI tool",
+        "columns": [
+          "OpenClaw Open-source, self-hosted personal AI assistant",
+          "Hermes Agent Open-source AI agent framework with built-in self-learning loop",
+          "Claude Code AI terminal coding assistant that supports natural language programming"
+        ],
+        "cells": [
+          "Qwen Code Open-source CLI coding tool",
+          "QwenPaw Open-source personal AI assistant with local and cloud deployment",
+          "Cherry Studio Multi-model desktop client"
+        ],
+        "signals": [
+          "availability"
+        ],
+        "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan#products",
+        "hash": "8644a2136f91e5e80ebabebcb9b971bd43bd6a15a089737c447ff1589ac366e7"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "8acadba22cd374fda8c725d4d990b6b7393e4f4482445eb77903199b1ca1d19d",
+      "sourceId": "alibaba-coding-global",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-27T05:40:52.193Z",
+      "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan",
+      "before": {
+        "key": "row:v2:77ecdb0c29c33783:0:Kilo CLI Lightweight, high-performance command-line programming tool:0",
+        "type": "table-row",
+        "label": "Kilo CLI Lightweight, high-performance command-line programming tool",
+        "heading": "Step 3: Integrate with an AI tool",
+        "columns": [
+          "OpenClaw Open-source, self-hosted personal AI assistant",
+          "Hermes Agent Open-source AI agent framework with built-in self-learning loop",
+          "Claude Code AI terminal coding assistant that supports natural language programming"
+        ],
+        "cells": [
+          "Kilo CLI Lightweight, high-performance command-line programming tool",
+          "WorkBuddy Desktop AI agent workbench"
+        ],
+        "signals": [
+          "version"
+        ],
+        "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan#products",
+        "hash": "fc154d320405d1e24c845b25c6c8d5a080f013908c73d7cd7d882c29bb794f09"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "c005b7bf568b9ac37024462e619037f36fa9bf83b2ad173eab00fe476f054d8d",
+      "sourceId": "alibaba-coding-global",
+      "channel": "Alibaba",
+      "kind": "model-or-plan-removed",
+      "detectedAt": "2026-11-27T05:40:52.193Z",
+      "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan",
+      "before": {
+        "key": "row:v2:77ecdb0c29c33783:0:More tools Other programming tools:0",
+        "type": "table-row",
+        "label": "More tools Other programming tools",
+        "heading": "Step 3: Integrate with an AI tool",
+        "columns": [
+          "OpenClaw Open-source, self-hosted personal AI assistant",
+          "Hermes Agent Open-source AI agent framework with built-in self-learning loop",
+          "Claude Code AI terminal coding assistant that supports natural language programming"
+        ],
+        "cells": [
+          "More tools Other programming tools"
+        ],
+        "signals": [],
+        "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan#products",
+        "hash": "f1b83b9fc404bf29189adb1a78a621c9cea53a7c47dbc4548be7bd4118df5ae0"
+      },
+      "after": null,
+      "status": "pending"
+    },
+    {
+      "id": "56a74ad4d222f22d099ac1ba6391a4a69f61fe33ffa0ee8202a951cd0e462e6a",
+      "sourceId": "opencode-social",
+      "channel": "OpenCode",
+      "kind": "announcement",
+      "detectedAt": "2026-11-27T05:40:52.193Z",
+      "url": "https://x.com/opencode/status/2125885121282593220",
+      "before": null,
+      "after": {
+        "key": "post:2125885121282593220",
+        "type": "announcement",
+        "hash": "63b1f71e74193c044259f95a6057c137f488024d87e18afc23ef25b50cb400ff",
+        "signals": [
+          "promotion"
+        ],
+        "models": [],
+        "url": "https://x.com/opencode/status/2125885121282593220",
+        "relevant": true
+      },
+      "status": "pending"
+    },
+    {
+      "id": "af132da7ca633b0490a5c1fb5ca968baa71701e3b62ef37145c1c9d838d0442a",
+      "sourceId": "command-code-social",
+      "channel": "Command Code",
+      "kind": "announcement",
+      "detectedAt": "2026-11-27T05:40:52.193Z",
+      "url": "https://x.com/CommandCodeAI/status/2126150469995442292",
+      "before": null,
+      "after": {
+        "key": "post:2126150469995442292",
+        "type": "announcement",
+        "hash": "971eda37ae3048e128a75501d37beb3a40455d016c98e93ee86ea897367b80e7",
+        "signals": [
+          "availability"
+        ],
+        "models": [
+          "GLM-5.3 Flash: 70",
+          "GLM-5.3: 65",
+          "DeepSeek V4.1 Flash: 60",
+          "Kimi K3: 40"
+        ],
+        "url": "https://x.com/CommandCodeAI/status/2126150469995442292",
+        "relevant": true
+      },
+      "status": "pending"
     }
   ],
   "resolvedCount": 433,
@@ -24269,12 +25251,12 @@
       "channel": "OpenCode",
       "url": "https://opencode.ai/v2/docs/console/go/",
       "kind": "tables",
-      "attemptedAt": "2026-11-26T08:38:34.794Z",
+      "attemptedAt": "2026-11-27T05:40:52.193Z",
       "lastSuccessAt": "2026-11-16T06:49:25.500Z",
       "status": "failed",
-      "consecutiveFailures": 10,
+      "consecutiveFailures": 11,
       "retrieval": "http",
-      "error": "Source structure changed: 54 records, expected at least 60; fallback: Source structure changed: 54 records, expected at least 60",
+      "error": "Source structure changed: 55 records, expected at least 60; fallback: Source structure changed: 55 records, expected at least 60",
       "recordCount": 419
     },
     {
@@ -24282,8 +25264,8 @@
       "channel": "OpenCode",
       "url": "https://opencode.ai/changelog",
       "kind": "document",
-      "attemptedAt": "2026-11-26T08:38:34.794Z",
-      "lastSuccessAt": "2026-11-26T08:38:34.794Z",
+      "attemptedAt": "2026-11-27T05:40:52.193Z",
+      "lastSuccessAt": "2026-11-27T05:40:52.193Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -24294,8 +25276,8 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/go",
       "kind": "tables",
-      "attemptedAt": "2026-11-26T08:38:34.794Z",
-      "lastSuccessAt": "2026-11-26T08:38:34.794Z",
+      "attemptedAt": "2026-11-27T05:40:52.193Z",
+      "lastSuccessAt": "2026-11-27T05:40:52.193Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -24306,8 +25288,8 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/goat",
       "kind": "tables",
-      "attemptedAt": "2026-11-26T08:38:34.794Z",
-      "lastSuccessAt": "2026-11-26T08:38:34.794Z",
+      "attemptedAt": "2026-11-27T05:40:52.193Z",
+      "lastSuccessAt": "2026-11-27T05:40:52.193Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -24318,8 +25300,8 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/pro",
       "kind": "tables",
-      "attemptedAt": "2026-11-26T08:38:34.794Z",
-      "lastSuccessAt": "2026-11-26T08:38:34.794Z",
+      "attemptedAt": "2026-11-27T05:40:52.193Z",
+      "lastSuccessAt": "2026-11-27T05:40:52.193Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -24330,8 +25312,8 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/plans/max",
       "kind": "tables",
-      "attemptedAt": "2026-11-26T08:38:34.794Z",
-      "lastSuccessAt": "2026-11-26T08:38:34.794Z",
+      "attemptedAt": "2026-11-27T05:40:52.193Z",
+      "lastSuccessAt": "2026-11-27T05:40:52.193Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -24342,8 +25324,8 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/reference/cli/models",
       "kind": "tables",
-      "attemptedAt": "2026-11-26T08:38:34.794Z",
-      "lastSuccessAt": "2026-11-26T08:38:34.794Z",
+      "attemptedAt": "2026-11-27T05:40:52.193Z",
+      "lastSuccessAt": "2026-11-27T05:40:52.193Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -24354,8 +25336,8 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/docs/resources/pricing-limits",
       "kind": "tables",
-      "attemptedAt": "2026-11-26T08:38:34.794Z",
-      "lastSuccessAt": "2026-11-26T08:38:34.794Z",
+      "attemptedAt": "2026-11-27T05:40:52.193Z",
+      "lastSuccessAt": "2026-11-27T05:40:52.193Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -24366,20 +25348,20 @@
       "channel": "Command Code",
       "url": "https://commandcode.ai/changelog",
       "kind": "document",
-      "attemptedAt": "2026-11-26T08:38:34.794Z",
-      "lastSuccessAt": "2026-11-26T08:38:34.794Z",
+      "attemptedAt": "2026-11-27T05:40:52.193Z",
+      "lastSuccessAt": "2026-11-27T05:40:52.193Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 411
+      "recordCount": 412
     },
     {
       "id": "ollama-pricing",
       "channel": "Ollama",
       "url": "https://ollama.com/pricing",
       "kind": "tables",
-      "attemptedAt": "2026-11-26T08:38:34.794Z",
-      "lastSuccessAt": "2026-11-26T08:38:34.794Z",
+      "attemptedAt": "2026-11-27T05:40:52.193Z",
+      "lastSuccessAt": "2026-11-27T05:40:52.193Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -24390,8 +25372,8 @@
       "channel": "Ollama",
       "url": "https://ollama.com/blog",
       "kind": "document",
-      "attemptedAt": "2026-11-26T08:38:34.794Z",
-      "lastSuccessAt": "2026-11-26T08:38:34.794Z",
+      "attemptedAt": "2026-11-27T05:40:52.193Z",
+      "lastSuccessAt": "2026-11-27T05:40:52.193Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -24402,8 +25384,8 @@
       "channel": "Factory",
       "url": "https://docs.factory.com/models.md",
       "kind": "tables",
-      "attemptedAt": "2026-11-26T08:38:34.794Z",
-      "lastSuccessAt": "2026-11-26T08:38:34.794Z",
+      "attemptedAt": "2026-11-27T05:40:52.193Z",
+      "lastSuccessAt": "2026-11-27T05:40:52.193Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -24414,8 +25396,8 @@
       "channel": "Factory",
       "url": "https://docs.factory.com/pricing/individuals.md",
       "kind": "document",
-      "attemptedAt": "2026-11-26T08:38:34.794Z",
-      "lastSuccessAt": "2026-11-26T08:38:34.794Z",
+      "attemptedAt": "2026-11-27T05:40:52.193Z",
+      "lastSuccessAt": "2026-11-27T05:40:52.193Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -24426,8 +25408,8 @@
       "channel": "Factory",
       "url": "https://docs.factory.com/changelog/release-notes.md",
       "kind": "document",
-      "attemptedAt": "2026-11-26T08:38:34.794Z",
-      "lastSuccessAt": "2026-11-26T08:38:34.794Z",
+      "attemptedAt": "2026-11-27T05:40:52.193Z",
+      "lastSuccessAt": "2026-11-27T05:40:52.193Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -24438,8 +25420,8 @@
       "channel": "Cursor",
       "url": "https://cursor.com/docs/models-and-pricing",
       "kind": "tables",
-      "attemptedAt": "2026-11-26T08:38:34.794Z",
-      "lastSuccessAt": "2026-11-26T08:38:34.794Z",
+      "attemptedAt": "2026-11-27T05:40:52.193Z",
+      "lastSuccessAt": "2026-11-27T05:40:52.193Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -24450,8 +25432,8 @@
       "channel": "Cursor",
       "url": "https://cursor.com/changelog",
       "kind": "document",
-      "attemptedAt": "2026-11-26T08:38:34.794Z",
-      "lastSuccessAt": "2026-11-26T08:38:34.794Z",
+      "attemptedAt": "2026-11-27T05:40:52.193Z",
+      "lastSuccessAt": "2026-11-27T05:40:52.193Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -24462,8 +25444,8 @@
       "channel": "Devin",
       "url": "https://docs.devin.ai/release-notes/overview",
       "kind": "document",
-      "attemptedAt": "2026-11-26T08:38:34.794Z",
-      "lastSuccessAt": "2026-11-26T08:38:34.794Z",
+      "attemptedAt": "2026-11-27T05:40:52.193Z",
+      "lastSuccessAt": "2026-11-27T05:40:52.193Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -24474,20 +25456,20 @@
       "channel": "Alibaba",
       "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan",
       "kind": "tables",
-      "attemptedAt": "2026-11-26T08:38:34.794Z",
-      "lastSuccessAt": "2026-11-26T08:38:34.794Z",
+      "attemptedAt": "2026-11-27T05:40:52.193Z",
+      "lastSuccessAt": "2026-11-27T05:40:52.193Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
-      "recordCount": 41
+      "recordCount": 40
     },
     {
       "id": "alibaba-coding-cn",
       "channel": "Alibaba",
       "url": "https://help.aliyun.com/zh/model-studio/coding-plan",
       "kind": "tables",
-      "attemptedAt": "2026-11-26T08:38:34.794Z",
-      "lastSuccessAt": "2026-11-26T08:38:34.794Z",
+      "attemptedAt": "2026-11-27T05:40:52.193Z",
+      "lastSuccessAt": "2026-11-27T05:40:52.193Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -24498,8 +25480,8 @@
       "channel": "Alibaba",
       "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
       "kind": "tables",
-      "attemptedAt": "2026-11-26T08:38:34.794Z",
-      "lastSuccessAt": "2026-11-26T08:38:34.794Z",
+      "attemptedAt": "2026-11-27T05:40:52.193Z",
+      "lastSuccessAt": "2026-11-27T05:40:52.193Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "http",
@@ -24510,8 +25492,8 @@
       "channel": "OpenCode",
       "url": "https://x.com/opencode",
       "kind": "social",
-      "attemptedAt": "2026-11-26T08:38:34.794Z",
-      "lastSuccessAt": "2026-11-26T08:38:34.794Z",
+      "attemptedAt": "2026-11-27T05:40:52.193Z",
+      "lastSuccessAt": "2026-11-27T05:40:52.193Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "official-oembed; discovery may use mirror",
@@ -24522,8 +25504,8 @@
       "channel": "Command Code",
       "url": "https://x.com/CommandCodeAI",
       "kind": "social",
-      "attemptedAt": "2026-11-26T08:38:34.794Z",
-      "lastSuccessAt": "2026-11-26T08:38:34.794Z",
+      "attemptedAt": "2026-11-27T05:40:52.193Z",
+      "lastSuccessAt": "2026-11-27T05:40:52.193Z",
       "status": "checked",
       "consecutiveFailures": 0,
       "retrieval": "official-oembed; discovery may use mirror",
