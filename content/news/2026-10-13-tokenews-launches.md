@@ -15,11 +15,12 @@ Tokenews is a directory of the AI era: the models, the makers that build them an
 - **[Makers](/makers/)**: every company whose models we track, with all of their models and every plan that serves them.
 - **[Providers](/providers/)**: everyone who sells access — official subscriptions and APIs, and third parties such as coding plans — with each plan tier and the models it includes.
 - **[Models](/models/)**: each model's plans ranked by real price, its official API list price, its scores and ranks on independent leaderboards, and the evidence behind every number.
+- **[Comparisons](/compare/)**: head-to-head model comparisons covering real per-token cost across shared plans and independent leaderboard snapshots.
 - **[The explorer](/)**: price against capability on a Pareto chart, plus rankings and allowance comparisons.
 
 ## How a real price is computed
 
-A plan's real price is its monthly fee divided by the tokens you can actually use in a month, quoted in US dollars per million tokens. That turns subscriptions, coding plans and metered APIs into one comparable number, set against each model's official API list price. The [methodology](/#view=method) explains the workloads, conversions and confidence levels, and every figure links to its sources.
+A plan's real price is its monthly fee divided by the tokens you can actually use in a month, quoted in US dollars per million tokens. That turns subscriptions, coding plans and metered APIs into one comparable number, set against each model's official API list price. The [methodology](/methodology/) explains the workloads, conversions and confidence levels, and every figure links to its sources.
 
 ## Where the data comes from
 

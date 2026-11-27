@@ -129,6 +129,9 @@ export function SiteFooter({
         </span>
         <p>{TAGLINE[lang]}</p>
         <nav aria-label={t("Footer", "页脚")}>
+          <a href={compareIndexPath(lang)}>
+            {t("Comparisons", "模型对比")}
+          </a>
           <a href={methodologyPath(lang)} onClick={follow(onMethod)}>
             {t("Methodology", "方法与来源")}
           </a>
@@ -138,8 +141,9 @@ export function SiteFooter({
           </a>
           <a href="/data/points.json" download>
             {t("Open data", "开放数据")}
-            <ArrowUpRight size={12} />
           </a>
+          <a href="/news/feed.xml">RSS</a>
+          <a href="/llms.txt">llms.txt</a>
           <a href={REPO} target="_blank" rel="noreferrer">
             {t("Based on Real API Pricing (MIT)", "基于 Real API Pricing（MIT）")}
             <ArrowUpRight size={12} />

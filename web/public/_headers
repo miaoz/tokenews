@@ -7,14 +7,21 @@
 /og/*
   Cache-Control: public, max-age=86400
 
+/favicon.svg
+  Cache-Control: public, max-age=86400
+
 /pages.css
-  Cache-Control: public, max-age=0, must-revalidate
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
 
 /table-sort.js
-  Cache-Control: public, max-age=0, must-revalidate
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
 
 # Markdown copies of pages (build-pages.mjs): served as Markdown, pointing
 # search engines at the HTML page as the canonical one.
+/index.md
+  Content-Type: text/markdown; charset=utf-8
+  Link: <https://tokenews.xyz/>; rel="canonical"
+
 /*/index.md
   Content-Type: text/markdown; charset=utf-8
   Link: <https://tokenews.xyz/:splat/>; rel="canonical"

@@ -3,6 +3,8 @@ title: "A deep dive into Google Gemini 4 Argon: 1M-token Long Decode and frontie
 date: 2026-10-14
 summary: Gemini 4 Argon shares one 1M-token window across input, thinking and output, can generate up to 1M tokens with Long Decode, and launches at $2/$10 per MTok.
 makers: [Google]
+models: [gemini-4-argon]
+providers: [Google]
 tags: [release, pricing, benchmark]
 sources:
   - title: "Gemini 4 Argon: Built to solve your hardest problems (Google)"
@@ -21,7 +23,7 @@ sources:
     url: https://mixed-news.com/en/gemini-4-argon-price-2-10-per-million-tokens-not-on-sale/
 ---
 
-> **Executive Summary**: In Fall 2026, Google DeepMind unveiled **Gemini 4 Argon** (model ID: `gemini-4-argon`), the inaugural flagship model of the **Gemini 4** series. Engineered specifically for deep, long-horizon work across complex real-world domains, Gemini 4 Argon unifies **input, thinking, and output tokens within a single shared 1,048,576-token (1M) context window** and shatters the traditional 64K output bottleneck via its breakthrough **Long Decode** architecture—enabling up to **1 million generated tokens** in a single continuous trajectory. Setting new state-of-the-art (SOTA) records across long-horizon software engineering (**DeepSWE v1.1: 77.9%**), enterprise knowledge work (**Vals Index: 68.9, #1 overall**), long-video multimodal understanding (**LVBench: 91.7%**), and autonomous vulnerability remediation (**CWE-bench v1: 68.0%**), Gemini 4 Argon redefines what autonomous AI agents can accomplish in production.
+> **Executive Summary**: In Fall 2026, Google DeepMind unveiled **[Gemini 4 Argon](/models/gemini-4-argon/)** (model ID: `gemini-4-argon`), the inaugural flagship model of the **Gemini 4** series. Engineered specifically for deep, long-horizon work across complex real-world domains, Gemini 4 Argon unifies **input, thinking, and output tokens within a single shared 1,048,576-token (1M) context window** and shatters the traditional 64K output bottleneck via its breakthrough **Long Decode** architecture—enabling up to **1 million generated tokens** in a single continuous trajectory. Setting new state-of-the-art (SOTA) records across long-horizon software engineering (**DeepSWE v1.1: 77.9%**), enterprise knowledge work (**Vals Index: 68.9, #1 overall**), long-video multimodal understanding (**LVBench: 91.7%**), and autonomous vulnerability remediation (**CWE-bench v1: 68.0%**), Gemini 4 Argon redefines what autonomous AI agents can accomplish in production.
 
 ![Google Gemini 4 Argon: Architecture Overview](https://media.tokenews.xyz/news/gemini-4-argon-deep-dive/gemini-4-argon-hero-9bb284965d-1600.webp)
 
@@ -104,7 +106,7 @@ Across evaluations published by Google DeepMind and independent benchmark operat
 
 | Domain | Benchmark | Gemini 4 Argon Score | Standing / Comparison | What It Evaluates |
 | :--- | :--- | :---: | :--- | :--- |
-| **Deep Software Engineering** | **DeepSWE v1.1** | **77.9%** | **SOTA #1** (Surpasses GPT-6 Astra & Claude Opus 5.5 at ~74%) | Deep real-world software engineering tasks using the `mini-swe-agent` harness |
+| **Deep Software Engineering** | **DeepSWE v1.1** | **77.9%** | **SOTA #1** (Surpasses [GPT-6 Astra](/models/gpt-6-astra/) & [Claude Opus 5.5](/models/claude-opus-5-5/) at ~74%) | Deep real-world software engineering tasks using the `mini-swe-agent` harness |
 | **Long-Horizon SWE** | **FrontierSWE v2** | **55.0%** | Frontier Tier | Open-ended software engineering projects lasting hours to tens of hours |
 | **CLI Agent Workflows** | **Terminal-Bench 4.0** | **57.4%** | Frontier Tier | Long-horizon command-line planning, iteration, and tool coordination |
 | **Scientific CLI Agents** | **Terminal-Bench Science 0.1** | **57.6%** | Scientific Computing Lead | Agentic terminal-based workflows across scientific research domains |

@@ -21,6 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     outputs:
+      pushed: ${{ steps.push.outputs.pushed }}
       sha: ${{ steps.push.outputs.sha }}
     steps:
       - uses: actions/checkout@v7
@@ -52,10 +53,12 @@ jobs:
             git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
             git commit -m 'Update official announcement and coding plan watch'
             git push origin HEAD:main
+            echo "pushed=true" >> "$GITHUB_OUTPUT"
           fi
           echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
   deploy:
     needs: watch
+    if: needs.watch.outputs.pushed == 'true'
     uses: ./.github/workflows/deploy.yml
     with:
       ref: ${{ needs.watch.outputs.sha }}

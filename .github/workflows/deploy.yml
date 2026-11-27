@@ -51,7 +51,7 @@ jobs:
       - run: npm run build
       - run: npm test
       - run: npm run check
-      # Compare with the live sitemap before it is replaced.
+      # Compare with the live content manifest before it is replaced.
       - name: Find changed pages for IndexNow
         continue-on-error: true
         run: node scripts/indexnow.mjs diff > "$RUNNER_TEMP/indexnow.txt"

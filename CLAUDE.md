@@ -50,7 +50,7 @@ Inside `web/`: `npm run dev` (Vite dev server), `npm run data` (regenerate `web/
 
 Cloudflare Workers Static Assets, no Worker script: `wrangler.jsonc` (Worker `tokenews`, custom domain `tokenews.xyz`, `auto-trailing-slash`, `404-page`). `www-redirect/` is a separate Worker that 301s `www.tokenews.xyz` to the apex. `web/public/_headers` sets caching, `text/markdown` plus a canonical `Link` for the `index.md` copy every page gets (data pages converted from their HTML with turndown; news articles are their source Markdown), and `noindex` for `workers.dev` hosts (`wrangler dev` rewrites the host to the route, so that rule only tests without `routes`).
 
-GitHub Actions: `ci.yml` (PRs: build/test/check), `deploy.yml` (push to `main` → build/test/check → `npm run cf:deploy`, then `scripts/indexnow.mjs` submits pages whose sitemap `lastmod` changed to IndexNow, key file `web/public/<key>.txt`; secrets `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`), `sync-upstream.yml` (daily 02:17 UTC: sync; if data changed and checks pass, commit to `main` and call the deploy workflow; on failure or adapter change, open/comment an `upstream-sync` issue).
+GitHub Actions: `ci.yml` (PRs: build/test/check), `deploy.yml` (push to `main` → build/test/check → `npm run cf:deploy`, then `scripts/indexnow.mjs` diffs `web/dist/data/indexnow-manifest.json` against the live manifest and streams individual changed URLs via GET, skipping bulk template updates for `sitemap.xml`; key file `web/public/<key>.txt`; secrets `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`), `sync-upstream.yml` (daily 02:17 UTC: sync; if data changed and checks pass, commit to `main` and call the deploy workflow; on failure or adapter change, open/comment an `upstream-sync` issue).
 
 ## Conventions
 

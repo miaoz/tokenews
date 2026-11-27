@@ -34,7 +34,7 @@ function render(markdown, image) {
     return id;
   };
   const img = (href, text) => {
-    const found = image(href);
+    const found = image(href, text);
     // Uploaded images come in several widths; the article column is at most 720px wide.
     const srcset = found?.sizes?.length ? ` srcset="${[...found.sizes.map((v) => `${mediaUrl(v.key)} ${v.width}w`), `${attr(href)} ${found.width}w`].join(", ")}" sizes="(min-width: 760px) 720px, 100vw"` : "";
     const html = `<img src="${attr(href)}"${srcset} alt="${attr(text)}"${found?.width ? ` width="${found.width}" height="${found.height}"` : ""}${first ? "" : ' loading="lazy"'} decoding="async">`;
@@ -47,7 +47,7 @@ function render(markdown, image) {
       link({ href, title, tokens }) {
         const text = this.parser.parseInline(tokens);
         const external = /^https?:\/\//.test(href);
-        return `<a href="${href}"${title ? ` title="${title}"` : ""}${external ? ' rel="noopener" target="_blank"' : ""}>${text}</a>`;
+        return `<a href="${attr(href)}"${title ? ` title="${attr(title)}"` : ""}${external ? ' rel="noopener" target="_blank"' : ""}>${text}</a>`;
       },
       image({ href, text }) {
         return img(href, text);
@@ -118,20 +118,23 @@ export async function loadNews({ dir, models, makers, providers, drafts = false 
 
     // Images: uploaded to the media bucket by `npm run news:publish`, or another http(s) URL.
     const images = [];
-    const image = (url, field = "body image") => {
+    const image = (url, field = "body image", alt = "") => {
       const key = mediaKey(url);
       if (key != null) {
         if (!media[key]) return fail(`${field} ${url} is not in content/news/media.json; upload it with npm run news:publish`);
-        const found = { url, ...media[key] };
+        const found = { url, ...media[key], ...(alt ? { alt } : {}) };
         images.push(found);
         return found;
       }
       if (!/^https?:\/\//.test(url)) return fail(`${field} "${url}" is a local file; publish the article with npm run news:publish to upload its images to ${MEDIA_URL}`);
-      images.push({ url });
-      return { url };
+      const found = { url, ...(alt ? { alt } : {}) };
+      images.push(found);
+      return found;
     };
-    const { html, toc } = render(match[2], (url) => image(url));
+    const { html, toc } = render(match[2], (url, alt) => image(url, "body image", alt));
     const cover = meta.image ? image(String(meta.image), "image field") : images[0];
+    const bodyMatch = cover ? images.find((x) => x.url === cover.url && x.alt) : null;
+    const wordCount = match[2].replace(/```[\s\S]*?```/g, "").trim().split(/\s+/).filter(Boolean).length;
 
     const refs = (field, known, hint) =>
       list(meta[field]).map(String).filter((name) => {
@@ -155,13 +158,15 @@ export async function loadNews({ dir, models, makers, providers, drafts = false 
       // The social/structured-data image: `image:`, else the body's first image,
       // as its JPEG copy when there is one (not every social network takes WebP).
       image: cover?.og
-        ? { url: mediaUrl(cover.og.key), width: cover.og.width, height: cover.og.height, type: "image/jpeg" }
+        ? { url: mediaUrl(cover.og.key), width: cover.og.width, height: cover.og.height, bytes: cover.og.bytes ?? null, type: "image/jpeg" }
         : cover?.url
-          ? { url: cover.url, width: cover.width ?? null, height: cover.height ?? null, type: cover.type ?? null }
+          ? { url: cover.url, width: cover.width ?? null, height: cover.height ?? null, bytes: cover.bytes ?? null, type: cover.type ?? null }
           : null,
+      imageAlt: cover?.alt || bodyMatch?.alt || null,
       // The cover as shown on the news index: the WebP with its srcset.
       cover: cover?.url ? { url: cover.url, width: cover.width ?? null, height: cover.height ?? null, sizes: (cover.sizes ?? []).map((v) => ({ url: mediaUrl(v.key), width: v.width })) } : null,
-      minutes: Math.max(1, Math.round(match[2].replace(/```[\s\S]*?```/g, "").split(/\s+/).length / 230)),
+      wordCount,
+      minutes: Math.max(1, Math.round(wordCount / 230)),
       draft: meta.draft === true,
       // The body as written, served as the article's index.md.
       markdown: match[2].trim(),

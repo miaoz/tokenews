@@ -87,12 +87,67 @@ const pricedBoards = new Set(data.mappings.map(m => configBoards.get(m.configura
 const explorerBoards = Object.fromEntries(Object.entries(data.boards).filter(([id]) => data.currentBoards.includes(id)));
 if (data.currentBoards.some(id => !pricedBoards.has(id))) throw new Error('A current Pareto board has no price mappings');
 const currentConfigIds = new Set(data.configurations.filter(c=>data.currentBoards.includes(c.board)).map(c=>c.configuration_id));
-const {supersededPoints: _archivedPoints, ...explorerData} = data;
+const EXPLORER_OMIT_CONFIG_FIELDS = new Set([
+  "source_id",
+  "source_created_at",
+  "source_updated_at",
+  "model_release_date",
+  "n_trials",
+  "n_successes",
+  "score_provenance",
+  "source_rank",
+  "source_total",
+  "source_rank_scope",
+]);
+const omitFields = (record, fields) => {
+  const out = {};
+  for (const [k, v] of Object.entries(record)) if (!fields.has(k)) out[k] = v;
+  return out;
+};
+const slimWatch = data.codingPlanWatch
+  ? {
+      checkedAt: data.codingPlanWatch.checkedAt,
+      intervalHours: data.codingPlanWatch.intervalHours,
+      failedSources: data.codingPlanWatch.failedSources,
+      sources: data.codingPlanWatch.sources.map(({ id, channel, url, status, lastSuccessAt }) => ({
+        id,
+        channel,
+        url,
+        status,
+        lastSuccessAt,
+      })),
+      pending: data.codingPlanWatch.pending.map(({ id, channel, url, kind, detectedAt, after }) => ({
+        id,
+        channel,
+        url,
+        kind,
+        detectedAt,
+        ...(after?.label ? { after: { label: after.label } } : {}),
+      })),
+    }
+  : undefined;
+const {
+  supersededPoints: _archivedPoints,
+  codingPlanReviews: _codingPlanReviews,
+  subscriptionEstimateArchiveReviews: _subArchiveReviews,
+  catalogUpdatedAt: _catalogUpdatedAt,
+  leaderboardUpdatedAt: _leaderboardUpdatedAt,
+  codingPlanUpdatedAt: _codingPlanUpdatedAt,
+  subscriptionEstimatesUpdatedAt: _subEstimatesUpdatedAt,
+  ...explorerData
+} = data;
 await writeFile(
   path.join(out, "explorer.json"),
-  JSON.stringify({ ...explorerData, boards: explorerBoards, points: points.core,
-    configurations: configurations.core.filter(c=>currentConfigIds.has(c.configuration_id)),
-    mappings:data.mappings.filter(m=>currentConfigIds.has(m.configuration_id)) }),
+  JSON.stringify({
+    ...explorerData,
+    codingPlanWatch: slimWatch,
+    boards: explorerBoards,
+    points: points.core,
+    configurations: configurations.core
+      .filter((c) => currentConfigIds.has(c.configuration_id))
+      .map((c) => omitFields(c, EXPLORER_OMIT_CONFIG_FIELDS)),
+    mappings: data.mappings.filter((m) => currentConfigIds.has(m.configuration_id)),
+  }),
 );
 await writeFile(
   path.join(out, "explorer-notes.json"),

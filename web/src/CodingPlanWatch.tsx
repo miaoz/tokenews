@@ -1,6 +1,9 @@
-import type {SiteData,Lang} from './types';
+import { useEffect, useState } from 'react';
+import type { SiteData, Lang } from './types';
 
 export default function CodingPlanWatch({data,lang,channel}:{data:SiteData;lang:Lang;channel?:string}) {
+  const [now,setNow]=useState<number|null>(null);
+  useEffect(()=>{setNow(Date.now());},[]);
   const watch=data.codingPlanWatch;if(!watch)return null;
   const zh=lang==='zh';
   const sources=watch.sources.filter(s=>!channel||s.channel===channel);
@@ -8,11 +11,11 @@ export default function CodingPlanWatch({data,lang,channel}:{data:SiteData;lang:
   const failed=sources.filter(s=>s.status==='failed');
   const pending=watch.pending.filter(e=>!channel||e.channel===channel);
   const staleHours=watch.intervalHours*3;
-  const stale=Date.now()-Date.parse(watch.checkedAt)>staleHours*3600_000;
+  const stale=now!==null&&now-Date.parse(watch.checkedAt)>staleHours*3600_000;
   const kinds:Record<string,string>=zh?{'terms-changed':'价格／额度表变化','model-or-plan-added':'新增型号／套餐条目','model-or-plan-removed':'型号／套餐条目移除','announcement':'公告／条款变化','promotion-expiring':'优惠即将到期','promotion-expired':'优惠已到期'}:{};
   return <div className="chart-foot">
     <details className="unscored">
-      <summary>{zh?`公告与套餐定期核查：${pending.length} 项待核实，${failed.length} 个来源读取失败`:`Announcement & plan watch: ${pending.length} pending, ${failed.length} sources failed`}</summary>
+      <summary>{zh?`公告与套餐定期核查：${pending.length} 项待核实，${failed.length} 个来源读取失败`:`Announcement & plan watch: ${pending.length} pending, ${failed.length} ${failed.length===1?'source':'sources'} failed`}</summary>
       <p>{zh?`每 ${watch.intervalHours} 小时检查一次；最近检查：`:`Checks every ${watch.intervalHours} hours; last run: `}{watch.checkedAt.replace('T',' ').replace(/\.\d+Z$/,' UTC')}.</p>
       {stale&&<p role="status">{zh?`检查状态已超过 ${staleHours} 小时，定时任务可能延迟或失败。`:`Watch status is over ${staleHours} hours old; the scheduled job may be delayed or failing.`}</p>}
       <p>{zh?'自动发现新型号、别名升级、费率、额度及优惠变化；价格和评测映射仍采用已核实记录。待核查项会持续保留，直到附带理由确认处理；首次采集仅建立对比基线。':'Detects new models, alias upgrades, rates, quotas and promotions. Prices and benchmark mappings retain reviewed values. Pending changes persist until resolved with a reason; first collection only establishes a baseline.'}</p>

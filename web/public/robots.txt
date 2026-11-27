@@ -1,6 +1,16 @@
 User-agent: *
 Allow: /
 
+# Focus Bingbot's crawl capacity on indexable HTML pages and the explorer's
+# runtime data instead of duplicate Markdown copies and raw JSON/CSV archives.
+User-agent: bingbot
+Allow: /
+Allow: /data/explorer.json
+Allow: /data/explorer-notes.json
+Disallow: /*/index.md$
+Disallow: /data/
+Disallow: /llms-full.txt
+
 # AI search and answer engines are welcome to cite this open dataset.
 User-agent: GPTBot
 Allow: /

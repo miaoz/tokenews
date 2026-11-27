@@ -2270,27 +2270,34 @@ tbody tr.sentinel-row {
   align-items: center;
   gap: 16px;
 }
-/* Mirrors .intro (two-line title, two-line lede) so the card doesn't jump. */
-.skeleton-hero {
-  display: grid;
-  gap: 8px;
-  padding: 28px 0 22px;
+/* Mirrors .intro-stats proportions while explorer.json loads. */
+.skeleton-stats {
+  display: flex;
+  gap: 28px;
+  padding-bottom: 2px;
 }
-.skeleton-hero span:nth-child(3) {
-  margin-top: 10px;
-}
-.skeleton-hero span,
-.skeleton-card {
+.skeleton-stats span {
   display: block;
-  height: 40px;
+  width: 112px;
+  height: 38px;
   border-radius: var(--radius-s);
   background: linear-gradient(90deg, var(--surface-3) 0%, var(--surface) 50%, var(--surface-3) 100%);
   background-size: 200% 100%;
   animation: shimmer 1.4s linear infinite;
 }
+.skeleton-stats span:nth-child(2) {
+  width: 88px;
+}
+.skeleton-stats span:nth-child(3) {
+  width: 136px;
+}
 .skeleton-card {
+  display: block;
   height: 640px;
   border-radius: var(--radius-l);
+  background: linear-gradient(90deg, var(--surface-3) 0%, var(--surface) 50%, var(--surface-3) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s linear infinite;
 }
 /* Crawler links that dist/index.html carries below the boot skeleton until
    React mounts (build-pages.mjs). */
@@ -3236,8 +3243,14 @@ tbody tr.sentinel-row {
   .lede {
     font-size: 14.5px;
   }
-  .intro-stats {
+  .intro-stats,
+  .skeleton-stats {
     gap: 18px;
+  }
+  .skeleton-stats span {
+    flex: 1 1 0;
+    width: auto;
+    height: 44px;
   }
   /* Monospace labels are wide: let them wrap so the three stats fit a phone. */
   .intro-stats div {
