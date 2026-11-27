@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checkedAt": "2026-11-26",
+  "checkedAt": "2026-11-27",
   "baselineCommit": "cce3f28a1e022440964e0d2a51c2d38d38418331",
   "note": "Source audit is separate from publication. Unverified sources are never reported as unchanged. Identity-review rows may be aliases, historical models, or new releases. Scores across changed versions must not be mixed.",
   "results": [
@@ -12,7 +12,7 @@
       "currentVersion": "5.0.2",
       "versionChanged": true,
       "baselineConfigurations": 82,
-      "observedConfigurations": 126,
+      "observedConfigurations": 127,
       "sourceUpdatedAt": null,
       "coverage": "Current non-deprecated configurations in the public page payload with a non-null score; not all historical releases.",
       "configurationReviewRequired": true,
@@ -62,6 +62,7 @@
       ],
       "unresolvedIdentities": [
         "ERNIE 5.5 Flash Preview",
+        "Quasar 1.2 358B",
         "Ling-3.2-air"
       ],
       "rows": [
@@ -259,6 +260,21 @@
           "source": "https://artificialanalysis.ai/models/releases/solar-pro-4",
           "model": "solar-pro-4",
           "status": "missing-from-board"
+        },
+        {
+          "identity": "Quasar 1.2 358B",
+          "sourceId": "local:aa-configuration:[\"quasar-1-2-358b\",\"Quasar 1.2 358B (Max, Based on GLM-5.3)\"]",
+          "sourceIdKind": "local-release-name-key",
+          "label": "Quasar 1.2 358B (Max, Based on GLM-5.3)",
+          "score": 23.0788933047591,
+          "fallbackEnabled": false,
+          "maker": "Multiverse Computing",
+          "releaseDate": "2026-10-07",
+          "releaseSlug": "quasar-1-2-358b",
+          "effort": "max",
+          "source": "https://artificialanalysis.ai/models/releases/quasar-1-2-358b",
+          "model": null,
+          "status": "identity-review"
         },
         {
           "identity": "K-EXAONE 2.0",
@@ -3627,7 +3643,7 @@
       "currentVersion": "4.1",
       "versionChanged": true,
       "baselineConfigurations": 87,
-      "observedConfigurations": 160,
+      "observedConfigurations": 161,
       "sourceUpdatedAt": null,
       "coverage": "Current non-deprecated configurations in the public page payload with a non-null score; not all historical releases.",
       "configurationReviewRequired": true,
@@ -3708,6 +3724,7 @@
       ],
       "unresolvedIdentities": [
         "ERNIE 5.5 Flash Preview",
+        "Quasar 1.2 358B",
         "Ling-3.2-air"
       ],
       "rows": [
@@ -3950,6 +3967,21 @@
           "source": "https://artificialanalysis.ai/models/releases/solar-pro-4",
           "model": "solar-pro-4",
           "status": "missing-from-board"
+        },
+        {
+          "identity": "Quasar 1.2 358B",
+          "sourceId": "local:aa-configuration:[\"quasar-1-2-358b\",\"Quasar 1.2 358B (Max, Based on GLM-5.3)\"]",
+          "sourceIdKind": "local-release-name-key",
+          "label": "Quasar 1.2 358B (Max, Based on GLM-5.3)",
+          "score": 28.282828282828298,
+          "fallbackEnabled": false,
+          "maker": "Multiverse Computing",
+          "releaseDate": "2026-10-07",
+          "releaseSlug": "quasar-1-2-358b",
+          "effort": "max",
+          "source": "https://artificialanalysis.ai/models/releases/quasar-1-2-358b",
+          "model": null,
+          "status": "identity-review"
         },
         {
           "identity": "K-EXAONE 2.0",
@@ -6296,10 +6328,12 @@
       "missingFromBoard": [
         "claude-fable-5.2",
         "gemini-4-carbon",
+        "gemini-4-neon",
         "gpt-6.2-astra",
         "gpt-6.2-sol",
         "qwen4-max",
         "muse-wonder-full",
+        "gemini-4-hydrogen",
         "gpt-6.1-terra",
         "kimi-k3.1-pro",
         "gemini-4-argon",
@@ -6381,8 +6415,6 @@
         "devstral-medium-2507"
       ],
       "unresolvedIdentities": [
-        "Gemini 4 Neon (xHigh)",
-        "Gemini 4 Hydrogen (xHigh)",
         "U2 Flash",
         "GPT-5.3-Codex (Codex Harness)"
       ],
@@ -6489,8 +6521,8 @@
           "meanCost": null,
           "sourceId": "hf:webdev:Gemini 4 Neon (xHigh)",
           "ambiguousConfiguration": false,
-          "model": null,
-          "status": "identity-review"
+          "model": "gemini-4-neon",
+          "status": "missing-from-board"
         },
         {
           "identity": "GPT-6 Astra (Max)",
@@ -6678,8 +6710,8 @@
           "meanCost": null,
           "sourceId": "hf:webdev:Gemini 4 Hydrogen (xHigh)",
           "ambiguousConfiguration": false,
-          "model": null,
-          "status": "identity-review"
+          "model": "gemini-4-hydrogen",
+          "status": "missing-from-board"
         },
         {
           "identity": "Claude Opus 5 (Max)",

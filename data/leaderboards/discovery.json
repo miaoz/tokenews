@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checkedAt": "2026-11-26",
+  "checkedAt": "2026-11-27",
   "source": "https://artificialanalysis.ai/models/releases",
   "note": "Unmapped source entries requiring identity/configuration review; these may already exist under another catalog ID. Not automatically published.",
   "candidates": [
@@ -346,6 +346,11 @@
       "possibleCatalogMatches": [
         "nvidia-nemotron-nano-9b-v2"
       ]
+    },
+    {
+      "url": "https://artificialanalysis.ai/models/quasar-1-2-358b",
+      "label": "Quasar 1.2 358B Multiverse Computing · Oct 2026 · 1 effort level Intelligence 23 Cost / task $0.13 Context 1M",
+      "possibleCatalogMatches": []
     },
     {
       "url": "https://artificialanalysis.ai/models/qwen3-5-0-8b",

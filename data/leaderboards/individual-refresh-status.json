@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "attemptedAt": "2026-11-26",
+  "attemptedAt": "2026-11-27",
   "results": [
     {
       "id": "artificial-analysis:gemini-4-carbon:5.0.1:high",
@@ -20,7 +20,7 @@
       "id": "crusader-bench:kimi-k3.1-pro:1.7:high",
       "source": "https://crusbench.com/models/kimi-1021-preview/",
       "status": "updated",
-      "retainedCheckedAt": "2026-11-26"
+      "retainedCheckedAt": "2026-11-27"
     },
     {
       "id": "artificial-analysis:gpt-6.1-terra:5.0.1:max",
@@ -103,7 +103,7 @@
       "id": "aa-discovery",
       "source": "https://artificialanalysis.ai/models/releases",
       "status": "updated",
-      "retainedCheckedAt": "2026-11-26"
+      "retainedCheckedAt": "2026-11-27"
     }
   ]
 }

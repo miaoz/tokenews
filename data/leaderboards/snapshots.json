@@ -5313,6 +5313,27 @@
         "en": "Source display precision; only explicitly tracked configurations are included.",
         "zh": "保留来源显示精度；仅收录已明确核对的评测配置。"
       }
+    },
+    {
+      "model": "kimi-k3.1-pro",
+      "board": "crusader_bench",
+      "name": "Crusader Bench",
+      "metric": "Average task score",
+      "version": "1.7",
+      "variant": "high",
+      "effort": "high",
+      "score": 32.1,
+      "sourceRank": 8,
+      "sourceTotal": 15,
+      "sourceRankScope": "leaderboard",
+      "source": "https://crusbench.com/models/kimi-1021-preview/",
+      "sourceHome": "https://crusbench.com/",
+      "checkedAt": "2026-11-27",
+      "excerpt": "Score, every map 32.1",
+      "note": {
+        "en": "Source display precision; only explicitly tracked configurations are included.",
+        "zh": "保留来源显示精度；仅收录已明确核对的评测配置。"
+      }
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "attemptedAt": "2026-11-26",
+  "attemptedAt": "2026-11-27",
   "results": [
     {
       "board": "aa_intelligence_index",
@@ -24,7 +24,7 @@
           "releaseSlug": null
         }
       ],
-      "retainedCheckedAt": "2026-11-26"
+      "retainedCheckedAt": "2026-11-27"
     },
     {
       "board": "aa_terminal_bench_4",
@@ -43,14 +43,14 @@
           "releaseSlug": null
         }
       ],
-      "retainedCheckedAt": "2026-11-26"
+      "retainedCheckedAt": "2026-11-27"
     },
     {
       "board": "arena_agent_mode",
       "status": "updated",
       "reviewRequired": 0,
       "identityReview": [],
-      "retainedCheckedAt": "2026-11-26"
+      "retainedCheckedAt": "2026-11-27"
     },
     {
       "board": "aa_coding_agent_index",
@@ -63,14 +63,14 @@
       "status": "updated",
       "reviewRequired": 0,
       "identityReview": [],
-      "retainedCheckedAt": "2026-11-26"
+      "retainedCheckedAt": "2026-11-27"
     },
     {
       "board": "deepswe_1_1",
       "status": "updated",
       "reviewRequired": 0,
       "identityReview": [],
-      "retainedCheckedAt": "2026-11-26"
+      "retainedCheckedAt": "2026-11-27"
     }
   ]
 }
